@@ -22,6 +22,8 @@ Deterministic output generated from `reports/grouping-manifest.json`.
     - [Linecard Port Mapping Troubleshooting Guide](hardware-maintenance/linecard/troubleshooting-guide.md) — troubleshooting-guide — Mixed
   - **mpc-linecard/**
     - [MPC Insertion, Removal and Power Notes](hardware-maintenance/mpc-linecard/install-maintenance-guide.md) — install-maintenance-guide — Mixed
+  - **optics-physical/**
+    - [Optics, CFP, XFP & Physical Layer Diagnostics](hardware-maintenance/optics-physical/troubleshooting-guide.md) — troubleshooting-guide — Mixed
   - **re-scbe/**
     - [NG-RE & RE Replacement Procedures](hardware-maintenance/re-scbe/install-maintenance-guide.md) — install-maintenance-guide — Mixed
 - **lab-notes/**
@@ -49,7 +51,5 @@ Deterministic output generated from `reports/grouping-manifest.json`.
     - [LACP Troubleshooting and Diagnostics](switching/lacp/troubleshooting-guide.md) — troubleshooting-guide — Mixed
   - **mirror-traffic/**
     - [Mirror Traffic Configuration Guide](switching/mirror-traffic/configuration-guide.md) — configuration-guide — Mixed
-  - **optics-physical/**
-    - [Optics, CFP, XFP & Physical Layer Diagnostics](switching/optics-physical/troubleshooting-guide.md) — troubleshooting-guide — Mixed
 - **vendor-kb/**
   - [Vendor PR & KB Reference Index](vendor-kb/index.md) —  — Mixed

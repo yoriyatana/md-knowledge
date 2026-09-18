@@ -115,7 +115,7 @@
     "doctype": "troubleshooting-guide"
   },
   "switching-optics-troubleshooting": {
-    "output": "switching/optics-physical/troubleshooting-guide.md",
+    "output": "hardware-maintenance/optics-physical/troubleshooting-guide.md",
     "sources": [
       "formatted/TS_notes/interfaces diagnostics optics.md",
       "formatted/TS_notes/10GbE LAN-PHY_40GbE_100GbE LFS (Link fault signalling).md",
@@ -126,7 +126,7 @@
       "formatted/TS_notes/BUG Hold-time down không hoạt động được nếu cấu hình nhỏ hơn 1s trên interface chạy WANPHY.md"
     ],
     "type": "consolidate",
-    "domain": "switching",
+    "domain": "hardware-maintenance",
     "feature": "optics-physical",
     "doctype": "troubleshooting-guide"
   },

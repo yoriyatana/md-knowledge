@@ -147,8 +147,8 @@
     },
     {
       "id": "switching-optics-troubleshooting",
-      "destination": "switching/optics-physical/troubleshooting-guide.md",
-      "level1_domain": "switching",
+      "destination": "hardware-maintenance/optics-physical/troubleshooting-guide.md",
+      "level1_domain": "hardware-maintenance",
       "level3_feature": "optics-physical",
       "level2_doctype": "troubleshooting-guide",
       "topic": "Optics, CFP, XFP & Physical Layer Diagnostics",
