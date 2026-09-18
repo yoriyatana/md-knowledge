@@ -13,7 +13,6 @@ interface Ethernet0/0
 ```text
 pppoe enable group global
 ```
-
 pppoe-client dial-pool-number 1
 
 !
@@ -101,7 +100,6 @@ interface FastEthernet0/1
 ```text
 pppoe enable group global
 ```
-
 pppoe-client dial-pool-number 1
 
 !
@@ -183,25 +181,19 @@ Dialer1 is in client mode
 ```text
 Prefix State is OPEN
 ```
-
 Renew will be sent in 3d11h
 
 ```text
 Address State is IDLE
 ```
-
 List of known servers:
 
 Reachable via address: FE80::22
 
 ```text
 DUID: 00030001CA011F780008
-```
-
-```text
 Preference: 0
 ```
-
 Configuration parameters:
 
 IA PD: IA ID 0x00090001, T1 302400, T2 483840
@@ -209,7 +201,6 @@ IA PD: IA ID 0x00090001, T1 302400, T2 483840
 ```text
 Prefix: 2001:DB8:5AB:2000::/56
 ```
-
 preferred lifetime INFINITY, valid lifetime INFINITY
 
 Information refresh time: 0

@@ -7,7 +7,6 @@ From core file it looks like router was running @ 77%+ memory during the issue t
 ```text
 Core happened when RPD (BGP) requested for additional memory and kernel returned ENOMEM (Error - 12)
 ```
-
 # define ENOMEM      12  /\* Out of memory \*/
 
 Could you please provide the below output to proceed further?
@@ -15,7 +14,6 @@ Could you please provide the below output to proceed further?
 ```text
 >show system processes | no more
 ```
-
 Also, could you please confirm if the logical systems are configured and utilized in your router as I could notice that the configuration is inactive.
 
 - --
@@ -23,7 +21,6 @@ Also, could you please confirm if the logical systems are configured and utilize
 ```text
 As per my previous email, Core file was generated when RPD (BGP) requested for additional memory and kernel returned ENOMEM (Error - 12) due to memory exhaustion during the issue time.
 ```
-
 # define ENOMEM      12  /\* Out of memory \*/
 
 - --
@@ -40,20 +37,10 @@ Enabled protocols: Bridging, Dual VLAN,
 
 ```text
 user:         852573 routes
-```
-
-```text
 perm:          5 routes
-```
-
-```text
 intf:          5 routes
-```
-
-```text
 dest:          8 routes
 ```
-
 root@HCM001PRT02\_RE0> show system core-dumps no-forwarding
 
 /var/crash/\*core\*: No such file or directory

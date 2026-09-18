@@ -88,7 +88,6 @@
 Needs full knowledge of network topology
 Requires link state protocol: OSPF or IS-IS
 ```
-
 * *Why ORR is Needed**
 
 When a RR is not near the clients it is serving, the following issue is possible

@@ -13,13 +13,11 @@
 ```text
 root@DC-L36-GTWY04> show chassis routing-engine | match "Slot|State|Start"
 ```
-
 Slot 0:
 
 ```text
 Current state                  Backup
 ```
-
 Start time                    2022-04-03 08:29:18 ICT
 
 Slot 1:
@@ -27,13 +25,11 @@ Slot 1:
 ```text
 Current state                  Master
 ```
-
 Start time                    2021-08-01 13:05:36 ICT
 
 ```text
 root@DC-L36-GTWY04> show chassis alarms no-forwarding
 ```
-
 1 alarms currently active
 
 Alarm time              Class  Description
@@ -45,7 +41,6 @@ Alarm time              Class  Description
 ```text
 root@DC-L36-GTWY04> show system core-dumps no-forwarding
 ```
-
 - rw-------  1 root  wheel  1403523072 Jul 29  2021 /var/crash/vmcore.0
 
 - rw-------  1 root  wheel  1332736000 Aug 1  2021 /var/crash/vmcore.1
@@ -70,60 +65,30 @@ total files: 4
 
 ```text
 Apr  3 08:27:50  DC-L36-GTWY04 sshd[30062]: Failed password for mpcl from 106.51.66.192 port 54888 ssh2
-```
-
-```text
 Apr  3 08:27:50  DC-L36-GTWY04 sshd: SSHD\_LOGIN\_FAILED: Login failed for user 'mpcl' from host '106.51.66.192'
-```
-
-```text
 Apr  3 08:27:51  DC-L36-GTWY04 sshd[30062]: Received disconnect from 106.51.66.192: 11: Bye Bye [preauth]
-```
-
-```text
 Apr  3 08:27:51  DC-L36-GTWY04 sshd[30063]: Received disconnect from 106.51.66.192: 11: Bye Bye
 ```
-
 Apr  3 08:27:51  DC-L36-GTWY04 sshd[30062]: Disconnected from 106.51.66.192 [preauth]
 
 Apr  3 08:27:51  DC-L36-GTWY04 inetd[9988]: /usr/sbin/sshd[30062]: exited, status 255
 
 ```text
 Apr  3 08:27:53  DC-L36-GTWY04 sshd[30066]: Failed password for arunav from 120.48.17.128 port 38948 ssh2
-```
-
-```text
 Apr  3 08:27:53  DC-L36-GTWY04 sshd: SSHD\_LOGIN\_FAILED: Login failed for user 'arunav' from host '120.48.17.128'
-```
-
-```text
 Apr  3 08:27:53  DC-L36-GTWY04 sshd[30066]: Received disconnect from 120.48.17.128: 11: Bye Bye [preauth]
-```
-
-```text
 Apr  3 08:27:53  DC-L36-GTWY04 sshd[30067]: Received disconnect from 120.48.17.128: 11: Bye Bye
 ```
-
 Apr  3 08:27:53  DC-L36-GTWY04 sshd[30066]: Disconnected from 120.48.17.128 [preauth]
 
 Apr  3 08:27:53  DC-L36-GTWY04 inetd[9988]: /usr/sbin/sshd[30066]: exited, status 255
 
 ```text
 Apr  3 08:27:56  DC-L36-GTWY04 sshd: SSHD\_LOGIN\_FAILED: Login failed for user 'jahidul' from host '72.167.224.135'
-```
-
-```text
 Apr  3 08:27:56  DC-L36-GTWY04 sshd[30068]: Failed password for jahidul from 72.167.224.135 port 45838 ssh2
-```
-
-```text
 Apr  3 08:27:56  DC-L36-GTWY04 sshd[30068]: Received disconnect from 72.167.224.135: 11: Bye Bye [preauth]
-```
-
-```text
 Apr  3 08:27:56  DC-L36-GTWY04 sshd[30069]: Received disconnect from 72.167.224.135: 11: Bye Bye
 ```
-
 Apr  3 08:27:56  DC-L36-GTWY04 sshd[30068]: Disconnected from 72.167.224.135 [preauth]
 
 Apr  3 08:27:56  DC-L36-GTWY04 inetd[9988]: /usr/sbin/sshd[30068]: exited, status 255
@@ -145,35 +110,27 @@ Apr  3 08:27:56  DC-L36-GTWY04 inetd[9988]: /usr/sbin/sshd[30068]: exited, sta
 ```text
 set firewall family inet filter protect-RE term accept-telnet from destination-port 830
 ```
-
 ### Bỏ term accept toàn bộ lưu lượng TCP (không có trên GTWY01)
 
 ```text
 delete firewall family inet filter protect-RE term tcp-connection
 ```
-
 ### Bỏ action log, action này gây tốn tài nguyên xử lý trên PFE nên không khuyến nghị dùng
 
 ```text
 delete firewall family inet filter protect-RE term default then log
-```
-
-```text
 set firewall family inet filter protect-RE term default count df\_discard
 ```
-
 ### Tách log liên quan đến firewall ra file riêng để dễ giám sát
 
 ```text
 set system syslog file firewall\_log firewall any
 ```
-
 ### Chỉ bật khi thực hiện debug rồi sau đó tắt sau khi debug xong
 
 ```text
 delete firewall family inet filter protect-RE term default then syslog
 ```
-
 - Thực hiện switchover RE0 về vài trò master theo hướng dẫn đính kèm.
 
 Nếu thông tin nào còn chưa rõ, nhờ anh báo lại để em tiếp tục hỗ trợ.
@@ -183,7 +140,6 @@ Nếu thông tin nào còn chưa rõ, nhờ anh báo lại để em tiếp tục
 ```text
 test15@DC-L36-GTWY04# show firewall family inet filter protect-RE
 ```
-
 Apr 13 10:49:23
 
 term block-untrust-source {
@@ -487,7 +443,6 @@ discard;
 ```text
 test15@DC-L36-GTWY01# show firewall family inet filter protect-RE
 ```
-
 inactive: term block-untrust-source {
 
 from {

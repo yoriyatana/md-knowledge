@@ -9,7 +9,6 @@ SYMPTOMS:
 ```text
 PPMD off-loads time-sensitive periodic processing from various clients to a single daemon. It is responsible for periodic transmission of packets on behalf of its various clients. Clients establish adjacencies with PPMD to send/receive packets on their behalf. When packets are not received, the adjacency is marked down and the client is informed.
 ```
-
 There are two types of PPMD:
 
 1. Centralized Mode - RE based; PPMD runs on RE
@@ -28,7 +27,6 @@ OSPFv2
 ```text
 lab@mx240-3-re0> show ppm adjacencies detail
 ```
-
 Protocol: OSPF2, Hold time: 40000, IFL-index: 359
 
 Distributed: FALSE
@@ -42,7 +40,6 @@ BFD
 ```text
 lab@mx240-3-re0# run show ppm adjacencies detail
 ```
-
 Protocol: BFD, Hold time: 900, IFL-index: 359
 
 Distributed: TRUE
@@ -77,12 +74,8 @@ Method 3
 
 ```text
 Run 'show ppm adjacencies protocol XXX detail'
-```
-
-```text
 lab@mx240-3-re0# run show ppm adjacencies protocol lacp detail
 ```
-
 Protocol: LACP, Hold time: 3000, IFL-index: 361
 
 Distributed: TRUE
@@ -92,27 +85,16 @@ Distribution handle: 30, Distribution address: fpc1
 ```text
 Adjacencies: 1, Remote adjacencies: 1
 ```
-
 Troubleshooting Tips
 
 As a troubleshooting method, use the command 'set routing-options ppm no-delegate-processing' to make PPMD centralized. This will reveal if the issue is due to PFE failure itself or not. In other words, if a protocol is having an issue running on distributed mode, but not with centralized mode. Then we can narrow down the issue.
 
 ```text
 lab@mx240-3-re0#set routing-options ppm no-delegate-processing
-```
-
-```text
 lab@mx240-3-re0#commit
-```
-
-```text
 lab@mx240-3-re0#run clear bfd session
-```
-
-```text
 lab@mx240-3-re0#run show ppm adjacencies detail
 ```
-
 Protocol: BFD, Hold time: 900, IFL-index: 359
 
 Distributed: FALSE
@@ -136,7 +118,6 @@ show ppm packet-snapshot
 show ppm reques-queue
 show ppm rpd-statistics
 ```
-
 Collect the below from PFE (for distributed):
 
 ```text

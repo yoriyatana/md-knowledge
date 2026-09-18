@@ -56,12 +56,8 @@ OR if there is a Duplicate RID or IP address
 
 ```text
 *LINK STATE TYPE AND LINK STATE ID:**
-```
-
-```text
 Meaning of **LINK STATE ID** field in the **LSA HEADER** depends on the LSA type:
 ```
-
 ![](image/90f287782b465d3669eb40a841e5b202.png)
 
 * *LSA TYPE 1**
@@ -91,7 +87,6 @@ Network LSA does NOT contain any prefix information, though it advertises the su
 ```text
 For **LSAs type 3**, the **advertised prefix** is in the **LINK STATE ID** (in the **LSA HEADER**).
 ```
-
 * *LSA TYPE 4**
 
 ![](image/8ca44bb55447e186bba5a33e67306286.png)
@@ -99,7 +94,6 @@ For **LSAs type 3**, the **advertised prefix** is in the **LINK STATE ID** 
 ```text
 For **LSAs type** **4,** the **advertised ASBR RID** is in the **LINK STATE ID** (in the **LSA HEADER**).
 ```
-
 * *LSA TYPE 5**
 
 ![](image/0be326c4c56acc32b521f6633206d928.png)

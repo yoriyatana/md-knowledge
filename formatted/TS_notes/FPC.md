@@ -6,158 +6,58 @@
 
 ```text
 show log messages | no-more
-```
-
-```text
 show log messages.0.gz  | no-more
-```
-
-```text
 show log messages.1.gz | no-more
-```
-
-```text
 show log messages.2.gz | no-more
-```
-
-```text
 show log messages.3.gz | no-more
-```
-
-```text
 show log chassisd | no-more
-```
-
-```text
 show log chassisd .0.gz | no-more
-```
-
-```text
 show log chassisd.1.gz | no-more
-```
-
-```text
 show log chassisd.2.gz | no-more
-```
-
-```text
 show log chassisd.3.gz | no-more
 ```
-
 - --
 
 ## Regarding to FPC
 
 ```text
 show chassis hardware | no-more
-```
-
-```text
 show chassis alarm | no-more
-```
-
-```text
 show version | no-more
-```
-
-```text
 show chassis fpc | no-more
-```
-
-```text
 show chassis fpc pic-status | no-more
-```
-
-```text
 show chassis fpc errors | no-more
-```
-
-```text
 show chassis fabric fpcs  | no-more
-```
-
-```text
 show chassis fabric plane  | no-more
-```
-
-```text
 show chassis fabric summary  | no-more
-```
-
-```text
 show chassis fabric map | no-more
-```
-
-```text
 show chassis fabric plane-location | no-more
-```
-
-```text
 show chassis fabric destinations | no-more
-```
-
-```text
 show system resource-monitor fpc | no-more
-```
-
-```text
 show pfe statistics traffic  | no-more
-```
-
-```text
 show pfe statistics traffic detail  | no-more
-```
-
-```text
 show pfe statistics error | no-more
 ```
-
 - --
 
 ### PFE level information
 
 ```text
 request pfe execute command "show syslog messages" target fpc0 | no-more
-```
-
-```text
 request pfe execute command "show nvram" target fpc0 | no-more
-```
-
-```text
 request pfe execute command "show ttp statistics" target fpc0 | no-more
-```
-
-```text
 request pfe execute command "show hsl2 statistics" target fpc0 | no-more
-```
-
-```text
 request pfe execute command "show hsl2 statistics crc" target fpc0 | no-more
-```
-
-```text
 request pfe execute command "show cmerror module" target fpc0 | no-more
-```
-
-```text
 request pfe execute command "show sched" target fpc0 | no-more
-```
-
-```text
 request pfe execute command "show threads cpu" target fpc0 | no-more
-```
-
-```text
 request pfe execute command "show jnh 0 exceptions" target fpc0 | no-more
 ```
-
 - --
 
 ```text
 >start shell pfe network fpc8
 ```
-
 ### show hsl2 statistics
 
 # show cmerror level
@@ -196,16 +96,9 @@ Overall health check:
 
 ```text
 show chassis fabric summary
-```
-
-```text
 show chassis fabric plane
-```
-
-```text
 show system coredump
 ```
-
 cpu RE/FPC/process
 
 memory: RE/FPC
@@ -216,20 +109,10 @@ interface:
 
 ```text
 show interface ge/xe/et/ae/... extensive - at least 2 times
-```
-
-```text
 traffic rate: pps & bps uplink interfaces
-```
-
-```text
 traffic rate: pps & bps downlink interfaces
-```
-
-```text
 error fpc: enable/disable & counter
 ```
-
 bổ sung dịch vụ multicast
 
 vpls:

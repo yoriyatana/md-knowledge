@@ -6,12 +6,8 @@ Step 1: Restart SFB 4 :
 
 ```text
 > request chassis fabric plane 4 offline
-```
-
-```text
 > request chassis fabric plane 4 online
 ```
-
 Reseat SFB 4 (if still alarm)
 
 Trên MX2K ở các version sau này fabric plane thay đổi từ 8 -> 24 fabric plane (hình như từ Junos 17 trở đi). Như vậy 1 SFB ở các version sau này sẽ có 3 fabric plane.
@@ -20,12 +16,6 @@ Trên MX2K ở các version sau này fabric plane thay đổi từ 8 -> 24 fabri
 
 ```text
 Restart SFB bằng lệnh:
-```
-
-```text
 request chassis sfb slot  offline
-```
-
-```text
 request chassis sfb slot  online
 ```

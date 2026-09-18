@@ -4,22 +4,14 @@
 
 ```text
 show chassis hardware
-```
-
-```text
 show interfaces diagnostics optics (et-… / xe-…)
-```
-
-```text
 show interfaces (et-… / xe-…)
 ```
-
 - Note câu lệnh soft-loop:
 
 ```text
 set interfaces  gigether-options loopback
 ```
-
 * *2. Thu thập tập lệnh output sau trong 2 trường hợp** **soft-loop** **và** **hard-loop**
 
 * *Note đối với module** ***CFP 100Gig*:**
@@ -27,7 +19,6 @@ set interfaces  gigether-options loopback
 ```text
 > start shell pfe network fpc#
 ```
-
 # show syslog messages
 
 # show cfp list                ### get the cfp id from here and below outputs
@@ -71,7 +62,6 @@ set interfaces  gigether-options loopback
 ```text
 > start shell pfe network fpc#
 ```
-
 # show syslog messages
 
 # show sfp list ### get the cfp id from here and below outputs
@@ -115,7 +105,6 @@ set interfaces  gigether-options loopback
 ```text
 > start shell pfe network fpc#
 ```
-
 # show xfp list ### get the xfp id from here and below outputs
 
 # show xfp  alarms
@@ -158,16 +147,9 @@ set interfaces  gigether-options loopback
 
 ```text
 > show chassis hardware
-```
-
-```text
 > show interfaces diagnostics optics (et-… / xe-…)
-```
-
-```text
 > show interfaces (et-… / xe-…)
 ```
-
 2. Thu thập RSI, var/log.
 
 3. Gửi hình ảnh của moudule đang bị lỗi.
@@ -177,7 +159,6 @@ set interfaces  gigether-options loopback
 ```text
 > start shell pfe network fpc#
 ```
-
 # show syslog messages
 
 # show cfp list ### get the cfp id from here and below outputs

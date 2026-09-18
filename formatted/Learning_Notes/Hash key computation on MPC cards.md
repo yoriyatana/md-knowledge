@@ -33,7 +33,6 @@ Note:
 ```text
 set forwarding-options enhanced-hash-key family multiservice no-mac-addresses
 ```
-
 The no-mac-addresses knob is hidden.
 
 2. Payload recognition uses the following criteria to estimate the nature of the payload:
@@ -51,21 +50,11 @@ The no-mac-addresses knob is hidden.
 ```text
 lab@mx960-re0# set forwarding-options enhanced-hash-key family ?
 ```
-
 Possible completions:
 
 ```text
 > inet IPv4 protocol family
-```
-
-```text
 > inet6 IPv6 protocol family
-```
-
-```text
 > mpls MPLS protocol family
-```
-
-```text
 > multiservice Multiservice protocol (bridged/CCC/VPLS) family
 ```

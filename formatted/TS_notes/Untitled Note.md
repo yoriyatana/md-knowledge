@@ -9,13 +9,11 @@ Please be informed that the health of the FPC is defined by the below mentioned 
 ```text
 user@switch> show chassis fpc detail
 ```
-
 Slot 0 information:
 
 ```text
 State                Online
 ```
-
 Temperature           28 degrees C / 82 degrees F
 
 Total CPU DRAM         2820 MB
@@ -37,7 +35,6 @@ As you mentioned the values in the below mentioned output
 ```text
 Show chassis environment | no-more
 ```
-
 It define the chip level temperature values its wont have any impact on the fan speed .Only the overall FPC temperature values define the fan speed.
 
 Temperature (PMB)—Temperature of the air passing by the Processor Mezzanine Board (PMB) at the bottom of the FPC.

@@ -12,7 +12,6 @@
 Khi mở backup về MP-Backup thì kênh VPLS up chậm
 Kênh sau khi up thì thuê bao kết nối với rate chậm
 ```
-
 * *Rà soát trên mạng**
 
 - Theo thiết kế MP-Backup chỉ dùng trong tình huống ngắn hạn, để ứng cứu cho các tỉnh. Trong điều kiện bình thường thì kênh VPLS từ MP về MP-backup sẽ không up
@@ -30,63 +29,27 @@ Kênh sau khi up thì thuê bao kết nối với rate chậm
 DDoS violation liên quan protocol PADI, rate ~250-300 pps (config 250pps)
 Kiểm tra PADI từ các site có kết nối về MP-Backup ~ 50pps PADI
 ```
-
 {master}
 
 ```text
 noc-net@HCM-MP-Backup-01> show ddos-protection protocols pppoe statistics brief
-```
-
-```text
 Packet types: 8, Received traffic: 4, Currently violated: 1
-```
-
-```text
 Protocol    Packet      Received        Dropped        Rate    Violation State
-```
-
-```text
 group      type        (packets)      (packets)      (pps)    counts
-```
-
-```text
 pppoe      aggregate  36342529308    23623567470    281      683      ok
-```
-
-```text
 pppoe      padi        34945520620    23621899139    262      14879    viol
-```
-
-```text
 pppoe      pado        0              0              0        0        ok
-```
-
-```text
 pppoe      padr        738759485      1472513        9        194      ok
-```
-
-```text
 pppoe      pads        0              0              0        0        ok
-```
-
-```text
 pppoe      padt        658249203      195818        6        2251      ok
-```
-
-```text
 pppoe      padm        0              0              0        0        ok
-```
-
-```text
 pppoe      padn        0              0              0        0        ok
 ```
-
 {master}
 
 ```text
 noc-net@HCM-MP-Backup-01> show vpls connections up | match "Remote PE:"
 ```
-
 Remote PE: 183.81.85.190, Negotiated control-word: No
 
 Remote PE: 118.69.255.61, Negotiated control-word: No
@@ -157,7 +120,6 @@ Nov  9 22:02:45.954  HCM-MP-Backup-01 authd[28458]: AUTHD\_RADIUS\_SERVER\_STA
 ```text
 noc-net@HCM-MP-Backup-01> show system resource-monitor fpc
 ```
-
 FPC Resource Usage Summary
 
 Free Heap Mem Watermark        : 20  %
@@ -195,7 +157,6 @@ Slot #        % Free    PFE #        % Free      % Free        
 ```text
 noc-net@HCM-MP-Backup-01> show subscribers summary port
 ```
-
 Interface          Count
 
 et-3/1/0            1227
@@ -225,7 +186,6 @@ xe-1/3/1            44
 ```text
 noc-net@HCM-MP-Backup-01> show network-access aaa statistics radius
 ```
-
 Outstanding Requests
 
 RADIUS Server    Profile              Configured  Current  Peak  Exceeded
@@ -369,7 +329,6 @@ BRAS0                      1000        0  1000      2516
 ```text
 noc-net@HCM-MP-Backup-01> show network-access aaa terminate-code brief
 ```
-
 Terminate-code:
 
 RADIUS    Custom Usage-Count Type Code
@@ -411,13 +370,11 @@ RADIUS    Custom Usage-Count Type Code
 ```text
 9          no    3          ppp  subscriber-mgr-activation-failed
 ```
-
 {master}
 
 ```text
 noc-net@HCM-MP-Backup-01> show network-access aaa terminate-code brief
 ```
-
 Terminate-code:
 
 RADIUS    Custom Usage-Count Type Code
@@ -459,7 +416,6 @@ RADIUS    Custom Usage-Count Type Code
 ```text
 9          no    3          ppp  subscriber-mgr-activation-failed
 ```
-
 - s
 
 Case studies
@@ -501,25 +457,14 @@ Case studies
 ```text
 set system services resource-monitor no-load-throttle
 ```
-
 - s
 
 ```text
 bbe-dfw-prio            246 Nov  8 23:22:57.877561 BBE\_DFW\_DYN\_PROF\_ERR\_CODE                                    session\_id=8976791743: Error code 59 (config err FALSE): The IFL does not have the required IFF.
-```
-
-```text
 bbe-dfw-prio            247 Nov  9 14:45:55.273732 BBE\_DFW\_DYN\_PROF\_ERR\_CODE                                    session\_id=8987383320: Error code 59 (config err FALSE): The IFL does not have the required IFF.
-```
-
-```text
 bbe-dfw-prio            248 Nov  9 17:12:54.574108 BBE\_DFW\_DYN\_PROF\_ERR\_CODE                                    session\_id=8989084520: Error code 59 (config err FALSE): The IFL does not have the required IFF.
-```
-
-```text
 bbe-dfw-prio            249 Nov  9 18:42:05.972787 BBE\_DFW\_DYN\_PROF\_ERR\_CODE                                    session\_id=8990111971: Error code 59 (config err FALSE): The IFL does not have the required IFF.
 ```
-
 - s
 
 {master}
@@ -527,21 +472,13 @@ bbe-dfw-prio            249 Nov  9 18:42:05.972787 BBE\_DFW\_DYN\_PROF\_E
 ```text
 noc-net@HCM-MP-Backup-01> show system processes extensive | except 0.0
 ```
-
 241 processes: 6 running, 206 sleeping, 29 waiting
 
 ```text
 Mem: 1747M Active, 5161M Inact, 2126M Wired, 1521M Buf, 6859M Free
-```
-
-```text
 Swap: 8192M Total, 8192M Free
-```
-
-```text
 PID USERNAME    PRI NICE  SIZE    RES STATE  C  TIME    WCPU COMMAND
 ```
-
 10 root        155 ki31    0K    64K RUN    0    ???  99.37% idle{idle: cpu0}
 
 10 root        155 ki31    0K    64K RUN    1    ???  93.55% idle{idle: cpu1}
@@ -572,58 +509,23 @@ PID USERNAME    PRI NICE  SIZE    RES STATE  C  TIME    WCPU COMMAND
 
 ```text
 noc-net@HNI-MP-Backup-01> show ddos-protection protocols pppoe statistics brief
-```
-
-```text
 Packet types: 8, Received traffic: 4, Currently violated: 0
-```
-
-```text
 Protocol    Packet      Received        Dropped        Rate    Violation State
-```
-
-```text
 group      type        (packets)      (packets)      (pps)    counts
-```
-
-```text
 pppoe      aggregate  9177232702      680477088      18      434      ok
-```
-
-```text
 pppoe      padi        8384140733      667773003      17      4428      ok
-```
-
-```text
 pppoe      pado        0              0              0        0        ok
-```
-
-```text
 pppoe      padr        140857951      825            0        2        ok
-```
-
-```text
 pppoe      pads        0              0              0        0        ok
-```
-
-```text
 pppoe      padt        478715717      12715826      0        1972      ok
-```
-
-```text
 pppoe      padm        0              0              0        0        ok
-```
-
-```text
 pppoe      padn        0              0              0        0        ok
 ```
-
 {master}
 
 ```text
 noc-net@HNI-MP-Backup-01> show vpls connections up | match "Remote PE:"
 ```
-
 Remote PE: 118.70.0.234, Negotiated control-word: No
 
 Remote PE: 118.70.0.133, Negotiated control-word: No
@@ -693,7 +595,6 @@ a. Mô hình tương tự MP-Backup để kiểm chứng lại vấn đề thuê
 b. Test tính năng liên quan PWHT.
 >>> hiện đã cấu hình PWHT trên VPLS để test
 ```
-
 * *z**
 
 - 1. Thực hiện test up kênh VPLS trên mạng production ghi nhận ~7s - trùng với kết quả test trên lab

@@ -28,7 +28,6 @@
 ```text
 • The interface that the packet is received on must be the best and active path back to the source prefix.
 ```
-
 - • Loose mode
 
 - • Source address must match a prefix in the routing table (accommodates asymmetric routing)
@@ -110,13 +109,9 @@ Define the actions to be taken on the traffic
 ```text
 A flow specification received from a BGP peer will need to be validated against the associated routing table before being accepted
 A route is only considered valid if:
-```
-
-```text
 1. The originator of the flow specification matches the originator of the bestmatch unicast route for the destination prefix embedded in the flow specification
 2. There are no more-specific unicast routes, when compared with the flow destination prefix, that have been received from a different neighboring AS than the best-match unicast route determined in #1.
 ```
-
 - By default JUNOS validates using the above rules. This validation can be disabled, and custom policies can used to validate the FlowSpec routes.
 
 * *Case #1: Customer Requirements**
@@ -162,7 +157,6 @@ A route is only considered valid if:
 ```text
 lab@mxA> show bgp summary
 ```
-
 * *View and Verify Flow Routes**
 
 - View inetflow.O table entries
@@ -170,19 +164,14 @@ lab@mxA> show bgp summary
 ```text
 lab@router> show route table inetflow.O extensive
 ```
-
 - The Next hop type is set to Fictitious because there is no next hop for this type of NLRI
 
 * *Hidden Flow-routes**
 
 ```text
 Example of a Flow-route that failed FlowSpec validation
-```
-
-```text
 lab@router> show route table inetflow.O extensive hidden
 ```
-
 - There are two ways for the route to pass validation. The Flow-route must be within the range of routes originated and advertised by the Customer to the Service Provider or a custom validation policy must exist on the service provider router to override the default validation process.
 
 * *View Flow Validation**
@@ -192,7 +181,6 @@ Flows must be validated before conversion to firewall filters
 ```text
 > show route flow validation detail
 ```
-
 * *Verify Firewall Filters**
 
 - Firewall filter automatically created
@@ -200,7 +188,6 @@ Flows must be validated before conversion to firewall filters
 ```text
 lab@mxC-R3> show firewall
 ```
-
 - NOTE: Current implementation applies the Firewall Filter to all interfaces
 
 use the JUNOS traceroute command and set the port to 53. This will generate one packet of UDP port 53 traffic before switching over to random ports.

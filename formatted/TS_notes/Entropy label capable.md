@@ -5,7 +5,6 @@
 ```text
 inet.3: 1668 destinations, 3275 routes (1504 active, 0 holddown, 300 hidden)
 ```
-
 10. 249.34.254/32 (4 entries, 2 announced)
 
 BGP group AGG-TO-CSG-RIGHT-TO-AGG1.4 type Internal
@@ -18,12 +17,8 @@ Flags: Nexthop Change
 
 ```text
 MED: 0
-```
-
-```text
 Localpref: 100
 ```
-
 AS path: [65324] I  (Originator)
 
 Cluster list:  10.249.34.1
@@ -39,7 +34,6 @@ Cluster ID: 10.249.34.6
 ```text
 load-balance-label-capability;
 ```
-
 no-load-balance-label-capability;
 
 }
@@ -49,7 +43,6 @@ no-load-balance-label-capability;
 ```text
 inet.3: 4 destinations, 4 routes (4 active, 0 holddown, 0 hidden)
 ```
-
 \* 190.10.10.10/32 (1 entry, 1 announced)
 
 BGP group iBGP type Internal
@@ -63,7 +56,6 @@ Flags: Nexthop Change
 ```text
 Localpref: 100
 ```
-
 AS path: [7552] I
 
 [ June 30, 2023 15:54 ] ⁨Hung Le⁩: For platforms which have entropy label capability (see section 8), the

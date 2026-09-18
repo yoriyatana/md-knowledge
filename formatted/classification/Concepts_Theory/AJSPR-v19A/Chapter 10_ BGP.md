@@ -81,7 +81,6 @@
 ```text
 Sent when an error is detected with the BGP session such as a hold timer expiring, neighbor capabilities change
 ```
-
 - Route Refresh
 
 - Used to ask a BGP peer to resend all routes of a particular address family
@@ -101,7 +100,6 @@ IBGP peers advertise routes received from EBGP peers to other IBGP peers.
 EBGP peers advertise routes learned from IBGP or EBGP peers to other EBGP peers.
 IBGP peers do not advertise routes received from IBGP peers to other IBGP peers.
 ```
-
 * *IBGP loop prevention requires a full mesh design. Using route reflectors or confederations can also alleviate this situation, both of which can reduce or alleviate the full-mesh requirement.**
 
 * *BGP Route Update Forwarding Actions**
@@ -181,7 +179,6 @@ IBGP peers do not advertise routes received from IBGP peers to other IBGP peers.
 ```text
 *prefix-limit** allows a specified amount of prefixes to be received
 ```
-
 * *hold-time** alters the keepalive time used to maintain the **BGP** session
 
 • Keepalive value is 1/3 of configured hold-time value
@@ -198,12 +195,8 @@ Required to accept routes with your own AS in the AS-path. Specify the number of
 
 ```text
 Range: 1 through 10
-```
-
-```text
 Default: 1
 ```
-
 - For example, if you configure loops 1, the route is hidden if the AS number is detected in the path one or more times. This is the default behavior. If you configure loops 2, the route is hidden if the AS number is detected in the path two or more times.
 
 * *Modifying AS Path: as-override**

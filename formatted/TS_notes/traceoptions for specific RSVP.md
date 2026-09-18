@@ -17,16 +17,7 @@ Next commannd is hidden..please type out full command.
 
 ```text
 show rsvp transport interface | no-more
-```
-
-```text
 show rsvp transport queues -- 3 times 10 second intervals
-```
-
-```text
 show rsvp transport task - 3 times 10 second intervals
-```
-
-```text
 show rsvp transport neighbor | no-more -- 3 times 10 second interval
 ```

@@ -7,7 +7,6 @@ sau đó với version 15.x, 16.x không cho phép cấu hình trùng IP -> comm
 ```text
 do đó khi nâng cấp version từ 14. lên 15. phải bắt buộc nâng cấp mà no-validate cấu hình (do khác BSD)... sẽ xảy ra trường hợp là system nhận được version mới, nhưng sẽ stuck ở quá trình boot lên ( do quá trình boot sẽ load cấu hình -> trùng IP -> failed)
 ```
-
 nên khi nâng cấp từ 14. lên 15., 16. phải lưu ý vụ trùng địa chỉ IP
 
 hoặc phải nâng cấp bằng USB (install media)

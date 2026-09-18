@@ -9,7 +9,6 @@ Như anh Hưng nói thì mình thao tác tách ra:
 ```text
 Deactivate service-set
 ```
-
 - Disable interface ams.xx inside
 
 \* Add thêm range
@@ -19,7 +18,6 @@ Deactivate service-set
 ```text
 Activate service-set —> commit
 ```
-
 - Enable interface ams.xx inside —> commit
 
 * *=> Summary lại: việc activec lại thì tách thành 2 lần commit**

@@ -24,20 +24,10 @@ Enabled protocols: Bridging, Dual VLAN,
 
 ```text
 user:         852573 routes
-```
-
-```text
 perm:          5 routes
-```
-
-```text
 intf:          5 routes
-```
-
-```text
 dest:          8 routes
 ```
-
 root@HCM001PRT02\_RE0> show system core-dumps no-forwarding
 
 /var/crash/\*core\*: No such file or directory
@@ -49,7 +39,6 @@ Hiện tại HCM-RR02 đang học tầm 852573 routes -> trong quá trình xảy
 ```text
 > RPD bị crashed trong logical system HCM-RR02 do cạn kiệt memory.
 ```
-
 + RPD đang chạy ở 32-bit mode
 
 cuong.hv1@HCM001PRT02\_RE0> show system processes | no-more

@@ -5,7 +5,6 @@
 ```text
 [ June 21, 2023 20:55 ] ⁨Hung Le⁩: When panic is triggered on anchor fpc(or reboot), down event is sent to non-anchor fpcs. Non-anchor fpcs set the pfe bfd session state to "down". When anchor fpc comes up, as part of pfe bfd session obj creation, session status is set to "up" locally. Ppman sends "bfd up" event to pfeman. But it is ignored as the status is already up(set by pfeman as part of init, done to avoid unwanted processing). So pfeman does not send session "up" event to other fpcs. Due to this session status remains down at non-anchor fpc even though bfd session is up.
 ```
-
 [ June 21, 2023 20:55 ] ⁨Hung Le⁩: viec keep session id cua bfd la do phat trien tinh nang bfd session dc frr qua lsp
 
 [ June 21, 2023 20:56 ] ⁨Hung Le⁩: khi phat trien rli cho tinh nang nay thi bfd frr default lun duoc enable
@@ -65,7 +64,6 @@ Detect   Transmit
 ```text
 Address                  State     Interface      Time     Interval  Multiplier
 ```
-
 81. 201.103.92            Up        ae55.0         0.150     0.050        3
 
 Client OSPF realm ospf-v2 Area 0.0.0.0, TX interval 0.050, RX interval 0.050
@@ -77,7 +75,6 @@ Local diagnostic None, remote diagnostic None
 ```text
 Remote state Up, version 1
 ```
-
 Session type: Single hop BFD
 
 Min async interval 0.050, min slow interval 1.000
@@ -179,7 +176,6 @@ Enhancements to BFD-triggered FRR for unicast next hops and forwarding-table ses
 ```text
 >>>>>>>>>>>>>>>>>>>>>>>
 ```
-
 [ June 21, 2023 20:36 ] ⁨Hung Le⁩: If FPC0 PFE0 has the AE membership port, FPC1 also has the AE membership port:
 
 - PFE0 disabe can cause max weight on both FPCs.
@@ -193,7 +189,6 @@ If FPC0 PFE0 doesn't have the AE membership port, and FPC1 also has the AE membe
 ```text
 PFE0 disable will \*not\* cause the max weight issue, even the BFD remains in Down state and BFD session ID remains in Down state on FPC.
 ```
-
 - Issue is not seen in this scenario - I can't explain the reason.
 
 If FPC0 PFE0 doesn't have the AE membership port, and FPC0 PFEx have the membership port:

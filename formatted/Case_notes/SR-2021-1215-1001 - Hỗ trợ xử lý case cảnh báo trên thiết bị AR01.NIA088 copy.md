@@ -47,7 +47,6 @@ Slot 0:
 ```text
 Current state                  Master
 ```
-
 Election priority              Master
 
 Temperature                 33 degrees C / 91 degrees F
@@ -119,7 +118,6 @@ Last reboot reason             Router rebooted after a normal shutd
 ```text
 Load averages:                 1 minute   5 minute  15 minute
 ```
-
 0. 31       0.28       0.25
 
 Routing Engine status:
@@ -129,7 +127,6 @@ Slot 1:
 ```text
 Current state                  Backup
 ```
-
 Election priority              Backup
 
 Temperature                 32 degrees C / 89 degrees F
@@ -165,7 +162,6 @@ Last reboot reason             Router rebooted after a normal shutd
 ```text
 Load averages:                 1 minute   5 minute  15 minute
 ```
-
 0. 16       0.19       0.16
 
 - Không có process chiếm CPU
@@ -180,16 +176,9 @@ last pid: 88761;  load averages:  0.26,  0.27,  0.25  up 466+00:43:31�
 
 ```text
 Mem: 94M Active, 6567M Inact, 1684M Wired, 1675M Buf, 23G Free
-```
-
-```text
 Swap: 8192M Total, 8192M Free
-```
-
-```text
 PID USERNAME PRI NICE   SIZE    RES STATE   C   TIME    WCPU COMMAND
 ```
-
 10 root     155 ki31     0K    64K CPU1    1    ??? 100.00% idle{idle: cpu1}
 
 10 root     155 ki31     0K    64K CPU3    3    ??? 100.00% idle{idle: cpu3}
@@ -221,7 +210,6 @@ devfs                   1.0K       1.0K       �
 ```text
 show version detail no-forwarding
 ```
-
 {master}
 
 [vietpn@AR01.NIA](mailto:vietpn@AR01.NIA)088\_RE0> show version invoke-on all-routing-engines | match "re0|re1|Junos:"
@@ -235,7 +223,6 @@ Hostname: AR01.NIA088\_RE0
 ```text
 Junos: 17.3R3-S8.1
 ```
-
 re1:
 
 - -------------------------------------------------------------------------
@@ -245,7 +232,6 @@ Hostname: AR01.NIA088\_RE1
 ```text
 Junos: 17.3R3-S8.1
 ```
-
 - Không phát sinh core-dump
 
 {master}
@@ -269,7 +255,6 @@ total files: 1
 ```text
 Show system resource-monitor fpc <<< không bất tường
 ```
-
 {master}
 
 [vietpn@AR01.NIA](mailto:vietpn@AR01.NIA)088\_RE0> show system resource-monitor fpc
@@ -295,7 +280,6 @@ Slot #         % Free       RTT  RTT        PFE #  �
 ```text
 show route summary <<< route không nhiều
 ```
-
 {master}
 
 [vietpn@AR01.NIA](mailto:vietpn@AR01.NIA)088\_RE0> show route summary
@@ -306,32 +290,13 @@ Router ID: 10.250.92.41
 
 ```text
 inet.0: 2945 destinations, 3949 routes (2940 active, 0 holddown, 5 hidden)
-```
-
-```text
 Direct:     13 routes,     12 active
-```
-
-```text
 Local:     14 routes,     14 active
-```
-
-```text
 OSPF:   1885 routes,   1885 active
-```
-
-```text
 BGP:   2032 routes,   1028 active
-```
-
-```text
 RSVP:      4 routes,      0 active
-```
-
-```text
 LDP:      1 routes,      1 active
 ```
-
 - Log messages <<< không có log lạ
 - Log interactive-commands <<< chưa check
 - Log chassisd <<< chưa check
@@ -340,98 +305,47 @@ Thu thập các thông tin liên quan
 
 ```text
 request support information | no-more | save /var/log/RSI\_AR01.NIA088\_20211215
-```
-
-```text
 file archive source /var/log/\* destination /var/log/LOG\_AR01.NIA088\_20211215
-```
-
-```text
 > show version invoke-on all-routing-engines | match "re0|re1|Junos:"
-```
-
-```text
 > show chassis alarms
-```
-
-```text
 > show system alarms
-```
-
-```text
 > show system core-dumps
-```
-
-```text
 > show chassis routing-engine | no-more
-```
-
-```text
 > show chassis routing-engine | match "Slot|State|Start"
-```
-
-```text
 show chassis environment cb | no-more
-```
-
-```text
 show chassis environment cb | match "CB|State"
-```
-
-```text
 > show chassis fabric summary | no-more
 ```
-
 /\* Lưu thông tin hardware/fabric/fpc \*/
 
 ```text
 > show chassis hardware | no-more
-```
-
-```text
 > show chassis fabric fpcs | no-more
-```
-
-```text
 > show chassis fabric summary extended | no-more
-```
-
-```text
 > show chassis fabric plane | no-more
 ```
-
 /\* Lưu thông tin đồng bộ GRES and NSR - KB32931  \*/
 
 ```text
 > show system switchover /\* Show on Backup RE – GRES Readiness Check\*/
-```
-
-```text
 > show task replication  /\* Show on Master RE – RPD Synchronization Check\*/
-```
-
-```text
 > show database-replication summary /\* Show on Master RE – For BNG only \*/
 ```
-
 {master}
 
 ```text
 [vietpn@AR01.NIA](mailto:vietpn@AR01.NIA)088\_RE0> show chassis environment cb | match "CB|State"
 ```
-
 CB 0 status:
 
 ```text
 State                      Online Master
 ```
-
 CB 1 status:
 
 ```text
 State                      Online Standby
 ```
-
 {master}
 
 [vietpn@AR01.NIA](mailto:vietpn@AR01.NIA)088\_RE0> show chassis fabric summary | no-more
@@ -439,7 +353,6 @@ State                      Online Standby
 ```text
 Plane   State    Uptime
 ```
-
 0      Online   465 days, 23 hours, 45 minutes, 37 seconds
 
 1      Online   465 days, 23 hours, 45 minutes, 37 seconds
@@ -461,7 +374,6 @@ Note: For extended summary, use
 ```text
 show chassis fabric summary extended
 ```
-
 {master}
 
 [vietpn@AR01.NIA](mailto:vietpn@AR01.NIA)088\_RE0> show chassis alarms
@@ -488,194 +400,78 @@ Xử lý trên thiết bị
 
 ```text
 > set cli timestamp
-```
-
-```text
 > show configuration | no-more
-```
-
-```text
 > request support information | no-more
 ```
-
 /\* Lưu thông tin alarm/core \*/
 
 ```text
 > show system alarms
-```
-
-```text
 > show chassis alarms
-```
-
-```text
 > show system core-dumps
 ```
-
 /\* Lưu thông tin về IGP \*/
 
 ```text
 > show ospf interface | no-more
-```
-
-```text
 > show ospf interface | count
-```
-
-```text
 > show ospf neighbor instance all | no-more
-```
-
-```text
 > show ospf3 interface | no-more
-```
-
-```text
 > show ospf3 interface | count
-```
-
-```text
 > show ospf3 neighbor instance all | no-more
 ```
-
 /\* Lưu thông tin về MPLS/LDP/RSVP \*/
 
 ```text
 > show mpls interface | no-more
-```
-
-```text
 > show mpls interface | count
-```
-
-```text
 > show ldp interface | no-more
-```
-
-```text
 > show ldp interface | count
-```
-
-```text
 > show rsvp interface | no-more
-```
-
-```text
 > show rsvp interface | count
-```
-
-```text
 > show ldp neighbor | no-more
-```
-
-```text
 > show ldp neighbor | count
-```
-
-```text
 > show ldp session | no-more
-```
-
-```text
 > show ldp session | count
-```
-
-```text
 > show rsvp session | no-more
-```
-
-```text
 > show rsvp session | count
-```
-
-```text
 > show mpls lsp | no-more
 ```
-
 /\* Lưu thông tin về BGP \*/
 
 ```text
 > shwo bgp sum | no-more
-```
-
-```text
 show bgp summary | match Establ | count
-```
-
-```text
 > show bgp neighbor | no-more
-```
-
-```text
 > show route summary | no-more
-```
-
-```text
 > show bfd session detail | no-more
 ```
-
 /\* Lưu thông tin VRRP/L2VPN/VPLS/LLDP/BFD \*/
 
 ```text
 > show vrrp | no-more
-```
-
-```text
 > show l2circuit connections | no-more
-```
-
-```text
 > show vpls connections | no-more
-```
-
-```text
 > show vpls mac-table | no-more
-```
-
-```text
 > show lldp neighbors | no-more
-```
-
-```text
 > show bfd session detail | no-more
 ```
-
 /\* Lưu thông tin hardware/fabric/fpc \*/
 
 ```text
 > show chassis hardware | no-more
-```
-
-```text
 > show chassis fabric fpcs | no-more
-```
-
-```text
 > show chassis fabric summary extended | no-more
-```
-
-```text
 > show chassis fabric plane | no-more
 ```
-
 /\* Lưu thông tin đồng bộ GRES and NSR - KB32931  \*/
 
 ```text
 > show system switchover /\* Show on Backup RE – GRES Readiness Check \*/
-```
-
-```text
 > show task replication  /\* Show on Master RE – RPD Synchronization Check \*/
-```
-
-```text
 > show database-replication summary /\* Show on Master RE – For BNG only \*/
-```
-
-```text
 > show system subscriber-management summary
 ```
-
 - Tiến hành reseat CB1 >>> KB <https://kb.juniper.net/InfoCenter/index?page=content&id=KB23067&actp=METADATA>
 
 ### Kiểm tra trạng thái RE1
@@ -687,7 +483,6 @@ show bgp summary | match Establ | count
 ```text
 [vietpn@AR01.NIA](mailto:vietpn@AR01.NIA)088\_RE0> show chassis routing-engine | match "Slot|State|Start"
 ```
-
 Dec 15 00:26:27
 
 Slot 0:
@@ -695,7 +490,6 @@ Slot 0:
 ```text
 Current state                  Master
 ```
-
 Start time                     2020-09-04 23:25:59 CAT
 
 Slot 1:
@@ -703,7 +497,6 @@ Slot 1:
 ```text
 Current state                  Backup
 ```
-
 Start time                     2020-09-04 23:15:28 CAT
 
 ### Thực hiện offline RE1
@@ -713,19 +506,16 @@ Start time                     2020-09-04 23:15:28 CAT
 ```text
 > request system power-off other-routing-engine
 ```
-
 ###### Kiểm tra RE1 đã offline
 
 ```text
 > show chassis routing-engine | match "Slot|State|Start"
 ```
-
 Slot 0:
 
 ```text
 Current state                  Master
 ```
-
 Start time                     2020-09-04 23:25:59 CAT
 
 Slot 1:
@@ -733,7 +523,6 @@ Slot 1:
 ```text
 Current state                  Present
 ```
-
 ### Thực hiện offline CB1
 
 ###### Offline CB1 bằng lệnh:
@@ -741,31 +530,26 @@ Current state                  Present
 ```text
 > request chassis cb offline slot 1
 ```
-
 ###### Xác nhận CB1 ở trạng thái offline
 
 ```text
 > show chassis environment cb | match "CB|State"
 ```
-
 CB 0 status:
 
 ```text
 State                      Online Master
 ```
-
 CB 1 status:
 
 ```text
 State                      Offline
 ```
-
 ###### Kiểm tra trạng thái các fabric plane
 
 ```text
 > show chassis fabric summary extended
 ```
-
 0      Online     NO     NO        NO/  NO         465 days, 23 hours, 47 minutes, 47 seconds
 
 1      Online     NO     NO        NO/  NO         465 days, 23 hours, 47 minutes, 47 seconds
@@ -785,17 +569,12 @@ State                      Offline
 ```text
 >>> Sau khi Offline CB1 và RE1 thì cảnh báo vẫn chưa clear.
 ```
-
 ### Thực hiện online CB1 bằng lệnh
 
 ```text
 > request chassis cb online slot 1
-```
-
-```text
 >>> Sau khi CB1 online trở lại thì cảnh báo liên quan CB1 đã được clear
 ```
-
 [vietpn@AR01.NIA](mailto:vietpn@AR01.NIA)088\_RE0> show system alarms
 
 Dec 15 00:32:19

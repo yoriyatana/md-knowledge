@@ -7,7 +7,6 @@ Name: jnxSpSvcSetIfMemoryUsage64
 ```text
 OID:  1.3.6.1.4.1.2636.3.32.1.3.1.9
 ```
-
 Description: The amount of memory used by this Service PIC, expressed in bytes, represented by 64 bit integer
 
 Name: jnxJsIdpSessionsUsage
@@ -15,7 +14,6 @@ Name: jnxJsIdpSessionsUsage
 ```text
 OID: 1.3.6.1.4.1.2636.3.39.1.11.1.1.2.0
 ```
-
 Description: Currently allocated sessions by IDP in percentage
 
 Name: dot1xAuthSessionStatsTable
@@ -23,7 +21,6 @@ Name: dot1xAuthSessionStatsTable
 ```text
 OID: 1.0.8802.1.1.1.1.2.4
 ```
-
 Description: A table that contains the session statistics objects for the Authenticator PAE associated with each Port. An entry appears in this table for each port that may authenticate access to itself.
 
 Name: jnxMbgPgwCPUUtilization
@@ -31,7 +28,6 @@ Name: jnxMbgPgwCPUUtilization
 ```text
 OID: 1.3.6.1.4.1.2636.3.66.1.1.1.2.4.0
 ```
-
 Description: Current CPU Utilization.
 
 Name: jnxJsSPUMonitoringCurrentCPSession
@@ -39,7 +35,6 @@ Name: jnxJsSPUMonitoringCurrentCPSession
 ```text
 OID: 1.3.6.1.4.1.2636.3.39.1.12.1.1.1.8
 ```
-
 Description: Current CP session number of SPU.
 
 Name: jnxJsSPUMonitoringCurrentFlowSession
@@ -47,7 +42,6 @@ Name: jnxJsSPUMonitoringCurrentFlowSession
 ```text
 OID: 1.3.6.1.4.1.2636.3.39.1.12.1.1.1.6
 ```
-
 Description: Current flow session number of SPU.
 
 Name: jnxJsSPUMonitoringMaxFlowSession
@@ -55,7 +49,6 @@ Name: jnxJsSPUMonitoringMaxFlowSession
 ```text
 OID: 1.3.6.1.4.1.2636.3.39.1.12.1.1.1.7
 ```
-
 Description: Max flow session number of SPU.
 
 Name: jnxJsSPUMonitoringMemoryUsage
@@ -63,7 +56,6 @@ Name: jnxJsSPUMonitoringMemoryUsage
 ```text
 OID: 1.3.6.1.4.1.2636.3.39.1.12.1.1.1.5
 ```
-
 Description: Current memory usage of SPU(CPU) in percentage.
 
 Name: jnxJsSPUMonitoringCPUUsage
@@ -71,7 +63,6 @@ Name: jnxJsSPUMonitoringCPUUsage
 ```text
 OID: 1.3.6.1.4.1.2636.3.39.1.12.1.1.1.4
 ```
-
 Description: Current SPU(CPU) Utilization in percentage.
 
 If you would like to do more searches or find more relevant OID’s according to your requirement, please use the below links:

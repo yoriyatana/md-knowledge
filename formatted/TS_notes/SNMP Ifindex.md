@@ -7,7 +7,6 @@ Khi một interface mới được tạo ra, mib2d sẽ tự động kiểm tra 
 ```text
 File này sẽ lưu lại mọi thông tin SNMP Ifindex đã được cấp phát khi tạo ra các interfaces trước đó, bất kể khi xóa các interfaces đó đi thì thông tin SNMP Ifindex của các interfaces này vẫn sẽ còn.
 ```
-
 Do vậy khi tạo mới một interface mib2d sẽ check trong file này trước, nếu đã có sẵn thông tin Ifindex rồi, thì nó sẽ được dùng lại luôn.
 
 Việc cấp phát SNMP Ifindex này chủ yếu phụ thuộc vào thứ tự các interface được tạo ra, nên giá trị này hoàn toàn có thể khác nhau trên các box khác nhau.

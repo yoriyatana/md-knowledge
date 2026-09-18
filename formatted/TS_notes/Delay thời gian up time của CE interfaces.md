@@ -4,12 +4,8 @@
 
 ```text
 lab@mx480-re0# show protocols network-isolation
-```
-
-```text
 group hoo {
 ```
-
 detection {
 
 hold-time up 60000;
@@ -29,7 +25,6 @@ service-tracking-action link-down;
 ```text
 lab@mx480-re0# show interfaces ae0
 ```
-
 flexible-vlan-tagging;
 
 mtu 9216;

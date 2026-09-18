@@ -85,7 +85,6 @@ Route Leaking and Summarization
 ```text
 Level 1 link-state PDUs (LSPs)
 ```
-
 IS-IS Best Practices
 
 - Enable wide metrics
@@ -95,7 +94,6 @@ IS-IS Best Practices
 ```text
 user@router# set protocols isis level 2 wide-metrics-only
 ```
-
 - Increase the LSP lifetime, from 1200 seconds (default), to reduce the amount of control traffic generated
 
 [edit]
@@ -103,7 +101,6 @@ user@router# set protocols isis level 2 wide-metrics-only
 ```text
 user@router# set protocols isis lsp-lifetime 4000
 ```
-
 - Adjust how quickly IS-IS performs an SPF calculation after detecting a topology change (200 ms default)
 
 [edit]
@@ -111,7 +108,6 @@ user@router# set protocols isis lsp-lifetime 4000
 ```text
 user@router# set protocols isis spf-options delay 50
 ```
-
 - Use the overload timeout value option to prevent traffic from transiting a newly booted router
 
 [edit]
@@ -125,7 +121,6 @@ user@router # set protocols isis overload timeout 600
 ```text
 user@router# set protocols isis ignore-attached-bit
 ```
-
 \* Enable BFD on interfaces to reduce failure detection times
 
 [edit protocols isis]
@@ -133,7 +128,6 @@ user@router# set protocols isis ignore-attached-bit
 ```text
 user@router# show
 ```
-
 interface ge-1/1/1.0 {
 
 bfd-liveness-detection {
@@ -153,7 +147,6 @@ multiplier 3;
 ```text
 user@router# show interface ge-1/1/2
 ```
-
 level 2 {
 
 hello-authentication-key "$9$km5FCt0cyKn/yKM8dVqmf"; ## SECRET-DATA
@@ -167,7 +160,6 @@ hello-authentication-type md5;
 ```text
 show isis database level 1 mxE-R5-l.00-00 extensive | find tlv
 ```
-
 The four /24 RIP routes are installed in the R5-1 router’s LSP as Type 130 TLVs (IP external prefix) and as Type 135 TLVs (IP extended prefix). Because both the external and extended TLVs exist, only the TLV 130 values are used in the SPF algorithm
 
 by default, external routes are not leaked between the Level 1 database and the Level 2 database.
@@ -197,7 +189,6 @@ By default:
 ```text
 The rule that we care about right now is the one about L1 external routes which we can state this way:
 ```
-
 L1 routes that were injected into ISIS via redistribution, are treated by default as L1 external routes, and are NOT advertised to L2 neighbors by default.
 
 We know now that the difference between internal and external routes disappears when we configure wide metrics only.

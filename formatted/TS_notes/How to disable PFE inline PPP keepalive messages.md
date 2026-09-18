@@ -23,12 +23,8 @@ The sysctl requires root access to the shell of the RE. The default value of ‘
 
 ```text
 root@MX240% sysctl net.link.ppp.ppp\_dist\_ka=4
-```
-
-```text
 net.link.ppp.ppp\_dist\_ka: 6 -> 4
 ```
-
 Notes:
 
 - The change takes effect only for new PPP interfaces that come up after the sysctl is modified.
@@ -39,7 +35,6 @@ Below are sample logs with the sysctl set to disable PFE keepalive messages:
 ```text
 lab@MX240> show subscribers
 ```
-
 Interface IP Address/VLAN ID User Name LS:RI
 
 pp0.1073746225 123.123.123.123 [kc@kc.com](mailto:kc@kc.com) default:internet
@@ -47,13 +42,11 @@ pp0.1073746225 123.123.123.123 [kc@kc.com](mailto:kc@kc.com) default:internet
 ```text
 lab@MX240> show interfaces pp0.1073746225 | match Underlying
 ```
-
 Underlying interface: demux0.100 (Index 373)
 
 ```text
 lab@MX240> monitor traffic interface demux0.100 extensive no-resolve
 ```
-
 Address resolution is OFF.
 
 Listening on demux0.100, capture size 1514 bytes
@@ -61,7 +54,6 @@ Listening on demux0.100, capture size 1514 bytes
 ```text
 18:11:34.163752 In
 ```
-
 Juniper PCAP Flags [Ext, In], PCAP Extension(s) total length 22
 
 Device Media Type Extension TLV #3, length 1, value: Unspecified (0)
@@ -79,7 +71,6 @@ Logical Unit Number Extension TLV #5, length 4, value: 100
 ```text
 00:00:69:03:01:02 > 88:e0:f3:84:a7:c1, ethertype 802.1Q (0x8100), length 34: vlan 100, p 0, ethertype PPPoE S, PPPoE [ses 1]LCP (0xc021), length 10: LCP, Echo-Request (0x09), id 58, length 10
 ```
-
 encoded length 8 (=Option(s) length 4)
 
 0x0000: c021 093a 0008
@@ -89,7 +80,6 @@ Magic-Num 0x0f47d4f8
 ```text
 18:11:34.163766 Out
 ```
-
 Juniper PCAP Flags [Ext], PCAP Extension(s) total length 22
 
 Device Media Type Extension TLV #3, length 1, value: Unspecified (0)
@@ -116,12 +106,8 @@ Magic-Num 0x70fd8b2d
 
 ```text
 2 packets received by filter
-```
-
-```text
 0 packets dropped by kernel
 ```
-
 And, as a final check, if all interfaces on a given PFE are logged in after you have changed to the sysctl, the PFE inline keepalive statistics should no longer increment:
 
 NPC1(MX240 vty)# show jnh inline-ka session 0 ppp global-stats

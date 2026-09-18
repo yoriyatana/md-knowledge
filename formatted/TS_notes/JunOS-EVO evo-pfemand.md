@@ -3,57 +3,34 @@
 ```text
 admin@HCM-BRAS-PE-01-01> start shell
 ```
-
 Nov 15 00:14:40
 
 ```text
 [vrf:none] admin@HCM-BRAS-PE-01-01:~$ journalctl -t evo-pfemand -b | egrep error -i
 ```
-
 - ---
 
 ```text
 show interfaces ae2.1003 extensive
 ```
-
 start shell user root
 
 vty fpc0 // start shell pfe network fpc0
 
 ```text
 show ifbds
-```
-
-```text
 show l2 manager bridge-domains
-```
-
-```text
 show ifbd ifl-index 1052 bd-index 22
-```
-
-```text
 show evo-pfemand ifl index 1053
 ```
-
 - ---
 
 ```text
 show log messages | no-more
-```
-
-```text
 request support information | no-more
-```
-
-```text
 request support information | save /var/tmp/RSI\_BDG-AggPE-01-02\_20231220.log
-```
-
-```text
 file archive compress exclude \*traces\* source /var/log/ destination /var/tmp/varlog-archive\_BDG-AggPE-01-02\_20231220.tgz
 ```
-
 chvrf iri ssh fpc0
 
 journalctl -b
@@ -67,67 +44,28 @@ vssh fpc
 ```text
 cat /var/log/picd.log
 ```
-
 start shell pfe network fpc0
 
 ```text
 show syslog
 ```
-
 - ---
 
 ```text
 show trace application hwdre | no-more
-```
-
-```text
 show trace application picd | no-more
-```
-
-```text
 show trace application lacpd | no-more
-```
-
-```text
 show trace application evo-pfemand | no-more
-```
-
-```text
 show trace application alarmd | no-more
-```
-
-```text
 show trace application alarm-mgmtd | no-more
-```
-
-```text
 show trace application bfddagent | no-more
-```
-
-```text
 show trace application cosd | no-more
-```
-
-```text
 show trace application ddosd | no-more
-```
-
-```text
 show trace application ppmdagent | no-more
-```
-
-```text
 show trace application ifmand | no-more
-```
-
-```text
 show trace application rpdagent | no-more
-```
-
-```text
 show trace application mgd | no-more
 ```
-
 start shell
 
 [vrf:none] root@jlab:~#  journalctl -b0 --no-pager
@@ -137,7 +75,6 @@ start shell
 ```text
 Configure the right supported fec mode for the pic.
 ```
-
 To find the supported fec modes for a pic , use the following pfe shell command
 
 * PFE Shell cmd : show picd optics fpc\_slot <> pic\_slot <> port <> cmd dump\_devdb\_info*
@@ -173,7 +110,6 @@ To find the supported fec modes for a pic , use the following pfe shell command
 ```text
 Step#2 : In the error reported pic check link history using the following FPC shell command.
 ```
-
 FPC shell cmd:  show picd link-history fpc 0 pic  0 port 53 chan 0
 
 * 1  2024-01-04 10:46:45.519640  Xcvr Rx OK change (1 -> 0)*
@@ -198,46 +134,20 @@ FPC shell cmd:  show picd link-history fpc 0 pic  0 port 53 chan 0
 
 ```text
 You may see firewall filters/terms failed install messages in the logs.
-```
-
-```text
 evo-pfemand[8502]: [Error] BrcmPlusDfw: Stat-id: 154 and policer-id: 153 are not equal for StatAndPolicer
-```
-
-```text
 evo-pfemand[8502]: [Error] BrcmPlusPfe: Dfw: fp action add Counter failed , ret = Internal error
-```
-
-```text
 evo-pfemand[8502]: [Error] BrcmPlusPfe: hwInstallDfwRule failed., ret = Internal error
-```
-
-```text
 evo-pfemand[8502]: [Error] Dfw: Failed to install rules for term  in hardware
-```
-
-```text
 evo-pfemand[8502]: [Error] Dfw: Failed to install Term
-```
-
-```text
 evo-pfemand[8502]: [Error] Dfw: Failed to install in hw for filter
-```
-
-```text
 evo-pfemand[8502]: [Error] Dfw: Failed to install filter bind
-```
-
-```text
 evo-pfemand[8502]: [Error] Dfw:  IFF Bind Failed for Ifl-Index:1030 Proto:2 flavor:1 Direction:0
 ```
-
 2. If there are firewall filter counters configurations, the counters are not working as expected, and they will be displayed as all 0s.
 
 ```text
 > show firewall
 ```
-
 Filter: ROUTER-PROTECT-lo0.0-i
 
 Counters:
@@ -265,7 +175,6 @@ INTERNAL-UNKNOWN-TRAFFIC-POLICER-lo0.0-i                          �
 ```text
 TRACEROUTE-POLICER-lo0.0-i                                                          0                    0
 ```
-
 3. From the PFE, the firewall filter is not installed.
 
 pfe> show evo-pfemand filter
@@ -282,24 +191,11 @@ ROUTER-PROTECT-lo0.0-i                    48106          No
 
 ```text
 set firewall policer ICMP-POLICER filter-specific
-```
-
-```text
 set firewall policer ICMP-POLICER if-exceeding bandwidth-limit 10m
-```
-
-```text
 set firewall policer ICMP-POLICER if-exceeding burst-size-limit 625k
-```
-
-```text
 set firewall policer ICMP-POLICER then discard
-```
-
-```text
 *Solution**"filter-specific" knob is not supported in firewall policer configuration on the ACX EVO platforms.
 ```
-
 Please remove the configuration from the firewall policers.
 
 # delete firewall policer  filter-specific
@@ -313,7 +209,6 @@ evo-pfemand[8502]: [Info] Dfw: Eal FOH\_I OnAdd called
 ```text
 evo-pfemand[8502]: [Info] Dfw: Filter Bind-IFF received from BQ
 ```
-
 evo-pfemand[8502]: [Info] Dfw: Processing IFF filter-bind for Ifl-Index:1030 Proto:2 flavor:1 Direction:0 for chain/filter-index:48106
 
 evo-pfemand[8502]: [Info] BrcmPlusDfw: Created group IN-IFF-INET-Lo0 in unit 0 in stage IPMF1 Hw-Id: 50
@@ -349,7 +244,6 @@ INTERNAL-UNKNOWN-TRAFFIC-POLICER-lo0.0-i                          �
 ```text
 TRACEROUTE-POLICER-lo0.0-i                                                          0                    0
 ```
-
 3. From the PFE, the firewall filter is installed now.
 
 pfe> show evo-pfemand filter

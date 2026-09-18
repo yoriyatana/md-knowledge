@@ -23,7 +23,6 @@ Code#  Reason                      Explanation
 ```text
 3      error                        error
 ```
-
 4      noPower                      no power
 
 5      configPowerOff              configured to power off
@@ -83,7 +82,6 @@ Code#  Reason                      Explanation
 ```text
 32    fruInServSoftUpgradeError    In Service Software Upgrade Error
 ```
-
 33    fruChasdPowerRatingExceed    Chassis power rating exceeded
 
 34    fruConfigOffline            Configured offline
@@ -121,7 +119,6 @@ Code#  Reason                      Explanation
 ```text
 50    fpcAppFailed                FPC app failed
 ```
-
 51    fpcKernelCrash              FPC kernel crash
 
 52    spuFlowdDownNoCore          SPU flowd down no core dump
@@ -155,7 +152,6 @@ Code#  Reason                      Explanation
 ```text
 66    spuFipsError                  SPU fips error
 ```
-
 67    fruFPCFabricDownOffline      FPC offlined due to Fabric down
 
 68    febCfgChange                  FEB config change
@@ -181,7 +177,6 @@ Code#  Reason                      Explanation
 ```text
 78    fruFabricDegraded            Fabric running in degraded state
 ```
-
 79    fruFPCFabricDegradedOffline  FPC offlined due to degraded fabric action
 
 80    fruUnsupportedSlot            FRU unsupported in the current slot
@@ -203,7 +198,6 @@ Code#  Reason                      Explanation
 ```text
 88    fruUnsupportedFirmware        Firmware on this FRU not supported
 ```
-
 89    openflowConfigChange          Openflow config change offlines FPC
 
 90    fruFpcScbIncompatible        FPC incompatible with SCB
@@ -212,12 +206,8 @@ Code#  Reason                      Explanation
 
 ```text
 92    hwError                      Hardware error
-```
-
-```text
 93    fruErrorManagerReqFPCReset    Error manager requested FPC reset.
 ```
-
 94    fruIncompatibleWithPEM        FRU incompatible with power supply
 
 95    fruIncompatibleWithSIB        FRU incompatible with SIB
@@ -234,16 +224,9 @@ Code#  Reason                      Explanation
 
 ```text
 101    mixedSwitchFabric            Mixed Switch Fabric error
-```
-
-```text
 102    unsupportedFabric            unsupported Fabric error
-```
-
-```text
 103    jamConfigError              JAM configuration error
 ```
-
 104    fruFpcHFanTrayIncompatible  FPC incompatible with Horizontal FAN-TRAYs
 
 105    gnfIsOffline                GNF is Offline

@@ -6,12 +6,8 @@ Team em đang test PoC Junos version 20.4R3-S3 cho BNG Viettel, target khuyến 
 
 ```text
 Test case scenario
-```
-
-```text
 Test scaling quay số PPPoE Dual-stack 32K sub lên 1 PFE của MPC7E-MRATE
 ```
-
 2. Lỗi ghi nhận trong quá trình test
 
 1. BNG online đủ 32K subs/1PFE/MPC7E, cấp đủ 32K IPv4 tuy nhiên ko cấp đủ 32K DHCP IPv6
@@ -34,7 +30,6 @@ Case-id: 2022-0629-502042
 Jtac giả lập trên lab xác nhận đúng lỗi như lab Svtech
 Jtac involve Engineering và xác nhận lỗi này match PR1645505
 ```
-
 Tuy nhiên bọn em đọc PR1645505 không thấy trigger hay lỗi liên quan lắm để case bọn em đang ghi nhân thấy, và Jtac support case này hơi chậm. Do số lượng box BNG sử dụng MPC7E cần nâng cấp của VTel và VnPT là rất nhiều
 
 Nhờ anh Đăng/a Hưng/a Cương hỗ trợ thêm giúp bọn em

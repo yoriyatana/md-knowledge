@@ -5,7 +5,6 @@ I understand from the case notes that you have observed the below FPC hard error
 ```text
 root@AGG-HUEHTY22> show chassis alarms no-forwarding*
 ```
-
 * 4 alarms currently active*
 
 * Alarm time               Class  Description*
@@ -24,28 +23,12 @@ Could you please provide me the below information to investigate:
 
 ```text
 show chassis fpc pic-status*
-```
-
-```text
 show chassis fabric summary*
-```
-
-```text
 show chassis fabric fpcs*
-```
-
-```text
 show chassis fabric plane-location*
-```
-
-```text
 show chassis fabric plane-degradation*
-```
-
-```text
 >start shell pfe network fpc1*
 ```
-
 * #show syslog messages*
 
 * #show nvram*

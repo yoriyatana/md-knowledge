@@ -10,46 +10,27 @@ It is common that people configure route-reflector outside the PE, either on ded
 
 ```text
 all non inet.0 routes become hidden with error message "next-hop unusable", for example
-```
-
-```text
 rwibawa@vmx-13-13# run show bgp summary
 ```
-
   ...
 
 ```text
 Peer AS InPkt OutPkt OutQ Flaps Last Up/Dwn State|#Active/Received/Accepted/Damped...
 ```
-
   67. 176.255.1 16689.7041 183 9403 0 0 58:32 Establ
 
 ```text
 inet.0: 7/7/7/0
-```
-
-```text
 inet6.0: 0/4/4/0
-```
-
-```text
 bgp.l3vpn.0: 0/45/45/0
-```
-
-```text
 bgp.l2vpn.0: 0/1/1/0
 ```
-
   ...
 
 ```text
 bgp.l3vpn.0: 148 destinations, 162 routes (0 active, 0 holddown, 162 hidden)
-```
-
-```text
 22:4003:108.42.0.22/32 (1 entry, 0 announced)
 ```
-
   BGP Preference: 170/-101
 
   Route Distinguisher: 22:4003
@@ -59,23 +40,17 @@ bgp.l3vpn.0: 148 destinations, 162 routes (0 active, 0 holddown, 162 hidden)
 ```text
 Address: 0x94129e4
 ```
-
   Next-hop reference count: 186
 
 ```text
 State:
 ```
-
   Local AS: 16689.7041 Peer AS: 16689.7041
 
 ```text
 Age: 59:38
-```
-
-```text
 Validation State: unverified
 ```
-
   Task: BGP\_16689.7041.67.176.255.1+179
 
   AS path: 22 I
@@ -89,7 +64,6 @@ Validation State: unverified
 ```text
 Localpref: 100
 ```
-
   Router ID: 67.176.255.1
 
   Indirect next hops: 1
@@ -103,7 +77,6 @@ Localpref: 100
 ```text
 Load balance label: Label 17: None;
 ```
-
   Indirect next hop: 0x2 no-forward INH Session ID: 0x0
 
 ## Solution
@@ -119,7 +92,6 @@ Load balance label: Label 17: None;
 ```text
 rwibawa@vmx-13-13# show routing-options
 ```
-
   rib inet.3 {
 
   static {
@@ -134,7 +106,6 @@ rwibawa@vmx-13-13# show routing-options
 ```text
 rwibawa@vmx-13-13# show routing-options
 ```
-
   ...
 
   resolution {
@@ -165,7 +136,6 @@ rwibawa@vmx-13-13# show routing-options
 ```text
 rwibawa@vmx-13-13# show routing-options
 ```
-
   ...
 
   rib-groups {
@@ -187,7 +157,6 @@ rwibawa@vmx-13-13# show routing-options
 ```text
 rwibawa@vmx-13-13# show protocols ospf
 ```
-
   rib-group inet0-to-inet3;
 
   ...
@@ -199,7 +168,6 @@ rwibawa@vmx-13-13# show protocols ospf
 ```text
 rwibawa@vmx-13-13# show routing-options
 ```
-
   ...
 
   rib-groups {
@@ -219,7 +187,6 @@ rwibawa@vmx-13-13# show routing-options
 ```text
 rwibawa@vmx-13-13# show protocols ospf
 ```
-
   rib-group inet0-to-inet6;
 
   ...
@@ -228,7 +195,6 @@ rwibawa@vmx-13-13# show protocols ospf
 ```text
 rwibawa@vmx-13-13# show routing-options
 ```
-
   ...
 
   rib-groups {
@@ -248,7 +214,6 @@ rwibawa@vmx-13-13# show routing-options
 ```text
 rwibawa@vmx-13-13# show protocols ospf
 ```
-
   rib-group inet0-to-inet3-and-inet6;
 
   ...

@@ -31,7 +31,6 @@ Alarm time               Class  Description
 ```text
 vietpn@ME\_AR03.GAZ080\_RE1> show chassis routing-engine | match "slot|state|start"
 ```
-
 Dec 25 12:31:12
 
 Slot 0:
@@ -39,13 +38,11 @@ Slot 0:
 ```text
 Current state                 Present
 ```
-
 Slot 1:
 
 ```text
 Current state                  Master
 ```
-
 Start time                     2020-09-14 21:57:52 CAT
 
 - --
@@ -62,13 +59,11 @@ Kiểm tra sơ bộ
 ```text
 >>> chưa check
 ```
-
 - Health check thiết bị dựa trên RSI
 
 ```text
 >>> Chưa check
 ```
-
 - Process chiếm CPU >>> chưa check
 
 - Health check show system storage no-forwarding  <<< chưa check
@@ -76,7 +71,6 @@ Kiểm tra sơ bộ
 ```text
 show version detail no-forwarding
 ```
-
 {master}
 
 [vietpn@PR02.TET](mailto:vietpn@PR02.TET)040\_RE0> show version invoke-on all-routing-engines | match "re0|re1|junos:"
@@ -90,7 +84,6 @@ Hostname: PR02.TET040\_RE0
 ```text
 Junos: 17.3R3-S8.1
 ```
-
 re1:
 
 - -------------------------------------------------------------------------
@@ -100,17 +93,12 @@ Hostname: PR02.TET040\_RE1
 ```text
 Junos: 17.3R3-S8.1
 ```
-
 - Không phát sinh core-dump
 
 ```text
 Show chasssis fpc detail <<< chưa check
-```
-
-```text
 show route summary <<< chưa check
 ```
-
 - Log messages bị trôi, log cuối cùng 13:00 15/12
 - Log interactive-commands <<< không có tác động vào thời điểm phát sinh
 - Log chassisd <<< chưa check
@@ -119,110 +107,36 @@ Thu thập các thông tin liên quan
 
 ```text
 request support information | no-more | save /var/log/RSI\_ME\_AR03.GAZ080\_20211225
-```
-
-```text
 file archive source /var/log/\* destination /var/log/LOG\_ME\_AR03.GAZ080\_20211225
-```
-
-```text
 > show version invoke-on all-routing-engines | match "re0|re1|Junos:"
-```
-
-```text
 > show chassis alarms
-```
-
-```text
 > show system alarms
-```
-
-```text
 > show system core-dumps
-```
-
-```text
 > show chassis routing-engine | no-more
-```
-
-```text
 > show chassis routing-engine | match "Slot|State|Start"
-```
-
-```text
 show chassis environment cb | no-more
-```
-
-```text
 show chassis environment cb | match "CB|State"
 ```
-
 ## Regarding to FPC
 
 ```text
 show chassis hardware | no-more
-```
-
-```text
 show chassis alarm
-```
-
-```text
 show version
-```
-
-```text
 show chassis fpc | no-more
-```
-
-```text
 show chassis fpc pic-status | no-more
-```
-
-```text
 show chassis fpc errors | no-more
-```
-
-```text
 show chassis fabric fpcs  | no-more
-```
-
-```text
 show chassis fabric plane  | no-more
-```
-
-```text
 show chassis fabric summary  | no-more
-```
-
-```text
 show chassis fabric map | no-more
-```
-
-```text
 show chassis fabric plane-location | no-more
-```
-
-```text
 show chassis fabric destinations | no-more
-```
-
-```text
 show system resource-monitor fpc
-```
-
-```text
 show pfe statistics traffic  | no-more
-```
-
-```text
 show pfe statistics traffic detail  | no-more
-```
-
-```text
 show pfe statistics error | no-more
 ```
-
 Kiểm tra các case cũ, google với alarm phát sinh
 
 - Chưa kiểm tra
@@ -235,194 +149,78 @@ Xử lý trên thiết bị
 
 ```text
 > set cli timestamp
-```
-
-```text
 > show configuration | no-more
-```
-
-```text
 > request support information | no-more
 ```
-
 /\* Lưu thông tin alarm/core \*/
 
 ```text
 > show system alarms
-```
-
-```text
 > show chassis alarms
-```
-
-```text
 > show system core-dumps
 ```
-
 /\* Lưu thông tin về IGP \*/
 
 ```text
 > show ospf interface | no-more
-```
-
-```text
 > show ospf interface | count
-```
-
-```text
 > show ospf neighbor instance all | no-more
-```
-
-```text
 > show ospf3 interface | no-more
-```
-
-```text
 > show ospf3 interface | count
-```
-
-```text
 > show ospf3 neighbor instance all | no-more
 ```
-
 /\* Lưu thông tin về MPLS/LDP/RSVP \*/
 
 ```text
 > show mpls interface | no-more
-```
-
-```text
 > show mpls interface | count
-```
-
-```text
 > show ldp interface | no-more
-```
-
-```text
 > show ldp interface | count
-```
-
-```text
 > show rsvp interface | no-more
-```
-
-```text
 > show rsvp interface | count
-```
-
-```text
 > show ldp neighbor | no-more
-```
-
-```text
 > show ldp neighbor | count
-```
-
-```text
 > show ldp session | no-more
-```
-
-```text
 > show ldp session | count
-```
-
-```text
 > show rsvp session | no-more
-```
-
-```text
 > show rsvp session | count
-```
-
-```text
 > show mpls lsp | no-more
 ```
-
 /\* Lưu thông tin về BGP \*/
 
 ```text
 > shwo bgp sum | no-more
-```
-
-```text
 show bgp summary | match Establ | count
-```
-
-```text
 > show bgp neighbor | no-more
-```
-
-```text
 > show route summary | no-more
-```
-
-```text
 > show bfd session detail | no-more
 ```
-
 /\* Lưu thông tin VRRP/L2VPN/VPLS/LLDP/BFD \*/
 
 ```text
 > show vrrp | no-more
-```
-
-```text
 > show l2circuit connections | no-more
-```
-
-```text
 > show vpls connections | no-more
-```
-
-```text
 > show vpls mac-table | no-more
-```
-
-```text
 > show lldp neighbors | no-more
-```
-
-```text
 > show bfd session detail | no-more
 ```
-
 /\* Lưu thông tin hardware/fabric/fpc \*/
 
 ```text
 > show chassis hardware | no-more
-```
-
-```text
 > show chassis fabric fpcs | no-more
-```
-
-```text
 > show chassis fabric summary extended | no-more
-```
-
-```text
 > show chassis fabric plane | no-more
 ```
-
 /\* Lưu thông tin đồng bộ GRES and NSR - KB32931  \*/
 
 ```text
 > show system switchover /\* Show on Backup RE – GRES Readiness Check \*/
-```
-
-```text
 > show task replication  /\* Show on Master RE – RPD Synchronization Check \*/
-```
-
-```text
 > show database-replication summary /\* Show on Master RE – For BNG only \*/
-```
-
-```text
 > show system subscriber-management summary
 ```
-
 - Tiến hành manual power-on RE0 bằng lệnh
 
 ### Thực hiện manual power-on lại RE0
@@ -430,7 +228,6 @@ show bgp summary | match Establ | count
 ```text
 request system power-on other-routing-engine
 ```
-
 ### Sau khi manual power-on RE0 thì RE0 online trở lại, không phát sinh ngoài kế hoạch
 
 Kết quả xử lý trên thiết bị
@@ -451,7 +248,6 @@ Slot 0:
 ```text
 Current state                  Backup
 ```
-
 Start time                     2021-12-25 12:32:49 CAT
 
 Slot 1:
@@ -459,7 +255,6 @@ Slot 1:
 ```text
 Current state                  Master
 ```
-
 Start time                     2020-09-14 21:57:52 CAT
 
 {master}
@@ -548,12 +343,8 @@ Description: Connect to GAZ009SRT AE1 - Right ring
 
 ```text
 Link-level type: Ethernet, MTU: 9000, MRU: 9008, LAN-PHY mode, Speed: 1000mbps, BPDU Error: None, Loop Detect PDU Error: None,
-```
-
-```text
 Ethernet-Switching Error: None, MAC-REWRITE Error: None, Loopback: Disabled, Source filtering: Disabled, Flow control: Disabled,
 ```
-
 Auto-negotiation: Enabled, Remote fault: Online
 
 Pad to minimum frame size: Disabled
@@ -572,12 +363,8 @@ Last flapped   : 2021-12-25 10:13:34 CAT (00:48:05 ago)
 
 ```text
 Input rate     : 0 bps (0 pps)
-```
-
-```text
 Output rate    : 0 bps (0 pps)
 ```
-
 Active alarms  : LINK
 
 Active defects : LINK
@@ -596,12 +383,8 @@ FEC Uncorrected Errors                  0
 
 ```text
 FEC Corrected Errors Rate               0
-```
-
-```text
 FEC Uncorrected Errors Rate             0
 ```
-
 Interface transmit statistics: Disabled
 
 Logical interface ge-1/2/1.0 (Index 411) (SNMP ifIndex 545)
@@ -626,12 +409,8 @@ Description: Connect to AR.GAZ080 - Right ring
 
 ```text
 Link-level type: Ethernet, Media type: Fiber, MTU: 9000, LAN-PHY mode, Speed: 1000mbps, BPDU Error: None, Loop Detect PDU Error: None,
-```
-
-```text
 Ethernet-Switching Error: None, MAC-REWRITE Error: None, Loopback: Disabled, Source filtering: Disabled, Flow control: Disabled,
 ```
-
 Auto-negotiation: Enabled, Remote fault: Online
 
 Device flags   : Present Running
@@ -648,12 +427,8 @@ Last flapped   : 2021-12-25 09:55:03 CAT (01:08:24 ago)
 
 ```text
 Input rate     : 1008 bps (0 pps)
-```
-
-```text
 Output rate    : 1008 bps (0 pps)
 ```
-
 Active alarms  : None
 
 Active defects : None
@@ -672,12 +447,8 @@ FEC Uncorrected Errors                  0
 
 ```text
 FEC Corrected Errors Rate               0
-```
-
-```text
 FEC Uncorrected Errors Rate             0
 ```
-
 Interface transmit statistics: Disabled
 
 Logical interface ge-1/2/1.0 (Index 369) (SNMP ifIndex 586)
@@ -705,7 +476,6 @@ Slot 0:
 ```text
 Current state                  Backup
 ```
-
 Election priority              Master
 
 Temperature                 27 degrees C / 80 degrees F
@@ -741,7 +511,6 @@ Last reboot reason             0x1:power cycle/failure
 ```text
 Load averages:                 1 minute   5 minute  15 minute
 ```
-
 0. 04       0.27       0.17
 
 Routing Engine status:
@@ -751,7 +520,6 @@ Slot 1:
 ```text
 Current state                  Master
 ```
-
 Election priority              Backup
 
 Temperature                 26 degrees C / 78 degrees F
@@ -823,7 +591,6 @@ Last reboot reason             Router rebooted after a normal shutd
 ```text
 Load averages:                 1 minute   5 minute  15 minute
 ```
-
 0. 24       0.22       0.17
 
 {master}
@@ -831,19 +598,16 @@ Load averages:                 1 minute   5 minute  15 min
 ```text
 vietpn@ME\_AR03.GAZ080\_RE1> show chassis routing-engine | match "slot|state|start"
 ```
-
 Slot 0:
 
 ```text
 Current state                 Present
 ```
-
 Slot 1:
 
 ```text
 Current state                  Master
 ```
-
 Start time                     2020-09-14 21:57:52 CAT
 
 {master}
@@ -1153,7 +917,6 @@ Aggregated interface: ae1
 ```text
 LACP state:       Role   Exp   Def  Dist  Col  Syn  Aggr  Timeout  Activity
 ```
-
 xe-1/1/0       Actor    No    No   Yes  Yes  Yes   Yes     Fast    Active
 
 xe-1/1/0     Partner    No    No   Yes  Yes  Yes   Yes     Fast    Active
@@ -1161,7 +924,6 @@ xe-1/1/0     Partner    No    No   Yes  Yes  Yes   Yes �
 ```text
 LACP protocol:        Receive State  Transmit State          Mux State
 ```
-
 xe-1/1/0                  Current   Fast periodic Collecting distributing
 
 {master}
@@ -1306,12 +1068,8 @@ Description: Connect to AR.GAZ080 - Right ring
 
 ```text
 Link-level type: Ethernet, Media type: Fiber, MTU: 9000, LAN-PHY mode, Speed: 1000mbps, BPDU Error: None, Loop Detect PDU Error: None,
-```
-
-```text
 Ethernet-Switching Error: None, MAC-REWRITE Error: None, Loopback: Disabled, Source filtering: Disabled, Flow control: Disabled,
 ```
-
 Auto-negotiation: Enabled, Remote fault: Online
 
 Device flags   : Present Running
@@ -1328,12 +1086,8 @@ Last flapped   : 2021-12-27 07:28:40 CAT (02:22:37 ago)
 
 ```text
 Input rate     : 81450096 bps (18979 pps)
-```
-
-```text
 Output rate    : 33000944 bps (24294 pps)
 ```
-
 Active alarms  : None
 
 Active defects : None
@@ -1352,12 +1106,8 @@ FEC Uncorrected Errors                  0
 
 ```text
 FEC Corrected Errors Rate               0
-```
-
-```text
 FEC Uncorrected Errors Rate             0
 ```
-
 Interface transmit statistics: Disabled
 
 Logical interface ge-1/2/1.0 (Index 369) (SNMP ifIndex 586)
@@ -1449,7 +1199,6 @@ vietpn@ME\_GAZ009SRT01> show winte
 ```text
 syntax error, expecting .
 ```
-
 vietpn@ME\_GAZ009SRT01> show wintedi
 
 ^
@@ -1457,7 +1206,6 @@ vietpn@ME\_GAZ009SRT01> show wintedi
 ```text
 syntax error, expecting .
 ```
-
 vietpn@ME\_GAZ009SRT01> show interfaces diagnostics optics ge-1/2/1
 
 Physical interface: ge-1/2/1
@@ -1557,7 +1305,6 @@ vietpn@ME\_GAZ009SRT01> show lacp interfaces ae11
 ```text
 error: device ae11 not found
 ```
-
 vietpn@ME\_GAZ009SRT01> show lacp interfaces ae1
 
 Aggregated interface: ae1
@@ -1565,7 +1312,6 @@ Aggregated interface: ae1
 ```text
 LACP state:       Role   Exp   Def  Dist  Col  Syn  Aggr  Timeout  Activity
 ```
-
 ge-1/2/1       Actor    No    No   Yes  Yes  Yes   Yes     Fast    Active
 
 ge-1/2/1     Partner    No    No   Yes  Yes  Yes   Yes     Fast    Active
@@ -1573,7 +1319,6 @@ ge-1/2/1     Partner    No    No   Yes  Yes  Yes   Yes �
 ```text
 LACP protocol:        Receive State  Transmit State          Mux State
 ```
-
 ge-1/2/1                  Current   Fast periodic Collecting distributing
 
 vietpn@ME\_GAZ009SRT01>

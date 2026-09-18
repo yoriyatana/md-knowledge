@@ -20,7 +20,6 @@ Verify that the system runs Junos OS Release 13.3 or later by issuing the show 
 ```text
 user@host> show version
 ```
-
 Model: mx960
 
 Junos Base OS Software Suite [13.3-yyyymmdd];
@@ -29,82 +28,36 @@ Junos Base OS Software Suite [13.3-yyyymmdd];
 
 ```text
 > show chassis alarms
-```
-
-```text
 > show system alarms
-```
-
-```text
 > show system core-dumps
-```
-
-```text
 > show chassis network-services
-```
-
-```text
 > show version invoke-on all-routing-engines | match "re0|re1|Junos:"
-```
-
-```text
 > show chassis routing-engine | no-more
-```
-
-```text
 > show chassis routing-engine | match "Slot|State|Start"
-```
-
-```text
 show chassis environment cb | no-more
-```
-
-```text
 show chassis environment cb | match "CB|State"
-```
-
-```text
 > show chassis fabric summary | no-more
 ```
-
 /\* Lưu thông tin hardware/fabric/fpc \*/
 
 ```text
 > show chassis hardware | no-more
-```
-
-```text
 > show chassis fabric fpcs | no-more
-```
-
-```text
 > show chassis fabric summary extended | no-more
-```
-
-```text
 > show chassis fabric plane | no-more
 ```
-
 /\* Lưu thông tin đồng bộ GRES and NSR - KB32931  \*/
 
 ```text
 > show system switchover /\* Show on Backup RE – GRES Readiness Check\*/
-```
-
-```text
 > show task replication  /\* Show on Master RE – RPD Synchronization Check\*/
-```
-
-```text
 > show database-replication summary /\* Show on Master RE – For BNG only \*/
 ```
-
 Verify that the system Configure Enhanced IP Network Services mode by issuing the  **show chassis network-services** command on the primary router.
 
 ```text
 user@host> show chassis network-services
 ```
-
 Network Services Mode: Enhanced-IP
 
 NOTE: The SCBE2-MX is supported only on:
@@ -123,7 +76,6 @@ user@host> request system halt both-routing-engines
 Đợi đến khi thông báo xuất hiện xác nhận hệ thống đã tạm ngừng.
 Chuyển công tác trên bộ nguồn AC hoặc DC sang vị trí off (O).
 ```
-
 ## Remove the MX960 Routing Engine
 
 1. Đánh đấu và rút các cáp kết nối đến RE. Remove the cables connected to the Routing Engine.
@@ -160,7 +112,6 @@ Chuyển công tác trên bộ nguồn AC hoặc DC sang vị trí off (O).
 ```text
 NOTE: After a power supply is powered on, it can take up to 60 seconds for status indicators—such as the status LEDs on the power supply and the show chassis command display—to indicate that the power supply is functioning normally. Ignore error indicators that appear during the first 60 seconds.
 ```
-
    If any of the status LEDs indicates that the power supply is not functioning normally, repeat the installation and cabling procedures.
 9. On the external management device connected to the Routing Engine, monitor the startup process to verify that the system has booted properly.
 
@@ -175,13 +126,11 @@ NOTE: After a power supply is powered on, it can take up to 60 seconds for stat
 ```text
 user@host> show chassis environment cb 0
 ```
-
    CB 0 status
 
 ```text
 State Online
 ```
-
    Temperature 30 degrees C / 86 degrees F
 
    ...
@@ -189,13 +138,11 @@ State Online
 ```text
 user@host> show chassis environment cb 1
 ```
-
    CB 1 status
 
 ```text
 State Online
 ```
-
    Temperature 30 degrees C / 86 degrees F
 
    ...
@@ -203,16 +150,9 @@ State Online
 ```text
 Other details, such as, temperature, power, etc are also displayed along with the state.
 Verify that the fabric planes come online correctly by issuing the show chassis fabric summary command:
-```
-
-```text
 user@host> show chassis fabric summary
-```
-
-```text
 Plane State Uptime
 ```
-
    0 Online 2 days, 19 hours, 10 minutes, 9 seconds
 
    1 Online 2 days, 19 hours, 10 minutes, 9 seconds
@@ -223,7 +163,6 @@ Plane State Uptime
 ```text
 user@host> show chassis routing-engine 1
 ```
-
    Routing Engine Status:
 
    Slot 1:
@@ -231,14 +170,12 @@ user@host> show chassis routing-engine 1
 ```text
 Current State Backup
 ```
-
    ...
 4. Verify the SCBE2-MXs before you finish by issuing the show chassis hardware command:
 
 ```text
 user@host> show chassis hardware
 ```
-
    Hardware inventory:
 
    Item Version Part number Serial number Description

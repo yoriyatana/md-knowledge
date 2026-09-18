@@ -13,7 +13,6 @@ As OSPF networks grow, so does the size of the LSDB. Not normally an issue.
 Common reasons to create OSPF areas is to control flooding or for Administrative purposes.
 Multiple Areas means multiple link-state databases.
 ```
-
 * *LSA Flooding: Default**
 
 - OSPF Default Flooding Rules
@@ -98,7 +97,6 @@ Multiple Areas means multiple link-state databases.
 ```text
 root@MX960# set protocols ospf no-active-backbone  ####Hidden Command ####
 ```
-
 - ASBR in a stub area cannot flood LSAs for external routes
 - Virtual links cannot transit a stub area
 
@@ -255,7 +253,6 @@ root@MX960# set protocols ospf no-active-backbone  ####Hidden Command ####
 ```text
 configure with the **area-range restrict** command
 ```
-
 - Allows greater control over which routes are advertised to other areas
 
 - **restrict** option will block T1, T2 LSAs and will not create a T3 summary
@@ -277,7 +274,6 @@ configure with the **area-range restrict** command
 configure the NSSA ABR with the **nssa area-range restrict** command
 **restrict** option will block T7 LSAs and will not create a T5 summary
 ```
-
 ![](image/49a6912dae19819469df0e11d39846af.png)
 
 * *set area 1 area-range 10.1.0/22** **[restrict]**
@@ -337,7 +333,6 @@ root@R3\_RTR-D# run show ospf neighbor
 ```text
 Address          Interface              State    ID              Pri  Dead
 ```
-
 10. 3.4.4        ge-0/0/0.0            Full      10.4.4.4        128    36
 
 10. 30.40.4      ge-0/0/0.0            Full      10.4.4.4        128    36

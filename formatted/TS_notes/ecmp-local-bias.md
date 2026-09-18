@@ -9,17 +9,12 @@ By default, equal cost multi-path (ECMP) traffic flows are distributed more-or-l
 ```text
 Configure BGP between 2 routers, verify BGP neighbourship is formed.
 ```
-
 3. Verify BGP prefixes are reachable via IPv4->MPLS ECMP next-hops.
 
 ```text
 Configure ospf/ospfv3 along with BGP.
-```
-
-```text
 Configure the locality-bias on BGP routes.
 ```
-
 6. Verify the show command on RE and PFE for the locality-bias percentage.
 
 7. Verify the selector table distribution for the locality-bias percentage.
@@ -29,7 +24,6 @@ Configure the locality-bias on BGP routes.
 ```text
 Delete/deactivate BGP routes when traffic is flowing
 ```
-
 10. Add back BGP routes
 
 [ Thursday, March 16, 2023 12:09 PM ] ⁨Hung Le⁩: Configure an  ECMP on the local-bias knob unsupported MPC (MPC10/SONET/SDH )

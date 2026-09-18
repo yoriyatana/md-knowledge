@@ -13,7 +13,6 @@ Count the number device by UID
 ```text
 show User ID on EVE
 ```
-
 admin            admin 0
 
 anhvu admin 6
@@ -95,7 +94,6 @@ the process.
 ```text
 S      (l)    The state of the process.
 ```
-
 UID    (f,l)  The user ID number of the process owner;
 
 the login name is printed under the -f

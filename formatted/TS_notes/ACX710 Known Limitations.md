@@ -9,16 +9,11 @@ On the ACX710 router, VRRP over aggregated Ethernet interface is not supported.�
 When you add or delete a configuration or a LAG member link flaps, configuration updates happen for all other members of the LAG too. This results in transient traffic drop on the ACX710 devices. [PR1486997](http://prsearch.juniper.net/PR1486997)
 The maximum FIB route scale supported in an ACX710 router are as below:
 ```
-
 - FIB IPv6 route scale - 80,000
 - FIB IPv4 route scale - 170,000
 
 ```text
 If routes are added above this scale, an error indicating lpm route add failure is reported. [PR1515545](http://prsearch.juniper.net/PR1515545)
-```
-
-```text
 On ACX710 routers, VRRP over dual tagged interface is not supported. [PR1483759](http://prsearch.juniper.net/PR1483759)
 ```
-
 <https://www.juniper.net/documentation/en_US/junos/information-products/topic-collections/release-notes/20.2/jd0e135.html>

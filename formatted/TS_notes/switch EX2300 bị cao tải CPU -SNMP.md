@@ -8,7 +8,6 @@ Em xin phép tổng hợp thông tin case hỗ trợ này ạ.
 Tối 08/06 em đã online phối hợp bỏ cấu hình traceoption, deactivate cấu hình snmp và debug. Kết quả CPU thiết bị chỉ giảm khi deactivate snmp à kết luận
 Qua kiểm tra message log, thiết bị đang ghi nhận rất nhiều log “Failed to get vlan id”
 ```
-
 |  |
 | --- |
 | Jun   7 02:00:00 SW\_ACC\_IDC\_44 newsyslog[45251]: logfile turned over due to  size>1024K  Jun   7 02:00:03  SW\_ACC\_IDC\_44 dc-pfe:  LBCM-L2,brcm\_irb\_egress\_cntr\_get(),8609:brcm\_irb\_egress\_cntr\_get Failed to get vlan id  4294967295 for ifl index 545  Jun   7 02:00:03  SW\_ACC\_IDC\_44 fpc0  LBCM-L2,brcm\_irb\_egress\_cntr\_get(),8609:brcm\_irb\_egress\_cntr\_get Failed to get vlan id  4294967295 for ifl index 545  Jun   7 02:00:14  SW\_ACC\_IDC\_44 dc-pfe:  LBCM-L2,brcm\_irb\_egress\_cntr\_get(),8609:brcm\_irb\_egress\_cntr\_get Failed to get vlan id  4294967295 for ifl index 545  Jun   7 02:00:14  SW\_ACC\_IDC\_44 fpc0  LBCM-L2,brcm\_irb\_egress\_cntr\_get(),8609:brcm\_irb\_egress\_cntr\_get Failed to get vlan id 4294967295  for ifl index 545  …… |

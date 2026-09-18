@@ -62,12 +62,8 @@ SMPC4(MX960-01\_RE1 vty)# test ifd xe-4/1/1 laser off 5000
 
 ```text
 test cfp  laser  off
-```
-
-```text
 test cfp  laser  on
 ```
-
 [ July 5, 2023 16:01 ] ⁨SVT.Anh.VT⁩: lệnh để up down cổng ngay lập tức dưới shell anh em nhé
 
 ifconfig ge-0/0/3 down

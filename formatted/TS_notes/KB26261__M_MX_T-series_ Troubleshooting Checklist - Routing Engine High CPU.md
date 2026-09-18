@@ -49,7 +49,6 @@ Perform the following checks:
 >
 > Idle 2 percent
 ```
-
    In the above output, the CPU utilization of the Routing Engines, as well as for various software components, are displayed.
 
 - User : Percentage of CPU time being used by user processes. For example, RPD and various other daemons.
@@ -82,16 +81,9 @@ If the Kernel process is high, jump to [Kernel process consuming High CPU](ht
 
 ```text
 Mem: 461M Active, 71M Inact, 106M Wired, 860M Cache, 69M Buf, 2009M Free
-```
-
-```text
 Swap: 3584M Total, 3584M Free
-```
-
-```text
 PID USERNAME THR PRI NICE SIZE RES STATE TIME WCPU COMMAND
 ```
-
    11 root 1 171 52 0K 12K RUN 412:13 1.07% idle
 
    1351 root 2 8 -88 38592K 14076K nanslp 15:14 2.98% chassisd
@@ -145,7 +137,6 @@ PID USERNAME THR PRI NICE SIZE RES STATE TIME WCPU COMMAND
 ```text
 Look for which process is consuming WCPU (Weighted CPU). Also observe the STATE of the process.  From the output above, you can see that RPD is at 93% utilization and is in the kqread (kernel queue read) state. Also, look for TIME (number of system and user CPU seconds that the process has used) and RES (current amount of resident memory, in kilobytes which should be less than SIZE allocated to it).
 ```
-
    If the RPD process is high, jump to [RPD consuming high CPU](https://supportportal.juniper.net/s/article/M-MX-T-series-Troubleshooting-Checklist-Routing-Engine-High-CPU?language=en_US#rpd).
 
    For more information about the output of the above command, refer to the following link:
@@ -156,21 +147,18 @@ Look for which process is consuming WCPU (Weighted CPU). Also observe the STATE 
 ```text
 show system virtual-memory | no-more
 ```
-
   For more information on the above command output please refer to the following:
 
 ```text
 <https://www.juniper.net/techpubs/en_US/junos/topics/reference/command-summary/show-system-virtual-memory.html>
 show task memory detail | no-more
 ```
-
   For more information on the above command output please refer to the following:
 
 ```text
 <http://www.juniper.net/techpubs/en_US/junos/topics/reference/command-summary/show-task-memory.html>
 show log messages | no-more
 ```
-
 10. If you need to open a case with your technical support representative, collect the output specified in the 'High CPU' section of the Data Collection Checklist:
 
     [KB22637 - Data Collection Checklist - Logs/data to collect for troubleshooting](https://supportportal.juniper.net/s/article/M-MX-PTX-T-Data-Collection-Checklist-Logs-data-to-collect-for-troubleshooting).
@@ -191,12 +179,8 @@ Check if there any Traceoptions configured.
 Check if there are syslog error messages related to interfaces or any FPC/PIC, by looking at the output of show log messages .
 Check the routes:  Verify the total number of routes that are learned by the router by looking at the output of show route summary . Check if it has reached the maximum limit.
 Check the RPD tasks: Identify what is keeping the process busy. This can be checked by first enabling set task accounting on .   Important:  This might increase the load on the CPU and its utilization; so do not forget to turn it off when you are finished with the required output collection.  Then run show task accounting and look for the thread with the high CPU time:
-```
-
-```text
 user@router> show task accounting
 ```
-
    Task Started User Time System Time Longest Run
 
    Scheduler 146051 1.085 0.090 0.000
@@ -216,7 +200,6 @@ user@router> show task accounting
 ```text
 % rtsockmon –t
 ```
-
    sender flag type op
 
    [12:12:24] rpd P route delete inet 110.159.206.28 tid=0 plen=30 type=user flags=0x180 nh=indr nhflags=0x4 nhidx=1051574 altfwdnhidx=0 filtidx=0
@@ -237,12 +220,8 @@ Another way to check the rtsockmon output is as follows:
 
 ```text
 > start shell
-```
-
-```text
 % rtsockmon -t > /var/tmp/rtsockmon.txt
 ```
-
 (wait 1 minute)
 
 Press CTRL+C
@@ -252,7 +231,6 @@ Then in a Unix-like OS which is not Junos OS, issue:
 ```text
 % cat rtsockmon.txt | grep inet | grep add | grep route | cut -c 50- | awk '{print $1 " " $2}' | sort | uniq -c | rev |cut -b 7-| rev |sort
 ```
-
 The output will look something like this:
 
 3    10.51.11.66
@@ -286,7 +264,6 @@ As per the output of the show chassis routing-engine command, Interrupt may 
 >
 > Idle 42 percent
 ```
-
 Collect the output of the following commands:
 
 ```text
@@ -296,38 +273,32 @@ show system virtual-memory | no-more
 show task memory detail | no-more
 show log messages | no-more
 ```
-
 Some of the reasons for high interrupt CPU are as follows:
 
 ```text
 The first possibility is duplicated via IP/ARP flooding on one of the device's ports. For this case, high CPU utilization may even cause the connection to be lost between both of the REs. Massive ARP duplicating error logs can be found:
 ```
-
   Apr 23 17:12:37.666 2010 igw02.brf-re0 /kernel: %KERN-3-KERN\_ARP\_DUPLICATE\_ADDR:
 
 ```text
 duplicate IP address 10.55.1.219! sent from address: 00:a0:a5:64:2d:6c (error count = 3672452574)
 ```
-
   Apr 23 17:13:37.632 2010 igw02.brf-re0 /kernel: %KERN-3-KERN\_ARP\_DUPLICATE\_ADDR:
 
 ```text
 duplicate IP address 10.55.1.219! sent from address: 00:a0:a5:64:2d:6c (error count = 3675570687)
 ```
-
   Apr 23 17:14:37.598 2010 igw02.brf-re0 /kernel: %KERN-3-KERN\_ARP\_DUPLICATE\_ADDR:
 
 ```text
 duplicate IP address 10.55.1.219! sent from address: 00:a0:a5:64:2d:6c (error count = 3678688551)
 ```
-
   After addressing the ARP problem, the issue was resolved.
 - Another trigger is due to out of band (OOB) devices. You can identify this by looking at the output of show system process extensive :
 
 ```text
 PID USERNAME THR PRI NICE SIZE RES STATE TIME WCPU COMMAND
 ```
-
   27 root 1 -48 -167 0K 12K RUN 223:30 48.19% swi0: sio
 
   Some particular logs from chassisd and log messages:
@@ -373,7 +344,6 @@ As per the output of the show chassis routing-engine command, kernel  may b
 >
 > Idle 2 percent
 ```
-
 Collect the output of the following commands:
 
 ```text
@@ -383,13 +353,11 @@ show system virtual-memory | no-more
 show system processes memory
 From Shell:  /sbin/sysctl -a | grep vm.kmem (to verify if kernel has high memory untilization)
 ```
-
 One of the symptoms that occur with high kernel CPU usage are messages with RPD\_SCHED\_SLIP in the logs.
 
 ```text
 show log messages | match RPD\_SCHED\_SLIP
 ```
-
 Jul 30 12:24:11 m10i-a-re0 rpd[1304]: RPD\_SCHED\_SLIP: 7 sec scheduler slip, user: 1 sec 339119 usec, system: 0 sec, 0 usec Jul 30 12:25:29 m10i-a-re0 rpd[1304]: RPD\_SCHED\_SLIP: 4 sec scheduler slip, user: 1 sec 431622 usec, system: 0 sec, 0 usec Jul 30 12:25:37 m10i-a-re0 rpd[1304]: RPD\_SCHED\_SLIP: 4 sec scheduler slip, user: 1 sec 528918 usec, system: 0 sec, 74784 usec Jul 30 17:47:55 m10i-a-re0 rpd[1304]: RPD\_SCHED\_SLIP: 4 sec scheduler slip, user: 0 sec 526784 usec, system: 0 sec, 4608 usec Jul 30 17:48:03 m10i-a-re0 rpd[1304]: RPD\_SCHED\_SLIP: 4 sec scheduler slip, user: 1 sec 285283 usec, system: 0 sec, 19077 usec
 
 Some of the reasons for high kernel CPU are as follows:
@@ -415,7 +383,6 @@ Some of the reasons for high kernel CPU are as follows:
 ```text
 'Sampling' is enabled on the router.  This sometimes leads to high kernel CPU; to address this, reduce the rate at which you are sampling on the router.
 ```
-
 - --
 
 #### [Cscript process consuming High CPU](https://supportportal.juniper.net/s/article/M-MX-T-series-Troubleshooting-Checklist-Routing-Engine-High-CPU?language=en_US)
@@ -424,36 +391,26 @@ Some of the reasons for high kernel CPU are as follows:
 
 ```text
 root@JTAC> show system process extensive | no-more
-```
-
-```text
 PID USERNAME THR PRI NICE SIZE RES STATE TIME WCPU COMMAND
 ```
-
 41037 root 1 8 0 125M 122M nanslp 0:48 52.84% cscrip t
 
 ```text
 root@JTAC> show log messages | match cscript
 ```
-
 Event message: Process (41037,cscript) has exceeded 85% of RLIMIT\_DATA:
 
 ```text
 root@JTAC> show system core-dumps no-forwarding
 ```
-
 - rw-rw---- 1 root wheel 18450069 Nov 12 18:52 /var/tmp/cscript.core.0.gz
 
 If there are any core dumps also upload to them to the FTP server to be decoded
 
 ```text
 Display logging data associated with all script processing using show log cscript.log . Check which scripts are running and consuming the HIGH CPU. For example:
-```
-
-```text
 root@JTAC> show log cscript.log | last
 ```
-
 Jan 24 19:12:44 no errors from jais-SN-activate-scripts.slax
 
 Jan 24 19:16:28 no errors from jais-SN-activate-scripts.slax
@@ -471,7 +428,6 @@ This can be resolved by :
 ```text
 % kill -9 41037 (from shell)
 ```
-
 - Dampening script execution:
 
 Please refer to the following:
@@ -490,12 +446,8 @@ Collect the output of the following commands:
 
 ```text
 show system process extensive | no-more
-```
-
-```text
 PID USERNAME THR PRI NICE SIZE RES STATE TIME WCPU COMMAND
 ```
-
 1615 root 1 129 0 2640K 2664K RUN 150:07 69.19% ntpd
 
 If unwanted NTP requests come into a Junos device, the NTP process will occupy resources such as memory and CPU, slowing down other processes and affecting overall system functionality. In extreme cases, the situation could result in traffic loss or protocol flaps. The most effective mitigation is to apply a firewall filter to allow only trusted addresses and networks, plus the router's loopback address, access to the NTP service on the device, rejecting all other requests. For example:

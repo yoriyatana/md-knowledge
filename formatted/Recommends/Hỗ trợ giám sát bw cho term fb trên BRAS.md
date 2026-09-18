@@ -10,100 +10,30 @@ Dear anh Minh,
 
 ```text
 set  class-of-service forwarding-classes class CS6 queue-num 3
-```
-
-```text
 set  class-of-service forwarding-classes class FB\_D queue-num 2
-```
-
-```text
 set  class-of-service forwarding-classes class FB\_U queue-num 1
-```
-
-```text
 set  class-of-service forwarding-classes class BE queue-num 0
-```
-
-```text
 set  class-of-service scheduler-maps SCH\_MAP forwarding-class CS6 scheduler S\_CS6
-```
-
-```text
 set  class-of-service scheduler-maps SCH\_MAP forwarding-class FB\_D scheduler  S\_FB\_D
-```
-
-```text
 set  class-of-service scheduler-maps SCH\_MAP forwarding-class FB\_U scheduler  S\_FB\_U
-```
-
-```text
 set  class-of-service scheduler-maps SCH\_MAP forwarding-class BE scheduler S\_BE
-```
-
-```text
 set  class-of-service schedulers S\_CS6 transmit-rate percent 5
-```
-
-```text
 set  class-of-service schedulers S\_CS6 buffer-size percent 5
-```
-
-```text
 set  class-of-service schedulers S\_CS6 priority strict-high
-```
-
-```text
 set  class-of-service schedulers S\_FB\_D transmit-rate percent 10
-```
-
-```text
 set  class-of-service schedulers S\_FB\_D buffer-size percent 10
-```
-
-```text
 set  class-of-service schedulers S\_FB\_D priority low
-```
-
-```text
 set  class-of-service schedulers S\_FB\_U transmit-rate percent 10
-```
-
-```text
 set  class-of-service schedulers S\_FB\_U buffer-size percent 10
-```
-
-```text
 set  class-of-service schedulers S\_FB\_U priority low
-```
-
-```text
 set  class-of-service schedulers S\_BE transmit-rate percent 75
-```
-
-```text
 set  class-of-service schedulers S\_BE buffer-size percent 75
-```
-
-```text
 set  class-of-service schedulers S\_BE priority low
-```
-
-```text
 set  class-of-service host-outbound-traffic forwarding-class CS6
-```
-
-```text
 set  class-of-service interfaces  scheduler-map SCH\_MAP
-```
-
-```text
 set  firewall family inet filter d-200m-fb term FACEBOOK then forwarding-class  FB\_D
-```
-
-```text
 set firewall family inet filter u-200m-fb  term FACEBOOK then forwarding-class FB\_U
 ```
-
 - Tùy cấu hình thực tế trên từng BRAS để edit cấu hình trên:
 
 - Nếu BRAS chưa có cấu hình thì cấu hình full như trên
@@ -114,7 +44,6 @@ Như vậy FB upload sẽ thuộc queue 1, forwarding class FB\_U
 FB download sẽ thuộc queue 2, forwarding class FB\_D
 % BW cho FB anh cân đối thêm thực tế mình đẩy vào nhiều khách hàng không để điều chỉnh thêm cho phù hợp nhé.
 ```
-
 - **IOD giám sát:**
 
 * *OID này sẽ giám sát được BW từng queue trên từng interface.**

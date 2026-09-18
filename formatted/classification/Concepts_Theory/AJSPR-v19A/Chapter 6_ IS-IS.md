@@ -13,7 +13,6 @@ Overview of IS-IS
 ```text
 Uses link-state information to make routing decisions
 ```
-
 - Developed for routing ISO CLNP packets
 
 - IP was added later
@@ -32,7 +31,6 @@ Integrated IS-IS
 Similar to OSPF LSAs/link-state update packets
 IS-IS PDUs are used to transmit the routing information
 ```
-
 - Sometimes called packets to conform with IP terminology
 
 - IP reachability information is included in the updates
@@ -91,7 +89,6 @@ LSP Format
 ```text
 Describes the state of adjacencies in neighboring IS-IS routers
 ```
-
 - Some fields of interest in the LSP header include the ID length and the maximum area address, which are set to a constant value of 0x00.
 
 - This value does not mean that Junos OS does not support their functionality, used for backward compatibility with older protocol implementations.
@@ -143,7 +140,6 @@ Attached (ATT) bit is set if the IS is connected to another area (L1/L2 connect 
 Overload (OL) bit is set if the link-state database is overloaded
 IS type bits determine a Level 1 or Level 2 router (only 2 settings possible)
 ```
-
 - Level 1 router = 01 = 0x1
 - Level 1/2 router = 11 = 0x3
 
@@ -155,7 +151,6 @@ Link State PDUs (LSP)
 Partial Sequence Number PDUs (PSNP)
 Complete Sequence Number PDUs (CSNP)
 ```
-
 ![](image/d5cdf4a99660a8df69e292ee18828031.png)
 
 Hello PDUs
@@ -198,7 +193,6 @@ LSPs
 ```text
 Used to build the link-state database
 ```
-
 - Similar to LSAs in OSPF
 
 - Separate LSPs for:
@@ -219,7 +213,6 @@ Identify an IS’s adjacencies
 Describe the state of its adjacencies
 Describe its reachable address prefixes (routes)
 ```
-
 Sequence Number PDUs
 
 - Partial sequence number PDU
@@ -231,7 +224,6 @@ Maintain the link-state database synchronization
 Acknowledge LSPs from a neighbor on a point-to-point network
 Request a copy of a missing LSP on a broadcast network
 ```
-
 - Separate PDU types for Level 1 (26) and Level 2 (27) systems
 - Contains specific header information for the LSP being acknowledged or requested
 
@@ -240,7 +232,6 @@ Request a copy of a missing LSP on a broadcast network
 ```text
 Used to maintain the link-state database synchronization
 ```
-
 - Sent periodically by all ISs on point-to-point networks
 - Only sent by DIS on broadcast networks
 
@@ -248,7 +239,6 @@ Used to maintain the link-state database synchronization
 Separate PDU types for Level 1 (24) and Level 2 (25) systems
 Contains header information for all LSPs in the IS’s link-state database
 ```
-
 Type/Length/Values
 
 - IS-IS information objects
@@ -347,25 +337,17 @@ Junos OS does not support
 The S bit is set to a constant value of 1(not supported)
 The l/E and metric bits are all set to a constant value of 0
 ```
-
 - (1-byte) S (Supported) bit, l/E bit, expense metric
 
 ```text
 Junos OS does not support
 The S bit is set to a constant value of 1(not supported)
 The l/E and metric bits are all set to a constant value of 0
-```
-
-```text
 (1-byte) S (Supported) bit, l/E bit, error metric
-```
-
-```text
 Junos OS does not support.
 The S bit is set to a constant value of 1(not supported)
 The l/E and metric bits are all set to a constant value of 0
 ```
-
 - (7-byte) Neighbor ID: The ID of the adjacent neighbor.
 
 - The 6-byte system ID
@@ -376,7 +358,6 @@ TLV 10-Authentication
 ```text
 Encodes authentication data to ensure that only trusted information is placed into the link-state database
 ```
-
 - (1-byte) TLV type
 - (1-byte) TLV length
 - (1-byte) Authentication type
@@ -455,7 +436,6 @@ TLV 128-IP Internal Reachability
 ```text
 **(1-byte) S (Supported) bit, R (Reserved) bit, error metric**
 ```
-
 - Junos OS does not support
 - The S bit,the R bit, and the metric bits are all set to a constant value of 0
 
@@ -503,7 +483,6 @@ TLV 130-IP External Reachability
 ```text
 **(1-byte) S (Supported) bit, R (Reserved) bit, error metric**
 ```
-
 - Junos OS does not support
 - The S bit,the R bit, and the metric bits are all set to a constant value of 0
 

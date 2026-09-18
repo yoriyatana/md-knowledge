@@ -23,7 +23,6 @@ In another words, If the customer is polling for real time CPU usage of FPC, not
 ```text
 For example, NMS server is sending a MIB polling request with OID requesting real time CPU Usage. Router responds with the real time CPU value for that particular moment. For example, 80%. Then, the next polling  is scheduled after 5 minutes from the NMS server, then, the NMS server will plot the value of 80% for the next 5 minutes. Even if it’s done some average math with the next polling value the graph will not look correct. So, the graph will show that inaccurate  value even the CPU actually dropped off in next second or some milli seconds !
 ```
-
 As customer is using the real time CPU utilization OID instead of Average CPU OID, sub second CPU spikes are getting highlighted in the graph.
 
 We would like to suggest your customer to use average CPU utilization OID instead of real time OID to fetch a genuine CPU utilization graph

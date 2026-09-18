@@ -12,60 +12,20 @@
 
 ```text
 set interfaces ae1 aggregated-ether-options bfd-liveness-detection minimum-interval 100
-```
-
-```text
 set interfaces ae1 aggregated-ether-options bfd-liveness-detection multiplier 3
-```
-
-```text
 set interfaces ae1 aggregated-ether-options bfd-liveness-detection neighbor 10.250.64.1
-```
-
-```text
 set interfaces ae1 aggregated-ether-options bfd-liveness-detection local-address 10.250.64.5
-```
-
-```text
 set interfaces ae3 aggregated-ether-options bfd-liveness-detection minimum-interval 100
-```
-
-```text
 set interfaces ae3 aggregated-ether-options bfd-liveness-detection multiplier 3
-```
-
-```text
 set interfaces ae3 aggregated-ether-options bfd-liveness-detection neighbor 10.250.92.37
-```
-
-```text
 set interfaces ae3 aggregated-ether-options bfd-liveness-detection local-address 10.250.64.5
-```
-
-```text
 set firewall filter PROTECT-RE term BFD from protocol udp
-```
-
-```text
 set firewall filter PROTECT-RE term BFD from destination-port 3784
-```
-
-```text
 set firewall filter PROTECT-RE term BFD from destination-port 4784
-```
-
-```text
 set firewall filter PROTECT-RE term BFD from destination-port 6784
-```
-
-```text
 set firewall filter PROTECT-RE term BFD then count BFD
-```
-
-```text
 set firewall filter PROTECT-RE term BFD then accept
 ```
-
 ae1            up    up  Connect to ME\_RRMP01\_AE8
 
 ae3            up    up  TO\_PR.SOF055\_AE0
@@ -77,7 +37,6 @@ Detect  Transmit
 ```text
 Address                  State    Interface      Time    Interval  Multiplier
 ```
-
 10. 250.64.1              Up        xe-2/0/0      0.300    0.100        3
 
 10. 250.64.1              Up        xe-4/3/0      0.300    0.100        3
@@ -98,60 +57,20 @@ icinga@ME\_PR01.SOF055\_RE0> show configuration | display set | match bfd
 
 ```text
 set interfaces ae0 aggregated-ether-options bfd-liveness-detection minimum-interval 100
-```
-
-```text
 set interfaces ae0 aggregated-ether-options bfd-liveness-detection multiplier 3
-```
-
-```text
 set interfaces ae0 aggregated-ether-options bfd-liveness-detection neighbor 10.250.64.5
-```
-
-```text
 set interfaces ae0 aggregated-ether-options bfd-liveness-detection local-address 10.250.92.37
-```
-
-```text
 set interfaces ae1 aggregated-ether-options bfd-liveness-detection minimum-interval 100
-```
-
-```text
 set interfaces ae1 aggregated-ether-options bfd-liveness-detection multiplier 3
-```
-
-```text
 set interfaces ae1 aggregated-ether-options bfd-liveness-detection neighbor 10.250.92.4
-```
-
-```text
 set interfaces ae1 aggregated-ether-options bfd-liveness-detection local-address 10.250.92.37
-```
-
-```text
 set firewall filter PROTECT-RE term BFD from protocol udp
-```
-
-```text
 set firewall filter PROTECT-RE term BFD from destination-port 3784
-```
-
-```text
 set firewall filter PROTECT-RE term BFD from destination-port 4784
-```
-
-```text
 set firewall filter PROTECT-RE term BFD from destination-port 6784
-```
-
-```text
 set firewall filter PROTECT-RE term BFD then count BFD
-```
-
-```text
 set firewall filter PROTECT-RE term BFD then accept
 ```
-
 ae0            up    up  AR.GAZ020
 
 ae1            up    up  Connect to PR01.MAN064\_AE1
@@ -176,28 +95,12 @@ ae1            up    up  Connect to PR01.MAN064\_AE1
 
 ```text
 show bfd session
-```
-
-```text
 show bfd session extensive
-```
-
-```text
 show bfd session detail
-```
-
-```text
 show ppm adjacencies protocol bfd detail
-```
-
-```text
 request pfe execute command "show ppm adjacencies protocol bfd" target fpc7
-```
-
-```text
 show chassis fabric fpcs
 ```
-
 * *Thực hiện áp dụng micro BFD**
 
 - Tr
@@ -226,24 +129,11 @@ show chassis fabric fpcs
 
 ```text
 user@R0# **set bfd traceoptions file bfd**
-```
-
-```text
 user@R0# **set bfd traceoptions file size 100m**
-```
-
-```text
 user@R0# **set bfd traceoptions file files 10**
-```
-
-```text
 user@R0# **set bfd traceoptions flag all**
-```
-
-```text
 user@R0> **file show /var/log/bfd**
 ```
-
 start shell pfe network fpcx
 
 # show ddos policer bfd stats

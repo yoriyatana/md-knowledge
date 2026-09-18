@@ -19,7 +19,6 @@ log-updown;
 ```text
 group iBGP-RR-HCM {
 ```
-
 type internal;
 
 description iBGP-to-RR-HCM;
@@ -75,7 +74,6 @@ neighbor 10.53.96.255;
 ```text
 group RR\_TO\_MC\_HNI {
 ```
-
 type external;
 
 import import\_RAN\_MLMB;
@@ -139,7 +137,6 @@ no-nexthop-change;
 ```text
 group iBGP-VPN-ASBR-Option-A {
 ```
-
 type internal;
 
 local-address 10.51.142.116;
@@ -169,7 +166,6 @@ multiplier 3;
 ```text
 group iBGP-VPN-ASBR-Option-A {
 ```
-
 type internal;
 
 local-address 10.51.142.116;
@@ -227,7 +223,6 @@ family route-target;
 ```text
 group iBGP-VPN-ASBR-Option-A {
 ```
-
 type internal;
 
 local-address 10.51.142.116;
@@ -312,7 +307,6 @@ family route-target;
 ```text
 set protocols bgp group  family route-target external-paths 2
 ```
-
 Please help check below link for more details.
 
 [https://www.juniper.net/documentation/en\_US/junos/topics/reference/configuration-statement/family-edit-protocols-bgp-route-target-vp.html](https://www.juniper.net/documentation/en_US/junos/topics/reference/configuration-statement/family-edit-protocols-bgp-route-target-vp.html%20%5Ct%20_blank)

@@ -101,7 +101,6 @@ shaping guarntd delaybf  excess
 ```text
 interface name                  index    rate    rate    rate    rate      other
 ```
-
 - --------------------------- ---------  ------- ------- ------- ------- -------------
 
 pd-1/0/0                          150        0      0      0      0
@@ -170,12 +169,8 @@ XQSS chip base Q index: 16
 
 ```text
 Queue    State        Max      Guaranteed  Burst  Weight Priorities Drop-Rules  Scaling-profile
-```
-
-```text
 Index                rate        rate      size            G    E  Wred  Tail      ID
 ```
-
 - ----- ----------- ----------- ------------ ------- ------ ---------- ----------  ----------------
 
 16  Configured 10215000000  2349450000 67108864    23  GL    EL    4  1034        3
@@ -199,7 +194,6 @@ We have now the Level 1 node scheduler index (5) and the XQSS base queue index (
 ```text
 display the scheduler parameters attached to our physical interface with the following command:
 ```
-
 * *SMPC1(mx240-12 vty)# show xqss** **1** **sched** **l1 6**
 
 L1 node configuration  : 6
@@ -207,7 +201,6 @@ L1 node configuration  : 6
 ```text
 state          : Configured
 ```
-
 child\_l2\_nodes  : 1
 
 scheduler\_pool  : 0
@@ -235,7 +228,6 @@ min\_pkt\_adjust  : 0
 ```text
 Rate wheel information:
 ```
-
 Instruction: valid:1 pool\_id:0 page\_id:0 page\_offset:16
 
 Instruction        :
@@ -277,7 +269,6 @@ egress physical interface stream bindings:
 ```text
 IFDs: 166
 ```
-
 scheduler map id: 2
 
 - -------------------------------
@@ -289,7 +280,6 @@ egress physical interface stream bindings:
 ```text
 IFDs: 162, 163, 164, 165, 167
 ```
-
 scheduler map id: 4294967298
 
 - -------------------------------
@@ -311,7 +301,6 @@ egress physical interface stream bindings:
 ```text
 IFDs: 150
 ```
-
 scheduler map id: 4294967300
 
 - -------------------------------
@@ -378,12 +367,8 @@ SMPC1(mx240-12 vty)#  show cos scheduling-policy 7936
 
 ```text
 smap      Q  fc  RQ  transmt shaping excess  delay-BW priorities    rate    nontcp/ nontcp/  tcp/  tcp/    ECN      shaping
-```
-
-```text
 index      num id  num  rate    rate  rate              G    E    control    LOW      MH      ML    HIGH              burst
 ```
-
 (0/0)  (0/1)  (1/0)  (1/1)
 
 - ---------- --- --- --- ------- ------- ------- -------- ---------- ---------- ------- ------- ------- ------- -------- ---------
@@ -407,7 +392,6 @@ index      num id  num  rate    rate  rate              G    E�
 ```text
 wrr\_mode = Use Transmit Rate
 ```
-
 <https://www.juniper.net/documentation/en_US/day-one-books/DO_MX5G.pdf>
 
 ![](image/2f68c2d9c8f6aec8222547dbdaddb1d7.png)

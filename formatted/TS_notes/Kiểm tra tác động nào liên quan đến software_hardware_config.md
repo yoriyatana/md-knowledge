@@ -9,7 +9,6 @@
 ```text
 show system commit
 ```
-
 + log interactive-commands (Hoặc các file log có ghi log facility là interactive-commands) - match "UI\_CMDLINE\_READ\_LINE: User '"
 
 - Cách check liên quan đến software nếu có upgrade/downgrade:

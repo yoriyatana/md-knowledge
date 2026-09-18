@@ -3,7 +3,6 @@
 ```text
 lab@MX204-01> show configuration | compare
 ```
-
 [edit interfaces xe-0/1/5]
 
 + unit 2000 {

@@ -15,7 +15,6 @@ As you can see, each router has 2 loopback addresses. The basic configuration of
 ```text
 By default on Junos, a router will only map a Label for its primary loopback Interface. It means that an LDP router is by default Egress PE only for its /32 primary lo0 address. Moreover, remember that by default LDP on Junos works in Downstream Unsolicited (DU) mode – Ordered Label (OL) distribution. OL means that a router allocates a Label to a specific FEC only if it received a Label mapping from the downstream node(s) before. Therefore only the Egress PE which own the FEC  will be the initiator of the first Label mapping for its FEC. Then, subsequently, other routers may allocate and map a Label to this FEC. A router sends a Label Mapping for a given FEC toward all its neighbours (even the downstream router that sent it the FEC – aka. there is no split horizon with LDP). On Junos the same Label is allocated for a FEC for all Interfaces.
 ```
-
 [![](image/eaa170dbfb0c22897208fb4d38370fbf.png)](http://inetzero.com/wp-content/uploads/2014/06/ldp-22.png)Other important thing, LDP forwarding exactly follows IGP forwarding. With this constraint, an exact match of the IP address of the FEC will be needed in the IGP routing table. In other words, to allocate a label for a /32, this specific /32 should be known in the IGP routing table. A more specific prefix will be not allowed. The LDP specification is quite cleared about this last point:
 
 An LSR receiving a Label Mapping message from a downstream LSR for a
@@ -55,7 +54,6 @@ The both routers are configured by default in Downstream Unsolicited mode.The TC
 ```text
 [4] P1 sends also its Label Mapping. In this case P1 is not a stub router and it has already Label Mapping received from downstream nodes (P2, P3, PE2). It sends mapping for the P2, P3, PE2 FEC and also for the FEC for which it is the Egress PE, Its lo0 address (It also allocates implicit null label (3) for its own IP address).
 ```
-
 [![](image/72f85189de830e569cb77e0b46ac692b.png)](http://inetzero.com/wp-content/uploads/2014/06/ldp-6.png)
 
 [5] PE1 can now send back to P1 Label Mapping for the FEC: P1, P2, P3 and PE2. Indeed, a downstream node sent to it a label mapping before. It can now do the same (remember the OL distribution):
@@ -65,7 +63,6 @@ The both routers are configured by default in Downstream Unsolicited mode.The TC
 ```text
 [6] Finally P1 can also send back to PE1 a Label Mapping for the PE1 loopback Address as it previously received a label mapping for it coming from PE1 itself.
 ```
-
 [![](image/a50ec60c64e5af1915f1f4b076f2389e.png)](http://inetzero.com/wp-content/uploads/2014/06/ldp-8.png)Great! LDP is now synchronised between PE1 and P1. You can use the following commands to check all that we seen previously by analysing LDP packets:
 
 Check LDP Discovery/Session on PE1:
@@ -168,7 +165,6 @@ When LDP Discovery adjacency flaps between 2 routers (without ECMP) or when the 
 ```text
 To activate LDP session protection just add this following knob but also add the lo0 interface within the ldp configuration. Indeed, by default LDP discovery phase uses IP packets with TTL=1. This does not allow to maintain the UDP discovery adjacency when the direct path/link between 2 routers failed. (Note: The TCP LDP session uses a TTL > 1 by default).
 ```
-
 In our example we want to protect LDP session between P2 and PE2. We configure on both routers those 2 commands:
 
 [![](image/1c120fc52c6b7e97f6e39c52805c6478.png)](http://inetzero.com/wp-content/uploads/2014/06/ldp-35.png)Note: you can specify the number of seconds before the LDP session is torn down and resignaled. To do that, use the parameter “timeout” behind the session-protection knob.

@@ -14,32 +14,13 @@
 
 ```text
 user@host> show configuration interfaces ae104
-```
-
-```text
 user@host> show configuration interfaces ae104 | display inheritance
-```
-
-```text
 user@host> show configuration interfaces ae104 | display inheritance no-comments
-```
-
-```text
 user@host> show configuration dynamic-profiles
-```
-
-```text
 user@host> show configuration dynamic-profiles | display inheritance no-comments
-```
-
-```text
 user@host> show configuration dynamic-profiles | display inheritance no-comments | match dualstack-pppox-remote
-```
-
-```text
 user@host> show configuration dynamic-profiles | display inheritance no-comments | display set | match dualstack-pppox-remote
 ```
-
 - Thông tin tổng quan về thuê bao
 
 tailc@QNI-PE4-MX960\_RE0> show chassis hardware
@@ -50,22 +31,14 @@ tailc@QNI-PE4-MX960\_RE0> show chassis fpc detail
 
 ```text
 user@host> show subscribers summary port
-```
-
-```text
 user@host> show subscribers summary port
 ```
-
 tailc@QNI-PE4-MX960\_RE0> show subscribers summary port | refresh 1
 
 ```text
 user@host> show network-access aaa terminate-code summary
-```
-
-```text
 user@host> show network-access aaa terminate-code summary
 ```
-
 tailc@QNI-PE4-MX960\_RE0> show network-access aaa terminate-code brief
 
 tailc@QNI-PE4-MX960\_RE0> show network-access aaa terminate-code brief
@@ -74,12 +47,8 @@ tailc@QNI-PE4-MX960\_RE0> show network-access aaa terminate-code brief
 
 ```text
 user@host> show subscribers summary port
-```
-
-```text
 user@host> show subscribers summary port
 ```
-
 tailc@QNI-PE4-MX960\_RE0> show system subscriber-management statistics all
 
 tailc@QNI-PE4-MX960\_RE0> show system subscriber-management statistics all extensive
@@ -204,16 +173,9 @@ tailc@QNI-PE4-MX960\_RE0> start shell
 
 ```text
 % cprod -A fpc7 -c "show jnh inline-ka session 0 ppp global-stats" ; date
-```
-
-```text
 % cprod -A fpc5 -c "show jnh inline-ka session 0 ppp global-stats" ; date
-```
-
-```text
 % cprod -A fpc3 -c "show jnh inline-ka session 0 ppp global-stats" ; date
 ```
-
 - Archive shmlog thành file
 
 tailc@QNI-PE4-MX960\_RE0> show shmlog statistics logname all | save /var/tmp/shmlog-stats0916a.txt
@@ -228,52 +190,18 @@ tailc@QNI-PE4-MX960\_RE0> show shmlog entries logname all | save /var/tmp/shmlog
 
 ```text
 show jnh  exception terse
-```
-
-```text
 show jnh  ucode-vars
-```
-
-```text
 show jnh inline-ka summary
-```
-
-```text
 show jnh inline-ka mgmt    Note:  This is before enqueue, if pkt validation failed stats are updated here.
-```
-
-```text
 show jnh inline-ka session  ppp global-stats
-```
-
-```text
 show jnh inline-ka session   ppp host-outbound-info
-```
-
-```text
 show jnh inline-ka pfe
-```
-
-```text
 show jnh inline-ka pfe  steering stats
-```
-
-```text
 show jnh inline-ka pfe  ae-info
-```
-
-```text
 show vbf pfe-events
-```
-
-```text
 show jnh host-path-stats
-```
-
-```text
 show vbf flow pppoe summary
 ```
-
 [ October 21, 2023 22:23 ] ⁨Hung Le⁩: bngss@BRMJ00> show subscribers id 6067970
 
 Nov 10 11:20:19
@@ -285,7 +213,6 @@ Total subscribers: 0, Active Subscribers: 0
 ```text
 bngss@BRMJ00> show subscribers id 7911013
 ```
-
 Nov 10 11:20:22
 
 Interface            IP Address/VLAN ID                      User Name LS:RI
@@ -301,7 +228,6 @@ ge-2/1/2.3221261020    138 L2BSA@dt.net default:L2RIID-4
 ```text
 02:57:56 Uhr: ServiceStart für jnpr ge-2/1/2:6067970:7819259-1604973426 -> AcctResponse
 ```
-
 [ October 21, 2023 22:24 ] ⁨Hung Le⁩: session cũ vẫn gửi acct sau khi sw
 
 [ October 21, 2023 22:24 ] ⁨Hung Le⁩: bngss@BRMJ00> show network-access aaa subscribers session-id 6067970
@@ -327,7 +253,6 @@ L2BSA\_SRL(10305,32587)    -na-          -na-            on/volume+
 ```text
 [ October 21, 2023 22:26 ] ⁨Hung Le⁩: Checked the authd core, for sub 6067970 state is active (AUTH\_DONE\_STATE) and logout is not triggered from client.
 ```
-
 This is the reason AST has the entry, and with this SDB entry should not have been deleted either. Client (autoconf plugin) should delete SDB entry only after logout/terminate ACK from authd, and clearly is misbehavior from client as earlier mentioned
 
 [ October 21, 2023 22:27 ] ⁨Hung Le⁩: bật traceoption authen mới thấy lỗi
@@ -336,24 +261,11 @@ This is the reason AST has the entry, and with this SDB entry should not have be
 
 ```text
 Nov 10 12:21:32.033 2020  BRMJ00 authd[20689]: ../../../../../../../src/junos/usr.sbin/authd/plugin/radius/authd\_plugin\_radius\_module.cc:2332 Failed to get SDB snapshot for session-id:6709955
-```
-
-```text
 Nov 10 12:21:51.505 2020  BRMJ00 authd[20689]: NACK received for profile request with id=0x17fd3c58 from bbe-smgd daemon: No more resources retry FALSE result 0x00000020
-```
-
-```text
 Nov 10 12:21:51.505 2020  BRMJ00 authd[20689]: NACK received for profile request with id=0x17fd3c74 from bbe-smgd daemon: No more resources retry FALSE result 0x00000020
-```
-
-```text
 Nov 10 12:21:51.505 2020  BRMJ00 authd[20689]: NACK received for profile request with id=0x17fd3c90 from bbe-smgd daemon: No more resources retry FALSE result 0x00000020
-```
-
-```text
 Nov 10 12:21:51.506 2020  BRMJ00 authd[20689]: NACK received for profile request with id=0x17fd3cac from bbe-smgd daemon: No more resources retry FALSE result 0x00000020
 ```
-
 [ October 21, 2023 22:29 ] ⁨Hung Le⁩: ======Thử với user stuck==== gửi CoA activate 1 cái service gì đó
 
 [ October 21, 2023 22:29 ] ⁨Hung Le⁩: ./BRMJ00-var-log-shmlog.txt:bbe-ljbase-hi        1755903 Nov 10 03:54:41.499135 jauthd: rx: trap                                            session\_id=6067970 trap-type=2 req-id=0x00000946 ch=0x00000002
@@ -361,7 +273,6 @@ Nov 10 12:21:51.506 2020  BRMJ00 authd[20689]: NACK received for profile reques
 ```text
 ./BRMJ00-var-log-shmlog.txt:bbe-autoconf-info    1755904 Nov 10 03:54:41.499138 BBE\_AUTOCONF\_I\_RX\_AUTH\_TRAP                                  auth trap 2 received for session session\_id=6067970
 ```
-
 ./BRMJ00-var-log-shmlog.txt:bbe-ljbase-hi        1755905 Nov 10 03:54:41.499166 jauthd: tx: trap response queued                            session\_id=6067970 trap-type=2 req-id=0x00000946 result=ifd-1 ch=0x00000002 >>>>> Result=1 indicates autoconf could not find client session
 
 jtac-bbesmgd.log.7.gz:Nov 10 12:54:41 couldn't find client from auth dynamic request  6067970

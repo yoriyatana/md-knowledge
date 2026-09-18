@@ -57,10 +57,11 @@ def format_markdown(text: str) -> str:
     formatted: list[str] = []
     blank_pending = False
     in_fence = False
+    code_open = False
     paragraph: list[str] = []
 
     def flush_paragraph() -> None:
-        nonlocal paragraph
+        nonlocal paragraph, code_open
         if not paragraph:
             return
         normalized = [item.rstrip() for item in paragraph]
@@ -76,17 +77,30 @@ def format_markdown(text: str) -> str:
         if is_command_block and not any(
             item.startswith(("!", "|", "#")) or "![" in item for item in normalized
         ):
-            if formatted and formatted[-1] != "":
-                formatted.append("")
-            formatted.extend(["```text", *command_items, "```"])
+            if not code_open:
+                if formatted and formatted[-1] != "":
+                    formatted.append("")
+                formatted.append("```text")
+                code_open = True
+            formatted.extend(command_items)
         else:
+            if code_open:
+                formatted.append("```")
+                code_open = False
             formatted.extend(normalized)
         paragraph = []
+
+    def close_code_block() -> None:
+        nonlocal code_open
+        if code_open:
+            formatted.append("```")
+            code_open = False
 
     for raw_line in lines:
         line = raw_line.rstrip()
         if FENCE.match(line):
             flush_paragraph()
+            close_code_block()
             in_fence = not in_fence
             formatted.append(line)
             blank_pending = False
@@ -96,7 +110,7 @@ def format_markdown(text: str) -> str:
             continue
         if not line.strip():
             flush_paragraph()
-            blank_pending = True
+            blank_pending = not code_open
             continue
 
         if blank_pending and formatted and formatted[-1] != "":
@@ -108,6 +122,7 @@ def format_markdown(text: str) -> str:
             line = f"{heading.group('indent')}{heading.group('marks')} {heading.group('text').strip()}"
         if heading and heading.group("text"):
             flush_paragraph()
+            close_code_block()
             formatted.append(line)
             continue
         else:
@@ -120,6 +135,7 @@ def format_markdown(text: str) -> str:
         paragraph.append(line)
 
     flush_paragraph()
+    close_code_block()
     return "\n".join(formatted).strip() + "\n" if formatted else ""
 
 

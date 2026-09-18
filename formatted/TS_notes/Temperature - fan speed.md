@@ -29,7 +29,6 @@ Type                            1X100GE CFP2 OTN
 ```text
 State                            Online
 ```
-
 PIC version                  0.0
 
 Uptime                        96 days, 9 hours, 30 minutes, 51 seconds

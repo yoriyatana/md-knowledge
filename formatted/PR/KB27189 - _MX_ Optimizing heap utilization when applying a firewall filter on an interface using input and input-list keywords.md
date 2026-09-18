@@ -30,13 +30,11 @@ The test results in Cases 1 through 4 in this section explain the issue in detai
 ```text
 jtac@ERX-MX960-2-RE0# run show chassis fpc | match "Temp|Slot|Online"
 ```
-
 Temp  CPU Utilization (%)  Memory    Utilization (%)
 
 ```text
 Slot State            (C)  Total  Interrupt      DRAM (MB) Heap    Buffer
 ```
-
 1  Online            43    20          0      2048        9        13
 
 3  Online            42    19          0      2048        9        13
@@ -50,7 +48,6 @@ Slot State            (C)  Total  Interrupt      DRAM (MB) Heap    
 ```text
 jtac@ERX-MX960-2-RE0# show interfaces xe-10/1/0 | match input
 ```
-
 input TEST-ACL-V4;
 
 input TEST-ACL-V4;
@@ -63,18 +60,13 @@ input TEST-ACL-V4;
 
 ```text
 jtac@ERX-MX960-2-RE0# show interfaces xe-10/1/0 | match input | count
-```
-
-```text
 Count: 999 lines
 ```
-
 [edit groups  firewall family inet]
 
 ```text
 jtac@ERX-MX960-2-RE0# show filter TEST-ACL-V4
 ```
-
 interface-specific;
 
 term block-to-internal {
@@ -96,13 +88,11 @@ internal-v4;
 ```text
 jtac@ERX-MX960-2-RE0# run show chassis fpc | match "Temp|Slot|Online"
 ```
-
 Temp  CPU Utilization (%)  Memory    Utilization (%)
 
 ```text
 Slot State            (C)  Total  Interrupt      DRAM (MB) Heap    Buffer
 ```
-
 1  Online            43    20          0      2048        9        13
 
 3  Online            42    19          0      2048        9        13
@@ -116,7 +106,6 @@ Slot State            (C)  Total  Interrupt      DRAM (MB) Heap    
 ```text
 jtac@ERX-MX960-2-RE0# show interfaces xe-10/1/0 | match input
 ```
-
 input TEST-ACL-V4;
 
 input TEST-ACL-V4;
@@ -129,18 +118,13 @@ input TEST-ACL-V4;
 
 ```text
 jtac@ERX-MX960-2-RE0# show interfaces xe-10/1/0 | match input | count
-```
-
-```text
 Count: 999 lines
 ```
-
 [edit groups  firewall family inet]
 
 ```text
 jtac@ERX-MX960-2-RE0# show filter TEST-ACL-V4 < not interface-specific
 ```
-
 term block-to-internal {
 
 from {
@@ -170,13 +154,11 @@ discard;
 ```text
 jtac@ERX-MX960-2-RE0# run show chassis fpc | match "Temp|Slot|Online"
 ```
-
 Temp  CPU Utilization (%)  Memory    Utilization (%)
 
 ```text
 Slot State            (C)  Total  Interrupt      DRAM (MB) Heap    Buffer
 ```
-
 1  Online            42    21          0      2048      23        13
 
 3  Online            42    18          0      2048      22        13
@@ -190,7 +172,6 @@ Slot State            (C)  Total  Interrupt      DRAM (MB) Heap    
 ```text
 jtac@ERX-MX960-2-RE0# show interfaces xe-10/1/0 | match input
 ```
-
 input-list TEST-ACL-V4;
 
 input-list TEST-ACL-V4;
@@ -203,18 +184,13 @@ input-list TEST-ACL-V4;
 
 ```text
 jtac@ERX-MX960-2-RE0# show interfaces xe-10/1/0 | match input | count
-```
-
-```text
 Count: 1001 lines
 ```
-
 [edit groups  firewall family inet]
 
 ```text
 jtac@ERX-MX960-2-RE0# show filter TEST-ACL-V4
 ```
-
 interface-specific;
 
 term block-to-internal {
@@ -236,13 +212,11 @@ internal-v4;
 ```text
 jtac@ERX-MX960-2-RE0# run show chassis fpc | match "Temp|Slot|Online"
 ```
-
 Temp  CPU Utilization (%)  Memory    Utilization (%)
 
 ```text
 Slot State            (C)  Total  Interrupt      DRAM (MB) Heap    Buffer
 ```
-
 1  Online            42    20          0      2048      23        13
 
 3  Online            42    20          0      2048      22        13
@@ -256,7 +230,6 @@ Slot State            (C)  Total  Interrupt      DRAM (MB) Heap    
 ```text
 jtac@ERX-MX960-2-RE0# show interfaces xe-10/1/0 | match input
 ```
-
 input-list TEST-ACL-V4;
 
 input-list TEST-ACL-V4;
@@ -269,18 +242,13 @@ input-list TEST-ACL-V4;
 
 ```text
 jtac@ERX-MX960-2-RE0# show interfaces xe-10/1/0 | match input | count
-```
-
-```text
 Count: 999 lines
 ```
-
 [edit groups  firewall family inet]
 
 ```text
 jtac@ERX-MX960-2-RE0# show filter TEST-ACL-V4
 ```
-
 term block-to-internal {
 
 from {

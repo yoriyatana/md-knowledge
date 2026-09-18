@@ -17,13 +17,11 @@ PE1:
 ```text
 root@PE1# show protocols bgp
 ```
-
 export OSPF\_2\_BGP;
 
 ```text
 group VPN\_BGP {
 ```
-
 type internal;
 
 local-address 1.1.1.1;
@@ -41,7 +39,6 @@ neighbor 3.3.3.3;
 ```text
 root@PE1# show policy-options policy-statement OSPF\_2\_BGP
 ```
-
 term 1 {
 
 from protocol ospf3;
@@ -55,13 +52,11 @@ And a similar configuration on PE2:
 ```text
 root@PE2# show protocols bgp
 ```
-
 export OSPF\_2\_BGP;
 
 ```text
 group VPN\_BGP {
 ```
-
 type internal;
 
 local-address 3.3.3.3;
@@ -155,7 +150,6 @@ export OSPF\_2\_BGP;
 ```text
 group VPN\_BGP {
 ```
-
 type internal;
 
 local-address 1.1.1.1;
@@ -252,28 +246,17 @@ then accept;
 
 ```text
 Let's make a check for received routes on PE2:
-```
-
-```text
 root@PE2# run show route receive-protocol bgp 1.1.1.1 table inet6.0
-```
-
-```text
 inet6.0: 7 destinations, 7 routes (6 active, 0 holddown, 1 hidden)
 ```
-
 Oh.
 
 Let's find out why it's hidden:
 
 ```text
 root@PE2# run show route 4001::1/128 hidden
-```
-
-```text
 inet6.0: 7 destinations, 7 routes (6 active, 0 holddown, 1 hidden)
 ```
-
 + = Active Route, - = Last Active, \* = Both
 
 4001::1/128         [BGP/170] 00:08:58, MED 1, localpref 100, from 1.1.1.1
@@ -281,13 +264,11 @@ inet6.0: 7 destinations, 7 routes (6 active, 0 holddown, 1 hidden)
 ```text
 AS path: I, validation-state: unverified
 ```
-
 Unusable
 
 ```text
 root@PE2# run show route 4001::1/128 extensive hidden | match "next hop"
 ```
-
 Next hop type: Unusable
 
 Indirect next hops: 1
@@ -314,44 +295,21 @@ This is done with set protocols mpls ipv6-tunneling. Let's configure it and see
 
 ```text
 root@PE2# set protocols mpls ipv6-tunneling
-```
-
-```text
 root@PE2# commit
-```
-
-```text
 commit complete
-```
-
-```text
 root@PE2# run show route 4001::1
-```
-
-```text
 inet6.0: 7 destinations, 7 routes (7 active, 0 holddown, 0 hidden)
 ```
-
 + = Active Route, - = Last Active, \* = Both
 
 4001::1/128        \*[BGP/170] 02:03:38, MED 1, localpref 100, from 1.1.1.1
 
 ```text
 AS path: I, validation-state: unverified
-```
-
-```text
 > to 10.0.23.2 via ge-0/0/1.0, Push 300032, Push 299856(top)
-```
-
-```text
 root@PE2# run show route table inet6.3
-```
-
-```text
 inet6.3: 2 destinations, 2 routes (2 active, 0 holddown, 0 hidden)
 ```
-
 + = Active Route, - = Last Active, \* = Both
 
 ::ffff:1.1.1.1/128 \*[LDP/9] 01:46:17, metric 1
@@ -359,23 +317,17 @@ inet6.3: 2 destinations, 2 routes (2 active, 0 holddown, 0 hidden)
 ```text
 > to 10.0.23.2 via ge-0/0/1.0, Push **299856**
 ```
-
 ::ffff:2.2.2.2/128 \*[LDP/9] 01:46:17, metric 1
 
 ```text
 > to 10.0.23.2 via ge-0/0/1.0
 ```
-
 Cool. We can confirm that label used to reach ::ffff:1.1.1.1/128 is the same label that is used to reach 1.1.1.1:
 
 ```text
 root@PE2# run show route table inet.3 1.1.1.1
-```
-
-```text
 inet.3: 2 destinations, 2 routes (2 active, 0 holddown, 0 hidden)
 ```
-
 + = Active Route, - = Last Active, \* = Both
 
 1. 1.1.1/32         \*[LDP/9] 01:59:20, metric 1
@@ -383,7 +335,6 @@ inet.3: 2 destinations, 2 routes (2 active, 0 holddown, 0 hidden)
 ```text
 > to 10.0.23.2 via ge-0/0/1.0, Push **299856**
 ```
-
 Let's confirm everything is fine now:
 
 Client2#ping 4001::1 so 6001::1
@@ -399,7 +350,6 @@ Packet sent with a source address of 6001::1
 ```text
 Success rate is 100 percent (5/5), round-trip min/avg/max = 7/19/61 ms
 ```
-
 We could've stopped here. But what if we want to add another client on PE1 side? Let's assume this client advertises 4002::1/32 to us. Like that:
 
 ![](image/12e14f68e6c81150f15f7c32198c8634.png)
@@ -408,60 +358,37 @@ That's what we'll see on PE2 then:
 
 ```text
 root@PE2# run show route protocol bgp table inet6.0
-```
-
-```text
 inet6.0: 8 destinations, 8 routes (8 active, 0 holddown, 0 hidden)
 ```
-
 + = Active Route, - = Last Active, \* = Both
 
 4001::1/128        \*[BGP/170] 02:25:05, MED 1, localpref 100, from 1.1.1.1
 
 ```text
 AS path: I, validation-state: unverified
-```
-
-```text
 > to 10.0.23.2 via ge-0/0/1.0, Push **300032**, Push 299856(top)
 ```
-
 4002::1/128        \*[BGP/170] 00:01:19, MED 1, localpref 100, from 1.1.1.1
 
 ```text
 AS path: I, validation-state: unverified
-```
-
-```text
 > to 10.0.23.2 via ge-0/0/1.0, Push **300048**, Push 299856(top)
 ```
-
 See? We still use 299856 to reach PE1, that's label advertised to us via LDP. But there's also bottom label advertised via BGP-LU - and it's different for these two destinations. Let's check PE1:
 
 ```text
 root@PE1# run show route table mpls.0 label **300032**
-```
-
-```text
 mpls.0: 11 destinations, 11 routes (11 active, 0 holddown, 0 hidden)
 ```
-
 + = Active Route, - = Last Active, \* = Both
 
 300032             \*[VPN/170] 02:29:01
 
 ```text
 > to fe80::a8bb:ccff:fe00:510 via **ge-0/0/1.0**, Pop
-```
-
-```text
 root@PE1# run show route table mpls.0 label **300048**
-```
-
-```text
 mpls.0: 11 destinations, 11 routes (11 active, 0 holddown, 0 hidden)
 ```
-
 + = Active Route, - = Last Active, \* = Both
 
 300048             \*[VPN/170] 00:05:27
@@ -469,7 +396,6 @@ mpls.0: 11 destinations, 11 routes (11 active, 0 holddown, 0 hidden)
 ```text
 > to fe80::a8bb:ccff:fe00:620 via **ge-0/0/2.0**, Pop
 ```
-
 At the moment PE1 assigns prefixes per next-hop. So we'll end up having as many labels as many connected client links we have.
 
 Are there any reasons to worry ~~apart from being greedy~~? Well, this will look a bit burdensome if you have sufficient amount of clients..and that's just not right from the logical point of view. Why use extra label if this is not a L3VPN? Why don't just use only one label to reach PE1 which then will figure out what to do with this packet by the means of IP header and not MPLS label?
@@ -481,49 +407,32 @@ Let's just configure on PE1:
 ```text
 set protocols bgp group VPN\_BGP family inet6 labeled-unicast explicit-null
 ```
-
 and see what happens on PE2:
 
 ```text
 root@PE2# run show route protocol bgp table inet6.0
-```
-
-```text
 inet6.0: 8 destinations, 8 routes (8 active, 0 holddown, 0 hidden)
 ```
-
 + = Active Route, - = Last Active, \* = Both
 
 4001::1/128        \*[BGP/170] 00:00:05, MED 1, localpref 100, from 1.1.1.1
 
 ```text
 AS path: I, validation-state: unverified
-```
-
-```text
 > to 10.0.23.2 via ge-0/0/1.0, Push 2, Push 299856(top)
 ```
-
 4002::1/128        \*[BGP/170] 00:00:05, MED 1, localpref 100, from 1.1.1.1
 
 ```text
 AS path: I, validation-state: unverified
-```
-
-```text
 > to 10.0.23.2 via ge-0/0/1.0, Push 2, Push 299856(top)
 ```
-
 Perfect. Let's check what's going on PE1:
 
 ```text
 root@PE1# run show route table mpls.0 label 2
-```
-
-```text
 mpls.0: 9 destinations, 9 routes (9 active, 0 holddown, 0 hidden)
 ```
-
 + = Active Route, - = Last Active, \* = Both
 
 2                  \*[MPLS/0] 16:08:48, metric 1
@@ -550,12 +459,8 @@ It can be fixed easily, however, with assigning inet6 address-family to core-fac
 
 ```text
 root@PE1# set interfaces ge-0/0/0 unit 0 family inet6
-```
-
-```text
 root@PE2# set interfaces ge-0/0/1 unit 0 family inet6
 ```
-
 Client2#ping 4001::1 so 6001::1
 
 Type escape sequence to abort.
@@ -569,7 +474,6 @@ Packet sent with a source address of 6001::1
 ```text
 Success rate is 100 percent (5/5), round-trip min/avg/max = 7/8/13 ms
 ```
-
 Why do we need to do this? Well, that's just a guess, but note once again that what when we had a per-next-hop label assignment, there was **no ip lookup performed at all** - when packet arrived to PE1, PE1 only looked up MPLS label in mpls.0 table and forwarded the packet to the interface that label was bound to. Remember, we had a different label per each outgoing interface.
 
 Now, when we receive packet with label of 2 we only know it belongs to IPv6 table - we don't know where we shoul forward exactly, so we'll have to **additionally perform ip lookup**.

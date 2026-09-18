@@ -57,7 +57,6 @@ e. You can also directly copy the host logs, collected in step (c) above, from t
 ```text
 > request vmhost file-copy from-jnode host-logs.tar to-vjunos /var/tmp/host\_varlog\_RE0.tar log
 ```
-
 * *Note:** In order perform the file copy operation from VMHOST to Junos (Step 2d) possible, users should be allowed to log in to the router via SSH as "root":
 
 [edit]
@@ -69,7 +68,6 @@ e. You can also directly copy the host logs, collected in step (c) above, from t
 ```text
 ssh {
 ```
-
 + root-login allow;
 
 + }

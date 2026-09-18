@@ -37,7 +37,6 @@ An existing IDP session and entry in the inet.3 is present in a LDP-speaking r
 >
 > {MASTER}
 ```
-
 If a default accept is explicity set by mistake, then it is applied to LDP (normally, the accept should be in term 1; but here it is in default accept).
 
 ```text
@@ -71,7 +70,6 @@ If a default accept is explicity set by mistake, then it is applied to LDP (norm
 >
 > {MASTER}
 ```
-
 As a result, the inet.3 table becomes empty:
 
 ```text
@@ -79,7 +77,6 @@ As a result, the inet.3 table becomes empty:
 >
 > {MASTER}
 ```
-
 CAUSE:
 
 Due to the above improper configuration, LDP just imports all prefixes in the inet.0 table to its database and announces that they are from it's own FECs. Junos does not store locally originated FECs in the inet.3 table, as they are used only to be the next-hops for the BGP protocol.
@@ -151,7 +148,6 @@ Due to the above improper configuration, LDP just imports all prefixes in the i
 >
 > {MASTER}
 ```
-
 SOLUTION:
 
 In the above egress-policy, move the then accept action to term 1 and then commit; both the LDP database and inet.3 table will become normal:

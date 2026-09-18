@@ -451,7 +451,6 @@ Task 1:
 ```text
 group ibgp {
 ```
-
 + type internal;
 
 + local-address 10.210.1.7;
@@ -952,12 +951,8 @@ Task 3:
 
 ```text
 group ibgp { ... }
-```
-
-```text
 group ebgp\_R11 {
 ```
-
 + type external;
 
 + import IMPORT\_BGP\_R11;
@@ -1221,7 +1216,6 @@ Task 4, 5, 6:
 ```text
 group C3\_S1 {
 ```
-
 + type external;
 
 + peer-as 45543;
@@ -1257,7 +1251,6 @@ group C3\_S1 {
 ```text
 group C3\_S1 {
 ```
-
 + type external;
 
 + peer-as 45543;
@@ -1459,7 +1452,6 @@ group C3\_S1 {
 ```text
 group C3\_S1 {
 ```
-
 + type external;
 
 + peer-as 45543;
@@ -1495,7 +1487,6 @@ group C3\_S1 {
 ```text
 group C3\_S1 {
 ```
-
 + type external;
 
 + export EXPORT\_BGP\_C3\_S1\_2;
@@ -1613,7 +1604,6 @@ group C3\_S1 {
 ```text
 group C3\_S2 {
 ```
-
 + type external;
 
 + peer-as 45543;
@@ -1729,7 +1719,6 @@ group C3\_S2 {
 ```text
 group C3\_S2\_2 {
 ```
-
 + type external;
 
 + peer-as 45543;
@@ -1845,7 +1834,6 @@ group C3\_S2\_2 {
 ```text
 group C3\_S2\_1 {
 ```
-
 + type external;
 
 + peer-as 45543;
@@ -2295,7 +2283,6 @@ services {
 ```text
 ssh;
 ```
-
 telnet;
 
 netconf {
@@ -2303,7 +2290,6 @@ netconf {
 ```text
 ssh;
 ```
-
 }
 
 }
@@ -2319,7 +2305,6 @@ any emergency;
 ```text
 file messages {
 ```
-
 any notice;
 
 authorization info;
@@ -2329,7 +2314,6 @@ authorization info;
 ```text
 file interactive-commands {
 ```
-
 interactive-commands any;
 
 }
@@ -2505,7 +2489,6 @@ bgp {
 ```text
 group ibgp {
 ```
-
 type internal;
 
 local-address 10.210.1.1;
@@ -2751,7 +2734,6 @@ bgp {
 ```text
 group C3\_S1 {
 ```
-
 type external;
 
 keep all;
@@ -2801,7 +2783,6 @@ bgp {
 ```text
 group C3\_S1 {
 ```
-
 type external;
 
 peer-as 45543;
@@ -2897,13 +2878,11 @@ services {
 ```text
 ssh;
 ```
-
 netconf {
 
 ```text
 ssh;
 ```
-
 }
 
 }
@@ -2919,7 +2898,6 @@ any emergency;
 ```text
 file messages {
 ```
-
 any notice;
 
 authorization info;
@@ -2929,7 +2907,6 @@ authorization info;
 ```text
 file interactive-commands {
 ```
-
 interactive-commands any;
 
 }
@@ -3099,7 +3076,6 @@ bgp {
 ```text
 group ibgp {
 ```
-
 type internal;
 
 local-address 10.210.1.2;
@@ -3335,7 +3311,6 @@ bgp {
 ```text
 group C3\_S1 {
 ```
-
 type external;
 
 peer-as 45543;
@@ -3371,7 +3346,6 @@ bgp {
 ```text
 group C3\_S1 {
 ```
-
 type external;
 
 export EXPORT\_BGP\_C3\_S1\_2;
@@ -3469,13 +3443,11 @@ services {
 ```text
 ssh;
 ```
-
 netconf {
 
 ```text
 ssh;
 ```
-
 }
 
 }
@@ -3491,7 +3463,6 @@ any emergency;
 ```text
 file messages {
 ```
-
 any notice;
 
 authorization info;
@@ -3501,7 +3472,6 @@ authorization info;
 ```text
 file interactive-commands {
 ```
-
 interactive-commands any;
 
 }
@@ -3653,7 +3623,6 @@ bgp {
 ```text
 group ibgp {
 ```
-
 type internal;
 
 local-address 10.210.1.3;
@@ -3689,7 +3658,6 @@ neighbor 10.210.1.10;
 ```text
 group ebgp\_R11 {
 ```
-
 type external;
 
 import IMPORT\_BGP\_R11;
@@ -3985,13 +3953,11 @@ services {
 ```text
 ssh;
 ```
-
 netconf {
 
 ```text
 ssh;
 ```
-
 }
 
 }
@@ -4007,7 +3973,6 @@ any emergency;
 ```text
 file messages {
 ```
-
 any notice;
 
 authorization info;
@@ -4017,7 +3982,6 @@ authorization info;
 ```text
 file interactive-commands {
 ```
-
 interactive-commands any;
 
 }
@@ -4197,7 +4161,6 @@ bgp {
 ```text
 group ibgp {
 ```
-
 type internal;
 
 local-address 10.210.1.4;
@@ -4413,7 +4376,6 @@ bgp {
 ```text
 group C3\_S2 {
 ```
-
 type external;
 
 peer-as 45543;
@@ -4509,13 +4471,11 @@ services {
 ```text
 ssh;
 ```
-
 netconf {
 
 ```text
 ssh;
 ```
-
 }
 
 }
@@ -4531,7 +4491,6 @@ any emergency;
 ```text
 file messages {
 ```
-
 any notice;
 
 authorization info;
@@ -4541,7 +4500,6 @@ authorization info;
 ```text
 file interactive-commands {
 ```
-
 interactive-commands any;
 
 }
@@ -4747,7 +4705,6 @@ bgp {
 ```text
 group ibgp {
 ```
-
 type internal;
 
 local-address 10.210.1.5;
@@ -5005,7 +4962,6 @@ bgp {
 ```text
 group C3\_S2\_2 {
 ```
-
 type external;
 
 peer-as 45543;
@@ -5101,13 +5057,11 @@ services {
 ```text
 ssh;
 ```
-
 netconf {
 
 ```text
 ssh;
 ```
-
 }
 
 }
@@ -5123,7 +5077,6 @@ any emergency;
 ```text
 file messages {
 ```
-
 any notice;
 
 authorization info;
@@ -5133,7 +5086,6 @@ authorization info;
 ```text
 file interactive-commands {
 ```
-
 interactive-commands any;
 
 }
@@ -5269,7 +5221,6 @@ bgp {
 ```text
 group ibgp {
 ```
-
 type internal;
 
 local-address 10.210.1.6;
@@ -5575,7 +5526,6 @@ bgp {
 ```text
 group C3\_S2\_1 {
 ```
-
 type external;
 
 peer-as 45543;
@@ -5645,13 +5595,11 @@ services {
 ```text
 ssh;
 ```
-
 netconf {
 
 ```text
 ssh;
 ```
-
 }
 
 }
@@ -5667,7 +5615,6 @@ any emergency;
 ```text
 file messages {
 ```
-
 any notice;
 
 authorization info;
@@ -5677,7 +5624,6 @@ authorization info;
 ```text
 file interactive-commands {
 ```
-
 interactive-commands any;
 
 }
@@ -5771,7 +5717,6 @@ bgp {
 ```text
 group ibgp {
 ```
-
 type internal;
 
 local-address 10.210.1.7;
@@ -5935,13 +5880,11 @@ services {
 ```text
 ssh;
 ```
-
 netconf {
 
 ```text
 ssh;
 ```
-
 }
 
 }
@@ -5957,7 +5900,6 @@ any emergency;
 ```text
 file messages {
 ```
-
 any notice;
 
 authorization info;
@@ -5967,7 +5909,6 @@ authorization info;
 ```text
 file interactive-commands {
 ```
-
 interactive-commands any;
 
 }
@@ -6065,7 +6006,6 @@ bgp {
 ```text
 group ibgp {
 ```
-
 type internal;
 
 local-address 10.210.1.8;
@@ -6243,7 +6183,6 @@ services {
 ```text
 ssh;
 ```
-
 telnet;
 
 netconf {
@@ -6251,7 +6190,6 @@ netconf {
 ```text
 ssh;
 ```
-
 }
 
 }
@@ -6267,7 +6205,6 @@ any emergency;
 ```text
 file messages {
 ```
-
 any notice;
 
 authorization info;
@@ -6277,7 +6214,6 @@ authorization info;
 ```text
 file interactive-commands {
 ```
-
 interactive-commands any;
 
 }
@@ -6377,7 +6313,6 @@ keep all;
 ```text
 group ibgp {
 ```
-
 type internal;
 
 local-address 10.210.1.10;

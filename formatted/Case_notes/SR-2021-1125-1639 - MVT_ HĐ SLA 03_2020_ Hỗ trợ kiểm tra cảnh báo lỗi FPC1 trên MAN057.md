@@ -13,7 +13,6 @@ Ghi nhận ban đầu
 ```text
 2021-08-28 16:31:19 CAT  Major  FPC 1 Major Errors - MQ Chip Error code: 0x3000b
 ```
-
 - --
 
 Các bước xử lý
@@ -37,12 +36,8 @@ Kiểm tra sơ bộ
 
 ```text
 Mem: 117M Active, 2503M Inact, 829M Wired, 1634M Buf, 12G Free
-```
-
-```text
 PID USERNAME PRI NICE   SIZE    RES STATE   C   TIME    WCPU COMMAND
 ```
-
 10 root     155 ki31     0K    64K CPU3    3    ??? 100.00% idle{idle: cpu3}
 
 10 root     155 ki31     0K    64K CPU2    2    ??? 100.00% idle{idle: cpu2}
@@ -62,7 +57,6 @@ PID USERNAME PRI NICE   SIZE    RES STATE   C   TIME    WCPU CO
 ```text
 show pfe statistics error: có couter khác 0
 ```
-
 Slot 1
 
 HSL2 Errors:
@@ -82,7 +76,6 @@ MQ Chip 0
 ```text
 WI Error Counters:
 ```
-
 xge traffic overflow           : 0
 
 wrong pkt dlmtr in dq pipeline : 0
@@ -90,7 +83,6 @@ wrong pkt dlmtr in dq pipeline : 0
 ```text
 FI Error Counters:
 ```
-
 stream counters(mask 0 match 0):
 
 cell\_timeout             : 0
@@ -136,13 +128,11 @@ IXCHIP 0 Ingress Buffer Mgr Errors:
 ```text
 Counter Name            Total           Rate      Peak Rate
 ```
-
 - ----------------------- ---------------- -------------- --------------
 
 ```text
 Tail Drop Pkt Cnt                0              0              0
 ```
-
 Pkt LinkRAM PERR Cnt                0              0              0
 
 Ctl DataRAM PERR Cnt                0              0              0
@@ -156,13 +146,11 @@ IXCHIP 2 Ingress Buffer Mgr Errors:
 ```text
 Counter Name            Total           Rate      Peak Rate
 ```
-
 - ----------------------- ---------------- -------------- --------------
 
 ```text
 Tail Drop Pkt Cnt                0              0              0
 ```
-
 Pkt LinkRAM PERR Cnt                0              0              0
 
 Ctl DataRAM PERR Cnt                0              0              0
@@ -176,13 +164,11 @@ IXCHIP 0 Egress Buffer Mgr Errors:
 ```text
 Counter Name            Total           Rate      Peak Rate
 ```
-
 - ----------------------- ---------------- -------------- --------------
 
 ```text
 Tail Drop Pkt Cnt                0              0              0
 ```
-
 EOPE Drop Pkt Cnt             6969              0             14
 
 Ctl DataRAM PERR Cnt                0              0              0
@@ -196,13 +182,11 @@ IXCHIP 2 Egress Buffer Mgr Errors:
 ```text
 Counter Name            Total           Rate      Peak Rate
 ```
-
 - ----------------------- ---------------- -------------- --------------
 
 ```text
 Tail Drop Pkt Cnt                0              0              0
 ```
-
 EOPE Drop Pkt Cnt             3117              0            737
 
 Ctl DataRAM PERR Cnt                0              0              0
@@ -281,12 +265,8 @@ Bits to test               :                  �
 
 ```text
 Data error                 :                    0
-```
-
-```text
 TCP header length error    :                    0
 ```
-
 Stack underflow            :                    0
 
 Stack overflow             :                    0
@@ -304,7 +284,6 @@ Fabric drops               :                  �
 ```text
 Packet Forwarding Engine Input IPv4 Header Checksum Error and Output MTU Error statistics:
 ```
-
 Input Checksum             :                    0
 
 Output MTU                 :                    0
@@ -322,26 +301,20 @@ devfs                   1.0K       1.0K       �
 ```text
 show version detail no-forwarding
 ```
-
 Hostname: ME\_PR02.MAN057\_RE0
 
 Model: mx480
 
 ```text
 Junos: 17.3R3-S8.1
-```
-
-```text
 Không phát sinh core-dump
 Show chasssis fpc detail
 ```
-
 Slot 1 information:
 
 ```text
 State                               Online
 ```
-
 Temperature                      40 degrees C / 104 degrees F
 
 Total CPU DRAM                 2048 MB
@@ -361,39 +334,19 @@ Max power consumption            227 Watts
 ```text
 show route summary
 ```
-
 Autonomous system number: 37342
 
 Router ID: 10.250.92.38
 
 ```text
 inet.0: 2118 destinations, 2435 routes (2114 active, 0 holddown, 4 hidden)
-```
-
-```text
 Direct:      8 routes,      7 active
-```
-
-```text
 Local:      6 routes,      6 active
-```
-
-```text
 OSPF:   1774 routes,   1774 active
-```
-
-```text
 BGP:    642 routes,    325 active
-```
-
-```text
 RSVP:      4 routes,      1 active
-```
-
-```text
 LDP:      1 routes,      1 active
 ```
-
 - Log chassisd ngày phát sinh alarm
 
 {master}
@@ -409,7 +362,6 @@ Aug 28 15:47:25  ch\_gencfg\_chassis\_startup\_time\_handler: master\_re: true
 ```text
 Aug 28 16:31:19  send: red alarm set, device FPC 1, reason FPC 1 Major Errors - MQ Chip Error code: 0x3000b
 ```
-
 Aug 28 16:47:24  ch\_gencfg\_chassis\_startup\_time\_blob\_set: chassis startup time set in kernel 1599684267.207560
 
 Aug 28 16:47:24  ch\_gencfg\_chassis\_startup\_time\_blob\_set: Adding blob for chassis startup time for key aaaaaaaa keylen 4 , 1599684267.207560, blob pointer a172d50
@@ -435,7 +387,6 @@ Mở case với TAC
 ```text
 Movitel | MX480 |  ME\_PR02.MAN057 | 17.3R3-S8.1 | Major  FPC 1 Major Errors - MQ Chip Error code: 0x3000b
 ```
-
 - ---
 
 S/N to open case
@@ -449,7 +400,6 @@ Hi JTAC,
 ```text
 Our customer observed the "FPC 1 Major Errors - MQ Chip Error code: 0x3000b" alarm raised long time ago.
 ```
-
 root@ME\_PR02.MAN057\_RE0> show chassis alarms no-forwarding
 
 2 alarms currently active
@@ -458,12 +408,8 @@ Alarm time               Class  Description
 
 ```text
 2021-10-30 01:03:21 CAT  Minor  PEM 2 Fan Failed
-```
-
-```text
 2021-08-28 16:31:19 CAT  Major  FPC 1 Major Errors - MQ Chip Error code: 0x3000b
 ```
-
 We found a KB with symtoms is similar to this alarm. https://kb.juniper.net/InfoCenter/index?page=content&id=KB35989&actp=METADATA&act=login
 
 Please help us check if KB matching to this case and guide us to clear it.
@@ -474,134 +420,42 @@ I uploaded the varlog, rsi and some command outputs as below:
 
 ```text
 show chassis hardware | no-more
-```
-
-```text
 show chassis alarm
-```
-
-```text
 show version
-```
-
-```text
 show chassis fpc | no-more
-```
-
-```text
 show chassis fpc pic-status | no-more
-```
-
-```text
 show chassis fpc errors | no-more
-```
-
-```text
 show chassis fabric fpcs  | no-more
-```
-
-```text
 show chassis fabric plane  | no-more
-```
-
-```text
 show chassis fabric summary  | no-more
-```
-
-```text
 show chassis fabric map | no-more
-```
-
-```text
 show chassis fabric plane-location | no-more
-```
-
-```text
 show chassis fabric destinations | no-more
-```
-
-```text
 show system resource-monitor fpc
-```
-
-```text
 show pfe statistics traffic  | no-more
-```
-
-```text
 show pfe statistics traffic detail  | no-more
-```
-
-```text
 show pfe statistics error | no-more
 ```
-
 ### PFE level information
 
 ```text
 request pfe execute command "show syslog messages" target fpc1
-```
-
-```text
 request pfe execute command "show nvram" target fpc1
-```
-
-```text
 request pfe execute command "show ttp statistics" target fpc1
-```
-
-```text
 request pfe execute command "show hsl2 statistics" target fpc1
-```
-
-```text
 request pfe execute command "show hsl2 statistics crc" target fpc1
-```
-
-```text
 request pfe execute command "show cmerror module" target fpc1
-```
-
-```text
 request pfe execute command "show sched" target fpc1
-```
-
-```text
 request pfe execute command "show threads cpu" target fpc1
-```
-
-```text
 request pfe execute command "show jnh 0 exceptions" target fpc1
-```
-
-```text
 request pfe execute command "show hsl2 statistics" target fpc1
-```
-
-```text
 request pfe execute command "show cmerror level" target fpc1
-```
-
-```text
 request pfe execute command "show cmerror module brief" target fpc1
-```
-
-```text
 request pfe execute command "show cmerror module 6 " target fpc1
-```
-
-```text
 request pfe execute command "show cmerror statistics" target fpc1
-```
-
-```text
 request pfe execute command "show syslog messages" target fpc1
-```
-
-```text
 request pfe execute command "show nvram" target fpc1
 ```
-
 - TAC xác nhận case matching mô tả lỗi trong  [KB35989](https://kb.juniper.net/InfoCenter/index?page=content&id=KB35989&actp=METADATA&act=login)
 
 - Phương án xử lý dùng lệnh ẩn để clear lỗi

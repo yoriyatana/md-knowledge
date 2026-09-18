@@ -6,24 +6,11 @@
 
 ```text
 labroot@MX80-r002# run show mpls lsp bypass logical-system r2
-```
-
-```text
 labroot@MX80-r002# run show rsvp session name Bypass->1.1.23.2 extensive logical-system r2
-```
-
-```text
 labroot@MX80-r002# run show rsvp session interface xe-0/0/0.24 logical-system r2
-```
-
-```text
 labroot@MX80-r002# run show rsvp session ingress name r1-to-r5 logical-system r2 extensive
-```
-
-```text
 labroot@MX80-r002# run show rsvp session transit logical-system r2
 ```
-
 ####
 
 SUMMARY:
@@ -36,9 +23,6 @@ This example shows the output from transit router only to explain which LSP is f
 
 ```text
 The following output shows bypass LSP Bypass -> 1.1.23.2 is in BackupActive state, which means bypass LSP is UP and Forwarding Traffic.
-```
-
-```text
 > labroot@MX80-r002# run show mpls lsp bypass logical-system r2
 >
 > Apr 24 13:10:21
@@ -51,7 +35,6 @@ The following output shows bypass LSP Bypass -> 1.1.23.2 is in BackupActive st
 >
 > Total 1 displayed, Up 1, Down 0
 ```
-
 In the extensive output "Number of data route tunnel through" field gives the number of LSP using the bypass to forward traffic.
 
 ```text
@@ -105,7 +88,6 @@ In the extensive output "Number of data route tunnel through" field gives the nu
 >
 > Explct route: 1.1.24.2 1.1.43.2
 ```
-
 When you check the LSPs signaled through the interface on which bypass LSP is signaled, you will find ingress LSP on that interface which should be transit LSP on this router.
 
 ```text
@@ -123,7 +105,6 @@ When you check the LSPs signaled through the interface on which bypass LSP is si
 >
 > Total 2 displayed, Up 2, Down 0
 ```
-
 Now if you will check the extensive output for that LSP you will find out that LSP Type is "Backup LSP at Point-of-Local-Repair" that means this LSP is currently using the bypass path on that interface.
 
 ```text
@@ -175,7 +156,6 @@ Now if you will check the extensive output for that LSP you will find out that L
 >
 > Total 1 displayed, Up 1, Down 0
 ```
-
 The same LSP will show as down on primary path because of the failure on that path, but traffic will be forwarded via bypass LSP. This LSP will show up on ingress.
 
 ```text

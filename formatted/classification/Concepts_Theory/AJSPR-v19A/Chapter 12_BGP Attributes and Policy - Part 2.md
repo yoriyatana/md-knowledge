@@ -34,7 +34,6 @@
 ```text
 **cisco-non-deterministic** compares paths based on when they are received
 ```
-
 - *Not* recommended for use in your network
 - Can cause incorrect route selections
 
@@ -43,7 +42,6 @@
 ```text
 user@router# set protocols bgp path-selection ?
 ```
-
 Possible completions:
 
 always-compare-med                        Always compare MED values, regardless of neighbor AS
@@ -154,7 +152,6 @@ show route community \*:20 terse
 show route community \*:20 detail
 show route community-name community-1 detail
 ```
-
 * *More Complex Regex**
 
 - Can use more complex regular expressions with communities

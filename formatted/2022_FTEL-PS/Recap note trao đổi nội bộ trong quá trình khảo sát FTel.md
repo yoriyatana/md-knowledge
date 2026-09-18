@@ -17,7 +17,6 @@ Chỗ này em cũng đang trao đổi lại nội bộ cụ thể use case Anh P
 ```text
 >>> bên họ cũng đang làm rõ lại ý của Phương
 ```
-
 Có một số mong muốn cụ thể là nhưhiện tại đối DWDM. Thì có nháy truyền dẫn thì cũng ko ảnh hưởng tới phiên PPPoE.
 
 Nên nếu chạy VPLS. Bọn em cũng mong muốn là giả dụ như có down một hướng thì sẽ ko ko làm out subs.
@@ -25,19 +24,16 @@ Nên nếu chạy VPLS. Bọn em cũng mong muốn là giả dụ như có down 
 ```text
 >>> cái này đúng ra là phải vậy. Trừ khi set interface hold-timer có gì đó ko phù hợp, chứ pppoe session phải 3x60s nó mới timeout. Dwdm flap trong 1-2s ko phải là vấn
 ```
-
 Cái thứ 2 là con số redial bọn em mong muống test là tầm 200cps đới với BRAS Center và BRAS Tỉnh tầm 160cps
 
 ```text
 >>> Anh nghĩ cái này test lab là ok
 ```
-
 Cái thứ 3 là bọn em gặp vấn đề về học route chậm, dẫn tới  phiên VPLS up lên chậm, Có khi active lên mà khoảng 5 phút sau mới up.
 
 ```text
 >>> cái này phải troubleshoot. Nếu bình thường bật config dưới MP lên thì anh nghĩ sau chừng max 30s vpls nó phải up. Route chỉ propagate từ MP lên RR xong tới backup-bras
 ```
-
 ====
 
 Kiểm tra lại DDoS pppoe theo ý Ngọc ở trên
@@ -59,7 +55,6 @@ Kiểm tra lại DDoS pppoe theo ý Ngọc ở trên
 ```text
 [ November 10, 2022 3:27 PM ] ⁨SVT.Tùng.NT⁩: Hiện chỗ vấn đề \*1. thuê bao lên chậm\* thì chỗ rate PADI nhận trên MP-Backup đang cao thì khả năng là do trên MP-Backup Ftel đang cấu hình loop 11 cặp cổng (1 cặp đang lỗi): 1 chân đưa vào VPLS, 1 chân làm PPPoE termination
 ```
-
 [ November 10, 2022 3:28 PM ] ⁨SVT.Tùng.NT⁩: nên gói PADI sẽ bị nhân lên nhiều lần ạ
 
 [ November 10, 2022 3:30 PM ] ⁨Ju.a.Đăng⁩: Loop nhiều nhưng 1 lúc chỉ đưa lên 1 MP thôi nhi?
@@ -138,22 +133,14 @@ Table bgp.l2vpn.0 Bit: 40004
 
 ```text
 RIB State: BGP restart is complete
-```
-
-```text
 RIB State: VPN restart is complete
-```
-
-```text
 Send state: in sync
 ```
-
 Active prefixes:              26
 
 ```text
 Received prefixes:            26
 ```
-
 Accepted prefixes:            26
 
 Suppressed due to damping:    0
@@ -187,7 +174,6 @@ policy-statement ADSL-Backup-2-Import: 96 term: 78 term inactivate >>> 18 term a
 ```text
 [ November 14, 2022 2:10 PM ] ⁨Ju.a.Đăng⁩: làm sao để dial rate tăng lên mới là quan trọng
 ```
-
 [ November 14, 2022 2:13 PM ] ⁨Ju.a.Đăng⁩: khi giải quyết xong vụ padi bị x11 lần lên thì thử lại rồi quyét định có cân optimize cái thời gian up kênh này ko
 
 [ November 14, 2022 2:15 PM ] ⁨SVT.Tùng.NT⁩: này em lab thì chỉ là thời gian kênh VPLS up lên thôi anh ạ
@@ -279,7 +265,6 @@ a. Mô hình tương tự MP-Backup để kiểm chứng lại vấn đề thuê
 b. Test tính năng liên quan PWHT.
 >>> hiện đã cấu hình PWHT trên VPLS để test
 ```
-
 * *z**
 
 - 1. Thực hiện test up kênh VPLS trên mạng production ghi nhận ~7s - trùng với kết quả test trên lab
@@ -488,7 +473,6 @@ interface et-0/0/5.0;
 ```text
 >>> Tài lieu test có nói config no-local-sw nhưng test case này ko thực hiện
 ```
-
 [ November 10, 2022 16:28 ] ⁨Ju.a.Đăng⁩: còn mô hình ko vpls/mac-learn thì lợi điểm này có thể đủ lớn để chấp nhận các bất lợi khác
 
 [ November 10, 2022 16:29 ] ⁨Ju.a.Đăng⁩: Nếu ko vpls áp vào cái mô hình Tùng nói thì đúng là ko cần loop ngoài nữa (smiley) vì nó chạy ps/LT bên trong rồi
@@ -758,7 +742,6 @@ Mô hình evpn-vpws hôm trước đề cập là do thông tin chưa thể tri�
 ```text
 State: closed-unsupported - Shipped with release but not supported in the field
 ```
-
 Có nghĩa là sẽ ko có support gì cả từ Tac/Engineer.
 
 Mình phải chờ bản 24.1R1-EVO (thiết kế lại tính năng này cho toàn bộ dòng ACX (7100 ... 7509...) nếu muốn production

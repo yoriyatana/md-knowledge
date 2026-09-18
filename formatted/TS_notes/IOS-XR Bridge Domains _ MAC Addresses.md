@@ -9,7 +9,6 @@ Even though bridge domains are children of bridge groups, the show command on th
 ```text
 show l2vpn bridge-domain bd-name ZTP group ZTP
 ```
-
 MAC Addresses
 
 Why type "show mac address VLAN foo" when you can type:
@@ -17,7 +16,6 @@ Why type "show mac address VLAN foo" when you can type:
 ```text
 show l2vpn forwarding bridge-domain ZTP:ZTP mac-address location 0/0/CPU0
 ```
-
 MAC Addresses
 
 Why type "show mac address VLAN foo" when you can type:
@@ -25,7 +23,6 @@ Why type "show mac address VLAN foo" when you can type:
 ```text
 show l2vpn forwarding bridge-domain ZTP:ZTP mac-address location 0/0/CPU0
 ```
-
 - --
 
 ## 1.    Kiểm tra học MAC trên Metro AGG, SRT
@@ -64,12 +61,8 @@ Bridge-domain 3649 (7 ports in all)
 
 ```text
 State: UP                    Mac learning: Enabled
-```
-
-```text
 Aging-Timer: 300 second(s)
 ```
-
 Maximum address limit: 16000
 
 Port-channel3 service instance 3649
@@ -103,13 +96,11 @@ Legend: RT=Route-target, S=Split-horizon, Y=Yes, N=No
 ```text
 VFI name: VMS-3649, state: up, type: multipoint, signaling: BGP
 ```
-
 VPN ID: 26048, VE-ID: 22, VE-SIZE: 100
 
 ```text
 RD: 172.20.96.24:26048, RT: 45903:26048, 45903:26048,
 ```
-
 Bridge-Domain 3649 attachment circuits:
 
 Pseudo-port interface: pseudowire100502
@@ -142,34 +133,24 @@ Legend: pp = Partially Programmed.
 
 ```text
 Bridge group: L2VPN, bridge-domain: L2VPN-TAKEDA-VL890, id: 610, state: up, ShgId: 0, MSTi: 0
-```
-
-```text
 Aging: 300 s, MAC limit: 4000, Action: none, Notification: syslog
 ```
-
 Filter MAC addresses: 0
 
 ```text
 ACs: 1 (1 up), VFIs: 0, PWs: 2 (2 up), PBBs: 0 (0 up)
 ```
-
 List of ACs:
 
 ```text
 BE5.890, state: up, Static MAC addresses: 0
 ```
-
 List of Access PWs:
 
 ```text
 Neighbor 172.20.96.24 pw-id 30312, state: up, Static MAC addresses: 0
-```
-
-```text
 Neighbor 172.20.98.35 pw-id 30312, state: up, Static MAC addresses: 0
 ```
-
 List of VFIs:
 
 ## 6.    Kiểm tra cấu hình khai báo trên Switch AGG, MA, SRT
@@ -256,20 +237,10 @@ member vfi L2VPN-ISHCMC-VL2607
 
 ```text
 show mpls l2transport vc vcid 27188
-```
-
-```text
 show l2vpn vfi name
-```
-
-```text
 show ethernet service instance interface be17
-```
-
-```text
 show l2vpn atom vc
 ```
-
 - --
 
 <https://www.cisco.com/c/en/us/support/docs/routers/asr-9000-series-aggregation-services-routers/116453-technote-ios-xr-l2vpn-00.html>
@@ -305,37 +276,31 @@ sh l2vpn xconnect group test xc-name p2p4 detail
 ```text
 show l2vpn bridge-domain group customer1 bd-name
 ```
-
 engineering
 
 ```text
 show l2vpn bridge-domain group customer1 bd-name
 ```
-
 engineering det
 
 ```text
 show l2vpn forwarding bridge-domain customer1:
 ```
-
 engineering mac-address location 0/1/CPU0
 
 ```text
 show l2vpn forwarding bridge-domain customer1:
 ```
-
 engineering mac-address detail location 0/1/CPU0
 
 ```text
 show l2vpn forwarding bridge-domain customer1:
 ```
-
 engineering mac-address hardware ingress location 0/1/CPU0
 
 ```text
 show l2vpn forwarding bridge-domain customer1:
 ```
-
 engineering mac-address hardware egress location 0/2/CPU0
 
 sh l2vpn forwarding bridge-domain customer1:

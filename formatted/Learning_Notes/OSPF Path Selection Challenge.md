@@ -88,33 +88,21 @@ LS Type: AS External Link
 ```text
 Link State ID: 5.5.5.5 (External Network Number )
 ```
-
 Advertising Router: 4.4.4.4
 
 LS Seq Number: 80000019
 
 ```text
 Checksum: 0x3C26
-```
-
-```text
 Length: 36
 ```
-
 Network Mask: /32
 
 ```text
 Metric Type: 2 (Larger than any link state path)
-```
-
-```text
 MTID: 0
-```
-
-```text
 Metric: 20
 ```
-
 Forward Address: 0.0.0.0
 
 External Route Tag: 0
@@ -136,33 +124,21 @@ LS Type: AS External Link
 ```text
 Link State ID: 5.5.5.5 (External Network Number )
 ```
-
 Advertising Router: 4.4.4.4
 
 LS Seq Number: 8000001B
 
 ```text
 Checksum: 0x540E
-```
-
-```text
 Length: 36
 ```
-
 Network Mask: /32
 
 ```text
 Metric Type: 2 (Larger than any link state path)
-```
-
-```text
 MTID: 0
-```
-
-```text
 Metric: 20
 ```
-
 Forward Address: 0.0.0.0
 
 External Route Tag: 0
@@ -182,25 +158,19 @@ LS Type: Summary Links(AS Boundary Router)
 ```text
 Link State ID: 4.4.4.4 (AS Boundary Router address)
 ```
-
 Advertising Router: 3.3.3.3
 
 LS Seq Number: 8000001C
 
 ```text
 Checksum: 0x9664
-```
-
-```text
 Length: 28
 ```
-
 Network Mask: /0
 
 ```text
 MTID: 0 Metric: 10
 ```
-
 Bonus Questions:
 
 What will R2's path selection to 5.5.5.5/32 be?
@@ -318,11 +288,9 @@ R3(config-subif)#
 ```text
 %OSPF-5-ADJCHG: Process 1, Nbr 1.1.1.1 on GigabitEthernet1.13 from FULL to DOWN, Neighbor Down: Interface down or detached
 ```
-
 R1#
 
 ```text
 %OSPF-5-ADJCHG: Process 1, Nbr 3.3.3.3 on GigabitEthernet1.13 from FULL to DOWN, Neighbor Down: Dead timer expired
 ```
-
 R1#show ip route 5.5.5.5 % Network not in table

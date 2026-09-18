@@ -157,7 +157,6 @@ encapsulation dot1Q 4003
 ```text
 pppoe enable group global
 ```
-
 pppoe-client dial-pool-number 1
 
 !

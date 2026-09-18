@@ -21,7 +21,6 @@ So, let me try to summarize the similarities and differences for you:
 ```text
 Both routing protocols are IGP (Internal Gateway Protocols) and Link State Protocols, which means they both advertise link information and build a Link State Database. The exchange of information is reliable, and the routers will make sure that the databases are synchronized.
 ```
-
 They both run the SPF (Shortest Path First) algorithm to calculate the best path to each destination network, and to make that determination they add the metrics of the different links.
 
 Also, before routers can exchange actual link information they form an adjacency, or formal neighbor relationship, which is built using hello packets. Both OSPF, and ISIS use hello packets for discovering neighbors and maintaining the relationship with those neighbors.
@@ -44,7 +43,6 @@ Elect a designated device on multiaccess networks.
 Can differentiate internal and external routes and tag routes
 Support features like graceful restart, GRES/NSR, Traffic Engineering, IPv6, and so on.
 ```
-
 Thus, yes, there are a lot of similarities! But, as I said: they are also very different. Let’s take a look at that now:
 
 ## **DIFFERENCES:**

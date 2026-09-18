@@ -18,18 +18,13 @@ b651\_gftth\_doivbpcntdcnvt2
 
 ```text
 Clear system subscriber-management arp address 10.31.x.x cuả hai account này, xem session online lại ko/giải phóng
-```
-
-```text
 clear network-access aaa subscriber username b651\_gftth\_doivbpcntdcnvt2
 ```
-
 6. Đề xuất clear mac-address của thuê bao Phúc.
 
 ```text
 clear system subscriber-management arp address 10.31.122.4
 ```
-
 12/04:
 
 có nhiều phản ánh liên quan fpc8 vào cuối tuần.
@@ -41,7 +36,6 @@ Hướng xử lý tiếp theo:
 ```text
 restart smg-service xong kiểm tra lại
 ```
-
 - Nếu không được thì xem xét reboot FPC hoặc box
 
 - tiến hành song song / giả lập lại lỗi trên lab

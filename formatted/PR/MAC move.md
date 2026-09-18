@@ -5,7 +5,6 @@
 ```text
 juniper@MX2010-HDG00TBD-RE0> show configuration protocols l2-learning
 ```
-
 global-mac-move {
 
 threshold-time 1;

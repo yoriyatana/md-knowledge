@@ -25,7 +25,6 @@ Task 1:
 ```text
 group RR {
 ```
-
 + type internal;
 
 + local-address 10.210.1.1;
@@ -79,7 +78,6 @@ group RR {
 ```text
 group RR {
 ```
-
 + type internal;
 
 + local-address 10.210.1.2;
@@ -133,7 +131,6 @@ z[edit]
 ```text
 group RR {
 ```
-
 + type internal;
 
 + local-address 10.210.1.4;
@@ -187,7 +184,6 @@ group RR {
 ```text
 group RR {
 ```
-
 + type internal;
 
 + local-address 10.210.1.4;
@@ -247,7 +243,6 @@ interface ge-0/0/2.0 { ... }
 ```text
 group RR {
 ```
-
 + type internal;
 
 + local-address 10.210.1.5;
@@ -301,7 +296,6 @@ group RR {
 ```text
 group RR {
 ```
-
 + type internal;
 
 + local-address 10.210.1.6;
@@ -369,7 +363,6 @@ group RR {
 ```text
 group PE {
 ```
-
 + type internal;
 
 + local-address 10.210.1.10;
@@ -735,7 +728,6 @@ Task 3:
 ```text
 group S1 {
 ```
-
 + type external;
 
 + family inet {
@@ -845,7 +837,6 @@ group S1 {
 ```text
 group S2 {
 ```
-
 + type external;
 
 + family inet {
@@ -1113,7 +1104,6 @@ Task 5:
 ```text
 group S3 {
 ```
-
 + type external;
 
 + peer-as 321;

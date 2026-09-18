@@ -36,20 +36,10 @@ Missing ISIS authentication ~~~>
 
 ```text
 set protocols isis level 1 authentication-key "$9$A8mf0RSM87bYohSeW8xwsik.Pfzn6A"
-```
-
-```text
 set protocols isis level 1 authentication-type simple
-```
-
-```text
 set protocols isis level 2 authentication-key "$9$A8mf0RSM87bYohSeW8xwsik.Pfzn6A"
-```
-
-```text
 set protocols isis level 2 authentication-type simple
 ```
-
 - --
 
 Missing OSPF authentication
@@ -65,16 +55,9 @@ Missing change interface type p2p on interface ge-0/0/5.0
 
 ```text
 Mar  8 04:01:00.011648 ERROR: IIH authentication information with bad length 10
-```
-
-```text
 Mar  8 04:01:00.011750 ERROR: IIH from R4 on ge-0/0/5.0 failed authentication
-```
-
-```text
 Mar  8 04:01:00.011758 ERROR: previous error from L1, source R4 on ge-0/0/5.0
 ```
-
 Wrong authentication-key on isis L1
 ~~~> set protocols isis level 1 authentication-key "$9$A8mf0RSM87bYohSeW8xwsik.Pfzn6A"
 
@@ -86,12 +69,8 @@ Missing ISIS L1 authentication
 
 ```text
 set protocols isis level 1 authentication-key "$9$A8mf0RSM87bYohSeW8xwsik.Pfzn6A"
-```
-
-```text
 set protocols isis level 1 authentication-type simple
 ```
-
 - R7:
 
 Missing ISIS L1 authentication
@@ -140,12 +119,8 @@ Missing OSPF configurations
 
 ```text
 set protocols ospf area 0.0.0.11 nssa
-```
-
-```text
 set protocols ospf area 0.0.0.11 interface ge-0/0/6.0 interface-type p2p
 ```
-
 - R5:
 
 - R6:
@@ -201,22 +176,14 @@ Apply both traffic-engineering disable and wide-metrics-only under protocols ISI
 
 ```text
 set groups int\_inet6 interfaces  unit <\*> family inet6
-```
-
-```text
 set apply-groups int\_inet6
 ```
-
 - R2:
 
 ```text
 set groups int\_inet6 interfaces  unit <\*> family inet6
-```
-
-```text
 set apply-groups int\_inet6
 ```
-
 - --
 
 Missing local sysid
@@ -228,38 +195,25 @@ Missing local sysid
 
 ```text
 set groups int\_inet6 interfaces  unit <\*> family inet6
-```
-
-```text
 set apply-groups int\_inet6
 ```
-
 - --
 
 ```text
 set protocols isis no-ipv4-routing
 ```
-
 Missing enable interface ge-0/0/3.0, ge-0/0/5.0 in protocol isis   ~~~>
 
 ```text
 set protocols isis interface ge-0/0/3.0 point-to-point level 1 disable
-```
-
-```text
 set protocols isis interface ge-0/0/5.0 point-to-point level 2 disable
 ```
-
 - R4:
 
 ```text
 set groups int\_inet6 interfaces  unit <\*> family inet6
-```
-
-```text
 set apply-groups int\_inet6
 ```
-
 - --
 
 R4-R8 setup L3 adjacency
@@ -338,28 +292,12 @@ Task 5:
 
 ```text
 set protocols ospf area 0.0.0.1 network-summary-export OSPF\_FILTER\_AREA0\_TO\_AREA1
-```
-
-```text
 set protocols ospf area 0.0.0.1 network-summary-import OSPF\_FILTER\_AREA1\_TO\_AREA0
-```
-
-```text
 set policy-options policy-statement OSPF\_FILTER\_AREA0\_TO\_AREA1 term ABR\_LOOPBACK from route-filter 10.210.1.3/32 exact
-```
-
-```text
 set policy-options policy-statement OSPF\_FILTER\_AREA0\_TO\_AREA1 term ABR\_LOOPBACK then accept
-```
-
-```text
 set policy-options policy-statement OSPF\_FILTER\_AREA0\_TO\_AREA1 term REJECT\_ALL then reject
-```
-
-```text
 set policy-options policy-statement OSPF\_FILTER\_AREA1\_TO\_AREA0 term REJECT\_ALL then reject
 ```
-
 - R6:
 ~~~>
 
@@ -383,9 +321,6 @@ Task 6:
 
 ```text
 set protocols isis interface ge-0/0/3.0 bfd-liveness-detection minimum-interval 100
-```
-
-```text
 set protocols isis interface ge-0/0/3.0 bfd-liveness-detection multiplier 5
 ```
 ~~~>
@@ -400,9 +335,6 @@ set protocols ospf area 0.0.0.0 interface ge-0/0/3.0 bfd-liveness-detection mult
 
 ```text
 set protocols isis interface ge-0/0/3.0 bfd-liveness-detection minimum-interval 100
-```
-
-```text
 set protocols isis interface ge-0/0/3.0 bfd-liveness-detection multiplier 5
 ```
 ~~~>
@@ -421,12 +353,8 @@ set protocols ospf3 area 0.0.0.10 interface ge-0/0/6.0
 
 ```text
 set protocols ospf3 realm ipv4-unicast area 0.0.0.10 interface ge-0/0/6.0 interface-type p2p
-```
-
-```text
 set protocols ospf3 area 0.0.0.10 interface ge-0/0/6.0 interface-type p2p
 ```
-
 - R4:
 ~~~>
 

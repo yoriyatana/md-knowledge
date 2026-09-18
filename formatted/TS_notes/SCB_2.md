@@ -10,24 +10,18 @@ Anh có một số comments thêm ở phản hồi dưới để em review thêm
 
 ```text
 show task replication >> All task synchronization status should be complete.
-```
-
-```text
 show bgp replication  >> Synchronization state should be complete.
 ```
-
 - Thực hiện ở **backup** RE:
 
 ```text
 show system switchover >> Observe the status (On/Ready/Ready/Ready).
 ```
-
 - Thực hiện ở master RE:
 
 ```text
 request chassis routing-engine master switch check >> Output must show switchover ready and not show any warning message.
 ```
-
 * *2/.** Bước online lên lại RE1 ở step 1 & online CB1/RE1 ở step 2 như Huy đề cập bên dưới là không cần thực hiện vì RE sẽ tự động online khi CB được gắn vào. Xem lại thủ tục thay thế SCB ở link sau để nắm rõ hơn.
 
 <https://www.juniper.net/documentation/en_US/release-independent/junos/topics/task/installation/scb-mx960-replacing.html>
@@ -39,7 +33,6 @@ Nếu các plane hoạt động lại bình thường thì online RE1 và kiểm
 ```text
 > request vmhost power-on other-routing-engine
 ```
-
 * *Step 2:**
 
 Cắm lại card SCB1 và đợi 5 phút.
@@ -48,12 +41,8 @@ Online bằng lệnh:
 
 ```text
 > request chassis cb online slot 1
-```
-
-```text
 > request vmhost power-on other-routing-engine
 ```
-
 * **Note****: FPC / MIC gắn vào thì bắt buộc phải dùng lệnh CLI để online lên, nhưng RE & SCB thì không cần. Lý do thì anh chưa thấy tài liệu Juniper đề cập, nhưng theo anh hiểu SCB/RE là những thành phần điều khiển, việc gắn nó vào mà nó không tự online lại thì sẽ không hợp lý ở 1 số trường hợp.*
 
 * *3/.** Ngoài ra, giữa việc **reset** (khởi động / tắt mở lại thiết bị bằng cách dùng lệnh) và **reseat** (rút thiết bị ra và gắn thiết bị vào lại) thì mình cũng nên cân nhắc thêm với khách hàng để xem có thực sự cần thiết phải thực hiện cả 2 bước này hay không. Vì nếu thực hiện theo tuần tự 2 bước này, thì thời gian thực hiện sẽ phải kéo dài - có thể 2 lần ảnh hưởng đến dịch vụ khách hàng, tùy trường hợp.

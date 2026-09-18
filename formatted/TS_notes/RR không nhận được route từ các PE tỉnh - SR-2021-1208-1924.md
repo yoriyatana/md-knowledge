@@ -38,32 +38,20 @@ Dec  8 15:59:53.665 2021  RR\_MX240\_YHA\_01J\_RE0 rpd[7549]: %DAEMON-3-BGP\
 
 ```text
 Dec  8 15:59:15  RR\_MX240\_GBT\_01J\_RE0 bfdd[7549]: %DAEMON-4-BFDD\_STATE\_UP\_TO\_DOWN: BFD Session 10.44.225.3 (IFL 0) state Up -> Down LD/RD(36/16390) Up time:1w5d 17:21 Local diag: CtlExpire Remote diag: None Reason: Detect Timer Expiry.
-```
-
-```text
 Dec  8 15:59:15  RR\_MX240\_GBT\_01J\_RE0 bfdd[7549]: %DAEMON-4-BFDD\_TRAP\_MHOP\_STATE\_DOWN: local discriminator: 36, new state: down, peer addr: 10.44.225.3
 ```
-
 Dec  8 15:59:15  RR\_MX240\_GBT\_01J\_RE0 rpd[7538]: %DAEMON-4: bgp\_bfd\_callback:190: NOTIFICATION sent to 10.44.225.3 (External AS 65324): code 6 (Cease) subcode 9 (Hard Reset), Reason: BFD Session Down
 
 ```text
 Dec  8 15:59:15  RR\_MX240\_GBT\_01J\_RE0 rpd[7538]: %DAEMON-4-RPD\_BGP\_NEIGHBOR\_STATE\_CHANGED: BGP peer 10.44.225.3 (External AS 65324) changed state from Established to Idle (event BfdDown) (instance master)
-```
-
-```text
 Dec  8 15:59:20  RR\_MX240\_GBT\_01J\_RE0 bfdd[7549]: %DAEMON-4-BFDD\_STATE\_UP\_TO\_DOWN: BFD Session 10.44.225.4 (IFL 0) state Up -> Down LD/RD(37/16387) Up time:1w5d 17:21 Local diag: CtlExpire Remote diag: None Reason: Detect Timer Expiry.
-```
-
-```text
 Dec  8 15:59:20  RR\_MX240\_GBT\_01J\_RE0 bfdd[7549]: %DAEMON-4-BFDD\_TRAP\_MHOP\_STATE\_DOWN: local discriminator: 37, new state: down, peer addr: 10.44.225.4
 ```
-
 Dec  8 15:59:20  RR\_MX240\_GBT\_01J\_RE0 rpd[7538]: %DAEMON-4: bgp\_bfd\_callback:190: NOTIFICATION sent to 10.44.225.4 (External AS 65324): code 6 (Cease) subcode 9 (Hard Reset), Reason: BFD Session Down
 
 ```text
 Dec  8 15:59:20  RR\_MX240\_GBT\_01J\_RE0 rpd[7538]: %DAEMON-4-RPD\_BGP\_NEIGHBOR\_STATE\_CHANGED: BGP peer 10.44.225.4 (External AS 65324) changed state from Established to Idle (event BfdDown) (instance master)
 ```
-
 /\* Lúc issue, trên PE chỉ nhận được các route-target detail từ RR quảng bá \*/
 
 juniper@PE\_MX480\_LCI\_01J-RE0> show route receive-protocol bgp 10.51.142.116 table bgp.rtarget.0
@@ -73,157 +61,131 @@ Dec 08 18:24:45
 ```text
 bgp.rtarget.0: 82 destinations, 263 routes (82 active, 0 holddown, 0 hidden)
 ```
-
 Prefix                  Nexthop              MED     Lclpref    AS path
 
 ```text
 131429:64803:1/96
 ```
-
 10. 51.142.116                           131429 I
 
 ```text
 131429:64803:110/96
 ```
-
 10. 51.142.116                           131429 I
 
 ```text
 131429:64803:120/96
 ```
-
 10. 51.142.116                           131429 I
 
 ```text
 131429:64803:199/96
 ```
-
 10. 51.142.116                           131429 I
 
 ```text
 131429:64803:400/96
 ```
-
 10. 51.142.116                           131429 I
 
 ```text
 131429:64803:410/96
 ```
-
 10. 51.142.116                           131429 I
 
 ```text
 131429:64803:500/96
 ```
-
 10. 51.142.116                           131429 I
 
 ```text
 131429:64803:501/96
 ```
-
 10. 51.142.116                           131429 I
 
 ```text
 131429:64803:508/96
 ```
-
 10. 51.142.116                           131429 I
 
 ```text
 131429:64803:509/96
 ```
-
 10. 51.142.116                           131429 I
 
 ```text
 131429:64803:10200/96
 ```
-
 10. 51.142.116                           131429 I
 
 ```text
 131429:65310:19998/96
 ```
-
 10. 51.142.116                           131429 I
 
 ```text
 131429:65321:19998/96
 ```
-
 10. 51.142.116                           131429 I
 
 ```text
 131429:65350:19998/96
 ```
-
 10. 51.142.116                           131429 I
 
 ```text
 131429:65359:19998/96
 ```
-
 10. 51.142.116                           131429 I
 
 ```text
 131429:65317L:12500/96
 ```
-
 10. 51.142.116                           131429 I
 
 ```text
 131429:65325L:12500/96
 ```
-
 10. 51.142.116                           131429 I
 
 ```text
 131429:131429L:11200/96
 ```
-
 10. 51.142.116                           131429 I
 
 ```text
 131429:131429L:11201/96
 ```
-
 10. 51.142.116                           131429 I
 
 ```text
 131429:131429L:11202/96
 ```
-
 10. 51.142.116                           131429 I
 
 ```text
 131429:131429L:11203/96
 ```
-
 10. 51.142.116                           131429 I
 
 ```text
 131429:131429L:11205/96
 ```
-
 10. 51.142.116                           131429 I
 
 ```text
 131429:131429L:12500/96
 ```
-
 10. 51.142.116                           131429 I
 
 ```text
 131429:131429L:17001/96
 ```
-
 10. 51.142.116                           131429 I
 
 ```text
 131429:131429L:19990/96
 ```
-
 10. 51.142.116                           131429 I
 
 {master}
@@ -233,157 +195,131 @@ juniper@PE\_MX480\_LCI\_01J-RE0> show route receive-protocol bgp 10.51.142.117 t
 ```text
 bgp.rtarget.0: 82 destinations, 263 routes (82 active, 0 holddown, 0 hidden)
 ```
-
 Prefix                  Nexthop              MED     Lclpref    AS path
 
 ```text
 131429:64803:1/96
 ```
-
 \*                         10.51.142.117                           131429 I
 
 ```text
 131429:64803:110/96
 ```
-
 \*                         10.51.142.117                           131429 I
 
 ```text
 131429:64803:120/96
 ```
-
 \*                         10.51.142.117                           131429 I
 
 ```text
 131429:64803:199/96
 ```
-
 \*                         10.51.142.117                           131429 I
 
 ```text
 131429:64803:400/96
 ```
-
 \*                         10.51.142.117                           131429 I
 
 ```text
 131429:64803:410/96
 ```
-
 \*                         10.51.142.117                           131429 I
 
 ```text
 131429:64803:500/96
 ```
-
 \*                         10.51.142.117                           131429 I
 
 ```text
 131429:64803:501/96
 ```
-
 \*                         10.51.142.117                           131429 I
 
 ```text
 131429:64803:508/96
 ```
-
 \*                         10.51.142.117                           131429 I
 
 ```text
 131429:64803:509/96
 ```
-
 \*                         10.51.142.117                           131429 I
 
 ```text
 131429:64803:10200/96
 ```
-
 \*                         10.51.142.117                           131429 I
 
 ```text
 131429:65310:19998/96
 ```
-
 \*                         10.51.142.117                           131429 I
 
 ```text
 131429:65321:19998/96
 ```
-
 \*                         10.51.142.117                           131429 I
 
 ```text
 131429:65350:19998/96
 ```
-
 \*                         10.51.142.117                           131429 I
 
 ```text
 131429:65359:19998/96
 ```
-
 \*                         10.51.142.117                           131429 I
 
 ```text
 131429:65317L:12500/96
 ```
-
 \*                         10.51.142.117                           131429 I
 
 ```text
 131429:65325L:12500/96
 ```
-
 \*                         10.51.142.117                           131429 I
 
 ```text
 131429:131429L:11200/96
 ```
-
 \*                         10.51.142.117                           131429 I
 
 ```text
 131429:131429L:11201/96
 ```
-
 \*                         10.51.142.117                           131429 I
 
 ```text
 131429:131429L:11202/96
 ```
-
 \*                         10.51.142.117                           131429 I
 
 ```text
 131429:131429L:11203/96
 ```
-
 \*                         10.51.142.117                           131429 I
 
 ```text
 131429:131429L:11205/96
 ```
-
 \*                         10.51.142.117                           131429 I
 
 ```text
 131429:131429L:12500/96
 ```
-
 \*                         10.51.142.117                           131429 I
 
 ```text
 131429:131429L:17001/96
 ```
-
 \*                         10.51.142.117                           131429 I
 
 ```text
 131429:131429L:19990/96
 ```
-
 \*                         10.51.142.117                           131429 I
 
 {master}
@@ -395,7 +331,6 @@ juniper@PE\_MX480\_LCI\_01J-RE0>
 ```text
 group PE\_RAN\_TNN {
 ```
-
 type external;
 
 local-address 10.51.142.117;
@@ -463,7 +398,6 @@ no-nexthop-change;
 ```text
 group PE\_RAN\_PTO {
 ```
-
 type external;
 
 local-address 10.51.142.117;
@@ -527,19 +461,16 @@ no-nexthop-change;
 ```text
 Peer                     AS      InPkt     OutPkt    OutQ   Flaps Last Up/Dwn State|#Active/Received/Accepted/Damped...
 ```
-
 10. 44.225.3           65324    2872718    3060784       0       1 1w3d 11:40:08 Establ
 
 ```text
 bgp.l3vpn.0: 20/908/906/0
 ```
-
 10. 44.225.4           65324    2877923    3061552       0       1 1w3d 11:40:20 Establ
 
 ```text
 bgp.l3vpn.0: 630/908/906/0
 ```
-
 10. 249.0.1            65319          0          0       0       1 2w3d 20:02:09 Active
 
 10. 249.0.2            65319          0          0       0       1 2w3d 20:03:48 Connect

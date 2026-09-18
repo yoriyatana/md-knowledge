@@ -43,7 +43,6 @@ none(2),                          -- none
 ```text
 error(3),                          -- error
 ```
-
 noPower(4),                        -- no power
 
 configPowerOff(5),                -- configured to power off
@@ -103,7 +102,6 @@ fruFebOffline(31),                -- FEB was offlined
 ```text
 fruInServSoftUpgradeError(32),    -- In Service Software Upgrade Error
 ```
-
 fruChasdPowerRatingExceed(33),    -- Chassis power rating exceeded
 
 fruConfigOffline(34),              -- Configured offline
@@ -141,7 +139,6 @@ reconnectFpcFail(49),              -- Reconnect FPC fail
 ```text
 fpcAppFailed(50),                  -- FPC app failed
 ```
-
 fpcKernelCrash(51),                -- FPC kernel crash
 
 spuFlowdDownNoCore(52),            -- SPU flowd down, no core dump
@@ -175,7 +172,6 @@ fruFPCChassisClusterDisable(65),  -- FPC offlined due to Chassis Cluster Disabl
 ```text
 spuFipsError(66),                  -- SPU fips error
 ```
-
 fruFPCFabricDownOffline(67),      -- FPC offlined due to Fabric down
 
 febCfgChange(68),                  -- FEB config change
@@ -201,7 +197,6 @@ builtinPicBounce(77),              -- Builtin PIC Bounce
 ```text
 fruFabricDegraded(78),            -- Fabric running in degraded state
 ```
-
 fruFPCFabricDegradedOffline(79),  -- FPC offlined due to degraded fabric action
 
 fruUnsupportedSlot(80),            -- FRU unsupported in the current slot
@@ -223,7 +218,6 @@ fruFpcFanTrayPEMIncompatible(87),  -- FPC incompatible with FAN-TRAYs ,PEMs
 ```text
 fruUnsupportedFirmware(88),        -- Firmware on this FRU not supported
 ```
-
 openflowConfigChange(89),          -- Openflow config change offlines FPC
 
 fruFpcScbIncompatible(90),        -- FPC incompatible with SCB
@@ -232,12 +226,8 @@ fruReUnresponsive(91),            -- Corresponding slot RE unresponsive
 
 ```text
 hwError(92),                      -- Hardware error
-```
-
-```text
 fruErrorManagerReqFPCReset(93),    -- Error manager requested FPC reset.
 ```
-
 fruIncompatibleWithPEM(94),        -- FRU incompatible with power supply
 
 fruIncompatibleWithSIB(95),        -- FRU incompatible with SIB
@@ -254,16 +244,9 @@ fruFpcPEMIncompatible(100),        -- FPC incompatible with PEMs
 
 ```text
 mixedSwitchFabric(101),            -- Mixed Switch Fabric error
-```
-
-```text
 unsupportedFabric(102),            -- unsupported Fabric error
-```
-
-```text
 jamConfigError(103),              -- JAM configuration error
 ```
-
 fruFpcHFanTrayIncompatible(104),  -- FPC incompatible with Horizontal FAN-TRAYs
 
 gnfIsOffline(105),                -- GNF is Offline
@@ -276,12 +259,8 @@ fruInvalidConfig(108),            -- FRU invalid configuration
 
 ```text
 katsPostError(109),                -- KATS post error
-```
-
-```text
 katsRuntimeError(110),            -- KATS run time error
 ```
-
 gnfInitRestart(111),              -- GNF has initiated FPC restart
 
 gnfOverlapMac(112),                -- MAC address overlap detected between GNFs

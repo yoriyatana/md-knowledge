@@ -9,7 +9,6 @@ Query 1
 ```text
 > Could you more explain, offload traffic? I don’t understand your term in the case. If can, tell me some ways how to do this.
 ```
-
 JTAC: Move few interfaces out of MPC4E to another line card (MPC6E / MPC9E) where memory is available would be the first step (to reduce NH). There are many ways and we recommend reaching out to accounts team for such design related queries on how to manager your device better to reduce the load on few FPCs.
 
 Query 2
@@ -48,12 +47,8 @@ I have 2 queries for you.
 
 ```text
 > Could you more explain, offload traffic? I don’t understand your term in the case. If can, tell me some ways how to do this.
-```
-
-```text
 More query:
 ```
-
 I have a bit confuse here. As I caculator about memory table, when I show the command "show jnh 0 pool usage" the total value is 38M while MPC4E is 32M
 
 ![](image/170b341d5882683062b2c9cd522d1a85.jpg)

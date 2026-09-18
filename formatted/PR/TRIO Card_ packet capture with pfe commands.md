@@ -13,7 +13,6 @@ Trio based cards offer a lot of interesting shell commands. I found a set of com
 ```text
 Packet capture is done at PFE level and provided dump of packets in transmit direction. But you have 2 copies of a packet, the first one is the packet received from the fabric (ingress packet without any egress manipulation).
 ```
-
 The second one is the packet just before it being transmitted (after adding L2 header,  MPLS/DOT1q swap, push, pop operation, CoS rewriting and so one).
 
 Since the 11.4R5 release the packet capture commands allow to filter traffic before capturing it (really useful).
@@ -41,7 +40,6 @@ start shell pfe network fpcX
 ```text
 test jnh  packet-via-dmem enable
 ```
-
 - --
 
 is optional. I never tuned it and always used the default configuration.
@@ -53,7 +51,6 @@ is optional. I never tuned it and always used the default configuration.
 ```text
 Jan 11 15:16:11  ncdib101 fpc4 LUCHIP(1) PPE\_7 Errors lmem addr error
 ```
-
 In my previous example I would like to filter a specific L2VPN traffic. So I filtered on the L2VPN value ()
 
 - --
@@ -61,7 +58,6 @@ In my previous example I would like to filter a specific L2VPN traffic. So I fil
 ```text
 test jnh 1 packet-via-dmem capture **0x3** 1fc949
 ```
-
 - --
 
 0x3 means capture m2l pkt and pkt\_head
@@ -77,7 +73,6 @@ NPC8(ncidf201 vty)# test jnh 1 packet-via-dmem dump
 ```text
 *Received** 130 byte parcel:
 ```
-
 Dispatch cookie: 0x0082000000000000
 
 0x00 0x06 0x0a 0x88 0xe0 0x08 0x00 0x00
@@ -153,7 +148,6 @@ Dispatch cookie: 0x0082000000000000
 ```text
 Received parcel is the packet received from the fabric without the L2 header. So you have to remove some bytes which are Parsel header (I don’t know the meaning
 ```
-
 ![](http://fdata.over-blog.com/pics/smiles/icon_biggrin.gif)
 
 ).  After many tests I've deduced that you have to remove the first 16 bytes for MPLS traffic and 20 bytes for IP traffic. After that you have your packet. In my previous capture that is MPLS traffic:
@@ -221,7 +215,6 @@ etc.
 ```text
 test jnh  packet-via-dmem disable
 ```
-
 - --
 
 David.

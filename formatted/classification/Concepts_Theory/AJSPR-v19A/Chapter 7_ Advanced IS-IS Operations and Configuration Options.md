@@ -13,7 +13,6 @@ Level 1 link-state PDUs (LSPs) are generated within each area. Because these LSP
 The L1/L2 router at the edge of the area places the routing information contained within the LSP into a Level 2 LSP and forwards it across the area boundary.
 All Level 2 LSPs are flooded across every contiguous Level 2 area. This flooding results in Level 2 LSPs within every area that represents all IS-IS routes.
 ```
-
 Shortest-Path-First Algorithm
 
 - Based on the Dijkstra algorithm
@@ -42,7 +41,6 @@ Controlling SPF Calculations
 ```text
 user@router# **show spf-options ?**
 ```
-
 Possible completions:
 
 delay                                Time to wait before running an SPF (50..1000 milliseconds)
@@ -61,7 +59,6 @@ rapid-runs                          Number ot rapid SP
 ```text
 user@router# set spf-delay 100
 ```
-
 Partial Route Calculation
 
 - Full SPF calculation is run in two stages:
@@ -74,7 +71,6 @@ Partial Route Calculation
 ```text
 Received LSPs are examined for changes
 ```
-
 - Automatically enabled and cannot be disabled
 
 IS-IS Wide Metrics
@@ -105,7 +101,6 @@ IS-IS Wide Metrics
 ```text
 user@router# **set level 2 wide-metrics-only**
 ```
-
 - The default operation of IS-IS is to advertise both the small and wide metric TLVs in all LSPs
 
 IS-IS Authentication
@@ -136,7 +131,6 @@ Authentication Configuration
 ```text
 Link-state, sequence number, and hello
 ```
-
 - Per-interface authentication affects hello PDUs only and takes precedence over per-level settings
 
 ![](image/59a41de793f71dd13050349a2bad46c0.png)
@@ -173,7 +167,6 @@ Mesh Groups
 ```text
 Only LSPs received from outside the group membership are flooded within the group.
 ```
-
 ![](image/108a9786a38d7447408cdc9aa03467b0.png)
 
 * *Mesh Group Configuration**
@@ -189,7 +182,6 @@ Only LSPs received from outside the group membership are flooded within the grou
 ```text
 user@router# show
 ```
-
 interface ge-0/0/1.0 {
 
 mesh-group blocked;
@@ -269,7 +261,6 @@ Prefix Limits for External Routes
 External routing information no longer transmitted in LSPs
 Overload state initiated
 ```
-
 - Requires a manual step to fix the problem
 
 [edit protocols isis]
@@ -277,7 +268,6 @@ Overload state initiated
 ```text
 user@router# show
 ```
-
 level 1 {
 
 prefix-export-limit 400;

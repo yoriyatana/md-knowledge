@@ -19,7 +19,6 @@ Alarm time               Class  Description
 ```text
 2020-11-28 10:09:11 CAT  Major  FPC 1 Major Errors - HSL2 Error code: 0x200001
 ```
-
 - --
 
 Các bước xử lý
@@ -34,7 +33,6 @@ Kiểm tra sơ bộ
 ```text
 >>> Tất cả các S/N hết services
 ```
-
 - Health check thiết bị dựa trên RSI
 
 - CPU (2%), MEM(8%), TEMP (35C) không có bất thường, system boot (93 ngày)
@@ -50,7 +48,6 @@ Slot 0:
 ```text
 Current state                  Master
 ```
-
 Election priority              Master
 
 Temperature                 43 degrees C / 109 degrees F
@@ -122,7 +119,6 @@ Last reboot reason             Router rebooted after a normal shutd
 ```text
 Load averages:                 1 minute   5 minute  15 minute
 ```
-
 0. 17       0.20       0.21
 
 Routing Engine status:
@@ -132,7 +128,6 @@ Slot 1:
 ```text
 Current state                  Backup
 ```
-
 Election priority              Backup
 
 Temperature                 42 degrees C / 107 degrees F
@@ -168,7 +163,6 @@ Last reboot reason             Router rebooted after a normal shutd
 ```text
 Load averages:                 1 minute   5 minute  15 minute
 ```
-
 0. 20       0.20       0.17
 
 - Không có process chiếm CPU
@@ -183,16 +177,9 @@ last pid: 20561;  load averages:  0.31,  0.23,  0.22  up 468+22:55:15�
 
 ```text
 Mem: 68M Active, 2350M Inact, 911M Wired, 1674M Buf, 12G Free
-```
-
-```text
 Swap: 8192M Total, 8192M Free
-```
-
-```text
 PID USERNAME PRI NICE   SIZE    RES STATE   C   TIME    WCPU COMMAND
 ```
-
 10 root     155 ki31     0K    64K CPU1    1    ??? 100.00% idle{idle: cpu1}
 
 10 root     155 ki31     0K    64K CPU3    3    ??? 100.00% idle{idle: cpu3}
@@ -232,7 +219,6 @@ devfs                   1.0K       1.0K       �
 ```text
 show version detail no-forwarding
 ```
-
 {master}
 
 vietpn@PR02.TET040\_RE0> show version invoke-on all-routing-engines | match "re0|re1|junos:"
@@ -246,7 +232,6 @@ Hostname: PR02.TET040\_RE0
 ```text
 Junos: 17.3R3-S8.1
 ```
-
 re1:
 
 - -------------------------------------------------------------------------
@@ -256,7 +241,6 @@ Hostname: PR02.TET040\_RE1
 ```text
 Junos: 17.3R3-S8.1
 ```
-
 - Không phát sinh core-dump
 
 {master}
@@ -282,7 +266,6 @@ total files: 2
 ```text
 Show chasssis fpc detail <<< không bất tường
 ```
-
 root@ME\_PR01.GAZ020\_RE0> show chassis fpc detail
 
 Slot 0 information:
@@ -290,7 +273,6 @@ Slot 0 information:
 ```text
 State                               Online
 ```
-
 Temperature                      32 degrees C / 89 degrees F
 
 Total CPU DRAM                 2048 MB
@@ -310,7 +292,6 @@ Slot 1 information:
 ```text
 State                               Online
 ```
-
 Temperature                      31 degrees C / 87 degrees F
 
 Total CPU DRAM                 2048 MB
@@ -330,7 +311,6 @@ Slot 2 information:
 ```text
 State                               Online
 ```
-
 Temperature                      31 degrees C / 87 degrees F
 
 Total CPU DRAM                 2048 MB
@@ -350,7 +330,6 @@ Slot 3 information:
 ```text
 State                               Online
 ```
-
 Temperature                      31 degrees C / 87 degrees F
 
 Total CPU DRAM                 2048 MB
@@ -370,7 +349,6 @@ Slot 4 information:
 ```text
 State                               Online
 ```
-
 Temperature                      31 degrees C / 87 degrees F
 
 Total CPU DRAM                 2048 MB
@@ -388,7 +366,6 @@ Max power consumption            227 Watts
 ```text
 show route summary <<< route không nhiều
 ```
-
 root@ME\_PR01.GAZ020\_RE0> show route summary
 
 Autonomous system number: 37342
@@ -397,32 +374,13 @@ Router ID: 10.250.64.5
 
 ```text
 inet.0: 2245 destinations, 2566 routes (2238 active, 0 holddown, 7 hidden)
-```
-
-```text
 Direct:     24 routes,     24 active
-```
-
-```text
 Local:     24 routes,     24 active
-```
-
-```text
 OSPF:   1835 routes,   1831 active
-```
-
-```text
 BGP:    674 routes,    357 active
-```
-
-```text
 RSVP:      8 routes,      1 active
-```
-
-```text
 LDP:      1 routes,      1 active
 ```
-
 - Log messages bị trôi
 - Log interactive-commands <<< chưa check
 - Log chassisd <<< chưa check
@@ -431,206 +389,67 @@ Thu thập các thông tin liên quan
 
 ```text
 request support information | no-more | save /var/log/RSI\_PR02.TET040\_20211222
-```
-
-```text
 file archive source /var/log/\* destination /var/log/LOG\_PR02.TET040\_20211222
-```
-
-```text
 > show version invoke-on all-routing-engines | match "re0|re1|Junos:"
-```
-
-```text
 > show chassis alarms
-```
-
-```text
 > show system alarms
-```
-
-```text
 > show system core-dumps
-```
-
-```text
 > show chassis routing-engine | no-more
-```
-
-```text
 > show chassis routing-engine | match "Slot|State|Start"
-```
-
-```text
 show chassis environment cb | no-more
-```
-
-```text
 show chassis environment cb | match "CB|State"
-```
-
-```text
 show log messages | no-more
-```
-
-```text
 show log messages.0.gz  | no-more
-```
-
-```text
 show log messages.1.gz | no-more
-```
-
-```text
 show log messages.2.gz | no-more
-```
-
-```text
 show log messages.3.gz | no-more
-```
-
-```text
 show log chassisd | no-more
-```
-
-```text
 show log chassisd .0.gz | no-more
-```
-
-```text
 show log chassisd.1.gz | no-more
-```
-
-```text
 show log chassisd.2.gz | no-more
-```
-
-```text
 show log chassisd.3.gz | no-more
 ```
-
 ## Regarding to FPC
 
 ```text
 show chassis hardware | no-more
-```
-
-```text
 show chassis alarm
-```
-
-```text
 show version
-```
-
-```text
 show chassis fpc | no-more
-```
-
-```text
 show chassis fpc pic-status | no-more
-```
-
-```text
 show chassis fpc errors | no-more
-```
-
-```text
 show chassis fabric fpcs  | no-more
-```
-
-```text
 show chassis fabric plane  | no-more
-```
-
-```text
 show chassis fabric summary  | no-more
-```
-
-```text
 show chassis fabric map | no-more
-```
-
-```text
 show chassis fabric plane-location | no-more
-```
-
-```text
 show chassis fabric destinations | no-more
-```
-
-```text
 show system resource-monitor fpc
-```
-
-```text
 show pfe statistics traffic  | no-more
-```
-
-```text
 show pfe statistics traffic detail  | no-more
-```
-
-```text
 show pfe statistics error | no-more
 ```
-
 ### PFE level information
 
 ```text
 request pfe execute command "show syslog messages" target fpc1   | no-more
-```
-
-```text
 request pfe execute command "show nvram" target fpc1   | no-more
-```
-
-```text
 request pfe execute command "show ttp statistics" target fpc1  | no-more
-```
-
-```text
 request pfe execute command "show hsl2 statistics" target fpc1  | no-more
-```
-
-```text
 request pfe execute command "show hsl2 statistics crc" target fpc1  | no-more
-```
-
-```text
 request pfe execute command "show cmerror module" target fpc1  | no-more
-```
-
-```text
 request pfe execute command "show sched" target fpc1  | no-more
-```
-
-```text
 request pfe execute command "show threads cpu" target fpc1  | no-more
-```
-
-```text
 request pfe execute command "show jnh 0 exceptions" target fpc1  | no-more
 ```
-
 ### show hsl2 statistics
 
 ```text
 request pfe execute command "show cmerror level" target fpc1  | no-more
-```
-
-```text
 request pfe execute command "show cmerror module brief" target fpc1  | no-more
-```
-
-```text
 request pfe execute command "show cmerror module " target fpc1 <<<< replace with the id collected from above command where you see the errors
-```
-
-```text
 request pfe execute command "show cmerror statistics" target fpc1 | no-more
 ```
-
 Kiểm tra các case cũ, google với alarm phát sinh
 
 - Ghi nhận giống alarm trên dòng EX có case ID 2021-0401-0787
@@ -642,7 +461,6 @@ restart lại FPC có cảnh báo
 reseat lại FPC có cảnh báo
 Thay thế vật tư dự phòng
 ```
-
 Xử lý trên thiết bị
 
 - Thu thập baseline
@@ -651,194 +469,78 @@ Xử lý trên thiết bị
 
 ```text
 > set cli timestamp
-```
-
-```text
 > show configuration | no-more
-```
-
-```text
 > request support information | no-more
 ```
-
 /\* Lưu thông tin alarm/core \*/
 
 ```text
 > show system alarms
-```
-
-```text
 > show chassis alarms
-```
-
-```text
 > show system core-dumps
 ```
-
 /\* Lưu thông tin về IGP \*/
 
 ```text
 > show ospf interface | no-more
-```
-
-```text
 > show ospf interface | count
-```
-
-```text
 > show ospf neighbor instance all | no-more
-```
-
-```text
 > show ospf3 interface | no-more
-```
-
-```text
 > show ospf3 interface | count
-```
-
-```text
 > show ospf3 neighbor instance all | no-more
 ```
-
 /\* Lưu thông tin về MPLS/LDP/RSVP \*/
 
 ```text
 > show mpls interface | no-more
-```
-
-```text
 > show mpls interface | count
-```
-
-```text
 > show ldp interface | no-more
-```
-
-```text
 > show ldp interface | count
-```
-
-```text
 > show rsvp interface | no-more
-```
-
-```text
 > show rsvp interface | count
-```
-
-```text
 > show ldp neighbor | no-more
-```
-
-```text
 > show ldp neighbor | count
-```
-
-```text
 > show ldp session | no-more
-```
-
-```text
 > show ldp session | count
-```
-
-```text
 > show rsvp session | no-more
-```
-
-```text
 > show rsvp session | count
-```
-
-```text
 > show mpls lsp | no-more
 ```
-
 /\* Lưu thông tin về BGP \*/
 
 ```text
 > shwo bgp sum | no-more
-```
-
-```text
 show bgp summary | match Establ | count
-```
-
-```text
 > show bgp neighbor | no-more
-```
-
-```text
 > show route summary | no-more
-```
-
-```text
 > show bfd session detail | no-more
 ```
-
 /\* Lưu thông tin VRRP/L2VPN/VPLS/LLDP/BFD \*/
 
 ```text
 > show vrrp | no-more
-```
-
-```text
 > show l2circuit connections | no-more
-```
-
-```text
 > show vpls connections | no-more
-```
-
-```text
 > show vpls mac-table | no-more
-```
-
-```text
 > show lldp neighbors | no-more
-```
-
-```text
 > show bfd session detail | no-more
 ```
-
 /\* Lưu thông tin hardware/fabric/fpc \*/
 
 ```text
 > show chassis hardware | no-more
-```
-
-```text
 > show chassis fabric fpcs | no-more
-```
-
-```text
 > show chassis fabric summary extended | no-more
-```
-
-```text
 > show chassis fabric plane | no-more
 ```
-
 /\* Lưu thông tin đồng bộ GRES and NSR - KB32931  \*/
 
 ```text
 > show system switchover /\* Show on Backup RE – GRES Readiness Check \*/
-```
-
-```text
 > show task replication  /\* Show on Master RE – RPD Synchronization Check \*/
-```
-
-```text
 > show database-replication summary /\* Show on Master RE – For BNG only \*/
-```
-
-```text
 > show system subscriber-management summary
 ```
-
 - Tiến hành reseat FPC1
 
 ### Thực hiện restart lại FPC1
@@ -846,7 +548,6 @@ show bgp summary | match Establ | count
 ```text
 request chassis fpc slot 1 restart
 ```
-
 * *### Sau khi FPC1 restart và online trở lại thì dịch vụ đã phục hồi, không phát sinh ngoài kế hoạch**
 
 Kết quả xử lý trên thiết bị

@@ -23,7 +23,6 @@
 >
 > L3VPN lets you connect different areas (acting as a superbackbone 'area 0')
 ```
-
 First thing is while the L3VPN fabric acts as an OSPF superbackbone and has some analogies to area 0, it's more akin in practice to a standard inter-AS interconnect. AKA, by default, there would little difference in a scenario where no L3VPN was used and the PEs were simply redistributing OSPF into BGP and the inverse.
 
 The route tables and OSPF database would be near identical, albeit it not being a VPN. This is because in either scenario it's still standard redistribution. The only difference is with L3VPN is it provides more control on the OSPF LSDB when routes are redistributed so the proper LSAs are created.
@@ -35,33 +34,23 @@ Essentially, while it lets you connect different areas and type that are not nor
 ```text
 > \*Initially I jumped on changing the domain-id however not sure it is required....The 'DOWN' bit (Junos calls this DN bit ), also the domain-id (which is different to the DN bit) and finally automatic tagging. (Junos does it for us but you can see it doing it).
 ```
-
 Correct, there are 3 primary mechanisms that are used with L3VPN and OSPF. Each are independent and used simultaneously. There are actually a few more knobs that really let you incorporate overly complex designs too.
 
 ```text
 > DOWN BIT:
 ```
-
 This is simply a loop prevention for redistribution, very important when backdoors are involved. When the PE redistributes the VPN BGP prefix into OSPF, it sets the DN bit flag so that there is not potential of the remote PE from redistributing it again. Type-3/5/7 LSAs support this bit.
 
 ```text
 > VPN Tag:
-```
-
-```text
 If the DN bit is not supported on the device, you can use the VPN Tag instead. This is essentially a fallback when DN bit cannot be used reliably and has the purpose/use.
-```
-
-```text
 > Domain ID community:
 ```
-
 This is probably the most important when it comes to dealing with different areas or route manipulation. This simple tag ensure routes are redistributed with the correct LSA types. Summed up to if the domain-ids match, it's treated as a Type-3, else it's a Type-5.
 
 ```text
 > IE: we are using the L3VPN as an induced Superbackbone to seperate the non (NSSA) compatible areas.
 ```
-
 So back to the primary scenario. By default (with proper export configurations), this should work for the most part but there may be instances on the CE side in their OSPF LSDB that would result in non-optimal routing or blackholing of traffic.
 
 Again, remember that the key is the PE's are simply constructing their LSAs to build an LSDB. It's uses the BGP redistributed routes for this and when it comes to routing traffic only the BGP routes are used. The PEs are basically advertising this "pseudo" network.
@@ -95,7 +84,6 @@ domain-vpn-tag 0; or no-domain-vpn-tag; ->> lệnh này tắt DN bit và set vpn
 ```text
 >- có tác dụng với LSA Type 5
 ```
-
 For Type 3 summary LSAs, routing loops are not a concern because the hub CE router, as an area border router (ABR), reoriginates the LSAs with the DN bit clear and sends them back to the hub PE router. However, the hub CE router does not reoriginate external LSAs, because they have an AS flooding scope.
 
 - --
@@ -106,12 +94,8 @@ Khi sử dụng vrf-import/export thì extended community rte-type không đư
 
 ```text
 >>> Khi sử dụng vrf-import/export thì tất cả route sẽ được remote PE được xem là external (do không có rte-type)
-```
-
-```text
 >>> Khi sử dụng vrf-target thì route LSA T 1,2,3 sẽ được remote PE adv theo LSA type 3 (tái tạo từ rte-type)
 ```
-
 - --
 
 To get these routes advertised as hub-routes to spoke sites, I have 2 options:
@@ -197,7 +181,6 @@ The default behavior of an OSPF domain ID causes some problems for hub-and-spoke
 ```text
 The hub CE router typically aggregates these routes, and then sends these newly originated LSAs back to the hub PE router. The hub PE router exports the BGP updates to the remote spoke PE routers containing the aggregated prefixes. However, if there are nonaggregated Type 3 summary LSAs or external LSAs, two issues arise with regard to how the hub PE router originates and sends LSAs to the hub CE router, and how the hub PE router processes LSAs received from the hub CE router:
 ```
-
 - By default, all LSAs originated by the hub PE router in the spoke routing instance have the DN bit set. Also, all externally originated LSAs have the VPN route tag set. These settings help prevent routing loops. For Type 3 summary LSAs, routing loops are not a concern because the hub CE router, as an area border router (ABR), reoriginates the LSAs with the DN bit clear and sends them back to the hub PE router. However, the hub CE router does not reoriginate external LSAs, because they have an AS flooding scope.
 
   You can originate the external LSAs (before sending them to the hub CE router) with the DN bit clear and the VPN route tag set to 0 by altering the hub PE router’s routing instance configuration. To clear the DN bit and set the VPN route tag to zero on external LSAs originated by a PE router, configure 0 for the domain-vpn-tag statement at the [edit routing-instances routing-instance-name protocols ospf] hierarchy level. You should include this configuration in the routing instance on the hub PE router facing the hub CE router where the LSAs are sent. When the hub CE router receives external LSAs from the hub PE router and then forwards them back to the hub PE router, the hub PE router can use the LSAs in its OSPF route calculation.

@@ -88,7 +88,6 @@ linh.ntd@HCM001PER02\_RE0> ping routing-instance NMS 172.20.254.14 source 172.20
 ```text
 PING 172.20.254.14 (172.20.254.14): 1617 data bytes
 ```
-
 ^C
 
 - -- 172.20.254.14 ping statistics ---
@@ -96,7 +95,6 @@ PING 172.20.254.14 (172.20.254.14): 1617 data bytes
 ```text
 2 packets transmitted, 0 packets received, 100% packet loss
 ```
-
 {master}
 
 linh.ntd@HCM001PER02\_RE0> ping routing-instance NMS 172.20.254.14 source 172.20.254.13 size 1616 do-not-fragment
@@ -104,7 +102,6 @@ linh.ntd@HCM001PER02\_RE0> ping routing-instance NMS 172.20.254.14 source 172.20
 ```text
 PING 172.20.254.14 (172.20.254.14): 1616 data bytes
 ```
-
 1624 bytes from 172.20.254.14: icmp\_seq=0 ttl=255 time=2.053 ms
 
 1624 bytes from 172.20.254.14: icmp\_seq=1 ttl=255 time=1.900 ms
@@ -122,7 +119,6 @@ PING 172.20.254.14 (172.20.254.14): 1616 data bytes
 ```text
 5 packets transmitted, 5 packets received, 0% packet loss
 ```
-
 round-trip min/avg/max/stddev = 1.900/2.049/2.189/0.093 ms
 
 - Khi ping gói tin lớp hơn MTU 1644 thì ghi nhận gói tin đã gởi ra khỏi cổng thiết bị Juniper MX960 nhưng không nhận được lại phản hồi.

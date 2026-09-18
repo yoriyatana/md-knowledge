@@ -27,7 +27,6 @@ Idx PFE ASIC PPE Ctx Zn   Pending     IDX/Steps/Total  FLAG  CURR\_PC  
 ```text
 3/. As you said it hit the number limitation of ttrace so it caused FPC to raise the major alarm "Major alarm set, FPC 0 Major Errors - Lkup Error code: 0x40008". Could you please explain the logic on this point?
 ```
-
 [JTAC] I will check this and get back once I have more details on this.
 
 4/. Is there any potential risk if we execute "bringup ttrace  delete <<<<< delete all the historic ttrace."?

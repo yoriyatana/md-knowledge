@@ -13,7 +13,6 @@ lowAddress: 192.0.2.1
 highAddress: 190.0.2.4
 Nếu 192.0.2.2 là địa chỉ vừa được cấp phát, thì nextAddress: 192.0.2.3
 ```
-
 Cách cấp phát liên tục (mặc định) để tìm ra IP address trống dùng cấp cho thuê bao:
 
 - Ví dụ: dãy địa chỉ IP đang được cấu hình gồm 4 dãy là A, B, C, và D. Dãy địa chỉ vừa được cấp phát là C.

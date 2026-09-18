@@ -17,112 +17,45 @@ Config loggging
 
 ```text
 show processes cpu sorted
-```
-
-```text
 show hardware
-```
-
-```text
 show inventory
-```
-
-```text
 show lldp neighbors
-```
-
-```text
 show lldp interface
-```
-
-```text
 show spanning-tree
-```
-
-```text
 show vlan
-```
-
-```text
 show mac address-table
-```
-
-```text
 show arp
 ```
-
 ### Check port status
 
 ```text
 show interface status
-```
-
-```text
 show ip interface brief
-```
-
-```text
 show interface summary
-```
-
-```text
 show interface
 ```
-
 sho int transceiver detail
 
 ### General
 
 ```text
 show ip protocols
-```
-
-```text
 show ip route summary
-```
-
-```text
 show snmp group
-```
-
-```text
 show snmp view
-```
-
-```text
 show snmp community
 ```
-
 ### OSPF
 
 ```text
 show ip ospf neighbor
-```
-
-```text
 show ip ospf interface
-```
-
-```text
 show ip ospf database self-originate
-```
-
-```text
 show ip ospf statistics
-```
-
-```text
 show ip ospf traffic
-```
-
-```text
 show ip ospf rib
-```
-
-```text
 show ip route ospf
 ```
-
 ### End
 
 terminal length 24
@@ -137,32 +70,13 @@ sh swi
 
 ```text
 show stackwise-virtual
-```
-
-```text
 show stackwise-virtual dual-active-detection
-```
-
-```text
 show switch
-```
-
-```text
 show redundancy switchover
-```
-
-```text
 show boot
-```
-
-```text
 show version
-```
-
-```text
 show redundancy
 ```
-
 - --
 
 * *If the active goes down and comes back up, do we preempt? Aka switch old-active back to active role?**
@@ -174,7 +88,6 @@ NDNA-Switch\_Switch-9300-1#sh switch stack-mode
 ```text
 Switch#  Role    Mac Address     Version   Mode  Configured  State
 ```
-
 - ----------------------------------------------------------------------------------------
 
 1      Member   706b.b929.f700    V01     1+1     Active     Ready
@@ -198,13 +111,11 @@ NDNA-Switch\_Switch-9300-1#
 ```text
 \*Jun 10 11:40:53.060: %RF-5-RF\_TERMINAL\_STATE: Terminal state reached for (SSO)
 ```
-
 NDNA-Switch\_Switch-9300-1#sh switch stack-mode
 
 ```text
 Switch# Role Mac Address Version Mode Configured State
 ```
-
 - ------------------------------------------------------------------------
 
 1 Standby 706b.b929.f700 V01 1+1 Active Ready

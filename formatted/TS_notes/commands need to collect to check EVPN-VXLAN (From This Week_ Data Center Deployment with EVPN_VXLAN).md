@@ -11,181 +11,70 @@ Underlay
 ```text
 jnpr@LEAF-1> show route table inet.0 | match “10.1.1.[1-6]/32”
 ```
-
 Overlay (Data Plane – VXLAN)
 
 ```text
 jnpr@LEAF-1> show interfaces vtep
-```
-
-```text
 jnpr@LEAF-1> show route table :vxlan.inet.0
-```
-
-```text
 jnpr@LEAF-1> show route forwarding-table table default-switch extensive
-```
-
-```text
 jnpr@LEAF-1> show ethernet-switching vxlan-tunnel-end-point source
-```
-
-```text
 jnpr@LEAF-1> show ethernet-switching vxlan-tunnel-end-point remote
 ```
-
 Overlay (Control Plane – EVPN)
 
 IBGP sessions are established between all leaf nodes with only the “evpn” NLRI.
 
 ```text
 jnpr@LEAF-1> show bgp summary
-```
-
-```text
 jnpr@LEAF-1> show bgp neighbor 10.1.1.2 | match NLRI
-```
-
-```text
 jnpr@LEAF-1> show bfd session
 ```
-
 Verify exchange of Ethernet Segment (Type 4) routes used for ES Discovery to enable multihoming, DF Election, and Split Horizon/Local Bias.
 
 ```text
 jnpr@LEAF-1> show route instance \_\_default\_evpn\_\_ detail
-```
-
-```text
 jnpr@LEAF-1> show policy \_\_vrf-import-\_\_default\_evpn\_\_-internal\_\_
-```
-
-```text
 jnpr@LEAF-1> show route community-name \_\_vrf-community-\_\_default\_evpn\_\_-import-internal\_\_
-```
-
-```text
 jnpr@LEAF-1> show route table bgp.evpn.0 extensive | find ^4:
-```
-
-```text
 jnpr@LEAF-1> show evpn instance designated-forwarder esi 00:11:11:11:11:11:11:11:11:11
-```
-
-```text
 jnpr@LEAF-1> show evpn instance backup-forwarder esi 00:11:11:11:11:11:11:11:11:11
-```
-
-```text
 jnpr@LEAF-1> show evpn instance extensive
 ```
-
 Now let’s verify exchange of Inclusive Multicast (Type 3) routes from each peer.
 
 ```text
 jnpr@LEAF-1> show route table bgp.evpn.0 | match ^3:
-```
-
-```text
 jnpr@LEAF-1> show route table bgp.evpn.0 extensive
-```
-
-```text
 jnpr@LEAF-1> show interfaces extensive vtep | match “vxlan endpoint|logical interface”
-```
-
-```text
 jnpr@LEAF-1> show ethernet-switching flood vlan-name bd5010 extensive
-```
-
-```text
 jnpr@LEAF-1> show ethernet-switching flood vlan-name bd5020 extensive
 ```
-
 Verify exchange of Ethernet AutoDiscovery (Type 1) routes (Per ES and Per EVI) used for Aliasing and MAC Mass Withdraw
 
 ```text
 jnpr@LEAF-1> show route table bgp.evpn.0 | match ^1:
-```
-
-```text
 jnpr@LEAF-1> show route table bgp.evpn.0 extensive
-```
-
-```text
 jnpr@LEAF-2> show evpn database extensive mac-address 00:00:1e:63:c8:7c
-```
-
-```text
 jnpr@LEAF-1> show route table bgp.evpn.0 evpn-mac-address 00:00:1e:63:c8:7c
-```
-
-```text
 jnpr@LEAF-3> show ethernet-switching table 00:00:1e:63:c8:7c
-```
-
-```text
 jnpr@LEAF-3> show ethernet-switching vxlan-tunnel-end-point esi
-```
-
-```text
 jnpr@LEAF-3> show route table bgp.evpn.0 | match 00:00:d4:37 | except ::100 | count
-```
-
-```text
 jnpr@LEAF-3> show route table bgp.evpn.0 | match “00:00:d4:37”
-```
-
-```text
 jnpr@LEAF-3> show evpn database extensive
-```
-
-```text
 jnpr@LEAF-3> show route forwarding-table table default-switch | match 00:00:d4:37
-```
-
-```text
 jnpr@LEAF-3> show log evpn-trace.log
-```
-
-```text
 jnpr@LEAF-3> show route table bgp.evpn.0 | match ^1:10.1.1.2 | match 111
-```
-
-```text
 jnpr@LEAF-3> show log evpn-trace
-```
-
-```text
 jnpr@LEAF-3> show route table bgp.evpn.0 | match ^1:10.1.1.2 | match 111
-```
-
-```text
 jnpr@LEAF-3> show route forwarding-table table default-switch | match 00:00:d4:37
-```
-
-```text
 jnpr@LEAF-1> show route advertising-protocol bgp 10.1.1.3 extensive
-```
-
-```text
 jnpr@LEAF-1> show evpn instance extensive
-```
-
-```text
 jnpr@LEAF-1> show ethernet-switching table
-```
-
-```text
 jnpr@LEAF-1> show ethernet-switching vxlan-tunnel-end-point esi
 ```
-
 - --
 
 ```text
 jnpr@Leaf-2> show evpn database extensive mac-address 00:00:1e:63:c8:7c
-```
-
-```text
 jnpr@Leaf-2> show ethernet-switching table vlan-id 10 00:00:1e:63:c8:7c
 ```

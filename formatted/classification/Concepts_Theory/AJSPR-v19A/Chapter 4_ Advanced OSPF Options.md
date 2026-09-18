@@ -108,7 +108,6 @@ The prefix-export-limit command informs the router how many routes to accept fr
 Once the route limit is reached, the router transitions into an overload state.
 Additionally, all Type 5 LSAs from the router are purged from the database and the network.
 ```
-
 OSPF Mutual Redistribution
 
 - Mutual redistribution

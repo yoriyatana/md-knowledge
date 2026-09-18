@@ -95,7 +95,6 @@ There are four types of BFD sessions based on the source from which BFD packets 
 run the **show bfd sessions extensive** command
 And look for Remote is control-plane independent in the command output.
 ```
-
 - For distributed BFD to work, you need to configure the lo0 interface with unit 0 and the appropriate family.
 
 # set interfaces lo0 unit 0 family inet
@@ -191,7 +190,6 @@ PR 1298369 [single-source-commit] - inline-bfd on irb will be broken after NSR s
 ```text
 Responsible for establish the sessions initiated by PPMD from RE execute all periodic packet processing events. absorb all packets and forward unabsorbed packets to the clients receive packets from clients and forward them out inform ppmd on RE if there are session flaps ppm data thread processes the received packets
 ```
-
 ![](../../assets/concepts/ebc3350650-0cadf6b35a39d6eba7587d87de124e1b.png)![](../../assets/concepts/838b8f56fe-754ab35408643a6c5a196a9bfbc5fac6.png)![](../../assets/concepts/1930fe6969-bd2b178fb52ba7d4e0175b25c7da9461.png)![](../../assets/concepts/2b2b43aaf4-058f2558addaf8e0da51baf851eed836.png)
 
 ![](../../assets/concepts/0c325cfdff-f5f99722918393d06a1b15f1f4af1435.png)![](../../assets/concepts/aac8f726e5-7a2189eaab66e6fc9f9ab88ed341e571.png)
@@ -265,7 +263,6 @@ multiplier 3;
 ```text
 [ June 21, 2023 20:55 ] ⁨Hung Le⁩: When panic is triggered on anchor fpc(or reboot), down event is sent to non-anchor fpcs. Non-anchor fpcs set the pfe bfd session state to "down". When anchor fpc comes up, as part of pfe bfd session obj creation, session status is set to "up" locally. Ppman sends "bfd up" event to pfeman. But it is ignored as the status is already up(set by pfeman as part of init, done to avoid unwanted processing). So pfeman does not send session "up" event to other fpcs. Due to this session status remains down at non-anchor fpc even though bfd session is up.
 ```
-
 [ June 21, 2023 20:55 ] ⁨Hung Le⁩: viec keep session id cua bfd la do phat trien tinh nang bfd session dc frr qua lsp
 
 [ June 21, 2023 20:56 ] ⁨Hung Le⁩: khi phat trien rli cho tinh nang nay thi bfd frr default lun duoc enable
@@ -317,7 +314,6 @@ Detect   Transmit
 ```text
 Address                  State     Interface      Time     Interval  Multiplier
 ```
-
 81. 201.103.92            Up        ae55.0         0.150     0.050        3
 
 Client OSPF realm ospf-v2 Area 0.0.0.0, TX interval 0.050, RX interval 0.050
@@ -329,7 +325,6 @@ Local diagnostic None, remote diagnostic None
 ```text
 Remote state Up, version 1
 ```
-
 Session type: Single hop BFD
 
 Min async interval 0.050, min slow interval 1.000
@@ -431,7 +426,6 @@ Enhancements to BFD-triggered FRR for unicast next hops and forwarding-table ses
 ```text
 >>>>>>>>>>>>>>>>>>>>>>>
 ```
-
 [ June 21, 2023 20:36 ] ⁨Hung Le⁩: If FPC0 PFE0 has the AE membership port, FPC1 also has the AE membership port:
 
 - PFE0 disabe can cause max weight on both FPCs.
@@ -445,7 +439,6 @@ If FPC0 PFE0 doesn't have the AE membership port, and FPC1 also has the AE membe
 ```text
 PFE0 disable will \*not\* cause the max weight issue, even the BFD remains in Down state and BFD session ID remains in Down state on FPC.
 ```
-
 - Issue is not seen in this scenario - I can't explain the reason.
 
 If FPC0 PFE0 doesn't have the AE membership port, and FPC0 PFEx have the membership port:

@@ -33,7 +33,6 @@ Junos 18
 ```text
 Multipath optimization to improve RIB learning rate (performance)
 ```
-
 Junos 19.1/19.2/19.3
 
 - None
@@ -61,7 +60,6 @@ Sơ bộ:
 ```text
 >>>>  Do vậy anh tạm đề nghị:
 ```
-
 - Option 1: sử dụng 2 bản 19.3 & 19.4 <<< Prefered
 
 - Option 2: sử dụng 2 bản 19.3 & 18.4 <<< Nếu có PR nghiem trong o 19.4

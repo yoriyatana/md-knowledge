@@ -21,7 +21,6 @@ is used to carry the set of unreachable destinations.
 ```text
 <https://www.juniper.net/documentation/us/en/software/junos/bgp/topics/topic-map/bgp-error-messages.html>
 ```
-
 ![](image/9bac526dc4b060f3e55b7dfc46ee4ee7)
 
 ![](image/0a18127313de93449a1cf4d3bad854c9)
@@ -47,7 +46,6 @@ The issue is that Junos may recognize optional, transitive attributes that are n
 ```text
 4. ELCv3 Error Handling
 ```
-
 The ELCv3 is considered malformed and must be disregarded if its length is other than zero.
 
 - --
@@ -55,7 +53,6 @@ The ELCv3 is considered malformed and must be disregarded if its length is other
 ```text
 Error checking of an UPDATE message begins by examining the path
 ```
-
 attributes.  If the Withdrawn Routes Length or Total Attribute Length
 
 is too large (i.e., if Withdrawn Routes Length + Total Attribute
@@ -63,7 +60,6 @@ is too large (i.e., if Withdrawn Routes Length + Total Attribute
 ```text
 Length + 23 exceeds the message Length), then the Error Subcode MUST be set to Malformed Attribute List.
 ```
-
 - --
 
 ![](image/8af1e0f7521a63e40bb4886bbccac1c4)
@@ -73,13 +69,11 @@ Length + 23 exceeds the message Length), then the Error Subcode MUST be set to M
 ```text
 set protocols bgp drop-path-attributes [ 11-13 19 21 24-25 27 30-31 33-255 ]
 ```
-
 - --
 
 ```text
 The presence of multiple MP\_{UN}REACH attributes in one BGP update is also considered to be a fatal error.
 ```
-
 - --
 
 <https://supportportal.juniper.net/s/article/BGP-UPDATE-with-malformed-Path-Attribute-tears-down-BGP-session?language=en_US>

@@ -13,7 +13,6 @@ SPF Calculation Example: Part 1
 ```text
 In the following slides, an example SPF calculation is displayed. This graphic shows the beginning state of the network including the routers involved, the configured link metrics, and the LSDB. The network and the LSDB have recently converged and the local router, RTR-A, is running an SPF calculation to determine the shortest path to each node in the network.
 ```
-
 root@R1\_RTR-A> show log debug-isis
 
 Jan 26 18:10:20.501174 L2 SPF trigger: Purging LSP R1\_RTR-A.00-00
@@ -374,7 +373,6 @@ SPF Calculation Example: Part 1
 ```text
 In the following slides, an example SPF calculation is displayed. This graphic shows the beginning state of the network including the routers involved, the configured link metrics, and the LSDB. The network and the LSDB have recently converged and the local router, RTR-A, is running an SPF calculation to determine the shortest path to each node in the network.
 ```
-
 root@R1\_RTR-A> show log debug-isis
 
 Jan 26 18:42:01 R1\_RTR-A clear-log[4055]: logfile cleared
@@ -725,7 +723,6 @@ root@R4\_RTR-B# commit
 ```text
 commit complete
 ```
-
 [edit]
 
 root@R1\_RTR-A# run clear log debug-isis
@@ -876,12 +873,8 @@ root@R1\_RTR-A# run show isis database detail
 
 ```text
 IS-IS level 1 link-state database:
-```
-
-```text
 IS-IS level 2 link-state database:
 ```
-
 R1\_RTR-A.00-00 Sequence: 0x34, Checksum: 0xb8c7, Lifetime: 563 secs
 
 IS neighbor: R2\_RTR-C.00                   Metric:        2
@@ -1128,12 +1121,8 @@ root@R1\_RTR-A> show isis database detail
 
 ```text
 IS-IS level 1 link-state database:
-```
-
-```text
 IS-IS level 2 link-state database:
 ```
-
 R1\_RTR-A.00-00 Sequence: 0x3c, Checksum: 0xf367, Lifetime: 325 secs
 
 IS neighbor: R2\_RTR-C.00                   Metric:        2

@@ -3,79 +3,36 @@
 ```text
 TEST SCB VÀ MPC
 ```
-
 ### Hướng dẫn này giả định RE1 đang ở trạng thái backup
 
 ### Thu thập các thông tin liên quan trước khi thực hiện
 
 ```text
 > show version invoke-on all-routing-engines | match "re0|re1|Junos:"
-```
-
-```text
 > show chassis alarms
-```
-
-```text
 > show system alarms
-```
-
-```text
 > show system core-dumps
-```
-
-```text
 > show chassis routing-engine | no-more
-```
-
-```text
 > show chassis routing-engine | match "Slot|State|Start"
-```
-
-```text
 show chassis environment cb | no-more
-```
-
-```text
 show chassis environment cb | match "CB|State"
-```
-
-```text
 > show chassis fabric summary | no-more
 ```
-
 /\* Lưu thông tin hardware/fabric/fpc \*/
 
 ```text
 > show chassis hardware | no-more
-```
-
-```text
 > show chassis fabric fpcs | no-more
-```
-
-```text
 > show chassis fabric summary extended | no-more
-```
-
-```text
 > show chassis fabric plane | no-more
 ```
-
 /\* Lưu thông tin đồng bộ GRES and NSR - KB32931  \*/
 
 ```text
 > show system switchover /\* Show on Backup RE – GRES Readiness Check\*/
-```
-
-```text
 > show task replication  /\* Show on Master RE – RPD Synchronization Check\*/
-```
-
-```text
 > show database-replication summary /\* Show on Master RE – For BNG only \*/
 ```
-
 ### Kiểm tra trạng thái RE1
 
 ###### Đảm bảo RE1 đang ở trạng thái Backup vì mình sẽ tác động vào SCB slot 1, dẫn tới tác  động trên RE1.
@@ -85,7 +42,6 @@ show chassis environment cb | match "CB|State"
 ```text
 > show chassis routing-engine | match "Slot|State|Start"
 ```
-
 Dec 15 00:47:05
 
 Slot 0:
@@ -93,7 +49,6 @@ Slot 0:
 ```text
 Current state                  Master
 ```
-
 Start time                     2020-09-11 23:31:07 CAT
 
 Slot 1:
@@ -101,7 +56,6 @@ Slot 1:
 ```text
 Current state                  Backup
 ```
-
 Start time                     2020-09-11 23:20:51 CAT
 
 ### Thực hiện offline RE1
@@ -111,19 +65,16 @@ Start time                     2020-09-11 23:20:51 CAT
 ```text
 > request system power-off other-routing-engine
 ```
-
 ###### Kiểm tra RE1 đã offline
 
 ```text
 > show chassis routing-engine | match "Slot|State|Start"
 ```
-
 Slot 0:
 
 ```text
 Current state                  Master
 ```
-
 Start time                     2020-09-11 23:31:07 CAT
 
 Slot 1:
@@ -131,7 +82,6 @@ Slot 1:
 ```text
 Current state                  Present
 ```
-
 ### Thực hiện offline CB1
 
 ###### Offline CB1 bằng lệnh:
@@ -139,31 +89,26 @@ Current state                  Present
 ```text
 > request chassis cb offline slot 1
 ```
-
 ###### Xác nhận CB1 ở trạng thái offline
 
 ```text
 > show chassis environment cb | match "CB|State"
 ```
-
 CB 0 status:
 
 ```text
 State                      Online Master
 ```
-
 CB 1 status:
 
 ```text
 State                      Offline
 ```
-
 ###### Kiểm tra trạng thái các fabric plane
 
 ```text
 > show chassis fabric summary extended
 ```
-
 0      Online     NO     NO        NO/  NO         459 days, 1 hour, 17 minutes, 20 seconds
 
 1      Online     NO     NO        NO/  NO         459 days, 1 hour, 17 minutes, 20 seconds
@@ -188,32 +133,18 @@ State                      Offline
 
 ```text
 > show chassis hardware models | no-more
-```
-
-```text
 > show chassis hardware | no-more
-```
-
-```text
 > show log inventory | no-more
-```
-
-```text
 > show log chassisd | no-more
 ```
-
 ### Chụp hình tình trạng đèn trên CB và FPC lỗi
 
 ### Thu thập thông tin RSI, varlog
 
 ```text
 request support information | no-more | save /var/log/RSI\_ME\_PR01.SOF055\_20220316
-```
-
-```text
 file archive source /var/log/\* destination /var/tmp/LOG\_ME\_PR01.SOF055\_20220316
 ```
-
 ### Rollback lại trạng thái cũ
 
 - --
@@ -264,268 +195,72 @@ vietpn@ME\_PR01.SOF055\_RE1> show configuration interfaces | display set | match
 
 ```text
 set interfaces xe-1/0/0 apply-groups-except MTU
-```
-
-```text
 set interfaces xe-1/0/0 description TO\_AR01.INH085\_Xe-1/0/0
-```
-
-```text
 set interfaces xe-1/0/0 hold-time up 2000
-```
-
-```text
 set interfaces xe-1/0/0 hold-time down 300
-```
-
-```text
 set interfaces xe-1/0/0 framing wan-phy
-```
-
-```text
 set interfaces xe-1/0/0 gigether-options 802.3ad ae3
-```
-
-```text
 set interfaces xe-1/1/0 apply-groups-except MTU
-```
-
-```text
 set interfaces xe-1/1/0 description To\_ME\_PR01\_ZAM034\_XE-0/2/0\_NEW\_LINK
-```
-
-```text
 set interfaces xe-1/1/0 framing wan-phy
-```
-
-```text
 set interfaces xe-1/1/0 gigether-options 802.3ad ae4
-```
-
-```text
 set interfaces ge-1/2/0 description 3G\_HUB:TO\_OSN3500:\_SL14/P1
-```
-
-```text
 set interfaces ge-1/2/0 flexible-vlan-tagging
-```
-
-```text
 set interfaces ge-1/2/0 speed 1g
-```
-
-```text
 set interfaces ge-1/2/0 mtu 9000
-```
-
-```text
 set interfaces ge-1/2/0 link-mode full-duplex
-```
-
-```text
 set interfaces ge-1/2/0 encapsulation flexible-ethernet-services
-```
-
-```text
 set interfaces ge-1/2/0 gigether-options no-auto-negotiation
-```
-
-```text
 set interfaces ge-1/2/1 description 3G\_HUB:TO\_OSN3500:\_SL14/P2
-```
-
-```text
 set interfaces ge-1/2/1 flexible-vlan-tagging
-```
-
-```text
 set interfaces ge-1/2/1 speed 1g
-```
-
-```text
 set interfaces ge-1/2/1 mtu 9000
-```
-
-```text
 set interfaces ge-1/2/1 link-mode full-duplex
-```
-
-```text
 set interfaces ge-1/2/1 encapsulation flexible-ethernet-services
-```
-
-```text
 set interfaces ge-1/2/1 gigether-options no-auto-negotiation
-```
-
-```text
 set interfaces ge-1/2/2 description 3G\_HUB:TO\_OSN3500:\_SL14/P3
-```
-
-```text
 set interfaces ge-1/2/2 flexible-vlan-tagging
-```
-
-```text
 set interfaces ge-1/2/2 speed 1g
-```
-
-```text
 set interfaces ge-1/2/2 mtu 9000
-```
-
-```text
 set interfaces ge-1/2/2 link-mode full-duplex
-```
-
-```text
 set interfaces ge-1/2/2 encapsulation flexible-ethernet-services
-```
-
-```text
 set interfaces ge-1/2/2 gigether-options no-auto-negotiation
-```
-
-```text
 set interfaces ge-1/2/3 description 3G\_HUB:TO\_OSN3500:\_SL14/P4
-```
-
-```text
 set interfaces ge-1/2/3 flexible-vlan-tagging
-```
-
-```text
 set interfaces ge-1/2/3 speed 1g
-```
-
-```text
 set interfaces ge-1/2/3 mtu 9000
-```
-
-```text
 set interfaces ge-1/2/3 link-mode full-duplex
-```
-
-```text
 set interfaces ge-1/2/3 encapsulation flexible-ethernet-services
-```
-
-```text
 set interfaces ge-1/2/3 gigether-options no-auto-negotiation
-```
-
-```text
 set interfaces ge-1/3/0 description FOR\_SWITCH\_SOF055
-```
-
-```text
 set interfaces ge-1/3/0 flexible-vlan-tagging
-```
-
-```text
 set interfaces ge-1/3/0 speed 100m
-```
-
-```text
 set interfaces ge-1/3/0 link-mode full-duplex
-```
-
-```text
 set interfaces ge-1/3/0 encapsulation flexible-ethernet-services
-```
-
-```text
 set interfaces ge-1/3/0 unit 0 encapsulation vlan-vpls
-```
-
-```text
 set interfaces ge-1/3/0 unit 0 vlan-id-list 10-4000
-```
-
-```text
 set interfaces ge-1/3/0 unit 0 input-vlan-map push
-```
-
-```text
 set interfaces ge-1/3/0 unit 0 input-vlan-map vlan-id 2557
-```
-
-```text
 set interfaces ge-1/3/0 unit 0 output-vlan-map pop
-```
-
-```text
 set interfaces ge-1/3/1 apply-groups-except MTU
-```
-
-```text
 set interfaces ge-1/3/1 description TO\_AR04.SOF089\_Ge-0/2/0\_Via:XDM\_I13/P1\_BACKUP
-```
-
-```text
 set interfaces ge-1/3/1 speed 1g
-```
-
-```text
 set interfaces ge-1/3/1 link-mode full-duplex
-```
-
-```text
 set interfaces ge-1/3/1 gigether-options no-auto-negotiation
-```
-
-```text
 set interfaces ge-1/3/1 gigether-options 802.3ad ae11
-```
-
-```text
 set interfaces ge-1/3/2 apply-groups-except MTU
-```
-
-```text
 set interfaces ge-1/3/2 description TO\_AR04.SOF089\_Ge-0/2/1\_Via:XDM\_I13/P2\_BACKUP
-```
-
-```text
 set interfaces ge-1/3/2 speed 1g
-```
-
-```text
 set interfaces ge-1/3/2 link-mode full-duplex
-```
-
-```text
 set interfaces ge-1/3/2 gigether-options no-auto-negotiation
-```
-
-```text
 set interfaces ge-1/3/2 gigether-options 802.3ad ae11
-```
-
-```text
 set interfaces ge-1/3/4 apply-groups-except MTU
-```
-
-```text
 set interfaces ge-1/3/4 description TO\_ME\_SOF055SRT01
-```
-
-```text
 set interfaces ge-1/3/4 gigether-options 802.3ad ae10
-```
-
-```text
 set interfaces ge-1/3/5 apply-groups-except MTU
-```
-
-```text
 set interfaces ge-1/3/5 description TO\_ME\_SOF086SRT01
-```
-
-```text
 set interfaces ge-1/3/5 gigether-options 802.3ad ae13
 ```
-
 replace pattern xe-1/0/0 with xe-3/0/0
 
 replace pattern xe-1/1/0 with xe-1/1/0
@@ -644,12 +379,8 @@ RE0
 
 ```text
 request support information | no-more | save /var/log/RSI\_ME\_PR01.SOF055\_20220128
-```
-
-```text
 file archive source /var/log/\* destination /var/tmp/LOG\_ME\_PR01.SOF055\_20220128
 ```
-
 \* Mở case liên quan alarm - 2021-1201-372793
 
 Movitel | MX480 | PR01.SOF055 | 17.3R3-S8.1 | CB0 and MPC1E (FPC slot 1) not online after device reboot due to power failure
@@ -779,7 +510,6 @@ Fan Tray                                    
 ```text
 When we replace CB0 with the new SCB, the CB0 was up, RE0 online and the alarms were cleared. The FPC1 still failed because we didn't have the spare MPC1E.
 ```
-
 Please help us RCA for CB0 and FPC1.
 
 - -

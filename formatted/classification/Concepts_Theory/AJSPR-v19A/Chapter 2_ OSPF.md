@@ -12,7 +12,6 @@ OSPFv2 Review (1 of 3)
 OSPF is a link-state IGP used within an AS
 Neighbors use hello packets to form adjacencies
 ```
-
 - OSPF uses IP protocol number 89 and the AIISPFRouters multicast address of 224.0.0.5 to flood LSAs
 
 - Routers on a broadcast segment elect a DR
@@ -27,7 +26,6 @@ Neighbors use hello packets to form adjacencies
 ```text
 This option can save up to 40 seconds of wait time to get the OSPF adjacency to a full state.
 ```
-
 OSPFv2 Review (2 of 3)
 
 - All OSPF routers maintain a copy of the database
@@ -40,7 +38,6 @@ OSPFv2 Review (3 of 3)
 ```text
 Packet Types
 ```
-
 - Every OSPF router uses a specific set of packets to perform its functions. The packet types include the following:
 
 ```text
@@ -50,7 +47,6 @@ Link-state request: Used by the router to request an updated copy of a neighbor�
 Link-state update: Used by the router to advertise LSAs into the network.
 Link-state acknowledgment: Used by the router to ensure the reliable flooding of LSAs throughout the network
 ```
-
 ![](image/502d64f4efb1c2169ba957bcddfbe323.png)
 
 ![](https://i0.wp.com/momcanfixanything.com/wp-content/uploads/2020/04/image-20.png?resize=640%2C305&ssl=1)
@@ -110,7 +106,6 @@ OSPF RID
 ```text
 user@router# set router-id 192.168.1.1
 ```
-
 - If you do not configure a router ID explicitly, the IP address of the first interface to come online is used as the value of the RID.
 
 - Normally this is the loopback interface address in case the smallest non-127/8 IP address configured.
@@ -144,19 +139,14 @@ Group membership LSAs                       (Type 6)
 NSSA LSAs                                              (Type 7)
 External attributes LSAs                         (Type 8)
 Opaque LSAs                                          (Types 9, 10, and 11)
-```
-
-```text
 Each LSA type describes a portion of the OSPF routing domain
 LSAs 6, 8, and 11 are not supported
 ```
-
 ![](https://i0.wp.com/momcanfixanything.com/wp-content/uploads/2020/04/image-21.png?resize=640%2C257&ssl=1)
 
 ```text
 Link-State Update Packets
 ```
-
 - Multiple LSAs in a Single Update
 - Packets consist of the following:
 
@@ -174,34 +164,25 @@ LSA Header
 Link-state age (2 bytes) - Count up timer
 Options (1 bytes) - Indicates the optional capabilities support on this router
 ```
-
 - P bit (position 5) set in all NSSA external LSAs
 - E bit (position 7) set in all external LSAs
 
 ```text
 Link-state type (1 bytes) - LSA Type
 Link-state ID (4 bytes) - Varies based on LSA Type
-```
-
-```text
 For Router LSA, it will be equal to RID of the router.
 For Network LSA, this field is set equal to the DR's IP address.
 For ASBRSummary LSA, it is equal to ASBR’s RID.
 For Summary, External and NSSA LSAs, link-state ID is set equal to the advertised IP subnet.
-```
-
-```text
 Advertising router (4 bytes) - Router ID of originating router
 Link-state sequence number (4 bytes) - Determines if LSA has changed
 ```
-
 - Values range from 0x80000000 to 0x7FFFFFFF (số nguyên có dấu)
 
 ```text
 Link-state checksum (2 bytes) - LSA integrity check
 Length (2 bytes)
 ```
-
 ![](https://i0.wp.com/momcanfixanything.com/wp-content/uploads/2020/04/image-34.png?resize=640%2C402&ssl=1)
 
 Router LSA (Type 1)
@@ -212,7 +193,6 @@ Router LSA (Type 1)
 Has area scope
 Describes the state and cost of the router’s interfaces
 ```
-
 ![](image/9d602013974e7f7f9bfed7682e431bd4.png)
 
 - In addition to the standard LSA header, the router LSA also contains the following fields:
@@ -298,7 +278,6 @@ Summary LSA (Type 3)
 ```text
 It is used in conjunction with the link-state ID field, which encapsulates the network address in a Type 3 LSA.
 ```
-
 - Metric (3 bytes): This field provides the cost of the route to the network destination.
 
 - When the summary LSA is representing an aggregated route (using the area-range command), this field is set to the largest current metric of the contributing routes.
@@ -322,7 +301,6 @@ External LSA (Type 5)
 ```text
 It is used in conjunction with the link-state ID field, which encapsulates the network address in a Type 5 LSA.
 ```
-
 - E bit (1 byte): The E bit determines the type of external metric represented by the metric field.
 
 - It is followed by 7 bits, all set to 0 to make up the entire byte.
@@ -362,7 +340,6 @@ ASBR Summary LSA (Type 4)
 ```text
 The address of the ASBR is encoded in the link-state ID field.
 ```
-
 - Metric (3 bytes): This field provides the cost of the route to the ASBR.
 - MT-ID (1 byte): This field represents the MT-ID value used in a Multi Topology configuration.
 - MT-ID metric (3 bytes): This field represents the MT-ID metric used in a Multi Topology configuration.
@@ -415,7 +392,6 @@ The Junos OS uses Type 9 for graceful restart capability -  a link-local scope
 The Junos OS uses Type 10 for MPLS traffic engineering - an area scope
 Type 11 is currently not supported -  domain scope
 ```
-
 - Consist of a standard LSA header followed by application-specific information
 
 - OSPF or other applications can use information field directly
@@ -429,7 +405,6 @@ OSPF Database Protection
 ```text
 user@router# show protocols ospf
 ```
-
 database-protection {
 
 maximum-lsa 1000;
@@ -446,12 +421,8 @@ Shortest Path First Algorithm
 Link-state database
 Candidate database
 Tree database
-```
-
-```text
 Run on a per-area basis on each router
 ```
-
 - Independent calculation of the topology
 
 - Result is passed to the Junos OS routing table
@@ -476,7 +447,6 @@ Controlling SPF Calculations
 ```text
 user@router# set spf-options delay 100
 ```
-
 - Now we are going to play with the timers and run the debugs, and examine the behavior. We will set the delay to 1 sec and the hold-down timer to 20 sec while keeping the rapid-runs as default.
 
 ![](image/5d815b55cc81ed4e296a3b8ec7632ec5.png)
@@ -684,7 +654,6 @@ OSPFv3 Router ID
 ```text
 OSPFv3 maintains the 32-bit RID that represents the router in the link-state database
 ```
-
 - This is not an IPv4 address, it just looks like one!
 
 - The RID can’t be derived from an IPv6 address as it is possible with IPv4
@@ -798,7 +767,6 @@ root@R3\_RTR-D# run show ospf neighbor
 ```text
 Address          Interface              State     ID               Pri  Dead
 ```
-
 10. 3.4.4         ge-0/0/0.0             Full      10.4.4.4         128    36
 
 10. 30.40.4       ge-0/0/0.0             Full      10.4.4.4         128    36

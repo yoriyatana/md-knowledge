@@ -32,5 +32,4 @@ Transmission of keepalive requests from the Packet Forwarding Engine on the rout
 ```text
 When an MX Series router with MPCs/MICs is using PPP fast keepalive for a PPP link, the Keepalive statistics field in the output of the show interfaces pp0.logical statistics operational command does not include statistics for the number of keepalive packets received or sent, or the amount of time since the router received or sent the last keepalive packet.
 ```
-
 <https://www.juniper.net/documentation/us/en/software/junos/subscriber-mgmt-access/topics/topic-map/ppp-access-network-overview.html#id-understanding-how-the-router-processes-subscriber-initiated-ppp-fast-keepalive-requests>

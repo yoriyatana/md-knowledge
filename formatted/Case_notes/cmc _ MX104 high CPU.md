@@ -37,7 +37,6 @@ Thu thập thông tin:
 ```text
 set cli timestamp
 ```
-
 * *### (Need root pasword) - (Bước này cần password root của thiết bị)**
 
 start shell user root

@@ -53,19 +53,16 @@
 Configure **traceoptions flag policy** under **routing-options**
 Use the **then trace** in the policy terms you want to trace
 ```
-
 [edit routing-options]
 
 ```text
 user@router# show
 ```
-
 traceoptions {
 
 ```text
 file policy size 10m;
 ```
-
 flag policy;
 
 }
@@ -95,20 +92,17 @@ accept;
 ```text
 user@router> show log policy | match trace
 ```
-
 - Use protocol-specific commands to test policy effect
 
 ```text
 For OSPF and IS-IS redistribution policies, check the link-state database
 ```
-
 - **show ospf database external advertising-router *router \* match *prefix***
 - **show isis database *router*| match *prefix***
 
 ```text
 For BGP, check received and advertised routes
 ```
-
 - **show route advertise-protocol bgp *neighbor***
 - **show route receive-protocol bgp *neighbor***
 - To display routes filtered by import policies, add **hidden**

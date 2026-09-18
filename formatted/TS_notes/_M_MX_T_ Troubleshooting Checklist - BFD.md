@@ -10,7 +10,6 @@ SYMPTOMS:
 ```text
 Perform the following steps to troubleshoot a BFD session that is not in the UP state:
 ```
-
 Step 1: Verify the configuration of the BFD.
 
 ```text
@@ -22,32 +21,18 @@ Step 1: Verify the configuration of the BFD.
 > - [Configuring BFD for MPLS IPv4 LSPs](http://www.juniper.net/techpubs/en_US/junos/topics/usage-guidelines/mpls-configuring-bfd-for-mpls-ipv4-lsps.html)
 >
 > Important:  Verify that the configuration settings on both ends match, and verify that both are interoperable for BFD.
-```
-
-```text
 Step 2: Check if the interface through which BFD is sending packets is in the UP state; use the command
-```
-
-```text
 show interfaces interface-name extensive
-```
-
-```text
 > This output also gives error statistics that might indicate if packet drops are seen on the interface.
 >
 > For more information on troubleshooting Ethernet interfaces, refer to [KB26486 - Troubleshooting Checklist - Ethernet Physical Interfaces](https://kb.juniper.net/KB26486)
 ```
-
 Step 3: Verify that the next-hop IP route is available on the local router to which the router is sending BFD hello packets; use the command
 
 ```text
 show route x.x.x.x
-```
-
-```text
 > Note: For a single-hop BFD, even though the next hop is directly connected and the route is always there on the local router, in some corner cases if this is not the case then the above output gives information related to the next hop.
 ```
-
 Step 4: Check if there is an issue with any intermediate media/device to the other end router.
 
 ```text
@@ -55,19 +40,16 @@ Step 4: Check if there is an issue with any intermediate media/device to the oth
 >
 > For more information, refer to [KB26486 - Troubleshooting Checklist - Ethernet Physical Interfaces](https://kb.juniper.net/KB26486).
 ```
-
 Step 5: Configure bfd and ppmd traceoptions, and review the traceoptions output.
 
 ```text
 user@Router# show protocols bfd
 ```
-
 traceoptions {
 
 ```text
 file bfd-log size 10m files 10;
 ```
-
 flag all;
 
 }
@@ -75,13 +57,11 @@ flag all;
 ```text
 user@Router# show routing-options ppm
 ```
-
 traceoptions {
 
 ```text
 file ppm-log size 10m files 10;
 ```
-
 flag all;
 
 }
@@ -131,7 +111,6 @@ to come up.
 >
 > This FW should apply in/out direction in the outgoing interface along with lo0, so make sure first packets are handled by the RE, then moving to the pfed/ppmd.
 ```
-
 - --
 
 ### BFD Flapping:
@@ -140,22 +119,14 @@ BFD flapping can be verified with repeated syslog messages indicating BFD sessio
 
 ```text
 bfdd[711]: BFDD\_TRAP\_STATE\_DOWN: local discriminator: 3, new state: down rpd[819]: RPD\_OSPF\_NBRDOWN: OSPF neighbor 208.108.231.66 (realm ospf-v2 vlan.1933 area 0.0.0.0) state changed from Full to Down due to InActiveTimer (event reason: BFD session timed out and neighbor was declared dead)
-```
-
-```text
 bfdd[711]: BFDD\_TRAP\_STATE\_DOWN: local discriminator: 3, new state: down rpd[819]: RPD\_OSPF\_NBRDOWN: OSPF neighbor 208.108.231.66 (realm ospf-v2 vlan.1933 area 0.0.0.0) state changed from Full to Init due to 1WayRcvd (event reason: neighbor is in one-way mode)
 ```
-
 Also, the current status of the BFD session may be down:
 
 ```text
 User@Router> show bfd session
-```
-
-```text
 Detect   Transmit Address    State     Interface      Time     Interval  Multiplier
 ```
-
 1. 1.100.1     Down         4.000     0.900                        1
 
 To fix BFD flapping issues, perform the following steps:
@@ -177,7 +148,6 @@ Note: The default operational mode of BFD for all protocols is distributed mod
 Verify the CPU utilization on the Routing Engine with show chassis routing-engine or show system process extensive commands.  If the CPU is high, refer to [KB26261 - Troubleshooting Checklist - Routing Engine High CPU](https://kb.juniper.net/KB26261) to troubleshoot the high CPU. One way to mitigate BFD flapping due to high Routing Engine CPU is to increase the minimum interval of BFD keepalives; for more information, see Step 8 below.
 Monitor the interface on which the affected BFD session is running and verify if the BFD control traffic is hitting the local interface.
 ```
-
    If there are no inbound packets or if some of them are dropping somewhere in between, then the issue is external (with the asymmetric traffic path or the intermediate device suffered from a hardware or transmission issue).
 4. Check the Ethernet switch errors between the CB/FPC/RE.
 
@@ -185,13 +155,9 @@ Monitor the interface on which the affected BFD session is running and verify if
 
 ```text
 show chassis ethernet-switch statistics
-```
-
-```text
 show chassis ethernet-switch error
 If it is distributed, then check PPM stats.
 ```
-
    Delegate the BFD processing job to the PFE (also called distributed mode, which is the default). BFD sessions are very lightweight, hence flaps generally do not occur when sessions are distributed. If they do, then it could be a PFE issue.
 
    To check PPM stats, first login to the corresponding PFE using >start shell pfe network fpcX, then use the show ppm statistics protocol bfd command:
@@ -229,7 +195,6 @@ If it is distributed, then check PPM stats.
 ```text
 Packet get failed       : 0
 ```
-
    Total BFD Packets       : 0
 
    Absorbed BFD Packets    : 0
@@ -250,7 +215,6 @@ Packet get failed       : 0
 Verify that no error counters are incrementing.
 Check if any packet drops are reported on the Packet Forwarding Engine.
 ```
-
    To do this, use the show pfe statistics traffic command:
 
    lab# run show pfe statistics traffic
@@ -320,7 +284,6 @@ Check if any packet drops are reported on the Packet Forwarding Engine.
 ```text
 Data error : 0
 ```
-
    Stack underflow : 0
 
    Stack overflow : 0
@@ -338,28 +301,17 @@ Data error : 0
 ```text
 Packet Forwarding Engine Input IPv4 Header Checksum Error and Output MTU Error statistics:
 ```
-
    Input Checksum : 0
 
    Output MTU
 
 ```text
 If packet drops are seen, then the packets that are being dropped randomly could be BFD packets. All BFD packets are treated as data packets, so it could be possible that they are being dropped randomly.
-```
-
-```text
 Verify if packets are getting dropped by issuing the following commands:
-```
-
-```text
 show system queues
-```
-
-```text
 show ttp statistics  (you need to log in to the corresponding FPC, as shown in Step 5)
 Check which threads are consuming the CPU.
 ```
-
    Usually D-BFD flaps are seen when an ukernel thread hogs the CPU.  To check, issue the show threads command at the corresponding PFE.
 
    ADPC5( vty)# show threads
@@ -367,7 +319,6 @@ Check which threads are consuming the CPU.
 ```text
 PID PR State Name Stack Use Time (Last/Max/Total)
 ```
-
    - -- -- ------- --------------------- --------- ---------------------
 
    1 H asleep Maintenance 296/2048 0/0/0 ms
@@ -389,14 +340,12 @@ PID PR State Name Stack Use Time (Last/Max/Total)
 ```text
 If you doubt that BFD packets are being dropped, then first make it centralized with the command set routing-option ppm no-delegate-ppm, followed by clear bfd session.
 ```
-
    Increase the timer of the BFD session; minimum on the RE should be 100 ms.
 
 ```text
 Start monitoring the interface; if there is a lag in packets received, then you know there is an issue with the PFE.
 Check the minimum-interval.
 ```
-
    When configuring BFD, care should be taken when choosing minimum-interval under bfd-liveness-detection. If you choose a very low minimum-interval, then BFD will send hello packets very aggressively, which in some cases might lead to BFD flap.
 
    For a recommendation on the optimal values to choose for  minimum-interval, refer to the technical documentation on [Configuring BFD for Static Routes for Faster Network Failure Detection](https://www.juniper.net/documentation//en_US/junos/topics/example/policy-static-routes-bfd.html).
@@ -405,7 +354,6 @@ Check the minimum-interval.
 ```text
 User@Router# show firewall filter test-in
 ```
-
    term 10 {
 
    from {
@@ -439,7 +387,6 @@ User@Router# show firewall filter test-in
 ```text
 User@Router# show firewall filter test-out
 ```
-
    term 10 {
 
    from {
@@ -472,12 +419,8 @@ User@Router# show firewall filter test-out
 
 ```text
 User@Router# show system syslog
-```
-
-```text
 file bfd-log {
 ```
-
    firewall any;
 
    }
@@ -485,7 +428,6 @@ file bfd-log {
 ```text
 User@Router# show configuration interfaces
 ```
-
    ge-0/0/4 {
 
    unit 100 {
@@ -513,5 +455,4 @@ User@Router# show configuration interfaces
 ```text
 If the filter is applied to the incoming interface, and you don't see packets coming in, investigate where the packets are getting dropped.
 ```
-
 If the filter is applied to the outgoing interface, and you're not seeing packets going out, check the configuration (this is a local issue).

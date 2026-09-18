@@ -78,12 +78,8 @@ Cấu hình hold-time up/down với các thông số dưới để delay trong q
 
 ```text
 set interfaces et-11/5/0 hold-time up 60000
-```
-
-```text
 set interfaces et-11/5/0 hold-time down 300
 ```
-
 2. / Xóa fabric priority đưa về cấu hình mặc định để tránh hành xử không
 
 mong muốn.
@@ -133,7 +129,6 @@ Sau khi thực hiện workaround FTEL có thể theo dõi thêm và cân nhắc�
 ```text
 show system firmware' for MPC11E may go bad after RE SWO or chassisd restart. Unable to proceed firmware upgrade.
 ```
-
 [ March 7, 2023 14:36 ] ⁨Hung Le⁩: khong co ghi nhan bi reboot
 
 [ March 7, 2023 14:37 ] ⁨Hung Le⁩: mac du cung 1 TSB
@@ -143,7 +138,6 @@ show system firmware' for MPC11E may go bad after RE SWO or chassisd restart. Un
 ```text
 [ March 7, 2023 14:37 ] ⁨Hung Le⁩: MPC11E with 21.3 and earlier Junos has a known issue that 'show system firmware' output would become an unexpected state and prevents firmware upgrade. rebooting the MPC11E board resolves the issue and makes firmware upgrade available.
 ```
-
 PR1715264 is tracking this. Pelase refer external-tab on the PR for detail.
 
 [ March 7, 2023 14:54 ] ⁨SVT.Tùng.NT⁩: Dạ, vậy em xin trình bày lại ý em đang hiểu về TSB này cho MPC11 xem em đã hiểu đúng chưa các anh ạ:
@@ -161,7 +155,6 @@ This problem might be caused by CPU ucode eratta and can be resolved by upgradin
 ```text
 The failed device will become online after the silent restarted.
 ```
-
 Juniper Networks is aware of multiple production cases for MPC10E and EX9200-15C.
 
 MPC11E potentially has the same problem but less number of cases have been reported so far.
@@ -171,7 +164,6 @@ MPC11E potentially has the same problem but less number of cases have been repor
 ```text
 > MPC11E with 21.3 and earlier Junos has a known issue that 'show system firmware' output would become an unexpected state and prevents firmware upgrade. rebooting the MPC11E board resolves the issue and makes firmware upgrade available.
 ```
-
 PR1715264 is tracking this. Pelase refer external-tab on the PR for detail.
 
 [ March 7, 2023 15:11 ] ⁨SVT.Tùng.NT⁩: vâng ạ, cám ơn anh ‪⁨Hung Le⁩

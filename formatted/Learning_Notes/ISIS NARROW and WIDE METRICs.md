@@ -20,7 +20,6 @@ All ISIS PDUs consist of:
 **Level 1** or **Level 2**
 **Hello**, **Sequenced Number Packet** (**SNP**) or **Link State Packet** (**LSP**)
 ```
-
 - PDU version
 - Maximum Number of Areas
 - **PDU headers and TLVs**:
@@ -80,7 +79,6 @@ Below is an example of a **point-to-point hello packe**t, where you can see som
 ```text
 Sequence Number PDUs or Packets are used to ensure that neighbors have the most recent LSP information from each other. In other words, ensures that their Link State Databases are synchronized.
 ```
-
 There are 4 types of SNPs:
 
 ![](image/ce99ed632faec9c1ff2910bc9bd8cc27.png)
@@ -94,7 +92,6 @@ A Partial Sequence Number packet lists the **most recent sequence number(s) of 
 ```text
 These packets contain the **most recent sequence numbers of all LSPs** in the database. They are sent periodically, or when a link first comes up, and are used to verify that the Link State Database is always in sync. **CSNPs are similar in function to the Database Descriptors in OSPF**, though OSPF DBDs are not sent periodically as CSNPs.
 ```
-
 By default, CSNPs are sent every 10 sec on LAN broadcast links, and every 5 sec on point-to-point links.
 
 Below is an example of a **Level 2 CSNP packet**, where you can see the list of LSPs with their IDs, sequence numbers, lifetime, and checksum:
@@ -103,16 +100,9 @@ Below is an example of a **Level 2 CSNP packet**, where you can see the list of
 
 ```text
 *3)** **LINK STATE PACKETS (LSPs)**
-```
-
-```text
 Link State Packets are used to exchange link state information and are similar in function to LSAs in OSPF.
-```
-
-```text
 They contain all the details about the network topology, including ISIS routers system IDs, prefixes, metrics, area IDs, and are used to build the link-state database. Like OSPF LSAs, LSPs are flooded within an an area.
 ```
-
 LSPs are sent during adjacency formation, as a result of a topology change and in response to a sequence number PDU.
 
 There are two types:
@@ -187,7 +177,6 @@ Notice that TLV 22, contains Sub-TLVs.  These were introduced in [RFC3784 – 
 ```text
 *LINK STATE PACKETS TLVs and METRICs**
 ```
-
 We are now going to move our attention to 5 specific TLVs included in the LSP packets: **TLVs 2**, **22,** **128**, **130**, and **135**, which carry either ISIS router reachability or network prefix reachability.
 
 * *1) TLV 2—IS Reachability**
@@ -234,7 +223,6 @@ However, you can also clearly see that depending on the TLV type, these metric c
 ```text
 a different metric name:  **delay**, **default**, **expense**, and **error**.
 ```
-
 ![](image/31e1b7c7a9888b5df6c255b5f1463f65.png)
 
 But, what are all these metrics, and how do they work (or not)?
@@ -249,7 +237,6 @@ Maybe this will be just for your general knowledge, but in the ISIS original spe
 **expense** = $$$, OK!?!?
 **error** = how unreliable, how do you figure that out?
 ```
-
 Guess what! Only the “default” metric has been implemented by vendors, and sometimes I wish we could just forget about the original specs and just give this “default” metric a proper name and change the outputs of the commands.
 
 Since that is not going to happen, you will probably agree with me that a good reason to be aware of this naming conundrum is so that you don’t get caught by surprise when you check the ISIS database and see the word “default” metric next to a value that is NOT the default value of 10. Or you don’t get caught by surprise if you do a packet capture and see the word default when you are certain that you are NOT using default values for your interfaces.  Been there done that!! Have had to explain this to customers and students a number of times: “no, it’s not a bug, that’s the “name” of the metric!”
@@ -463,7 +450,6 @@ By default:
 ```text
 The rule that we care about right now is the one about L1 external routes which we can state this way:
 ```
-
 * *L1 routes that were injected into ISIS via redistribution, are treated by default as L1 external routes, and are NOT advertised to L2 neighbors by default.**
 
 We know now that the difference between internal and external routes disappears when we configure wide metrics only.
@@ -637,7 +623,6 @@ That is why vR11, for example, has a L1 “internal” route for 172.10.1.0/24, 
 ```text
 Link State Packets (LSPs) carry ISIS neighbor information within TLVs 2, and 22, and prefix information within TLVs 128,130, and 135.
 ```
-
 These TLVs advertise IS and prefix reachability using either narrow or wide metrics.
 
 ![](image/6ee32c51b0373a5c2c0e1cfbf01fa1e4.png)

@@ -8,66 +8,25 @@
 
 ```text
 show services stateful-firewall flows count | no-more
-```
-
-```text
 show services nat pool detail | no-more
-```
-
-```text
 show services nat mappings summary | no-more
-```
-
-```text
 show services service-sets memory-usage | no-more
-```
-
-```text
 show services service-sets cpu-usage | no-more
-```
-
-```text
 show services service-set summary | no-more
-```
-
-```text
 show service sessions count | no-more
-```
-
-```text
 show services nat mappings address-pooling-paired private *21.81.226.73*
 ```
-
 # -------------
 
 ```text
 show service sessions analysis | no-more
-```
-
-```text
 show services sessions utilization | no-more
-```
-
-```text
 show services service-sets cpu-usage | no-more
-```
-
-```text
 show services service-sets summary | no-more
-```
-
-```text
 show log messages | last 100 | match "cpu zone" | no-more
-```
-
-```text
 > show interface mams-\* | match rate
-```
-
-```text
 > monitor interface ams0 no-resolve
 ```
-
 # ==========================
 
 - Check more with **MX-SPC3**:
@@ -76,58 +35,23 @@ show log messages | last 100 | match "cpu zone" | no-more
 
 ```text
 show services stateful-firewall flows count | no-more
-```
-
-```text
 show services nat source pool all | no-more
-```
-
-```text
 show services nat source mappings summary | no-more
-```
-
-```text
 show services service-sets memory-usage | no-more
-```
-
-```text
 show services service-sets cpu-usage | no-more
-```
-
-```text
 show services service-set summary | no-more
-```
-
-```text
 show service sessions count | no-more
 ```
-
 # -------------
 
 ```text
 show service sessions analysis | no-more
-```
-
-```text
 show services sessions utilization | no-more
-```
-
-```text
 show services service-sets cpu-usage | no-more
-```
-
-```text
 show services service-sets summary | no-more
-```
-
-```text
 show log messages | last 100 | match "cpu zone" | no-more
-```
-
-```text
 show interface mams-\* | match rate
 ```
-
 # --------------
 
 Case lỗi điển hình bên INOC2:
@@ -162,30 +86,16 @@ RE: Case Updated - P2 - High - 2022-0117-398960 - SV TECHNOLOGIES JSC - [VNPT] M
 
 ```text
 show snmp mib walk 1.3.6.1.4.1.2636.3.59.1.1.1.1.8
-```
-
-```text
 show snmp mib walk 1.3.6.1.4.1.2636.3.59.1.1.1.1.6
-```
-
-```text
 show snmp mib walk 1.3.6.1.4.1.2636.3.59.1.1.3.1.3
-```
-
-```text
 show snmp mib walk **jnxSpSvcSetSessCount**
-```
-
-```text
 show snmp mib walk **jnxJsNatRuleTable**
 ```
-
 * **svtech-tool@DNG-CGNAT-MX480\_RE0> show services sessions count***
 
 ```text
 Interface   Service set                        Valid      Invalid      Pending  Other state
 ```
-
 mams-1/0/0  CGNAT                             359160            0            0            0
 
 mams-1/1/0  CGNAT                             354534            0            0            0
@@ -259,16 +169,9 @@ Một số lệnh để check:
 
 ```text
 show log messages | match mqss
-```
-
-```text
 show snmp mib walk 1.3.6.1.4.1.2636.3.81.1.1.1.1.1.11 | match 65535
-```
-
-```text
 show snmp mib walk 1.3.6.1.4.1.2636.3.81.1.1.1.1.1.15 | match 65535
 ```
-
 và lệnh này để show trafic Fabric in/out card
 
 đơn vị Bps, lấy giá trị kia x8 = bps
@@ -278,7 +181,6 @@ xem có over **170Gbps** ko nhé? --> MPC7E oversubscription
 ```text
 show pfe statistics traffic | match fabric
 ```
-
 1. 3.6.1.4.1.2636.3.81.1.1.1.1.1.10 mib này check pps
 
 1. 3.6.1.4.1.2636.3.81.1.1.1.1.1.15 check packet drop

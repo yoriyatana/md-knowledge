@@ -31,7 +31,6 @@ The CE routers are running OSPF with the PE routers. The PE routers redistribute
 ```text
 Taking the above image as an example. R7 is running OSPF with R2. R2 is also running OSPF with R5 and so any LSA updates are sent to R5 from R7 as per standard OSPF rules. When R2 needs to advertise the route over to R4, that LSA needs to be converted to a VPNv4 route. R4 will then convert that VPNv4 route back to an OSPF route on the other side. So how does the RFC state this LSA must be translated?
 ```
-
 Section 4.2.6 of the RFC states:
 
 ```text
@@ -45,7 +44,6 @@ Section 4.2.6 of the RFC states:
 >
 > Area Number – Route Type – Options
 ```
-
 In the test network I have already configured mutual redistribution between OSPF and BGP on both PE routers. Let’s see if the VPNv4 routes match what we expect from the RFC. R7 is advertising it’s loopback into OSPF. R2 converts this to a VPNv4 route. Let’s dig into the VPNv4 route itself:
 
 R2#show bgp vpnv4 un all 7.7.7.7
@@ -79,7 +77,6 @@ IOS has encoded a type 005 domain ID with a value of 000000010200. This is inter
 ```text
 > Each OSPF instance MUST be associated with one or more Domain Identifiers. This MUST be configurable, and the default value (if none is configured) SHOULD be NULL.
 ```
-
 I have not configured one yet there is one. This means IOS is configuring one automatically even though it SHOULD be null.
 
 The second community we’ll look at is the Route Type Extended Communities Attribute:
@@ -107,7 +104,6 @@ Sescion 4.2.8.1 of the RFC states:
 >
 > - The route is from a different domain from the domain of the OSPF instance
 ```
-
 What this means is that if a route comes into a PE as an External or NSSA-External , it will always be so. It can never change. If a route comes in with a type of 1, 2, or 3; and the domain-id matches – then the local PE will originate a new type-3 LSA. i.e. the route will appear inter-area on the other customer sites.
 
 If a route comes in with a type of 1, 2, or 3; and the domain-id does not match, then it becomes an external route.
@@ -131,25 +127,19 @@ LS Type: Summary Links(Network)
 ```text
 Link State ID: 7.7.7.7 (summary Network Number)
 ```
-
 Advertising Router: 4.4.4.4
 
 LS Seq Number: 80000001
 
 ```text
 Checksum: 0x1EDF
-```
-
-```text
 Length: 28
 ```
-
 Network Mask: /32
 
 ```text
 MTID: 0 Metric: 2
 ```
-
 We see the 7.7.7.7/32 LSA coming from 4.4.4.4. This means the OSPF route should be inter area:
 
 R6#sh ip route 7.7.7.7
@@ -215,33 +205,21 @@ LS Type: AS External Link
 ```text
 Link State ID: 7.7.7.7 (External Network Number )
 ```
-
 Advertising Router: 4.4.4.4
 
 LS Seq Number: 80000001
 
 ```text
 Checksum: 0x863A
-```
-
-```text
 Length: 36
 ```
-
 Network Mask: /32
 
 ```text
 Metric Type: 2 (Larger than any link state path)
-```
-
-```text
 MTID: 0
-```
-
-```text
 Metric: 2
 ```
-
 Forward Address: 0.0.0.0
 
 External Route Tag: 3489661028

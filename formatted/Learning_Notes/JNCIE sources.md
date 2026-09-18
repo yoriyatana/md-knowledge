@@ -187,7 +187,6 @@ Scheduler transmission rates: <https://www.juniper.net/documentation/en_US/juno
 Two-rate, three colour policers: <https://www.juniper.net/documentation/en_US/junos/topics/concept/policer-two-rate-three-color-overview.html>
 Color-blind policers: <https://www.juniper.net/documentation/en_US/junos/topics/reference/configuration-statement/color-blind-three-color-policer.html>
 ```
-
 MULTICAST
 
 - Anycast RP: <https://www.inetzero.com/pim-anycast-rp/>

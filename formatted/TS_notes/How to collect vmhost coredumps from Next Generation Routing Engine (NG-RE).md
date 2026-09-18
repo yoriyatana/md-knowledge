@@ -12,7 +12,6 @@ In NG-RE, there are two levels of coredumps to be collected for JTAC analysis:
 ```text
 user@host> show vmhost crash
 ```
-
 Compute cluster: cluster1-re-cc
 
 Compute node: cluster1-re-cn
@@ -28,7 +27,6 @@ total 0  <<< 0 means there is no crashes in vmhost
 ```text
 request vmhost file-copy crash from-jnode  to-vjunos /var/tmp/
 ```
-
 Now the files can be directly copied from the Routing Engine to any local host by using FTP, SCP, JWEB, or mounted USB.
 
 * *Note:** FTP, SSH and HTTP are configured under the system services stanza.

@@ -20,7 +20,6 @@ SYMPTOMS:
 ```text
 'Suppressed' indicates that the local router, which is configured for wide-metric, does not send TLVs 2 and 128; but accepts them, if received.
 ```
-
 - --
 
 ```text

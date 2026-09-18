@@ -37,5 +37,4 @@ Các quá trình push nhãn và swap nhãn toàn trình (về mặt control plan
 Hiện tại, bên em đang nghi ngờ lỗi này chỉ liên quan đến việc xử lý và hiển thị kết quả ping và traceroute mpls ldp, chứ không ảnh hưởng gì đến data plane thực.
 Để làm rõ và khoanh vùng chính xác, bên em đề xuất apply firewall filter để counter gói tin mpls ping khi được khởi tạo từ HCM-ASBR2, apply trên các box dọc tuyến đường để confirm chính xác gói tin đang bị drop ở đâu.
 ```
-
 Bên em gửi cấu hình cho firewall này, và nhờ các anh chị sắp xếp thời gian phối hợp thực hiện ạ.

@@ -7,7 +7,6 @@ Policy export apply trong group BGP.
 ```text
 group policy gồm 2 neighbor trở lên.
 ```
-
 Các neigbor không apply policy.
 
 Khi cấu hình policy export cho 1 neighbor trong group --> phiên BGP đó bị reset.

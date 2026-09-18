@@ -76,7 +76,6 @@ Topology
 ```text
 > IPv4/IPv6/Dual-Stack PPPoE subscriber <----> ([vlan 3320] ge-0/0/2) MX (ge-0/0/0) <----> Radius Server(192.168.40.26)
 ```
-
 The RADIUS Server (@192.168.40.26) is reachable via the global routing instance inet.0 table.
 
 There are two types of addressing for IPv6 in a subscriber access network:
@@ -99,7 +98,6 @@ MX(BNG) Configuration Steps for IPv4 / IPv6 / Dual-Stack PPPoE Subscriber
 ```text
 Configure the following:
 ```
-
 1. Dynamic profile " PPPoE " for both IPv4 and IPv6/Dual-Stack PPPoE subscribers
 2. Access Profile " ACCESS-FTTH " for subscriber user authentication via the RADIUS server
 3. IPv4 Address Pool " dhcpv4-pool " (default pool) and " V4-IP-POOL " (user defined; used via the RADIUS attribute "Framed-Pool")
@@ -111,13 +109,9 @@ Configure the following:
 
 ```text
 > For Auto-VLAN (dynamic VLAN) Configuration:  ( Continue after Step f onward as shown below. )
-```
-
-```text
 Configure a dynamic profile " AUTO-VLAN-PPP " (dot1q) or " AUTO-VLAN-STACK-PPP " (q-in-q) for the dynamic VLAN PPPoE subscriber interface.
 Finally configure the physical interface with auto-configure (with dynamic profile  " AUTO-VLAN-PPP " / " AUTO-VLAN-STACK-PPP " ) to activate dynamic-VLAN-based PPPoE subscribers.
 ```
-
 Configuration
 
 Dynamic-profile configuration for static VLAN bind IPv4 only, IPv6 (ND/RA, DHCPv6 IA\_NA / PD), and Dual-Stack (ND/RA, DHCPv6 IA\_NA / PD) PPPoE subscriber deployment
@@ -525,7 +519,6 @@ Dynamic-profile configuration for static VLAN bind IPv4 only, IPv6 (ND/RA, DHCP
 >
 > }
 ```
-
 Extra dynamic-profile and interface configurations for dot1q / single VLAN IPv4 PPPoE subscriber deployment
 
 ```text
@@ -601,7 +594,6 @@ Extra dynamic-profile and interface configurations for dot1q / single VLAN IPv4 
 >
 > }
 ```
-
 Extra dynamic-profile and interface configurations for q-in-q / stacked VLAN IPv4/IPv6 PPPoE subscriber deployment
 
 ```text
@@ -677,7 +669,6 @@ Extra dynamic-profile and interface configurations for q-in-q / stacked VLAN IPv
 >
 > }
 ```
-
 RADIUS User Configuration
 
 RADIUS Attributes Specific to IPv6
@@ -704,7 +695,6 @@ RADIUS User Example (can be used in addition with PPPoE IPv4 attributes) specifi
 >
 > Framed-IP-Address = 10.200.200.26
 ```
-
 2. NDRA/IPv6 Prefix Address Assignment User Example:
 
 ```text
@@ -720,7 +710,6 @@ RADIUS User Example (can be used in addition with PPPoE IPv4 attributes) specifi
 >
 > Framed-IP-Address = 10.200.200.26
 ```
-
 3. IPv6 Address Assignment via IPv6 Pool Name User Example:
 
 ```text
@@ -736,7 +725,6 @@ RADIUS User Example (can be used in addition with PPPoE IPv4 attributes) specifi
 >
 > ERX-Primary-Dns = 8.8.8.8
 ```
-
 4. IPv6 Prefix Delegation Address Assignment User Example:
 
 ```text
@@ -774,7 +762,6 @@ Type: ipv6addr
 ```text
 ID: 97
 ```
-
 - IPv6 LAN
 
 Attribute: Delegated-IPv6-Prefix
@@ -782,12 +769,13 @@ Attribute: Delegated-IPv6-Prefix
 ```text
 ID: 123
 ```
-
 Các attribute này anh đã test trên lab hoạt động bình thường nhé.
 
 - --
 
 Để cấp được IPv6 tĩnh cho khách hàng thì cần gán IPv6 cho khách hàng trên Radius. Cần sử dụng những Attribute sau để gán cho khách hàng.
+
+- IPv6 LAN
 
 Anh gửi phần khai báo trên BRAS:
 
