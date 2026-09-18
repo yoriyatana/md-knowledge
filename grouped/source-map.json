@@ -259,7 +259,8 @@
   "cgnat-configuration-guide": {
     "output": "cgnat/configuration-guide.md",
     "sources": [
-      "formatted/PR/using AE interfaces with SPC3.md"
+      "formatted/PR/using AE interfaces with SPC3.md",
+      "formatted/TS_notes/high NPU CPU in CGNAT.md"
     ],
     "type": "consolidate",
     "domain": "cgnat",

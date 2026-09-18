@@ -331,7 +331,8 @@
       "level2_doctype": "configuration-guide",
       "topic": "CGNAT AE Interface Configuration Guide",
       "sources": [
-        "PR/using AE interfaces with SPC3.md"
+        "PR/using AE interfaces with SPC3.md",
+        "TS_notes/high NPU CPU in CGNAT.md"
       ],
       "action": "consolidate",
       "approved": true

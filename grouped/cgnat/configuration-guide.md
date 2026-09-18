@@ -32,3 +32,23 @@ in tail-drops on I/O card in case of scaled scenarios.
 a. Learn fabricId of the ingress-PFE and stamp it on the session wing per packet.
 
 b. Use the fabricId of the opposive wing to send the packet out of SPC3.
+
+## Source: `formatted/TS_notes/high NPU CPU in CGNAT.md`
+
+# high NPU CPU in CGNAT
+
+```text
+show interfaces mams-\* | match "mams-|rate"
+```
+- --
+
+```text
+> start shell
+```
+cli -c 'show services sessions interface mams-8/3/0' | grep Forward | awk '{if (int($7) > 1000000) print}'
+
+cli -c 'show services sessions interface mams-8/3/0' | grep Forward | awk '{if (int($7) > 100000) print}'
+
+cli -c 'show services sessions interface mams-8/0/0' | grep Forward | awk '{if (int($7) > 1000000) print}'
+
+cli -c 'show services sessions interface mams-8/0/0' | grep Forward | awk '{if (int($7) > 100000) print}'
