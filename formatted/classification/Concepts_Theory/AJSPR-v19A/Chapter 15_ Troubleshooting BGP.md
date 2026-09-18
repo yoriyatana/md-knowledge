@@ -14,21 +14,31 @@
 
 ![](image/a8e77950d3f85dae381f99df635c8dfd.png)
 
-- When the BGP state field in the **show bgp summary** command is **idle**
+```text
+When the BGP state field in the **show bgp summary** command is **idle**
+```
 
 - It indicates that the outgoing interface may be down or there is no route in the routing table to forward a TCP SYN message.
 
-- When the BGP state field in the **show bgp summary** command is **Connect**
+```text
+When the BGP state field in the **show bgp summary** command is **Connect**
+```
 
-- It indicates that TCP messages are being sent but no response has been received.
+```text
+It indicates that TCP messages are being sent but no response has been received.
+```
 
 - This can be caused by a firewall filter blocking the BGP port or a misconfigured or nonexistent neighbor.
 
-- When the **BGP** state field in the **show bgp summary** command is **Active**
+```text
+When the **BGP** state field in the **show bgp summary** command is **Active**
+```
 
 - It can indicate that the **BGP** session is having an issue.
 
-- Normal issues that can cause this state are an incorrect AS number or authentication issue.
+```text
+Normal issues that can cause this state are an incorrect AS number or authentication issue.
+```
 
 * *IBGP Peering Issues**
 
@@ -56,11 +66,13 @@
 
 - BGP routing issues
 
-- Received routes
-- BGP next hop is not reachable
-- Import filtering policy
-- Prefix limit is reached
-- Recursive routing failure
+```text
+Received routes
+BGP next hop is not reachable
+Import filtering policy
+Prefix limit is reached
+Recursive routing failure
+```
 
 - Advertised routes
 
@@ -81,9 +93,13 @@
 
 - Check summary information about BGP peers
 
+```text
 lab@srx> show bgp summary
+```
 
-- A session stays in **idle** state:
+```text
+A session stays in **idle** state:
+```
 
 - BGP cannot even attempt to establish the session
 
@@ -95,15 +111,21 @@ lab@srx> show bgp summary
 
 - Check the TCP MSS for the session
 
+```text
 user@R1> show system connections inet extensive | find 10.222.1.5
+```
 
 - Check summary information about local BGP groups
 
+```text
 user@srx> show bgp group
+```
 
 - Check BGP neighbor session details
 
+```text
 user@srx> show bgp neighbor <172.22.138.37>
+```
 
 - Examine log files
 
@@ -111,7 +133,9 @@ user@srx> show bgp neighbor <172.22.138.37>
 - For authentication errors use **| match auth** (short for authentication)
 - For other errors use **| match noti** (short for notification)
 
+```text
 user@srx> show log messages| match noti
+```
 
 * *Use Traceoptions**
 
@@ -119,9 +143,13 @@ For difficult problems, use traceoptions
 
 [edit protocols bgp]
 
+```text
 user@srx# show traceoptions
+```
 
+```text
 file bgp\_trace.log size 10m files 2;
+```
 
 flag packets detail;
 
@@ -133,7 +161,9 @@ flag update;
 
 flag all;
 
+```text
 user@srx> show log bgp trace.log
+```
 
 * *Monitor in Real Time**
 
@@ -141,33 +171,51 @@ user@srx> show log bgp trace.log
 
 - **monitor traffic interface**
 
+```text
 user@srx> monitor traffic interface ge-0/0/4.303 no-resolve detail matching tcp
+```
 
+```text
 user@srx> monitor traffic interface ge-O/O/4.303 matching "tcp and port 179"
+```
 
 * *Verify Routing**
 
 - Check which routes are being advertised
 
+```text
 user@srx> show route advertising-protocol bgp 10.1.254.1
+```
 
-- Check which routes are being received
+```text
+Check which routes are being received
+```
 
+```text
 user@srx> show route receive-protocol bgp 10.1.254.1
+```
 
 - Verify Import Policy Changes
 
+```text
 user@srx> show route protocol bgp source-gateway 10.1.254.1
+```
 
 - Verify BGP routes using display options
 
+```text
 user@srx> show route protocol bgp
+```
 
+```text
 user@srx> show route protocol bgp active-path
+```
 
 - Using the detail option
 
+```text
 user@srx> show route protocol bgp detail
+```
 
 - Large BGP packets (Updates) being are fragmented due to a low MTU setting on the link
 - The firewall filter drops all fragments that are destined for the Routing Engine
@@ -177,8 +225,14 @@ user@srx> show route protocol bgp detail
 - Make sure that MTU is large enough to support the BGP negotiated TCP MSS
 - Allow the fragments
 
+```text
 user@R4> show route receive-protocol bgp 10.222.1.2
+```
 
+```text
 user@R4> show route hidden
+```
 
+```text
 user@R4> show route resolution unresolved
+```

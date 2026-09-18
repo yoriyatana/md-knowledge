@@ -61,9 +61,13 @@ OR if there is a Duplicate RID or IP address
 
 ![](../../assets/concepts/b7a3f9ae91-689a3fed56a5db9bf02f36e579f81226.png)
 
-* *LINK STATE TYPE AND LINK STATE ID:**
+```text
+*LINK STATE TYPE AND LINK STATE ID:**
+```
 
+```text
 Meaning of **LINK STATE ID** field in the **LSA HEADER** depends on the LSA type:
+```
 
 ![](../../assets/concepts/d68504b96c-90f287782b465d3669eb40a841e5b202.png)
 
@@ -91,13 +95,17 @@ Network LSA does NOT contain any prefix information, though it advertises the su
 
 ![](../../assets/concepts/b729c2726c-869b22ac0b61298a996cb371b2d2c436.png)
 
+```text
 For **LSAs type 3**, the **advertised prefix** is in the **LINK STATE ID** (in the **LSA HEADER**).
+```
 
 * *LSA TYPE 4**
 
 ![](../../assets/concepts/9519872442-8ca44bb55447e186bba5a33e67306286.png)
 
+```text
 For **LSAs type** **4,** the **advertised ASBR RID** is in the **LINK STATE ID** (in the **LSA HEADER**).
+```
 
 * *LSA TYPE 5**
 
@@ -222,6 +230,7 @@ Note: Please be aware that the following path calculation preference is applicab
 
 # ospf as routing protocol for CE-PE
 
+```text
 > > it is possible to break a few ospf 'rules' and have it 'work'
 >
 > First thing is no OSPF rules are being broken nor can be broken in regards to L3VPN because (outside of sham-links) the superbackbone between the PEs are not necessarily treated as directly connected. As they are not treated as such, OSPF's rules do not particularly apply.
@@ -243,6 +252,7 @@ Note: Please be aware that the following path calculation preference is applicab
 > ---
 >
 > L3VPN lets you connect different areas (acting as a superbackbone 'area 0')
+```
 
 First thing is while the L3VPN fabric acts as an OSPF superbackbone and has some analogies to area 0, it's more akin in practice to a standard inter-AS interconnect. AKA, by default, there would little difference in a scenario where no L3VPN was used and the PEs were simply redistributing OSPF into BGP and the inverse.
 
@@ -252,23 +262,35 @@ Even with sham-links though, the L3VPN fabric is more analogous to a standard ar
 
 Essentially, while it lets you connect different areas and type that are not normally possible, it's due to redistribution. The limitation on functionality is down to redistribution and the area types, ex. if one area is a stub, you cannot redistribute because of Type-5 but can make use of the domain-ID tag so they are injected as a Type-3 instead.
 
+```text
 > \*Initially I jumped on changing the domain-id however not sure it is required....The 'DOWN' bit (Junos calls this DN bit ), also the domain-id (which is different to the DN bit) and finally automatic tagging. (Junos does it for us but you can see it doing it).
+```
 
 Correct, there are 3 primary mechanisms that are used with L3VPN and OSPF. Each are independent and used simultaneously. There are actually a few more knobs that really let you incorporate overly complex designs too.
 
+```text
 > DOWN BIT:
+```
 
 This is simply a loop prevention for redistribution, very important when backdoors are involved. When the PE redistributes the VPN BGP prefix into OSPF, it sets the DN bit flag so that there is not potential of the remote PE from redistributing it again. Type-3/5/7 LSAs support this bit.
 
+```text
 > VPN Tag:
+```
 
+```text
 If the DN bit is not supported on the device, you can use the VPN Tag instead. This is essentially a fallback when DN bit cannot be used reliably and has the purpose/use.
+```
 
+```text
 > Domain ID community:
+```
 
 This is probably the most important when it comes to dealing with different areas or route manipulation. This simple tag ensure routes are redistributed with the correct LSA types. Summed up to if the domain-ids match, it's treated as a Type-3, else it's a Type-5.
 
+```text
 > IE: we are using the L3VPN as an induced Superbackbone to seperate the non (NSSA) compatible areas.
+```
 
 So back to the primary scenario. By default (with proper export configurations), this should work for the most part but there may be instances on the CE side in their OSPF LSDB that would result in non-optimal routing or blackholing of traffic.
 
@@ -298,7 +320,9 @@ Lệnh này  có tác dụng với LSA Type 3, convert sang LSA T5
 
 domain-vpn-tag 0; or no-domain-vpn-tag; ->> lệnh này tắt DN bit và set vpn-tag là 0 cho route được advertise từ SPOKE VRF to CE. Lệnh này set ở SPOKE VRF
 
+```text
 >- có tác dụng với LSA Type 5
+```
 
 For Type 3 summary LSAs, routing loops are not a concern because the hub CE router, as an area border router (ABR), reoriginates the LSAs with the DN bit clear and sends them back to the hub PE router. However, the hub CE router does not reoriginate external LSAs, because they have an AS flooding scope.
 
@@ -306,9 +330,13 @@ Khi sử dụng vrf-target thì extended community rte-type được tự dộn
 
 Khi sử dụng vrf-import/export thì extended community rte-type không được tự dộng add vào route quảng bá sang MP-BGP
 
+```text
 >>> Khi sử dụng vrf-import/export thì tất cả route sẽ được remote PE được xem là external (do không có rte-type)
+```
 
+```text
 >>> Khi sử dụng vrf-target thì route LSA T 1,2,3 sẽ được remote PE adv theo LSA type 3 (tái tạo từ rte-type)
+```
 
 To get these routes advertised as hub-routes to spoke sites, I have 2 options:
 
@@ -386,7 +414,9 @@ change in later versions?
 
 The default behavior of an OSPF domain ID causes some problems for hub-and-spoke Layer 3 VPNs configured with OSPF between the hub PE router and the hub CE router when the routes are not aggregated. A hub-and-spoke configuration has a hub PE router with direct links to a hub CE router. The hub PE router receives Layer 3 BGP updates from the other remote spoke PE routers, and these are imported into the spoke routing instance. From the spoke routing instance, the OSPF LSAs are originated and sent to the hub CE router.
 
+```text
 The hub CE router typically aggregates these routes, and then sends these newly originated LSAs back to the hub PE router. The hub PE router exports the BGP updates to the remote spoke PE routers containing the aggregated prefixes. However, if there are nonaggregated Type 3 summary LSAs or external LSAs, two issues arise with regard to how the hub PE router originates and sends LSAs to the hub CE router, and how the hub PE router processes LSAs received from the hub CE router:
+```
 
 - By default, all LSAs originated by the hub PE router in the spoke routing instance have the DN bit set. Also, all externally originated LSAs have the VPN route tag set. These settings help prevent routing loops. For Type 3 summary LSAs, routing loops are not a concern because the hub CE router, as an area border router (ABR), reoriginates the LSAs with the DN bit clear and sends them back to the hub PE router. However, the hub CE router does not reoriginate external LSAs, because they have an AS flooding scope.
 
@@ -431,10 +461,13 @@ The CE routers are running OSPF with the PE routers. The PE routers redistribute
 
 ## LSA Translation
 
+```text
 Taking the above image as an example. R7 is running OSPF with R2. R2 is also running OSPF with R5 and so any LSA updates are sent to R5 from R7 as per standard OSPF rules. When R2 needs to advertise the route over to R4, that LSA needs to be converted to a VPNv4 route. R4 will then convert that VPNv4 route back to an OSPF route on the other side. So how does the RFC state this LSA must be translated?
+```
 
 Section 4.2.6 of the RFC states:
 
+```text
 > For every address prefix that was installed in the VRF by one of its associated OSPF instances, the PE must create a VPN-IPv4 route in BGP. Each such route will have some of the
 >
 > following Extended Communities attributes:
@@ -444,6 +477,7 @@ Section 4.2.6 of the RFC states:
 > - OSPF Route Type Extended Communities Attribute. This attribute MUST be present. It is encoded with a two-byte type field, and its type is 0306. To ensure backward compatibility, the type 8000 SHOULD be accepted as well and treated as if it were type 0306. The remaining six bytes of the Attribute are encoded as follows:
 >
 > Area Number – Route Type – Options
+```
 
 In the test network I have already configured mutual redistribution between OSPF and BGP on both PE routers. Let’s see if the VPNv4 routes match what we expect from the RFC. R7 is advertising it’s loopback into OSPF. R2 converts this to a VPNv4 route. Let’s dig into the VPNv4 route itself:
 
@@ -475,7 +509,9 @@ OSPF DOMAIN ID:0x0005:0x000000010200
 
 IOS has encoded a type 005 domain ID with a value of 000000010200. This is interesting as I have not hard-coded a domain ID. Section 4.2.4 of the RFC states:
 
+```text
 > Each OSPF instance MUST be associated with one or more Domain Identifiers. This MUST be configurable, and the default value (if none is configured) SHOULD be NULL.
+```
 
 I have not configured one yet there is one. This means IOS is configuring one automatically even though it SHOULD be null.
 
@@ -497,11 +533,13 @@ This VPNv4 update is now sent over to R4, who needs to take that information and
 
 Sescion 4.2.8.1 of the RFC states:
 
+```text
 > With respect to a particular OSPF instance associated with a VRF, a VPN-IPv4 route that is installed in the VRF and then selected as the preferred route is treated as an External Route if one of the following conditions holds:
 >
 > - The route type field of the OSPF Route Type Extended Community has an OSPF route type of “external”
 >
 > - The route is from a different domain from the domain of the OSPF instance
+```
 
 What this means is that if a route comes into a PE as an External or NSSA-External , it will always be so. It can never change. If a route comes in with a type of 1, 2, or 3; and the domain-id matches – then the local PE will originate a new type-3 LSA. i.e. the route will appear inter-area on the other customer sites.
 
@@ -523,19 +561,27 @@ Options: (No TOS-capability, DC, Downward)
 
 LS Type: Summary Links(Network)
 
+```text
 Link State ID: 7.7.7.7 (summary Network Number)
+```
 
 Advertising Router: 4.4.4.4
 
 LS Seq Number: 80000001
 
+```text
 Checksum: 0x1EDF
+```
 
+```text
 Length: 28
+```
 
 Network Mask: /32
 
+```text
 MTID: 0 Metric: 2
+```
 
 We see the 7.7.7.7/32 LSA coming from 4.4.4.4. This means the OSPF route should be inter area:
 
@@ -589,17 +635,29 @@ Options: (No TOS-capability, DC)
 
 LS Type: AS External Link
 
+```text
 Link State ID: 7.7.7.7 (External Network Number )
+```
 
+```text
 Checksum: 0x863A
+```
 
+```text
 Length: 36
+```
 
+```text
 Metric Type: 2 (Larger than any link state path)
+```
 
+```text
 MTID: 0
+```
 
+```text
 Metric: 2
+```
 
 Forward Address: 0.0.0.0
 
@@ -715,7 +773,9 @@ In order to understand the purpose of the sham link, you first need to understan
 
 ## The Problem
 
+```text
 From the previous post it was clear that it did not matter if the LSA received by a PE from a CE was type1, type2, or type3. That LSA would always be either type3 or type5 on the remote side. While this is perfectly fine most of the time, there are times when this is less than ideal. I’ll add a low-speed serial link between R5 and R6 and enable regular OSPF over the link like so:
+```
 
 [![](http://web.archive.org/web/20140706194319im_/http://mellowd.co.uk/ccie/wp-content/uploads/2014/01/RFC4577_4.png)](http://web.archive.org/web/20140706194319/http://mellowd.co.uk/ccie/wp-content/uploads/2014/01/RFC4577_4.png)
 
@@ -825,15 +885,21 @@ Sham Link OSPF\_SL0 to address 40.40.40.40 is up
 
 Area 0 source address 20.20.20.20
 
+```text
 Run as demand circuit
+```
 
+```text
 DoNotAge LSA allowed. Cost of using 1 State POINT\_TO\_POINT,
+```
 
 Timer intervals configured, Hello 10, Dead 40, Wait 40,
 
 Hello due in 00:00:04
 
+```text
 Adjacency State FULL (Hello suppressed)
+```
 
 Index 3/3, retransmission queue length 0, number of retransmission 0
 
@@ -891,15 +957,21 @@ Packet sent with a source address of 5.5.5.5
 
 ...
 
+```text
 Success rate is 0 percent (0/3)
+```
 
 Section 4.2.7.4 of the RFC tells us why this is happening:
 
+```text
 > Any other route advertised in an LSA that is transmitted over a sham link MUST also be redistributed (by the PE flooding the LSA over the sham link) into BGP. This means that if the preferred (OSPF) route for a given address prefix has the sham link as its next hop interface, then there will also be a “corresponding BGP route”, for that same address prefix, installed in the VRF. Per Section 4.1.2, the OSPF route is preferred. However, when forwarding a packet, if the preferred route for that packet has the sham link as its next hop interface, then the packet MUST be forwarded according to the corresponding BGP route. That is, it will be forwarded as if the corresponding BGP route had been the preferred route. The “corresponding BGP route” is always a VPN-IPv4 route; the procedure for forwarding a packet over a VPN-IPv4 route is described in [VPN].
+```
 
 The part of section 4.1.2 reffered to in the section above states:
 
+```text
 > If a VRF contains both an OSPF-distributed route and a VPN-IPv4 route for the same IPv4 prefix, then the OSPF-distributed route is preferred. In general, this means that forwarding is done according to the OSPF route. The one exception to this rule has to do with the “sham link”. If the next hop interface for an installed (OSPFdistributed) route is the sham link, forwarding is done according to a corresponding BGP route. This is detailed in Section 4.2.7.4.
+```
 
 So while R2 has an OSPF-learned route through the sham-link, it does NOT have a BGP-learned route to actually do the forwarding on. R2 and R4 will have to redistribute the OSPF routes into BGP. They do NOT however have to move those BGP routes back into OSPF on the other side.
 
@@ -1041,7 +1113,9 @@ R2#
 
 R2#sh ip ospf 100 neigh
 
+```text
 Neighbor ID Pri State Dead Time Address Interface
+```
 
 7. 7.7.7 1 FULL/DR 00:00:38 10.1.2.1 FastEthernet1/0
 
@@ -1063,7 +1137,9 @@ IfIndex = 2
 
 DoNotAge LSA allowed., Cost of using 1
 
+```text
 Transmit Delay is 1 sec, State DOWN,
+```
 
 Timer intervals configured, Hello 10, Dead 40, Wait 40, Retransmit 5
 
@@ -1240,11 +1316,13 @@ As soon as type3s and type5s are used, OSPF becomes a little more distance vecto
 
 Let’s go back to RFC 4577, specifically [section 4.2.5.1](http://web.archive.org/web/20140706205847/http://tools.ietf.org/html/rfc4577#section-4.2.5.1)
 
+```text
 > When a type 3 LSA is sent from a PE router to a CE router, the DN bit [OSPF-DN] in the LSA Options field MUST be set. This is used to ensure that if any CE router sends this type 3 LSA to a PE router, the PE router will not redistribute it further.
 >
 > When a PE router needs to distribute to a CE router a route that comes from a site outside the latter’s OSPF domain, the PE router presents itself as an ASBR (Autonomous System Border Router), and distributes the route in a type 5 LSA. The DN bit [OSPF-DN] MUST be set in these LSAs to ensure that they will be ignored by any other PE routers that receive them.
 >
 > There are deployed implementations that do not set the DN bit, but instead use OSPF route tagging to ensure that a type 5 LSA generated by a PE router will be ignored by any other PE router that may receive it. A special OSPF route tag, which we will call the VPN Route Tag (see Section 4.2.5.2), is used for this purpose. To ensure backward compatibility, all implementations adhering to this specification MUST by default support the VPN Route Tag procedures specified in Sections 4.2.5.2, 4.2.8.1, and 4.2.8.2. When it is no longer necessary to use the VPN Route Tag in a particular deployment, its use (both sending and receiving) may be disabled by configuration.
+```
 
 Essentially, if an LSA arrives at a PE with the down bit set, that will never be redistributed into BGP. This prevents the route from leaking in from one PE back into another PE.
 
@@ -1258,9 +1336,13 @@ LS age: 441
 
 LS Seq Number: 80000003
 
+```text
 Checksum: 0x5636
+```
 
+```text
 Options state ‘Downward’ – This LSA is flooded to R6 -> R5 -> R3. R3, another PE, will have the LSA (all databases need to match remember) but it will not use the LSA. The routing bit will not be set, and it will not redistribute that into BGP either:
+```
 
 R3# show ip ospf database summary 7.7.7.7 adv-router 4.4.4.4
 
@@ -1268,7 +1350,9 @@ OSPF Router with ID (10.0.35.3) (Process ID 1)
 
 LS age: 597
 
+```text
 The same happens vice-versa. Any LSA originated by R3 to R5, will be received but not used by R4.
+```
 
 [![](http://web.archive.org/web/20140706205847im_/http://mellowd.co.uk/ccie/wp-content/uploads/2014/02/loop_ospf2.png)](http://web.archive.org/web/20140706205847/http://mellowd.co.uk/ccie/wp-content/uploads/2014/02/loop_ospf2.png)
 
@@ -1280,7 +1364,9 @@ R6#sh ip ospf database summary 7.7.7.7 adv-router 4.4.4.4
 
 LS age: 20
 
+```text
 Checksum: 0x5A34
+```
 
 Down bit set on the type3.
 
@@ -1288,6 +1374,7 @@ Down bit set on the type3.
 
 Let’s go back to the RFC to see what this is all about. [Section 4.2.5.2](http://web.archive.org/web/20140706205847/http://tools.ietf.org/html/rfc4577#section-4.2.5.2)
 
+```text
 > If a particular VRF in a PE is associated with an instance of OSPF, then by default it MUST be configured with a special OSPF route tag value, which we call the VPN Route Tag. By default, this route tag MUST be included in the Type 5 LSAs that the PE originates (as the result of receiving a BGP-distributed VPN-IPv4 route, see Section 4.2.8) and sends to any of the attached CEs.
 >
 > The configuration and inclusion of the VPN Route Tag is required for backward compatibility with deployed implementations that do not set the DN bit in type 5 LSAs. The inclusion of the VPN Route Tag may be disabled by configuration if it has been determined that it is no longer needed for backward compatibility.
@@ -1297,6 +1384,7 @@ Let’s go back to the RFC to see what this is all about. [Section 4.2.5.2](htt
 > If the Autonomous System number is four bytes long, then a Route Tag value MUST be configured, and it MUST be distinct from any Route Tag used within the VPN itself.
 >
 > If a PE router needs to use OSPF to distribute to a CE router a route that comes from a site outside the CE router’s OSPF domain, the PE router SHOULD present itself to the CE router as an Autonomous System Border Router (ASBR) and SHOULD report such routes as AS-external routes. That is, these PE routers originate Type 5 LSAs reporting the extra-domain routes as AS-external routes. Each such Type 5 LSA MUST contain an OSPF route tag whose value is that of the VPN Route Tag. This tag identifies the route as having come from a PE router. The VPN Route Tag MUST be used to ensure that a Type 5 LSA originated by a PE router is not redistributed through the OSPF area to another PE router.
+```
 
 Note that it says the OSPF should set a route-tag when the implementation doesn’t support setting the down bit in type5 LSAs. Also note in the previous RFC quote that it did note an implementation could set the down bit in type5s if desired. At this point I’ve stopped advertising R7′s loopback directly into OSPF and simply redistributed the loopback. This ensures that the LSA is external.
 
@@ -1306,9 +1394,13 @@ R6#show ip ospf database external 7.7.7.7 adv-router 4.4.4.4
 
 LS age: 38
 
+```text
 Checksum: 0x77C7
+```
 
+```text
 Metric: 20
+```
 
 Notice no down bit. Also note the originator of this type5 is R4 itself. Finally the route has an external route tag of 3489661028
 
@@ -1328,7 +1420,9 @@ R6#sh ip ospf database external 7.7.7.7 adv-router 4.4.4.4
 
 LS age: 11
 
+```text
 Checksum: 0xEFCE
+```
 
 IOS-XR and IOS have the same behaviour.
 
@@ -1358,7 +1452,9 @@ Take a look at the type5 on R6. The domain-tag matches the 32bit AS number direc
 
 LS age: 76
 
+```text
 Checksum: 0x2C48
+```
 
 External Route Tag: 4294967295
 
@@ -1370,7 +1466,9 @@ Considering the domain-tag matches, it stands to reason that any inter-AS VPN us
 
 IOS-XR’s 32bit external behaviour is identical to IOS:
 
+```text
 Checksum: 0xA44F
+```
 
 Once again, IOS and IOS-XR have the same behaviour.
 

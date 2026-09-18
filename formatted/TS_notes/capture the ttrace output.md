@@ -24,7 +24,9 @@ Idx PFE ASIC PPE Ctx Zn   Pending     IDX/Steps/Total  FLAG  CURR\_PC  
 
 [JTAC] The limit is 32(0-31) clients. I noticed fpc crash when I ran ttrace after this limit in a lab device.
 
+```text
 3/. As you said it hit the number limitation of ttrace so it caused FPC to raise the major alarm "Major alarm set, FPC 0 Major Errors - Lkup Error code: 0x40008". Could you please explain the logic on this point?
+```
 
 [JTAC] I will check this and get back once I have more details on this.
 

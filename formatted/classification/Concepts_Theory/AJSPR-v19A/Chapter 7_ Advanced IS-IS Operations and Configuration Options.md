@@ -8,9 +8,11 @@ Chapter 7: Advanced IS-IS Operations and Configuration Options
 
 LSP Flooding Scopes
 
-- Level 1 link-state PDUs (LSPs) are generated within each area. Because these LSPs have a Level 1 flooding scope, they remain within their own particular area and are not seen in other areas.
-- The L1/L2 router at the edge of the area places the routing information contained within the LSP into a Level 2 LSP and forwards it across the area boundary.
-- All Level 2 LSPs are flooded across every contiguous Level 2 area. This flooding results in Level 2 LSPs within every area that represents all IS-IS routes.
+```text
+Level 1 link-state PDUs (LSPs) are generated within each area. Because these LSPs have a Level 1 flooding scope, they remain within their own particular area and are not seen in other areas.
+The L1/L2 router at the edge of the area places the routing information contained within the LSP into a Level 2 LSP and forwards it across the area boundary.
+All Level 2 LSPs are flooded across every contiguous Level 2 area. This flooding results in Level 2 LSPs within every area that represents all IS-IS routes.
+```
 
 Shortest-Path-First Algorithm
 
@@ -37,7 +39,9 @@ Controlling SPF Calculations
 
 [edit protocols isis]
 
+```text
 user@router# **show spf-options ?**
+```
 
 Possible completions:
 
@@ -54,7 +58,9 @@ rapid-runs                          Number ot rapid SP
 
 [edit protocols isis]
 
+```text
 user@router# set spf-delay 100
+```
 
 Partial Route Calculation
 
@@ -65,7 +71,9 @@ Partial Route Calculation
 
 - Only recalculates the IP reachability information
 
-- Received LSPs are examined for changes
+```text
+Received LSPs are examined for changes
+```
 
 - Automatically enabled and cannot be disabled
 
@@ -94,7 +102,9 @@ IS-IS Wide Metrics
 
 [edit protocols isis]
 
+```text
 user@router# **set level 2 wide-metrics-only**
+```
 
 - The default operation of IS-IS is to advertise both the small and wide metric TLVs in all LSPs
 
@@ -123,7 +133,9 @@ Authentication Configuration
 
 - Level authentication affects all IS-IS PDUs
 
-- Link-state, sequence number, and hello
+```text
+Link-state, sequence number, and hello
+```
 
 - Per-interface authentication affects hello PDUs only and takes precedence over per-level settings
 
@@ -158,7 +170,9 @@ Mesh Groups
 
 - Once configured, the group members do not reflood LSPs within the group
 
-- Only LSPs received from outside the group membership are flooded within the group.
+```text
+Only LSPs received from outside the group membership are flooded within the group.
+```
 
 ![](image/108a9786a38d7447408cdc9aa03467b0.png)
 
@@ -172,7 +186,9 @@ Mesh Groups
 
 [edit protocols isis]
 
+```text
 user@router# show
+```
 
 interface ge-0/0/1.0 {
 
@@ -249,14 +265,18 @@ Prefix Limits for External Routes
 
 - When the limit is reached:
 
-- External routing information no longer transmitted in LSPs
-- Overload state initiated
+```text
+External routing information no longer transmitted in LSPs
+Overload state initiated
+```
 
 - Requires a manual step to fix the problem
 
 [edit protocols isis]
 
+```text
 user@router# show
+```
 
 level 1 {
 

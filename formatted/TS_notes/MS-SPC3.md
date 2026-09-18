@@ -6,6 +6,10 @@
 
 Mức cam kết
 
+```text
 VTEL: 150Gbps
+```
 
+```text
 VNPT: 90Gbps
+```

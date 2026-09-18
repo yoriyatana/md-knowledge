@@ -31,9 +31,11 @@ Liên quan đến lỗi ping mpls ldp từ box HCM-ASBR2 về box HGG-PE2, bên 
 
 * *Các phân tích và hướng xử lý tiếp theo**
 
-- SVT+Juniper ATAC đã check trực tiếp trên các box liên quan và chưa phát hiện gì bất thường.
-- Các quá trình push nhãn và swap nhãn toàn trình (về mặt control plane) đều đúng thông tin, không có hiện tượng hay log thể hiện bị stuck hay failed việc swap nhãn (vì trên thực tế data traffic vẫn đi qua bình thường).
-- Hiện tại, bên em đang nghi ngờ lỗi này chỉ liên quan đến việc xử lý và hiển thị kết quả ping và traceroute mpls ldp, chứ không ảnh hưởng gì đến data plane thực.
-- Để làm rõ và khoanh vùng chính xác, bên em đề xuất apply firewall filter để counter gói tin mpls ping khi được khởi tạo từ HCM-ASBR2, apply trên các box dọc tuyến đường để confirm chính xác gói tin đang bị drop ở đâu.
+```text
+SVT+Juniper ATAC đã check trực tiếp trên các box liên quan và chưa phát hiện gì bất thường.
+Các quá trình push nhãn và swap nhãn toàn trình (về mặt control plane) đều đúng thông tin, không có hiện tượng hay log thể hiện bị stuck hay failed việc swap nhãn (vì trên thực tế data traffic vẫn đi qua bình thường).
+Hiện tại, bên em đang nghi ngờ lỗi này chỉ liên quan đến việc xử lý và hiển thị kết quả ping và traceroute mpls ldp, chứ không ảnh hưởng gì đến data plane thực.
+Để làm rõ và khoanh vùng chính xác, bên em đề xuất apply firewall filter để counter gói tin mpls ping khi được khởi tạo từ HCM-ASBR2, apply trên các box dọc tuyến đường để confirm chính xác gói tin đang bị drop ở đâu.
+```
 
 Bên em gửi cấu hình cho firewall này, và nhờ các anh chị sắp xếp thời gian phối hợp thực hiện ạ.

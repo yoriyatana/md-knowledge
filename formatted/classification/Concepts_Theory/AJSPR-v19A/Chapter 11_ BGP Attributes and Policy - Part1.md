@@ -9,15 +9,19 @@
 
 - BGP stores routes in three main RIB memory tables
 
-- RIB-IN: Stores all received routes
-- RIB-LOCAL: Stores routes the local router uses to forward traffic
-- RIB-OUT: Stores all advertised routes
+```text
+RIB-IN: Stores all received routes
+RIB-LOCAL: Stores routes the local router uses to forward traffic
+RIB-OUT: Stores all advertised routes
+```
 
 - Only active BGP routes in the local routing table are advertised to peers
 
-- Single best BGP path is advertised
-- An overshadowed BGP route can be advertised if the **advertise-inactive** option is configured
-- More than one BGP route can be advertised using the add-path option
+```text
+Single best BGP path is advertised
+An overshadowed BGP route can be advertised if the **advertise-inactive** option is configured
+More than one BGP route can be advertised using the add-path option
+```
 
 * *BGP Import Policy**
 

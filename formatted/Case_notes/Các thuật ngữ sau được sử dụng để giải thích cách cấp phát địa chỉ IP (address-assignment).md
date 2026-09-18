@@ -8,9 +8,11 @@ Các thuật ngữ sau được sử dụng để giải thích cách cấp phá
 
 Ví dụ dãy A có chỉ có 1 đoạn IP gồm 192.0.2.1, 192.0.2.2, 192.0.2.3, 192.0.2.4. Khi đó:
 
-- lowAddress: 192.0.2.1
-- highAddress: 190.0.2.4
-- Nếu 192.0.2.2 là địa chỉ vừa được cấp phát, thì nextAddress: 192.0.2.3
+```text
+lowAddress: 192.0.2.1
+highAddress: 190.0.2.4
+Nếu 192.0.2.2 là địa chỉ vừa được cấp phát, thì nextAddress: 192.0.2.3
+```
 
 Cách cấp phát liên tục (mặc định) để tìm ra IP address trống dùng cấp cho thuê bao:
 

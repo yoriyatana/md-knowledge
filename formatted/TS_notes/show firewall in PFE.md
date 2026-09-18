@@ -2,11 +2,15 @@
 
 =~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2021.08.02 19:50:42 =~=~=~=~=~=~=~=~=~=~=~=
 
+```text
 run             exit
+```
 
 Exiting configuration mode
 
+```text
 admin-full@NIX-Router> show interfaces filters | no-more
+```
 
 Interface       Admin Link Proto Input Filter         Output Filter
 
@@ -258,7 +262,9 @@ tap             up    up
 
 vtep            up    up
 
+```text
 admin-full@NIX-Router> show firewall filter PROTECT-RE | no-more
+```
 
 Filter: PROTECT-RE
 
@@ -276,15 +282,25 @@ POLICER-2M-ACCEPT-SSH                             �
 
 POLICER-3M-ACCEPT-ICMP-INTERNAL                         0                    0
 
+```text
 admin-full@NIX-Router> show firewall filter PROTECT-RE-LS logical-system vsys-int-nix | no-more
+```
 
+```text
 admin-full@NIX-Router> show firewall filter PROTECT-RE-LS-lo0.0-i logical-system vsys-int-nix | no-more
+```
 
+```text
 admin-full@NIX-Router> show firewall filter PROTECT-RE-LS logical-system vsys-bgp-nix | no-more
+```
 
+```text
 admin-full@NIX-Router> show firewall filter PROTECT-RE-LS-lo0.1-i logical-system vsys-bgp-nix | no-more
+```
 
+```text
 admin-full@NIX-Router> start shell pfe network fpc0
+```
 
 SMPC platform (1601Mhz Intel(R) Atom(TM) CPU processor, 3168MB memory, 8192KB flash)
 
@@ -324,7 +340,9 @@ service-msg           display DFW service message information
 
 shared-pol            display all shared policer information
 
+```text
 state                 show filter state info
+```
 
 summary               display filter summary information
 
@@ -540,7 +558,9 @@ service-msg           display DFW service message information
 
 shared-pol            display all shared policer information
 
+```text
 state                 show filter state info
+```
 
 summary               display filter summary information
 
@@ -626,7 +646,9 @@ terSMPC0(NIX-Router vty)# show  filter    1
 
 ^
 
+```text
 Syntax error at `1'.
+```
 
 SMPC0(NIX-Router vty)# [A      show SMPC0(NIX-Router vty)# show       fil
 
@@ -778,7 +800,9 @@ jnh inst = 0x0
 
 Filter properties: None
 
+```text
 Filter state = CONSISTENT
+```
 
 term DISCARD-SMALL-PACKETS
 
@@ -1432,52 +1456,94 @@ Index               Packets                 Byte
 
 SMPC0(NIX-Router vty)# exit
 
+```text
 admin-full@NIX-Router> show route 218.92.150.130 |no-more
+```
 
+```text
 admin-full@NIX-Router> show route 129.211.94.30 |no-more
+```
 
+```text
 admin-full@NIX-Router> show route 81.70.57.192 |no-more
+```
 
+```text
 admin-full@NIX-Router> show route 129.211.119.145 |no-more
+```
 
+```text
 admin-full@NIX-Router> show route 49.234.109.61 |no-more
+```
 
+```text
 admin-full@NIX-Router> show route 186.188.80.244 |no-more
+```
 
+```text
 admin-full@NIX-Router> show route 220.179.5.252 |no-more
+```
 
+```text
 admin-full@NIX-Router> show route 104.236.35.211 |no-more
+```
 
+```text
 admin-full@NIX-Router> show route 106.75.251.140 |no-more
+```
 
+```text
 admin-full@NIX-Router> show route 159.203.119.1 |no-more
+```
 
+```text
 admin-full@NIX-Router> show route 189.113.131.44 |no-more
+```
 
+```text
 admin-full@NIX-Router> show route 61.177.173.17 |no-more
+```
 
+```text
 admin-full@NIX-Router> show route 218.92.150.130 logical-system vsys-bgp-nix | no-more
+```
 
+```text
 inet.0: 16315 destinations, 39858 routes (16315 active, 0 holddown, 0 hidden)
+```
 
 + = Active Route, - = Last Active, \* = Both
 
 0. 0.0.0/0          \*[BGP/170] 00:34:52, localpref 250, from 192.168.1.1
 
+```text
 AS path: 45543 I, validation-state: unverified
+```
 
+```text
 >  to 103.152.49.1 via xe-0/1/0.0
+```
 
 [BGP/170] 00:35:41, localpref 100
 
+```text
 AS path: 18403 I, validation-state: unverified
+```
 
+```text
 >  to 42.114.208.69 via xe-0/1/6.0
+```
 
 [BGP/170] 00:34:57, localpref 100
 
+```text
 AS path: 45903 I, validation-state: unverified
+```
 
+```text
 >  to 119.82.139.233 via xe-0/1/5.0
+```
 
+```text
 admin-full@NIX-Router>
+```

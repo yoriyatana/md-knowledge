@@ -448,7 +448,9 @@ Task 1:
 
 + bgp {
 
-+ group ibgp {
+```text
+group ibgp {
+```
 
 + type internal;
 
@@ -948,9 +950,13 @@ Task 3:
 
 [edit protocols bgp]
 
+```text
 group ibgp { ... }
+```
 
-+ group ebgp\_R11 {
+```text
+group ebgp\_R11 {
+```
 
 + type external;
 
@@ -1212,7 +1218,9 @@ Task 4, 5, 6:
 
 + bgp {
 
-+ group C3\_S1 {
+```text
+group C3\_S1 {
+```
 
 + type external;
 
@@ -1246,7 +1254,9 @@ Task 4, 5, 6:
 
 + bgp {
 
-+ group C3\_S1 {
+```text
+group C3\_S1 {
+```
 
 + type external;
 
@@ -1446,7 +1456,9 @@ Task 4, 5, 6:
 
 + bgp {
 
-+ group C3\_S1 {
+```text
+group C3\_S1 {
+```
 
 + type external;
 
@@ -1480,7 +1492,9 @@ Task 4, 5, 6:
 
 + bgp {
 
-+ group C3\_S1 {
+```text
+group C3\_S1 {
+```
 
 + type external;
 
@@ -1596,7 +1610,9 @@ Task 4, 5, 6:
 
 + bgp {
 
-+ group C3\_S2 {
+```text
+group C3\_S2 {
+```
 
 + type external;
 
@@ -1710,7 +1726,9 @@ Task 4, 5, 6:
 
 + bgp {
 
-+ group C3\_S2\_2 {
+```text
+group C3\_S2\_2 {
+```
 
 + type external;
 
@@ -1824,7 +1842,9 @@ Task 4, 5, 6:
 
 + bgp {
 
-+ group C3\_S2\_1 {
+```text
+group C3\_S2\_1 {
+```
 
 + type external;
 
@@ -2272,13 +2292,17 @@ encrypted-password "$6$SL/eyx1r$Y9lehX2oBKHEEH55H2FDBYXlKo4QKd/TJakrbqUqDJCW0Vbp
 
 services {
 
+```text
 ssh;
+```
 
 telnet;
 
 netconf {
 
+```text
 ssh;
+```
 
 }
 
@@ -2292,7 +2316,9 @@ any emergency;
 
 }
 
+```text
 file messages {
+```
 
 any notice;
 
@@ -2300,7 +2326,9 @@ authorization info;
 
 }
 
+```text
 file interactive-commands {
+```
 
 interactive-commands any;
 
@@ -2474,7 +2502,9 @@ interface ge-0/0/1.0;
 
 bgp {
 
+```text
 group ibgp {
+```
 
 type internal;
 
@@ -2718,7 +2748,9 @@ protocols {
 
 bgp {
 
+```text
 group C3\_S1 {
+```
 
 type external;
 
@@ -2766,7 +2798,9 @@ protocols {
 
 bgp {
 
+```text
 group C3\_S1 {
+```
 
 type external;
 
@@ -2860,11 +2894,15 @@ encrypted-password "$6$SL/eyx1r$Y9lehX2oBKHEEH55H2FDBYXlKo4QKd/TJakrbqUqDJCW0Vbp
 
 services {
 
+```text
 ssh;
+```
 
 netconf {
 
+```text
 ssh;
+```
 
 }
 
@@ -2878,7 +2916,9 @@ any emergency;
 
 }
 
+```text
 file messages {
+```
 
 any notice;
 
@@ -2886,7 +2926,9 @@ authorization info;
 
 }
 
+```text
 file interactive-commands {
+```
 
 interactive-commands any;
 
@@ -3054,7 +3096,9 @@ interface ge-0/0/4.0;
 
 bgp {
 
+```text
 group ibgp {
+```
 
 type internal;
 
@@ -3288,7 +3332,9 @@ protocols {
 
 bgp {
 
+```text
 group C3\_S1 {
+```
 
 type external;
 
@@ -3322,7 +3368,9 @@ protocols {
 
 bgp {
 
+```text
 group C3\_S1 {
+```
 
 type external;
 
@@ -3418,11 +3466,15 @@ encrypted-password "$6$SL/eyx1r$Y9lehX2oBKHEEH55H2FDBYXlKo4QKd/TJakrbqUqDJCW0Vbp
 
 services {
 
+```text
 ssh;
+```
 
 netconf {
 
+```text
 ssh;
+```
 
 }
 
@@ -3436,7 +3488,9 @@ any emergency;
 
 }
 
+```text
 file messages {
+```
 
 any notice;
 
@@ -3444,7 +3498,9 @@ authorization info;
 
 }
 
+```text
 file interactive-commands {
+```
 
 interactive-commands any;
 
@@ -3594,7 +3650,9 @@ interface ge-0/0/1.0;
 
 bgp {
 
+```text
 group ibgp {
+```
 
 type internal;
 
@@ -3628,7 +3686,9 @@ neighbor 10.210.1.10;
 
 }
 
+```text
 group ebgp\_R11 {
+```
 
 type external;
 
@@ -3922,11 +3982,15 @@ encrypted-password "$6$SL/eyx1r$Y9lehX2oBKHEEH55H2FDBYXlKo4QKd/TJakrbqUqDJCW0Vbp
 
 services {
 
+```text
 ssh;
+```
 
 netconf {
 
+```text
 ssh;
+```
 
 }
 
@@ -3940,7 +4004,9 @@ any emergency;
 
 }
 
+```text
 file messages {
+```
 
 any notice;
 
@@ -3948,7 +4014,9 @@ authorization info;
 
 }
 
+```text
 file interactive-commands {
+```
 
 interactive-commands any;
 
@@ -4126,7 +4194,9 @@ interface ge-0/0/3.0;
 
 bgp {
 
+```text
 group ibgp {
+```
 
 type internal;
 
@@ -4340,7 +4410,9 @@ protocols {
 
 bgp {
 
+```text
 group C3\_S2 {
+```
 
 type external;
 
@@ -4434,11 +4506,15 @@ encrypted-password "$6$SL/eyx1r$Y9lehX2oBKHEEH55H2FDBYXlKo4QKd/TJakrbqUqDJCW0Vbp
 
 services {
 
+```text
 ssh;
+```
 
 netconf {
 
+```text
 ssh;
+```
 
 }
 
@@ -4452,7 +4528,9 @@ any emergency;
 
 }
 
+```text
 file messages {
+```
 
 any notice;
 
@@ -4460,7 +4538,9 @@ authorization info;
 
 }
 
+```text
 file interactive-commands {
+```
 
 interactive-commands any;
 
@@ -4664,7 +4744,9 @@ interface ge-0/0/4.0;
 
 bgp {
 
+```text
 group ibgp {
+```
 
 type internal;
 
@@ -4920,7 +5002,9 @@ protocols {
 
 bgp {
 
+```text
 group C3\_S2\_2 {
+```
 
 type external;
 
@@ -5014,11 +5098,15 @@ encrypted-password "$6$SL/eyx1r$Y9lehX2oBKHEEH55H2FDBYXlKo4QKd/TJakrbqUqDJCW0Vbp
 
 services {
 
+```text
 ssh;
+```
 
 netconf {
 
+```text
 ssh;
+```
 
 }
 
@@ -5032,7 +5120,9 @@ any emergency;
 
 }
 
+```text
 file messages {
+```
 
 any notice;
 
@@ -5040,7 +5130,9 @@ authorization info;
 
 }
 
+```text
 file interactive-commands {
+```
 
 interactive-commands any;
 
@@ -5174,7 +5266,9 @@ interface ge-0/0/3.0;
 
 bgp {
 
+```text
 group ibgp {
+```
 
 type internal;
 
@@ -5478,7 +5572,9 @@ protocols {
 
 bgp {
 
+```text
 group C3\_S2\_1 {
+```
 
 type external;
 
@@ -5546,11 +5642,15 @@ encrypted-password "$6$SL/eyx1r$Y9lehX2oBKHEEH55H2FDBYXlKo4QKd/TJakrbqUqDJCW0Vbp
 
 services {
 
+```text
 ssh;
+```
 
 netconf {
 
+```text
 ssh;
+```
 
 }
 
@@ -5564,7 +5664,9 @@ any emergency;
 
 }
 
+```text
 file messages {
+```
 
 any notice;
 
@@ -5572,7 +5674,9 @@ authorization info;
 
 }
 
+```text
 file interactive-commands {
+```
 
 interactive-commands any;
 
@@ -5664,7 +5768,9 @@ interface ge-0/0/1.0;
 
 bgp {
 
+```text
 group ibgp {
+```
 
 type internal;
 
@@ -5826,11 +5932,15 @@ encrypted-password "$6$SL/eyx1r$Y9lehX2oBKHEEH55H2FDBYXlKo4QKd/TJakrbqUqDJCW0Vbp
 
 services {
 
+```text
 ssh;
+```
 
 netconf {
 
+```text
 ssh;
+```
 
 }
 
@@ -5844,7 +5954,9 @@ any emergency;
 
 }
 
+```text
 file messages {
+```
 
 any notice;
 
@@ -5852,7 +5964,9 @@ authorization info;
 
 }
 
+```text
 file interactive-commands {
+```
 
 interactive-commands any;
 
@@ -5948,7 +6062,9 @@ interface ge-0/0/1.0;
 
 bgp {
 
+```text
 group ibgp {
+```
 
 type internal;
 
@@ -6124,13 +6240,17 @@ encrypted-password "$6$SL/eyx1r$Y9lehX2oBKHEEH55H2FDBYXlKo4QKd/TJakrbqUqDJCW0Vbp
 
 services {
 
+```text
 ssh;
+```
 
 telnet;
 
 netconf {
 
+```text
 ssh;
+```
 
 }
 
@@ -6144,7 +6264,9 @@ any emergency;
 
 }
 
+```text
 file messages {
+```
 
 any notice;
 
@@ -6152,7 +6274,9 @@ authorization info;
 
 }
 
+```text
 file interactive-commands {
+```
 
 interactive-commands any;
 
@@ -6250,7 +6374,9 @@ bgp {
 
 keep all;
 
+```text
 group ibgp {
+```
 
 type internal;
 

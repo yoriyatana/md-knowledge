@@ -6,7 +6,9 @@ Major CSR:
 
 - Thời gian phản hồi (Response time): 45 phút
 
-- Workaround: 6 ngày
+```text
+Workaround: 6 ngày
+```
 
 - Resolution (Performance fixed):
 
@@ -18,6 +20,8 @@ NFE CSR (đang tính theo HD SLA cũ 2018 - 2020)
 
 - Response time: 4h
 
-- Workaround: 30 ngày
+```text
+Workaround: 30 ngày
+```
 
 - - Resolution (Performance fixed): N/A (Không cam kết)

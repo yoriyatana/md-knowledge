@@ -10,7 +10,9 @@ use notepad++ to remove duplicate entry
 
 Count the number device by UID
 
+```text
 show User ID on EVE
+```
 
 admin            admin 0
 
@@ -90,7 +92,9 @@ F      (l)    Flags (octal and additive) associated with
 
 the process.
 
+```text
 S      (l)    The state of the process.
+```
 
 UID    (f,l)  The user ID number of the process owner;
 

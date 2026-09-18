@@ -17,10 +17,13 @@ SYMPTOMS:
 
 - Compared to the previous LSP output, TLV 2 and TLV 128 are missing, as the wide-metrics-only option is enabled. TLV`s corresponding to the narrow (old style) metric are suppressed
 
-- 'Suppressed' indicates that the local router, which is configured for wide-metric, does not send TLVs 2 and 128; but accepts them, if received.
+```text
+'Suppressed' indicates that the local router, which is configured for wide-metric, does not send TLVs 2 and 128; but accepts them, if received.
+```
 
 - --
 
+```text
 > Note:
 >
 > - TLV`s 2, 22, 128, 134, and 135 are suppressed from being sent.
@@ -28,3 +31,4 @@ SYMPTOMS:
 > - Essentially, no IP prefix and IS neighbor information are exchanged.
 >
 > - So, the routing information is not available.
+```

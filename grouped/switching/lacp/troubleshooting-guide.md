@@ -17,35 +17,61 @@ Phía MX:
 
 [ Thursday, January 13, 2022 11:13 AM ] ⁨SVT.Thái.NĐ⁩: 1. Enable cli timestamp
 
+```text
 set cli timestamp
+```
 
 2. Enable lacp traceoptions and reproduce the issue
 
+```text
 set protocols lacp traceoptions file lacpd.log size 1g world-readable
+```
 
+```text
 set protocols lacp traceoptions flag all
+```
 
+```text
 set routing-options ppm traceoptions flag al
+```
 
+```text
 set routing-options ppm traceoptions file ppmd.log size 1g
+```
 
 3. Take multiple output of below commands in RE.
 
+```text
 show lacp interfaces extensive
+```
 
+```text
 show lacp statistics interfaces
+```
 
+```text
 show interfaces ae | match flap
+```
 
+```text
 show lacp timeouts (multiple times)
+```
 
+```text
 show ppm adjacencies protocol lacp detail
+```
 
+```text
 show ppm transmissions protocol lacp detail
+```
 
+```text
 show ppm adjacencies protocol lacp
+```
 
+```text
 show ppm transmissions protocol lacp
+```
 
 4. Go to PFE shell using any of the below-mentioned methods
 
@@ -59,29 +85,49 @@ b. While at the FreeBSD prompt of RE
 
 vty fpc
 
+```text
 clear ppm statistics first before collecting any data.
+```
 
+```text
 set ppm utrace protocol lacp
+```
 
+```text
 set ppm utrace tcpdump
+```
 
 debug ppm protocol lacp level 3
 
+```text
 set ppm utrace proto
+```
 
+```text
 set ppm utrace all
+```
 
+```text
 show ukern\_trace handles <<<<
+```
 
 search for PPM handle <<<<
 
+```text
 set ukern\_trace  level extensive
+```
 
+```text
 set ukern\_trace  logging enable
+```
 
+```text
 set ukern\_trace  buffer 100000000
+```
 
+```text
 set ukern\_trace  printf enable
+```
 
 Above debugs will be coming continuously. keep separate console and collect the above debugs running on both DUT and PEER device through out the logs collection.
 
@@ -91,11 +137,17 @@ Collect these clis using cprod.
 
 at the start of the logs collection on both sides on PFEs. >> clear ppm statistics
 
+```text
 show ppm statistics protocol lacp
+```
 
+```text
 show ppm transmits protocol lacp
+```
 
+```text
 show ppm statistics detail
+```
 
 freebsd promt:
 
@@ -119,13 +171,21 @@ Below are the commands.
 
 VTY: Both Device.
 
+```text
 show halp-pkt asic-queues
+```
 
+```text
 show dcbcm ifd all
+```
 
+```text
 show halp-pkt hostpath-cfgs
+```
 
+```text
 show halp-pkt pkt-stats    << Multiple outputs.
+```
 
 If drop is seen on PFE-SHIM/HALP, there are commands to enable debug. "debug halp-pkt tx/rx".
 
@@ -157,63 +217,115 @@ However if drop is in HW/BCM then need to check why HW is dropping.
 
 BCM(sad)Both Device)
 
+```text
 Show c
+```
 
+```text
 Show c cpu
+```
 
+```text
 tcpdump -ni
+```
 
 Lấy giúp em các output dưới đây (ở mức shell) vào giờ thấp điểm, và chạy từng lệnh một:
 
+```text
 set cli screen-length 0
+```
 
 ## Check linecard shell-mode
 
+```text
 request pfe execute command "show syslog messages" target fpc2
+```
 
+```text
 request pfe execute command "show nvram" target fpc2
+```
 
+```text
 request pfe execute command "show cmerror module" target fpc2
+```
 
+```text
 request pfe execute command "show hsl2 statistics" target fpc2
+```
 
+```text
 request pfe execute command "show hsl2 statistics crc" target fpc2
+```
 
+```text
 request pfe execute command "show threads cpu" target fpc2
+```
 
+```text
 request pfe execute command "show sched" target fpc2
+```
 
+```text
 >>>> take this output 3 times in the interval of 30secs
+```
 
+```text
 request pfe execute command "show ppm transmits protocol lacp" target fpc2
+```
 
+```text
 request pfe execute command "show ppm adjacencies protocol lacp" target fpc2
+```
 
+```text
 request pfe execute command "show ppm statistics protocol lacp" target fpc2
+```
 
+```text
 request pfe execute command "show syslog messages" target fpc4
+```
 
+```text
 request pfe execute command "show nvram" target fpc4
+```
 
+```text
 request pfe execute command "show cmerror module" target fpc4
+```
 
+```text
 request pfe execute command "show hsl2 statistics" target fpc4
+```
 
+```text
 request pfe execute command "show hsl2 statistics crc" target fpc4
+```
 
+```text
 request pfe execute command "show threads cpu" target fpc4
+```
 
+```text
 request pfe execute command "show sched" target fpc4
+```
 
+```text
 request pfe execute command "show ppm transmits protocol lacp" target fpc4
+```
 
+```text
 request pfe execute command "show ppm adjacencies protocol lacp" target fpc4
+```
 
+```text
 request pfe execute command "show ppm statistics protocol lacp" target fpc4
+```
 
 # ------------------------
 
+```text
 set cli screen-length 30
+```
 
 ## Source: `formatted/TS_notes/MPC11E - LACP không up_join.md`
 
@@ -263,7 +375,9 @@ set cli screen-length 30
 
 # LACP Port State
 
+```text
 The LACP port state (also known as the actor state) field is a single byte, each bit of which is a flag indicating a particular status. In this table, mux (i.e. a multiplexer) refers to the logical unit which aggregates the links into a single logical transmitter/receiver.
+```
 
 The meaning of each bit is as follows:
 
@@ -283,11 +397,15 @@ The meaning of each bit is as follows:
 
 Junos OS users are probably smiling right now, as this should look very familiar:
 
+```text
 john@switch> show lacp interfaces ae1
+```
 
 Aggregated interface: ae1
 
+```text
 LACP state: Role Exp Def Dist Col Syn Aggr Timeout Activity
+```
 
 xe-1/0/0 Actor No No Yes Yes Yes Yes Fast Active
 
@@ -317,13 +435,17 @@ Eth1/6 127,39-0d-12-c2-2b-40 0x3 427434 SA
 
 LACP Partner Partner Partner
 
+```text
 Port Priority Oper Key Port State
+```
 
 127 0x2 0x3f
 
 Eth2/6 127,39-0d-12-c2-2b-40 0x1 112 SA
 
+```text
 The partner port state is 0x3f, which is not very helpful. The good news is that looking at individual members does reveal the information in a more human-friendly format:
+```
 
 us-atl01-z1fa07a# show lacp interface eth 1/6
 
@@ -349,11 +471,17 @@ Distributing=true
 
 Partner information refresh timeout=Short Timeout (3s)
 
+```text
 Actor Admin State=(Ac-1:To-1:Ag-1:Sy-0:Co-0:Di-0:De-0:Ex-0)
+```
 
+```text
 Actor Oper State=(Ac-1:To-0:Ag-1:Sy-1:Co-1:Di-1:De-0:Ex-0)
+```
 
+```text
 Neighbor: 0x3
+```
 
 MAC Address= 39-0d-12-c2-2b-40
 
@@ -363,9 +491,13 @@ Operational key=2
 
 LACP\_Timeout=short Timeout (1s)
 
+```text
 Partner Admin State=(Ac-0:To-1:Ag-0:Sy-0:Co-0:Di-0:De-0:Ex-0)
+```
 
+```text
 Partner Oper State=(Ac-1:To-1:Ag-1:Sy-1:Co-1:Di-1:De-0:Ex-0)
+```
 
 Aggregate or Individual(True=1)= 1
 
@@ -397,7 +529,9 @@ Alternatively, I suppose, flip the table so that the entries run from 7 to 0 ins
 
 Clearly what we want from a link is that bit 7 is 0 (not expired) and bits 2-5 are 1 (will aggregate, in sync, collecting, distributing).
 
+```text
 A recent port I had trouble with was reported as partner port state 0xC7, which in binary is 11000111, which when flipped to 11100011 means:
+```
 
 0 -> NOT In Sync
 

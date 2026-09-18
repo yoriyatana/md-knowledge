@@ -2,21 +2,31 @@
 
 * *1. Thực hiện soft-loop & hard-loop (loop local), thu thập thông tin sau:**
 
+```text
 show chassis hardware
+```
 
+```text
 show interfaces diagnostics optics (et-… / xe-…)
+```
 
+```text
 show interfaces (et-… / xe-…)
+```
 
 - Note câu lệnh soft-loop:
 
+```text
 set interfaces  gigether-options loopback
+```
 
 * *2. Thu thập tập lệnh output sau trong 2 trường hợp** **soft-loop** **và** **hard-loop**
 
 * *Note đối với module** ***CFP 100Gig*:**
 
+```text
 > start shell pfe network fpc#
+```
 
 # show syslog messages
 
@@ -58,7 +68,9 @@ set interfaces  gigether-options loopback
 
 * *Note đối với module** ***SFP+*** ***10Gig*:**
 
+```text
 > start shell pfe network fpc#
+```
 
 # show syslog messages
 
@@ -100,7 +112,9 @@ set interfaces  gigether-options loopback
 
 * *Note đối với module** ***XFP 10Gig*:**
 
+```text
 > start shell pfe network fpc#
+```
 
 # show xfp list ### get the xfp id from here and below outputs
 
@@ -142,11 +156,17 @@ set interfaces  gigether-options loopback
 
 1. Thực hiện soft-loop, hard-loop (local loop):
 
+```text
 > show chassis hardware
+```
 
+```text
 > show interfaces diagnostics optics (et-… / xe-…)
+```
 
+```text
 > show interfaces (et-… / xe-…)
+```
 
 2. Thu thập RSI, var/log.
 
@@ -154,7 +174,9 @@ set interfaces  gigether-options loopback
 
 4. Thu thập các tập lệnh output sau trong trường hợp hard-loop:
 
+```text
 > start shell pfe network fpc#
+```
 
 # show syslog messages
 

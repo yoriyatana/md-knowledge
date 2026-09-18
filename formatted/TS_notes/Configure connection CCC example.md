@@ -1,6 +1,8 @@
 # Configure connection CCC example
 
+```text
 lab@MX204-01> show configuration | compare
+```
 
 [edit interfaces xe-0/1/5]
 

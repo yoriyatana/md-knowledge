@@ -154,7 +154,9 @@ interface Ethernet0/0.4003
 
 encapsulation dot1Q 4003
 
+```text
 pppoe enable group global
+```
 
 pppoe-client dial-pool-number 1
 

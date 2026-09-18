@@ -14,4 +14,6 @@ I found the following KB which explains the behavior of running show route comma
 
 <https://kb.juniper.net/InfoCenter/index?page=content&id=KB31807&actp=METADATA>
 
+```text
 If customer wants to collect them we can run those commands the 2sec refresh rate is very aggressive you might have to run them at say every 4hrs or so considering there is 900k routes present.
+```

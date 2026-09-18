@@ -6,7 +6,9 @@ Please find my answers below.
 
 Query 1
 
-- > Could you more explain, offload traffic? I don’t understand your term in the case. If can, tell me some ways how to do this.
+```text
+> Could you more explain, offload traffic? I don’t understand your term in the case. If can, tell me some ways how to do this.
+```
 
 JTAC: Move few interfaces out of MPC4E to another line card (MPC6E / MPC9E) where memory is available would be the first step (to reduce NH). There are many ways and we recommend reaching out to accounts team for such design related queries on how to manager your device better to reduce the load on few FPCs.
 
@@ -44,9 +46,13 @@ I have 2 queries for you.
 
 + “We recommend to offload traffic (to decrease NH) from the MPC4E to reduce the heap utilization.”
 
-- > Could you more explain, offload traffic? I don’t understand your term in the case. If can, tell me some ways how to do this.
+```text
+> Could you more explain, offload traffic? I don’t understand your term in the case. If can, tell me some ways how to do this.
+```
 
-+ More query:
+```text
+More query:
+```
 
 I have a bit confuse here. As I caculator about memory table, when I show the command "show jnh 0 pool usage" the total value is 38M while MPC4E is 32M
 

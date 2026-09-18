@@ -16,13 +16,19 @@ b651\_gftth\_doivbpcntdcnvt2
 
 3. Kiểm tra trên bras xem cả hai account có online đồng thời ko.
 
-4. Clear system subscriber-management arp address 10.31.x.x cuả hai account này, xem session online lại ko/giải phóng
+```text
+Clear system subscriber-management arp address 10.31.x.x cuả hai account này, xem session online lại ko/giải phóng
+```
 
-5. clear network-access aaa subscriber username b651\_gftth\_doivbpcntdcnvt2
+```text
+clear network-access aaa subscriber username b651\_gftth\_doivbpcntdcnvt2
+```
 
 6. Đề xuất clear mac-address của thuê bao Phúc.
 
+```text
 clear system subscriber-management arp address 10.31.122.4
+```
 
 12/04:
 
@@ -32,7 +38,9 @@ shutdown sub-int của Core Tỉnh đang shutdowwn nhưng khách hàng vẫn onl
 
 Hướng xử lý tiếp theo:
 
-- restart smg-service xong kiểm tra lại
+```text
+restart smg-service xong kiểm tra lại
+```
 
 - Nếu không được thì xem xét reboot FPC hoặc box
 

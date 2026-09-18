@@ -16,7 +16,9 @@ In order to understand the purpose of the sham link, you first need to understan
 
 ## The Problem
 
+```text
 From the previous post it was clear that it did not matter if the LSA received by a PE from a CE was type1, type2, or type3. That LSA would always be either type3 or type5 on the remote side. While this is perfectly fine most of the time, there are times when this is less than ideal. I’ll add a low-speed serial link between R5 and R6 and enable regular OSPF over the link like so:
+```
 
 [![](http://web.archive.org/web/20140706194319im_/http://mellowd.co.uk/ccie/wp-content/uploads/2014/01/RFC4577_4.png)](http://web.archive.org/web/20140706194319/http://mellowd.co.uk/ccie/wp-content/uploads/2014/01/RFC4577_4.png)
 
@@ -140,15 +142,21 @@ Sham Link OSPF\_SL0 to address 40.40.40.40 is up
 
 Area 0 source address 20.20.20.20
 
+```text
 Run as demand circuit
+```
 
+```text
 DoNotAge LSA allowed. Cost of using 1 State POINT\_TO\_POINT,
+```
 
 Timer intervals configured, Hello 10, Dead 40, Wait 40,
 
 Hello due in 00:00:04
 
+```text
 Adjacency State FULL (Hello suppressed)
+```
 
 Index 3/3, retransmission queue length 0, number of retransmission 0
 
@@ -220,15 +228,21 @@ Packet sent with a source address of 5.5.5.5
 
 ...
 
+```text
 Success rate is 0 percent (0/3)
+```
 
 Section 4.2.7.4 of the RFC tells us why this is happening:
 
+```text
 > Any other route advertised in an LSA that is transmitted over a sham link MUST also be redistributed (by the PE flooding the LSA over the sham link) into BGP. This means that if the preferred (OSPF) route for a given address prefix has the sham link as its next hop interface, then there will also be a “corresponding BGP route”, for that same address prefix, installed in the VRF. Per Section 4.1.2, the OSPF route is preferred. However, when forwarding a packet, if the preferred route for that packet has the sham link as its next hop interface, then the packet MUST be forwarded according to the corresponding BGP route. That is, it will be forwarded as if the corresponding BGP route had been the preferred route. The “corresponding BGP route” is always a VPN-IPv4 route; the procedure for forwarding a packet over a VPN-IPv4 route is described in [VPN].
+```
 
 The part of section 4.1.2 reffered to in the section above states:
 
+```text
 > If a VRF contains both an OSPF-distributed route and a VPN-IPv4 route for the same IPv4 prefix, then the OSPF-distributed route is preferred. In general, this means that forwarding is done according to the OSPF route. The one exception to this rule has to do with the “sham link”. If the next hop interface for an installed (OSPFdistributed) route is the sham link, forwarding is done according to a corresponding BGP route. This is detailed in Section 4.2.7.4.
+```
 
 So while R2 has an OSPF-learned route through the sham-link, it does NOT have a BGP-learned route to actually do the forwarding on. R2 and R4 will have to redistribute the OSPF routes into BGP. They do NOT however have to move those BGP routes back into OSPF on the other side.
 
@@ -420,9 +434,13 @@ Sham Link OSPF\_SL0 to address 40.40.40.40 is up
 
 Area 0 source address 20.20.20.20
 
+```text
 Run as demand circuit
+```
 
+```text
 DoNotAge LSA allowed. Cost of using 1 State POINT\_TO\_POINT,
+```
 
 Timer intervals configured, Hello 10, Dead 40, Wait 40,
 
@@ -434,7 +452,9 @@ R2#
 
 R2#sh ip ospf 100 neigh
 
+```text
 Neighbor ID Pri State Dead Time Address Interface
+```
 
 7. 7.7.7 1 FULL/DR 00:00:38 10.1.2.1 FastEthernet1/0
 
@@ -454,11 +474,15 @@ Area 0, source address 40.40.40.40
 
 IfIndex = 2
 
+```text
 Run as demand circuit
+```
 
 DoNotAge LSA allowed., Cost of using 1
 
+```text
 Transmit Delay is 1 sec, State DOWN,
+```
 
 Timer intervals configured, Hello 10, Dead 40, Wait 40, Retransmit 5
 
@@ -470,7 +494,9 @@ Mon Jan 6 16:39:51.085 UTC
 
 Neighbors for OSPF 100, VRF A
 
+```text
 Neighbor ID Pri State Dead Time Address Interface
+```
 
 6. 6.6.6 1 FULL/ - 00:00:31 10.19.20.20 POS0/6/0/0
 
@@ -534,9 +560,13 @@ Tracing the route to 6.6.6.6
 
 So why does IOS-XR have this behaviour? I’m not entirely sure, but checking the route table on both PE does give us a hint. Let’s go over the RFC statements once again:
 
+```text
 > Any other route advertised in an LSA that is transmitted over a sham link MUST also be redistributed (by the PE flooding the LSA over the sham link) into BGP. This means that if the preferred (OSPF) route for a given address prefix has the sham link as its next hop interface, then there will also be a “corresponding BGP route”, for that same address prefix, installed in the VRF. Per Section 4.1.2, the OSPF route is preferred. However, when forwarding a packet, if the preferred route for that packet has the sham link as its next hop interface, then the packet MUST be forwarded according to the corresponding BGP route. That is, it will be forwarded as if the corresponding BGP route had been the preferred route. The “corresponding BGP route” is always a VPN-IPv4 route; the procedure for forwarding a packet over a VPN-IPv4 route is described in [VPN].
+```
 
+```text
 > If a VRF contains both an OSPF-distributed route and a VPN-IPv4 route for the same IPv4 prefix, then the OSPF-distributed route is preferred. In general, this means that forwarding is done according to the OSPF route. The one exception to this rule has to do with the “sham link”. If the next hop interface for an installed (OSPFdistributed) route is the sham link, forwarding is done according to a corresponding BGP route. This is detailed in Section 4.2.7.4.
+```
 
 The RFC states that each PE should be learning a BGP and OSPF route. The OSPF route should be installed into the RIB, while the BGP route is used for the actual forwarding thanks to it’s label carrying capability. What we see on IOS-XR is different.
 
@@ -650,7 +680,9 @@ Mon Jan 6 17:10:20.440 UTC
 
 Neighbors for OSPF 100, VRF A
 
+```text
 Neighbor ID Pri State Dead Time Address Interface
+```
 
 20. 20.20.20 1 FULL/ - - 20.20.20.20 OSPF\_SL0
 

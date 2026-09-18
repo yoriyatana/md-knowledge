@@ -28,9 +28,11 @@ Posted on [November 20, 2010](https://ippoint.wordpress.com/2010/11/20/layer-2-
 - Route Distinguisher – 8 octets – unique to each customer VPN. Same prefix from two customers are differentiated by RD
 - IPv4 Prefix: customer routes being advertised to remote PE router.
 
-- Configuring ‘**family inet-vpn unicast**’ command on global/group/neighbor mode enables router to form MBGP and exchange vpn information via above NLRI format.
-- Received NLRI information will be saved to ‘**bgp.l3vpn.0**’ routing table.
-- Router Distinguisher: (RD)
+```text
+Configuring ‘**family inet-vpn unicast**’ command on global/group/neighbor mode enables router to form MBGP and exchange vpn information via above NLRI format.
+Received NLRI information will be saved to ‘**bgp.l3vpn.0**’ routing table.
+Router Distinguisher: (RD)
+```
 
 - Have three portions: Type (2 octets), administrator field and assigned number. When type=0, AF is 2 byte (usually global AS#) and AN is 4 bytes. When type=1, vice versa.
 - RD to be unique in SP network. Can be configured automatically or manually.
@@ -39,12 +41,14 @@ Posted on [November 20, 2010](https://ippoint.wordpress.com/2010/11/20/layer-2-
 
 - Operational concepts: Control plane:
 
-- Full mesh BGP connection is established among all PE routers.
-- PE router in site-A receives customer routes via any CE-PE routing protocol (static, OSPF, BGP, ISIS, RIP) and place it in the interfaces’ VPN table. (eg: vpn-a.inet.0)
-- Local PE router advertises customer routes via MBGP with its unique RD and one or more route target (RT) set via ‘**vrf-target**’ or ‘**vrf-export**’ command. Latter overrides former.
-- Receiving PE router compares the received route with its locally configured import policy via ‘‘**vrf-target**’ or ‘**vrf-import**’ command. Matched routes are placed in bgp.l3vpn.0 table. Routes that do not match local route-target are not installed in Adj-RIB-in table.
-- Matched routes’ next-hop are checked in inet.3 routing table which has information about LSP from local PE router  to advertised PE router and uses that LSP label as top label.
-- Above routes are placed into VRF table of corresponding customer and advertise via CE-PE protocol to site-B. Same concepts for route advertisement from site-B to site-A.
+```text
+Full mesh BGP connection is established among all PE routers.
+PE router in site-A receives customer routes via any CE-PE routing protocol (static, OSPF, BGP, ISIS, RIP) and place it in the interfaces’ VPN table. (eg: vpn-a.inet.0)
+Local PE router advertises customer routes via MBGP with its unique RD and one or more route target (RT) set via ‘**vrf-target**’ or ‘**vrf-export**’ command. Latter overrides former.
+Receiving PE router compares the received route with its locally configured import policy via ‘‘**vrf-target**’ or ‘**vrf-import**’ command. Matched routes are placed in bgp.l3vpn.0 table. Routes that do not match local route-target are not installed in Adj-RIB-in table.
+Matched routes’ next-hop are checked in inet.3 routing table which has information about LSP from local PE router  to advertised PE router and uses that LSP label as top label.
+Above routes are placed into VRF table of corresponding customer and advertise via CE-PE protocol to site-B. Same concepts for route advertisement from site-B to site-A.
+```
 
 - Two labels will be available for VPN transit traffic. Top being LSP label to reach PE and bottom being VPN label used by that PE router to forward packets to appropriate CE router.
 - **Difference between RT and RD:**
@@ -56,14 +60,18 @@ Posted on [November 20, 2010](https://ippoint.wordpress.com/2010/11/20/layer-2-
 
 PE-CE protocol- BGP:
 
-- Configure ‘protocols bgp’ inside [edit routing-instances ] mode.
-- Need to use ‘as-override’ command on PE routers so that customers’ AS number from site-A will be replaced by local SP AS number and forwarded to site-B
+```text
+Configure ‘protocols bgp’ inside [edit routing-instances ] mode.
+Need to use ‘as-override’ command on PE routers so that customers’ AS number from site-A will be replaced by local SP AS number and forwarded to site-B
+```
 
 PE-CE protocol- OSPF:
 
-- Configure ‘protocols ospf’ inside [edit routing-instances ] mode.
-- BGP extended community variables like domain ID, route-type are used to determine type of OSPF LSA, PE router will re-advertise to CE router.
-- **Domain ID:**
+```text
+Configure ‘protocols ospf’ inside [edit routing-instances ] mode.
+BGP extended community variables like domain ID, route-type are used to determine type of OSPF LSA, PE router will re-advertise to CE router.
+**Domain ID:**
+```
 
 - 32-bit value assigned by PE router for each OSPF instances. Default being 0.0.0.0. Can be configured inside vpn protocols ospf  as ‘domain-id x.x.x.x’
 - Allow PE router to advertise OSPF as type-3 or type-5 LSA. May not contain in all ospf routes. Used in backup WAN + VPN scenario to make VPN routes preferable.
@@ -72,13 +80,17 @@ PE-CE protocol- OSPF:
 
 - JUNOS uses this attribute in all advertised OSPF routes. Route type along with domain ID determines whether the route has to advertise as type-3 or 5 to site-B CE router.
 
-- When the received route is internal route type (1,2 or 3 types) and has
+```text
+When the received route is internal route type (1,2 or 3 types) and has
+```
 
-- no domain ID, it is advertised as type-3 summary LSA.
-- domain ID same as configured ID, advertised as type-3 summary LSA.
-- domain ID different that configured ID, advertised as type-5 external LSA.
-- domain ID but not locally configured,  advertised as type-5 external LSA.
-- When the received route is external route type (5 or 7), advertised as type-5 LSA.
+```text
+no domain ID, it is advertised as type-3 summary LSA.
+domain ID same as configured ID, advertised as type-3 summary LSA.
+domain ID different that configured ID, advertised as type-5 external LSA.
+domain ID but not locally configured,  advertised as type-5 external LSA.
+When the received route is external route type (5 or 7), advertised as type-5 LSA.
+```
 
 - **VPN route tag:**
 
@@ -139,9 +151,11 @@ PE-CE protocol- OSPF:
 - Both methods can form MPLS connectivity (LSP between PE routers) using MBGP or LDP protocol.
 - **Layer-2 VPN:**
 
-- Customer information are exchanged using layer-2 VPN NLRI along with BGP extended communities like route target and  ‘layer-2 information community’.
-- Configure ‘**family l2vpn unicast**’ command inside BGP protocols on PE routers.
-- Layer-2 VPN NLRI format:
+```text
+Customer information are exchanged using layer-2 VPN NLRI along with BGP extended communities like route target and  ‘layer-2 information community’.
+Configure ‘**family l2vpn unicast**’ command inside BGP protocols on PE routers.
+Layer-2 VPN NLRI format:
+```
 
 - Length:  total length of L2 VPN information.
 - RD: same as in L3 VPN. Uniquely identifies a customer.
@@ -189,7 +203,9 @@ PE-CE protocol- OSPF:
 
 - Commands:
 
-- Show l2vpn connections: calculated values of label and status.
+```text
+Show l2vpn connections: calculated values of label and status.
+```
 
 - **Layer-2 Circuits:**
 
@@ -203,7 +219,9 @@ PE-CE protocol- OSPF:
 - The interface configuration on PE/CE is same as in L2 VPN. For L2 circuit, we need to configure ‘neighbor  interface  virtual-circuit-id ’ under [edit protocols l2circuit] configuration mode.
 - Commands:
 
-- Show l2circuit connections: calculated values of label and status.
+```text
+Show l2circuit connections: calculated values of label and status.
+```
 
 ## Source: `formatted/Learning_Notes/Interprovider Layer 3 VPN option C.md`
 

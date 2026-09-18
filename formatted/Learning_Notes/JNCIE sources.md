@@ -179,12 +179,14 @@ CLASS OF SERVICE
 
 Class of Service was by far the thing I found the most difficult. If you have any other links that make any of the Junos-specific stuff clear, please do let me !
 
-- Juniper’s Overview of CoS: <https://www.juniper.net/documentation/en_US/junos/topics/concept/cos-qfx-series-overview.html> – This is the first of many pages about CoS on the Juniper page, and it’s well worth reading through them in as close to an order as makes sense to you.Below are a few articles I’ve also referred to recently:
-- Packet Flow Through The Junos CoS Process: <https://www.juniper.net/documentation/en_US/junos/topics/concept/packet-flow-cos-process-cos-config-guide.html>
-- Scheduler priority: <https://www.juniper.net/documentation/en_US/junos/topics/concept/schedulers-priority-overview-cos-config-guide.html>
-- Scheduler transmission rates: <https://www.juniper.net/documentation/en_US/junos/topics/usage-guidelines/cos-configuring-scheduler-transmission-rate.html>
-- Two-rate, three colour policers: <https://www.juniper.net/documentation/en_US/junos/topics/concept/policer-two-rate-three-color-overview.html>
-- Color-blind policers: <https://www.juniper.net/documentation/en_US/junos/topics/reference/configuration-statement/color-blind-three-color-policer.html>
+```text
+Juniper’s Overview of CoS: <https://www.juniper.net/documentation/en_US/junos/topics/concept/cos-qfx-series-overview.html> – This is the first of many pages about CoS on the Juniper page, and it’s well worth reading through them in as close to an order as makes sense to you.Below are a few articles I’ve also referred to recently:
+Packet Flow Through The Junos CoS Process: <https://www.juniper.net/documentation/en_US/junos/topics/concept/packet-flow-cos-process-cos-config-guide.html>
+Scheduler priority: <https://www.juniper.net/documentation/en_US/junos/topics/concept/schedulers-priority-overview-cos-config-guide.html>
+Scheduler transmission rates: <https://www.juniper.net/documentation/en_US/junos/topics/usage-guidelines/cos-configuring-scheduler-transmission-rate.html>
+Two-rate, three colour policers: <https://www.juniper.net/documentation/en_US/junos/topics/concept/policer-two-rate-three-color-overview.html>
+Color-blind policers: <https://www.juniper.net/documentation/en_US/junos/topics/reference/configuration-statement/color-blind-three-color-policer.html>
+```
 
 MULTICAST
 

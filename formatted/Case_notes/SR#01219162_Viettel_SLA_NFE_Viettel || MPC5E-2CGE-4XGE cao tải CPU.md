@@ -20,7 +20,9 @@ This mechanism increases overall packet forwarding performance or better through
 
 In another words, If the customer is polling for real time CPU usage of FPC, not the average CPU Usage value , then the graph won’t look correct. Because, the NMS graph will show that real time usage value  of that particular milli-second till the next polling happens where only it gets the next value. So, suppose if the MIB polling for FPC CPU is happening every 1 minute, then the same value will be shown for that 1 minute till the next polling happens. Even  if they do some average-math with the next data with the previous real time one, it won’t be accurate.
 
+```text
 For example, NMS server is sending a MIB polling request with OID requesting real time CPU Usage. Router responds with the real time CPU value for that particular moment. For example, 80%. Then, the next polling  is scheduled after 5 minutes from the NMS server, then, the NMS server will plot the value of 80% for the next 5 minutes. Even if it’s done some average math with the next polling value the graph will not look correct. So, the graph will show that inaccurate  value even the CPU actually dropped off in next second or some milli seconds !
+```
 
 As customer is using the real time CPU utilization OID instead of Average CPU OID, sub second CPU spikes are getting highlighted in the graph.
 

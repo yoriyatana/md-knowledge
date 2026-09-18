@@ -48,13 +48,17 @@ có 4 BFD session được phân phối xuống 2 FPC 7 & FPC8 để xử lý
 
 - xóa cấu hình BFD session 8a & 8b. => lúc này chỉ còn lại session 8c & 8d.
 
-- Restart lại FPC7, sau đó cấu hình lại 2 session đã xóa trước đó. => vẫn ghi nhận 2 session mới ăn theo FPC8 (8a-8b-8c-8d)
+```text
+Restart lại FPC7, sau đó cấu hình lại 2 session đã xóa trước đó. => vẫn ghi nhận 2 session mới ăn theo FPC8 (8a-8b-8c-8d)
+```
 
 10c./ TC10c: 8a-8b-8c-8d:
 
 - xóa cấu hình BFD session 8a & 8b. => lúc này chỉ còn lại session 8c & 8d.
 
-- Restart lại FPC8, sau đó cấu hình lại 2 session đã xóa trước đó. => vẫn ghi nhận 2 session mới ăn theo FPC8 (8a-8b). tuy nhiên 2 session cũ (8c-8d) do đã restart lại FPC8 nên đã trở thành (7c-7d)
+```text
+Restart lại FPC8, sau đó cấu hình lại 2 session đã xóa trước đó. => vẫn ghi nhận 2 session mới ăn theo FPC8 (8a-8b). tuy nhiên 2 session cũ (8c-8d) do đã restart lại FPC8 nên đã trở thành (7c-7d)
+```
 
 Từ TC10 có thể thấy, việc xóa đi tạo lại cấu hình session BFD thì Junos vẫn hành xử ăn theo 1 FPC đã được dedicate từ trước. Chỉ có việc reboot FPC thì session BFD mới ăn theo 1 FPC khác.
 

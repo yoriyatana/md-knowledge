@@ -6,9 +6,11 @@ SVTech gửi lại thông tin phân tích lỗi:
 
 - Hiện tượng:
 
-- Khi thực hiện khai báo routing-instances q510\_ll\_ihictcpgdtt3 trên PE thì commit gặp lỗi trên RE1 backup và không thể apply cấu hình.
-- Commit báo lỗi trên RE1 do RE1 đang tồn tại từ trước cấu hình của routing-instances q510\_ll\_ihictcpgdtt3, vì vậy khi khai báo lại RI q510\_ll\_ihictcpgdtt3 thì RE1 sẽ check cấu hình hiện tại và thông báo lỗi RI đã tồn tại, dẫn đến không thể commit cấu hình
-- Kiểm tra cấu hình 2 RE thì thấy trên RE0 hiện không có cấu hình RI q510\_ll\_ihictcpgdtt3, nhưng RE1 backup lại có cấu hình RI q510\_ll\_ihictcpgdtt3 và ở trạng thái deactivate
+```text
+Khi thực hiện khai báo routing-instances q510\_ll\_ihictcpgdtt3 trên PE thì commit gặp lỗi trên RE1 backup và không thể apply cấu hình.
+Commit báo lỗi trên RE1 do RE1 đang tồn tại từ trước cấu hình của routing-instances q510\_ll\_ihictcpgdtt3, vì vậy khi khai báo lại RI q510\_ll\_ihictcpgdtt3 thì RE1 sẽ check cấu hình hiện tại và thông báo lỗi RI đã tồn tại, dẫn đến không thể commit cấu hình
+Kiểm tra cấu hình 2 RE thì thấy trên RE0 hiện không có cấu hình RI q510\_ll\_ihictcpgdtt3, nhưng RE1 backup lại có cấu hình RI q510\_ll\_ihictcpgdtt3 và ở trạng thái deactivate
+```
 
 - Nguyên nhân:
 

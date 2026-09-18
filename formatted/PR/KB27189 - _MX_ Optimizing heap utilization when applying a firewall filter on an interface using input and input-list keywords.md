@@ -27,11 +27,15 @@ The test results in Cases 1 through 4 in this section explain the issue in detai
 
 [edit]
 
+```text
 jtac@ERX-MX960-2-RE0# run show chassis fpc | match "Temp|Slot|Online"
+```
 
 Temp  CPU Utilization (%)  Memory    Utilization (%)
 
+```text
 Slot State            (C)  Total  Interrupt      DRAM (MB) Heap    Buffer
+```
 
 1  Online            43    20          0      2048        9        13
 
@@ -43,7 +47,9 @@ Slot State            (C)  Total  Interrupt      DRAM (MB) Heap    
 
 [edit]
 
+```text
 jtac@ERX-MX960-2-RE0# show interfaces xe-10/1/0 | match input
+```
 
 input TEST-ACL-V4;
 
@@ -55,13 +61,19 @@ input TEST-ACL-V4;
 
 [edit]
 
+```text
 jtac@ERX-MX960-2-RE0# show interfaces xe-10/1/0 | match input | count
+```
 
+```text
 Count: 999 lines
+```
 
 [edit groups  firewall family inet]
 
+```text
 jtac@ERX-MX960-2-RE0# show filter TEST-ACL-V4
+```
 
 interface-specific;
 
@@ -81,11 +93,15 @@ internal-v4;
 
 [edit]
 
+```text
 jtac@ERX-MX960-2-RE0# run show chassis fpc | match "Temp|Slot|Online"
+```
 
 Temp  CPU Utilization (%)  Memory    Utilization (%)
 
+```text
 Slot State            (C)  Total  Interrupt      DRAM (MB) Heap    Buffer
+```
 
 1  Online            43    20          0      2048        9        13
 
@@ -97,7 +113,9 @@ Slot State            (C)  Total  Interrupt      DRAM (MB) Heap    
 
 [edit]
 
+```text
 jtac@ERX-MX960-2-RE0# show interfaces xe-10/1/0 | match input
+```
 
 input TEST-ACL-V4;
 
@@ -109,13 +127,19 @@ input TEST-ACL-V4;
 
 [edit]
 
+```text
 jtac@ERX-MX960-2-RE0# show interfaces xe-10/1/0 | match input | count
+```
 
+```text
 Count: 999 lines
+```
 
 [edit groups  firewall family inet]
 
+```text
 jtac@ERX-MX960-2-RE0# show filter TEST-ACL-V4 < not interface-specific
+```
 
 term block-to-internal {
 
@@ -143,11 +167,15 @@ discard;
 
 [edit]
 
+```text
 jtac@ERX-MX960-2-RE0# run show chassis fpc | match "Temp|Slot|Online"
+```
 
 Temp  CPU Utilization (%)  Memory    Utilization (%)
 
+```text
 Slot State            (C)  Total  Interrupt      DRAM (MB) Heap    Buffer
+```
 
 1  Online            42    21          0      2048      23        13
 
@@ -159,7 +187,9 @@ Slot State            (C)  Total  Interrupt      DRAM (MB) Heap    
 
 [edit]
 
+```text
 jtac@ERX-MX960-2-RE0# show interfaces xe-10/1/0 | match input
+```
 
 input-list TEST-ACL-V4;
 
@@ -171,13 +201,19 @@ input-list TEST-ACL-V4;
 
 [edit]
 
+```text
 jtac@ERX-MX960-2-RE0# show interfaces xe-10/1/0 | match input | count
+```
 
+```text
 Count: 1001 lines
+```
 
 [edit groups  firewall family inet]
 
+```text
 jtac@ERX-MX960-2-RE0# show filter TEST-ACL-V4
+```
 
 interface-specific;
 
@@ -197,11 +233,15 @@ internal-v4;
 
 [edit]
 
+```text
 jtac@ERX-MX960-2-RE0# run show chassis fpc | match "Temp|Slot|Online"
+```
 
 Temp  CPU Utilization (%)  Memory    Utilization (%)
 
+```text
 Slot State            (C)  Total  Interrupt      DRAM (MB) Heap    Buffer
+```
 
 1  Online            42    20          0      2048      23        13
 
@@ -213,7 +253,9 @@ Slot State            (C)  Total  Interrupt      DRAM (MB) Heap    
 
 [edit]
 
+```text
 jtac@ERX-MX960-2-RE0# show interfaces xe-10/1/0 | match input
+```
 
 input-list TEST-ACL-V4;
 
@@ -225,13 +267,19 @@ input-list TEST-ACL-V4;
 
 [edit]
 
+```text
 jtac@ERX-MX960-2-RE0# show interfaces xe-10/1/0 | match input | count
+```
 
+```text
 Count: 999 lines
+```
 
 [edit groups  firewall family inet]
 
+```text
 jtac@ERX-MX960-2-RE0# show filter TEST-ACL-V4
+```
 
 term block-to-internal {
 
@@ -261,6 +309,8 @@ discard;
 
 The test results appearing in the "Problem or Goal" section of this article give useful information on the behavior of heap utilization when applying firewall filters with **input** or **input-list** keywords. The conclusions based on this data should be used when evaluating to scale up the network, and applied depending on the network configuration:
 
-- More heap memory is required if the firewall filter is attached to multiple interfaces via **input-list** or **output-list** keywords(Case 3 and Case 4). This is because a separate **filter definition**, or filter program, is created for each interface. The available technical documentation refers to this instance as interface-specific.
-- An interface-specific firewall filter that is configured via CLI and attached to multiple interfaces by the **input** or **output** keyword (Case 1), produces a single **filter definition**, thus lower heap memory utilization. This is in contrast to the interface-specific instance that creates separate policers/counters for each interface in the ASIC memory (not heap memory).
-- A non interface-specific firewall filter that is attached to multiple interfaces by using an **input** or **output** filter keyword (Case 2) produces a single **filter definition** and only a single set of counters/policers in the ASIC memory. The same amount of heap memory is utilized, similar to Case 4, but lower ASIC memory utilization. In this case, there are no separate counters/policers per interface, only a single policer/counter in the ASIC memory.
+```text
+More heap memory is required if the firewall filter is attached to multiple interfaces via **input-list** or **output-list** keywords(Case 3 and Case 4). This is because a separate **filter definition**, or filter program, is created for each interface. The available technical documentation refers to this instance as interface-specific.
+An interface-specific firewall filter that is configured via CLI and attached to multiple interfaces by the **input** or **output** keyword (Case 1), produces a single **filter definition**, thus lower heap memory utilization. This is in contrast to the interface-specific instance that creates separate policers/counters for each interface in the ASIC memory (not heap memory).
+A non interface-specific firewall filter that is attached to multiple interfaces by using an **input** or **output** filter keyword (Case 2) produces a single **filter definition** and only a single set of counters/policers in the ASIC memory. The same amount of heap memory is utilized, similar to Case 4, but lower ASIC memory utilization. In this case, there are no separate counters/policers per interface, only a single policer/counter in the ASIC memory.
+```

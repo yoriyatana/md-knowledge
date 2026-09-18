@@ -22,7 +22,9 @@ Task 1:
 
 + bgp {
 
-+ group RR {
+```text
+group RR {
+```
 
 + type internal;
 
@@ -74,7 +76,9 @@ Task 1:
 
 + bgp {
 
-+ group RR {
+```text
+group RR {
+```
 
 + type internal;
 
@@ -126,7 +130,9 @@ z[edit]
 
 + bgp {
 
-+ group RR {
+```text
+group RR {
+```
 
 + type internal;
 
@@ -178,7 +184,9 @@ z[edit]
 
 + bgp {
 
-+ group RR {
+```text
+group RR {
+```
 
 + type internal;
 
@@ -236,7 +244,9 @@ interface ge-0/0/2.0 { ... }
 
 + bgp {
 
-+ group RR {
+```text
+group RR {
+```
 
 + type internal;
 
@@ -288,7 +298,9 @@ interface ge-0/0/2.0 { ... }
 
 + bgp {
 
-+ group RR {
+```text
+group RR {
+```
 
 + type internal;
 
@@ -354,7 +366,9 @@ interface ge-0/0/2.0 { ... }
 
 + bgp {
 
-+ group PE {
+```text
+group PE {
+```
 
 + type internal;
 
@@ -718,7 +732,9 @@ Task 3:
 
 + bgp {
 
-+ group S1 {
+```text
+group S1 {
+```
 
 + type external;
 
@@ -826,7 +842,9 @@ Task 3:
 
 + bgp {
 
-+ group S2 {
+```text
+group S2 {
+```
 
 + type external;
 
@@ -1092,7 +1110,9 @@ Task 5:
 
 + bgp {
 
-+ group S3 {
+```text
+group S3 {
+```
 
 + type external;
 

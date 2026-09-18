@@ -22,9 +22,11 @@
 
 - Transient hardware ~ one time issue: don't have trigger event, no symptom, no predictable
 
-- Parity Error
-- Thường có KB
-- Đánh giá được mức độ nghiêm trọng
+```text
+Parity Error
+Thường có KB
+Đánh giá được mức độ nghiêm trọng
+```
 
 - Hardware
 - Software
@@ -39,8 +41,10 @@
 
 1 LUCHIP có 16 block PPE
 
-- Head: header
-- Tail: payload
+```text
+Head: header
+Tail: payload
+```
 
 MPC block diagram
 
@@ -56,42 +60,78 @@ RESET/RESTART: by cli
 
 Action script disable port
 
+```text
 show system commit | match script
+```
 
+```text
 delete inteface  disable
+```
 
 Action script offline PFE
 
+```text
 request chassis fabric pfe fpc <> pic <>
+```
 
+```text
 request chassis fpc (offline | online | restart) slot slot-number
+```
 
+```text
 set chassis fpc 0 error major action <>
+```
 
+```text
 show chassis fpc errors
+```
 
+```text
 show chassis fpc errors
+```
 
+```text
 show interface ext
+```
 
+```text
 show configure | di s set | match syslog
+```
 
+```text
 show log  mess
+```
 
+```text
 show start shell pfe  network
+```
 
+```text
 show hsl2 statistics crc
+```
 
+```text
 show hsl2 statistics
+```
 
+```text
 show cmerror module
+```
 
+```text
 show cmerror module  error
+```
 
+```text
 show pfe traffic statistics | match "Hardware.\*|Farbric drops"
+```
 
 Normal discard: discard do FF,...
 
+```text
 show class-of-service fabric static ## check drop statistics
+```
 
+```text
 show chassis ethernet statistics
+```

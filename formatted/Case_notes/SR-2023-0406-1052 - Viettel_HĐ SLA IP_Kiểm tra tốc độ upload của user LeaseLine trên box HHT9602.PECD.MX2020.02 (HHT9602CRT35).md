@@ -16,7 +16,9 @@ IRB không down, VPLS không down, l2circuit flap khi cắm/rút máy
 
 N6.PECD.01
 
+```text
 traceroute to 27.68.201.1 (27.68.201.1) from 27.68.254.109, 30 hops max, 52 byte packets
+```
 
 1  27.68.236.149 (27.68.236.149)  12.502 ms  14.063 ms  13.254 ms
 
@@ -34,7 +36,9 @@ MPLS Label=24409 CoS=0 TTL=1 S=1
 
 N6.PECD.02
 
+```text
 traceroute to 27.68.201.1 (27.68.201.1) from 115.77.105.29, 30 hops max, 52 byte packets
+```
 
 1  27.68.236.157 (27.68.236.157)  12.170 ms  12.519 ms  12.848 ms
 
@@ -50,7 +54,9 @@ MPLS Label=24409 CoS=0 TTL=1 S=1
 
 May 22 14:01:41
 
+```text
 traceroute to 27.68.201.1 (27.68.201.1) from 115.77.105.193, 30 hops max, 52 byte packets
+```
 
 1  27.68.236.157 (27.68.236.157)  11.958 ms  11.651 ms  13.128 ms
 
@@ -66,7 +72,9 @@ MPLS Label=24409 CoS=0 TTL=1 S=1
 
 May 22 14:06:12
 
+```text
 traceroute to 27.68.201.1 (27.68.201.1) from 27.68.254.110, 30 hops max, 52 byte packets
+```
 
 1  27.68.236.157 (27.68.236.157)  11.632 ms  13.545 ms  16.081 ms
 
@@ -88,7 +96,9 @@ N4.PECD.01
 
 May 22 14:06:12
 
+```text
 traceroute to 27.68.201.1 (27.68.201.1) from 27.68.254.107, 30 hops max, 52 byte packets
+```
 
 1  27.68.236.208 (27.68.236.208)  11.783 ms  12.886 ms  12.103 ms
 
@@ -106,7 +116,9 @@ N4.PECD.02
 
 May 22 14:06:12
 
+```text
 traceroute to 27.68.201.1 (27.68.201.1) from 27.68.254.108, 30 hops max, 52 byte packets
+```
 
 1  27.68.236.212 (27.68.236.212)  20.356 ms  12.672 ms  12.412 ms
 
@@ -170,7 +182,9 @@ Internet:
 
 Enabled protocols: Bridging,
 
+```text
 Destination:  27.68.201.0/29
+```
 
 Route type: user
 
@@ -178,7 +192,9 @@ Route reference: 0                  Route interface-index: 0
 
 Multicast RPF nh index: 0
 
+```text
 P2mpidx: 0
+```
 
 Flags: sent to PFE
 
@@ -186,19 +202,27 @@ Next-hop type: indirect              Index: 1053712  Reference: 10
 
 Next-hop type: unilist              Index: 1052157  Reference: 3
 
+```text
 Nexthop: 27.68.236.149
+```
 
 Next-hop type: Push 24193            Index: 69802    Reference: 2
 
+```text
 Load Balance Label: None
+```
 
 Next-hop interface: ae31.0        Weight: 0x1
 
+```text
 Nexthop: 27.68.236.153
+```
 
 Next-hop type: Push 24193            Index: 114676  Reference: 2
 
+```text
 Load Balance Label: None
+```
 
 Next-hop interface: ae32.0        Weight: 0x1
 
@@ -212,7 +236,9 @@ Internet:
 
 Enabled protocols: Bridging,
 
+```text
 Destination:  27.68.201.0/29
+```
 
 Route type: user
 
@@ -220,7 +246,9 @@ Route reference: 0                  Route interface-index: 0
 
 Multicast RPF nh index: 0
 
+```text
 P2mpidx: 0
+```
 
 Flags: sent to PFE
 
@@ -228,19 +256,27 @@ Next-hop type: indirect              Index: 1050359  Reference: 10
 
 Next-hop type: unilist              Index: 1056017  Reference: 3
 
+```text
 Nexthop: 27.68.236.157
+```
 
 Next-hop type: Push 24193            Index: 91488    Reference: 2
 
+```text
 Load Balance Label: None
+```
 
 Next-hop interface: ae31.0        Weight: 0x1
 
+```text
 Nexthop: 27.68.236.161
+```
 
 Next-hop type: Push 24193            Index: 123341  Reference: 2
 
+```text
 Load Balance Label: None
+```
 
 Next-hop interface: ae32.0        Weight: 0x1
 
@@ -252,7 +288,9 @@ Internet:
 
 Enabled protocols: Bridging,
 
+```text
 Destination:  27.68.201.0/29
+```
 
 Route type: user
 
@@ -260,7 +298,9 @@ Route reference: 0                  Route interface-index: 0
 
 Multicast RPF nh index: 0
 
+```text
 P2mpidx: 0
+```
 
 Flags: sent to PFE
 
@@ -268,19 +308,27 @@ Next-hop type: indirect              Index: 1054715  Reference: 10
 
 Next-hop type: unilist              Index: 1053970  Reference: 3
 
+```text
 Nexthop: 27.68.236.208
+```
 
 Next-hop type: Push 24193            Index: 110697  Reference: 2
 
+```text
 Load Balance Label: None
+```
 
 Next-hop interface: ae41.0        Weight: 0x1
 
+```text
 Nexthop: 27.68.236.210
+```
 
 Next-hop type: Push 24193            Index: 130023  Reference: 2
 
+```text
 Load Balance Label: None
+```
 
 Next-hop interface: ae42.0        Weight: 0x1
 
@@ -292,7 +340,9 @@ Internet:
 
 Enabled protocols: Bridging,
 
+```text
 Destination:  27.68.201.0/29
+```
 
 Route type: user
 
@@ -300,7 +350,9 @@ Route reference: 0                  Route interface-index: 0
 
 Multicast RPF nh index: 0
 
+```text
 P2mpidx: 0
+```
 
 Flags: sent to PFE
 
@@ -308,23 +360,33 @@ Next-hop type: indirect              Index: 1056543  Reference: 10
 
 Next-hop type: unilist              Index: 1054600  Reference: 3
 
+```text
 Nexthop: 27.68.236.212
+```
 
 Next-hop type: Push 24193            Index: 111925  Reference: 2
 
+```text
 Load Balance Label: None
+```
 
 Next-hop interface: ae41.0        Weight: 0x1
 
+```text
 Nexthop: 27.68.236.214
+```
 
 Next-hop type: Push 24193            Index: 143132  Reference: 2
 
+```text
 Load Balance Label: None
+```
 
 Next-hop interface: ae42.0        Weight: 0x1
 
+```text
 >>> check trạng thái int có up/down
+```
 
 5- Lựa chọn nhiều server để control hashing uplink PECD
 
@@ -332,17 +394,23 @@ Next-hop interface: ae42.0        Weight: 0x1
 
 MTU gói out vẫn lớn
 
+```text
 >>> có nên bỏ policer << check restransmit hoặc reorder?
+```
 
 * *7- Kiểm tra lại counter CRC giữa PECD và CKV**
 
+```text
 >>> File excel  >>> thiếu các port member trên CKV
+```
 
 8- switch AGG trong trường hợp xảy ra lỗi
 
 9- **Kiểm tra scale irb up, firewall filter, số lượng term, kiem tra các linecard uplink**
 
+```text
 >>> File excel
+```
 
 10- Healthcheck resouce box giữa2 cặp PECD (N4 và N6)
 
@@ -452,7 +520,9 @@ mtu 9000
 
 !
 
+```text
 show ip route 10.216.255.9, 10.216.255.10
+```
 
 DNI0512SRT02#show ip route 10.216.255.9
 
@@ -502,7 +572,9 @@ Local interface: Gi0/5 down, line protocol down, Ethernet:2712 down
 
 Destination address: 10.216.255.9, VC ID: 990001865, VC status: down
 
+```text
 Last error: Local peer access circuit is down
+```
 
 Output interface: Vl200, imposed label stack {24008 104839}
 
@@ -514,7 +586,9 @@ Next hop: 10.216.148.90
 
 Create time: 5w5d, last status change time: 1y23w
 
+```text
 Last label FSM state change time: 5w5d
+```
 
 Last peer autosense occurred at: 5w5d
 
@@ -524,13 +598,17 @@ Targeted Hello: 10.216.197.20(LDP Id) -> 10.216.255.9, LDP is UP
 
 Graceful restart: configured and enabled
 
+```text
 Non stop routing: not configured and not enabled
+```
 
 Status TLV support (local/remote)  : enabled/supported
 
 LDP route watch                  : enabled
 
+```text
 Label/status state machine        : established, LrdRru
+```
 
 Last local dataplane  status rcvd: No fault
 
@@ -552,7 +630,9 @@ Last remote LDP ADJ    status rcvd: No fault
 
 MPLS VC labels: local 86, remote 104839
 
+```text
 Group ID: local 0, remote 268
+```
 
 MTU: local 9000, remote 9000
 
@@ -572,13 +652,17 @@ transit packet totals: receive 0, send 0
 
 transit byte totals:  receive 0, send 0
 
+```text
 transit packet drops:  receive 0, seq error 0, send 0
+```
 
 Local interface: Gi0/5 down, line protocol down, Ethernet:2712 down
 
 Destination address: 10.216.255.10, VC ID: 990001865, VC status: down
 
+```text
 Last error: Local peer access circuit is down
+```
 
 Output interface: Vl200, imposed label stack {0 104875}
 
@@ -590,7 +674,9 @@ Next hop: 10.216.148.90
 
 Create time: 5w5d, last status change time: 4d19h
 
+```text
 Last label FSM state change time: 5w5d
+```
 
 Last peer autosense occurred at: 5w5d
 
@@ -600,13 +686,17 @@ Targeted Hello: 10.216.197.20(LDP Id) -> 10.216.255.10, LDP is UP
 
 Graceful restart: configured and enabled
 
+```text
 Non stop routing: not configured and not enabled
+```
 
 Status TLV support (local/remote)  : enabled/supported
 
 LDP route watch                  : enabled
 
+```text
 Label/status state machine        : established, LrdRru
+```
 
 Last local dataplane  status rcvd: No fault
 
@@ -628,7 +718,9 @@ Last remote LDP ADJ    status rcvd: No fault
 
 MPLS VC labels: local 93, remote 104875
 
+```text
 Group ID: local 0, remote 274
+```
 
 MTU: local 9000, remote 9000
 
@@ -648,7 +740,9 @@ transit packet totals: receive 0, send 0
 
 transit byte totals:  receive 0, send 0
 
+```text
 transit packet drops:  receive 0, seq error 0, send 0
+```
 
 DNI0512SRT02#show mpls l2transport vc 990001892 detail
 
@@ -666,7 +760,9 @@ Next hop: 10.216.148.90
 
 Create time: 3w6d, last status change time: 1y23w
 
+```text
 Last label FSM state change time: 3w6d
+```
 
 Last peer autosense occurred at: 3w6d
 
@@ -676,13 +772,17 @@ Targeted Hello: 10.216.197.20(LDP Id) -> 10.216.255.9, LDP is UP
 
 Graceful restart: configured and enabled
 
+```text
 Non stop routing: not configured and not enabled
+```
 
 Status TLV support (local/remote)  : enabled/supported
 
 LDP route watch                  : enabled
 
+```text
 Label/status state machine        : established, LrdRru
+```
 
 Last local dataplane  status rcvd: No fault
 
@@ -704,7 +804,9 @@ Last remote LDP ADJ    status rcvd: No fault
 
 MPLS VC labels: local 34, remote 51485
 
+```text
 Group ID: local 0, remote 269
+```
 
 MTU: local 9000, remote 9000
 
@@ -724,7 +826,9 @@ transit packet totals: receive 0, send 0
 
 transit byte totals:  receive 0, send 0
 
+```text
 transit packet drops:  receive 0, seq error 0, send 0
+```
 
 Local interface: Gi0/3 up, line protocol up, Ethernet:2714 up
 
@@ -740,7 +844,9 @@ Next hop: 10.216.148.90
 
 Create time: 3w6d, last status change time: 4d19h
 
+```text
 Last label FSM state change time: 3w6d
+```
 
 Last peer autosense occurred at: 3w6d
 
@@ -750,13 +856,17 @@ Targeted Hello: 10.216.197.20(LDP Id) -> 10.216.255.10, LDP is UP
 
 Graceful restart: configured and enabled
 
+```text
 Non stop routing: not configured and not enabled
+```
 
 Status TLV support (local/remote)  : enabled/supported
 
 LDP route watch                  : enabled
 
+```text
 Label/status state machine        : established, LruRru
+```
 
 Last local dataplane  status rcvd: No fault
 
@@ -778,7 +888,9 @@ Last remote LDP ADJ    status rcvd: No fault
 
 MPLS VC labels: local 37, remote 45558
 
+```text
 Group ID: local 0, remote 275
+```
 
 MTU: local 9000, remote 9000
 
@@ -798,7 +910,9 @@ transit packet totals: receive 22862337, send 14726082
 
 transit byte totals:  receive 14635203395, send 10643819032
 
+```text
 transit packet drops:  receive 0, seq error 0, send 0
+```
 
 Thông tin port gi0/3
 
@@ -834,13 +948,19 @@ Queueing strategy: fifo
 
 Output queue: 0/40 (size/max)
 
+```text
 5 minute input rate 0 bits/sec, 0 packets/sec
+```
 
+```text
 5 minute output rate 0 bits/sec, 0 packets/sec
+```
 
 23515032 packets input, 18507576490 bytes, 0 no buffer
 
+```text
 Received 93128 broadcasts (713736 IP multicasts)
+```
 
 0 runts, 0 giants, 0 throttles
 
@@ -870,7 +990,9 @@ mtu 9000
 
 no ip address
 
+```text
 load-interval 30
+```
 
 carrier-delay msec 0
 
@@ -884,7 +1006,9 @@ ethernet oam link-monitor transmit-crc window 50
 
 ethernet oam link-monitor transmit-crc threshold high 250
 
+```text
 ethernet oam link-monitor high-threshold action error-disable-interface
+```
 
 ethernet oam
 
@@ -920,7 +1044,9 @@ mtu 9000
 
 no ip address
 
+```text
 load-interval 30
+```
 
 carrier-delay msec 0
 
@@ -934,7 +1060,9 @@ ethernet oam link-monitor transmit-crc window 50
 
 ethernet oam link-monitor transmit-crc threshold high 250
 
+```text
 ethernet oam link-monitor high-threshold action error-disable-interface
+```
 
 ethernet oam
 
@@ -1114,7 +1242,9 @@ RP/0/RSP0/CPU0:DNI8002AGG03#show mpls traffic-eng tunnels brief
 
 Mon May 22 10:37:38.344 Hanoi
 
+```text
 TUNNEL NAME        DESTINATION      STATUS  STATE
+```
 
 tunnel-te1        10.216.255.1          up  up
 
@@ -1140,13 +1270,17 @@ path option 1,  type explicit DNI8002AGG01\_TO\_CTDNI8001 (Basis for Setup, pat
 
 Protected-by PO index: 2
 
+```text
 Last Signalled Error : Tue Nov  5 01:09:46 2019
+```
 
 Info: [7] PathErr(24,5)-(routing, no route to dest) at 10.216.240.42
 
 path option 2,  type explicit DNI8002AGG01\_TO\_CTDNI8001\_BACKUP (Basis for Standby, path weight 12000)
 
+```text
 G-PID: 0x0800 (derived from egress interface properties)
+```
 
 Bandwidth Requested: 0 kbps  CT0
 
@@ -1154,7 +1288,9 @@ Creation Time: Tue Jul  9 00:35:53 2019 (3y45w ago)
 
 Config Parameters:
 
+```text
 Bandwidth:        0 kbps (CT0) Priority:  7  7 Affinity: 0x0/0xffff
+```
 
 Metric Type: TE (global)
 
@@ -1176,7 +1312,9 @@ Forwarding-Adjacency: disabled
 
 Autoroute Destinations: 0
 
+```text
 Loadshare:          0 equal loadshares
+```
 
 Auto-bw: disabled
 
@@ -1196,7 +1334,9 @@ Tunnel has been up for: 3y28w (since Tue Nov 05 01:42:34 Hanoi 2019)
 
 Current LSP:
 
+```text
 Uptime: 1y15w (since Mon Jan 31 14:05:16 Hanoi 2022)
+```
 
 Reopt. LSP:
 
@@ -1214,37 +1354,59 @@ LSP not signalled, identical to the [STANDBY] LSP
 
 Date/Time: Fri May 19 03:30:16 Hanoi 2023 [3d07h ago]
 
+```text
 First Destination Failed: 10.216.255.1
+```
 
 Prior LSP:
 
+```text
 ID: 24 Path Option: 1
+```
 
+```text
 Removal Trigger: path error
+```
 
 Standby LSP:
 
+```text
 Uptime: 4w2d (since Fri Apr 21 11:08:56 Hanoi 2023)
+```
 
 Path info (OSPF 8 area 0):
 
 Node hop count: 2
 
+```text
 Hop0: 10.216.240.42
+```
 
+```text
 Hop1: 10.216.240.1
+```
 
+```text
 Hop2: 10.216.255.1
+```
 
+```text
 Standby LSP Path info (OSPF 8 area 0), Oper State: Up :
+```
 
 Node hop count: 2
 
+```text
 Hop0: 10.216.240.37
+```
 
+```text
 Hop1: 10.216.240.33
+```
 
+```text
 Hop2: 10.216.255.1
+```
 
 Displayed 1 (of 2) heads, 0 (of 2) midpoints, 0 (of 0) tails
 
@@ -1268,7 +1430,9 @@ Protected-by PO index: 2
 
 path option 2,  type explicit DNI8002AGG01\_TO\_CTDNI8002\_BACKUP (Basis for Standby, path weight 12500)
 
+```text
 G-PID: 0x0800 (derived from egress interface properties)
+```
 
 Bandwidth Requested: 0 kbps  CT0
 
@@ -1276,7 +1440,9 @@ Creation Time: Tue Jul  9 00:35:53 2019 (3y45w ago)
 
 Config Parameters:
 
+```text
 Bandwidth:        0 kbps (CT0) Priority:  7  7 Affinity: 0x0/0xffff
+```
 
 Metric Type: TE (global)
 
@@ -1298,7 +1464,9 @@ Forwarding-Adjacency: disabled
 
 Autoroute Destinations: 0
 
+```text
 Loadshare:          0 equal loadshares
+```
 
 Auto-bw: disabled
 
@@ -1318,7 +1486,9 @@ Tunnel has been up for: 2y00w (since Tue May 18 04:34:59 Hanoi 2021)
 
 Current LSP:
 
+```text
 Uptime: 1y15w (since Mon Jan 31 14:05:16 Hanoi 2022)
+```
 
 Reopt. LSP:
 
@@ -1336,37 +1506,59 @@ LSP not signalled, identical to the [STANDBY] LSP
 
 Date/Time: Fri May 19 03:30:16 Hanoi 2023 [3d07h ago]
 
+```text
 First Destination Failed: 10.216.255.2
+```
 
 Prior LSP:
 
+```text
 ID: 23 Path Option: 1
+```
 
+```text
 Removal Trigger: path error
+```
 
 Standby LSP:
 
+```text
 Uptime: 4w2d (since Fri Apr 21 11:08:56 Hanoi 2023)
+```
 
 Path info (OSPF 8 area 0):
 
 Node hop count: 1
 
+```text
 Hop0: 10.216.240.42
+```
 
+```text
 Hop1: 10.216.255.2
+```
 
+```text
 Standby LSP Path info (OSPF 8 area 0), Oper State: Up :
+```
 
 Node hop count: 3
 
+```text
 Hop0: 10.216.240.37
+```
 
+```text
 Hop1: 10.216.240.33
+```
 
+```text
 Hop2: 10.216.240.2
+```
 
+```text
 Hop3: 10.216.255.2
+```
 
 Displayed 1 (of 2) heads, 0 (of 2) midpoints, 0 (of 0) tails
 
@@ -1450,7 +1642,9 @@ Mon May 22 11:02:30.757 Hanoi
 
 Bundle-Ether2 is up, line protocol is up
 
+```text
 Interface state transitions: 9
+```
 
 Hardware is Aggregated Ethernet interface(s), address is 00c1.6433.e30a
 
@@ -1480,15 +1674,21 @@ Last input 00:00:00, output 00:00:00
 
 Last clearing of "show interface" counters never
 
+```text
 5 minute input rate 35987738000 bits/sec, 3536964 packets/sec
+```
 
+```text
 5 minute output rate 3572909000 bits/sec, 1321151 packets/sec
+```
 
 309061305180760 packets input, 397000924300248465 bytes, 31172608 total input drops
 
 0 drops for unrecognized upper-level protocol
 
+```text
 Received 10 broadcast packets, 18278201347210 multicast packets
+```
 
 1 runts, 0 giants, 0 throttles, 0 parity
 
@@ -1622,7 +1822,9 @@ Mon May 22 11:36:14.203 Hanoi
 
 Legend: pp = Partially Programmed.
 
+```text
 Bridge Group:Bridge-Domain Name  ID    State          Num ACs/up  Num PWs/up    Num PBBs/up Num VNIs/up
+```
 
 - ------------------------------- ----- -------------- ------------ ------------- ----------- -----------
 
@@ -1634,11 +1836,17 @@ RP/0/RSP0/CPU0:DNI8002AGG03#show l2vpn bridge-domain detail | begin d061\_ll\_na
 
 Mon May 22 11:42:39.887 Hanoi
 
+```text
 Bridge group: L3LL, bridge-domain: d061\_ll\_namcttth\_test2, id: 275, state: up, ShgId: 0, MSTi: 0
+```
 
+```text
 Coupled state: disabled
+```
 
+```text
 VINE state: Default
+```
 
 MAC learning: enabled
 
@@ -1690,7 +1898,9 @@ MIB cvplsConfigIndex: 276
 
 Filter MAC addresses:
 
+```text
 Load Balance Hashing: src-dst-mac
+```
 
 P2MP PW: disabled
 
@@ -1698,13 +1908,17 @@ Create time: 24/04/2023 17:25:53 (3w6d ago)
 
 No status change since creation
 
+```text
 ACs: 0 (0 up), VFIs: 0, PWs: 3 (2 up), PBBs: 0 (0 up), VNIs: 0 (0 up)
+```
 
 List of ACs:
 
 List of Access PWs:
 
+```text
 PW: neighbor 10.216.197.20, PW ID 990001892, state is up ( established )
+```
 
 PW class not set, XC ID 0xa0000f97
 
@@ -1718,7 +1932,9 @@ PW backup disable delay 0 sec
 
 Sequencing not set
 
+```text
 Load Balance Hashing: src-dst-mac
+```
 
 PW Status TLV in use
 
@@ -1728,7 +1944,9 @@ MPLS        Local                          Remote
 
 Label        45558                          37
 
+```text
 Group ID    0x113                          0x0
+```
 
 Interface    Access PW                      d061\_ll\_namcttth\_test2
 
@@ -1762,17 +1980,25 @@ Last time status changed: 17/05/2023 16:00:17 (4d19h ago)
 
 Last time PW went down: 16/05/2023 13:32:53 (5d22h ago)
 
+```text
 MAC withdraw messages: sent 0, received 0
+```
 
+```text
 Forward-class: 0
+```
 
 Static MAC addresses:
 
 Statistics:
 
+```text
 packets: received 23282386 (unicast 22475493), sent 45449291
+```
 
+```text
 bytes: received 18078059083 (unicast 18000146335), sent 57116381314
+```
 
 MAC move: 0
 
@@ -1814,7 +2040,9 @@ MLD Snooping profile: none
 
 Storm Control: bridge-domain policer
 
+```text
 PW: neighbor 27.68.254.109, PW ID 990001892, state is standby ( all ready )
+```
 
 Backup for neighbor 27.68.254.110 PW ID 990001892 ( inactive )
 
@@ -1828,7 +2056,9 @@ PW type Ethernet, control word disabled, interworking none
 
 Sequencing not set
 
+```text
 Load Balance Hashing: src-dst-mac
+```
 
 PW Status TLV in use
 
@@ -1838,7 +2068,9 @@ MPLS        Local                          Remote
 
 Label        53268                          95252
 
+```text
 Group ID    0x113                          0x0
+```
 
 Interface    Access PW                      unknown
 
@@ -1874,9 +2106,13 @@ Last time status changed: 18/05/2023 14:07:17 (3d21h ago)
 
 Last time PW went down: 18/05/2023 14:07:17 (3d21h ago)
 
+```text
 MAC withdraw messages: sent 0, received 0
+```
 
+```text
 Forward-class: 0
+```
 
 Static MAC addresses:
 
@@ -1912,7 +2148,9 @@ MLD Snooping profile: none
 
 Storm Control: bridge-domain policer
 
+```text
 PW: neighbor 27.68.254.110, PW ID 990001892, state is up ( established )
+```
 
 PW class L3LL, XC ID 0xa0000f99
 
@@ -1926,7 +2164,9 @@ PW backup disable delay 0 sec
 
 Sequencing not set
 
+```text
 Load Balance Hashing: src-dst-mac
+```
 
 PW Status TLV in use
 
@@ -1936,7 +2176,9 @@ MPLS        Local                          Remote
 
 Label        51068                          88941
 
+```text
 Group ID    0x113                          0x0
+```
 
 Interface    Access PW                      unknown
 
@@ -1972,17 +2214,25 @@ Last time status changed: 18/05/2023 14:07:17 (3d21h ago)
 
 Last time PW went down: 25/04/2023 16:03:18 (3w5d ago)
 
+```text
 MAC withdraw messages: sent 0, received 0
+```
 
+```text
 Forward-class: 0
+```
 
 Static MAC addresses:
 
 Statistics:
 
+```text
 packets: received 29712094 (unicast 29681752), sent 13271376
+```
 
+```text
 bytes: received 37237480591 (unicast 37236206227), sent 10092555726
+```
 
 MAC move: 0
 
@@ -2032,11 +2282,17 @@ RP/0/RSP0/CPU0:DNI8002AGG03#show l2vpn bridge-domain detail | begin d061\_ll\_na
 
 Mon May 22 11:58:16.985 Hanoi
 
+```text
 Bridge group: L3LL, bridge-domain: d061\_ll\_namcttth\_test, id: 274, state: up, ShgId: 0, MSTi: 0
+```
 
+```text
 Coupled state: disabled
+```
 
+```text
 VINE state: Default
+```
 
 MAC learning: enabled
 
@@ -2088,7 +2344,9 @@ MIB cvplsConfigIndex: 275
 
 Filter MAC addresses:
 
+```text
 Load Balance Hashing: src-dst-mac
+```
 
 P2MP PW: disabled
 
@@ -2096,13 +2354,17 @@ Create time: 11/04/2023 11:31:33 (5w6d ago)
 
 No status change since creation
 
+```text
 ACs: 0 (0 up), VFIs: 0, PWs: 3 (1 up), PBBs: 0 (0 up), VNIs: 0 (0 up)
+```
 
 List of ACs:
 
 List of Access PWs:
 
+```text
 PW: neighbor 10.216.197.20, PW ID 990001865, state is down ( all ready ) (Segment-down)
+```
 
 PW class not set, XC ID 0xa0000f8d
 
@@ -2116,7 +2378,9 @@ PW backup disable delay 0 sec
 
 Sequencing not set
 
+```text
 Load Balance Hashing: src-dst-mac
+```
 
 PW Status TLV in use
 
@@ -2126,7 +2390,9 @@ MPLS        Local                          Remote
 
 Label        104875                        93
 
+```text
 Group ID    0x112                          0x0
+```
 
 Interface    Access PW                      d061\_ll\_namcttth\_test
 
@@ -2160,9 +2426,13 @@ Last time status changed: 17/05/2023 16:00:14 (4d19h ago)
 
 Last time PW went down: 17/05/2023 16:00:14 (4d19h ago)
 
+```text
 MAC withdraw messages: sent 0, received 0
+```
 
+```text
 Forward-class: 0
+```
 
 Static MAC addresses:
 
@@ -2198,7 +2468,9 @@ MLD Snooping profile: none
 
 Storm Control: bridge-domain policer
 
+```text
 PW: neighbor 27.68.254.109, PW ID 990001865, state is standby ( all ready )
+```
 
 Backup for neighbor 27.68.254.110 PW ID 990001865 ( inactive )
 
@@ -2212,7 +2484,9 @@ PW type Ethernet, control word disabled, interworking none
 
 Sequencing not set
 
+```text
 Load Balance Hashing: src-dst-mac
+```
 
 PW Status TLV in use
 
@@ -2222,7 +2496,9 @@ MPLS        Local                          Remote
 
 Label        131824                        84184
 
+```text
 Group ID    0x112                          0x0
+```
 
 Interface    Access PW                      unknown
 
@@ -2256,9 +2532,13 @@ Create time: 11/04/2023 11:31:33 (5w6d ago)
 
 Last time status changed: 11/04/2023 11:39:46 (5w6d ago)
 
+```text
 MAC withdraw messages: sent 0, received 0
+```
 
+```text
 Forward-class: 0
+```
 
 Static MAC addresses:
 
@@ -2294,7 +2574,9 @@ MLD Snooping profile: none
 
 Storm Control: bridge-domain policer
 
+```text
 PW: neighbor 27.68.254.110, PW ID 990001865, state is up ( established )
+```
 
 PW class L3LL, XC ID 0xa0000f8f
 
@@ -2308,7 +2590,9 @@ PW backup disable delay 0 sec
 
 Sequencing not set
 
+```text
 Load Balance Hashing: src-dst-mac
+```
 
 PW Status TLV in use
 
@@ -2318,7 +2602,9 @@ MPLS        Local                          Remote
 
 Label        126409                        64488
 
+```text
 Group ID    0x112                          0x0
+```
 
 Interface    Access PW                      unknown
 
@@ -2352,17 +2638,25 @@ Create time: 11/04/2023 11:31:33 (5w6d ago)
 
 Last time status changed: 11/04/2023 11:33:54 (5w6d ago)
 
+```text
 MAC withdraw messages: sent 0, received 0
+```
 
+```text
 Forward-class: 0
+```
 
 Static MAC addresses:
 
 Statistics:
 
+```text
 packets: received 48078894 (unicast 46465329), sent 34977272
+```
 
+```text
 bytes: received 51613323228 (unicast 51545544414), sent 40859639044
+```
 
 MAC move: 0
 
@@ -2414,7 +2708,9 @@ List of Access VFIs:
 
 ![](image/75437703d27a24fd42cecc1142f7741e.png)
 
+```text
 show cef 27.68.254.110
+```
 
 2. **Trạng thái irb vpls circuit kênh đang test**
 
@@ -2472,7 +2768,9 @@ Dn -- down
 
 Instance: d061\_ll\_namcttth\_test
 
+```text
 VPLS-id: 990001865
+```
 
 Mesh-group connections: AGGs
 
@@ -2560,7 +2858,9 @@ Dn -- down
 
 Instance: d061\_ll\_namcttth\_test2
 
+```text
 VPLS-id: 990001892
+```
 
 Mesh-group connections: AGGs
 
@@ -2632,7 +2932,9 @@ Description: d061\_ll\_namcttth\_test2\_Master
 
 Flags: Up SNMP-Traps 0x4000 Encapsulation: ENET2
 
+```text
 Bandwidth: 1Gbps
+```
 
 Routing Instance: d061\_ll\_namcttth\_test2 Bridging Domain: None
 
@@ -2648,7 +2950,9 @@ Flags: Sendbcast-pkt-to-re
 
 Addresses, Flags: Is-Preferred Is-Primary
 
+```text
 Destination: 115.77.105.192/30, Local: 115.77.105.193, Broadcast: 115.77.105.195
+```
 
 Protocol multiservice, MTU: 1514
 
@@ -2664,7 +2968,9 @@ Description: d061\_ll\_namcttth\_test2\_Master
 
 Flags: Up SNMP-Traps 0x4000 Encapsulation: ENET2
 
+```text
 Bandwidth: 1Gbps
+```
 
 Routing Instance: d061\_ll\_namcttth\_test2 Bridging Domain: None
 
@@ -2702,13 +3008,17 @@ Protocol inet, MTU: 1514
 
 Max nh cache: 75000, New hold nh limit: 75000, Curr nh cnt: 1, Curr new hold cnt: 0, NH drop cnt: 0
 
+```text
 Generation: 29576, Route table: 0
+```
 
 Flags: Sendbcast-pkt-to-re
 
 Addresses, Flags: Is-Preferred Is-Primary
 
+```text
 Destination: 115.77.105.192/30, Local: 115.77.105.193, Broadcast: 115.77.105.195, Generation: 3402
+```
 
 Protocol multiservice, MTU: 1514, Generation: 29577, Route table: 0
 
@@ -2724,7 +3034,9 @@ Description: d061\_ll\_namcttth\_test\_Master
 
 Flags: Up SNMP-Traps 0x4000 Encapsulation: ENET2
 
+```text
 Bandwidth: 1Gbps
+```
 
 Routing Instance: d061\_ll\_namcttth\_test Bridging Domain: None
 
@@ -2740,7 +3052,9 @@ Flags: Sendbcast-pkt-to-re
 
 Addresses, Flags: Is-Preferred Is-Primary
 
+```text
 Destination: 115.77.105.28/30, Local: 115.77.105.29, Broadcast: 115.77.105.31
+```
 
 Protocol multiservice, MTU: 1514
 
@@ -2756,7 +3070,9 @@ Description: d061\_ll\_namcttth\_test\_Master
 
 Flags: Up SNMP-Traps 0x4000 Encapsulation: ENET2
 
+```text
 Bandwidth: 1Gbps
+```
 
 Routing Instance: d061\_ll\_namcttth\_test Bridging Domain: None
 
@@ -2794,7 +3110,9 @@ Protocol inet, MTU: 1514
 
 Max nh cache: 75000, New hold nh limit: 75000, Curr nh cnt: 1, Curr new hold cnt: 1, NH drop cnt: 0
 
+```text
 Generation: 29214, Route table: 0
+```
 
 Flags: Sendbcast-pkt-to-re
 
@@ -2804,7 +3122,9 @@ Output Filters: d061\_ll\_namcttth\_test\_DOWNLOAD-irb.4637-o
 
 Addresses, Flags: Is-Preferred Is-Primary
 
+```text
 Destination: 115.77.105.28/30, Local: 115.77.105.29, Broadcast: 115.77.105.31, Generation: 3336
+```
 
 Protocol multiservice, MTU: 1514, Generation: 29215, Route table: 0
 
@@ -2822,7 +3142,9 @@ Description: d061\_ll\_namcttth\_test\_Master
 
 Flags: Up SNMP-Traps 0x4000 Encapsulation: ENET2
 
+```text
 Bandwidth: 1Gbps
+```
 
 Routing Instance: d061\_ll\_namcttth\_test Bridging Domain: None
 
@@ -2860,7 +3182,9 @@ Protocol inet, MTU: 1514
 
 Max nh cache: 75000, New hold nh limit: 75000, Curr nh cnt: 0, Curr new hold cnt: 0, NH drop cnt: 0
 
+```text
 Generation: 29214, Route table: 0
+```
 
 Flags: Sendbcast-pkt-to-re
 
@@ -2870,7 +3194,9 @@ Output Filters: d061\_ll\_namcttth\_test\_DOWNLOAD-irb.4637-o
 
 Addresses, Flags: Is-Preferred Is-Primary
 
+```text
 Destination: 115.77.105.28/30, Local: 115.77.105.29, Broadcast: 115.77.105.31, Generation: 3336
+```
 
 Protocol multiservice, MTU: 1514, Generation: 29215, Route table: 0
 
@@ -2948,9 +3274,13 @@ Truncated key              :                    0
 
 Bits to test              :                    0
 
+```text
 Data error                :                    0
+```
 
+```text
 TCP header length error    :                    0
+```
 
 Stack underflow            :                    0
 
@@ -2966,7 +3296,9 @@ Info cell drops            :                    0
 
 Fabric drops              :                10214
 
+```text
 Packet Forwarding Engine Input IPv4 Header Checksum Error and Output MTU Error statistics:
+```
 
 Input Checksum            :            18484174
 
@@ -3006,7 +3338,9 @@ Info cell drops            :                    0
 
 Fabric drops              :                10214
 
+```text
 Packet Forwarding Engine Input IPv4 Header Checksum Error and Output MTU Error statistics:
+```
 
 Input Checksum            :            18484174
 
@@ -3020,9 +3354,13 @@ May 22 12:38:16
 
 Packet Forwarding Engine Details:
 
+```text
 fpc:                    1
+```
 
+```text
 pfe:                    0
+```
 
 Packet Forwarding Engine traffic statistics:
 
@@ -3042,9 +3380,13 @@ Truncated key              :                    0
 
 Bits to test              :                    0
 
+```text
 Data error                :                    0
+```
 
+```text
 TCP header length error    :                    0
+```
 
 Stack underflow            :                    0
 
@@ -3060,7 +3402,9 @@ Info cell drops            :                    0
 
 Fabric drops              :                    0
 
+```text
 Packet Forwarding Engine Input IPv4 Header Checksum Error and Output MTU Error statistics:
+```
 
 Input Checksum            :                    0
 
@@ -3078,9 +3422,13 @@ Drop bytes      :                    0                   
 
 Packet Forwarding Engine Details:
 
+```text
 fpc:                    1
+```
 
+```text
 pfe:                    1
+```
 
 Packet Forwarding Engine traffic statistics:
 
@@ -3100,9 +3448,13 @@ Truncated key              :                    0
 
 Bits to test              :                    0
 
+```text
 Data error                :                    0
+```
 
+```text
 TCP header length error    :                    0
+```
 
 Stack underflow            :                    0
 
@@ -3118,7 +3470,9 @@ Info cell drops            :                    0
 
 Fabric drops              :                    0
 
+```text
 Packet Forwarding Engine Input IPv4 Header Checksum Error and Output MTU Error statistics:
+```
 
 Input Checksum            :                    0
 
@@ -3136,9 +3490,13 @@ Drop bytes      :                    0                   
 
 Packet Forwarding Engine Details:
 
+```text
 fpc:                    1
+```
 
+```text
 pfe:                    2
+```
 
 Packet Forwarding Engine traffic statistics:
 
@@ -3158,9 +3516,13 @@ Truncated key              :                    0
 
 Bits to test              :                    0
 
+```text
 Data error                :                    0
+```
 
+```text
 TCP header length error    :                    0
+```
 
 Stack underflow            :                    0
 
@@ -3176,7 +3538,9 @@ Info cell drops            :                    0
 
 Fabric drops              :                    0
 
+```text
 Packet Forwarding Engine Input IPv4 Header Checksum Error and Output MTU Error statistics:
+```
 
 Input Checksum            :                    0
 
@@ -3194,9 +3558,13 @@ Drop bytes      :                    0                   
 
 Packet Forwarding Engine Details:
 
+```text
 fpc:                    1
+```
 
+```text
 pfe:                    3
+```
 
 Packet Forwarding Engine traffic statistics:
 
@@ -3216,9 +3584,13 @@ Truncated key              :                    0
 
 Bits to test              :                    0
 
+```text
 Data error                :                    0
+```
 
+```text
 TCP header length error    :                    0
+```
 
 Stack underflow            :                    0
 
@@ -3234,7 +3606,9 @@ Info cell drops            :                    0
 
 Fabric drops              :                    0
 
+```text
 Packet Forwarding Engine Input IPv4 Header Checksum Error and Output MTU Error statistics:
+```
 
 Input Checksum            :                    0
 
@@ -3252,9 +3626,13 @@ Drop bytes      :                    0                   
 
 Packet Forwarding Engine Details:
 
+```text
 fpc:                    2
+```
 
+```text
 pfe:                    0
+```
 
 Packet Forwarding Engine traffic statistics:
 
@@ -3274,9 +3652,13 @@ Truncated key              :                    0
 
 Bits to test              :                    0
 
+```text
 Data error                :                    0
+```
 
+```text
 TCP header length error    :                    0
+```
 
 Stack underflow            :                    0
 
@@ -3292,7 +3674,9 @@ Info cell drops            :                    0
 
 Fabric drops              :                1117
 
+```text
 Packet Forwarding Engine Input IPv4 Header Checksum Error and Output MTU Error statistics:
+```
 
 Input Checksum            :                    0
 
@@ -3310,9 +3694,13 @@ Drop bytes      :                    0                   
 
 Packet Forwarding Engine Details:
 
+```text
 fpc:                    2
+```
 
+```text
 pfe:                    1
+```
 
 Packet Forwarding Engine traffic statistics:
 
@@ -3332,9 +3720,13 @@ Truncated key              :                    0
 
 Bits to test              :                    0
 
+```text
 Data error                :                    0
+```
 
+```text
 TCP header length error    :                    0
+```
 
 Stack underflow            :                    0
 
@@ -3350,7 +3742,9 @@ Info cell drops            :                    0
 
 Fabric drops              :                    1
 
+```text
 Packet Forwarding Engine Input IPv4 Header Checksum Error and Output MTU Error statistics:
+```
 
 Input Checksum            :                    0
 
@@ -3368,9 +3762,13 @@ Drop bytes      :                    0                   
 
 Packet Forwarding Engine Details:
 
+```text
 fpc:                    2
+```
 
+```text
 pfe:                    2
+```
 
 Packet Forwarding Engine traffic statistics:
 
@@ -3390,9 +3788,13 @@ Truncated key              :                    0
 
 Bits to test              :                    0
 
+```text
 Data error                :                    0
+```
 
+```text
 TCP header length error    :                    0
+```
 
 Stack underflow            :                    0
 
@@ -3408,7 +3810,9 @@ Info cell drops            :                    0
 
 Fabric drops              :                    0
 
+```text
 Packet Forwarding Engine Input IPv4 Header Checksum Error and Output MTU Error statistics:
+```
 
 Input Checksum            :                    0
 
@@ -3426,9 +3830,13 @@ Drop bytes      :                    0                   
 
 Packet Forwarding Engine Details:
 
+```text
 fpc:                    2
+```
 
+```text
 pfe:                    3
+```
 
 Packet Forwarding Engine traffic statistics:
 
@@ -3448,9 +3856,13 @@ Truncated key              :                    0
 
 Bits to test              :                    0
 
+```text
 Data error                :                    0
+```
 
+```text
 TCP header length error    :                    0
+```
 
 Stack underflow            :                    0
 
@@ -3466,7 +3878,9 @@ Info cell drops            :                    0
 
 Fabric drops              :                    0
 
+```text
 Packet Forwarding Engine Input IPv4 Header Checksum Error and Output MTU Error statistics:
+```
 
 Input Checksum            :                    0
 
@@ -3484,9 +3898,13 @@ Drop bytes      :                    0                   
 
 Packet Forwarding Engine Details:
 
+```text
 fpc:                    3
+```
 
+```text
 pfe:                    0
+```
 
 Packet Forwarding Engine traffic statistics:
 
@@ -3506,9 +3924,13 @@ Truncated key              :                    0
 
 Bits to test              :                    0
 
+```text
 Data error                :                    0
+```
 
+```text
 TCP header length error    :                    0
+```
 
 Stack underflow            :                    0
 
@@ -3524,7 +3946,9 @@ Info cell drops            :                    0
 
 Fabric drops              :                  207
 
+```text
 Packet Forwarding Engine Input IPv4 Header Checksum Error and Output MTU Error statistics:
+```
 
 Input Checksum            :                    0
 
@@ -3542,9 +3966,13 @@ Drop bytes      :                    0                   
 
 Packet Forwarding Engine Details:
 
+```text
 fpc:                    3
+```
 
+```text
 pfe:                    1
+```
 
 Packet Forwarding Engine traffic statistics:
 
@@ -3564,9 +3992,13 @@ Truncated key              :                    0
 
 Bits to test              :                    0
 
+```text
 Data error                :                    0
+```
 
+```text
 TCP header length error    :                    0
+```
 
 Stack underflow            :                    0
 
@@ -3582,7 +4014,9 @@ Info cell drops            :                    0
 
 Fabric drops              :                    0
 
+```text
 Packet Forwarding Engine Input IPv4 Header Checksum Error and Output MTU Error statistics:
+```
 
 Input Checksum            :                    0
 
@@ -3600,9 +4034,13 @@ Drop bytes      :                    0                   
 
 Packet Forwarding Engine Details:
 
+```text
 fpc:                    3
+```
 
+```text
 pfe:                    2
+```
 
 Packet Forwarding Engine traffic statistics:
 
@@ -3622,9 +4060,13 @@ Truncated key              :                    0
 
 Bits to test              :                    0
 
+```text
 Data error                :                    0
+```
 
+```text
 TCP header length error    :                    0
+```
 
 Stack underflow            :                    0
 
@@ -3640,7 +4082,9 @@ Info cell drops            :                    0
 
 Fabric drops              :                    0
 
+```text
 Packet Forwarding Engine Input IPv4 Header Checksum Error and Output MTU Error statistics:
+```
 
 Input Checksum            :                    0
 
@@ -3658,9 +4102,13 @@ Drop bytes      :                    0                   
 
 Packet Forwarding Engine Details:
 
+```text
 fpc:                    3
+```
 
+```text
 pfe:                    3
+```
 
 Packet Forwarding Engine traffic statistics:
 
@@ -3680,9 +4128,13 @@ Truncated key              :                    0
 
 Bits to test              :                    0
 
+```text
 Data error                :                    0
+```
 
+```text
 TCP header length error    :                    0
+```
 
 Stack underflow            :                    0
 
@@ -3698,7 +4150,9 @@ Info cell drops            :                    0
 
 Fabric drops              :                    0
 
+```text
 Packet Forwarding Engine Input IPv4 Header Checksum Error and Output MTU Error statistics:
+```
 
 Input Checksum            :                    0
 
@@ -3716,9 +4170,13 @@ Drop bytes      :                    0                   
 
 Packet Forwarding Engine Details:
 
+```text
 fpc:                    4
+```
 
+```text
 pfe:                    0
+```
 
 Packet Forwarding Engine traffic statistics:
 
@@ -3738,9 +4196,13 @@ Truncated key              :                    0
 
 Bits to test              :                    0
 
+```text
 Data error                :                    0
+```
 
+```text
 TCP header length error    :                    0
+```
 
 Stack underflow            :                    0
 
@@ -3756,7 +4218,9 @@ Info cell drops            :                    0
 
 Fabric drops              :                  439
 
+```text
 Packet Forwarding Engine Input IPv4 Header Checksum Error and Output MTU Error statistics:
+```
 
 Input Checksum            :                    0
 
@@ -3774,9 +4238,13 @@ Drop bytes      :                    0                   
 
 Packet Forwarding Engine Details:
 
+```text
 fpc:                    4
+```
 
+```text
 pfe:                    1
+```
 
 Packet Forwarding Engine traffic statistics:
 
@@ -3796,9 +4264,13 @@ Truncated key              :                    0
 
 Bits to test              :                    0
 
+```text
 Data error                :                    0
+```
 
+```text
 TCP header length error    :                    0
+```
 
 Stack underflow            :                    0
 
@@ -3814,7 +4286,9 @@ Info cell drops            :                    0
 
 Fabric drops              :                    0
 
+```text
 Packet Forwarding Engine Input IPv4 Header Checksum Error and Output MTU Error statistics:
+```
 
 Input Checksum            :                    0
 
@@ -3832,9 +4306,13 @@ Drop bytes      :                    0                   
 
 Packet Forwarding Engine Details:
 
+```text
 fpc:                    4
+```
 
+```text
 pfe:                    2
+```
 
 Packet Forwarding Engine traffic statistics:
 
@@ -3854,9 +4332,13 @@ Truncated key              :                    0
 
 Bits to test              :                    0
 
+```text
 Data error                :                    0
+```
 
+```text
 TCP header length error    :                    0
+```
 
 Stack underflow            :                    0
 
@@ -3872,7 +4354,9 @@ Info cell drops            :                    0
 
 Fabric drops              :                    0
 
+```text
 Packet Forwarding Engine Input IPv4 Header Checksum Error and Output MTU Error statistics:
+```
 
 Input Checksum            :                    0
 
@@ -3890,9 +4374,13 @@ Drop bytes      :                    0                   
 
 Packet Forwarding Engine Details:
 
+```text
 fpc:                    4
+```
 
+```text
 pfe:                    3
+```
 
 Packet Forwarding Engine traffic statistics:
 
@@ -3912,9 +4400,13 @@ Truncated key              :                    0
 
 Bits to test              :                    0
 
+```text
 Data error                :                    0
+```
 
+```text
 TCP header length error    :                    0
+```
 
 Stack underflow            :                    0
 
@@ -3930,7 +4422,9 @@ Info cell drops            :                    0
 
 Fabric drops              :                    0
 
+```text
 Packet Forwarding Engine Input IPv4 Header Checksum Error and Output MTU Error statistics:
+```
 
 Input Checksum            :                    0
 
@@ -3948,9 +4442,13 @@ Drop bytes      :                    0                   
 
 Packet Forwarding Engine Details:
 
+```text
 fpc:                    5
+```
 
+```text
 pfe:                    0
+```
 
 Packet Forwarding Engine traffic statistics:
 
@@ -3970,9 +4468,13 @@ Truncated key              :                    0
 
 Bits to test              :                    0
 
+```text
 Data error                :                    0
+```
 
+```text
 TCP header length error    :                    0
+```
 
 Stack underflow            :                    0
 
@@ -3988,7 +4490,9 @@ Info cell drops            :                    0
 
 Fabric drops              :                  347
 
+```text
 Packet Forwarding Engine Input IPv4 Header Checksum Error and Output MTU Error statistics:
+```
 
 Input Checksum            :              151618
 
@@ -4006,9 +4510,13 @@ Drop bytes      :                    0                   
 
 Packet Forwarding Engine Details:
 
+```text
 fpc:                    5
+```
 
+```text
 pfe:                    1
+```
 
 Packet Forwarding Engine traffic statistics:
 
@@ -4028,9 +4536,13 @@ Truncated key              :                    0
 
 Bits to test              :                    0
 
+```text
 Data error                :                    0
+```
 
+```text
 TCP header length error    :                    0
+```
 
 Stack underflow            :                    0
 
@@ -4046,7 +4558,9 @@ Info cell drops            :                    0
 
 Fabric drops              :                    0
 
+```text
 Packet Forwarding Engine Input IPv4 Header Checksum Error and Output MTU Error statistics:
+```
 
 Input Checksum            :                16735
 
@@ -4064,9 +4578,13 @@ Drop bytes      :                    0                   
 
 Packet Forwarding Engine Details:
 
+```text
 fpc:                    5
+```
 
+```text
 pfe:                    2
+```
 
 Packet Forwarding Engine traffic statistics:
 
@@ -4086,9 +4604,13 @@ Truncated key              :                    0
 
 Bits to test              :                    0
 
+```text
 Data error                :                    0
+```
 
+```text
 TCP header length error    :                    0
+```
 
 Stack underflow            :                    0
 
@@ -4104,7 +4626,9 @@ Info cell drops            :                    0
 
 Fabric drops              :                    0
 
+```text
 Packet Forwarding Engine Input IPv4 Header Checksum Error and Output MTU Error statistics:
+```
 
 Input Checksum            :                    0
 
@@ -4122,9 +4646,13 @@ Drop bytes      :                    0                   
 
 Packet Forwarding Engine Details:
 
+```text
 fpc:                    5
+```
 
+```text
 pfe:                    3
+```
 
 Packet Forwarding Engine traffic statistics:
 
@@ -4144,9 +4672,13 @@ Truncated key              :                    0
 
 Bits to test              :                    0
 
+```text
 Data error                :                    0
+```
 
+```text
 TCP header length error    :                    0
+```
 
 Stack underflow            :                    0
 
@@ -4162,7 +4694,9 @@ Info cell drops            :                    0
 
 Fabric drops              :                    0
 
+```text
 Packet Forwarding Engine Input IPv4 Header Checksum Error and Output MTU Error statistics:
+```
 
 Input Checksum            :                    0
 
@@ -4180,9 +4714,13 @@ Drop bytes      :                    0                   
 
 Packet Forwarding Engine Details:
 
+```text
 fpc:                    6
+```
 
+```text
 pfe:                    0
+```
 
 Packet Forwarding Engine traffic statistics:
 
@@ -4202,9 +4740,13 @@ Truncated key              :                    0
 
 Bits to test              :                    0
 
+```text
 Data error                :                    0
+```
 
+```text
 TCP header length error    :                    0
+```
 
 Stack underflow            :                    0
 
@@ -4220,7 +4762,9 @@ Info cell drops            :                    0
 
 Fabric drops              :                  406
 
+```text
 Packet Forwarding Engine Input IPv4 Header Checksum Error and Output MTU Error statistics:
+```
 
 Input Checksum            :                    0
 
@@ -4238,9 +4782,13 @@ Drop bytes      :                    0                   
 
 Packet Forwarding Engine Details:
 
+```text
 fpc:                    6
+```
 
+```text
 pfe:                    1
+```
 
 Packet Forwarding Engine traffic statistics:
 
@@ -4260,9 +4808,13 @@ Truncated key              :                    0
 
 Bits to test              :                    0
 
+```text
 Data error                :                    0
+```
 
+```text
 TCP header length error    :                    0
+```
 
 Stack underflow            :                    0
 
@@ -4278,7 +4830,9 @@ Info cell drops            :                    0
 
 Fabric drops              :                  11
 
+```text
 Packet Forwarding Engine Input IPv4 Header Checksum Error and Output MTU Error statistics:
+```
 
 Input Checksum            :                    0
 
@@ -4296,9 +4850,13 @@ Drop bytes      :                    0                   
 
 Packet Forwarding Engine Details:
 
+```text
 fpc:                    6
+```
 
+```text
 pfe:                    2
+```
 
 Packet Forwarding Engine traffic statistics:
 
@@ -4318,9 +4876,13 @@ Truncated key              :                    0
 
 Bits to test              :                    0
 
+```text
 Data error                :                    0
+```
 
+```text
 TCP header length error    :                    0
+```
 
 Stack underflow            :                    0
 
@@ -4336,7 +4898,9 @@ Info cell drops            :                    0
 
 Fabric drops              :                  15
 
+```text
 Packet Forwarding Engine Input IPv4 Header Checksum Error and Output MTU Error statistics:
+```
 
 Input Checksum            :              2211685
 
@@ -4354,9 +4918,13 @@ Drop bytes      :                    0                   
 
 Packet Forwarding Engine Details:
 
+```text
 fpc:                    6
+```
 
+```text
 pfe:                    3
+```
 
 Packet Forwarding Engine traffic statistics:
 
@@ -4376,9 +4944,13 @@ Truncated key              :                    0
 
 Bits to test              :                    0
 
+```text
 Data error                :                    0
+```
 
+```text
 TCP header length error    :                    0
+```
 
 Stack underflow            :                    0
 
@@ -4394,7 +4966,9 @@ Info cell drops            :                    0
 
 Fabric drops              :                  10
 
+```text
 Packet Forwarding Engine Input IPv4 Header Checksum Error and Output MTU Error statistics:
+```
 
 Input Checksum            :                    0
 
@@ -4412,9 +4986,13 @@ Drop bytes      :                    0                   
 
 Packet Forwarding Engine Details:
 
+```text
 fpc:                    7
+```
 
+```text
 pfe:                    0
+```
 
 Packet Forwarding Engine traffic statistics:
 
@@ -4434,9 +5012,13 @@ Truncated key              :                    0
 
 Bits to test              :                    0
 
+```text
 Data error                :                    0
+```
 
+```text
 TCP header length error    :                    0
+```
 
 Stack underflow            :                    0
 
@@ -4452,7 +5034,9 @@ Info cell drops            :                    0
 
 Fabric drops              :                  427
 
+```text
 Packet Forwarding Engine Input IPv4 Header Checksum Error and Output MTU Error statistics:
+```
 
 Input Checksum            :                    0
 
@@ -4470,9 +5054,13 @@ Drop bytes      :                    0                   
 
 Packet Forwarding Engine Details:
 
+```text
 fpc:                    7
+```
 
+```text
 pfe:                    1
+```
 
 Packet Forwarding Engine traffic statistics:
 
@@ -4492,9 +5080,13 @@ Truncated key              :                    0
 
 Bits to test              :                    0
 
+```text
 Data error                :                    0
+```
 
+```text
 TCP header length error    :                    0
+```
 
 Stack underflow            :                    0
 
@@ -4510,7 +5102,9 @@ Info cell drops            :                    0
 
 Fabric drops              :                  15
 
+```text
 Packet Forwarding Engine Input IPv4 Header Checksum Error and Output MTU Error statistics:
+```
 
 Input Checksum            :              192596
 
@@ -4528,9 +5122,13 @@ Drop bytes      :                    0                   
 
 Packet Forwarding Engine Details:
 
+```text
 fpc:                    7
+```
 
+```text
 pfe:                    2
+```
 
 Packet Forwarding Engine traffic statistics:
 
@@ -4550,9 +5148,13 @@ Truncated key              :                    0
 
 Bits to test              :                    0
 
+```text
 Data error                :                    0
+```
 
+```text
 TCP header length error    :                    0
+```
 
 Stack underflow            :                    0
 
@@ -4568,7 +5170,9 @@ Info cell drops            :                    0
 
 Fabric drops              :                    0
 
+```text
 Packet Forwarding Engine Input IPv4 Header Checksum Error and Output MTU Error statistics:
+```
 
 Input Checksum            :                    0
 
@@ -4586,9 +5190,13 @@ Drop bytes      :                    0                   
 
 Packet Forwarding Engine Details:
 
+```text
 fpc:                    7
+```
 
+```text
 pfe:                    3
+```
 
 Packet Forwarding Engine traffic statistics:
 
@@ -4608,9 +5216,13 @@ Truncated key              :                    0
 
 Bits to test              :                    0
 
+```text
 Data error                :                    0
+```
 
+```text
 TCP header length error    :                    0
+```
 
 Stack underflow            :                    0
 
@@ -4626,7 +5238,9 @@ Info cell drops            :                    0
 
 Fabric drops              :                    0
 
+```text
 Packet Forwarding Engine Input IPv4 Header Checksum Error and Output MTU Error statistics:
+```
 
 Input Checksum            :                    0
 
@@ -4644,9 +5258,13 @@ Drop bytes      :                    0                   
 
 Packet Forwarding Engine Details:
 
+```text
 fpc:                    8
+```
 
+```text
 pfe:                    0
+```
 
 Packet Forwarding Engine traffic statistics:
 
@@ -4666,9 +5284,13 @@ Truncated key              :                    0
 
 Bits to test              :                    0
 
+```text
 Data error                :                    0
+```
 
+```text
 TCP header length error    :                    0
+```
 
 Stack underflow            :                    0
 
@@ -4684,7 +5306,9 @@ Info cell drops            :                    0
 
 Fabric drops              :                  466
 
+```text
 Packet Forwarding Engine Input IPv4 Header Checksum Error and Output MTU Error statistics:
+```
 
 Input Checksum            :              4356746
 
@@ -4702,9 +5326,13 @@ Drop bytes      :                    0                   
 
 Packet Forwarding Engine Details:
 
+```text
 fpc:                    8
+```
 
+```text
 pfe:                    1
+```
 
 Packet Forwarding Engine traffic statistics:
 
@@ -4724,9 +5352,13 @@ Truncated key              :                    0
 
 Bits to test              :                    0
 
+```text
 Data error                :                    0
+```
 
+```text
 TCP header length error    :                    0
+```
 
 Stack underflow            :                    0
 
@@ -4742,7 +5374,9 @@ Info cell drops            :                    0
 
 Fabric drops              :                  14
 
+```text
 Packet Forwarding Engine Input IPv4 Header Checksum Error and Output MTU Error statistics:
+```
 
 Input Checksum            :              4146263
 
@@ -4760,9 +5394,13 @@ Drop bytes      :                    0                   
 
 Packet Forwarding Engine Details:
 
+```text
 fpc:                    8
+```
 
+```text
 pfe:                    2
+```
 
 Packet Forwarding Engine traffic statistics:
 
@@ -4782,9 +5420,13 @@ Truncated key              :                    0
 
 Bits to test              :                    0
 
+```text
 Data error                :                    0
+```
 
+```text
 TCP header length error    :                    0
+```
 
 Stack underflow            :                    0
 
@@ -4800,7 +5442,9 @@ Info cell drops            :                    0
 
 Fabric drops              :                    1
 
+```text
 Packet Forwarding Engine Input IPv4 Header Checksum Error and Output MTU Error statistics:
+```
 
 Input Checksum            :                    0
 
@@ -4818,9 +5462,13 @@ Drop bytes      :                    0                   
 
 Packet Forwarding Engine Details:
 
+```text
 fpc:                    8
+```
 
+```text
 pfe:                    3
+```
 
 Packet Forwarding Engine traffic statistics:
 
@@ -4840,9 +5488,13 @@ Truncated key              :                    0
 
 Bits to test              :                    0
 
+```text
 Data error                :                    0
+```
 
+```text
 TCP header length error    :                    0
+```
 
 Stack underflow            :                    0
 
@@ -4858,7 +5510,9 @@ Info cell drops            :                    0
 
 Fabric drops              :                    0
 
+```text
 Packet Forwarding Engine Input IPv4 Header Checksum Error and Output MTU Error statistics:
+```
 
 Input Checksum            :                    0
 
@@ -4876,9 +5530,13 @@ Drop bytes      :                    0                   
 
 Packet Forwarding Engine Details:
 
+```text
 fpc:                    9
+```
 
+```text
 pfe:                    0
+```
 
 Packet Forwarding Engine traffic statistics:
 
@@ -4898,9 +5556,13 @@ Truncated key              :                    0
 
 Bits to test              :                    0
 
+```text
 Data error                :                    0
+```
 
+```text
 TCP header length error    :                    0
+```
 
 Stack underflow            :                    0
 
@@ -4916,7 +5578,9 @@ Info cell drops            :                    0
 
 Fabric drops              :                  144
 
+```text
 Packet Forwarding Engine Input IPv4 Header Checksum Error and Output MTU Error statistics:
+```
 
 Input Checksum            :                49693
 
@@ -4934,9 +5598,13 @@ Drop bytes      :                    0                   
 
 Packet Forwarding Engine Details:
 
+```text
 fpc:                    9
+```
 
+```text
 pfe:                    1
+```
 
 Packet Forwarding Engine traffic statistics:
 
@@ -4956,9 +5624,13 @@ Truncated key              :                    0
 
 Bits to test              :                    0
 
+```text
 Data error                :                    0
+```
 
+```text
 TCP header length error    :                    0
+```
 
 Stack underflow            :                    0
 
@@ -4974,7 +5646,9 @@ Info cell drops            :                    0
 
 Fabric drops              :                  10
 
+```text
 Packet Forwarding Engine Input IPv4 Header Checksum Error and Output MTU Error statistics:
+```
 
 Input Checksum            :              134448
 
@@ -4992,9 +5666,13 @@ Drop bytes      :                    0                   
 
 Packet Forwarding Engine Details:
 
+```text
 fpc:                    9
+```
 
+```text
 pfe:                    2
+```
 
 Packet Forwarding Engine traffic statistics:
 
@@ -5014,9 +5692,13 @@ Truncated key              :                    0
 
 Bits to test              :                    0
 
+```text
 Data error                :                    0
+```
 
+```text
 TCP header length error    :                    0
+```
 
 Stack underflow            :                    0
 
@@ -5032,7 +5714,9 @@ Info cell drops            :                    0
 
 Fabric drops              :                    0
 
+```text
 Packet Forwarding Engine Input IPv4 Header Checksum Error and Output MTU Error statistics:
+```
 
 Input Checksum            :                    0
 
@@ -5050,9 +5734,13 @@ Drop bytes      :                    0                   
 
 Packet Forwarding Engine Details:
 
+```text
 fpc:                    9
+```
 
+```text
 pfe:                    3
+```
 
 Packet Forwarding Engine traffic statistics:
 
@@ -5072,9 +5760,13 @@ Truncated key              :                    0
 
 Bits to test              :                    0
 
+```text
 Data error                :                    0
+```
 
+```text
 TCP header length error    :                    0
+```
 
 Stack underflow            :                    0
 
@@ -5090,7 +5782,9 @@ Info cell drops            :                    0
 
 Fabric drops              :                    0
 
+```text
 Packet Forwarding Engine Input IPv4 Header Checksum Error and Output MTU Error statistics:
+```
 
 Input Checksum            :                    0
 
@@ -5108,9 +5802,13 @@ Drop bytes      :                    0                   
 
 Packet Forwarding Engine Details:
 
+```text
 fpc:                  11
+```
 
+```text
 pfe:                    0
+```
 
 Packet Forwarding Engine traffic statistics:
 
@@ -5130,9 +5828,13 @@ Truncated key              :                    0
 
 Bits to test              :                    0
 
+```text
 Data error                :                    0
+```
 
+```text
 TCP header length error    :                    0
+```
 
 Stack underflow            :                    0
 
@@ -5148,7 +5850,9 @@ Info cell drops            :                    0
 
 Fabric drops              :                1434
 
+```text
 Packet Forwarding Engine Input IPv4 Header Checksum Error and Output MTU Error statistics:
+```
 
 Input Checksum            :                    0
 
@@ -5166,9 +5870,13 @@ Drop bytes      :                    0                   
 
 Packet Forwarding Engine Details:
 
+```text
 fpc:                  11
+```
 
+```text
 pfe:                    1
+```
 
 Packet Forwarding Engine traffic statistics:
 
@@ -5188,9 +5896,13 @@ Truncated key              :                    0
 
 Bits to test              :                    0
 
+```text
 Data error                :                    0
+```
 
+```text
 TCP header length error    :                    0
+```
 
 Stack underflow            :                    0
 
@@ -5206,7 +5918,9 @@ Info cell drops            :                    0
 
 Fabric drops              :                    0
 
+```text
 Packet Forwarding Engine Input IPv4 Header Checksum Error and Output MTU Error statistics:
+```
 
 Input Checksum            :                    0
 
@@ -5224,9 +5938,13 @@ Drop bytes      :                    0                   
 
 Packet Forwarding Engine Details:
 
+```text
 fpc:                  11
+```
 
+```text
 pfe:                    2
+```
 
 Packet Forwarding Engine traffic statistics:
 
@@ -5246,9 +5964,13 @@ Truncated key              :                    0
 
 Bits to test              :                    0
 
+```text
 Data error                :                    0
+```
 
+```text
 TCP header length error    :                    0
+```
 
 Stack underflow            :                    0
 
@@ -5264,7 +5986,9 @@ Info cell drops            :                    0
 
 Fabric drops              :                    0
 
+```text
 Packet Forwarding Engine Input IPv4 Header Checksum Error and Output MTU Error statistics:
+```
 
 Input Checksum            :                    0
 
@@ -5282,9 +6006,13 @@ Drop bytes      :                    0                   
 
 Packet Forwarding Engine Details:
 
+```text
 fpc:                  11
+```
 
+```text
 pfe:                    3
+```
 
 Packet Forwarding Engine traffic statistics:
 
@@ -5304,9 +6032,13 @@ Truncated key              :                    0
 
 Bits to test              :                    0
 
+```text
 Data error                :                    0
+```
 
+```text
 TCP header length error    :                    0
+```
 
 Stack underflow            :                    0
 
@@ -5322,7 +6054,9 @@ Info cell drops            :                    0
 
 Fabric drops              :                    0
 
+```text
 Packet Forwarding Engine Input IPv4 Header Checksum Error and Output MTU Error statistics:
+```
 
 Input Checksum            :                    0
 
@@ -5340,9 +6074,13 @@ Drop bytes      :                    0                   
 
 Packet Forwarding Engine Details:
 
+```text
 fpc:                  12
+```
 
+```text
 pfe:                    0
+```
 
 Packet Forwarding Engine traffic statistics:
 
@@ -5362,9 +6100,13 @@ Truncated key              :                    0
 
 Bits to test              :                    0
 
+```text
 Data error                :                    0
+```
 
+```text
 TCP header length error    :                    0
+```
 
 Stack underflow            :                    0
 
@@ -5380,7 +6122,9 @@ Info cell drops            :                    0
 
 Fabric drops              :                1459
 
+```text
 Packet Forwarding Engine Input IPv4 Header Checksum Error and Output MTU Error statistics:
+```
 
 Input Checksum            :                    0
 
@@ -5398,9 +6142,13 @@ Drop bytes      :                    0                   
 
 Packet Forwarding Engine Details:
 
+```text
 fpc:                  12
+```
 
+```text
 pfe:                    1
+```
 
 Packet Forwarding Engine traffic statistics:
 
@@ -5420,9 +6168,13 @@ Truncated key              :                    0
 
 Bits to test              :                    0
 
+```text
 Data error                :                    0
+```
 
+```text
 TCP header length error    :                    0
+```
 
 Stack underflow            :                    0
 
@@ -5438,7 +6190,9 @@ Info cell drops            :                    0
 
 Fabric drops              :                    1
 
+```text
 Packet Forwarding Engine Input IPv4 Header Checksum Error and Output MTU Error statistics:
+```
 
 Input Checksum            :                    0
 
@@ -5456,9 +6210,13 @@ Drop bytes      :                    0                   
 
 Packet Forwarding Engine Details:
 
+```text
 fpc:                  12
+```
 
+```text
 pfe:                    2
+```
 
 Packet Forwarding Engine traffic statistics:
 
@@ -5478,9 +6236,13 @@ Truncated key              :                    0
 
 Bits to test              :                    0
 
+```text
 Data error                :                    0
+```
 
+```text
 TCP header length error    :                    0
+```
 
 Stack underflow            :                    0
 
@@ -5496,7 +6258,9 @@ Info cell drops            :                    0
 
 Fabric drops              :                    0
 
+```text
 Packet Forwarding Engine Input IPv4 Header Checksum Error and Output MTU Error statistics:
+```
 
 Input Checksum            :                    0
 
@@ -5514,9 +6278,13 @@ Drop bytes      :                    0                   
 
 Packet Forwarding Engine Details:
 
+```text
 fpc:                  12
+```
 
+```text
 pfe:                    3
+```
 
 Packet Forwarding Engine traffic statistics:
 
@@ -5536,9 +6304,13 @@ Truncated key              :                    0
 
 Bits to test              :                    0
 
+```text
 Data error                :                    0
+```
 
+```text
 TCP header length error    :                    0
+```
 
 Stack underflow            :                    0
 
@@ -5554,7 +6326,9 @@ Info cell drops            :                    0
 
 Fabric drops              :                    0
 
+```text
 Packet Forwarding Engine Input IPv4 Header Checksum Error and Output MTU Error statistics:
+```
 
 Input Checksum            :                    0
 
@@ -5572,9 +6346,13 @@ Drop bytes      :                    0                   
 
 Packet Forwarding Engine Details:
 
+```text
 fpc:                  13
+```
 
+```text
 pfe:                    0
+```
 
 Packet Forwarding Engine traffic statistics:
 
@@ -5594,9 +6372,13 @@ Truncated key              :                    0
 
 Bits to test              :                    0
 
+```text
 Data error                :                    0
+```
 
+```text
 TCP header length error    :                    0
+```
 
 Stack underflow            :                    0
 
@@ -5612,7 +6394,9 @@ Info cell drops            :                    0
 
 Fabric drops              :                  564
 
+```text
 Packet Forwarding Engine Input IPv4 Header Checksum Error and Output MTU Error statistics:
+```
 
 Input Checksum            :                    0
 
@@ -5630,9 +6414,13 @@ Drop bytes      :                    0                   
 
 Packet Forwarding Engine Details:
 
+```text
 fpc:                  13
+```
 
+```text
 pfe:                    1
+```
 
 Packet Forwarding Engine traffic statistics:
 
@@ -5652,9 +6440,13 @@ Truncated key              :                    0
 
 Bits to test              :                    0
 
+```text
 Data error                :                    0
+```
 
+```text
 TCP header length error    :                    0
+```
 
 Stack underflow            :                    0
 
@@ -5670,7 +6462,9 @@ Info cell drops            :                    0
 
 Fabric drops              :                    0
 
+```text
 Packet Forwarding Engine Input IPv4 Header Checksum Error and Output MTU Error statistics:
+```
 
 Input Checksum            :                    0
 
@@ -5688,9 +6482,13 @@ Drop bytes      :                    0                   
 
 Packet Forwarding Engine Details:
 
+```text
 fpc:                  13
+```
 
+```text
 pfe:                    2
+```
 
 Packet Forwarding Engine traffic statistics:
 
@@ -5710,9 +6508,13 @@ Truncated key              :                    0
 
 Bits to test              :                    0
 
+```text
 Data error                :                    0
+```
 
+```text
 TCP header length error    :                    0
+```
 
 Stack underflow            :                    0
 
@@ -5728,7 +6530,9 @@ Info cell drops            :                    0
 
 Fabric drops              :                    0
 
+```text
 Packet Forwarding Engine Input IPv4 Header Checksum Error and Output MTU Error statistics:
+```
 
 Input Checksum            :                    0
 
@@ -5746,9 +6550,13 @@ Drop bytes      :                    0                   
 
 Packet Forwarding Engine Details:
 
+```text
 fpc:                  13
+```
 
+```text
 pfe:                    3
+```
 
 Packet Forwarding Engine traffic statistics:
 
@@ -5768,9 +6576,13 @@ Truncated key              :                    0
 
 Bits to test              :                    0
 
+```text
 Data error                :                    0
+```
 
+```text
 TCP header length error    :                    0
+```
 
 Stack underflow            :                    0
 
@@ -5786,7 +6598,9 @@ Info cell drops            :                    0
 
 Fabric drops              :                    0
 
+```text
 Packet Forwarding Engine Input IPv4 Header Checksum Error and Output MTU Error statistics:
+```
 
 Input Checksum            :                    0
 
@@ -5804,9 +6618,13 @@ Drop bytes      :                    0                   
 
 Packet Forwarding Engine Details:
 
+```text
 fpc:                  14
+```
 
+```text
 pfe:                    0
+```
 
 Packet Forwarding Engine traffic statistics:
 
@@ -5826,9 +6644,13 @@ Truncated key              :                    0
 
 Bits to test              :                    0
 
+```text
 Data error                :                    0
+```
 
+```text
 TCP header length error    :                    0
+```
 
 Stack underflow            :                    0
 
@@ -5844,7 +6666,9 @@ Info cell drops            :                    0
 
 Fabric drops              :                  520
 
+```text
 Packet Forwarding Engine Input IPv4 Header Checksum Error and Output MTU Error statistics:
+```
 
 Input Checksum            :                    0
 
@@ -5862,9 +6686,13 @@ Drop bytes      :                    0                   
 
 Packet Forwarding Engine Details:
 
+```text
 fpc:                  14
+```
 
+```text
 pfe:                    1
+```
 
 Packet Forwarding Engine traffic statistics:
 
@@ -5884,9 +6712,13 @@ Truncated key              :                    0
 
 Bits to test              :                    0
 
+```text
 Data error                :                    0
+```
 
+```text
 TCP header length error    :                    0
+```
 
 Stack underflow            :                    0
 
@@ -5902,7 +6734,9 @@ Info cell drops            :                    0
 
 Fabric drops              :                    0
 
+```text
 Packet Forwarding Engine Input IPv4 Header Checksum Error and Output MTU Error statistics:
+```
 
 Input Checksum            :                    0
 
@@ -5920,9 +6754,13 @@ Drop bytes      :                    0                   
 
 Packet Forwarding Engine Details:
 
+```text
 fpc:                  14
+```
 
+```text
 pfe:                    2
+```
 
 Packet Forwarding Engine traffic statistics:
 
@@ -5942,9 +6780,13 @@ Truncated key              :                    0
 
 Bits to test              :                    0
 
+```text
 Data error                :                    0
+```
 
+```text
 TCP header length error    :                    0
+```
 
 Stack underflow            :                    0
 
@@ -5960,7 +6802,9 @@ Info cell drops            :                    0
 
 Fabric drops              :                    0
 
+```text
 Packet Forwarding Engine Input IPv4 Header Checksum Error and Output MTU Error statistics:
+```
 
 Input Checksum            :                    0
 
@@ -5978,9 +6822,13 @@ Drop bytes      :                    0                   
 
 Packet Forwarding Engine Details:
 
+```text
 fpc:                  14
+```
 
+```text
 pfe:                    3
+```
 
 Packet Forwarding Engine traffic statistics:
 
@@ -6000,9 +6848,13 @@ Truncated key              :                    0
 
 Bits to test              :                    0
 
+```text
 Data error                :                    0
+```
 
+```text
 TCP header length error    :                    0
+```
 
 Stack underflow            :                    0
 
@@ -6018,7 +6870,9 @@ Info cell drops            :                    0
 
 Fabric drops              :                    0
 
+```text
 Packet Forwarding Engine Input IPv4 Header Checksum Error and Output MTU Error statistics:
+```
 
 Input Checksum            :                    0
 
@@ -6036,9 +6890,13 @@ Drop bytes      :                    0                   
 
 Packet Forwarding Engine Details:
 
+```text
 fpc:                  15
+```
 
+```text
 pfe:                    0
+```
 
 Packet Forwarding Engine traffic statistics:
 
@@ -6058,9 +6916,13 @@ Truncated key              :                    0
 
 Bits to test              :                    0
 
+```text
 Data error                :                    0
+```
 
+```text
 TCP header length error    :                    0
+```
 
 Stack underflow            :                    0
 
@@ -6076,7 +6938,9 @@ Info cell drops            :                    0
 
 Fabric drops              :                  638
 
+```text
 Packet Forwarding Engine Input IPv4 Header Checksum Error and Output MTU Error statistics:
+```
 
 Input Checksum            :                78610
 
@@ -6094,9 +6958,13 @@ Drop bytes      :                    0                   
 
 Packet Forwarding Engine Details:
 
+```text
 fpc:                  15
+```
 
+```text
 pfe:                    1
+```
 
 Packet Forwarding Engine traffic statistics:
 
@@ -6116,9 +6984,13 @@ Truncated key              :                    0
 
 Bits to test              :                    0
 
+```text
 Data error                :                    0
+```
 
+```text
 TCP header length error    :                    0
+```
 
 Stack underflow            :                    0
 
@@ -6134,7 +7006,9 @@ Info cell drops            :                    0
 
 Fabric drops              :                    2
 
+```text
 Packet Forwarding Engine Input IPv4 Header Checksum Error and Output MTU Error statistics:
+```
 
 Input Checksum            :                19395
 
@@ -6152,9 +7026,13 @@ Drop bytes      :                    0                   
 
 Packet Forwarding Engine Details:
 
+```text
 fpc:                  15
+```
 
+```text
 pfe:                    2
+```
 
 Packet Forwarding Engine traffic statistics:
 
@@ -6174,9 +7052,13 @@ Truncated key              :                    0
 
 Bits to test              :                    0
 
+```text
 Data error                :                    0
+```
 
+```text
 TCP header length error    :                    0
+```
 
 Stack underflow            :                    0
 
@@ -6192,7 +7074,9 @@ Info cell drops            :                    0
 
 Fabric drops              :                    0
 
+```text
 Packet Forwarding Engine Input IPv4 Header Checksum Error and Output MTU Error statistics:
+```
 
 Input Checksum            :                    0
 
@@ -6210,9 +7094,13 @@ Drop bytes      :                    0                   
 
 Packet Forwarding Engine Details:
 
+```text
 fpc:                  15
+```
 
+```text
 pfe:                    3
+```
 
 Packet Forwarding Engine traffic statistics:
 
@@ -6232,9 +7120,13 @@ Truncated key              :                    0
 
 Bits to test              :                    0
 
+```text
 Data error                :                    0
+```
 
+```text
 TCP header length error    :                    0
+```
 
 Stack underflow            :                    0
 
@@ -6250,7 +7142,9 @@ Info cell drops            :                    0
 
 Fabric drops              :                    1
 
+```text
 Packet Forwarding Engine Input IPv4 Header Checksum Error and Output MTU Error statistics:
+```
 
 Input Checksum            :                    0
 
@@ -6268,9 +7162,13 @@ Drop bytes      :                    0                   
 
 Packet Forwarding Engine Details:
 
+```text
 fpc:                  16
+```
 
+```text
 pfe:                    0
+```
 
 Packet Forwarding Engine traffic statistics:
 
@@ -6290,9 +7188,13 @@ Truncated key              :                    0
 
 Bits to test              :                    0
 
+```text
 Data error                :                    0
+```
 
+```text
 TCP header length error    :                    0
+```
 
 Stack underflow            :                    0
 
@@ -6308,7 +7210,9 @@ Info cell drops            :                    0
 
 Fabric drops              :                  646
 
+```text
 Packet Forwarding Engine Input IPv4 Header Checksum Error and Output MTU Error statistics:
+```
 
 Input Checksum            :                    0
 
@@ -6326,9 +7230,13 @@ Drop bytes      :                    0                   
 
 Packet Forwarding Engine Details:
 
+```text
 fpc:                  16
+```
 
+```text
 pfe:                    1
+```
 
 Packet Forwarding Engine traffic statistics:
 
@@ -6348,9 +7256,13 @@ Truncated key              :                    0
 
 Bits to test              :                    0
 
+```text
 Data error                :                    0
+```
 
+```text
 TCP header length error    :                    0
+```
 
 Stack underflow            :                    0
 
@@ -6366,7 +7278,9 @@ Info cell drops            :                    0
 
 Fabric drops              :                    0
 
+```text
 Packet Forwarding Engine Input IPv4 Header Checksum Error and Output MTU Error statistics:
+```
 
 Input Checksum            :                    0
 
@@ -6384,9 +7298,13 @@ Drop bytes      :                    0                   
 
 Packet Forwarding Engine Details:
 
+```text
 fpc:                  16
+```
 
+```text
 pfe:                    2
+```
 
 Packet Forwarding Engine traffic statistics:
 
@@ -6406,9 +7324,13 @@ Truncated key              :                    0
 
 Bits to test              :                    0
 
+```text
 Data error                :                    0
+```
 
+```text
 TCP header length error    :                    0
+```
 
 Stack underflow            :                    0
 
@@ -6424,7 +7346,9 @@ Info cell drops            :                    0
 
 Fabric drops              :                    0
 
+```text
 Packet Forwarding Engine Input IPv4 Header Checksum Error and Output MTU Error statistics:
+```
 
 Input Checksum            :                    0
 
@@ -6442,9 +7366,13 @@ Drop bytes      :                    0                   
 
 Packet Forwarding Engine Details:
 
+```text
 fpc:                  16
+```
 
+```text
 pfe:                    3
+```
 
 Packet Forwarding Engine traffic statistics:
 
@@ -6464,9 +7392,13 @@ Truncated key              :                    0
 
 Bits to test              :                    0
 
+```text
 Data error                :                    0
+```
 
+```text
 TCP header length error    :                    0
+```
 
 Stack underflow            :                    0
 
@@ -6482,7 +7414,9 @@ Info cell drops            :                    0
 
 Fabric drops              :                    0
 
+```text
 Packet Forwarding Engine Input IPv4 Header Checksum Error and Output MTU Error statistics:
+```
 
 Input Checksum            :                    0
 
@@ -6500,9 +7434,13 @@ Drop bytes      :                    0                   
 
 Packet Forwarding Engine Details:
 
+```text
 fpc:                  17
+```
 
+```text
 pfe:                    0
+```
 
 Packet Forwarding Engine traffic statistics:
 
@@ -6522,9 +7460,13 @@ Truncated key              :                    0
 
 Bits to test              :                    0
 
+```text
 Data error                :                    0
+```
 
+```text
 TCP header length error    :                    0
+```
 
 Stack underflow            :                    0
 
@@ -6540,7 +7482,9 @@ Info cell drops            :                    0
 
 Fabric drops              :                  650
 
+```text
 Packet Forwarding Engine Input IPv4 Header Checksum Error and Output MTU Error statistics:
+```
 
 Input Checksum            :                2886
 
@@ -6558,9 +7502,13 @@ Drop bytes      :                    0                   
 
 Packet Forwarding Engine Details:
 
+```text
 fpc:                  17
+```
 
+```text
 pfe:                    1
+```
 
 Packet Forwarding Engine traffic statistics:
 
@@ -6580,9 +7528,13 @@ Truncated key              :                    0
 
 Bits to test              :                    0
 
+```text
 Data error                :                    0
+```
 
+```text
 TCP header length error    :                    0
+```
 
 Stack underflow            :                    0
 
@@ -6598,7 +7550,9 @@ Info cell drops            :                    0
 
 Fabric drops              :                    1
 
+```text
 Packet Forwarding Engine Input IPv4 Header Checksum Error and Output MTU Error statistics:
+```
 
 Input Checksum            :                6296
 
@@ -6616,9 +7570,13 @@ Drop bytes      :                    0                   
 
 Packet Forwarding Engine Details:
 
+```text
 fpc:                  17
+```
 
+```text
 pfe:                    2
+```
 
 Packet Forwarding Engine traffic statistics:
 
@@ -6638,9 +7596,13 @@ Truncated key              :                    0
 
 Bits to test              :                    0
 
+```text
 Data error                :                    0
+```
 
+```text
 TCP header length error    :                    0
+```
 
 Stack underflow            :                    0
 
@@ -6656,7 +7618,9 @@ Info cell drops            :                    0
 
 Fabric drops              :                    2
 
+```text
 Packet Forwarding Engine Input IPv4 Header Checksum Error and Output MTU Error statistics:
+```
 
 Input Checksum            :                    0
 
@@ -6674,9 +7638,13 @@ Drop bytes      :                    0                   
 
 Packet Forwarding Engine Details:
 
+```text
 fpc:                  17
+```
 
+```text
 pfe:                    3
+```
 
 Packet Forwarding Engine traffic statistics:
 
@@ -6696,9 +7664,13 @@ Truncated key              :                    0
 
 Bits to test              :                    0
 
+```text
 Data error                :                    0
+```
 
+```text
 TCP header length error    :                    0
+```
 
 Stack underflow            :                    0
 
@@ -6714,7 +7686,9 @@ Info cell drops            :                    0
 
 Fabric drops              :                    0
 
+```text
 Packet Forwarding Engine Input IPv4 Header Checksum Error and Output MTU Error statistics:
+```
 
 Input Checksum            :                    0
 
@@ -6732,9 +7706,13 @@ Drop bytes      :                    0                   
 
 Packet Forwarding Engine Details:
 
+```text
 fpc:                  18
+```
 
+```text
 pfe:                    0
+```
 
 Packet Forwarding Engine traffic statistics:
 
@@ -6754,9 +7732,13 @@ Truncated key              :                    0
 
 Bits to test              :                    0
 
+```text
 Data error                :                    0
+```
 
+```text
 TCP header length error    :                    0
+```
 
 Stack underflow            :                    0
 
@@ -6772,7 +7754,9 @@ Info cell drops            :                    0
 
 Fabric drops              :                  653
 
+```text
 Packet Forwarding Engine Input IPv4 Header Checksum Error and Output MTU Error statistics:
+```
 
 Input Checksum            :              4847941
 
@@ -6790,9 +7774,13 @@ Drop bytes      :                    0                   
 
 Packet Forwarding Engine Details:
 
+```text
 fpc:                  18
+```
 
+```text
 pfe:                    1
+```
 
 Packet Forwarding Engine traffic statistics:
 
@@ -6812,9 +7800,13 @@ Truncated key              :                    0
 
 Bits to test              :                    0
 
+```text
 Data error                :                    0
+```
 
+```text
 TCP header length error    :                    0
+```
 
 Stack underflow            :                    0
 
@@ -6830,7 +7822,9 @@ Info cell drops            :                    0
 
 Fabric drops              :                  12
 
+```text
 Packet Forwarding Engine Input IPv4 Header Checksum Error and Output MTU Error statistics:
+```
 
 Input Checksum            :              2269874
 
@@ -6848,9 +7842,13 @@ Drop bytes      :                    0                   
 
 Packet Forwarding Engine Details:
 
+```text
 fpc:                  18
+```
 
+```text
 pfe:                    2
+```
 
 Packet Forwarding Engine traffic statistics:
 
@@ -6870,9 +7868,13 @@ Truncated key              :                    0
 
 Bits to test              :                    0
 
+```text
 Data error                :                    0
+```
 
+```text
 TCP header length error    :                    0
+```
 
 Stack underflow            :                    0
 
@@ -6888,7 +7890,9 @@ Info cell drops            :                    0
 
 Fabric drops              :                    0
 
+```text
 Packet Forwarding Engine Input IPv4 Header Checksum Error and Output MTU Error statistics:
+```
 
 Input Checksum            :                    0
 
@@ -6906,9 +7910,13 @@ Drop bytes      :                    0                   
 
 Packet Forwarding Engine Details:
 
+```text
 fpc:                  18
+```
 
+```text
 pfe:                    3
+```
 
 Packet Forwarding Engine traffic statistics:
 
@@ -6928,9 +7936,13 @@ Truncated key              :                    0
 
 Bits to test              :                    0
 
+```text
 Data error                :                    0
+```
 
+```text
 TCP header length error    :                    0
+```
 
 Stack underflow            :                    0
 
@@ -6946,7 +7958,9 @@ Info cell drops            :                    0
 
 Fabric drops              :                    1
 
+```text
 Packet Forwarding Engine Input IPv4 Header Checksum Error and Output MTU Error statistics:
+```
 
 Input Checksum            :                    0
 
@@ -6968,7 +7982,9 @@ May 22 12:39:47
 
 Temp  CPU Utilization (%)  CPU Utilization (%)  Memory    Utilization (%)
 
+```text
 Slot State            (C)  Total  Interrupt      1min  5min  15min  DRAM (MB) Heap    Buffer
+```
 
 0  Empty
 
@@ -7010,11 +8026,15 @@ Slot State            (C)  Total  Interrupt      1min  5min  15min�
 
 19  Empty
 
+```text
 show class-of-service fabric statistics source 0 destination 11    ###show được traffic đi qua fabric từ FPC0 đến FPC11
+```
 
 3. **Kết quả traceroute từ client đến server speedtest đang test**
 
-4. Show route forwarding **27.68.201.1 trên cả 2 PECD**
+```text
+Show route forwarding **27.68.201.1 trên cả 2 PECD**
+```
 
 9. Kiểm tra scale irb up, firewall filter, số lượng term, kiem tra các linecard uplink
 

@@ -14,39 +14,41 @@ Perform the following checks:
 
 1. Check the CPU utilization on the Junos device with the command:    show chassis routing-engine
 
-   > lab> show chassis routing-engine
-   >
-   > Routing Engine status:
-   >
-   > Slot 0:
-   >
-   > CPU utilization:
-   >
-   > User 0 percent
-   >
-   > Background 0 percent
-   >
-   > Kernel 5 percent
-   >
-   > Interrupt 0 percent
-   >
-   > Idle 95 percent
-   >
-   > Routing Engine status:
-   >
-   > Slot 1:
-   >
-   > CPU utilization:
-   >
-   > User 94 percent
-   >
-   > Background 0 percent
-   >
-   > Kernel 0 percent
-   >
-   > Interrupt 1 percent
-   >
-   > Idle 2 percent
+```text
+> lab> show chassis routing-engine
+>
+> Routing Engine status:
+>
+> Slot 0:
+>
+> CPU utilization:
+>
+> User 0 percent
+>
+> Background 0 percent
+>
+> Kernel 5 percent
+>
+> Interrupt 0 percent
+>
+> Idle 95 percent
+>
+> Routing Engine status:
+>
+> Slot 1:
+>
+> CPU utilization:
+>
+> User 94 percent
+>
+> Background 0 percent
+>
+> Kernel 0 percent
+>
+> Interrupt 1 percent
+>
+> Idle 2 percent
+```
 
    In the above output, the CPU utilization of the Routing Engines, as well as for various software components, are displayed.
 
@@ -78,11 +80,17 @@ If the Kernel process is high, jump to [Kernel process consuming High CPU](ht
 
    203 processes: 4 running, 182 sleeping, 17 waiting
 
-   Mem: 461M Active, 71M Inact, 106M Wired, 860M Cache, 69M Buf, 2009M Free
+```text
+Mem: 461M Active, 71M Inact, 106M Wired, 860M Cache, 69M Buf, 2009M Free
+```
 
-   Swap: 3584M Total, 3584M Free
+```text
+Swap: 3584M Total, 3584M Free
+```
 
-   PID USERNAME THR PRI NICE SIZE RES STATE TIME WCPU COMMAND
+```text
+PID USERNAME THR PRI NICE SIZE RES STATE TIME WCPU COMMAND
+```
 
    11 root 1 171 52 0K 12K RUN 412:13 1.07% idle
 
@@ -134,7 +142,9 @@ If the Kernel process is high, jump to [Kernel process consuming High CPU](ht
 
    1418 root 1 96 0 30320K 8096K select 0:01 0.00% dcd
 
-   Look for which process is consuming WCPU (Weighted CPU). Also observe the STATE of the process.  From the output above, you can see that RPD is at 93% utilization and is in the kqread (kernel queue read) state. Also, look for TIME (number of system and user CPU seconds that the process has used) and RES (current amount of resident memory, in kilobytes which should be less than SIZE allocated to it).
+```text
+Look for which process is consuming WCPU (Weighted CPU). Also observe the STATE of the process.  From the output above, you can see that RPD is at 93% utilization and is in the kqread (kernel queue read) state. Also, look for TIME (number of system and user CPU seconds that the process has used) and RES (current amount of resident memory, in kilobytes which should be less than SIZE allocated to it).
+```
 
    If the RPD process is high, jump to [RPD consuming high CPU](https://supportportal.juniper.net/s/article/M-MX-T-series-Troubleshooting-Checklist-Routing-Engine-High-CPU?language=en_US#rpd).
 
@@ -143,17 +153,23 @@ If the Kernel process is high, jump to [Kernel process consuming High CPU](ht
    <http://www.juniper.net/techpubs/en_US/junos/topics/reference/command-summary/show-system-processes.html>
 9. Check the output of the following commands around the time of the High CPU utilization event for any additional clues:
 
-- show system virtual-memory | no-more
+```text
+show system virtual-memory | no-more
+```
 
   For more information on the above command output please refer to the following:
 
-  <https://www.juniper.net/techpubs/en_US/junos/topics/reference/command-summary/show-system-virtual-memory.html>
-- show task memory detail | no-more
+```text
+<https://www.juniper.net/techpubs/en_US/junos/topics/reference/command-summary/show-system-virtual-memory.html>
+show task memory detail | no-more
+```
 
   For more information on the above command output please refer to the following:
 
-  <http://www.juniper.net/techpubs/en_US/junos/topics/reference/command-summary/show-task-memory.html>
-- show log messages | no-more
+```text
+<http://www.juniper.net/techpubs/en_US/junos/topics/reference/command-summary/show-task-memory.html>
+show log messages | no-more
+```
 
 10. If you need to open a case with your technical support representative, collect the output specified in the 'High CPU' section of the Data Collection Checklist:
 
@@ -169,13 +185,17 @@ If the Kernel process is high, jump to [Kernel process consuming High CPU](ht
 
 If RPD is consuming high CPU, then perform the following checks and verify the following parameters:
 
-1. Check the interfaces: Check if any interfaces are flapping on the router. This can be verified by looking at the output of the show log messages and show interfaces ge-x/y/z extensive commands. Find out why they are flapping; if possible you can consider enabling the hold-time for link up and link down.
-2. Check if there any Traceoptions configured.
-3. Check if there are syslog error messages related to interfaces or any FPC/PIC, by looking at the output of show log messages .
-4. Check the routes:  Verify the total number of routes that are learned by the router by looking at the output of show route summary . Check if it has reached the maximum limit.
-5. Check the RPD tasks: Identify what is keeping the process busy. This can be checked by first enabling set task accounting on .   Important:  This might increase the load on the CPU and its utilization; so do not forget to turn it off when you are finished with the required output collection.  Then run show task accounting and look for the thread with the high CPU time:
+```text
+Check the interfaces: Check if any interfaces are flapping on the router. This can be verified by looking at the output of the show log messages and show interfaces ge-x/y/z extensive commands. Find out why they are flapping; if possible you can consider enabling the hold-time for link up and link down.
+Check if there any Traceoptions configured.
+Check if there are syslog error messages related to interfaces or any FPC/PIC, by looking at the output of show log messages .
+Check the routes:  Verify the total number of routes that are learned by the router by looking at the output of show route summary . Check if it has reached the maximum limit.
+Check the RPD tasks: Identify what is keeping the process busy. This can be checked by first enabling set task accounting on .   Important:  This might increase the load on the CPU and its utilization; so do not forget to turn it off when you are finished with the required output collection.  Then run show task accounting and look for the thread with the high CPU time:
+```
 
-   user@router> show task accounting
+```text
+user@router> show task accounting
+```
 
    Task Started User Time System Time Longest Run
 
@@ -193,7 +213,9 @@ If RPD is consuming high CPU, then perform the following checks and verify the f
 
    You can also verify if routes are oscillating (or route churns) by looking at the output of the shell command:
 
-   % rtsockmon –t
+```text
+% rtsockmon –t
+```
 
    sender flag type op
 
@@ -213,9 +235,13 @@ If RPD is consuming high CPU, then perform the following checks and verify the f
 
 Another way to check the rtsockmon output is as follows:
 
+```text
 > start shell
+```
 
+```text
 % rtsockmon -t > /var/tmp/rtsockmon.txt
+```
 
 (wait 1 minute)
 
@@ -223,7 +249,9 @@ Press CTRL+C
 
 Then in a Unix-like OS which is not Junos OS, issue:
 
+```text
 % cat rtsockmon.txt | grep inet | grep add | grep route | cut -c 50- | awk '{print $1 " " $2}' | sort | uniq -c | rev |cut -b 7-| rev |sort
+```
 
 The output will look something like this:
 
@@ -245,6 +273,7 @@ The first column will be the number of times the route was added. The second col
 
 As per the output of the show chassis routing-engine command, Interrupt may be consuming a lot of CPU resources.
 
+```text
 > CPU utilization:
 >
 > User 0 percent
@@ -256,35 +285,48 @@ As per the output of the show chassis routing-engine command, Interrupt may 
 > Interrupt 47 percent
 >
 > Idle 42 percent
+```
 
 Collect the output of the following commands:
 
-- show chassis routing-engine
-- show system process extensive | no-more
-- show system virtual-memory | no-more
-- show task memory detail | no-more
-- show log messages | no-more
+```text
+show chassis routing-engine
+show system process extensive | no-more
+show system virtual-memory | no-more
+show task memory detail | no-more
+show log messages | no-more
+```
 
 Some of the reasons for high interrupt CPU are as follows:
 
-- The first possibility is duplicated via IP/ARP flooding on one of the device's ports. For this case, high CPU utilization may even cause the connection to be lost between both of the REs. Massive ARP duplicating error logs can be found:
+```text
+The first possibility is duplicated via IP/ARP flooding on one of the device's ports. For this case, high CPU utilization may even cause the connection to be lost between both of the REs. Massive ARP duplicating error logs can be found:
+```
 
   Apr 23 17:12:37.666 2010 igw02.brf-re0 /kernel: %KERN-3-KERN\_ARP\_DUPLICATE\_ADDR:
 
-  duplicate IP address 10.55.1.219! sent from address: 00:a0:a5:64:2d:6c (error count = 3672452574)
+```text
+duplicate IP address 10.55.1.219! sent from address: 00:a0:a5:64:2d:6c (error count = 3672452574)
+```
 
   Apr 23 17:13:37.632 2010 igw02.brf-re0 /kernel: %KERN-3-KERN\_ARP\_DUPLICATE\_ADDR:
 
-  duplicate IP address 10.55.1.219! sent from address: 00:a0:a5:64:2d:6c (error count = 3675570687)
+```text
+duplicate IP address 10.55.1.219! sent from address: 00:a0:a5:64:2d:6c (error count = 3675570687)
+```
 
   Apr 23 17:14:37.598 2010 igw02.brf-re0 /kernel: %KERN-3-KERN\_ARP\_DUPLICATE\_ADDR:
 
-  duplicate IP address 10.55.1.219! sent from address: 00:a0:a5:64:2d:6c (error count = 3678688551)
+```text
+duplicate IP address 10.55.1.219! sent from address: 00:a0:a5:64:2d:6c (error count = 3678688551)
+```
 
   After addressing the ARP problem, the issue was resolved.
 - Another trigger is due to out of band (OOB) devices. You can identify this by looking at the output of show system process extensive :
 
-  PID USERNAME THR PRI NICE SIZE RES STATE TIME WCPU COMMAND
+```text
+PID USERNAME THR PRI NICE SIZE RES STATE TIME WCPU COMMAND
+```
 
   27 root 1 -48 -167 0K 12K RUN 223:30 48.19% swi0: sio
 
@@ -318,6 +360,7 @@ Some of the reasons for high interrupt CPU are as follows:
 
 As per the output of the show chassis routing-engine command, kernel  may be consuming a lot of CPU resources.
 
+```text
 > CPU utilization:
 >
 > User 0 percent
@@ -329,18 +372,23 @@ As per the output of the show chassis routing-engine command, kernel  may b
 > Interrupt 11 percent
 >
 > Idle 2 percent
+```
 
 Collect the output of the following commands:
 
-- show chassis routing-engine
-- show system process extensive | no-more
-- show system virtual-memory | no-more
-- show system processes memory
-- From Shell:  /sbin/sysctl -a | grep vm.kmem (to verify if kernel has high memory untilization)
+```text
+show chassis routing-engine
+show system process extensive | no-more
+show system virtual-memory | no-more
+show system processes memory
+From Shell:  /sbin/sysctl -a | grep vm.kmem (to verify if kernel has high memory untilization)
+```
 
 One of the symptoms that occur with high kernel CPU usage are messages with RPD\_SCHED\_SLIP in the logs.
 
+```text
 show log messages | match RPD\_SCHED\_SLIP
+```
 
 Jul 30 12:24:11 m10i-a-re0 rpd[1304]: RPD\_SCHED\_SLIP: 7 sec scheduler slip, user: 1 sec 339119 usec, system: 0 sec, 0 usec Jul 30 12:25:29 m10i-a-re0 rpd[1304]: RPD\_SCHED\_SLIP: 4 sec scheduler slip, user: 1 sec 431622 usec, system: 0 sec, 0 usec Jul 30 12:25:37 m10i-a-re0 rpd[1304]: RPD\_SCHED\_SLIP: 4 sec scheduler slip, user: 1 sec 528918 usec, system: 0 sec, 74784 usec Jul 30 17:47:55 m10i-a-re0 rpd[1304]: RPD\_SCHED\_SLIP: 4 sec scheduler slip, user: 0 sec 526784 usec, system: 0 sec, 4608 usec Jul 30 17:48:03 m10i-a-re0 rpd[1304]: RPD\_SCHED\_SLIP: 4 sec scheduler slip, user: 1 sec 285283 usec, system: 0 sec, 19077 usec
 
@@ -364,7 +412,9 @@ Some of the reasons for high kernel CPU are as follows:
 
   One way to address this issue is to kill the mgd processes eating up the CPU.
 
-- 'Sampling' is enabled on the router.  This sometimes leads to high kernel CPU; to address this, reduce the rate at which you are sampling on the router.
+```text
+'Sampling' is enabled on the router.  This sometimes leads to high kernel CPU; to address this, reduce the rate at which you are sampling on the router.
+```
 
 - --
 
@@ -372,25 +422,37 @@ Some of the reasons for high kernel CPU are as follows:
 
 - Collect the output of the following commands:
 
+```text
 root@JTAC> show system process extensive | no-more
+```
 
+```text
 PID USERNAME THR PRI NICE SIZE RES STATE TIME WCPU COMMAND
+```
 
 41037 root 1 8 0 125M 122M nanslp 0:48 52.84% cscrip t
 
+```text
 root@JTAC> show log messages | match cscript
+```
 
 Event message: Process (41037,cscript) has exceeded 85% of RLIMIT\_DATA:
 
+```text
 root@JTAC> show system core-dumps no-forwarding
+```
 
 - rw-rw---- 1 root wheel 18450069 Nov 12 18:52 /var/tmp/cscript.core.0.gz
 
 If there are any core dumps also upload to them to the FTP server to be decoded
 
-- Display logging data associated with all script processing using show log cscript.log . Check which scripts are running and consuming the HIGH CPU. For example:
+```text
+Display logging data associated with all script processing using show log cscript.log . Check which scripts are running and consuming the HIGH CPU. For example:
+```
 
+```text
 root@JTAC> show log cscript.log | last
+```
 
 Jan 24 19:12:44 no errors from jais-SN-activate-scripts.slax
 
@@ -406,7 +468,9 @@ This can be resolved by :
 
 - Killing the CSCRIPT process via the PID will be a temporary fix until the script starts again. The PID can be found via show sys proc exten . Example:
 
+```text
 % kill -9 41037 (from shell)
+```
 
 - Dampening script execution:
 
@@ -424,9 +488,13 @@ disable juniper-ais system scripts commit file jais-SN-activate-scripts.slax
 
 Collect the output of the following commands:
 
+```text
 show system process extensive | no-more
+```
 
+```text
 PID USERNAME THR PRI NICE SIZE RES STATE TIME WCPU COMMAND
+```
 
 1615 root 1 129 0 2640K 2664K RUN 150:07 69.19% ntpd
 

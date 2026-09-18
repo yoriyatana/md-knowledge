@@ -26,7 +26,9 @@ FPC slot 8, PIC slot 1 information:
 
 Type                            1X100GE CFP2 OTN
 
+```text
 State                            Online
+```
 
 PIC version                  0.0
 

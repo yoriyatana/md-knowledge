@@ -6,7 +6,9 @@ Như anh Hưng nói thì mình thao tác tách ra:
 
 \* Trước khi thêm range, cần remove thuê bao (sessions đang được NAT(sad)
 
-- Deactivate service-set
+```text
+Deactivate service-set
+```
 
 - Disable interface ams.xx inside
 
@@ -14,7 +16,9 @@ Như anh Hưng nói thì mình thao tác tách ra:
 
 \* Khi active lại thì chú ý:
 
-- Activate service-set —> commit
+```text
+Activate service-set —> commit
+```
 
 - Enable interface ams.xx inside —> commit
 

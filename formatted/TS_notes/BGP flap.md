@@ -4,7 +4,9 @@ Hiện tượng:
 
 Policy export apply trong group BGP.
 
+```text
 group policy gồm 2 neighbor trở lên.
+```
 
 Các neigbor không apply policy.
 

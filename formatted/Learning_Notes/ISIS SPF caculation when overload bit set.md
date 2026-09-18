@@ -10,7 +10,9 @@ Part 1: Normal SPF Calculation Example
 
 SPF Calculation Example: Part 1
 
-- In the following slides, an example SPF calculation is displayed. This graphic shows the beginning state of the network including the routers involved, the configured link metrics, and the LSDB. The network and the LSDB have recently converged and the local router, RTR-A, is running an SPF calculation to determine the shortest path to each node in the network.
+```text
+In the following slides, an example SPF calculation is displayed. This graphic shows the beginning state of the network including the routers involved, the configured link metrics, and the LSDB. The network and the LSDB have recently converged and the local router, RTR-A, is running an SPF calculation to determine the shortest path to each node in the network.
+```
 
 root@R1\_RTR-A> show log debug-isis
 
@@ -369,7 +371,9 @@ Part 2: SPF Calculation Example when RTR-B set overload-bit
 
 SPF Calculation Example: Part 1
 
-- In the following slides, an example SPF calculation is displayed. This graphic shows the beginning state of the network including the routers involved, the configured link metrics, and the LSDB. The network and the LSDB have recently converged and the local router, RTR-A, is running an SPF calculation to determine the shortest path to each node in the network.
+```text
+In the following slides, an example SPF calculation is displayed. This graphic shows the beginning state of the network including the routers involved, the configured link metrics, and the LSDB. The network and the LSDB have recently converged and the local router, RTR-A, is running an SPF calculation to determine the shortest path to each node in the network.
+```
 
 root@R1\_RTR-A> show log debug-isis
 
@@ -718,7 +722,9 @@ root@R4\_RTR-B# set protocols isis overload advertise-high-metrics
 
 root@R4\_RTR-B# commit
 
+```text
 commit complete
+```
 
 [edit]
 
@@ -868,9 +874,13 @@ Jan 27 03:27:54.090925 L2 SPF updated 0 routes (0 adds, 0 deletes, 0 changes, 0 
 
 root@R1\_RTR-A# run show isis database detail
 
+```text
 IS-IS level 1 link-state database:
+```
 
+```text
 IS-IS level 2 link-state database:
+```
 
 R1\_RTR-A.00-00 Sequence: 0x34, Checksum: 0xb8c7, Lifetime: 563 secs
 
@@ -1116,9 +1126,13 @@ Jan 27 04:20:42.227510 L2 SPF updated 0 routes (0 adds, 0 deletes, 0 changes, 0 
 
 root@R1\_RTR-A> show isis database detail
 
+```text
 IS-IS level 1 link-state database:
+```
 
+```text
 IS-IS level 2 link-state database:
+```
 
 R1\_RTR-A.00-00 Sequence: 0x3c, Checksum: 0xf367, Lifetime: 325 secs
 

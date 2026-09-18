@@ -73,7 +73,9 @@ Solution
 
 Topology
 
+```text
 > IPv4/IPv6/Dual-Stack PPPoE subscriber <----> ([vlan 3320] ge-0/0/2) MX (ge-0/0/0) <----> Radius Server(192.168.40.26)
+```
 
 The RADIUS Server (@192.168.40.26) is reachable via the global routing instance inet.0 table.
 
@@ -94,7 +96,9 @@ IPv6 PPPoE subscriber (WAN link’s IPv6 address assignment of CPE) can be deplo
 
 MX(BNG) Configuration Steps for IPv4 / IPv6 / Dual-Stack PPPoE Subscriber
 
-1. Configure the following:
+```text
+Configure the following:
+```
 
 1. Dynamic profile " PPPoE " for both IPv4 and IPv6/Dual-Stack PPPoE subscribers
 2. Access Profile " ACCESS-FTTH " for subscriber user authentication via the RADIUS server
@@ -105,15 +109,20 @@ MX(BNG) Configuration Steps for IPv4 / IPv6 / Dual-Stack PPPoE Subscriber
 7. MX as the DHCPv6 (only) server (dhcp-local-server dhcpv6 group " PPPV6 ") for PPPoE subscriber IPv6 address assignment
 8. Dynamic profile " PPPoE " under static VLAN/unit number for an interface with PPPoE encapsulation
 
+```text
 > For Auto-VLAN (dynamic VLAN) Configuration:  ( Continue after Step f onward as shown below. )
+```
 
-7. Configure a dynamic profile " AUTO-VLAN-PPP " (dot1q) or " AUTO-VLAN-STACK-PPP " (q-in-q) for the dynamic VLAN PPPoE subscriber interface.
-8. Finally configure the physical interface with auto-configure (with dynamic profile  " AUTO-VLAN-PPP " / " AUTO-VLAN-STACK-PPP " ) to activate dynamic-VLAN-based PPPoE subscribers.
+```text
+Configure a dynamic profile " AUTO-VLAN-PPP " (dot1q) or " AUTO-VLAN-STACK-PPP " (q-in-q) for the dynamic VLAN PPPoE subscriber interface.
+Finally configure the physical interface with auto-configure (with dynamic profile  " AUTO-VLAN-PPP " / " AUTO-VLAN-STACK-PPP " ) to activate dynamic-VLAN-based PPPoE subscribers.
+```
 
 Configuration
 
 Dynamic-profile configuration for static VLAN bind IPv4 only, IPv6 (ND/RA, DHCPv6 IA\_NA / PD), and Dual-Stack (ND/RA, DHCPv6 IA\_NA / PD) PPPoE subscriber deployment
 
+```text
 > dynamic-profiles {
 >
 > PPPoE { ## "dynamic-profile" name
@@ -515,9 +524,11 @@ Dynamic-profile configuration for static VLAN bind IPv4 only, IPv6 (ND/RA, DHCP
 > }
 >
 > }
+```
 
 Extra dynamic-profile and interface configurations for dot1q / single VLAN IPv4 PPPoE subscriber deployment
 
+```text
 > dynamic-profiles {
 >
 > AUTO-VLAN-PPP {
@@ -589,9 +600,11 @@ Extra dynamic-profile and interface configurations for dot1q / single VLAN IPv4 
 > }
 >
 > }
+```
 
 Extra dynamic-profile and interface configurations for q-in-q / stacked VLAN IPv4/IPv6 PPPoE subscriber deployment
 
+```text
 > dynamic-profiles {
 >
 > AUTO-VLAN-STACK-PPP {
@@ -663,6 +676,7 @@ Extra dynamic-profile and interface configurations for q-in-q / stacked VLAN IPv
 > }
 >
 > }
+```
 
 RADIUS User Configuration
 
@@ -679,6 +693,7 @@ RADIUS User Example (can be used in addition with PPPoE IPv4 attributes) specifi
 
 1. Fixed IA\_NA IPv6 /128 IPv6 Address User Example:  (for IA\_NA address, disable dynamic-profiles > protocols > router-advertisement)
 
+```text
 > Username1@domain Auth-Type := Local, User-Password := "Password"
 >
 > Service-Type = Framed-User,
@@ -688,9 +703,11 @@ RADIUS User Example (can be used in addition with PPPoE IPv4 attributes) specifi
 > Framed-IPv6-Prefix = "4001:1:1:1::100/128",
 >
 > Framed-IP-Address = 10.200.200.26
+```
 
 2. NDRA/IPv6 Prefix Address Assignment User Example:
 
+```text
 > Username1@domain Auth-Type := Local, User-Password := "Password"
 >
 > Service-Type = Framed-User,
@@ -702,9 +719,11 @@ RADIUS User Example (can be used in addition with PPPoE IPv4 attributes) specifi
 > Framed-IPv6-Prefix = "4010:1:1:10::/64",
 >
 > Framed-IP-Address = 10.200.200.26
+```
 
 3. IPv6 Address Assignment via IPv6 Pool Name User Example:
 
+```text
 > Username1@domain Auth-Type := Local, User-Password := "Password"
 >
 > Service-Type = Framed-User,
@@ -716,9 +735,11 @@ RADIUS User Example (can be used in addition with PPPoE IPv4 attributes) specifi
 > Framed-IPv6-Pool = "IP-POOL-V6",
 >
 > ERX-Primary-Dns = 8.8.8.8
+```
 
 4. IPv6 Prefix Delegation Address Assignment User Example:
 
+```text
 > Username1@domain Auth-Type := Local, User-Password := "Password"
 >
 > Service-Type = Framed-User,
@@ -734,6 +755,7 @@ RADIUS User Example (can be used in addition with PPPoE IPv4 attributes) specifi
 > Delegated-IPv6-Prefix = "4001:1:1:10::/64",
 >
 > ERX-Primary-Dns = 8.8.8.8
+```
 
 ## Source: `formatted/TS_notes/SR-2021-1215-1608 - Hỗ trợ thử nghiệm IPv6 tĩnh cho KH CĐBR.md`
 
@@ -749,13 +771,17 @@ Attribute: Framed-IPv6-Prefix
 
 Type: ipv6addr
 
+```text
 ID: 97
+```
 
 - IPv6 LAN
 
 Attribute: Delegated-IPv6-Prefix
 
+```text
 ID: 123
+```
 
 Các attribute này anh đã test trên lab hoạt động bình thường nhé.
 

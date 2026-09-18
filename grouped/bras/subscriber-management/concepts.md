@@ -31,57 +31,87 @@ bị khi nào?
 
 From Cli:
 
+```text
 user@host> show system subscriber-management statistics
+```
 
+```text
 subscriber-management not enabled <-- System reports that Subscriber Management is "not enabled"
+```
 
+```text
 command not supported
+```
 
 From RE Shell:
 
+```text
 % sysctl -a | grep enhance
+```
 
+```text
 net.enhanced\_rpf\_debug: 0
+```
 
+```text
 net.pfe.debug\_ae\_count\_lag\_enhanced: -1
+```
 
+```text
 net.pfe.debug\_force\_lag\_enhanced: 0
+```
 
+```text
 net.disable\_lag\_enhanced: 0
+```
 
+```text
 net.enhanced\_bbe\_support: 2 <-- “2” indicates the system is not running Enhanced Subscriber Management
+```
 
 1. Kiểm tra sơ bộ
 
-- show system subscriber-management statistics
-- sysctl -a | grep enhance
-- show pppoe statistics
-- show network-access aaa statistics radius
-- show network-access aaa statistics authentication
-- show network-access aaa terminate-code brief
-- show pppoe lockout
+```text
+show system subscriber-management statistics
+sysctl -a | grep enhance
+show pppoe statistics
+show network-access aaa statistics radius
+show network-access aaa statistics authentication
+show network-access aaa terminate-code brief
+show pppoe lockout
+```
 
-- show pppoe lockout | match "lockout: [^0]"
-- show pppoe lockout | match "Index|lockout: [^0]|[A-F0-9]{2}(:[A-F0-9]{2}){5}"
+```text
+show pppoe lockout | match "lockout: [^0]"
+show pppoe lockout | match "Index|lockout: [^0]|[A-F0-9]{2}(:[A-F0-9]{2}){5}"
+```
 
-- show ddos-protection protocols pppoe statistics brief (xem queue có bị max k? mx960: max 300 subs/s)
-- show log pppoed\_era\_jpppoed\_era\_in\_progress.log (check cái log era xem nó ghi lần cuối khi nào)
-- show chassis alarm
-- show system alarm
-- show system core-dumps
-- show log messages | last
+```text
+show ddos-protection protocols pppoe statistics brief (xem queue có bị max k? mx960: max 300 subs/s)
+show log pppoed\_era\_jpppoed\_era\_in\_progress.log (check cái log era xem nó ghi lần cuối khi nào)
+show chassis alarm
+show system alarm
+show system core-dumps
+show log messages | last
+```
 
 2. Nếu không thấy bất thường muốn phục hồi nhanh (hình bên dưới)
 
-- restart smg-service
+```text
+restart smg-service
+```
 
 3. Nếu không thì debug sâu vào
 
-- show /var/log/messages (đọc tất cả log message từ trước thời điểm bị lỗi)
-- show /var/log/interactive-commands (đọc log interactive command xem có thay đổi gì không)
-- monitor traffic interface ae3 extensive matching "ether host 4c:d9:8f:ff:c8:ed" (capture bắt gói bằng monitor traffic write-file với 1 user bị lỗi xem bị stuck đoạn nào)
+```text
+show /var/log/messages (đọc tất cả log message từ trước thời điểm bị lỗi)
+show /var/log/interactive-commands (đọc log interactive command xem có thay đổi gì không)
+monitor traffic interface ae3 extensive matching "ether host 4c:d9:8f:ff:c8:ed" (capture bắt gói bằng monitor traffic write-file với 1 user bị lỗi xem bị stuck đoạn nào)
+```
 
-- monitor traffic interface ae3 extensive matching "ether host 4c:d9:8f:ff:c8:ed" no-resolve extensive size 9000 /var/tmp/ECC-BDH2.pcap
+```text
+monitor traffic interface ae3 extensive matching "ether host 4c:d9:8f:ff:c8:ed" no-resolve extensive size 9000 /var/tmp/ECC-BDH2.pcap
+```
 
 - bật trace-option các tiến trình:
 
@@ -93,17 +123,29 @@ net.enhanced\_bbe\_support: 2 <-- “2” indicates the system is not running En
 
 ![](../../assets/concepts/dcf56c374b-6abdc54b2b514598486ec3a67e975fcb.png)
 
+```text
 show subscribers user-name student extensive | match session
+```
 
+```text
 show dynamic-profile session client-id
+```
 
+```text
 clear dhcp server binding all
+```
 
+```text
 clear auto-configuration interfaces ge-0/0/8
+```
 
+```text
 clear dhcp client binding all
+```
 
+```text
 request dhcp client renew all
+```
 
 * *Trouble-shooting Subcribers Management**
 
@@ -116,7 +158,9 @@ request dhcp client renew all
 - ![](../../assets/concepts/ee2885feb5-fb6e5da7e54ae3bf22ccf393a864790e.png)
 - user@mx# run show log debug-aaa | last
 
-- Restart authd daemon: **restart general-authentication-service**
+```text
+Restart authd daemon: **restart general-authentication-service**
+```
 
 • **Monitoring Subscriber Addressing**
 
@@ -131,8 +175,10 @@ request dhcp client renew all
 - **show log** ***debug-pppoe | last***
 - Packet capture on interface downlink to check 4 packet type of PPPOE: Padi, Pado, Padr, Pads
 
-- monitor traffic interface ae0 matching "ether host 00:1d:aa:9b:71:31" no-resolve detail|extensive
-- **monitor traffic interface xe-0/0/0 matching "ether host** **54:A6:78:CA:00:00" size 1500 extensive write-file PPPOE-capture.pcap**
+```text
+monitor traffic interface ae0 matching "ether host 00:1d:aa:9b:71:31" no-resolve detail|extensive
+**monitor traffic interface xe-0/0/0 matching "ether host** **54:A6:78:CA:00:00" size 1500 extensive write-file PPPOE-capture.pcap**
+```
 
 • **Trouble shooting PPP Service**
 
@@ -140,7 +186,9 @@ request dhcp client renew all
 - **show log debug-ppp | last**
 - Packet capture on interface downlink to check ppp packet
 
-- > **monitor traffic interface xe-0/0/0 matching "ether host** **54:A6:78:CA:00:00"**
+```text
+> **monitor traffic interface xe-0/0/0 matching "ether host** **54:A6:78:CA:00:00"**
+```
 
 - ![](../../assets/concepts/eab483632d-eb207c20655a1c695bb4d7c928ac2f8a.png)
 - show log debug-aaa | last 100 | find basic\_auth\_request | "Starting RADIUS authentication"
@@ -155,7 +203,9 @@ request dhcp client renew all
 - ![](../../assets/concepts/36e9b0c7a3-8a27363f031261b3933a0c45e0e631b1.png)
 - **show log debug-dhcp | last**
 
-- Restart jdhcpd daemon: **restart dhcp-service**
+```text
+Restart jdhcpd daemon: **restart dhcp-service**
+```
 
 - wireshare capture file pppoe-capture.pcap
 
@@ -165,16 +215,20 @@ request dhcp client renew all
 
 - Total padi, dhcpv6 solicit from subscribers send to BNG over default ddosprotection 500 pps
 
-- > show log messages | match ddos
-- > show ddos-protection protocols pppoe padi
-- > show ddos-protection protocols dhcpv6 violations
+```text
+> show log messages | match ddos
+> show ddos-protection protocols pppoe padi
+> show ddos-protection protocols dhcpv6 violations
+```
 
 - **Subscribers dial pppoe slowly to BNG**
 
 - **by ddos and traceoption**
 
-- > show ddos-protection statistics
-- # show | match traceoption | display set | display inheritance
+```text
+> show ddos-protection statistics
+# show | match traceoption | display set | display inheritance
+```
 
 - Action:
 
@@ -185,11 +239,13 @@ request dhcp client renew all
 
 - Accounting message store on radius queue and may be over radius queue and auth queue
 
-- >show system process extensive | except 0.0
-- >show network-access aaa statistics radius
-- >show network-access aaa statistics radius queue-info
-- >show subscribers summary
-- >show log debug-aaa
+```text
+>show system process extensive | except 0.0
+>show network-access aaa statistics radius
+>show network-access aaa statistics radius queue-info
+>show subscribers summary
+>show log debug-aaa
+```
 
 - Upgrade radius server system
 - deactive accounting when this issue is happened
@@ -204,29 +260,39 @@ request dhcp client renew all
 - ![](../../assets/concepts/430237ad35-6f9f5e280d44f1a92f94e862e26055ab.png)
 - Action:
 
-- Request modem vendor change mode to RDNA for IPv6-WAN
-- Change configuration support both NDRA and IA\_NA mode
+```text
+Request modem vendor change mode to RDNA for IPv6-WAN
+Change configuration support both NDRA and IA\_NA mode
+```
 
 - **Statistic license key issue**
 
-- >show subscribers summary
-- >show system license | match scale-subscriber
-- >show snmp mib walk 1.3.6.1.4.1.2636.3.63.1.1.1.2.1
-- Action:
+```text
+>show subscribers summary
+>show system license | match scale-subscriber
+>show snmp mib walk 1.3.6.1.4.1.2636.3.63.1.1.1.2.1
+Action:
+```
 
 - - Remove license key and add again
 
 - **Subscribers not stable on MPC5E**
 
-- show subscribers physical-interface xe-1/0/0 vlan-id 3035 count
-- Action:
+```text
+show subscribers physical-interface xe-1/0/0 vlan-id 3035 count
+Action:
+```
 
-- set chassis fpc 3 flexible-queuing-mode
+```text
+set chassis fpc 3 flexible-queuing-mode
+```
 
 - **Subs info issue**
 
-- show log messages | match "Attempting to close SDB while DOWN"
-- Action:
+```text
+show log messages | match "Attempting to close SDB while DOWN"
+Action:
+```
 
 - Upgrade junos version 15.1R7-S2 for Bras
 
@@ -247,7 +313,9 @@ request dhcp client renew all
 - show log messages | match smg
 - ![](../../assets/concepts/cbabc72372-37026e87e9e040f0b81748c8e026d7c6.png)
 
-- Clear stuck process smg-service by command **restart smg-service**
+```text
+Clear stuck process smg-service by command **restart smg-service**
+```
 
 - **User connected <> terninating liên tục:**
 
@@ -259,9 +327,13 @@ request dhcp client renew all
 
 * *restart ip-demux**
 
+```text
 restart snmp immediately
+```
 
+```text
 restart mib-process immediately
+```
 
 * *OID for address-pool (access): 1.3.6.1.4.1.2636.3.51.1.1.4.1.1.1    name jnxUserAAAAccessPoolGeneral**
 
@@ -295,15 +367,23 @@ https://www.juniper.net/documentation/us/en/software/junos/subscriber-mgmt-sessi
 
 kick-off users:
 
+```text
 > clear network-access aaa subscriber username
+```
 
+```text
 > show subscribers user-name  extensive | match Session
+```
 
+```text
 > dynamic-configuration session delete session-id <123>
+```
 
 1. Thay đổi IP trong pool public:
 
+```text
 > configure private
+```
 
 # delete services nat pool PUBLIC\_IP\_INTERNET\_GGHL10 address-range low 27.71.32.0 high 27.71.39.255    -> xóa range IP cũ
 
@@ -315,7 +395,9 @@ kick-off users:
 
 Khi đang có session có xóa term được ko?
 
-- > Khi đang có session vẫn có thể xóa term có liên quan nat pool, nhưng với điều kiện nat rule phải có ít nhất 1 term đang tồn tại.
+```text
+> Khi đang có session vẫn có thể xóa term có liên quan nat pool, nhưng với điều kiện nat rule phải có ít nhất 1 term đang tồn tại.
+```
 
 * *JunOS version for BRAS - (VTel):**
 
@@ -506,7 +588,9 @@ Dynamic-configuration command is not recommended in next generation subscriber r
 
 Instead of using dynamic-configuration command, you can use the “request system subscriber-management release-session id ” To use this command, you have to logout the subscriber hierarchy one by one:
 
+```text
 labroot@jtac-mx240-r2001> show subscribers extensive Type: VLAN
+```
 
 User Name: cccc
 
@@ -518,15 +602,21 @@ Type: DHCP
 
 IPv6 Address: 2a01:260:1::1 Logical System: default Routing Instance: default Interface: pp0.3221225476 Interface type: Static Underlying Interface: pp0.3221225476
 
+```text
 MAC Address: 00:54:01:00:00:01 State: Active
+```
 
 Radius Accounting ID: 8 Session ID: 8
 
+```text
 Dynamic Profile Dynamic Profile State: Active Session ID: 4
+```
 
 Name: IP
 
+```text
 Version: 1
+```
 
 Type: PPPoE
 
@@ -546,19 +636,27 @@ Interface type: Dynamic
 
 Underlying Interface: demux0.3221225474 Dynamic Profile Name: PPPOE
 
+```text
 State: Active
+```
 
 Radius Accounting ID: 7
 
 Session ID: 7
 
+```text
 labroot@jtac-mx240-r2001> request system subscriber-management release-session id 8 Session will be forcibly released.
+```
 
 Do you want to continue ? [yes,no] (no) yes
 
+```text
 labroot@jtac-mx240-r2001> request system subscriber-management release-session id 7 Session will be forcibly released.
+```
 
+```text
 labroot@jtac-mx240-r2001> request system subscriber-management release-session id 4 Session will be forcibly released.
+```
 
 Client-session ID 4 released
 
@@ -593,7 +691,9 @@ Theo như kết quả test trên lab thì:
 
 Bên anh vẫn khuyến nghị tắt tính năng RTT này, và bên anh xin phép correct lại câu lệnh để tắt tính năng này như sau
 
+```text
 set system services resource-monitor no-load-throttle
+```
 
 Chỗ này chắc anh em đang hơi mismatch thông tin, anh xin phép summarize lại như sau:
 
@@ -633,7 +733,9 @@ Trong trường hợp em muốn detail IPv4 và IPV6 có thể thêm các option
 
 Các câu lệnh này chỉ truy xuất total vbf flow, nên sẽ không ảnh hưởng đến tải của thiết bị nhé.
 
+```text
 When interface is moved to different ae with subscribers present on it, it may have resulted in unexpected behaviour and the authd module is internally terminated (not finding any process termination log though) and that is the reason behind this error: the general-authentication-service subsystem is not running whenever you ran the network-access related show commands. In RSI also, I don’t see the authd module under “show system processes extensive”. Please follow the below mentioned procedure while moving the interface to different ae to avoid any such unprecedented issues.
+```
 
 Aug 23 23:18:40.926 2021  HNM-BNG2-MX960\_RE0 kernel: iff\_request: ifl et-3/2/0.32767 still has 1 stacked ifls present. Please advise customer to follow the sequence like below when they move interface to a different ae.
 
@@ -648,24 +750,38 @@ Dear Hiệp,
 
 - Trên các BRAS RR tạo thêm các route static đến lo0 BRAS tỉnh với preference cao hơn route qua kênh L2VPN và route về discard:
 
+```text
 set routing-options static route  qualified-next-hop 169.254.254.254 preference
+```
 
+```text
 set routing-options static route  qualified-next-hop 169.254.254.254
+```
 
+```text
 set routing-options static route  resolve
+```
 
-- > Mỗi lo0 BRAS tỉnh tạo thêm 1 static route đến next-hop 169.254.254.254  với preference 8 > 5
+```text
+> Mỗi lo0 BRAS tỉnh tạo thêm 1 static route đến next-hop 169.254.254.254  với preference 8 > 5
+```
 
+```text
 set routing-options static route [169.254.254.254/32](http://169.254.254.254/32) discard
+```
 
-- > chọn next-hop đến IP 169.254.254.254 discard vì IP này là IP dành riêng local tự tạo trên máy tính khi máy tính ko gán được IP -> nên sử dụng IP này sẽ không có liên quan đến IP dịch vụ nào có thể ảnh hưởng
+```text
+> chọn next-hop đến IP 169.254.254.254 discard vì IP này là IP dành riêng local tự tạo trên máy tính khi máy tính ko gán được IP -> nên sử dụng IP này sẽ không có liên quan đến IP dịch vụ nào có thể ảnh hưởng
+```
 
 Với giải pháp này, khi có vấn đề kênh L2VPN, route static lo0 BRAS tỉnh qua kênh L2VPN down thì route lo0 BRAS tỉnh sẽ active bằng route discard được tạo trên -> mất kết nối lo0 giữa BRAS tỉnh và BRAS RR -> phiên BGP giữa BRAS tỉnh và BRAS RR sẽ down
 
 Anh xin phép update thêm thông tin về case này nhé
 
-1. Log “XL[0:0].cass\_ddr[2] CAE\_MCIF[1] Part 1 Uninitialized Read Error” cảnh báo với memory của khối xử lý XLCHIP trên card MPC
-2. Triggers:
+```text
+Log “XL[0:0].cass\_ddr[2] CAE\_MCIF[1] Part 1 Uninitialized Read Error” cảnh báo với memory của khối xử lý XLCHIP trên card MPC
+Triggers:
+```
 
 1. Trên box này đang có cấu hình chassis enhanced-policer + logical-interface-policer, với cấu hình enhanced-policer thiết bị sẽ thực hiện classify/statistics và hiển thị chi tiết hơn các loại packet đi qua mỗi policer, việc classify này không cần thiết trong khi làm tăng tải xử lý cho thiết bị (cụ thể là LUCHIP của card FPC)
 2. Với thiết bị có chức năng BRAS do số lượng scale thuê bao lớn và mỗi thuê bao có 1 firewall policer gói cước do vậy việc bật cấu hình enhanced-policer sẽ làm tăng tải thiết bị không cần thiết
@@ -688,7 +804,9 @@ Nhờ em sắp xếp kế hoạch thực hiện giúp anh nhé
 
 Below is the CLI output WITHOUT enhanced-policer.
 
+```text
 labroot@mx480-r128> show firewall filter d-50m-pp0.3221225475-out detail
+```
 
 Jun 02 11:26:19
 
@@ -704,7 +822,9 @@ d-80m-filter-pp0.3221225475-out                         
 
 The new feature enhanced-policer also introduced a new CLI parameter for firewall and policer.
 
+```text
 labroot@mx480-r128> show firewall ?
+```
 
 Jun 02 11:35:53
 
@@ -718,7 +838,9 @@ counter              Counter name
 
 detail               Show filter statistics with enhanced policer statistics
 
+```text
 labroot@mx480-r128> show policer ?
+```
 
 Jun 02 12:24:21
 
@@ -750,7 +872,9 @@ Policer name
 
 Below is the CLI output when enhanced-policer is enabled.
 
+```text
 labroot@mx480-r128> show firewall filter d-50m-pp0.3221225473-out detail
+```
 
 Jun 02 11:52:29
 
@@ -786,37 +910,67 @@ RSI + var/log mới nhất
 
 === Log pfe (yêu cầu account có quyền show ở mức shell pfe của linecard)
 
+```text
 show pfe statistics traffic | no-more
+```
 
+```text
 show pfe statistics traffic detail | no-more
+```
 
+```text
 show pfe statistics error | no-more
+```
 
+```text
 request pfe execute command "show nvram" target fpc1 | no-more
+```
 
+```text
 request pfe execute command "show syslog messages" target fpc1 | no-more
+```
 
+```text
 request pfe execute command "show nvram" target fpc2 | no-more
+```
 
+```text
 request pfe execute command "show syslog messages" target fpc2 | no-more
+```
 
+```text
 request pfe execute command "show ttp statistics" target fpc2 | no-more
+```
 
+```text
 request pfe execute command "show hsl2 statistics" target fpc2 | no-more
+```
 
+```text
 request pfe execute command "show hsl2 statistics crc" target fpc2 | no-more
+```
 
+```text
 request pfe execute command "show sched" target fpc2 | no-more
+```
 
+```text
 request pfe execute command "show threads cpu" target fpc2 | no-more
+```
 
+```text
 request pfe execute command "show jnh 0 exceptions" target fpc2 | no-more
+```
 
 === Log shell bbe (yêu cầu account có quyền quyền show ở mức shell của RE)
 
+```text
 > start shell
+```
 
+```text
 % vty -s 7208 128.0.0.1
+```
 
 vty-bbe# show ifl et-1/0/2.32767
 
@@ -830,7 +984,9 @@ vty-bbe# quit
 
 vty-bbe#
 
+```text
 % exit
+```
 
 Exit
 
@@ -844,7 +1000,9 @@ Nhờ anh bổ sung giúp em cấu hình chuyển mode hyper-mode về normal mo
 
 1. Kiểm tra mode hypermode hiện tại trên Bras (đang ở mode hyper mode)
 
+```text
 > show forwarding-options hyper-mode
+```
 
 Current mode: hyper mode
 
@@ -858,7 +1016,9 @@ Configured mode: hyper mode
 
 3. reboot box để cấu hình no-hyper-mode được apply
 
+```text
 > request vmhost reboot routing-engine both
+```
 
 4. Kiểm tra lại mode hypermode trên Bras sau khi tác động (phải ở mode normal mode)
 
@@ -921,23 +1081,35 @@ Vật tư dự án: MX240/RE-NG/SCBE3
 
 ![](../../assets/concepts/092cdcb5f5-bbb86f985465cbe3e305975de2f25013.png)
 
+```text
 show auto-configuration out-of-band debug
+```
 
+```text
 show shmlog entries logname all | match BBE\_AUTOCONF\_I\_OOB\_SESSION\_INFLIGHT\_OR\_PENDING
+```
 
 https://supportportal.juniper.net/s/article/MX-Username-filtering-of-shmlog-entries-for-l2tp-subscribers?language=en\_US
 
 With the following additional configuration:
 
+```text
 set system services subscriber-management overrides shmlog filtering enable
+```
 
 After reconnecting the L2TP session, the filtering based on username works:
 
+```text
 root@router> show shmlog entries logname all username test@j.net | count
+```
 
+```text
 Count: 778 lines
+```
 
+```text
 root@router>
+```
 
 * *KB34539** [Subscriber Management] Enhanced subscriber management failing to commit when configured for the first time
 
@@ -951,7 +1123,9 @@ root@router>
 
 * *KB78224** Juniper MX BNG: PPPoE Session Establishment Fails after CPE side power failure event
 
+```text
 [Subscriber Management]Subscriber login failure due to NACK from CoS sent for request, error code: 0x06010001
+```
 
 * *KB74250** [Subscriber Management]Subscriber login failure due to Cos resource is exhausted
 

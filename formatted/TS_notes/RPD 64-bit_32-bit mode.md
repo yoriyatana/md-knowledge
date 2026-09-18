@@ -22,13 +22,21 @@ Internet:
 
 Enabled protocols: Bridging, Dual VLAN,
 
+```text
 user:         852573 routes
+```
 
+```text
 perm:          5 routes
+```
 
+```text
 intf:          5 routes
+```
 
+```text
 dest:          8 routes
+```
 
 root@HCM001PRT02\_RE0> show system core-dumps no-forwarding
 
@@ -38,7 +46,9 @@ root@HCM001PRT02\_RE0> show system core-dumps no-forwarding
 
 Hiện tại HCM-RR02 đang học tầm 852573 routes -> trong quá trình xảy ra lỗi, đã có số lượng routes được thêm vào.
 
-- > RPD bị crashed trong logical system HCM-RR02 do cạn kiệt memory.
+```text
+> RPD bị crashed trong logical system HCM-RR02 do cạn kiệt memory.
+```
 
 + RPD đang chạy ở 32-bit mode
 
@@ -94,4 +104,6 @@ Currently In Use:      4497732         13%  now
 
 Maximum Ever Used:     4525031         13%  21/06/16 16:20:12
 
+```text
 Available:            34281107        100%  now
+```

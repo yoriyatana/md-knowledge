@@ -2,7 +2,9 @@
 
 [ June 30, 2023 15:48 ] ⁨SVT.Hoà.Nguyễn⁩: juniper@AGG-TNNTNN11-RE0> show route advertising-protocol bgp 10.249.35.1 table inet.3 detail
 
+```text
 inet.3: 1668 destinations, 3275 routes (1504 active, 0 holddown, 300 hidden)
+```
 
 10. 249.34.254/32 (4 entries, 2 announced)
 
@@ -14,9 +16,13 @@ Nexthop: Self
 
 Flags: Nexthop Change
 
+```text
 MED: 0
+```
 
+```text
 Localpref: 100
+```
 
 AS path: [65324] I  (Originator)
 
@@ -30,7 +36,9 @@ Cluster ID: 10.249.34.6
 
 [ June 30, 2023 15:52 ] ⁨Hung Le⁩: forwarding-options {
 
+```text
 load-balance-label-capability;
+```
 
 no-load-balance-label-capability;
 
@@ -38,7 +46,9 @@ no-load-balance-label-capability;
 
 [ June 30, 2023 15:52 ] ⁨SVT.Hoà.Nguyễn⁩: root@PE> show route advertising-protocol bgp 190.10.10.255 detail
 
+```text
 inet.3: 4 destinations, 4 routes (4 active, 0 holddown, 0 hidden)
+```
 
 \* 190.10.10.10/32 (1 entry, 1 announced)
 
@@ -50,7 +60,9 @@ Nexthop: Self
 
 Flags: Nexthop Change
 
+```text
 Localpref: 100
+```
 
 AS path: [7552] I
 

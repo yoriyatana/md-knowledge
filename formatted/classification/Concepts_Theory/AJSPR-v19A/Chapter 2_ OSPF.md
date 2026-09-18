@@ -8,8 +8,10 @@ Chapter 2: OSPF
 
 OSPFv2 Review (1 of 3)
 
-- OSPF is a link-state IGP used within an AS
-- Neighbors use hello packets to form adjacencies
+```text
+OSPF is a link-state IGP used within an AS
+Neighbors use hello packets to form adjacencies
+```
 
 - OSPF uses IP protocol number 89 and the AIISPFRouters multicast address of 224.0.0.5 to flood LSAs
 
@@ -22,7 +24,9 @@ OSPFv2 Review (1 of 3)
 - The election of a DR on a broadcast segment is a nondeterministic event.
 - Use interface-type p2p on a point-to-point Ethernet link to eliminate the need for this election
 
-- This option can save up to 40 seconds of wait time to get the OSPF adjacency to a full state.
+```text
+This option can save up to 40 seconds of wait time to get the OSPF adjacency to a full state.
+```
 
 OSPFv2 Review (2 of 3)
 
@@ -33,15 +37,19 @@ OSPFv2 Review (2 of 3)
 
 OSPFv2 Review (3 of 3)
 
-- Packet Types
+```text
+Packet Types
+```
 
 - Every OSPF router uses a specific set of packets to perform its functions. The packet types include the following:
 
-- Hello: Sent by each router to form and maintain adjacencies with its neighbors.
-- Database description: Used by the router during the adjacency formation process. It contains the header information for the contents of the LSDB on the router.
-- Link-state request: Used by the router to request an updated copy of a neighbor’s LSA.
-- Link-state update: Used by the router to advertise LSAs into the network.
-- Link-state acknowledgment: Used by the router to ensure the reliable flooding of LSAs throughout the network
+```text
+Hello: Sent by each router to form and maintain adjacencies with its neighbors.
+Database description: Used by the router during the adjacency formation process. It contains the header information for the contents of the LSDB on the router.
+Link-state request: Used by the router to request an updated copy of a neighbor’s LSA.
+Link-state update: Used by the router to advertise LSAs into the network.
+Link-state acknowledgment: Used by the router to ensure the reliable flooding of LSAs throughout the network
+```
 
 ![](image/502d64f4efb1c2169ba957bcddfbe323.png)
 
@@ -99,7 +107,9 @@ OSPF RID
 
 [edit routing-options]
 
+```text
 user@router# set router-id 192.168.1.1
+```
 
 - If you do not configure a router ID explicitly, the IP address of the first interface to come online is used as the value of the RID.
 
@@ -124,22 +134,28 @@ LSA Types
 
 - LSA types
 
-- Router LSAs                                            (Type 1)
-- Network LSAs                                         (Type 2)
-- Summary LSAs                                        (Type 3)
-- ASBRSummary LSAs                               (Type 4)
-- AS external LSAs                                    (Type 5)
-- Group membership LSAs                       (Type 6)
-- NSSA LSAs                                              (Type 7)
-- External attributes LSAs                         (Type 8)
-- Opaque LSAs                                          (Types 9, 10, and 11)
+```text
+Router LSAs                                            (Type 1)
+Network LSAs                                         (Type 2)
+Summary LSAs                                        (Type 3)
+ASBRSummary LSAs                               (Type 4)
+AS external LSAs                                    (Type 5)
+Group membership LSAs                       (Type 6)
+NSSA LSAs                                              (Type 7)
+External attributes LSAs                         (Type 8)
+Opaque LSAs                                          (Types 9, 10, and 11)
+```
 
-- Each LSA type describes a portion of the OSPF routing domain
-- LSAs 6, 8, and 11 are not supported
+```text
+Each LSA type describes a portion of the OSPF routing domain
+LSAs 6, 8, and 11 are not supported
+```
 
 ![](https://i0.wp.com/momcanfixanything.com/wp-content/uploads/2020/04/image-21.png?resize=640%2C257&ssl=1)
 
+```text
 Link-State Update Packets
+```
 
 - Multiple LSAs in a Single Update
 - Packets consist of the following:
@@ -154,27 +170,37 @@ LSA Header
 
 - 20 bytes of information that identify the LSA uniquely and consist of:
 
-- Link-state age (2 bytes) - Count up timer
-- Options (1 bytes) - Indicates the optional capabilities support on this router
+```text
+Link-state age (2 bytes) - Count up timer
+Options (1 bytes) - Indicates the optional capabilities support on this router
+```
 
 - P bit (position 5) set in all NSSA external LSAs
 - E bit (position 7) set in all external LSAs
 
-- Link-state type (1 bytes) - LSA Type
-- Link-state ID (4 bytes) - Varies based on LSA Type
+```text
+Link-state type (1 bytes) - LSA Type
+Link-state ID (4 bytes) - Varies based on LSA Type
+```
 
-- For Router LSA, it will be equal to RID of the router.
-- For Network LSA, this field is set equal to the DR's IP address.
-- For ASBRSummary LSA, it is equal to ASBR’s RID.
-- For Summary, External and NSSA LSAs, link-state ID is set equal to the advertised IP subnet.
+```text
+For Router LSA, it will be equal to RID of the router.
+For Network LSA, this field is set equal to the DR's IP address.
+For ASBRSummary LSA, it is equal to ASBR’s RID.
+For Summary, External and NSSA LSAs, link-state ID is set equal to the advertised IP subnet.
+```
 
-- Advertising router (4 bytes) - Router ID of originating router
-- Link-state sequence number (4 bytes) - Determines if LSA has changed
+```text
+Advertising router (4 bytes) - Router ID of originating router
+Link-state sequence number (4 bytes) - Determines if LSA has changed
+```
 
 - Values range from 0x80000000 to 0x7FFFFFFF (số nguyên có dấu)
 
-- Link-state checksum (2 bytes) - LSA integrity check
-- Length (2 bytes)
+```text
+Link-state checksum (2 bytes) - LSA integrity check
+Length (2 bytes)
+```
 
 ![](https://i0.wp.com/momcanfixanything.com/wp-content/uploads/2020/04/image-34.png?resize=640%2C402&ssl=1)
 
@@ -182,8 +208,10 @@ Router LSA (Type 1)
 
 - Originated by each router in an area
 
-- Has area scope
-- Describes the state and cost of the router’s interfaces
+```text
+Has area scope
+Describes the state and cost of the router’s interfaces
+```
 
 ![](image/9d602013974e7f7f9bfed7682e431bd4.png)
 
@@ -267,7 +295,9 @@ Summary LSA (Type 3)
 
 - Network mask (4 bytes): This field represents the subnet mask associated with the network advertised.
 
-- It is used in conjunction with the link-state ID field, which encapsulates the network address in a Type 3 LSA.
+```text
+It is used in conjunction with the link-state ID field, which encapsulates the network address in a Type 3 LSA.
+```
 
 - Metric (3 bytes): This field provides the cost of the route to the network destination.
 
@@ -289,7 +319,9 @@ External LSA (Type 5)
 
 - Network mask (4 bytes): This field represents the subnet mask associated with the network advertised.
 
-- It is used in conjunction with the link-state ID field, which encapsulates the network address in a Type 5 LSA.
+```text
+It is used in conjunction with the link-state ID field, which encapsulates the network address in a Type 5 LSA.
+```
 
 - E bit (1 byte): The E bit determines the type of external metric represented by the metric field.
 
@@ -327,7 +359,9 @@ ASBR Summary LSA (Type 4)
 
 - Network mask (4 bytes): This field has no meaning in a Type 4 LSA and is set to 0.0.0.0.
 
-- The address of the ASBR is encoded in the link-state ID field.
+```text
+The address of the ASBR is encoded in the link-state ID field.
+```
 
 - Metric (3 bytes): This field provides the cost of the route to the ASBR.
 - MT-ID (1 byte): This field represents the MT-ID value used in a Multi Topology configuration.
@@ -376,9 +410,11 @@ Opaque LSA (Types 9-11)
 
 - Allows for the future extensibility of OSPF
 
-- The Junos OS uses Type 9 for graceful restart capability -  a link-local scope
-- The Junos OS uses Type 10 for MPLS traffic engineering - an area scope
-- Type 11 is currently not supported -  domain scope
+```text
+The Junos OS uses Type 9 for graceful restart capability -  a link-local scope
+The Junos OS uses Type 10 for MPLS traffic engineering - an area scope
+Type 11 is currently not supported -  domain scope
+```
 
 - Consist of a standard LSA header followed by application-specific information
 
@@ -390,7 +426,9 @@ OSPF Database Protection
 - Protects the LSDB from being flooded with excessive LSAs
 - Useful if VPN routing and forwarding is configured on your provider edge and customer edge routers are using OSPF as the routing protocol
 
+```text
 user@router# show protocols ospf
+```
 
 database-protection {
 
@@ -404,11 +442,15 @@ Shortest Path First Algorithm
 
 - Based on the Dijkstra algorithm
 
-- Link-state database
-- Candidate database
-- Tree database
+```text
+Link-state database
+Candidate database
+Tree database
+```
 
-- Run on a per-area basis on each router
+```text
+Run on a per-area basis on each router
+```
 
 - Independent calculation of the topology
 
@@ -431,7 +473,9 @@ Controlling SPF Calculations
 
 [edit protocols ospf]
 
+```text
 user@router# set spf-options delay 100
+```
 
 - Now we are going to play with the timers and run the debugs, and examine the behavior. We will set the delay to 1 sec and the hold-down timer to 20 sec while keeping the rapid-runs as default.
 
@@ -637,7 +681,9 @@ OSPFv3 Router ID
 
 - Same as OSPF Router ID
 
-- OSPFv3 maintains the 32-bit RID that represents the router in the link-state database
+```text
+OSPFv3 maintains the 32-bit RID that represents the router in the link-state database
+```
 
 - This is not an IPv4 address, it just looks like one!
 
@@ -749,7 +795,9 @@ family iso;
 
 root@R3\_RTR-D# run show ospf neighbor
 
+```text
 Address          Interface              State     ID               Pri  Dead
+```
 
 10. 3.4.4         ge-0/0/0.0             Full      10.4.4.4         128    36
 

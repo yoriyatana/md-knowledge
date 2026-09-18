@@ -9,15 +9,23 @@
 
 ######
 
+```text
 Show cfp :
+```
 
 MX2010-ADV-NPE-01:
 
+```text
 > show interfaces extensive et-6/0/0 | no-more
+```
 
+```text
 > show interfaces diagnostics optics et-6/0/0 | no-more
+```
 
+```text
 > start shell pfe network fpc6
+```
 
 # show cfp list
 
@@ -59,17 +67,25 @@ MX2010-ADV-NPE-01:
 
 MX2010-GDI-P-01:
 
+```text
 > show interfaces extensive et-3/0/1 | no-more
+```
 
+```text
 > show interfaces diagnostics optics et-3/0/1 | no-more
+```
 
+```text
 > start shell pfe network fpc3
+```
 
 ## Source: `formatted/TS_notes/10GbE LAN-PHY_40GbE_100GbE LFS (Link fault signalling).md`
 
 # 10GbE LAN-PHY/40GbE/100GbE LFS (Link fault signalling)
 
+```text
 10GbE LAN-PHY/40GbE/100GbE LFS operates between remote Reconciliation Sublayers (RS) and local RS. Link faults detected between remote RSs and local RSs are received by local RSs. Only the RS originates Remote Fault signals. When this Local Fault status reaches an RS, the RS stops sending MAC data, and continuously generates a Remote Fault status on the transmit data path. When Remote Fault status is received by an RS, the RS stops sending MAC data, and continuously generates Idle control characters. When the RS no longer receives fault status messages, it returns to normal operation, sending MAC data
+```
 
 ![](../../assets/troubleshooting-guide/c5fe9577fa-a29c8b33b3303696d0641b4e0f996313)
 
@@ -99,17 +115,29 @@ MX2010-GDI-P-01:
 
 # show nvram
 
+```text
 >> Thử laser on/ laser off CFP bằng câu lệnh:
+```
 
+```text
 test cfp  laser  off
+```
 
+```text
 test cfp  laser  on
+```
 
+```text
 >> Thu thập rsi, var/log:
+```
 
+```text
 request support information | save /var/log/rsi-after
+```
 
+```text
 file archive compress source /var/log/\* destination /var/tmp/varlogs-jtac.tgz
+```
 
 [ Tuesday, June 15, 2021 2:06 PM ] ⁨SVT.Thái.NĐ⁩: hard-loop là lấy 1 sợi dây đơn -> 1 đầu cắm vào port Tx (transmit), 1 đầu còn lại cắm vào port Rx (receive)
 
@@ -121,21 +149,31 @@ file archive compress source /var/log/\* destination /var/tmp/varlogs-jtac.tgz
 
 * *1. Thực hiện soft-loop & hard-loop (loop local), thu thập thông tin sau:**
 
+```text
 show chassis hardware
+```
 
+```text
 show interfaces diagnostics optics (et-… / xe-…)
+```
 
+```text
 show interfaces (et-… / xe-…)
+```
 
 - Note câu lệnh soft-loop:
 
+```text
 set interfaces  gigether-options loopback
+```
 
 * *2. Thu thập tập lệnh output sau trong 2 trường hợp** **soft-loop** **và** **hard-loop**
 
 * *Note đối với module** ***CFP 100Gig*:**
 
+```text
 > start shell pfe network fpc#
+```
 
 * *Note đối với module** ***SFP+*** ***10Gig*:**
 
@@ -173,11 +211,17 @@ set interfaces  gigether-options loopback
 
 1. Thực hiện soft-loop, hard-loop (local loop):
 
+```text
 > show chassis hardware
+```
 
+```text
 > show interfaces diagnostics optics (et-… / xe-…)
+```
 
+```text
 > show interfaces (et-… / xe-…)
+```
 
 2. Thu thập RSI, var/log.
 
@@ -197,7 +241,9 @@ The 'PCI Fatal' errors seen above do not represent an actual hardware issue with
 
 # SNMP interface jnxDom (laser) MIB OID
 
+```text
 show snmp mib walk [1.3.6.1.4.1.2636.3.60.1.2.1.1](http://1.3.6.1.4.1.2636.3.60.1.2.1.1)
+```
 
 jnxDomCurrentLaneTxLaserOutputPower - 1.3.6.1.4.1.2636.3.60.1.2.1.1.8
 

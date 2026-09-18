@@ -16,7 +16,9 @@ Ghi nhận ban đầu
 
 Alarm time               Class  Description
 
+```text
 2020-11-28 10:09:11 CAT  Major  FPC 1 Major Errors - HSL2 Error code: 0x200001
+```
 
 - --
 
@@ -30,9 +32,13 @@ Kiểm tra sơ bộ
 
 Thu thập các thông tin liên quan
 
+```text
 request support information | no-more | save /var/log/RSI\_PR02.TET040\_20211222
+```
 
+```text
 file archive source /var/log/\* destination /var/log/LOG\_PR02.TET040\_20211222
+```
 
 Kiểm tra các case cũ, google với alarm phát sinh
 
@@ -40,9 +46,11 @@ Kiểm tra các case cũ, google với alarm phát sinh
 
 - Hướng xử lý:
 
-- restart lại FPC có cảnh báo
-- reseat lại FPC có cảnh báo
-- Thay thế vật tư dự phòng
+```text
+restart lại FPC có cảnh báo
+reseat lại FPC có cảnh báo
+Thay thế vật tư dự phòng
+```
 
 Giả lập trên thiết bị lab và máy đo
 
@@ -52,7 +60,9 @@ Giả lập trên thiết bị lab và máy đo
 
 ### Thực hiện restart lại FPC1
 
+```text
 request chassis fpc slot 1 restart
+```
 
 ### Sau khi FPC1 restart và online trở lại thì dịch vụ đã phục hồi, không phát sinh ngoài kế hoạch
 
@@ -66,10 +76,14 @@ Kết quả xử lý trên thiết bị
 
 - Các vlan khác không bị ảnh hưởng.
 
+```text
 >>> Trong trường hợp cấu hình như anh cung cấp thì thuê bao ở vlan từ 2-4000 sẽ không bị ảnh hưởng còn vlan từ 4001-4094 sau khi thuê bao đá ra hết sẽ không vào lại được.
+```
 
 - Khi đổi cấu hình MTU trên cổng từ 9000 lên 9022:
 
 - Thay đổi tham số MTU trên cổng sẽ gây down/up port
 
+```text
 >>> Toàn bộ thuê bao trên cổng sẽ bị đá ra và thực hiện kết nối lại.
+```

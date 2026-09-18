@@ -6,11 +6,15 @@ I could understand that your question is that the temperature threshold to high 
 
 Please be informed that the health of the FPC is defined by the below mentioned command .Which provide the overall detail about the FPC as below.
 
+```text
 user@switch> show chassis fpc detail
+```
 
 Slot 0 information:
 
+```text
 State                Online
+```
 
 Temperature           28 degrees C / 82 degrees F
 
@@ -30,7 +34,9 @@ When ever the FPC is reached its threshold values then the fan speed will be cha
 
 As you mentioned the values in the below mentioned output
 
+```text
 Show chassis environment | no-more
+```
 
 It define the chip level temperature values its wont have any impact on the fan speed .Only the overall FPC temperature values define the fan speed.
 

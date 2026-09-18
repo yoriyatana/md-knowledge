@@ -8,29 +8,47 @@ It is common that people configure route-reflector outside the PE, either on ded
 
 ## Symptomp
 
-- all non inet.0 routes become hidden with error message "next-hop unusable", for example
+```text
+all non inet.0 routes become hidden with error message "next-hop unusable", for example
+```
 
-  rwibawa@vmx-13-13# run show bgp summary
+```text
+rwibawa@vmx-13-13# run show bgp summary
+```
 
   ...
 
-  Peer AS InPkt OutPkt OutQ Flaps Last Up/Dwn State|#Active/Received/Accepted/Damped...
+```text
+Peer AS InPkt OutPkt OutQ Flaps Last Up/Dwn State|#Active/Received/Accepted/Damped...
+```
 
   67. 176.255.1 16689.7041 183 9403 0 0 58:32 Establ
 
-  inet.0: 7/7/7/0
+```text
+inet.0: 7/7/7/0
+```
 
-  inet6.0: 0/4/4/0
+```text
+inet6.0: 0/4/4/0
+```
 
-  bgp.l3vpn.0: 0/45/45/0
+```text
+bgp.l3vpn.0: 0/45/45/0
+```
 
-  bgp.l2vpn.0: 0/1/1/0
+```text
+bgp.l2vpn.0: 0/1/1/0
+```
 
   ...
 
-  bgp.l3vpn.0: 148 destinations, 162 routes (0 active, 0 holddown, 162 hidden)
+```text
+bgp.l3vpn.0: 148 destinations, 162 routes (0 active, 0 holddown, 162 hidden)
+```
 
-  22:4003:108.42.0.22/32 (1 entry, 0 announced)
+```text
+22:4003:108.42.0.22/32 (1 entry, 0 announced)
+```
 
   BGP Preference: 170/-101
 
@@ -38,17 +56,25 @@ It is common that people configure route-reflector outside the PE, either on ded
 
   Next hop type: Unusable
 
-  Address: 0x94129e4
+```text
+Address: 0x94129e4
+```
 
   Next-hop reference count: 186
 
-  State:
+```text
+State:
+```
 
   Local AS: 16689.7041 Peer AS: 16689.7041
 
-  Age: 59:38
+```text
+Age: 59:38
+```
 
-  Validation State: unverified
+```text
+Validation State: unverified
+```
 
   Task: BGP\_16689.7041.67.176.255.1+179
 
@@ -60,7 +86,9 @@ It is common that people configure route-reflector outside the PE, either on ded
 
   VPN Label: 17
 
-  Localpref: 100
+```text
+Localpref: 100
+```
 
   Router ID: 67.176.255.1
 
@@ -72,7 +100,9 @@ It is common that people configure route-reflector outside the PE, either on ded
 
   Label TTL action: prop-ttl
 
-  Load balance label: Label 17: None;
+```text
+Load balance label: Label 17: None;
+```
 
   Indirect next hop: 0x2 no-forward INH Session ID: 0x0
 
@@ -86,7 +116,9 @@ It is common that people configure route-reflector outside the PE, either on ded
 
 - option 2: configure static route from inet.3 to inet.0
 
-  rwibawa@vmx-13-13# show routing-options
+```text
+rwibawa@vmx-13-13# show routing-options
+```
 
   rib inet.3 {
 
@@ -99,7 +131,9 @@ It is common that people configure route-reflector outside the PE, either on ded
   }
 - option 3: configure route resolution mapping
 
-  rwibawa@vmx-13-13# show routing-options
+```text
+rwibawa@vmx-13-13# show routing-options
+```
 
   ...
 
@@ -128,7 +162,9 @@ It is common that people configure route-reflector outside the PE, either on ded
   ...
 - option 4: configure rib-groups inet.0 to inet.3
 
-  rwibawa@vmx-13-13# show routing-options
+```text
+rwibawa@vmx-13-13# show routing-options
+```
 
   ...
 
@@ -148,7 +184,9 @@ It is common that people configure route-reflector outside the PE, either on ded
 
   [edit logical-systems R3RR]
 
-  rwibawa@vmx-13-13# show protocols ospf
+```text
+rwibawa@vmx-13-13# show protocols ospf
+```
 
   rib-group inet0-to-inet3;
 
@@ -158,7 +196,9 @@ It is common that people configure route-reflector outside the PE, either on ded
 
 - if you are using option 2 or option 3 above, you need to add rib-group for inet6.0
 
-  rwibawa@vmx-13-13# show routing-options
+```text
+rwibawa@vmx-13-13# show routing-options
+```
 
   ...
 
@@ -176,14 +216,18 @@ It is common that people configure route-reflector outside the PE, either on ded
 
   ...
 
-  rwibawa@vmx-13-13# show protocols ospf
+```text
+rwibawa@vmx-13-13# show protocols ospf
+```
 
   rib-group inet0-to-inet6;
 
   ...
 - if you are using option 4 above, you need to modify your rib-group
 
-  rwibawa@vmx-13-13# show routing-options
+```text
+rwibawa@vmx-13-13# show routing-options
+```
 
   ...
 
@@ -201,7 +245,9 @@ It is common that people configure route-reflector outside the PE, either on ded
 
   ...
 
-  rwibawa@vmx-13-13# show protocols ospf
+```text
+rwibawa@vmx-13-13# show protocols ospf
+```
 
   rib-group inet0-to-inet3-and-inet6;
 

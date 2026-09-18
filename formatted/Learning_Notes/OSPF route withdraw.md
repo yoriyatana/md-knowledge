@@ -8,7 +8,9 @@ OSPF has slightly different way of removing routes compared to BGP. On this shor
 
 * *Before the failure**, we can see that 10.37.24.0/24 is contained in router LSA.
 
+```text
 root@j39> show ospf database router lsa-id 10.1.1.39 detail area 3
+```
 
 OSPF database, Area 0.0.0.3
 
@@ -30,11 +32,15 @@ Topology default (ID 0)
 
 Type: Transit, Node ID: 99.1.1.4
 
+```text
 Metric: 10, Bidirectional
+```
 
 This very same route is sent as an LSA Type 3 (summary) onto the Area0 as it can be seen below too.
 
+```text
 root@J32> show ospf database area 0 | match 10.37
+```
 
 Summary 10.37.24.0 10.1.1.40 0x80000001 212 0x22 0xaefe 28 <---Advertised by J40 So far it looks good. Now we are disconnect the ethernet link on J39 connecting this network and take a packet capture on the vlan 803 to which all OSPF routers on Area3 connected. Here how it looks like;
 
@@ -48,11 +54,15 @@ On Area0, ABR is J40(25.1.2.2) and once it receives this new LSA, apparently it 
 
 If you check the Area0 OSPF database, you will see that LSA age is set to 3600
 
+```text
 root@J32> show ospf database area 0 | match 10.37
+```
 
 Summary  10.37.24.0      10.1.1.40        0x80000001  3600  0x22 0xaefe  28 <--LSA Age is 3600
 
+```text
 root@J32> show ospf database area 0 | match 10.37
+```
 
 and after a few seconds, this LSA disappears on the backbone router along with the route itself.
 

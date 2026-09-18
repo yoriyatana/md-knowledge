@@ -1,90 +1,144 @@
 # Class of Services - CoS notes
 
+```text
 set cli timestamp
+```
 
 ### 1/ Kiểm tra cấu hình forwarding class cấu hình:
 
+```text
 show class-of-service forwarding-class
+```
 
 ### 2/ Kiểm tra các BA classifier đã cấu hình:
 
+```text
 show class-of-service classifier name CL\_DSCP
+```
 
+```text
 show class-of-service classifier name CL\_802.1p
+```
 
+```text
 show class-of-service classifier name CL\_EXP
+```
 
 ### 3/ Kiểm tra các re-write rule cấu hình:
 
+```text
 show class-of-service rewrite-rule name RW\_DSCP
+```
 
+```text
 show class-of-service rewrite-rule name RW\_EXP
+```
 
+```text
 show class-of-service rewrite-rule name RW\_802.1p
+```
 
 ### 4/ Kiểm tra scheduler-map đã cấu hình:
 
+```text
 show class-of-service scheduler-map SCH-MAP
+```
 
 ### 5/ Kiểm tra các interface đã cấu hình CoS:
 
+```text
 show class-of-service interface ae9
+```
 
 ### 6/Kiểm tra egress traffic queue tương ứng mỗi forwarding class:
 
+```text
 show interfaces queue ae9 egress forwarding-class FTTX
+```
 
 ### 7/ Kiểm tra classifier mức PFE (apply xuống line card)
 
+```text
 show class-of-service classifier name CL-DSCP
+```
 
 start shell pfe network fpc7
 
+```text
 show cos classifier 25562
+```
 
 ### 8/ Check forwarding class ở PFE:
 
+```text
 show class-of-service forwarding-class
+```
 
 start shell pfe network fpc7
 
+```text
 show cos forwarding-class table
+```
 
 ### 9/ Kiểm tra rewrite rule ở PFE:
 
+```text
 show cos rewrite 60698    ###giá trị này nằm ở lệnh show mục 3
+```
 
 ### 10/Kiểm tra scheduler trên linecard:
 
+```text
 show class-of-service scheduler-hierarchy fpc slot 7
+```
 
 start shell pfe network fpc7
 
+```text
 show cos scheduler-hierarchy
+```
 
 ###
 
+```text
 show interfaces ge-3/2/1 extensive | find queue counters
+```
 
+```text
 show interfaces queue ge-3/2/1 | find queue
+```
 
 CLI
 
+```text
 show class-of-service interface ge-2/2/1 comprehensive (2 times)
+```
 
+```text
 show class-of-service interface ge-2/2/1 detail
+```
 
+```text
 show class-of-service scheduler-map
+```
 
 FPC shell
 
+```text
 show cos halp ifl
+```
 
+```text
 show cos halp ifd
+```
 
+```text
 show cos scheduling-policy
+```
 
+```text
 show interfaces queue egress ae13 | match \"Queue|Tail-\"
+```
 
 - --
 
@@ -104,9 +158,13 @@ So, as per below scheduler configuration and for in-profile traffic, queues that
 
 Even if they are configured with different transmit-rates, the queues are processed in a packet based round robin manner.
 
+```text
 However buffer size defines the number of packets that can be queued or buffered and hence due to less buffer space available in queue 0 and high traffic rate then other low priority queues tail drops areexpected in case of burst.
+```
 
+```text
 Note: Burst will not reflect on SNMP traffic graph as it has polling rate is around 1 sec and burst is measured in milliseconds.
+```
 
 - --
 
@@ -114,15 +172,23 @@ Can you give
 
 CLI config (TCP, shaper and queues)
 
+```text
 show cos halp ifl X
+```
 
+```text
 show qx N tail-rule Y 0 0
+```
 
+```text
 show qx N q Z queue-length
+```
 
 With two different temporal values in queues.
 
+```text
 Remember that you must configure guaranteed-rate for shaping to work in QX as
+```
 
 accustomed to DPCE and MQ. Otherwise all your queues are in excess region.
 
@@ -136,11 +202,15 @@ playing with buffers mainly).
 
 IFD is in PIR mode as only PIR is configured (interface could be
 
+```text
 oversubscribed so configuring guaranteed rate doesn't make sense). As I
+```
 
 understand it, queues are therefore always in excess (apart from
 
+```text
 rate-limited queue) with weight proportional to the transmit-rate (correct
+```
 
 me if I am wrong).
 
@@ -158,7 +228,9 @@ traffic-control-profiles {
 
 scheduler-map 10M\_COS;
 
+```text
 shaping-rate 10m;
+```
 
 }
 
@@ -200,7 +272,9 @@ schedulers {
 
 NC {
 
+```text
 transmit-rate percent 1;
+```
 
 buffer-size temporal 500k;
 
@@ -212,11 +286,15 @@ excess-priority high;
 
 RT {
 
+```text
 transmit-rate {
+```
 
 percent 24;
 
+```text
 rate-limit;
+```
 
 }
 
@@ -228,7 +306,9 @@ priority high;
 
 SIG {
 
+```text
 transmit-rate percent 2;
+```
 
 buffer-size temporal 500k;
 
@@ -236,7 +316,9 @@ buffer-size temporal 500k;
 
 PRI {
 
+```text
 transmit-rate percent 24;
+```
 
 buffer-size temporal 165k;
 
@@ -244,7 +326,9 @@ buffer-size temporal 165k;
 
 BE {
 
+```text
 transmit-rate percent 24;
+```
 
 buffer-size temporal 165k;
 
@@ -274,13 +358,19 @@ QX chip base Q index: 32
 
 Number of queues: 8
 
+```text
 Queue    State        Max       Guaranteed   Burst  Weight Priorities
+```
 
 Drop-Rules
 
+```text
 Index                 rate         rate      size            G    E   Wred
+```
 
+```text
 Tail
+```
 
 - ----- ----------- ----------- ------------ ------- ------ ----------
 
@@ -318,7 +408,9 @@ Tail
 
 255
 
+```text
 Rate limit info:
+```
 
 Q 5: Bandwidth = 2400000, Burst size = 73536. Policer NH:
 
@@ -328,13 +420,17 @@ Index NH: 0xda4be18980801006
 
 NPC0(pe1-RE0 vty)# show qxchip 0 tail-rule 33 0 0
 
+```text
 Tail drop rule configuration   : 33
+```
 
 ref\_count    : 0
 
 Drop Engine 0   :
 
+```text
 Tail drop rule ram address   : 00000840
+```
 
 threshold    : 2686976 bytes
 
@@ -344,7 +440,9 @@ mantissa   : 164
 
 Drop Engine 1   :
 
+```text
 Tail drop rule ram address   : 00000840
+```
 
 threshold    : 2686976 bytes
 
@@ -354,13 +452,17 @@ mantissa   : 164
 
 NPC0(pe1-RE0 vty)# show qxchip 0 tail-rule 34 0 0
 
+```text
 Tail drop rule configuration   : 34
+```
 
 ref\_count    : 0
 
 Drop Engine 0   :
 
+```text
 Tail drop rule ram address   : 00000880
+```
 
 threshold    : 2801664 bytes
 
@@ -370,7 +472,9 @@ mantissa   : 171
 
 Drop Engine 1   :
 
+```text
 Tail drop rule ram address   : 00000880
+```
 
 threshold    : 2801664 bytes
 
@@ -426,13 +530,17 @@ region   color   queue-depth
 
 - --
 
+```text
 admin@router-re0> show class-of-service scheduler-hierarchy interface pp0.5020
+```
 
 - --
 
 NGMPC3(jtac-mx480-r2046 vty)# show xqchip 0 drop tail-drop-rule rule 9
 
+```text
 Tail drop rule configuration   : 9
+```
 
 ref\_count    : 0
 
@@ -462,7 +570,9 @@ region color threshold\_bytes     tail-ram-addr   mantissa shift
 
 NGMPC3(jtac-mx480-r2046 vty)# show xqchip 0 drop info
 
+```text
 Tail drop rule configuration:
+```
 
 - ---------------------------
 
@@ -474,9 +584,13 @@ Number of rules: allocated 799  free 225
 
 In this example, FPC 3 is MPC3E NG HQoS, which is an XQ-based card.
 
+```text
 labroot@jtac-mx480-r2046# run show interfaces queue xe-3/2/0.100
+```
 
+```text
 labroot@jtac-mx480-r2046# run show class-of-service interface xe-3/2/0.100 comprehensive
+```
 
 <https://supportportal.juniper.net/s/article/MX-Example-Queue-depth-calculation-on-QX-based-cards>
 
@@ -490,11 +604,17 @@ sho cos halp ifl 171
 
 - -
 
+```text
 ftelsuper@HCMM005402620MX48-re1> show configuration | match ae8 | display set
+```
 
+```text
 set interfaces xe-0/2/3 description "PORT-HCMM005402620MX48[xe-0/2/3](ae8)-TPBank[Port](Eth)"
+```
 
+```text
 set interfaces xe-0/2/3 gigether-options 802.3ad ae8
+```
 
 - --
 
@@ -506,7 +626,9 @@ class-of-service egress scheduler hierarchy - rates in kbps
 
 shaping guarntd delaybf  excess
 
+```text
 interface name                   index    rate    rate    rate    rate      other
+```
 
 - --------------------------- ---------  ------- ------- ------- ------- -------------
 
@@ -662,9 +784,13 @@ Classifier              ipprec-compatibility   ip       
 
 - --
 
+```text
 syntax error, expecting .
+```
 
+```text
 ftelsuper@HCMM005402620MX48-re1> start shell pfe network fpc0
+```
 
 NPC platform (1067Mhz MPC 8548 processor, 2048MB memory, 512KB flash)
 
@@ -720,9 +846,13 @@ Rich queuing support: 1 (ifl queued:0)
 
 - -------------------------------------------------------------------------------------------
 
+```text
 Queue  State        Max           Guaranteed    Burst       Weight  G-Pri  E-Pri  WRED  TAIL
+```
 
+```text
 Index               Rate          Rate          Size                              Rule  Rule
+```
 
 - -------------------------------------------------------------------------------------------
 
@@ -764,8 +894,12 @@ Below document for reference:
 
 <https://www.juniper.net/documentation/us/en/software/junos/interfaces-adaptive-services/topics/ref/statement/per-unit-scheduler-edit-interfaces.html>
 
+```text
 <https://supportportal.juniper.net/s/article/MX-Using-per-unit-scheduler-with-rate-limit-or-exact>
+```
 
 Since this is a new implementation, I would suggest you to check with your accounts team who can help you with the exact configuration needed as per your network design and the traffic flow.
 
+```text
 <https://supportportal.juniper.net/s/article/MX-CoS-Drops-in-network-control-queue-because-of-a-configuration-issue-it-had-1-percent-of-transmit-rate-and-buffer-size>
+```

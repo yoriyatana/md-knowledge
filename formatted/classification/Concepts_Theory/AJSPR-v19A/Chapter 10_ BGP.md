@@ -78,7 +78,9 @@
 
 - Notifications
 
-- Sent when an error is detected with the BGP session such as a hold timer expiring, neighbor capabilities change
+```text
+Sent when an error is detected with the BGP session such as a hold timer expiring, neighbor capabilities change
+```
 
 - Route Refresh
 
@@ -94,9 +96,11 @@
 
 Or
 
-- IBGP peers advertise routes received from EBGP peers to other IBGP peers.
-- EBGP peers advertise routes learned from IBGP or EBGP peers to other EBGP peers.
-- IBGP peers do not advertise routes received from IBGP peers to other IBGP peers.
+```text
+IBGP peers advertise routes received from EBGP peers to other IBGP peers.
+EBGP peers advertise routes learned from IBGP or EBGP peers to other EBGP peers.
+IBGP peers do not advertise routes received from IBGP peers to other IBGP peers.
+```
 
 * *IBGP loop prevention requires a full mesh design. Using route reflectors or confederations can also alleviate this situation, both of which can reduce or alleviate the full-mesh requirement.**
 
@@ -174,7 +178,9 @@ Or
 
 * *allow** accepts open messages from any peer within the configured IP address range
 
-* *prefix-limit** allows a specified amount of prefixes to be received
+```text
+*prefix-limit** allows a specified amount of prefixes to be received
+```
 
 * *hold-time** alters the keepalive time used to maintain the **BGP** session
 
@@ -190,9 +196,13 @@ The **advertise-peer-as** statement overrides the default action on Junos BGP ro
 
 Required to accept routes with your own AS in the AS-path. Specify the number of times detection of the AS number in the AS\_PATH attribute causes the route to be discarded or hidden.
 
-- Range: 1 through 10
+```text
+Range: 1 through 10
+```
 
-- Default: 1
+```text
+Default: 1
+```
 
 - For example, if you configure loops 1, the route is hidden if the AS number is detected in the path one or more times. This is the default behavior. If you configure loops 2, the route is hidden if the AS number is detected in the path two or more times.
 
@@ -211,5 +221,7 @@ Required to accept routes with your own AS in the AS-path. Specify the number of
 - The **local-as 1 private** statement now has indeed removed AS path information
 - Other options are the following:
 
-- **• local-as autonomous-system alias:**A BGP peer considers any local AS to which it is assigned as equivalent to the primary AS number configured for the routing device. When you use the **alias** option, only the AS (global or local) used to establish the BGP session is prepended in the AS path sent to the BGP neighbor.
-- **• local-as loops** ***number:*** Specify the maximum number of times that the local AS number can appear in an AS path received from a BGP peer. For number, include a value from1 through 10.
+```text
+**• local-as autonomous-system alias:**A BGP peer considers any local AS to which it is assigned as equivalent to the primary AS number configured for the routing device. When you use the **alias** option, only the AS (global or local) used to establish the BGP session is prepended in the AS path sent to the BGP neighbor.
+**• local-as loops** ***number:*** Specify the maximum number of times that the local AS number can appear in an AS path received from a BGP peer. For number, include a value from1 through 10.
+```

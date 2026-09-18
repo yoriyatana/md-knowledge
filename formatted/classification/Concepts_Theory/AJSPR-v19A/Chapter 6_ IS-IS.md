@@ -10,7 +10,9 @@ Overview of IS-IS
 
 - An interior gateway protocol based on the SPF algorithm
 
-- Uses link-state information to make routing decisions
+```text
+Uses link-state information to make routing decisions
+```
 
 - Developed for routing ISO CLNP packets
 
@@ -26,8 +28,10 @@ Integrated IS-IS
 
 - IS-IS routers exchange LSPs
 
-- Similar to OSPF LSAs/link-state update packets
-- IS-IS PDUs are used to transmit the routing information
+```text
+Similar to OSPF LSAs/link-state update packets
+IS-IS PDUs are used to transmit the routing information
+```
 
 - Sometimes called packets to conform with IP terminology
 
@@ -84,7 +88,9 @@ LSP Format
 
 ![](image/c8fc76958bcdc196d2b0397fc12334f7.png)
 
-- Describes the state of adjacencies in neighboring IS-IS routers
+```text
+Describes the state of adjacencies in neighboring IS-IS routers
+```
 
 - Some fields of interest in the LSP header include the ID length and the maximum area address, which are set to a constant value of 0x00.
 
@@ -132,19 +138,23 @@ LSP Notes
 
 - The initial LSP receives a value of 0x00, and it is incremented by 1 for each following fragment
 
-- Attached (ATT) bit is set if the IS is connected to another area (L1/L2 connect to area khác area của nó/vùng level 2 có con router khác area là được)
-- Overload (OL) bit is set if the link-state database is overloaded
-- IS type bits determine a Level 1 or Level 2 router (only 2 settings possible)
+```text
+Attached (ATT) bit is set if the IS is connected to another area (L1/L2 connect to area khác area của nó/vùng level 2 có con router khác area là được)
+Overload (OL) bit is set if the link-state database is overloaded
+IS type bits determine a Level 1 or Level 2 router (only 2 settings possible)
+```
 
 - Level 1 router = 01 = 0x1
 - Level 1/2 router = 11 = 0x3
 
 IS-IS Messages
 
-- Hello (IIH)
-- Link State PDUs (LSP)
-- Partial Sequence Number PDUs (PSNP)
-- Complete Sequence Number PDUs (CSNP)
+```text
+Hello (IIH)
+Link State PDUs (LSP)
+Partial Sequence Number PDUs (PSNP)
+Complete Sequence Number PDUs (CSNP)
+```
 
 ![](image/d5cdf4a99660a8df69e292ee18828031.png)
 
@@ -185,7 +195,9 @@ Hello PDUs
 
 LSPs
 
-- Used to build the link-state database
+```text
+Used to build the link-state database
+```
 
 - Similar to LSAs in OSPF
 
@@ -202,9 +214,11 @@ LSPs
 
 - LSPs:
 
-- Identify an IS’s adjacencies
-- Describe the state of its adjacencies
-- Describe its reachable address prefixes (routes)
+```text
+Identify an IS’s adjacencies
+Describe the state of its adjacencies
+Describe its reachable address prefixes (routes)
+```
 
 Sequence Number PDUs
 
@@ -212,22 +226,28 @@ Sequence Number PDUs
 
 - Used to:
 
-- Maintain the link-state database synchronization
-- Acknowledge LSPs from a neighbor on a point-to-point network
-- Request a copy of a missing LSP on a broadcast network
+```text
+Maintain the link-state database synchronization
+Acknowledge LSPs from a neighbor on a point-to-point network
+Request a copy of a missing LSP on a broadcast network
+```
 
 - Separate PDU types for Level 1 (26) and Level 2 (27) systems
 - Contains specific header information for the LSP being acknowledged or requested
 
 - Complete sequence number PDUs
 
-- Used to maintain the link-state database synchronization
+```text
+Used to maintain the link-state database synchronization
+```
 
 - Sent periodically by all ISs on point-to-point networks
 - Only sent by DIS on broadcast networks
 
-- Separate PDU types for Level 1 (24) and Level 2 (25) systems
-- Contains header information for all LSPs in the IS’s link-state database
+```text
+Separate PDU types for Level 1 (24) and Level 2 (25) systems
+Contains header information for all LSPs in the IS’s link-state database
+```
 
 Type/Length/Values
 
@@ -322,21 +342,29 @@ TLV 2-IS Reachability
 
 - (1-byte) S (Supported) bit, l/E bit, delay metric
 
-- Junos OS does not support
-- The S bit is set to a constant value of 1(not supported)
-- The l/E and metric bits are all set to a constant value of 0
+```text
+Junos OS does not support
+The S bit is set to a constant value of 1(not supported)
+The l/E and metric bits are all set to a constant value of 0
+```
 
 - (1-byte) S (Supported) bit, l/E bit, expense metric
 
-- Junos OS does not support
-- The S bit is set to a constant value of 1(not supported)
-- The l/E and metric bits are all set to a constant value of 0
+```text
+Junos OS does not support
+The S bit is set to a constant value of 1(not supported)
+The l/E and metric bits are all set to a constant value of 0
+```
 
-- (1-byte) S (Supported) bit, l/E bit, error metric
+```text
+(1-byte) S (Supported) bit, l/E bit, error metric
+```
 
-- Junos OS does not support.
-- The S bit is set to a constant value of 1(not supported)
-- The l/E and metric bits are all set to a constant value of 0
+```text
+Junos OS does not support.
+The S bit is set to a constant value of 1(not supported)
+The l/E and metric bits are all set to a constant value of 0
+```
 
 - (7-byte) Neighbor ID: The ID of the adjacent neighbor.
 
@@ -345,7 +373,9 @@ TLV 2-IS Reachability
 
 TLV 10-Authentication
 
-- Encodes authentication data to ensure that only trusted information is placed into the link-state database
+```text
+Encodes authentication data to ensure that only trusted information is placed into the link-state database
+```
 
 - (1-byte) TLV type
 - (1-byte) TLV length
@@ -422,7 +452,9 @@ TLV 128-IP Internal Reachability
 - Junos OS does not support
 - The S bit,the R bit, and the metric bits are all set to a constant value of 0
 
-- **(1-byte) S (Supported) bit, R (Reserved) bit, error metric**
+```text
+**(1-byte) S (Supported) bit, R (Reserved) bit, error metric**
+```
 
 - Junos OS does not support
 - The S bit,the R bit, and the metric bits are all set to a constant value of 0
@@ -468,7 +500,9 @@ TLV 130-IP External Reachability
 - Junos OS does not support
 - The S bit,the R bit, and the metric bits are all set to a constant value of 0
 
-- **(1-byte) S (Supported) bit, R (Reserved) bit, error metric**
+```text
+**(1-byte) S (Supported) bit, R (Reserved) bit, error metric**
+```
 
 - Junos OS does not support
 - The S bit,the R bit, and the metric bits are all set to a constant value of 0

@@ -6,13 +6,19 @@ By default, equal cost multi-path (ECMP) traffic flows are distributed more-or-l
 
 1. Create ECMP.
 
-2. Configure BGP between 2 routers, verify BGP neighbourship is formed.
+```text
+Configure BGP between 2 routers, verify BGP neighbourship is formed.
+```
 
 3. Verify BGP prefixes are reachable via IPv4->MPLS ECMP next-hops.
 
-4. Configure ospf/ospfv3 along with BGP.
+```text
+Configure ospf/ospfv3 along with BGP.
+```
 
-5. Configure the locality-bias on BGP routes.
+```text
+Configure the locality-bias on BGP routes.
+```
 
 6. Verify the show command on RE and PFE for the locality-bias percentage.
 
@@ -20,7 +26,9 @@ By default, equal cost multi-path (ECMP) traffic flows are distributed more-or-l
 
 8. Verify the traffic pattern according to the locality-bias percentage.
 
-9. Delete/deactivate BGP routes when traffic is flowing
+```text
+Delete/deactivate BGP routes when traffic is flowing
+```
 
 10. Add back BGP routes
 

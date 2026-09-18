@@ -28,17 +28,29 @@
 
 # show nvram
 
+```text
 >> Thử laser on/ laser off CFP bằng câu lệnh:
+```
 
+```text
 test cfp  laser  off
+```
 
+```text
 test cfp  laser  on
+```
 
+```text
 >> Thu thập rsi, var/log:
+```
 
+```text
 request support information | save /var/log/rsi-after
+```
 
+```text
 file archive compress source /var/log/\* destination /var/tmp/varlogs-jtac.tgz
+```
 
 [ Tuesday, June 15, 2021 2:06 PM ] ⁨SVT.Thái.NĐ⁩: hard-loop là lấy 1 sợi dây đơn -> 1 đầu cắm vào port Tx (transmit), 1 đầu còn lại cắm vào port Rx (receive)
 

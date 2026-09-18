@@ -31,14 +31,18 @@
 
 - Use with caution—every network has a different interpretation of a *good* MED
 
-- **cisco-non-deterministic** compares paths based on when they are received
+```text
+**cisco-non-deterministic** compares paths based on when they are received
+```
 
 - *Not* recommended for use in your network
 - Can cause incorrect route selections
 
 [edit]
 
+```text
 user@router# set protocols bgp path-selection ?
+```
 
 Possible completions:
 
@@ -145,9 +149,11 @@ community  members [community-id community-id];
 
 * *Community Matching**
 
-- show route community \*:20 terse
-- show route community \*:20 detail
-- show route community-name community-1 detail
+```text
+show route community \*:20 terse
+show route community \*:20 detail
+show route community-name community-1 detail
+```
 
 * *More Complex Regex**
 

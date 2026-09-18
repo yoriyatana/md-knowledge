@@ -82,7 +82,9 @@ Internal Level 1 routesummarization
 
 Route Leaking and Summarization
 
-- Level 1 link-state PDUs (LSPs)
+```text
+Level 1 link-state PDUs (LSPs)
+```
 
 IS-IS Best Practices
 
@@ -90,19 +92,25 @@ IS-IS Best Practices
 
 [edit]
 
+```text
 user@router# set protocols isis level 2 wide-metrics-only
+```
 
 - Increase the LSP lifetime, from 1200 seconds (default), to reduce the amount of control traffic generated
 
 [edit]
 
+```text
 user@router# set protocols isis lsp-lifetime 4000
+```
 
 - Adjust how quickly IS-IS performs an SPF calculation after detecting a topology change (200 ms default)
 
 [edit]
 
+```text
 user@router# set protocols isis spf-options delay 50
+```
 
 - Use the overload timeout value option to prevent traffic from transiting a newly booted router
 
@@ -114,13 +122,17 @@ user@router # set protocols isis overload timeout 600
 
 [edit]
 
+```text
 user@router# set protocols isis ignore-attached-bit
+```
 
 \* Enable BFD on interfaces to reduce failure detection times
 
 [edit protocols isis]
 
+```text
 user@router# show
+```
 
 interface ge-1/1/1.0 {
 
@@ -138,7 +150,9 @@ multiplier 3;
 
 [edit protocols isis]
 
+```text
 user@router# show interface ge-1/1/2
+```
 
 level 2 {
 
@@ -150,7 +164,9 @@ hello-authentication-type md5;
 
 - --
 
+```text
 show isis database level 1 mxE-R5-l.00-00 extensive | find tlv
+```
 
 The four /24 RIP routes are installed in the R5-1 router’s LSP as Type 130 TLVs (IP external prefix) and as Type 135 TLVs (IP extended prefix). Because both the external and extended TLVs exist, only the TLV 130 values are used in the SPF algorithm
 
@@ -178,7 +194,9 @@ By default:
 
 ![](image/ae5fd790e6362e44ab0a5d26dc114827.png)
 
+```text
 The rule that we care about right now is the one about L1 external routes which we can state this way:
+```
 
 L1 routes that were injected into ISIS via redistribution, are treated by default as L1 external routes, and are NOT advertised to L2 neighbors by default.
 

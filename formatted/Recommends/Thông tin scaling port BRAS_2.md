@@ -21,4 +21,6 @@ Trong đó x,y,z là số slot mà các linecard cắm vào.
 
 Qua kiểm tra thì card MPC2E-3D-NG có hỗ trợ tính năng BNG và card này có thể chạy được 32k dual-stack subscribers per linecard nhé.
 
+```text
 >>> Về phần verify scaling trên hệ thống lab thì hiện tại bên anh chưa có linecard MPC2E-3D-NG nên chưa thực hiện test được
+```

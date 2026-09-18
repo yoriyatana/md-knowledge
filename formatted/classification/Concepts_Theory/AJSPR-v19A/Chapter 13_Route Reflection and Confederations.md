@@ -84,8 +84,10 @@
 
 - Juniper’s implementation of ORR
 
-- Needs full knowledge of network topology
-- Requires link state protocol: OSPF or IS-IS
+```text
+Needs full knowledge of network topology
+Requires link state protocol: OSPF or IS-IS
+```
 
 * *Why ORR is Needed**
 

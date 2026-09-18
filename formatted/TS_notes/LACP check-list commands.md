@@ -10,35 +10,61 @@ Phía MX:
 
 [ Thursday, January 13, 2022 11:13 AM ] ⁨SVT.Thái.NĐ⁩: 1. Enable cli timestamp
 
+```text
 set cli timestamp
+```
 
 2. Enable lacp traceoptions and reproduce the issue
 
+```text
 set protocols lacp traceoptions file lacpd.log size 1g world-readable
+```
 
+```text
 set protocols lacp traceoptions flag all
+```
 
+```text
 set routing-options ppm traceoptions flag al
+```
 
+```text
 set routing-options ppm traceoptions file ppmd.log size 1g
+```
 
 3. Take multiple output of below commands in RE.
 
+```text
 show lacp interfaces extensive
+```
 
+```text
 show lacp statistics interfaces
+```
 
+```text
 show interfaces ae | match flap
+```
 
+```text
 show lacp timeouts (multiple times)
+```
 
+```text
 show ppm adjacencies protocol lacp detail
+```
 
+```text
 show ppm transmissions protocol lacp detail
+```
 
+```text
 show ppm adjacencies protocol lacp
+```
 
+```text
 show ppm transmissions protocol lacp
+```
 
 4. Go to PFE shell using any of the below-mentioned methods
 
@@ -52,35 +78,59 @@ b. While at the FreeBSD prompt of RE
 
 vty fpc
 
+```text
 clear ppm statistics first before collecting any data.
+```
 
+```text
 set ppm utrace protocol lacp
+```
 
+```text
 set ppm utrace protocol lacp
+```
 
+```text
 set ppm utrace tcpdump
+```
 
 debug ppm protocol lacp level 3
 
+```text
 set ppm utrace proto
+```
 
+```text
 set ppm utrace protocol lacp
+```
 
+```text
 set ppm utrace all
+```
 
 debug ppm protocol lacp level 3
 
+```text
 show ukern\_trace handles <<<<
+```
 
 search for PPM handle <<<<
 
+```text
 set ukern\_trace  level extensive
+```
 
+```text
 set ukern\_trace  logging enable
+```
 
+```text
 set ukern\_trace  buffer 100000000
+```
 
+```text
 set ukern\_trace  printf enable
+```
 
 Above debugs will be coming continuously. keep separate console and collect the above debugs running on both DUT and PEER device through out the logs collection.
 
@@ -90,13 +140,21 @@ Collect these clis using cprod.
 
 at the start of the logs collection on both sides on PFEs. >> clear ppm statistics
 
+```text
 show ppm statistics protocol lacp
+```
 
+```text
 show ppm adjacencies protocol lacp
+```
 
+```text
 show ppm transmits protocol lacp
+```
 
+```text
 show ppm statistics detail
+```
 
 freebsd promt:
 
@@ -128,13 +186,21 @@ Below are the commands.
 
 VTY: Both Device.
 
+```text
 show halp-pkt asic-queues
+```
 
+```text
 show dcbcm ifd all
+```
 
+```text
 show halp-pkt hostpath-cfgs
+```
 
+```text
 show halp-pkt pkt-stats    << Multiple outputs.
+```
 
 If drop is seen on PFE-SHIM/HALP, there are commands to enable debug. "debug halp-pkt tx/rx".
 
@@ -166,64 +232,118 @@ However if drop is in HW/BCM then need to check why HW is dropping.
 
 BCM(sad)Both Device)
 
+```text
 Show c
+```
 
+```text
 Show c cpu
+```
 
+```text
 tcpdump -ni
+```
 
 Lấy giúp em các output dưới đây (ở mức shell) vào giờ thấp điểm, và chạy từng lệnh một:
 
+```text
 set cli screen-length 0
+```
 
 ## Check linecard shell-mode
 
+```text
 request pfe execute command "show syslog messages" target fpc2
+```
 
+```text
 request pfe execute command "show nvram" target fpc2
+```
 
+```text
 request pfe execute command "show cmerror module" target fpc2
+```
 
+```text
 request pfe execute command "show hsl2 statistics" target fpc2
+```
 
+```text
 request pfe execute command "show hsl2 statistics crc" target fpc2
+```
 
+```text
 request pfe execute command "show threads cpu" target fpc2
+```
 
+```text
 request pfe execute command "show sched" target fpc2
+```
 
+```text
 >>>> take this output 3 times in the interval of 30secs
+```
 
+```text
 request pfe execute command "show ppm transmits protocol lacp" target fpc2
+```
 
+```text
 request pfe execute command "show ppm adjacencies protocol lacp" target fpc2
+```
 
+```text
 request pfe execute command "show ppm statistics protocol lacp" target fpc2
+```
 
 ## Check linecard shell-mode
 
+```text
 request pfe execute command "show syslog messages" target fpc4
+```
 
+```text
 request pfe execute command "show nvram" target fpc4
+```
 
+```text
 request pfe execute command "show cmerror module" target fpc4
+```
 
+```text
 request pfe execute command "show hsl2 statistics" target fpc4
+```
 
+```text
 request pfe execute command "show hsl2 statistics crc" target fpc4
+```
 
+```text
 request pfe execute command "show threads cpu" target fpc4
+```
 
+```text
 request pfe execute command "show sched" target fpc4
+```
 
+```text
 >>>> take this output 3 times in the interval of 30secs
+```
 
+```text
 request pfe execute command "show ppm transmits protocol lacp" target fpc4
+```
 
+```text
 request pfe execute command "show ppm adjacencies protocol lacp" target fpc4
+```
 
+```text
 request pfe execute command "show ppm statistics protocol lacp" target fpc4
+```
 
 # ------------------------
 
+```text
 set cli screen-length 30
+```

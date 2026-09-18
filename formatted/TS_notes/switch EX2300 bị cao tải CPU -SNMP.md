@@ -4,8 +4,10 @@ Dear anh Huy,
 
 Em xin phép tổng hợp thông tin case hỗ trợ này ạ.
 
-- Tối 08/06 em đã online phối hợp bỏ cấu hình traceoption, deactivate cấu hình snmp và debug. Kết quả CPU thiết bị chỉ giảm khi deactivate snmp à kết luận
-- Qua kiểm tra message log, thiết bị đang ghi nhận rất nhiều log “Failed to get vlan id”
+```text
+Tối 08/06 em đã online phối hợp bỏ cấu hình traceoption, deactivate cấu hình snmp và debug. Kết quả CPU thiết bị chỉ giảm khi deactivate snmp à kết luận
+Qua kiểm tra message log, thiết bị đang ghi nhận rất nhiều log “Failed to get vlan id”
+```
 
 |  |
 | --- |

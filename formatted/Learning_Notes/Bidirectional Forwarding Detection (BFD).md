@@ -84,8 +84,10 @@ There are four types of BFD sessions based on the source from which BFD packets 
 
 - To determine if a BFD peer is running distributed BFD:
 
-- run the **show bfd sessions extensive** command
-- And look for Remote is control-plane independent in the command output.
+```text
+run the **show bfd sessions extensive** command
+And look for Remote is control-plane independent in the command output.
+```
 
 - For distributed BFD to work, you need to configure the lo0 interface with unit 0 and the appropriate family.
 
@@ -183,7 +185,9 @@ PR 1298369 [single-source-commit] - inline-bfd on irb will be broken after NSR s
 
 ![](image/3de1e58b4b03eeab604dc614e7daf23d.png)![](image/f31eb230c50cc5f9e81041356eebda4b.png)![](image/06fa87acc516f41dc3dd96d38ba765ea.png)
 
+```text
 Responsible for establish the sessions initiated by PPMD from RE execute all periodic packet processing events. absorb all packets and forward unabsorbed packets to the clients receive packets from clients and forward them out inform ppmd on RE if there are session flaps ppm data thread processes the received packets
+```
 
 ![](image/0cadf6b35a39d6eba7587d87de124e1b.png)![](image/754ab35408643a6c5a196a9bfbc5fac6.png)![](image/bd2b178fb52ba7d4e0175b25c7da9461.png)![](image/058f2558addaf8e0da51baf851eed836.png)
 

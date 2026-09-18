@@ -30,7 +30,9 @@ Note:
 
 1. The Source MAC/ Destination MAC cannot be separately enabled or disabled. To remove SMAC/DMAC from hash computation, the following options need to be configured:
 
+```text
 set forwarding-options enhanced-hash-key family multiservice no-mac-addresses
+```
 
 The no-mac-addresses knob is hidden.
 
@@ -46,14 +48,24 @@ The no-mac-addresses knob is hidden.
 
 3. The configurable parameters, mentioned in this article, are available under the forwarding-options>enhanced-hash-key stanza:
 
+```text
 lab@mx960-re0# set forwarding-options enhanced-hash-key family ?
+```
 
 Possible completions:
 
+```text
 > inet IPv4 protocol family
+```
 
+```text
 > inet6 IPv6 protocol family
+```
 
+```text
 > mpls MPLS protocol family
+```
 
+```text
 > multiservice Multiservice protocol (bridged/CCC/VPLS) family
+```

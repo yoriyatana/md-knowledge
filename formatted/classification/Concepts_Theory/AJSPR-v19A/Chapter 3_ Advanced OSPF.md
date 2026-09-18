@@ -8,9 +8,11 @@
 
 * *Scaling an OSPF Network**
 
-- As OSPF networks grow, so does the size of the LSDB. Not normally an issue.
-- Common reasons to create OSPF areas is to control flooding or for Administrative purposes.
-- Multiple Areas means multiple link-state databases.
+```text
+As OSPF networks grow, so does the size of the LSDB. Not normally an issue.
+Common reasons to create OSPF areas is to control flooding or for Administrative purposes.
+Multiple Areas means multiple link-state databases.
+```
 
 * *LSA Flooding: Default**
 
@@ -93,7 +95,9 @@
 
 - there is a hidden command which will change this behavior. You can configure following command on ABR.
 
+```text
 root@MX960# set protocols ospf no-active-backbone  ####Hidden Command ####
+```
 
 - ASBR in a stub area cannot flood LSAs for external routes
 - Virtual links cannot transit a stub area
@@ -248,7 +252,9 @@ root@MX960# set protocols ospf no-active-backbone  ####Hidden Command ####
 - No Type 3 LSA will be injected into the backbone
 - Configured on the ABRs only
 
-- configure with the **area-range restrict** command
+```text
+configure with the **area-range restrict** command
+```
 
 - Allows greater control over which routes are advertised to other areas
 
@@ -267,8 +273,10 @@ root@MX960# set protocols ospf no-active-backbone  ####Hidden Command ####
 - No Type 5 LSA is injected into the backbone
 - Configured on ABRs only
 
-- configure the NSSA ABR with the **nssa area-range restrict** command
-- **restrict** option will block T7 LSAs and will not create a T5 summary
+```text
+configure the NSSA ABR with the **nssa area-range restrict** command
+**restrict** option will block T7 LSAs and will not create a T5 summary
+```
 
 ![](image/49a6912dae19819469df0e11d39846af.png)
 
@@ -326,7 +334,9 @@ family iso;
 
 root@R3\_RTR-D# run show ospf neighbor
 
+```text
 Address          Interface              State    ID              Pri  Dead
+```
 
 10. 3.4.4        ge-0/0/0.0            Full      10.4.4.4        128    36
 

@@ -2,7 +2,9 @@
 
 ## Description
 
+```text
 For Gigabit Ethernet interfaces on M Series, MX Series, T Series, TX Matrix routers, and ACX Series routers explicitly enable autonegotiation and remote fault. For EX Series switches, explicitly enable autonegotiation only. You cannot disable autonegotiation on ACX5448 routers for Gigabit Ethernet interfaces by using the no-auto-negotiation command. The no-auto-negotiation command is not supported on ACX5448 routers.
+```
 
 - auto-negotiation—Enables autonegotiation. This is the default.
 - no-auto-negotiation—Disable autonegotiation. When autonegotiation is disabled, you must explicitly configure the link mode and speed.

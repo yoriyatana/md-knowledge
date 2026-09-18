@@ -28,27 +28,45 @@ Please check the comments:
 
 {master}[edit]
 
+```text
 labroot@jtac-mx960-r2024-re0# run show subscribers summary
+```
 
+```text
 Subscribers by State
+```
 
+```text
 Active: 983
+```
 
+```text
 Total: 983
+```
 
 Subscribers by Client Type
 
+```text
 DHCP: 490
+```
 
+```text
 VLAN: 3
+```
 
+```text
 PPPoE: 490
+```
 
+```text
 Total: 983
+```
 
 {master}[edit]
 
+```text
 labroot@jtac-mx960-r2024-re0# run show network-access aaa statistics address-assignment pool ftth\_private routing-instance VRF\_CGNAT
+```
 
 Address assignment statistics
 
@@ -98,67 +116,105 @@ Pool drain configured: no
 
 {master}[edit]
 
+```text
 labroot@jtac-mx960-r2024-re0#
+```
 
 {master}[edit]
 
+```text
 labroot@jtac-mx960-r2024-re0#
+```
 
 {master}[edit]
 
+```text
 labroot@jtac-mx960-r2024-re0# # NOW LOGOUT THE SUBSCRIBERS FROM FIRST POOL
+```
 
 {master}[edit]
 
+```text
 labroot@jtac-mx960-r2024-re0#
+```
 
 {master}[edit]
 
+```text
 labroot@jtac-mx960-r2024-re0#
+```
 
 {master}[edit]
 
+```text
 labroot@jtac-mx960-r2024-re0#
+```
 
 {master}[edit]
 
+```text
 labroot@jtac-mx960-r2024-re0#
+```
 
 {master}[edit]
 
+```text
 labroot@jtac-mx960-r2024-re0#
+```
 
 {master}[edit]
 
+```text
 labroot@jtac-mx960-r2024-re0# RUN
+```
 
 ^
 
 unknown command.
 
+```text
 labroot@jtac-mx960-r2024-re0# run show subscribers summary
+```
 
+```text
 Subscribers by State
+```
 
+```text
 Active: 971
+```
 
+```text
 Terminated: 6
+```
 
+```text
 Total: 977
+```
 
 Subscribers by Client Type
 
+```text
 DHCP: 484
+```
 
+```text
 VLAN: 3
+```
 
+```text
 PPPoE: 490
+```
 
+```text
 Total: 977
+```
 
 {master}[edit]
 
+```text
 labroot@jtac-mx960-r2024-re0# run show network-access aaa statistics address-assignment pool ftth\_private routing-instance VRF\_CGNAT
+```
 
 Address assignment statistics
 
@@ -208,97 +264,163 @@ Pool drain configured: no
 
 {master}[edit]
 
+```text
 labroot@jtac-mx960-r2024-re0#
+```
 
 {master}[edit]
 
+```text
 labroot@jtac-mx960-r2024-re0# #LOGIN 5 SUBSCRIBERS
+```
 
 {master}[edit]
 
+```text
 labroot@jtac-mx960-r2024-re0#
+```
 
 {master}[edit]
 
+```text
 labroot@jtac-mx960-r2024-re0#
+```
 
 {master}[edit]
 
+```text
 labroot@jtac-mx960-r2024-re0#
+```
 
 {master}[edit]
 
+```text
 labroot@jtac-mx960-r2024-re0# run show subscribers summary
+```
 
+```text
 Subscribers by State
+```
 
+```text
 Init: 1
+```
 
+```text
 Active: 974
+```
 
+```text
 Total: 975
+```
 
 Subscribers by Client Type
 
+```text
 DHCP: 484
+```
 
+```text
 VLAN: 3
+```
 
+```text
 PPPoE: 488
+```
 
+```text
 Total: 975
+```
 
 {master}[edit]
 
+```text
 labroot@jtac-mx960-r2024-re0# run show subscribers summary
+```
 
+```text
 Subscribers by State
+```
 
+```text
 Active: 976
+```
 
+```text
 Total: 976
+```
 
 Subscribers by Client Type
 
+```text
 DHCP: 484
+```
 
+```text
 VLAN: 3
+```
 
+```text
 PPPoE: 489
+```
 
+```text
 Total: 976
+```
 
 {master}[edit]
 
+```text
 labroot@jtac-mx960-r2024-re0# run show subscribers summary all
+```
 
+```text
 Subscribers by State
+```
 
+```text
 Active: 976
+```
 
+```text
 Total: 976
+```
 
 Subscribers by Client Type
 
+```text
 DHCP: 484
+```
 
+```text
 VLAN: 3
+```
 
+```text
 PPPoE: 489
+```
 
+```text
 Total: 976
+```
 
 Subscribers by LS:RI
 
+```text
 default: 3
+```
 
 default:VRF\_CGNAT: 973
 
+```text
 Total: 976
+```
 
 {master}[edit]
 
+```text
 labroot@jtac-mx960-r2024-re0# run show network-access aaa statistics address-assignment pool ftth\_private routing-instance VRF\_CGNAT
+```
 
 Address assignment statistics
 
@@ -348,7 +470,9 @@ Pool drain configured: no
 
 {master}[edit]
 
+```text
 labroot@jtac-mx960-r2024-re0#
+```
 
 WITHOUT LINKED POOL :
 
@@ -356,35 +480,57 @@ The Ips are always reverted to first pool even if Ips/pool is not exhausted in s
 
 {master}[edit]
 
+```text
 labroot@jtac-mx960-r2024-re0# run show subscribers summary all
+```
 
+```text
 Subscribers by State
+```
 
+```text
 Active: 983
+```
 
+```text
 Total: 983
+```
 
 Subscribers by Client Type
 
+```text
 DHCP: 490
+```
 
+```text
 VLAN: 3
+```
 
+```text
 PPPoE: 490
+```
 
+```text
 Total: 983
+```
 
 Subscribers by LS:RI
 
+```text
 default: 3
+```
 
 default:VRF\_CGNAT: 980
 
+```text
 Total: 983
+```
 
 {master}[edit]
 
+```text
 labroot@jtac-mx960-r2024-re0# run show network-access aaa statistics address-assignment pool ftth\_private routing-instance VRF\_CGNAT
+```
 
 Address assignment statistics
 
@@ -434,53 +580,85 @@ Pool drain configured: no
 
 {master}[edit]
 
+```text
 labroot@jtac-mx960-r2024-re0#
+```
 
 {master}[edit]
 
+```text
 labroot@jtac-mx960-r2024-re0#
+```
 
 {master}[edit]
 
+```text
 labroot@jtac-mx960-r2024-re0# #LOGOUT SUBSCRIBERS FROM FIRST POOL
+```
 
 {master}[edit]
 
+```text
 labroot@jtac-mx960-r2024-re0#
+```
 
 {master}[edit]
 
+```text
 labroot@jtac-mx960-r2024-re0# run show subscribers summary all
+```
 
+```text
 Subscribers by State
+```
 
+```text
 Active: 973
+```
 
+```text
 Terminated: 5
+```
 
+```text
 Total: 978
+```
 
 Subscribers by Client Type
 
+```text
 DHCP: 485
+```
 
+```text
 VLAN: 3
+```
 
+```text
 PPPoE: 490
+```
 
+```text
 Total: 978
+```
 
 Subscribers by LS:RI
 
+```text
 default: 3
+```
 
 default:VRF\_CGNAT: 975
 
+```text
 Total: 978
+```
 
 {master}[edit]
 
+```text
 labroot@jtac-mx960-r2024-re0# run show network-access aaa statistics address-assignment pool ftth\_private routing-instance VRF\_CGNAT
+```
 
 Address assignment statistics
 
@@ -530,43 +708,69 @@ Pool drain configured: no
 
 {master}[edit]
 
+```text
 labroot@jtac-mx960-r2024-re0#
+```
 
 {master}[edit]
 
+```text
 labroot@jtac-mx960-r2024-re0# #LOGIN 5 SUBSCRIBERS BACK IN
+```
 
 {master}[edit]
 
+```text
 labroot@jtac-mx960-r2024-re0# run show subscribers summary all
+```
 
+```text
 Subscribers by State
+```
 
+```text
 Active: 978
+```
 
+```text
 Total: 978
+```
 
 Subscribers by Client Type
 
+```text
 DHCP: 485
+```
 
+```text
 VLAN: 3
+```
 
+```text
 PPPoE: 490
+```
 
+```text
 Total: 978
+```
 
 Subscribers by LS:RI
 
+```text
 default: 3
+```
 
 default:VRF\_CGNAT: 975
 
+```text
 Total: 978
+```
 
 {master}[edit]
 
+```text
 labroot@jtac-mx960-r2024-re0# run show network-access aaa statistics address-assignment pool ftth\_private routing-instance VRF\_CGNAT
+```
 
 Address assignment statistics
 

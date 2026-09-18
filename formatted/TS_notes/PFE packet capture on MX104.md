@@ -1,8 +1,12 @@
 # PFE packet capture on MX104
 
+```text
 % ssh test2nqe31.dk|tee output.txt
+```
 
+```text
 fisakytt@test2nqe31-re1.dk> start shell pfe network afeb0
+```
 
 AFEB platform (1000Mhz QorIQ P2020 processor, 2048MB memory, 512KB flash)
 

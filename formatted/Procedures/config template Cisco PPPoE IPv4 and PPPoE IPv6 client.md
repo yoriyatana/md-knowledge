@@ -10,7 +10,9 @@
 
 interface Ethernet0/0
 
+```text
 pppoe enable group global
+```
 
 pppoe-client dial-pool-number 1
 
@@ -96,7 +98,9 @@ ip address 192.168.4.1 255.255.255.0
 
 interface FastEthernet0/1
 
+```text
 pppoe enable group global
+```
 
 pppoe-client dial-pool-number 1
 
@@ -176,25 +180,35 @@ pppoe-client#sh ipv6 dhcp interface
 
 Dialer1 is in client mode
 
+```text
 Prefix State is OPEN
+```
 
 Renew will be sent in 3d11h
 
+```text
 Address State is IDLE
+```
 
 List of known servers:
 
 Reachable via address: FE80::22
 
+```text
 DUID: 00030001CA011F780008
+```
 
+```text
 Preference: 0
+```
 
 Configuration parameters:
 
 IA PD: IA ID 0x00090001, T1 302400, T2 483840
 
+```text
 Prefix: 2001:DB8:5AB:2000::/56
+```
 
 preferred lifetime INFINITY, valid lifetime INFINITY
 

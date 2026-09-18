@@ -1,7 +1,10 @@
 # TCAM ACX show
 
+```text
 In order to check the state of the TCAM, it is recommended to run the following CLI commands periodically as a health check of the system:
+```
 
+```text
 > show pfe tcam usage all-tcam-stages
 >
 > show pfe tcam usage all-tcam-stages detail
@@ -17,3 +20,4 @@ In order to check the state of the TCAM, it is recommended to run the following 
 > show pfe tcam errors
 >
 > show pfe tcam app ?
+```

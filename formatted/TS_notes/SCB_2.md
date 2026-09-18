@@ -8,17 +8,25 @@ Anh có một số comments thêm ở phản hồi dưới để em review thêm
 
 - Thực hiện ở master RE:
 
-+ show task replication >> All task synchronization status should be complete.
+```text
+show task replication >> All task synchronization status should be complete.
+```
 
-+ show bgp replication  >> Synchronization state should be complete.
+```text
+show bgp replication  >> Synchronization state should be complete.
+```
 
 - Thực hiện ở **backup** RE:
 
-+ show system switchover >> Observe the status (On/Ready/Ready/Ready).
+```text
+show system switchover >> Observe the status (On/Ready/Ready/Ready).
+```
 
 - Thực hiện ở master RE:
 
-+ request chassis routing-engine master switch check >> Output must show switchover ready and not show any warning message.
+```text
+request chassis routing-engine master switch check >> Output must show switchover ready and not show any warning message.
+```
 
 * *2/.** Bước online lên lại RE1 ở step 1 & online CB1/RE1 ở step 2 như Huy đề cập bên dưới là không cần thực hiện vì RE sẽ tự động online khi CB được gắn vào. Xem lại thủ tục thay thế SCB ở link sau để nắm rõ hơn.
 
@@ -28,7 +36,9 @@ Anh có một số comments thêm ở phản hồi dưới để em review thêm
 
 Nếu các plane hoạt động lại bình thường thì online RE1 và kiểm tra alarm
 
+```text
 > request vmhost power-on other-routing-engine
+```
 
 * *Step 2:**
 
@@ -36,9 +46,13 @@ Cắm lại card SCB1 và đợi 5 phút.
 
 Online bằng lệnh:
 
+```text
 > request chassis cb online slot 1
+```
 
+```text
 > request vmhost power-on other-routing-engine
+```
 
 * **Note****: FPC / MIC gắn vào thì bắt buộc phải dùng lệnh CLI để online lên, nhưng RE & SCB thì không cần. Lý do thì anh chưa thấy tài liệu Juniper đề cập, nhưng theo anh hiểu SCB/RE là những thành phần điều khiển, việc gắn nó vào mà nó không tự online lại thì sẽ không hợp lý ở 1 số trường hợp.*
 

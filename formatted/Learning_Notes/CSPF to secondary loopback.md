@@ -20,7 +20,9 @@ As per [RFC5305 “IS-IS Extensions for Traffic Engineering”](https://tools.
 
 * *1: TLV type 134:  The Traffic Engineering router ID TLV**
 
-* The router ID TLV contains the 4-octet router ID of the router originating the ISIS LSP.  For traffic engineering, it guarantees that we have a single stable address that can always be referenced in a path that will be reachable from multiple hops away, regardless of the state of the node's interfaces.*
+```text
+The router ID TLV contains the 4-octet router ID of the router originating the ISIS LSP.  For traffic engineering, it guarantees that we have a single stable address that can always be referenced in a path that will be reachable from multiple hops away, regardless of the state of the node's interfaces.*
+```
 
 * *2: TLV type 22:  The Extended IS Reachability TLV**
 
@@ -66,17 +68,23 @@ First, in this article the behavior of pre Junos OS 13.3 behavior will be demons
 
 #### MPLS LSP Head-end Router
 
+```text
 user@bergen-re0> show version
+```
 
 Hostname: bergen-re0
 
 Model: mx104
 
+```text
 Junos: 15.1F6-S5.6
+```
 
 <….>
 
+```text
 user@bergen-re0> show isis overview
+```
 
 Instance: master
 
@@ -84,15 +92,23 @@ Router ID: 47.47.3.3
 
 Hostname: bergen-re0
 
+```text
 Sysid: 0047.0047.0303
+```
 
+```text
 Areaid: 49.0001
+```
 
 <…>
 
+```text
 user@bergen-re0> show isis adjacency
+```
 
+```text
 Interface             System         L State        Hold (secs) SNPA
+```
 
 xe-2/0/1.0            granada-re0    2  Up                   20
 
@@ -100,7 +116,9 @@ xe-2/0/1.2            granada-re0-milan 2 Up            �
 
 #### MPLS LSP Tail-end Router
 
+```text
 user@granada-re0> show version
+```
 
 Hostname: granada-re0
 
@@ -110,7 +128,9 @@ Model: mx480
 
 <…>
 
+```text
 user@granada-re0> show isis overview
+```
 
 Instance: master
 
@@ -118,9 +138,13 @@ Router ID: 47.47.1.1
 
 <…>
 
+```text
 user@granada-re0> show isis adjacency
+```
 
+```text
 Interface System L State Hold (secs) SNPA
+```
 
 ge-4/1/3.0 granada-re0-milan 2 Up 26
 
@@ -130,7 +154,9 @@ xe-3/0/3.0 bergen-re0 2 Up 20
 
 #### Auxiliary Router (Logical-System on the MPLS LSP tail-end node)
 
+```text
 user@granada-re0> show isis overview logical-system milan
+```
 
 Instance: master
 
@@ -138,9 +164,13 @@ Router ID: 47.47.11.11
 
 <…>
 
+```text
 user@granada-re0> show isis adjacency logical-system milan
+```
 
+```text
 Interface System L State Hold (secs) SNPA
+```
 
 ge-4/1/4.0 granada-re0 2 Up 24
 
@@ -154,7 +184,9 @@ As well, the Router ID (RID) is explicitly configured to correspond to one of th
 
 #### MPLS LSP Tail-end Router
 
+```text
 user@granada-re0> show configuration interfaces lo0
+```
 
 unit 0 {
 
@@ -174,7 +206,9 @@ address 49.0001.0047.0047.0101.00;
 
 }
 
+```text
 user@granada-re0> show configuration routing-options router-id
+```
 
 router-id 47.47.1.1;
 
@@ -182,7 +216,9 @@ router-id 47.47.1.1;
 
 On the MPLS LSP  head-end (ingress) router two MPLS LSPs are configured, one to each of those 2 tail-end’s Lo0 IP addresses.
 
+```text
 user@bergen-re0> show configuration protocols mpls
+```
 
 label-switched-path to-granadas-RID {
 
@@ -208,11 +244,15 @@ interface xe-2/0/1.2;
 
 Note that only of the MPLS LSP’s is established using the CSFP (TED). The one which is up is towards the RID (47.47.1.1) of the MPLS LSP tail-end (egress) node.
 
+```text
 user@bergen-re0> show mpls lsp
+```
 
 Ingress LSP: 2 sessions
 
+```text
 To              From            State Rt P     ActivePath       LSPname
+```
 
 47. 47.1.1       47.47.3.3       **Up**     0 \*     path\_granada     to-granadas-RID
 
@@ -222,13 +262,17 @@ Total 2 displayed, Up 1, Down 1
 
 <...>
 
+```text
 user@bergen-re0> show mpls lsp extensive
+```
 
 Ingress LSP: 2 session
 
 47. 47.1.1
 
+```text
 From: 47.47.3.3, State: Up, ActiveRoute: 0, LSPname: to-granadas-RID
+```
 
 ActivePath: path\_granada (primary)
 
@@ -238,17 +282,25 @@ LoadBalance: Random
 
 Encoding type: Packet, Switching type: Packet, GPID: IPv4
 
+```text
 \*Primary   path\_granada     State: Up
+```
 
+```text
 Priorities: 7 0
+```
 
+```text
 SmartOptimizeTimer: 180
+```
 
 Computed ERO (S [L] denotes strict [loose] hops): (CSPF metric: 10)
 
 47. 47.13.1 S
 
+```text
 Received RRO (ProtectionFlag 1=Available 2=InUse 4=B/W 8=Node 10=SoftPreempt 20=Node-ID):
+```
 
 47. 47.13.1
 
@@ -276,7 +328,9 @@ Created: Tue Jan 23 13:44:26 2018
 
 * *47.47.2.2**
 
+```text
 From: 0.0.0.0, **State: Dn**, ActiveRoute: 0, LSPname: to-granadas-sec\_lo0
+```
 
 ActivePath: (none)
 
@@ -286,15 +340,23 @@ LoadBalance: Random
 
 Encoding type: Packet, Switching type: Packet, GPID: IPv4
 
+```text
 Primary   path\_granada     State: Dn
+```
 
+```text
 Priorities: 7 0
+```
 
+```text
 SmartOptimizeTimer: 180
+```
 
 Will be enqueued for recomputation in 11 second(s).
 
+```text
 1 Jan 23 13:59:31.476 **CSPF failed: no route toward 47.47.2.2**[32 times]
+```
 
 Created: Tue Jan 23 13:44:26 2018
 
@@ -304,11 +366,15 @@ Total 2 displayed, Up 1, Down 1
 
 The non-established LSP (towards the MPLS LSP tail-end node’s secondary Lo0 IP addresses) is failing with a reason:
 
-* *CSPF failed: no route toward 47.47.2.2**
+```text
+*CSPF failed: no route toward 47.47.2.2**
+```
 
 That failure reason suggests us to take a look at the MPLS TED.
 
+```text
 user@bergen-re0> show ted database
+```
 
 TED database: 3 ISIS nodes 3 INET nodes
 
@@ -328,7 +394,9 @@ ID                            Type Age(s) LnkIn LnkOut Protocol
 
 <...>
 
+```text
 user@bergen-re0> show ted database 47.47.1.1 extensive
+```
 
 TED database: 3 ISIS nodes 3 INET nodes
 
@@ -358,15 +426,21 @@ Next, it is helpful to check what is in the ISIS LSP from the tail-end router, p
 
 Also, note ISIS TLV  type 132, as that plays a role starting with Junos OS 13.3.
 
+```text
 user@bergen-re0> show isis adjacency
+```
 
+```text
 Interface             System         L State        Hold (secs) SNPA
+```
 
 xe-2/0/1.0            granada-re0    2  Up                   26
 
 xe-2/0/1.2            granada-re0-milan 2 Up                 22
 
+```text
 user@bergen-re0> monitor traffic interface xe-2/0/1.0 matching "(ether src host 40:b4:f0:ec:0b:e1) and iso" layer2-headers no-resolve detail
+```
 
 Address resolution is OFF.
 
@@ -374,11 +448,15 @@ Listening on xe-2/0/1.0, capture size 1514 bytes
 
 <…>
 
+```text
 14:36:29.016073  In 40:b4:f0:ec:0b:e1 > 09:00:2b:00:00:05, ethertype 802.1Q (0x8100), length 415: vlan 10, p 6, LLC, dsap OSI (0xfe) Individual, ssap OSI (0xfe) Command, ctrl 0x03: OSI NLPID IS-IS (0x83): length 394
+```
 
 L2 LSP, hlen: 27, v: 1, pdu-v: 1, sys-id-len: 6 (0), max-area: 3 (0)
 
+```text
 lsp-id: 0047.0047.0101.00-00, seq: 0x00000ee6, lifetime:   348s
+```
 
 <...>
 
@@ -436,7 +514,9 @@ Note that the only IP address encoded in the ISIS TLV type 132 is the RID (route
 
 Cross checking with the info (related to the IP addresses) in the TED makes a clear correlation:
 
+```text
 user@bergen-re0> show ted database 47.47.1.1 extensive
+```
 
 TED database: 3 ISIS nodes 3 INET nodes
 
@@ -478,17 +558,23 @@ In summary, starting with Junos OS 13.3, all /32 IP addresses configured are inc
 
 In order to demonstrate this change the only difference to the previously described setup is the upgrade of GRANADA router to Junos OS 13.3R9:
 
+```text
 user@granada-re0> show version
+```
 
 Hostname: granada-re0
 
 Model: mx480
 
+```text
 Junos: 13.3R9.13
+```
 
 <..>
 
+```text
 user@granada-re0> show isis overview
+```
 
 Instance: master
 
@@ -496,13 +582,19 @@ Router ID: 47.47.1.1
 
 <...>
 
+```text
 Checking the state of our two MPLS LSPs shows that both of them are UP:
+```
 
+```text
 user@bergen-re0> show mpls lsp ingress
+```
 
 Ingress LSP: 2 sessions
 
+```text
 To              From            State Rt P     ActivePath       LSPname
+```
 
 47. 47.1.1       47.47.3.3       **Up**     0 \*     path\_granada     to-granadas-RID
 
@@ -510,13 +602,17 @@ To              From            State Rt P     ActivePath    �
 
 Total 2 displayed, Up 2, Down 0
 
+```text
 user@bergen-re0> show mpls lsp ingress extensive
+```
 
 Ingress LSP: 2 session
 
 47. 47.1.1
 
+```text
 From: 47.47.3.3, State: Up, ActiveRoute: 0, LSPname: to-granadas-RID
+```
 
 ActivePath: path\_granada (primary)
 
@@ -526,17 +622,25 @@ LoadBalance: Random
 
 Encoding type: Packet, Switching type: Packet, GPID: IPv4
 
+```text
 \*Primary   path\_granada     State: Up
+```
 
+```text
 Priorities: 7 0
+```
 
+```text
 SmartOptimizeTimer: 180
+```
 
 Computed ERO (S [L] denotes strict [loose] hops): (CSPF metric: 10)
 
 47. 47.13.1 S
 
+```text
 Received RRO (ProtectionFlag 1=Available 2=InUse 4=B/W 8=Node 10=SoftPreempt 20=Node-ID):
+```
 
 47. 47.13.1
 
@@ -554,7 +658,9 @@ Created: Wed Jan 24 18:11:32 2018
 
 47. 47.2.2
 
+```text
 From: 47.47.3.3, State: Up, ActiveRoute: 0, LSPname: to-granadas-sec\_lo0
+```
 
 ActivePath: path\_granada (primary)
 
@@ -564,17 +670,25 @@ LoadBalance: Random
 
 Encoding type: Packet, Switching type: Packet, GPID: IPv4
 
+```text
 \*Primary   path\_granada     State: Up
+```
 
+```text
 Priorities: 7 0
+```
 
+```text
 SmartOptimizeTimer: 180
+```
 
 Computed ERO (S [L] denotes strict [loose] hops): (CSPF metric: 10)
 
 47. 47.13.1 S
 
+```text
 Received RRO (ProtectionFlag 1=Available 2=InUse 4=B/W 8=Node 10=SoftPreempt 20=Node-ID):
+```
 
 47. 47.13.1
 
@@ -592,11 +706,15 @@ Created: Wed Jan 24 18:11:32 2018
 
 Total 2 displayed, Up 2, Down 0
 
+```text
 user@bergen-re0>
+```
 
 The reason is because now both (including 47.47.2.2 which was missing before) of the MPLS LSP egress router's Lo0 interface IP addresses are found (imported) in the TED on the ingress router:
 
+```text
 user@bergen-re0> show ted database 47.47.1.1 extensive
+```
 
 TED database: 3 ISIS nodes 3 INET nodes
 
@@ -620,11 +738,15 @@ Local interface index: 360, Remote interface index: 0
 
 <...>
 
+```text
 And additional IP address (47.47.2.2) ended up imported in TED from the received ISIS LSP TLV # 132  originated by the MPLS egress router
+```
 
 and **highlighted** below:
 
+```text
 user@bergen-re0> monitor traffic interface xe-2/0/1.0 matching "(ether src host 40:b4:f0:ec:0b:e1)" layer2-headers size 2000 detail no-resolve
+```
 
 Address resolution is OFF.
 
@@ -632,13 +754,19 @@ Listening on xe-2/0/1.0, capture size 2000 bytes
 
 <...>
 
+```text
 18:29:23.741591  In 40:b4:f0:ec:0b:e1 > 09:00:2b:00:00:05, ethertype 802.1Q (0x8100), length 421: vlan 10, p 6, LLC, dsap OSI (0xfe) Individual, ssap OSI (0xfe) Command, ctrl 0x03: OSI NLPID IS-IS (0x83): length 400
+```
 
 L2 LSP, hlen: 27, v: 1, pdu-v: 1, sys-id-len: 6 (0), max-area: 3 (0)
 
+```text
 lsp-id: 0047.0047.0101.00-00, seq: 0x00001c67, lifetime:   348s
+```
 
+```text
 chksum: 0x59de (correct), PDU length: 400, Flags: [ L1L2 IS ]
+```
 
 Area address(es) TLV #1, length: 4
 

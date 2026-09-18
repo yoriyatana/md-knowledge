@@ -32,7 +32,9 @@ PFE  0: Default link: (hits: 0, loops detected: 0)
 
 PFE  1: Default link: (hits: 0, loops detected: 0)
 
+```text
 IFD Selector State [0]:
+```
 
 Ref Count: 1, Child Count: 6, selp:[0] 0x4dd30d00
 
@@ -40,19 +42,33 @@ Symmetric LB: No
 
 Adaptive LB: No, Per Packet LB: No, Local bias percent: 0%
 
+```text
 Child [0]: et-7/0/6 (328), orig\_weight: 1, link\_index: 64, state: UP
+```
 
+```text
 Child [1]: et-7/0/7 (329), orig\_weight: 1, link\_index: 64, state: UP
+```
 
+```text
 Child [2]: et-5/0/0 (332), orig\_weight: 1, link\_index: 64, state: UP
+```
 
+```text
 Child [3]: et-5/0/1 (333), orig\_weight: 1, link\_index: 64, state: UP
+```
 
+```text
 Child [4]: et-5/1/1 (335), orig\_weight: 1, link\_index: 64, state: UP
+```
 
+```text
 Child [5]: et-9/0/1 (656), orig\_weight: 1, link\_index: 64, state: UP
+```
 
+```text
 ID:1370249(3), Ref:1, Type:2 (Regular), subtype:0, Symmetric-LB: Off, Target\_id:0
+```
 
 Key:FRR:Y, Balances:N, Locality:N/unicast, Type:LAG-IFD, Size:6, flags:0x4, dist-mode-default
 
@@ -86,7 +102,9 @@ PFE  0: Default link: (hits: 0, loops detected: 0)
 
 PFE  1: Default link: (hits: 0, loops detected: 0)
 
+```text
 IFD Selector State [0]:
+```
 
 Ref Count: 1, Child Count: 6, selp:[0] 0x52e05ef8
 
@@ -94,19 +112,33 @@ Symmetric LB: No
 
 Adaptive LB: No, Per Packet LB: No, Local bias percent: 0%
 
+```text
 Child [0]: et-7/0/6 (328), orig\_weight: 1, link\_index: 64, state: UP
+```
 
+```text
 Child [1]: et-7/0/7 (329), orig\_weight: 1, link\_index: 64, state: UP
+```
 
+```text
 Child [2]: et-5/0/0 (332), orig\_weight: 1, link\_index: 64, state: UP
+```
 
+```text
 Child [3]: et-5/0/1 (333), orig\_weight: 1, link\_index: 64, state: UP
+```
 
+```text
 Child [4]: et-5/1/1 (335), orig\_weight: 1, link\_index: 64, state: UP
+```
 
+```text
 Child [5]: et-9/0/1 (656), orig\_weight: 1, link\_index: 64, state: UP
+```
 
+```text
 ID:1370252(3), Ref:1, Type:2 (Regular), subtype:0, Symmetric-LB: Off, Target\_id:0
+```
 
 Key:FRR:Y, Balances:N, Locality:N/unicast, Type:LAG-IFD, Size:6, flags:0x4, dist-mode-default
 

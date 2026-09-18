@@ -14,21 +14,29 @@
 
 Chỗ này em cũng đang trao đổi lại nội bộ cụ thể use case Anh PhươngLD đề cập là như thế nào.
 
+```text
 >>> bên họ cũng đang làm rõ lại ý của Phương
+```
 
 Có một số mong muốn cụ thể là nhưhiện tại đối DWDM. Thì có nháy truyền dẫn thì cũng ko ảnh hưởng tới phiên PPPoE.
 
 Nên nếu chạy VPLS. Bọn em cũng mong muốn là giả dụ như có down một hướng thì sẽ ko ko làm out subs.
 
+```text
 >>> cái này đúng ra là phải vậy. Trừ khi set interface hold-timer có gì đó ko phù hợp, chứ pppoe session phải 3x60s nó mới timeout. Dwdm flap trong 1-2s ko phải là vấn
+```
 
 Cái thứ 2 là con số redial bọn em mong muống test là tầm 200cps đới với BRAS Center và BRAS Tỉnh tầm 160cps
 
+```text
 >>> Anh nghĩ cái này test lab là ok
+```
 
 Cái thứ 3 là bọn em gặp vấn đề về học route chậm, dẫn tới  phiên VPLS up lên chậm, Có khi active lên mà khoảng 5 phút sau mới up.
 
+```text
 >>> cái này phải troubleshoot. Nếu bình thường bật config dưới MP lên thì anh nghĩ sau chừng max 30s vpls nó phải up. Route chỉ propagate từ MP lên RR xong tới backup-bras
+```
 
 ====
 
@@ -48,7 +56,9 @@ Kiểm tra lại DDoS pppoe theo ý Ngọc ở trên
 
 [ November 7, 2022 3:27 PM ] ⁨Ju.a.Đăng⁩: trừ khi troubleshoot xem chính xác nó là gì như đã bàn
 
+```text
 [ November 10, 2022 3:27 PM ] ⁨SVT.Tùng.NT⁩: Hiện chỗ vấn đề \*1. thuê bao lên chậm\* thì chỗ rate PADI nhận trên MP-Backup đang cao thì khả năng là do trên MP-Backup Ftel đang cấu hình loop 11 cặp cổng (1 cặp đang lỗi): 1 chân đưa vào VPLS, 1 chân làm PPPoE termination
+```
 
 [ November 10, 2022 3:28 PM ] ⁨SVT.Tùng.NT⁩: nên gói PADI sẽ bị nhân lên nhiều lần ạ
 
@@ -126,15 +136,23 @@ Như vậy thì cơ bản là mình quay lại mô hình H-VPLS được rồi n
 
 Table bgp.l2vpn.0 Bit: 40004
 
+```text
 RIB State: BGP restart is complete
+```
 
+```text
 RIB State: VPN restart is complete
+```
 
+```text
 Send state: in sync
+```
 
 Active prefixes:              26
 
+```text
 Received prefixes:            26
+```
 
 Accepted prefixes:            26
 
@@ -166,7 +184,9 @@ policy-statement ADSL-Backup-2-Import: 96 term: 78 term inactivate >>> 18 term a
 
 [ November 14, 2022 2:09 PM ] ⁨Ju.a.Đăng⁩: Thời gian 7s theo anh so với thời gian để up toàn bộ sub ko đáng kể. đúng ko?
 
+```text
 [ November 14, 2022 2:10 PM ] ⁨Ju.a.Đăng⁩: làm sao để dial rate tăng lên mới là quan trọng
+```
 
 [ November 14, 2022 2:13 PM ] ⁨Ju.a.Đăng⁩: khi giải quyết xong vụ padi bị x11 lần lên thì thử lại rồi quyét định có cân optimize cái thời gian up kênh này ko
 
@@ -239,24 +259,26 @@ policy-statement ADSL-Backup-2-Import: 96 term: 78 term inactivate >>> 18 term a
 
 * *P**
 
-- 1. Thực hiện test và tìm nguyên nhân thời gian up VPLS chậm giữa MP-Backup và MP ở tỉnh. Dự kiến test giữa MP chưa dịch vụ ở BDG và HCM-MP-Backup-01.
-- >>> Chỗ này em có rà soát và test trên lab thì hiện trạng MP đang nhận ~ 650K route L2vpn
-- Table bgp.l2vpn.0 Bit: 40004
-- RIB State: BGP restart is complete
-- RIB State: VPN restart is complete
-- Send state: in sync
-- Active prefixes:              26
-- Received prefixes:            26
-- Accepted prefixes:            26
-- Suppressed due to damping:    0
-- Advertised prefixes:          654930
-- Trên MP-Backup mặc định sẽ remove các route mà RT không được accept trong import policy, khi bật active term để up vpls thì MP-Backup sẽ gửi refesh về RR để update lại route
-- >>> Thời gian up VPLS khi đổi policy test lab ghi nhận ~ 7s, chưa thực hiện test được trên mạng thực tế
-- 2. Thực hiện test trên BRAS-Backup:
-- a. Mô hình tương tự MP-Backup để kiểm chứng lại vấn đề thuê bao online chậm có phải do đang loop vật lý nhiều cổng vào cùng VPLS.
-- >>> Chưa thực hiện
-- b. Test tính năng liên quan PWHT.
-- >>> hiện đã cấu hình PWHT trên VPLS để test
+```text
+1. Thực hiện test và tìm nguyên nhân thời gian up VPLS chậm giữa MP-Backup và MP ở tỉnh. Dự kiến test giữa MP chưa dịch vụ ở BDG và HCM-MP-Backup-01.
+>>> Chỗ này em có rà soát và test trên lab thì hiện trạng MP đang nhận ~ 650K route L2vpn
+Table bgp.l2vpn.0 Bit: 40004
+RIB State: BGP restart is complete
+RIB State: VPN restart is complete
+Send state: in sync
+Active prefixes:              26
+Received prefixes:            26
+Accepted prefixes:            26
+Suppressed due to damping:    0
+Advertised prefixes:          654930
+Trên MP-Backup mặc định sẽ remove các route mà RT không được accept trong import policy, khi bật active term để up vpls thì MP-Backup sẽ gửi refesh về RR để update lại route
+>>> Thời gian up VPLS khi đổi policy test lab ghi nhận ~ 7s, chưa thực hiện test được trên mạng thực tế
+2. Thực hiện test trên BRAS-Backup:
+a. Mô hình tương tự MP-Backup để kiểm chứng lại vấn đề thuê bao online chậm có phải do đang loop vật lý nhiều cổng vào cùng VPLS.
+>>> Chưa thực hiện
+b. Test tính năng liên quan PWHT.
+>>> hiện đã cấu hình PWHT trên VPLS để test
+```
 
 * *z**
 
@@ -463,7 +485,9 @@ interface et-0/0/5.0;
 
 [ November 10, 2022 15:04 ] ⁨Ju.a.Đăng⁩: Slide của PLM thì nói no-local-sw là non-goal nhưng trong test case thì thấy có case nói là config no-local-sw. anh phải đi hỏi lại
 
+```text
 >>> Tài lieu test có nói config no-local-sw nhưng test case này ko thực hiện
+```
 
 [ November 10, 2022 16:28 ] ⁨Ju.a.Đăng⁩: còn mô hình ko vpls/mac-learn thì lợi điểm này có thể đủ lớn để chấp nhận các bất lợi khác
 
@@ -731,7 +755,9 @@ Mô hình evpn-vpws hôm trước đề cập là do thông tin chưa thể tri�
 
 [ February 16, 2023 09:45 ] ⁨Ju.a.Đăng⁩: Update cho vụ H-VPLS & mesh-group trên acx7100. Hiện tại mặc dù tính năng này được release tuy nhiên ở trạng thái là
 
+```text
 State: closed-unsupported - Shipped with release but not supported in the field
+```
 
 Có nghĩa là sẽ ko có support gì cả từ Tac/Engineer.
 

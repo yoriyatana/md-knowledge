@@ -12,45 +12,79 @@ Diagram
 
 R2 Config
 
+```text
 set interfaces ge-0/0/0 description “Connection to R1”
+```
 
+```text
 set interfaces ge-0/0/0 unit 0 family inet address 172.27.0.2/30
+```
 
+```text
 set interfaces ge-0/0/0 unit 0 family inet6 address ::ffff:172.27.0.2/126
+```
 
+```text
 set protocols bgp group R1-R2 type external
+```
 
+```text
 set protocols bgp group R1-R2 family inet unicast
+```
 
+```text
 set protocols bgp group R1-R2 family inet6 unicast
+```
 
+```text
 set protocols bgp group R1-R2 peer-as 1
+```
 
+```text
 set protocols bgp group R1-R2 neighbor 172.27.0.1
+```
 
 R1 Config
 
+```text
 set interfaces ge-0/0/0 description “Connection to R2”
+```
 
+```text
 set interfaces ge-0/0/0 unit 0 family inet address 172.27.0.1/30
+```
 
+```text
 set interfaces ge-0/0/0 unit 0 family inet6 address ::ffff:172.27.0.1/126
+```
 
+```text
 set protocols bgp group R1-R2 type external
+```
 
+```text
 set protocols bgp group R1-R2 family inet unicast
+```
 
+```text
 set protocols bgp group R1-R2 family inet6 unicast
+```
 
+```text
 set protocols bgp group R1-R2 peer-as 2
+```
 
+```text
 set protocols bgp group R1-R2 neighbor 172.27.0.2
+```
 
 One Last Note
 
 You may need an extra bit of config to get your router to forward packets addressed to ipv4-mapped-addresses:
 
+```text
 set system allow-v4mapped-packets
+```
 
 # **IPv4-Compatible Addressing… A Possible Pitfall**
 
@@ -64,6 +98,8 @@ Do yourself a favor and check your logs for sanity messages if it looks like you
 
 - --
 
+```text
 Test case từ anh Ngọc
+```
 
 ![](image/18371dfdf48c1e5e35e05944f46203a6.pdf)

@@ -6,7 +6,9 @@
 
 ⁨SVT.Ngọc.NĐ⁩: - Cách check tác động liên quan đến cấu hình:
 
-+ show system commit
+```text
+show system commit
+```
 
 + log interactive-commands (Hoặc các file log có ghi log facility là interactive-commands) - match "UI\_CMDLINE\_READ\_LINE: User '"
 

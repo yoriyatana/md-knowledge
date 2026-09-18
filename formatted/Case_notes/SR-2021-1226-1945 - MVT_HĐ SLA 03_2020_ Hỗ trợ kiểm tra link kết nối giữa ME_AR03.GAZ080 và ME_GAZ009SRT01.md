@@ -40,13 +40,17 @@ Dec 25 12:07:14
 
 Aggregated interface: ae1
 
+```text
 LACP state:       Role   Exp   Def  Dist  Col  Syn  Aggr  Timeout  Activity
+```
 
 ge-1/2/1       Actor    No    No    No   No   No   Yes     Fast    Active
 
 ge-1/2/1     Partner    No    No    No   No   No   Yes     Fast    Active
 
+```text
 LACP protocol:        Receive State  Transmit State          Mux State
+```
 
 ge-1/2/1                  Current   Fast periodic           Detached
 
@@ -58,8 +62,10 @@ Các bước xử lý
 
 Kiểm tra sơ bộ
 
-- IP MNS thiết bị 10.250.0.23
-- Show thông tin lldp neighbor trên mỗi thiết bị đều thấy thông tin neighbor là chính thiết bị đó.
+```text
+IP MNS thiết bị 10.250.0.23
+Show thông tin lldp neighbor trên mỗi thiết bị đều thấy thông tin neighbor là chính thiết bị đó.
+```
 
 vietpn@ME\_GAZ009SRT01# run show lldp neighbors
 
@@ -80,17 +86,25 @@ ge-1/1/1           -                   28:8a:1c:7d
 
 ![](image/8523735b713016e15af506736027b823.png)
 
+```text
 >>> Nghi ngờ core quang bị hàn chưa đúng.
+```
 
 ![](image/2428d66518d7dc8e0f0a90ae63124371.png)
 
 Thu thập các thông tin liên quan
 
+```text
 request support information | no-more | save /var/log/RSI\_ME\_AR03.GAZ080\_20211225
+```
 
+```text
 file archive source /var/log/\* destination /var/log/LOG\_ME\_AR03.GAZ080\_20211225
+```
 
+```text
 >>> Log session không có máy tính bị full ổ cứng
+```
 
 Hướng xử lý
 
@@ -281,13 +295,17 @@ vietpn@ME\_AR03.GAZ080\_RE1> show lacp interfaces ae1
 
 Aggregated interface: ae1
 
+```text
 LACP state:       Role   Exp   Def  Dist  Col  Syn  Aggr  Timeout  Activity
+```
 
 xe-1/1/0       Actor    No    No   Yes  Yes  Yes   Yes     Fast    Active
 
 xe-1/1/0     Partner    No    No   Yes  Yes  Yes   Yes     Fast    Active
 
+```text
 LACP protocol:        Receive State  Transmit State          Mux State
+```
 
 xe-1/1/0                  Current   Fast periodic Collecting distributing
 
@@ -407,9 +425,13 @@ Interface index: 167, SNMP ifIndex: 526
 
 Description: Connect to AR.GAZ080 - Right ring
 
+```text
 Link-level type: Ethernet, Media type: Fiber, MTU: 9000, LAN-PHY mode, Speed: 1000mbps, BPDU Error: None, Loop Detect PDU Error: None,
+```
 
+```text
 Ethernet-Switching Error: None, MAC-REWRITE Error: None, Loopback: Disabled, Source filtering: Disabled, Flow control: Disabled,
+```
 
 Auto-negotiation: Enabled, Remote fault: Online
 
@@ -425,9 +447,13 @@ Current address: 28:8a:1c:7c:f4:71, Hardware address: 28:8a:1c:7c:f4:55
 
 Last flapped   : 2021-12-27 07:28:40 CAT (02:22:37 ago)
 
+```text
 Input rate     : 81450096 bps (18979 pps)
+```
 
+```text
 Output rate    : 33000944 bps (24294 pps)
+```
 
 Active alarms  : None
 
@@ -445,9 +471,13 @@ FEC Corrected Errors                    0
 
 FEC Uncorrected Errors                  0
 
+```text
 FEC Corrected Errors Rate               0
+```
 
+```text
 FEC Uncorrected Errors Rate             0
+```
 
 Interface transmit statistics: Disabled
 
@@ -617,12 +647,16 @@ vietpn@ME\_GAZ009SRT01> show lacp interfaces ae1
 
 Aggregated interface: ae1
 
+```text
 LACP state:       Role   Exp   Def  Dist  Col  Syn  Aggr  Timeout  Activity
+```
 
 ge-1/2/1       Actor    No    No   Yes  Yes  Yes   Yes     Fast    Active
 
 ge-1/2/1     Partner    No    No   Yes  Yes  Yes   Yes     Fast    Active
 
+```text
 LACP protocol:        Receive State  Transmit State          Mux State
+```
 
 ge-1/2/1                  Current   Fast periodic Collecting distributing

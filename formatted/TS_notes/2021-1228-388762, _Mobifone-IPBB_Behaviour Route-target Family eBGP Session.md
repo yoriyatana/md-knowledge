@@ -16,7 +16,9 @@ mtu-discovery;
 
 log-updown;
 
+```text
 group iBGP-RR-HCM {
+```
 
 type internal;
 
@@ -70,7 +72,9 @@ neighbor 10.53.96.255;
 
 }
 
+```text
 group RR\_TO\_MC\_HNI {
+```
 
 type external;
 
@@ -132,7 +136,9 @@ no-nexthop-change;
 
 }
 
+```text
 group iBGP-VPN-ASBR-Option-A {
+```
 
 type internal;
 
@@ -160,7 +166,9 @@ minimum-interval 150;
 
 multiplier 3;
 
+```text
 group iBGP-VPN-ASBR-Option-A {
+```
 
 type internal;
 
@@ -216,7 +224,9 @@ family route-target;
 
 }
 
+```text
 group iBGP-VPN-ASBR-Option-A {
+```
 
 type internal;
 
@@ -299,7 +309,9 @@ family route-target;
 - By default Route Reflector sends update to only 1 Peer.
 - In this scenario to send route advertisements to multiple Peers number of Peers needs to be configured.
 
-- set protocols bgp group  family route-target external-paths 2
+```text
+set protocols bgp group  family route-target external-paths 2
+```
 
 Please help check below link for more details.
 

@@ -6,7 +6,9 @@ Tạo event-script để generate OID giám sát thông tin tín hiệu thu củ
 
 2. Các bước thực hiện:
 
+```text
 Load file Optic.slax lên thiết bị vào thư mục: /var/db/scripts/event/
+```
 
 lab@CSG-test-tool\_v3# run file list /var/db/scripts/event/
 
@@ -40,7 +42,9 @@ event-script Optic.slax;
 
 event-script {
 
+```text
 file Optic.slax;
+```
 
 }
 

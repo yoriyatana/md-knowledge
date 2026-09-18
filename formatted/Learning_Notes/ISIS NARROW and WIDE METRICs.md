@@ -16,8 +16,10 @@ All ISIS PDUs consist of:
 - ID Length
 - **PDU Type**:
 
-- **Level 1** or **Level 2**
-- **Hello**, **Sequenced Number Packet** (**SNP**) or **Link State Packet** (**LSP**)
+```text
+**Level 1** or **Level 2**
+**Hello**, **Sequenced Number Packet** (**SNP**) or **Link State Packet** (**LSP**)
+```
 
 - PDU version
 - Maximum Number of Areas
@@ -75,7 +77,9 @@ Below is an example of a **point-to-point hello packe**t, where you can see som
 
 * *2) SEQUENCE NUMBER PDUs (SNPs)**
 
+```text
 Sequence Number PDUs or Packets are used to ensure that neighbors have the most recent LSP information from each other. In other words, ensures that their Link State Databases are synchronized.
+```
 
 There are 4 types of SNPs:
 
@@ -87,7 +91,9 @@ A Partial Sequence Number packet lists the **most recent sequence number(s) of 
 
 * *Complete Sequence Number PDUs**are sent by the two ISIS routers on a point-to-point network, but only by the DIS on a broadcast network.
 
+```text
 These packets contain the **most recent sequence numbers of all LSPs** in the database. They are sent periodically, or when a link first comes up, and are used to verify that the Link State Database is always in sync. **CSNPs are similar in function to the Database Descriptors in OSPF**, though OSPF DBDs are not sent periodically as CSNPs.
+```
 
 By default, CSNPs are sent every 10 sec on LAN broadcast links, and every 5 sec on point-to-point links.
 
@@ -95,11 +101,17 @@ Below is an example of a **Level 2 CSNP packet**, where you can see the list of
 
 ![](image/64c92f1566e1e6706ebf53555b65cd82.png)
 
-* *3)** **LINK STATE PACKETS (LSPs)**
+```text
+*3)** **LINK STATE PACKETS (LSPs)**
+```
 
+```text
 Link State Packets are used to exchange link state information and are similar in function to LSAs in OSPF.
+```
 
+```text
 They contain all the details about the network topology, including ISIS routers system IDs, prefixes, metrics, area IDs, and are used to build the link-state database. Like OSPF LSAs, LSPs are flooded within an an area.
+```
 
 LSPs are sent during adjacency formation, as a result of a topology change and in response to a sequence number PDU.
 
@@ -172,7 +184,9 @@ And finally, we have the TLVs:
 
 Notice that TLV 22, contains Sub-TLVs.  These were introduced in [RFC3784 –  Intermediate System to Intermediate System (IS-IS) Extensions for Traffic Engineering (TE)](https://tools.ietf.org/html/rfc3784). We will come back to this later.
 
-* *LINK STATE PACKETS TLVs and METRICs**
+```text
+*LINK STATE PACKETS TLVs and METRICs**
+```
 
 We are now going to move our attention to 5 specific TLVs included in the LSP packets: **TLVs 2**, **22,** **128**, **130**, and **135**, which carry either ISIS router reachability or network prefix reachability.
 
@@ -217,7 +231,9 @@ However, you can also clearly see that depending on the TLV type, these metric c
 
 1) **metric**, or **wide metric** (1, 3 or 4 bytes long)
 
-2) a different metric name:  **delay**, **default**, **expense**, and **error**.
+```text
+a different metric name:  **delay**, **default**, **expense**, and **error**.
+```
 
 ![](image/31e1b7c7a9888b5df6c255b5f1463f65.png)
 
@@ -227,10 +243,12 @@ But, what are all these metrics, and how do they work (or not)?
 
 Maybe this will be just for your general knowledge, but in the ISIS original specifications 4 different metrics were included:
 
-- **default**= guess they couldn’t figure out a good name!
-- **delay**= yes, delay, like in EIGRP, yikes!  LOL!
-- **expense** = $$$, OK!?!?
-- **error** = how unreliable, how do you figure that out?
+```text
+**default**= guess they couldn’t figure out a good name!
+**delay**= yes, delay, like in EIGRP, yikes!  LOL!
+**expense** = $$$, OK!?!?
+**error** = how unreliable, how do you figure that out?
+```
 
 Guess what! Only the “default” metric has been implemented by vendors, and sometimes I wish we could just forget about the original specs and just give this “default” metric a proper name and change the outputs of the commands.
 
@@ -442,7 +460,9 @@ By default:
 
 ![](image/ae5fd790e6362e44ab0a5d26dc114827.png)
 
+```text
 The rule that we care about right now is the one about L1 external routes which we can state this way:
+```
 
 * *L1 routes that were injected into ISIS via redistribution, are treated by default as L1 external routes, and are NOT advertised to L2 neighbors by default.**
 
@@ -614,7 +634,9 @@ That is why vR11, for example, has a L1 “internal” route for 172.10.1.0/24, 
 
 * *Summarizing what we have learned:**
 
+```text
 Link State Packets (LSPs) carry ISIS neighbor information within TLVs 2, and 22, and prefix information within TLVs 128,130, and 135.
+```
 
 These TLVs advertise IS and prefix reachability using either narrow or wide metrics.
 

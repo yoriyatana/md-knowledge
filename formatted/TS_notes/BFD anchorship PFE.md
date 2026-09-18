@@ -118,7 +118,9 @@ Meanwhile, I performed some test cases regarding to point (2) – Try to configu
 
 1. 1/ TC 1.1: FPC slot 7 has 2 PFE instances (PFE #0 and PFE #1). I bring down PFE #0 on FPC7 (PFE #1 is still available).
 
-* However, BFD sessions got stuck to Init/Down state, they did not* *come up again if there is another PFE instance on the anchor FPC and the peer router is still reachable.*
+```text
+However, BFD sessions got stuck to Init/Down state, they did not* *come up again if there is another PFE instance on the anchor FPC and the peer router is still reachable.*
+```
 
 |  |
 | --- |

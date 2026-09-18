@@ -13,7 +13,6 @@ Task 1:
 - R2:
 
 Using isis L2 authentication-type md5, does not meet the requirements of the task
-
 ~~~> set protocols isis level 2 authentication-type simple
 
 Mar  8 08:14:42.429283 OSPF packet ignored: authentication failure (bad cksum).
@@ -23,7 +22,6 @@ Mar  8 08:14:42.429351 OSPF packet ignored: authentication failure from 10.10.
 ~~~> set protocols ospf area 0.0.0.0 interface ge-0/0/1.0 authentication md5 1 key "$9$RkASK8db2JUHM87VbYZGTz36/t0OR"
 
 Missing enable interface ge-0/0/5.0 in protocol isis
-
 ~~~> set protocols isis interface ge-0/0/5.0 point-to-point
 
 - R3:
@@ -36,18 +34,25 @@ Mar  8 04:14:16.058491 ERROR: ISIS ignored a bad packet: IIH with duplicate sy
 
 Missing ISIS authentication ~~~>
 
+```text
 set protocols isis level 1 authentication-key "$9$A8mf0RSM87bYohSeW8xwsik.Pfzn6A"
+```
 
+```text
 set protocols isis level 1 authentication-type simple
+```
 
+```text
 set protocols isis level 2 authentication-key "$9$A8mf0RSM87bYohSeW8xwsik.Pfzn6A"
+```
 
+```text
 set protocols isis level 2 authentication-type simple
+```
 
 - --
 
 Missing OSPF authentication
-
 ~~~> set protocols ospf area 0.0.0.1 interface ge-0/0/5.0 authentication md5 1 key "$9$hGjrMXbs4Gjq8X-wsgUDz369CuB1h"
 
 - R4:
@@ -58,14 +63,19 @@ Missing change interface type p2p on interface ge-0/0/5.0
 
 - R5:
 
+```text
 Mar  8 04:01:00.011648 ERROR: IIH authentication information with bad length 10
+```
 
+```text
 Mar  8 04:01:00.011750 ERROR: IIH from R4 on ge-0/0/5.0 failed authentication
+```
 
+```text
 Mar  8 04:01:00.011758 ERROR: previous error from L1, source R4 on ge-0/0/5.0
+```
 
 Wrong authentication-key on isis L1
-
 ~~~> set protocols isis level 1 authentication-key "$9$A8mf0RSM87bYohSeW8xwsik.Pfzn6A"
 
 - R6:
@@ -74,14 +84,17 @@ Missing ISIS L1 authentication
 
 ~~~>
 
+```text
 set protocols isis level 1 authentication-key "$9$A8mf0RSM87bYohSeW8xwsik.Pfzn6A"
+```
 
+```text
 set protocols isis level 1 authentication-type simple
+```
 
 - R7:
 
 Missing ISIS L1 authentication
-
 ~~~>
 
 set protocols isis level 1 authentication-key "$9$A8mf0RSM87bYohSeW8xwsik.Pfzn6A"
@@ -108,8 +121,9 @@ set protocols ospf area 0.0.0.0 interface ge-0/0/5.0 interface-type p2mp
 
 - --
 
+```text
 set interfaces ge-0/0/2 mtu 1700
-
+```
 ~~~> delete interfaces ge-0/0/2 mtu
 
 - R2:
@@ -124,16 +138,21 @@ set routing-options router-id 10.210.1.5
 
 Missing OSPF configurations
 
+```text
 set protocols ospf area 0.0.0.11 nssa
+```
 
+```text
 set protocols ospf area 0.0.0.11 interface ge-0/0/6.0 interface-type p2p
+```
 
 - R5:
 
 - R6:
 
+```text
 Interface ge-0/0/1 is in disable state
-
+```
 ~~~> set interfaces ge-0/0/3 disable ~~~> delete interfaces ge-0/0/3 disable
 
 - R7:
@@ -180,50 +199,70 @@ Apply both traffic-engineering disable and wide-metrics-only under protocols ISI
 
 - --
 
+```text
 set groups int\_inet6 interfaces  unit <\*> family inet6
+```
 
+```text
 set apply-groups int\_inet6
+```
 
 - R2:
 
+```text
 set groups int\_inet6 interfaces  unit <\*> family inet6
+```
 
+```text
 set apply-groups int\_inet6
+```
 
 - --
 
 Missing local sysid
-
 ~~~> set interfaces lo0 unit 0 family iso address 49.1111.1111.0102.1000.1002.00
 
 ~~~> set protocols isis no-ipv4-routing
 
 - R3:
 
+```text
 set groups int\_inet6 interfaces  unit <\*> family inet6
+```
 
+```text
 set apply-groups int\_inet6
+```
 
 - --
 
+```text
 set protocols isis no-ipv4-routing
+```
 
 Missing enable interface ge-0/0/3.0, ge-0/0/5.0 in protocol isis   ~~~>
 
+```text
 set protocols isis interface ge-0/0/3.0 point-to-point level 1 disable
+```
 
+```text
 set protocols isis interface ge-0/0/5.0 point-to-point level 2 disable
+```
 
 - R4:
 
+```text
 set groups int\_inet6 interfaces  unit <\*> family inet6
+```
 
+```text
 set apply-groups int\_inet6
+```
 
 - --
 
 R4-R8 setup L3 adjacency
-
 ~~~> set protocols isis level 2 disable
 
 - R5:
@@ -232,7 +271,7 @@ set groups int\_inet6 interfaces  unit <\*> family inet6
 
 set apply-groups int\_inet6
 
-- --
+---
 
 Missing change interface type p2p on interface ge-0/0/5.0
 
@@ -240,8 +279,9 @@ Missing change interface type p2p on interface ge-0/0/5.0
 
 duplicate sysid to R3:
 
+```text
 set interfaces lo0 unit 0 family iso address 49.1111.1111.0102.1000.1003.00
-
+```
 ~~~>
 
 delete interfaces lo0 unit 0 family iso address 49.1111.1111.0102.1000.1003.00
@@ -254,7 +294,7 @@ set groups int\_inet6 interfaces  unit <\*> family inet6
 
 set apply-groups int\_inet6
 
-- --
+---
 
 set protocols isis no-ipv4-routing
 
@@ -263,7 +303,6 @@ Missing change interface type p2p on interface ge-0/0/1.0
 ~~~> set protocols isis interface ge-0/0/1.0 point-to-point level 1 disable
 
 Interface ge-0/0/1 is missing family iso
-
 ~~~> set interfaces ge-0/0/3 unit 0 family iso
 
 - R7:
@@ -272,7 +311,7 @@ set groups int\_inet6 interfaces  unit <\*> family inet6
 
 set apply-groups int\_inet6
 
-- --
+---
 
 set protocols isis no-ipv4-routing
 
@@ -282,14 +321,13 @@ set groups int\_inet6 interfaces  unit <\*> family inet6
 
 set apply-groups int\_inet6
 
-- --
+---
 
 Disabled protocol ISIS
 
 ~~~> delete protocols isis disable
 
 R4-R8 setup L3 adjacency
-
 ~~~> set protocols isis level 2 disable
 
 Task 5:
@@ -298,20 +336,31 @@ Task 5:
 
 ~~~>
 
+```text
 set protocols ospf area 0.0.0.1 network-summary-export OSPF\_FILTER\_AREA0\_TO\_AREA1
+```
 
+```text
 set protocols ospf area 0.0.0.1 network-summary-import OSPF\_FILTER\_AREA1\_TO\_AREA0
+```
 
+```text
 set policy-options policy-statement OSPF\_FILTER\_AREA0\_TO\_AREA1 term ABR\_LOOPBACK from route-filter 10.210.1.3/32 exact
+```
 
+```text
 set policy-options policy-statement OSPF\_FILTER\_AREA0\_TO\_AREA1 term ABR\_LOOPBACK then accept
+```
 
+```text
 set policy-options policy-statement OSPF\_FILTER\_AREA0\_TO\_AREA1 term REJECT\_ALL then reject
+```
 
+```text
 set policy-options policy-statement OSPF\_FILTER\_AREA1\_TO\_AREA0 term REJECT\_ALL then reject
+```
 
 - R6:
-
 ~~~>
 
 set protocols ospf area 0.0.0.1 network-summary-export OSPF\_FILTER\_AREA0\_TO\_AREA1
@@ -332,10 +381,13 @@ Task 6:
 
 ~~~>
 
+```text
 set protocols isis interface ge-0/0/3.0 bfd-liveness-detection minimum-interval 100
+```
 
+```text
 set protocols isis interface ge-0/0/3.0 bfd-liveness-detection multiplier 5
-
+```
 ~~~>
 
 set protocols ospf area 0.0.0.0 interface ge-0/0/3.0 bfd-liveness-detection minimum-interval 100
@@ -346,10 +398,13 @@ set protocols ospf area 0.0.0.0 interface ge-0/0/3.0 bfd-liveness-detection mult
 
 ~~~>
 
+```text
 set protocols isis interface ge-0/0/3.0 bfd-liveness-detection minimum-interval 100
+```
 
+```text
 set protocols isis interface ge-0/0/3.0 bfd-liveness-detection multiplier 5
-
+```
 ~~~>
 
 set protocols ospf area 0.0.0.0 interface ge-0/0/3.0 bfd-liveness-detection minimum-interval 100
@@ -364,12 +419,15 @@ set protocols ospf3 area 0.0.0.10 interface ge-0/0/6.0
 
 ~~~>
 
+```text
 set protocols ospf3 realm ipv4-unicast area 0.0.0.10 interface ge-0/0/6.0 interface-type p2p
+```
 
+```text
 set protocols ospf3 area 0.0.0.10 interface ge-0/0/6.0 interface-type p2p
+```
 
 - R4:
-
 ~~~>
 
 set protocols ospf area 0.0.0.11 nssa
@@ -380,8 +438,9 @@ set protocols ospf area 0.0.0.11 interface ge-0/0/6.0 interface-type p2p
 
 - R7:
 
+```text
 set protocols ospf3 area 0.0.0.50 interface ge-0/0/6.0 interface-type p2p
-
+```
 ~~~>
 
 delete protocols ospf3 area 0.0.0.50
@@ -395,7 +454,6 @@ set protocols ospf3 realm ipv4-unicast area 0.0.0.10 interface ge-0/0/6.0 interf
 set protocols ospf area 0.0.0.10 interface ge-0/0/6.0 interface-type p2p
 
 ~~~> delete protocols ospf area 0.0.0.10 interface ge-0/0/6.0 interface-type
-
 ~~~> set protocols ripng group ripng neighbor ge-0/0/6.0
 
 Task 8:

@@ -2,7 +2,9 @@
 
 Step 1:Take the PID for reference,
 
+```text
 show system processes extensive | match "mib|snmp"
+```
 
 1320 root        1  96    0 20464K  8312K select   0:35  0.00% mib2d
 
@@ -10,13 +12,19 @@ show system processes extensive | match "mib|snmp"
 
 Step 2: Restart the process
 
+```text
 restart snmp immediately
+```
 
+```text
 restart mib-process immediately
+```
 
 Step 3: confirm the process are up with the new PID
 
+```text
 show system processes extensive | match "mib|snmp"
+```
 
 71731 root        1  96    0 15228K  9684K select   0:00  0.00% snmpd
 

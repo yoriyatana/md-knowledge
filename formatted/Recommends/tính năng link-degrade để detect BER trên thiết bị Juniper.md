@@ -2,21 +2,37 @@
 
 Em gửi lại cấu hình tính năng link-degrade để phát hiện BER đường trường với giá trị tốt hơn wanphy hiện tại:
 
+```text
 set interfaces xe-3/0/0 link-degrade-monitor link-degrade-monitor-enable   /\* enable tính năng trên interface vật lý \*/
+```
 
+```text
 set interfaces xe-3/0/0 link-degrade-monitor actions media-based     /\* Action shutdown port khi BER đến ngưỡng set \*/
+```
 
+```text
 set interfaces xe-3/0/0 link-degrade-monitor recovery manual  /\* Thực hiện recover lại trạng thái port bằng tay khi hoàn thành xử lý lỗi đường truyền \*/
+```
 
+```text
 set interfaces xe-3/0/0 link-degrade-monitor thresholds set 1e-8     /\* Ngưỡng BER sẽ shutdown port \*/
+```
 
+```text
 set interfaces xe-3/0/0 link-degrade-monitor thresholds clear 1e-9   /\* Ngưỡng BER clear trạng thái port về bình thường (có tác dụng khi sử dụng recovery auto \*/
+```
 
+```text
 set interfaces xe-3/0/0 link-degrade-monitor thresholds warning-set 1e-9   /\* Ngưỡng BER thiết bị đẩy cảnh báo \*/
+```
 
+```text
 set interfaces xe-3/0/0 link-degrade-monitor thresholds warning-clear 1e-10 /\* Ngưỡng BER clear cảnh báo \*/
+```
 
+```text
 set interfaces xe-3/0/0 link-degrade-monitor thresholds interval 1   /\* 1 lần chạm ngưỡng BER set thì thực hiện shutdown port \*/
+```
 
 - SVTech đã thực hiện test LAB tính năng này với port 100G trên MPC7 và port 10G trên MPC4 để phát hiện BER trên đường truyền giữa 2 thiết bị truyền dẫn
 
@@ -28,7 +44,9 @@ Kết nối thêm thiết bị OVA giữa link kết nối 2 thiết bị TD đ�
 
 Kiểm tra tính năng link-degrade trên MX Juniper
 
-- > kết quả tính năng hoạt động đúng với các ngưỡng BER cấu hình
+```text
+> kết quả tính năng hoạt động đúng với các ngưỡng BER cấu hình
+```
 
 - Tính năng hoạt động được với các loại card:
 
@@ -48,9 +66,13 @@ Physical interface: et-10/0/5, Enabled, Physical link is Down
 
 Interface index: 217, SNMP ifIndex: 751
 
+```text
 Link-level type: Ethernet, MTU: 9192, MRU: 9200, Speed: 100Gbps, BPDU Error: None,
+```
 
+```text
 Loop Detect PDU Error: None, Loopback: Disabled, Source filtering: Disabled,
+```
 
 Flow control: Disabled
 
@@ -68,9 +90,13 @@ Current address: f0:1c:2d:7f:d4:c3, Hardware address: f0:1c:2d:7f:d3:86
 
 Last flapped   : 2021-12-14 15:08:24 ICT (00:00:09 ago)
 
+```text
 Input rate     : 0 bps (0 pps)
+```
 
+```text
 Output rate    : 0 bps (0 pps)
+```
 
 Active alarms  : LINK
 
@@ -90,9 +116,13 @@ FEC Corrected Errors                    0
 
 FEC Uncorrected Errors                  0
 
+```text
 FEC Corrected Errors Rate               0
+```
 
+```text
 FEC Uncorrected Errors Rate             0
+```
 
 Link Degrade :
 
@@ -108,7 +138,9 @@ Link Degrade War Clear Threshold  :  1E-10
 
 Estimated BER                     :  1E-8
 
+```text
 Link-degrade event                :  Seconds              Count                State
+```
 
 9                    1                    Defect Active
 
@@ -144,4 +176,6 @@ Nhờ các anh thử nghiệm trên 1 link riêng cho 2G và test lại trên m�
 
 Em gửi bổ sung lệnh để recover port, đưa port UP lại sau khi bị shutdown bởi đạt ngưỡng BER set:
 
+```text
 request interface link-degrade-recover et-1/0/5
+```

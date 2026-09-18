@@ -85,19 +85,25 @@ Line 655:             External LSA (5), LSA-ID: 172.20.249.132
 
 linh.ntd@HCM001PER02\_RE0> ping routing-instance NMS 172.20.254.14 source 172.20.254.13 size 1617 do-not-fragment
 
+```text
 PING 172.20.254.14 (172.20.254.14): 1617 data bytes
+```
 
 ^C
 
 - -- 172.20.254.14 ping statistics ---
 
+```text
 2 packets transmitted, 0 packets received, 100% packet loss
+```
 
 {master}
 
 linh.ntd@HCM001PER02\_RE0> ping routing-instance NMS 172.20.254.14 source 172.20.254.13 size 1616 do-not-fragment
 
+```text
 PING 172.20.254.14 (172.20.254.14): 1616 data bytes
+```
 
 1624 bytes from 172.20.254.14: icmp\_seq=0 ttl=255 time=2.053 ms
 
@@ -113,7 +119,9 @@ PING 172.20.254.14 (172.20.254.14): 1616 data bytes
 
 - -- 172.20.254.14 ping statistics ---
 
+```text
 5 packets transmitted, 5 packets received, 0% packet loss
+```
 
 round-trip min/avg/max/stddev = 1.900/2.049/2.189/0.093 ms
 

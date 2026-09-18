@@ -10,7 +10,9 @@ Attribute: Framed-IPv6-Prefix
 
 Type: ipv6addr
 
+```text
 ID: 97
+```
 
 - IPv6 LAN
 
@@ -18,7 +20,9 @@ Attribute: Delegated-IPv6-Prefix
 
 Type: ipv6addr
 
+```text
 ID: 123
+```
 
 Các attribute này anh đã test trên lab hoạt động bình thường nhé.
 

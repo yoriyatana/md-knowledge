@@ -16,6 +16,7 @@ For example:
 
 An existing IDP session and entry in the inet.3 is present in a LDP-speaking router, on which lo0.0 has a primary and preferred address of 5.5.5.5/32 and a normal address of 5.5.5.6/32. The downstream neighbor's loopback address is 6.6.6.6/32.
 
+```text
 > > show ldp session
 >
 > Address   State             Connection   Hold time
@@ -35,9 +36,11 @@ An existing IDP session and entry in the inet.3 is present in a LDP-speaking r
 > > to 12.12.12.2 via ge-4/3/4.0
 >
 > {MASTER}
+```
 
 If a default accept is explicity set by mistake, then it is applied to LDP (normally, the accept should be in term 1; but here it is in default accept).
 
+```text
 > > show configuration policy-options policy-statement LDP-Export-loopbacks
 >
 > term 1 {
@@ -67,17 +70,21 @@ If a default accept is explicity set by mistake, then it is applied to LDP (norm
 > interface lo0.0;
 >
 > {MASTER}
+```
 
 As a result, the inet.3 table becomes empty:
 
+```text
 > > show route table inet.3
 >
 > {MASTER}
+```
 
 CAUSE:
 
 Due to the above improper configuration, LDP just imports all prefixes in the inet.0 table to its database and announces that they are from it's own FECs. Junos does not store locally originated FECs in the inet.3 table, as they are used only to be the next-hops for the BGP protocol.
 
+```text
 > > show ldp database
 >
 > Input label database, 5.5.5.5:0--6.6.6.6:0
@@ -143,11 +150,13 @@ Due to the above improper configuration, LDP just imports all prefixes in the i
 > 3             224.0.0.22/32
 >
 > {MASTER}
+```
 
 SOLUTION:
 
 In the above egress-policy, move the then accept action to term 1 and then commit; both the LDP database and inet.3 table will become normal:
 
+```text
 > > show system rollback compare 1 0
 >
 > [edit policy-options policy-statement LDP-Export-loopbacks term 1]
@@ -215,3 +224,4 @@ In the above egress-policy, move the then accept action to term 1 and then 
 > > to 12.12.12.2 via ge-4/3/4.0
 >
 > {MASTER}
+```

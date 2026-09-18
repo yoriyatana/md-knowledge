@@ -2,11 +2,17 @@
 
 Start shell pfe network fpc4
 
+```text
 show mtip-cge summary
+```
 
+```text
 show mtip-cge 2 statistics
+```
 
+```text
 clear mtip-cge 2 statistics
+```
 
 MX204 - mtip
 
@@ -38,10 +44,18 @@ SMPC0(BDG-MP-01-07 vty)# show mtip-chmac 2 statistics
 
 SMPC0(BDG-MP-01-07 vty)# show mtip-cmac 1 statistics
 
+```text
 show mtip-chmac summary
+```
 
+```text
 show mtip-cmac summary
+```
 
+```text
 show mtip-chmac 2 statistics
+```
 
+```text
 show mtip-cmac 1 statistics
+```

@@ -2,7 +2,9 @@
 
 I understand from the case notes that you have observed the below FPC hard errors on the MX960 device:
 
-* root@AGG-HUEHTY22> show chassis alarms no-forwarding*
+```text
+root@AGG-HUEHTY22> show chassis alarms no-forwarding*
+```
 
 * 4 alarms currently active*
 
@@ -20,17 +22,29 @@ Could you please provide me the below information to investigate:
 - Were there any troubleshooting steps already done? If yes, please describe and share any outputs that you might have (ex: putty sessions)
 - The below command output from the CLI:
 
-* show chassis fpc pic-status*
+```text
+show chassis fpc pic-status*
+```
 
-* show chassis fabric summary*
+```text
+show chassis fabric summary*
+```
 
-* show chassis fabric fpcs*
+```text
+show chassis fabric fpcs*
+```
 
-* show chassis fabric plane-location*
+```text
+show chassis fabric plane-location*
+```
 
-* show chassis fabric plane-degradation*
+```text
+show chassis fabric plane-degradation*
+```
 
-* >start shell pfe network fpc1*
+```text
+>start shell pfe network fpc1*
+```
 
 * #show syslog messages*
 

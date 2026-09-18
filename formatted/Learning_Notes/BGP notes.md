@@ -44,7 +44,9 @@ med-multiplier number;
 
 Routing table path selection can be configured in one of the following ways:
 
+```text
 Emulate the Cisco IOS default behavior (cisco-non-deterministic). This mode evaluates routes in the order that they are received and does not group them according to their neighboring AS. With cisco-non-deterministic mode, the active path is always first. All inactive, but eligible, paths follow the active path and are maintained in the order in which they were received, with the most recent path first. Ineligible paths remain at the end of the list.
+```
 
 As an example, suppose you have three path advertisements for the 192.168.1.0 /24 route:
 
@@ -54,7 +56,9 @@ Path 2—learned through IBGP; AS Path of 65020; MED of 150; IGP cost of 5
 
 Path 3—learned through IBGP; AS Path of 65010; MED of 100; IGP cost of 10
 
+```text
 These advertisements are received in quick succession, within a second, in the order listed. Path 3 is received most recently, so the routing device compares it against path 2, the next most recent advertisement. The cost to the IBGP peer is better for path 2, so the routing device eliminates path 3 from contention. When comparing paths 1 and 2, the routing device prefers path 1 because it is received from an EBGP peer. This allows the routing device to install path 1 as the active path for the route.
+```
 
 Always comparing MEDs whether or not the peer ASs of the compared routes are the same (always-compare-med).
 
@@ -74,9 +78,13 @@ ttl-value
 
 TTL value for BGP packets.
 
+```text
 Default: 64 (for multihop EBGP sessions, confederations, and IBGP sessions)
+```
 
+```text
 Default: 1 (for single-hop EBGP sessions)
+```
 
 A TTL value of 1 is sufficient to enable an EBGP session to the loopback address of a directly connected neighbor.
 
@@ -92,9 +100,13 @@ RFC 4893, BGP Support for Four-octet AS Number Space. RFC 4893 introduces two ne
 
 autonomous-system—AS number. Use a number assigned to you by the NIC.
 
+```text
 Range: 1 through 4,294,967,295 (232 – 1) in plain-number format for 4-byte AS numbers
+```
 
+```text
 Range: 0.0 through 65535.65535 in AS-dot notation format for 4-byte numbers
+```
 
 65,546 in plain-number format is represented as 1.10 in the AS-dot notation format.
 
@@ -108,9 +120,13 @@ loops number
 
 Specify the number of times detection of the AS number in the AS\_PATH attribute causes the route to be discarded or hidden.
 
+```text
 Range: 1 through 10
+```
 
+```text
 Default: 1
+```
 
 For example, if you configure loops 1, the route is hidden if the AS number is detected in the path one or more times. This is the default behavior. If you configure loops 2, the route is hidden if the AS number is detected in the path two or more times.
 
@@ -161,7 +177,9 @@ BGP holdown timer
 - Mất link -> down port trên thiết bị -> down ebgp peer ngay
 - Mất link -> không down port trên thiết bị -> hết holdown mới down
 
+```text
 BGP state transition
+```
 
 ![](image/96219a6e02e0b2cd95c9e14df2f05e55.png)
 
@@ -169,14 +187,22 @@ BGP state transition
 
 To summarize:
 
-- Active state - local router has just sent a TCP SYN
-- Connect state - local router has just received a TCP SYN from it's peer
+```text
+Active state - local router has just sent a TCP SYN
+Connect state - local router has just received a TCP SYN from it's peer
+```
 
+```text
 The "initiating" BGP speaker's state transitions to form the adjacency will be: Idle, Active, Open Sent, Open Received, Established
+```
 
+```text
 The "responding" BGP speaker's state transitions to form the adjacency will be: Idle, Connect, Open Sent, Open Received, Established
+```
 
+```text
 Notice, only the peer which Initiated the TCP handshake passes through Active state. And only the peer which did NOT initiate the TCP handshake passes through the Connect state.
+```
 
 https://networkengineering.stackexchange.com/questions/63219/what-is-the-difference-between-connect-and-active-states-of-bgp
 

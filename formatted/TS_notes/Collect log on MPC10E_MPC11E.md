@@ -10,21 +10,37 @@ c) FPC10 shell logs
 
 start shell pfe network fpc10.0
 
+```text
 set syslog tty disable
+```
 
+```text
 show version
+```
 
+```text
 show nvram
+```
 
+```text
 show syslog messages
+```
 
+```text
 show hsl2 statistics crc  <
+```
 
+```text
 show hsl2 statistics         <
+```
 
+```text
 show pfe statistics error <
+```
 
+```text
 show cmerror module brief
+```
 
 exit
 

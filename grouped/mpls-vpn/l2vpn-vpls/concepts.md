@@ -7,15 +7,21 @@
 
 # L2circuit
 
+```text
 show l2circuit connections history
+```
 
+```text
 show l2circuit connections instance-history
+```
 
 ## Source: `formatted/TS_notes/Configure connection CCC example.md`
 
 # Configure connection CCC example
 
+```text
 lab@MX204-01> show configuration | compare
+```
 
 [edit interfaces xe-0/1/5]
 
@@ -81,7 +87,9 @@ VC Type 5 is used for Ethernet Port mode.
 
 you are referring to EoMPLS Pseudowire Types (which are better defined in rfc4446 and not 4448) and indeed there are 2 ways to handle tags.
 
+```text
 VC Type 4 : The original 802.1Q tag is inserted in the EoMPLS payload (along with the MPLS label) before forwarding it to the MPLS core. At the ingress of the remote end or receiving PE the 802.1Q tag is stripped off before its transmission to the internal bus. If a packet is received from the MPLS core without a tag (ether type of the packet is other than 0x8100) the packet is dropped.
+```
 
 VC Type 5 : In EoMPLS VLAN mode configuration, only the MPLS label is added to the packet transmitted to the MPLS core. On the ingress of the remote end or receiving PE the MPLS label stack is popped out before the transmission on the internal bus. If Port mode is configured instead, the 802.1Q tag is also carried along with the MPLS label
 

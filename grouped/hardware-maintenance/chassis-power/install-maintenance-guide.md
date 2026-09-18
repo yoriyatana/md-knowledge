@@ -17,9 +17,13 @@ New CLI commands addition to support RE and Chassis power-cycle under request vm
 
 Step 1: Restart SFB 4 :
 
+```text
 > request chassis fabric plane 4 offline
+```
 
+```text
 > request chassis fabric plane 4 online
+```
 
 Reseat SFB 4 (if still alarm)
 
@@ -27,8 +31,14 @@ Trên MX2K ở các version sau này fabric plane thay đổi từ 8 -> 24 fabri
 
 - --> Để tránh confuse cũng như thay vì restart ở mức logical (fabric plane) thì việc restart ở mức vật lý (SFB) sẽ triệt để/sạch sẽ hơn:
 
+```text
 Restart SFB bằng lệnh:
+```
 
+```text
 request chassis sfb slot  offline
+```
 
+```text
 request chassis sfb slot  online
+```

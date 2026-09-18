@@ -8,111 +8,157 @@ When the PEs advertise the IPv6 route for the VRF, the next-hop attribute is an 
 
 When we configure IPv6 tunneling on a Juniper device, we copy all the IPv4 destinations from the inet.3 table to the inet6.3 table. This step is required on Juniper devices only.
 
+```text
 Configure the LSP to allow IPv6 routes to be resolved over an MPLS network by converting all routes stored in the inet3 routing table to IPv4-mapped IPv6 addresses and then copying them into the inet6.3 routing table
+```
 
 # set mpls ipv6-tunneling
 
 After enabling IPv6 tunneling, we can use the following commands to verify that the IPv4 addresses have been copied over to the inet6.3 table on vmx5:
 
+```text
 salt@vmx5> show route table inet.3
+```
 
+```text
 inet.3: 9 destinations, 9 routes (9 active, 0 holddown, 0 hidden)
+```
 
 + = Active Route, - = Last Active, \* = Both
 
 10. 0.0.1/32        \*[LDP/9] 3d 06:14:59, metric 200
 
+```text
 >  to 192.168.5.1 via ge-0/0/1.5, Push 321
+```
 
 10. 0.0.2/32        \*[LDP/9] 3d 06:14:59, metric 200
 
+```text
 >  to 192.168.7.1 via ge-0/0/1.7, Push 324
+```
 
 10. 0.0.3/32        \*[LDP/9] 3d 06:14:59, metric 100
 
+```text
 >  to 192.168.7.1 via ge-0/0/1.7
+```
 
 10. 0.0.4/32        \*[LDP/9] 3d 06:14:59, metric 100
 
+```text
 >  to 192.168.5.1 via ge-0/0/1.5
+```
 
 10. 0.0.6/32        \*[LDP/9] 3d 06:14:59, metric 200
 
 to 192.168.5.1 via ge-0/0/1.5, Push 319
 
+```text
 >  to 192.168.7.1 via ge-0/0/1.7, Push 327
+```
 
 10. 0.0.14/32       \*[LDP/9] 3d 06:14:59, metric 200
 
+```text
 >  to 192.168.5.1 via ge-0/0/1.5, Push 320
+```
 
 10. 0.0.15/32       \*[LDP/9] 3d 06:14:59, metric 300
 
+```text
 >  to 192.168.5.1 via ge-0/0/1.5, Push 322
+```
 
 10. 0.1.1/32        \*[LDP/9] 3d 06:14:59, metric 301
 
 to 192.168.5.1 via ge-0/0/1.5, Push 325
 
+```text
 >  to 192.168.7.1 via ge-0/0/1.7, Push 333
+```
 
 10. 0.1.2/32        \*[LDP/9] 3d 06:14:59, metric 301
 
 to 192.168.5.1 via ge-0/0/1.5, Push 326
 
+```text
 >  to 192.168.7.1 via ge-0/0/1.7, Push 334
+```
 
+```text
 salt@vmx5> show route table inet6.3
+```
 
+```text
 inet6.3: 9 destinations, 9 routes (9 active, 0 holddown, 0 hidden)
+```
 
 + = Active Route, - = Last Active, \* = Both
 
 ::ffff:10.0.0.1/128\*[LDP/9] 3d 06:15:02, metric 200
 
+```text
 >  to 192.168.5.1 via ge-0/0/1.5, Push 321
+```
 
 ::ffff:10.0.0.2/128\*[LDP/9] 3d 06:15:02, metric 200
 
+```text
 >  to 192.168.7.1 via ge-0/0/1.7, Push 324
+```
 
 ::ffff:10.0.0.3/128\*[LDP/9] 3d 06:15:02, metric 100
 
+```text
 >  to 192.168.7.1 via ge-0/0/1.7
+```
 
 ::ffff:10.0.0.4/128\*[LDP/9] 3d 06:15:02, metric 100
 
+```text
 >  to 192.168.5.1 via ge-0/0/1.5
+```
 
 ::ffff:10.0.0.6/128\*[LDP/9] 3d 06:15:02, metric 200
 
 to 192.168.5.1 via ge-0/0/1.5, Push 319
 
+```text
 >  to 192.168.7.1 via ge-0/0/1.7, Push 327
+```
 
 ::ffff:10.0.0.14/128
 
 \*[LDP/9] 3d 06:15:02, metric 200
 
+```text
 >  to 192.168.5.1 via ge-0/0/1.5, Push 320
+```
 
 ::ffff:10.0.0.15/128
 
 \*[LDP/9] 3d 06:15:02, metric 300
 
+```text
 >  to 192.168.5.1 via ge-0/0/1.5, Push 322
+```
 
 ::ffff:10.0.1.1/128\*[LDP/9] 3d 06:15:02, metric 301
 
 to 192.168.5.1 via ge-0/0/1.5, Push 325
 
+```text
 >  to 192.168.7.1 via ge-0/0/1.7, Push 333
+```
 
 ::ffff:10.0.1.2/128\*[LDP/9] 3d 06:15:02, metric 301
 
 to 192.168.5.1 via ge-0/0/1.5, Push 326
 
+```text
 >  to 192.168.7.1 via ge-0/0/1.7, Push 334
+```
 
 - --
 

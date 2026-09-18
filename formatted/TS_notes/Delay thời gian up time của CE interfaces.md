@@ -2,9 +2,13 @@
 
 để optimize down time do bi core isolation: sẽ delay thời gian up time của CE interfaces:
 
+```text
 lab@mx480-re0# show protocols network-isolation
+```
 
+```text
 group hoo {
+```
 
 detection {
 
@@ -22,7 +26,9 @@ service-tracking-action link-down;
 
 }
 
+```text
 lab@mx480-re0# show interfaces ae0
+```
 
 flexible-vlan-tagging;
 

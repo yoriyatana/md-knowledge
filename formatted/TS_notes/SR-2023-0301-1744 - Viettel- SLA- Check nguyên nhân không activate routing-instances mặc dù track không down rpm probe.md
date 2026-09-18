@@ -15,8 +15,10 @@ Em xin update lại case này như sau ah:
 
 Quan sát một đoạn log nhỏ bên dưới ta sẽ thấy rằng:
 
-- Tại thời điểm 14:44:25 có xuất hiện PING FAILED, và trước đó có kết quả PING COMPLETED đã xảy ra liên tục hơn 30s → Nên thỏa mãn điều kiện kích hoạt policy, do vậy ta có thể thấy action deactivate vẫn hoạt động bình thường.
-- Đến thời điểm 14:44:33 có xuất hiện PING COMPLETED, tuy nhiên trước đó kết quả PING\_FAILED chưa đủ 30s  (từ 14:44:25 đến 14:44:33 mới được khoảng 8s), (hay nói cách khác trong 30s đó có nhiều hơn 1 lần PING COMPLETED) → Nên không thỏa mãn điều kiện kích hoạt policy và dẫn đến không có action activate nào được thực hiện.
+```text
+Tại thời điểm 14:44:25 có xuất hiện PING FAILED, và trước đó có kết quả PING COMPLETED đã xảy ra liên tục hơn 30s → Nên thỏa mãn điều kiện kích hoạt policy, do vậy ta có thể thấy action deactivate vẫn hoạt động bình thường.
+Đến thời điểm 14:44:33 có xuất hiện PING COMPLETED, tuy nhiên trước đó kết quả PING\_FAILED chưa đủ 30s  (từ 14:44:25 đến 14:44:33 mới được khoảng 8s), (hay nói cách khác trong 30s đó có nhiều hơn 1 lần PING COMPLETED) → Nên không thỏa mãn điều kiện kích hoạt policy và dẫn đến không có action activate nào được thực hiện.
+```
 
 <30>1 2023-03-01T14:41:53.976+07:00 QNH0422SRT03 rmopd 4022 PING\_TEST\_COMPLETED [junos@2636.1.1.1.2.116 test-owner="TRACK\_GW\_VDTC" test-name="TRACK\_GW\_VRF"]
 
@@ -48,7 +50,9 @@ Quan sát một đoạn log nhỏ bên dưới ta sẽ thấy rằng:
 
 <30>1 2023-03-01T14:44:39.913+07:00 QNH0422SRT03 rmopd 4022 PING\_TEST\_COMPLETED [junos@2636.1.1.1.2.116 test-owner="TRACK\_GW\_VDTC" test-name="TRACK\_GW\_VRF"]
 
+```text
 Như vậy ở đây có thể kết luận do thời gian flapping từ ping FAILED sang ping COMPLETED quá nhanh (< 30s), nên không thể kích hoạt được policy action.
+```
 
 3/ Khuyến nghị
 

@@ -30,7 +30,9 @@ Junos 18
 
 - add-path cho inet-vpn & inet6-vpn <<< NET ko cần cái này
 
-- Multipath optimization to improve RIB learning rate (performance)
+```text
+Multipath optimization to improve RIB learning rate (performance)
+```
 
 Junos 19.1/19.2/19.3
 
@@ -56,7 +58,9 @@ Sơ bộ:
 
 - 18 thì 1 năm nữa EoS
 
+```text
 >>>>  Do vậy anh tạm đề nghị:
+```
 
 - Option 1: sử dụng 2 bản 19.3 & 19.4 <<< Prefered
 

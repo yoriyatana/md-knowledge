@@ -103,9 +103,11 @@ OSPF Prefix Limits (2 of 2)
 
 - the Junos OS allows you to limit the number of prefixes that can be accepted.
 
-- The prefix-export-limit command informs the router how many routes to accept from a routing policy configuration.
-- Once the route limit is reached, the router transitions into an overload state.
-- Additionally, all Type 5 LSAs from the router are purged from the database and the network.
+```text
+The prefix-export-limit command informs the router how many routes to accept from a routing policy configuration.
+Once the route limit is reached, the router transitions into an overload state.
+Additionally, all Type 5 LSAs from the router are purged from the database and the network.
+```
 
 OSPF Mutual Redistribution
 

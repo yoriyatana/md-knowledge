@@ -12,17 +12,25 @@ Task information:
 
 Fail users:
 
+```text
 50:0c:ab:04:00:00
+```
 
+```text
 50:0c:ab:04:00:02
+```
 
 - LAN8003BRA01\_RE0:
 
 root@LAN8003BRA01\_RE0> show system subscriber-management statistics
 
+```text
 subscriber-management not enabled
+```
 
+```text
 command not supported
+```
 
 On a fresh install of the Junos Subscriber Management build, the system must be rebooted according to Juniper's documentation on Configuring Junos OS Enhanced Subscriber Management.
 
@@ -50,9 +58,13 @@ Listening on ge-0/0/0, capture size 96 bytes
 
 ^C
 
+```text
 108 packets received by filter
+```
 
+```text
 0 packets dropped by kernel
+```
 
 lab@LAN8003BRA01\_RE0> monitor traffic interface ge-0/0/1 matching "(ether host 50:0c:ab:04:00:00) or (ether host 50:0c:ab:04:00:02)"
 
@@ -66,9 +78,13 @@ Listening on ge-0/0/1, capture size 96 bytes
 
 # ^C
 
+```text
 188 packets received by filter
+```
 
+```text
 0 packets dropped by kernel
+```
 
 - Không thấy nhận gói PADI từ sub lên
 
@@ -78,7 +94,9 @@ Aug 23 13:45:34
 
 Active PPPoE sessions: 6
 
+```text
 PacketType                       Sent         Received
+```
 
 PADI                              0                6
 
@@ -90,11 +108,17 @@ PADS                              6       �
 
 PADT                              0                0
 
+```text
 Service name error                0                0
+```
 
+```text
 AC system error                   0                0
+```
 
+```text
 Generic error                     0                0
+```
 
 Malformed packets                 0                0
 
@@ -106,7 +130,9 @@ Aug 23 13:47:54
 
 Active PPPoE sessions: 6
 
+```text
 PacketType                       Sent         Received
+```
 
 PADI                              0                6
 
@@ -118,11 +144,17 @@ PADS                              6       �
 
 PADT                              0                0
 
+```text
 Service name error                0                0
+```
 
+```text
 AC system error                   0                0
+```
 
+```text
 Generic error                     0                0
+```
 
 Malformed packets                 0                0
 
@@ -136,13 +168,21 @@ Aug 23 13:48:34
 
 Authentication module statistics
 
+```text
 Requests received: 6
+```
 
+```text
 Accepts: 6
+```
 
+```text
 Rejects: 0
+```
 
+```text
 Challenges: 0
+```
 
 Timed out requests: 0
 
@@ -152,13 +192,21 @@ Aug 23 13:48:42
 
 Authentication module statistics
 
+```text
 Requests received: 6
+```
 
+```text
 Accepts: 6
+```
 
+```text
 Rejects: 0
+```
 
+```text
 Challenges: 0
+```
 
 Timed out requests: 0
 
@@ -184,53 +232,97 @@ lab@LAN8003BRA01\_RE0> show ddos-protection protocols pppoe statistics brief
 
 Aug 23 13:50:42
 
+```text
 Packet types: 8, Received traffic: 3, Currently violated: 0
+```
 
+```text
 Protocol    Packet      Received        Dropped        Rate     Violation State
+```
 
+```text
 group       type        (packets)       (packets)      (pps)    counts
+```
 
+```text
 pppoe       aggregate   12              0              0        0         ok
+```
 
+```text
 pppoe       padi        6               0              0        0         ok
+```
 
+```text
 pppoe       pado        0               0              0        0         ok
+```
 
+```text
 pppoe       padr        6               0              0        0         ok
+```
 
+```text
 pppoe       pads        0               0              0        0         ok
+```
 
+```text
 pppoe       padt        0               0              0        0         ok
+```
 
+```text
 pppoe       padm        0               0              0        0         ok
+```
 
+```text
 pppoe       padn        0               0              0        0         ok
+```
 
 lab@LAN8003BRA01\_RE0> show ddos-protection protocols pppoe statistics brief
 
 Aug 23 13:50:44
 
+```text
 Packet types: 8, Received traffic: 3, Currently violated: 0
+```
 
+```text
 Protocol    Packet      Received        Dropped        Rate     Violation State
+```
 
+```text
 group       type        (packets)       (packets)      (pps)    counts
+```
 
+```text
 pppoe       aggregate   12              0              0        0         ok
+```
 
+```text
 pppoe       padi        6               0              0        0         ok
+```
 
+```text
 pppoe       pado        0               0              0        0         ok
+```
 
+```text
 pppoe       padr        6               0              0        0         ok
+```
 
+```text
 pppoe       pads        0               0              0        0         ok
+```
 
+```text
 pppoe       padt        0               0              0        0         ok
+```
 
+```text
 pppoe       padm        0               0              0        0         ok
+```
 
+```text
 pppoe       padn        0               0              0        0         ok
+```
 
 - Không có alarm, core-dumps
 

@@ -10,21 +10,29 @@
 
 - Trên DC-L36-GTWY04 ghi nhận RE0 bị reboot gây switchover vai trò master sang RE1
 
+```text
 root@DC-L36-GTWY04> show chassis routing-engine | match "Slot|State|Start"
+```
 
 Slot 0:
 
+```text
 Current state                  Backup
+```
 
 Start time                    2022-04-03 08:29:18 ICT
 
 Slot 1:
 
+```text
 Current state                  Master
+```
 
 Start time                    2021-08-01 13:05:36 ICT
 
+```text
 root@DC-L36-GTWY04> show chassis alarms no-forwarding
+```
 
 1 alarms currently active
 
@@ -34,7 +42,9 @@ Alarm time              Class  Description
 
 - Phát sinh coredumps trên RE0 tại đúng thời điểm RE0 bị reboot
 
+```text
 root@DC-L36-GTWY04> show system core-dumps no-forwarding
+```
 
 - rw-------  1 root  wheel  1403523072 Jul 29  2021 /var/crash/vmcore.0
 
@@ -58,37 +68,61 @@ total files: 4
 
 - Logs trên thiết bị tại thời điểm phát sinh ghi nhân nhiều log bị quét port ssh. Kiểm tra trên các thiết bị cùng chức năng thì có GTWY03 cũng có log quét port ssh tương tự. Tuy nhiên, GTWY01 và GTWY02 không xuất hiện log tương tự.
 
+```text
 Apr  3 08:27:50  DC-L36-GTWY04 sshd[30062]: Failed password for mpcl from 106.51.66.192 port 54888 ssh2
+```
 
+```text
 Apr  3 08:27:50  DC-L36-GTWY04 sshd: SSHD\_LOGIN\_FAILED: Login failed for user 'mpcl' from host '106.51.66.192'
+```
 
+```text
 Apr  3 08:27:51  DC-L36-GTWY04 sshd[30062]: Received disconnect from 106.51.66.192: 11: Bye Bye [preauth]
+```
 
+```text
 Apr  3 08:27:51  DC-L36-GTWY04 sshd[30063]: Received disconnect from 106.51.66.192: 11: Bye Bye
+```
 
 Apr  3 08:27:51  DC-L36-GTWY04 sshd[30062]: Disconnected from 106.51.66.192 [preauth]
 
 Apr  3 08:27:51  DC-L36-GTWY04 inetd[9988]: /usr/sbin/sshd[30062]: exited, status 255
 
+```text
 Apr  3 08:27:53  DC-L36-GTWY04 sshd[30066]: Failed password for arunav from 120.48.17.128 port 38948 ssh2
+```
 
+```text
 Apr  3 08:27:53  DC-L36-GTWY04 sshd: SSHD\_LOGIN\_FAILED: Login failed for user 'arunav' from host '120.48.17.128'
+```
 
+```text
 Apr  3 08:27:53  DC-L36-GTWY04 sshd[30066]: Received disconnect from 120.48.17.128: 11: Bye Bye [preauth]
+```
 
+```text
 Apr  3 08:27:53  DC-L36-GTWY04 sshd[30067]: Received disconnect from 120.48.17.128: 11: Bye Bye
+```
 
 Apr  3 08:27:53  DC-L36-GTWY04 sshd[30066]: Disconnected from 120.48.17.128 [preauth]
 
 Apr  3 08:27:53  DC-L36-GTWY04 inetd[9988]: /usr/sbin/sshd[30066]: exited, status 255
 
+```text
 Apr  3 08:27:56  DC-L36-GTWY04 sshd: SSHD\_LOGIN\_FAILED: Login failed for user 'jahidul' from host '72.167.224.135'
+```
 
+```text
 Apr  3 08:27:56  DC-L36-GTWY04 sshd[30068]: Failed password for jahidul from 72.167.224.135 port 45838 ssh2
+```
 
+```text
 Apr  3 08:27:56  DC-L36-GTWY04 sshd[30068]: Received disconnect from 72.167.224.135: 11: Bye Bye [preauth]
+```
 
+```text
 Apr  3 08:27:56  DC-L36-GTWY04 sshd[30069]: Received disconnect from 72.167.224.135: 11: Bye Bye
+```
 
 Apr  3 08:27:56  DC-L36-GTWY04 sshd[30068]: Disconnected from 72.167.224.135 [preauth]
 
@@ -108,25 +142,37 @@ Apr  3 08:27:56  DC-L36-GTWY04 inetd[9988]: /usr/sbin/sshd[30068]: exited, sta
 
 ### Mở port netconf (830) cho các dãy quản trị
 
+```text
 set firewall family inet filter protect-RE term accept-telnet from destination-port 830
+```
 
 ### Bỏ term accept toàn bộ lưu lượng TCP (không có trên GTWY01)
 
+```text
 delete firewall family inet filter protect-RE term tcp-connection
+```
 
 ### Bỏ action log, action này gây tốn tài nguyên xử lý trên PFE nên không khuyến nghị dùng
 
+```text
 delete firewall family inet filter protect-RE term default then log
+```
 
+```text
 set firewall family inet filter protect-RE term default count df\_discard
+```
 
 ### Tách log liên quan đến firewall ra file riêng để dễ giám sát
 
+```text
 set system syslog file firewall\_log firewall any
+```
 
 ### Chỉ bật khi thực hiện debug rồi sau đó tắt sau khi debug xong
 
+```text
 delete firewall family inet filter protect-RE term default then syslog
+```
 
 - Thực hiện switchover RE0 về vài trò master theo hướng dẫn đính kèm.
 
@@ -134,7 +180,9 @@ Nếu thông tin nào còn chưa rõ, nhờ anh báo lại để em tiếp tục
 
 - ---------------
 
+```text
 test15@DC-L36-GTWY04# show firewall family inet filter protect-RE
+```
 
 Apr 13 10:49:23
 
@@ -436,7 +484,9 @@ discard;
 
 }
 
+```text
 test15@DC-L36-GTWY01# show firewall family inet filter protect-RE
+```
 
 inactive: term block-untrust-source {
 

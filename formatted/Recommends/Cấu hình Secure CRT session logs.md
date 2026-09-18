@@ -6,4 +6,6 @@ START Recording %S (%H) - %h:%m:%s
 
 STOP Recording %S (%H) - %h:%m:%s
 
+```text
 %h:%m:%s.%t
+```

@@ -15,63 +15,113 @@ Config loggging
 
 ### Check General info
 
+```text
 show processes cpu sorted
+```
 
+```text
 show hardware
+```
 
+```text
 show inventory
+```
 
+```text
 show lldp neighbors
+```
 
+```text
 show lldp interface
+```
 
+```text
 show spanning-tree
+```
 
+```text
 show vlan
+```
 
+```text
 show mac address-table
+```
 
+```text
 show arp
+```
 
 ### Check port status
 
+```text
 show interface status
+```
 
+```text
 show ip interface brief
+```
 
+```text
 show interface summary
+```
 
+```text
 show interface
+```
 
 sho int transceiver detail
 
 ### General
 
+```text
 show ip protocols
+```
 
+```text
 show ip route summary
+```
 
+```text
 show snmp group
+```
 
+```text
 show snmp view
+```
 
+```text
 show snmp community
+```
 
 ### OSPF
 
+```text
 show ip ospf neighbor
+```
 
+```text
 show ip ospf interface
+```
 
+```text
 show ip ospf database self-originate
+```
 
+```text
 show ip ospf statistics
+```
 
+```text
 show ip ospf traffic
+```
 
+```text
 show ip ospf rib
+```
 
+```text
 show ip route ospf
+```
 
 ### End
 
@@ -85,19 +135,33 @@ exit
 
 sh swi
 
+```text
 show stackwise-virtual
+```
 
+```text
 show stackwise-virtual dual-active-detection
+```
 
+```text
 show switch
+```
 
+```text
 show redundancy switchover
+```
 
+```text
 show boot
+```
 
+```text
 show version
+```
 
+```text
 show redundancy
+```
 
 - --
 
@@ -107,7 +171,9 @@ The answer is No.
 
 NDNA-Switch\_Switch-9300-1#sh switch stack-mode
 
+```text
 Switch#  Role    Mac Address     Version   Mode  Configured  State
+```
 
 - ----------------------------------------------------------------------------------------
 
@@ -129,11 +195,15 @@ NDNA-Switch\_Switch-9300-1#
 
 \*Jun 10 11:40:43.060: %HA\_CONFIG\_SYNC-6-BULK\_CFGSYNC\_SUCCEED: Bulk Sync succeeded
 
+```text
 \*Jun 10 11:40:53.060: %RF-5-RF\_TERMINAL\_STATE: Terminal state reached for (SSO)
+```
 
 NDNA-Switch\_Switch-9300-1#sh switch stack-mode
 
+```text
 Switch# Role Mac Address Version Mode Configured State
+```
 
 - ------------------------------------------------------------------------
 

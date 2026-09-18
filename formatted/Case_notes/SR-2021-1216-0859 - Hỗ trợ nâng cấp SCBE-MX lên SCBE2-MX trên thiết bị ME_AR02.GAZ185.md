@@ -47,7 +47,9 @@ Routing Engine status:
 
 Slot 0:
 
+```text
 Current state                  Master
+```
 
 Election priority              Master
 
@@ -117,7 +119,9 @@ Uptime                         462 days, 16 minutes, 20
 
 Last reboot reason             Router rebooted after a normal shutdown.
 
+```text
 Load averages:                 1 minute   5 minute  15 minute
+```
 
 0. 02       0.11       0.14
 
@@ -131,11 +135,17 @@ last pid: 37030;  load averages:  0.07,  0.11,  0.14  up 462+00:16:53�
 
 232 processes: 5 running, 197 sleeping, 30 waiting
 
+```text
 Mem: 57M Active, 2379M Inact, 909M Wired, 1687M Buf, 12G Free
+```
 
+```text
 Swap: 8192M Total, 8192M Free
+```
 
+```text
 PID USERNAME PRI NICE   SIZE    RES STATE   C   TIME    WCPU COMMAND
+```
 
 10 root     155 ki31     0K    64K RUN     1    ??? 100.00% idle{idle: cpu1}
 
@@ -167,7 +177,9 @@ devfs                   1.0K       1.0K       �
 
 /dev/gpt/junos           19G       8.9G       8.8G       50%  /.mount
 
-- show version detail no-forwarding
+```text
+show version detail no-forwarding
+```
 
 {master}
 
@@ -181,7 +193,9 @@ re0:
 
 Hostname: ME\_AR02.GAZ185\_RE0
 
+```text
 Junos: 17.3R3-S8.1
+```
 
 - Không phát sinh core-dump
 
@@ -203,7 +217,9 @@ Dec 15 23:58:00
 
 /tftpboot/corefiles/\*core\*: No such file or directory
 
-- Show system resource-monitor fpc <<< không bất tường
+```text
+Show system resource-monitor fpc <<< không bất tường
+```
 
 {master}
 
@@ -227,7 +243,9 @@ Slot #         % Free       RTT  RTT        PFE #  �
 
 1             89       --     --(--)      0            NA          73              99
 
-- show route summary <<< route không nhiều
+```text
+show route summary <<< route không nhiều
+```
 
 {master}
 
@@ -239,19 +257,33 @@ Autonomous system number: 37342
 
 Router ID: 10.250.64.22
 
+```text
 inet.0: 2308 destinations, 2629 routes (2305 active, 0 holddown, 3 hidden)
+```
 
+```text
 Direct:     17 routes,     16 active
+```
 
+```text
 Local:     15 routes,     15 active
+```
 
+```text
 OSPF:   1914 routes,   1914 active
+```
 
+```text
 BGP:    680 routes,    359 active
+```
 
+```text
 RSVP:      2 routes,      0 active
+```
 
+```text
 LDP:      1 routes,      1 active
+```
 
 - Log messages <<< không có log lạ
 - Log interactive-commands <<< chưa check
@@ -259,47 +291,85 @@ LDP:      1 routes,      1 active
 
 Thu thập các thông tin liên quan
 
+```text
 > request support information | no-more | save /var/log/RSI\_ME\_PR01.GAZ185\_20211216
+```
 
+```text
 > file archive source /var/log/\* destination /var/log/LOG\_ME\_PR01.GAZ185\_20211216
+```
 
+```text
 > show configuration | no-more | save /var/log/CONFIG\_ME\_AR02.GAZ185\_20211216
+```
 
+```text
 > show version invoke-on all-routing-engines | match "re0|re1|Junos:"
+```
 
+```text
 > show chassis alarms
+```
 
+```text
 > show system alarms
+```
 
+```text
 > show system core-dumps
+```
 
+```text
 > show chassis routing-engine | no-more
+```
 
+```text
 > show chassis routing-engine | match "Slot|State|Start"
+```
 
+```text
 show chassis environment cb | no-more
+```
 
+```text
 show chassis environment cb | match "CB|State"
+```
 
+```text
 > show chassis fabric summary | no-more
+```
 
 /\* Lưu thông tin hardware/fabric/fpc \*/
 
+```text
 > show chassis hardware | no-more
+```
 
+```text
 > show chassis fabric fpcs | no-more
+```
 
+```text
 > show chassis fabric summary extended | no-more
+```
 
+```text
 > show chassis fabric plane | no-more
+```
 
 /\* Lưu thông tin đồng bộ GRES and NSR - KB32931  \*/
 
+```text
 > show system switchover /\* Show on Backup RE – GRES Readiness Check\*/
+```
 
+```text
 > show task replication  /\* Show on Master RE – RPD Synchronization Check\*/
+```
 
+```text
 > show database-replication summary /\* Show on Master RE – For BNG only \*/
+```
 
 Kiểm tra các case cũ, google hướng dẫn thực hiện
 
@@ -340,107 +410,195 @@ Xử lý trên thiết bị
 
 /\* Lưu thông tin cấu hình và RSI \*/
 
+```text
 > set cli timestamp
+```
 
+```text
 > show configuration | no-more
+```
 
+```text
 > request support information | no-more
+```
 
 /\* Lưu thông tin alarm/core \*/
 
+```text
 > show system alarms
+```
 
+```text
 > show chassis alarms
+```
 
+```text
 > show system core-dumps
+```
 
 /\* Lưu thông tin về IGP \*/
 
+```text
 > show ospf interface | no-more
+```
 
+```text
 > show ospf interface | count
+```
 
+```text
 > show ospf neighbor instance all | no-more
+```
 
+```text
 > show ospf3 interface | no-more
+```
 
+```text
 > show ospf3 interface | count
+```
 
+```text
 > show ospf3 neighbor instance all | no-more
+```
 
 /\* Lưu thông tin về MPLS/LDP/RSVP \*/
 
+```text
 > show mpls interface | no-more
+```
 
+```text
 > show mpls interface | count
+```
 
+```text
 > show ldp interface | no-more
+```
 
+```text
 > show ldp interface | count
+```
 
+```text
 > show rsvp interface | no-more
+```
 
+```text
 > show rsvp interface | count
+```
 
+```text
 > show ldp neighbor | no-more
+```
 
+```text
 > show ldp neighbor | count
+```
 
+```text
 > show ldp session | no-more
+```
 
+```text
 > show ldp session | count
+```
 
+```text
 > show rsvp session | no-more
+```
 
+```text
 > show rsvp session | count
+```
 
+```text
 > show mpls lsp | no-more
+```
 
 /\* Lưu thông tin về BGP \*/
 
+```text
 > shwo bgp sum | no-more
+```
 
+```text
 show bgp summary | match Establ | count
+```
 
+```text
 > show bgp neighbor | no-more
+```
 
+```text
 > show route summary | no-more
+```
 
+```text
 > show bfd session detail | no-more
+```
 
 /\* Lưu thông tin VRRP/L2VPN/VPLS/LLDP/BFD \*/
 
+```text
 > show vrrp | no-more
+```
 
+```text
 > show l2circuit connections | no-more
+```
 
+```text
 > show vpls connections | no-more
+```
 
+```text
 > show vpls mac-table | no-more
+```
 
+```text
 > show lldp neighbors | no-more
+```
 
+```text
 > show bfd session detail | no-more
+```
 
 /\* Lưu thông tin hardware/fabric/fpc \*/
 
+```text
 > show chassis hardware | no-more
+```
 
+```text
 > show chassis fabric fpcs | no-more
+```
 
+```text
 > show chassis fabric summary extended | no-more
+```
 
+```text
 > show chassis fabric plane | no-more
+```
 
 /\* Lưu thông tin đồng bộ GRES and NSR - KB32931  \*/
 
+```text
 > show system switchover /\* Show on Backup RE – GRES Readiness Check \*/
+```
 
+```text
 > show task replication  /\* Show on Master RE – RPD Synchronization Check \*/
+```
 
+```text
 > show database-replication summary /\* Show on Master RE – For BNG only \*/
+```
 
+```text
 > show system subscriber-management summary
+```
 
 - Kiểm tra điều kiện bắt buộc để sử dụng được MX-SCBE2
 
@@ -461,7 +619,9 @@ re0:
 
 Hostname: ME\_AR02.GAZ185\_RE0
 
+```text
 Junos: 17.3R3-S8.1
+```
 
 {master}
 
@@ -471,7 +631,9 @@ Dec 16 00:04:31
 
 Network Services Mode: Enhanced-IP
 
+```text
 >>> Thiết bị đã đủ điều kiện để nâng cấp MX-SCBE2
+```
 
 - Tiến hành Power-off thiết bị bằng lệnh "request system halt both-routing-engines" để tắt RE một cách an toàn.
 
@@ -530,7 +692,9 @@ vietpn@ME\_AR02.GAZ185\_RE0> show chassis fpc
 
 Temp  CPU Utilization (%)   CPU Utilization (%)  Memory    Utilization (%)
 
+```text
 Slot State            (C)  Total  Interrupt      1min   5min   15min  DRAM (MB) Heap     Buffer
+```
 
 0  Online            23      8          0        8      3      1    2048        8         20
 
@@ -554,7 +718,9 @@ Hostname: ME\_AR02.GAZ185\_RE0
 
 Model: mx480
 
+```text
 Junos: 17.3R3-S8.1
+```
 
 - -------
 
@@ -566,19 +732,33 @@ Autonomous system number: 37342
 
 Router ID: 10.250.64.22
 
+```text
 inet.0: 2308 destinations, 2629 routes (2305 active, 0 holddown, 3 hidden)
+```
 
+```text
 Direct:     17 routes,     16 active
+```
 
+```text
 Local:     15 routes,     15 active
+```
 
+```text
 OSPF:   1914 routes,   1914 active
+```
 
+```text
 BGP:    680 routes,    359 active
+```
 
+```text
 RSVP:      2 routes,      0 active
+```
 
+```text
 LDP:      1 routes,      1 active
+```
 
 - -------
 
@@ -586,11 +766,17 @@ vietpn@ME\_AR02.GAZ185\_RE0> show system processes extensive | except 0.00
 
 263 processes: 5 running, 228 sleeping, 30 waiting
 
+```text
 Mem: 716M Active, 1484M Inact, 648M Wired, 1643M Buf, 13G Free
+```
 
+```text
 Swap: 8192M Total, 8192M Free
+```
 
+```text
 PID USERNAME PRI NICE   SIZE    RES STATE   C   TIME    WCPU COMMAND
+```
 
 4754 root      23    0   825M 47360K nanslp  0   0:34   4.79% chassisd{chassisd}
 
@@ -602,15 +788,21 @@ PID USERNAME PRI NICE   SIZE    RES STATE   C   TIME    WCPU CO
 
 {master}
 
+```text
 vietpn@ME\_AR02.GAZ185\_RE0> show chassis environment cb | match "CB|state"
+```
 
 CB 0 status:
 
+```text
 State                      Online Master
+```
 
 CB 1 status:
 
+```text
 State                      Online
+```
 
 - -------
 
@@ -618,7 +810,9 @@ State                      Online
 
 vietpn@ME\_AR02.GAZ185\_RE0> show chassis fabric summary
 
+```text
 Plane   State    Uptime
+```
 
 0      Online   7 minutes, 24 seconds
 
@@ -638,7 +832,9 @@ Plane   State    Uptime
 
 Note: For extended summary, use
 
+```text
 show chassis fabric summary extended
+```
 
 - -------
 
@@ -646,7 +842,9 @@ vietpn@ME\_AR02.GAZ185\_RE0> show chassis fabric fpcs
 
 Dec 16 00:40:47
 
+```text
 Fabric management FPC state:
+```
 
 FPC 0
 
@@ -694,9 +892,13 @@ vietpn@ME\_AR02.GAZ185\_RE0> show chassis fabric summary extended
 
 Dec 16 00:41:03
 
+```text
 Plane   State      Link   Link  Destination errors  Uptime
+```
 
+```text
 Error  TF    Local / Remote
+```
 
 0      Online     NO     NO        NO/  NO         8 minutes, 42 seconds
 
@@ -722,7 +924,9 @@ Công việc tiếp theo liên quan đến việc gắn RE mới vào slot 1.
 
 {master}
 
+```text
 > configure private
+```
 
 # deactivate chassis redundancy graceful-switchover
 
@@ -789,16 +993,22 @@ Generating ECDSA key /etc/ssh/ssh\_host\_ecdsa\_key
 
 Generating ED25519 key /etc/ssh/ssh\_host\_ed25519\_key
 
+```text
 commit complete
+```
 
 re0:
 
+```text
 commit complete
+```
 
 - Thực hiện Reboot lại RE1 để đồng bộ network-services enhanced-ip
 - Bật lại tính năng Graceful-switchover và NSR
 
+```text
 > configure
+```
 
 # activate chassis redundancy graceful-switchover
 

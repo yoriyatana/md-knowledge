@@ -24,4 +24,6 @@ MX960: (SCB/SCBE/SCBE2/SCBE3)
 
 - Dùng tối đa 3 card SCB trên mỗi box. Về mặt logical, mỗi SCB sẽ có 2 fabric plane.
 
-- Redundancy: 2+1 hoặc 3+0
+```text
+Redundancy: 2+1 hoặc 3+0
+```

@@ -16,11 +16,15 @@ OSPF Issues
 
 Forming an OSPF Adjacency
 
-- The OSPF neighbor state machine
+```text
+The OSPF neighbor state machine
+```
 
 ![](image/9cd320195b67edf86ab4d801594ef03a.png)
 
+```text
 Moving from Down to Init State (Interface issues)
+```
 
 - Possible Interface Issues
 
@@ -28,7 +32,9 @@ Moving from Down to Init State (Interface issues)
 - 2. Interface is down.
 - 3. No IPv4 address configured on the interface.
 
+```text
 Moving from Down to Init State (Config issues)
+```
 
 - 7 Items must match
 
@@ -48,7 +54,9 @@ Moving from Down to Init State (Config issues)
 - Firewall Filters
 - Interface marked as passive on one or both sides
 
+```text
 Moving from Down to Init State (State issues)
+```
 
 - Multi-Area Adjacency Configuration
 
@@ -56,11 +64,17 @@ Moving from Down to Init State (State issues)
 
 OSPF Adjacency: Useful Commands
 
-- show ospf neighbor
+```text
+show ospf neighbor
+```
 
+```text
 user@router> show ospf neighbor
+```
 
+```text
 Address Interface State ID Pri Dead
+```
 
 111. 127.0.55 ge-0/0/1.0 Full 111.127.255.1 128 28
 
@@ -68,16 +82,24 @@ Address Interface State ID Pri Dead
 
 111. 127.0.42 ge-0/0/3.0 ExStart 111.127.255.8 128 26
 
-- Used with the **detail** option the command shows the adjacency age, and also DR and BDR (on a LAN interface) .
-- Remember that on a LAN, the state between two neighbors that are not DR or BDR is 2way, not Full
+```text
+Used with the **detail** option the command shows the adjacency age, and also DR and BDR (on a LAN interface) .
+Remember that on a LAN, the state between two neighbors that are not DR or BDR is 2way, not Full
+```
 
 OSPF Adjacency: Useful Commands
 
-- show ospf statistics
+```text
+show ospf statistics
+```
 
-- Only displays error counters
+```text
+Only displays error counters
+```
 
+```text
 user@router> show ospf statistics | find errors
+```
 
 Receive errors:
 
@@ -91,9 +113,13 @@ Receive errors:
 
 213 mtu mismatches
 
+```text
 2 Hellos received with our router ID
+```
 
+```text
 9 Hellos received on point-to-point LAN with DR/BDR elected
+```
 
 - Check for increasing counters
 
@@ -102,26 +128,38 @@ Receive errors:
 
 OSPF Adjacency: Traceoptions (1 of 4)
 
-- If error counters are increasing, you might need to enable traceoptions to find their cause
+```text
+If error counters are increasing, you might need to enable traceoptions to find their cause
+```
 
-- The OSPF statistic will only give you error counters
+```text
+The OSPF statistic will only give you error counters
+```
 
 [edit protocols ospf]
 
+```text
 user@router# show
+```
 
 traceoptions {
 
+```text
 file ospf.log size 10m files 3;
+```
 
+```text
 flag error detail;
+```
 
 flag hello detail;
 
 )
 
-- Hellos are sent by default every 10 seconds on both a point-to-point and LAN interfaces
-- A good approach is to use flag error at first
+```text
+Hellos are sent by default every 10 seconds on both a point-to-point and LAN interfaces
+A good approach is to use flag error at first
+```
 
 - And especially in case of sporadic neighbor-down event - add flag hello when needed.
 
@@ -137,7 +175,9 @@ Feb 28 17:09:24.716352 OSPF packet ignored: area nssaness mismatch from 172.22.1
 
 Feb 28 17:11:30.583164 OSPF packet ignored: configuration mismatch from 172.22.138.1 on intf ge-0/0/1.0 area 0.0.0.1
 
-- show log ospf.log | match mismatch
+```text
+show log ospf.log | match mismatch
+```
 
 - Not all entries are easy to interpret.
 - For example: The last log entry is an interface-type mismatch.
@@ -150,8 +190,10 @@ Feb 28 15:07:45.302191 OSPF packet ignored: MTU mismatch from 172.22.138.1 on in
 
 Feb 28 17:30:09.113675 OSPF packet ignored: netmask 255.255.255.252 mismatch from 172.22.138.1 on intf ge-1/1/4.0 area 0.0.0.1
 
-- In case of interface problems, error messages are clear and easy to interpret
-- If you do not see anything in the logs, use traceoptions with flag hello send receive
+```text
+In case of interface problems, error messages are clear and easy to interpret
+If you do not see anything in the logs, use traceoptions with flag hello send receive
+```
 
 - Verify that you are actually receiving hello packets from your neighbor (to rule out communication issues)
 
@@ -161,8 +203,10 @@ OSPF Adjacency: Traceoptions (4 of 4)
 
 - If you name the OSPF traceoptions file as **ospf**, take care not to confuse these two commands:
 
-- show log ospf: Displays the file named **ospf** from the **/var/log** directory
-- show ospf log: Is an internal command that displays some timing statistics about SPF runs;
+```text
+show log ospf: Displays the file named **ospf** from the **/var/log** directory
+show ospf log: Is an internal command that displays some timing statistics about SPF runs;
+```
 
 - Typically, it is not a very useful command
 
@@ -170,11 +214,17 @@ OSPF Adjacency: Monitor Traffic Interface
 
 - Fast and easy way to view OSPF adjacency messages.
 
+```text
 user@srx> monitor traffic interface ge-0/0/1.0 matching "dst 224.0.0.5"
+```
 
+```text
 lab@R2# run monitor traffic interface ge-0/0/1 detail no-resolve
+```
 
+```text
 18:18:48.441562 In lP (tos OxcO, ttl 1, id 37619, offset 0, flags [none], proto: OSPF (89), length: 76)
+```
 
 172. 20.66.1 > 224.0.0.5: OSPFv2, Hello, length 56 [len 44]
 
@@ -184,7 +234,9 @@ Options [External, LLS]
 
 Hello Timer 10s, Dead Timer 40s, Mask 255.255.255.0, Priority 128
 
+```text
 18:18:55.792647 Out IP (tos OxcO, ttl 1, id 55775, offset 0, flags [none], proto: OSPF (89), length: 80)
+```
 
 172. 20.66.2 > 224.0.0.5: OSPFv2, Hello, length 60 [len 48]
 
@@ -206,7 +258,9 @@ OSPF LSDB Integrity issues
 
 - The router-id is part of the OSPF packet header so the problem is easily detected between directly-connected neighbors
 
+```text
 Mar 5 10:43:20.192787 OSPF packet ignored: our router ID received from 172.22.138.2 on intf ge-1/0/4.0 area 0.0.0.0
+```
 
 - A more complex scenario is when the two routers with duplicated ID are not directly connected
 
@@ -253,17 +307,27 @@ OSPF Routing: Useful Commands (1 of 5)
 
 - Some useful commands:
 
-- show route protocol ospf
+```text
+show route protocol ospf
+```
 
-- Display OSPF-computed routes and their attributes
+```text
+Display OSPF-computed routes and their attributes
+```
 
-- show ospf route
+```text
+show ospf route
+```
 
 - Will tell you the type (intra-area, inter-area, external type-1 and type-2, etc.) of each of the prefixes computed by OSPF
 
-- show ospf database
+```text
+show ospf database
+```
 
-- Allows you to check the content of the link-state database
+```text
+Allows you to check the content of the link-state database
+```
 
 Summarization Issues
 
@@ -271,7 +335,9 @@ Summarization Issues
 
 ![](image/88872649d4da1c161d689650f26f9708.png)
 
+```text
 lab@R2# show protocols ospf
+```
 
 area 0.0.0.0 {
 
@@ -291,7 +357,9 @@ interface lo0.0;
 
 }
 
+```text
 lab@R3# show protocols ospf
+```
 
 area 0.0.0.0 {
 
@@ -321,7 +389,9 @@ Command Issues
 
 ![](image/edf2ac6107a7ab1440c24a1b0500036b.png)
 
+```text
 lab@R2# show protocols ospf
+```
 
 area 0.0.0.0 {
 
@@ -345,7 +415,9 @@ interface lo0.0;
 
 }
 
+```text
 lab@R3# show protocols ospf
+```
 
 area 0.0.0.0 {
 
@@ -379,7 +451,9 @@ Functionality Issues
 
 ![](image/fda8c1ef3922be2381d4d3498096eba6.png)
 
+```text
 lab@R2# show protocols ospf
+```
 
 area 0.0.0.0 {
 
@@ -401,7 +475,9 @@ interface lo0.0;
 
 }
 
+```text
 lab@R3# show protocols ospf
+```
 
 area 0.0.0.0 {
 
@@ -429,10 +505,12 @@ interface lo0.0;
 
 Troubleshooting R5 Neighborship
 
-- Check R5 Neighborship State
-- You begin with checking the R5 neighbors. The show ospf neighbor command indicates that the two neighbors are stuck in exchange start state.
-- Verify OSPF Interface Parameters
-- Use the show ospf interface command to check the interface parameters—the detail option is useful. In this case, the command displays mismatched MTU values on the R4 and R5 interfaces.
+```text
+Check R5 Neighborship State
+You begin with checking the R5 neighbors. The show ospf neighbor command indicates that the two neighbors are stuck in exchange start state.
+Verify OSPF Interface Parameters
+Use the show ospf interface command to check the interface parameters—the detail option is useful. In this case, the command displays mismatched MTU values on the R4 and R5 interfaces.
+```
 
 Troubleshooting R2 Neighborship
 
@@ -444,17 +522,23 @@ user@R2t show
 
 traceoptions (
 
+```text
 file ospf.log;
+```
 
 flag hello detail;
 
+```text
 flag error detail;
+```
 
 }
 
 - • OSPF log file indicates authentication failure
 
+```text
 user@R2> show log ospf.log
+```
 
 Mar 13 23:51:28 srxA-1 clear-log[9348]: logfile cleared
 
@@ -470,11 +554,13 @@ Mar 13 23:51:35.489914 OSPF packet ignored: authentication failure from 10.222.0
 
 Troubleshooting R2 Neighborship (3 of 3)
 
-- Collected data
-- • The previously active adjacencies failed all at one time
-- • Debugging reveals authentication issues
-- • Interfaces show a new authentication key rollover time
-- • Authentication issues began after the new key rollover
-- Solution
-- • Make sure that all authentication keys match
-- • Check neighborship
+```text
+Collected data
+• The previously active adjacencies failed all at one time
+• Debugging reveals authentication issues
+• Interfaces show a new authentication key rollover time
+• Authentication issues began after the new key rollover
+Solution
+• Make sure that all authentication keys match
+• Check neighborship
+```

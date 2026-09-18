@@ -14,11 +14,15 @@ I have OSPF running between PEs and CEs. The configuration on CEs is extremely s
 
 PE1:
 
+```text
 root@PE1# show protocols bgp
+```
 
 export OSPF\_2\_BGP;
 
+```text
 group VPN\_BGP {
+```
 
 type internal;
 
@@ -34,7 +38,9 @@ neighbor 3.3.3.3;
 
 }
 
+```text
 root@PE1# show policy-options policy-statement OSPF\_2\_BGP
+```
 
 term 1 {
 
@@ -46,11 +52,15 @@ then accept;
 
 And a similar configuration on PE2:
 
+```text
 root@PE2# show protocols bgp
+```
 
 export OSPF\_2\_BGP;
 
+```text
 group VPN\_BGP {
+```
 
 type internal;
 
@@ -142,7 +152,9 @@ bgp {
 
 export OSPF\_2\_BGP;
 
+```text
 group VPN\_BGP {
+```
 
 type internal;
 
@@ -238,29 +250,43 @@ then accept;
 
 }
 
+```text
 Let's make a check for received routes on PE2:
+```
 
+```text
 root@PE2# run show route receive-protocol bgp 1.1.1.1 table inet6.0
+```
 
+```text
 inet6.0: 7 destinations, 7 routes (6 active, 0 holddown, 1 hidden)
+```
 
 Oh.
 
 Let's find out why it's hidden:
 
+```text
 root@PE2# run show route 4001::1/128 hidden
+```
 
+```text
 inet6.0: 7 destinations, 7 routes (6 active, 0 holddown, 1 hidden)
+```
 
 + = Active Route, - = Last Active, \* = Both
 
 4001::1/128         [BGP/170] 00:08:58, MED 1, localpref 100, from 1.1.1.1
 
+```text
 AS path: I, validation-state: unverified
+```
 
 Unusable
 
+```text
 root@PE2# run show route 4001::1/128 extensive hidden | match "next hop"
+```
 
 Next hop type: Unusable
 
@@ -286,49 +312,77 @@ So what we're doing in fact is telling "Associate this IPv4 prefix with that IPv
 
 This is done with set protocols mpls ipv6-tunneling. Let's configure it and see what happens:
 
+```text
 root@PE2# set protocols mpls ipv6-tunneling
+```
 
+```text
 root@PE2# commit
+```
 
+```text
 commit complete
+```
 
+```text
 root@PE2# run show route 4001::1
+```
 
+```text
 inet6.0: 7 destinations, 7 routes (7 active, 0 holddown, 0 hidden)
+```
 
 + = Active Route, - = Last Active, \* = Both
 
 4001::1/128        \*[BGP/170] 02:03:38, MED 1, localpref 100, from 1.1.1.1
 
+```text
 AS path: I, validation-state: unverified
+```
 
+```text
 > to 10.0.23.2 via ge-0/0/1.0, Push 300032, Push 299856(top)
+```
 
+```text
 root@PE2# run show route table inet6.3
+```
 
+```text
 inet6.3: 2 destinations, 2 routes (2 active, 0 holddown, 0 hidden)
+```
 
 + = Active Route, - = Last Active, \* = Both
 
 ::ffff:1.1.1.1/128 \*[LDP/9] 01:46:17, metric 1
 
+```text
 > to 10.0.23.2 via ge-0/0/1.0, Push **299856**
+```
 
 ::ffff:2.2.2.2/128 \*[LDP/9] 01:46:17, metric 1
 
+```text
 > to 10.0.23.2 via ge-0/0/1.0
+```
 
 Cool. We can confirm that label used to reach ::ffff:1.1.1.1/128 is the same label that is used to reach 1.1.1.1:
 
+```text
 root@PE2# run show route table inet.3 1.1.1.1
+```
 
+```text
 inet.3: 2 destinations, 2 routes (2 active, 0 holddown, 0 hidden)
+```
 
 + = Active Route, - = Last Active, \* = Both
 
 1. 1.1.1/32         \*[LDP/9] 01:59:20, metric 1
 
+```text
 > to 10.0.23.2 via ge-0/0/1.0, Push **299856**
+```
 
 Let's confirm everything is fine now:
 
@@ -342,7 +396,9 @@ Packet sent with a source address of 6001::1
 
 !!!!!
 
+```text
 Success rate is 100 percent (5/5), round-trip min/avg/max = 7/19/61 ms
+```
 
 We could've stopped here. But what if we want to add another client on PE1 side? Let's assume this client advertises 4002::1/32 to us. Like that:
 
@@ -350,45 +406,69 @@ We could've stopped here. But what if we want to add another client on PE1 side?
 
 That's what we'll see on PE2 then:
 
+```text
 root@PE2# run show route protocol bgp table inet6.0
+```
 
+```text
 inet6.0: 8 destinations, 8 routes (8 active, 0 holddown, 0 hidden)
+```
 
 + = Active Route, - = Last Active, \* = Both
 
 4001::1/128        \*[BGP/170] 02:25:05, MED 1, localpref 100, from 1.1.1.1
 
+```text
 AS path: I, validation-state: unverified
+```
 
+```text
 > to 10.0.23.2 via ge-0/0/1.0, Push **300032**, Push 299856(top)
+```
 
 4002::1/128        \*[BGP/170] 00:01:19, MED 1, localpref 100, from 1.1.1.1
 
+```text
 AS path: I, validation-state: unverified
+```
 
+```text
 > to 10.0.23.2 via ge-0/0/1.0, Push **300048**, Push 299856(top)
+```
 
 See? We still use 299856 to reach PE1, that's label advertised to us via LDP. But there's also bottom label advertised via BGP-LU - and it's different for these two destinations. Let's check PE1:
 
+```text
 root@PE1# run show route table mpls.0 label **300032**
+```
 
+```text
 mpls.0: 11 destinations, 11 routes (11 active, 0 holddown, 0 hidden)
+```
 
 + = Active Route, - = Last Active, \* = Both
 
 300032             \*[VPN/170] 02:29:01
 
+```text
 > to fe80::a8bb:ccff:fe00:510 via **ge-0/0/1.0**, Pop
+```
 
+```text
 root@PE1# run show route table mpls.0 label **300048**
+```
 
+```text
 mpls.0: 11 destinations, 11 routes (11 active, 0 holddown, 0 hidden)
+```
 
 + = Active Route, - = Last Active, \* = Both
 
 300048             \*[VPN/170] 00:05:27
 
+```text
 > to fe80::a8bb:ccff:fe00:620 via **ge-0/0/2.0**, Pop
+```
 
 At the moment PE1 assigns prefixes per next-hop. So we'll end up having as many labels as many connected client links we have.
 
@@ -398,33 +478,51 @@ That's where "explicit null" comes in.
 
 Let's just configure on PE1:
 
+```text
 set protocols bgp group VPN\_BGP family inet6 labeled-unicast explicit-null
+```
 
 and see what happens on PE2:
 
+```text
 root@PE2# run show route protocol bgp table inet6.0
+```
 
+```text
 inet6.0: 8 destinations, 8 routes (8 active, 0 holddown, 0 hidden)
+```
 
 + = Active Route, - = Last Active, \* = Both
 
 4001::1/128        \*[BGP/170] 00:00:05, MED 1, localpref 100, from 1.1.1.1
 
+```text
 AS path: I, validation-state: unverified
+```
 
+```text
 > to 10.0.23.2 via ge-0/0/1.0, Push 2, Push 299856(top)
+```
 
 4002::1/128        \*[BGP/170] 00:00:05, MED 1, localpref 100, from 1.1.1.1
 
+```text
 AS path: I, validation-state: unverified
+```
 
+```text
 > to 10.0.23.2 via ge-0/0/1.0, Push 2, Push 299856(top)
+```
 
 Perfect. Let's check what's going on PE1:
 
+```text
 root@PE1# run show route table mpls.0 label 2
+```
 
+```text
 mpls.0: 9 destinations, 9 routes (9 active, 0 holddown, 0 hidden)
+```
 
 + = Active Route, - = Last Active, \* = Both
 
@@ -450,9 +548,13 @@ Oh, no. We ruined everything.
 
 It can be fixed easily, however, with assigning inet6 address-family to core-facing PEs interfaces:
 
+```text
 root@PE1# set interfaces ge-0/0/0 unit 0 family inet6
+```
 
+```text
 root@PE2# set interfaces ge-0/0/1 unit 0 family inet6
+```
 
 Client2#ping 4001::1 so 6001::1
 
@@ -464,7 +566,9 @@ Packet sent with a source address of 6001::1
 
 !!!!!
 
+```text
 Success rate is 100 percent (5/5), round-trip min/avg/max = 7/8/13 ms
+```
 
 Why do we need to do this? Well, that's just a guess, but note once again that what when we had a per-next-hop label assignment, there was **no ip lookup performed at all** - when packet arrived to PE1, PE1 only looked up MPLS label in mpls.0 table and forwarded the packet to the interface that label was bound to. Remember, we had a different label per each outgoing interface.
 

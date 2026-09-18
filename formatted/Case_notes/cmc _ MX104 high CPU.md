@@ -34,7 +34,9 @@ Thu thập thông tin:
 
 - Get output for first terminal (Thu thập output ở termial 1)
 
+```text
 set cli timestamp
+```
 
 * *### (Need root pasword) - (Bước này cần password root của thiết bị)**
 

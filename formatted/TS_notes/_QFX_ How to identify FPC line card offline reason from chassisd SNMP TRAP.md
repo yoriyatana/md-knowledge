@@ -20,7 +20,9 @@ Code#  Reason                      Explanation
 
 2      none                        none
 
+```text
 3      error                        error
+```
 
 4      noPower                      no power
 
@@ -78,7 +80,9 @@ Code#  Reason                      Explanation
 
 31    fruFebOffline                FEB was offlined
 
+```text
 32    fruInServSoftUpgradeError    In Service Software Upgrade Error
+```
 
 33    fruChasdPowerRatingExceed    Chassis power rating exceeded
 
@@ -114,7 +118,9 @@ Code#  Reason                      Explanation
 
 49    reconnectFpcFail            Reconnect FPC fail
 
+```text
 50    fpcAppFailed                FPC app failed
+```
 
 51    fpcKernelCrash              FPC kernel crash
 
@@ -146,7 +152,9 @@ Code#  Reason                      Explanation
 
 65    fruFPCChassisClusterDisable  FPC offlined due to Chassis Cluster Disable
 
+```text
 66    spuFipsError                  SPU fips error
+```
 
 67    fruFPCFabricDownOffline      FPC offlined due to Fabric down
 
@@ -170,7 +178,9 @@ Code#  Reason                      Explanation
 
 77    builtinPicBounce              Builtin PIC Bounce
 
+```text
 78    fruFabricDegraded            Fabric running in degraded state
+```
 
 79    fruFPCFabricDegradedOffline  FPC offlined due to degraded fabric action
 
@@ -190,7 +200,9 @@ Code#  Reason                      Explanation
 
 87    fruFpcFanTrayPEMIncompatible  FPC incompatible with FAN-TRAYs PEMs
 
+```text
 88    fruUnsupportedFirmware        Firmware on this FRU not supported
+```
 
 89    openflowConfigChange          Openflow config change offlines FPC
 
@@ -198,9 +210,13 @@ Code#  Reason                      Explanation
 
 91    fruReUnresponsive            Corresponding slot RE unresponsive
 
+```text
 92    hwError                      Hardware error
+```
 
+```text
 93    fruErrorManagerReqFPCReset    Error manager requested FPC reset.
+```
 
 94    fruIncompatibleWithPEM        FRU incompatible with power supply
 
@@ -216,11 +232,17 @@ Code#  Reason                      Explanation
 
 100    fruFpcPEMIncompatible        FPC incompatible with PEMs
 
+```text
 101    mixedSwitchFabric            Mixed Switch Fabric error
+```
 
+```text
 102    unsupportedFabric            unsupported Fabric error
+```
 
+```text
 103    jamConfigError              JAM configuration error
+```
 
 104    fruFpcHFanTrayIncompatible  FPC incompatible with Horizontal FAN-TRAYs
 

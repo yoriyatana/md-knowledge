@@ -4,9 +4,13 @@ Dear anh Đăng, anh Hưng, a Cương
 
 Team em đang test PoC Junos version 20.4R3-S3 cho BNG Viettel, target khuyến nghị nâng cấp OS cho BNG Viettel và cả VnPT lên 20.4R3-S3, tuy nhiên trong quá trình test scaling max subscribers cho các line card KH đang sử dụng thì gặp lỗi với memory của MPC7E-MRATE
 
-1. Test case scenario
+```text
+Test case scenario
+```
 
-- Test scaling quay số PPPoE Dual-stack 32K sub lên 1 PFE của MPC7E-MRATE
+```text
+Test scaling quay số PPPoE Dual-stack 32K sub lên 1 PFE của MPC7E-MRATE
+```
 
 2. Lỗi ghi nhận trong quá trình test
 
@@ -25,9 +29,11 @@ Team em đang test PoC Junos version 20.4R3-S3 cho BNG Viettel, target khuyến 
 
 3. Jtac/Engineering phản hồi
 
-- Case-id: 2022-0629-502042
-- Jtac giả lập trên lab xác nhận đúng lỗi như lab Svtech
-- Jtac involve Engineering và xác nhận lỗi này match PR1645505
+```text
+Case-id: 2022-0629-502042
+Jtac giả lập trên lab xác nhận đúng lỗi như lab Svtech
+Jtac involve Engineering và xác nhận lỗi này match PR1645505
+```
 
 Tuy nhiên bọn em đọc PR1645505 không thấy trigger hay lỗi liên quan lắm để case bọn em đang ghi nhân thấy, và Jtac support case này hơi chậm. Do số lượng box BNG sử dụng MPC7E cần nâng cấp của VTel và VnPT là rất nhiều
 

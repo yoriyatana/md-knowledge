@@ -9,24 +9,30 @@
 
 JunOS Troubleshooting Tools
 
-- CLI commands
-- Traceoptions
-- Shmlogs
-- Tcpdump
-- Shell outputs
+```text
+CLI commands
+Traceoptions
+Shmlogs
+Tcpdump
+Shell outputs
+```
 
 - should be used in case if other tools doesn’t give a clue about an issue
 
 - Live core
 
-- Non service-affecting
-- Contains s snapshot of the process state at the moment of creating
-- **Should be generated only on JTAC request**
+```text
+Non service-affecting
+Contains s snapshot of the process state at the moment of creating
+**Should be generated only on JTAC request**
+```
 
 CLI Commands (1/11)
 
-- Basic Tomcat health check
-- show system subscriber-management summary
+```text
+Basic Tomcat health check
+show system subscriber-management summary
+```
 
 root@ams\_bng1\_re> show system subscriber-management summary
 
@@ -40,13 +46,19 @@ Database            Available
 
 Standby              Resync (100%)
 
+```text
 Chassisd ISSU State  IDLE
+```
 
+```text
 ISSU State          IDLE
+```
 
 ISSU Wait            0
 
-- show system subscriber-management status
+```text
+show system subscriber-management status
+```
 
 - shows thread information
 
@@ -66,10 +78,14 @@ BBE IO          thread\_id = 0xa416a80
 
 last cli locker thread\_id = 0xa416580, lock count = 0
 
-- show system subscriber-management info
+```text
+show system subscriber-management info
+```
 
-- hidden command
-- shows run-time configuration state
+```text
+hidden command
+shows run-time configuration state
+```
 
 root@ams\_bng1\_re> show system subscriber-management info
 
@@ -77,71 +93,123 @@ Session Manager started @    Thu Mar  7 16:56:21 2019
 
 Session Manager cleared @    Thu Mar  7 16:56:21 2019
 
+```text
 gres state enabled state                  1
+```
 
+```text
 commit sync enabled state                1
+```
 
+```text
 nsr state enabled state                  1
+```
 
+```text
 gratuitous arp disable state              0
+```
 
+```text
 gratuitous nd disable state              0
+```
 
+```text
 nd override preferred src enable state    0
+```
 
+```text
 force dynamic nd state                    0
+```
 
+```text
 unsolicted ra disabled state              0
+```
 
+```text
 force ra unicast dst enabled state        0
+```
 
+```text
 unsolicted mlr disabled state            0
+```
 
+```text
 shmlog disabled state                    0
+```
 
+```text
 vc backup member local switch state      0
+```
 
 cold start enabled                        0
 
+```text
 force show arp no resolve state          0
+```
 
+```text
 arp-ping liveness detection enabled state 0
+```
 
+```text
 ipv6-nud liveness detection enabled state 0
+```
 
+```text
 gratuitous arp recv proc enabled state    0
+```
 
+```text
 ipoe dynamic arp enabled state            0
+```
 
 CLI commands (2/11)
 
-- show subscribers
+```text
+show subscribers
+```
 
 - different filters to check subscriber’s status
 - “summary” knob to check subscribers counter per chassis, slot, port, routing instance
 - “extensive” knob gives subscriber’s RADIUS attributes and provides VBF flow ID:
 
+```text
 lab@BNG-01> show subscribers summary all
+```
 
+```text
 Subscribers by State
+```
 
+```text
 Active: 18
+```
 
+```text
 Total: 18
+```
 
 Subscribers by Client Type
 
+```text
 VLAN: 2
+```
 
+```text
 PPPoE: 16
+```
 
 Subscribers by LS:RI
 
+```text
 default: 2
+```
 
 default:VR-CGNAT: 16
 
+```text
 lab@BNG-01> show subscribers summary port
+```
 
 Interface          Count
 
@@ -153,16 +221,22 @@ ae5: xe-0/1/7      16
 
 Total Subscribers: 16
 
-- PPPoE statistics
+```text
+PPPoE statistics
+```
 
 - Aggregate statistics: show pppoe statistics
 - Per underlying interface: show pppoe underlying-interfaces  extensive
 
+```text
 lab@BNG-01> show pppoe statistics
+```
 
 Active PPPoE sessions: 16
 
+```text
 PacketType                      Sent        Received
+```
 
 PADI                              0            3752
 
@@ -174,21 +248,31 @@ PADS                            112                0
 
 PADT                            96                5
 
+```text
 Service name error                0                0
+```
 
+```text
 AC system error                  0                0
+```
 
+```text
 Generic error                    0                0
+```
 
 Malformed packets                0                0
 
 Unknown packets                  0                0
 
+```text
 lab@BNG-01> show pppoe underlying-interfaces extensive
+```
 
 demux0.3221225686 Index 536871166
 
+```text
 State: Dynamic, Dynamic Profile: PPPoE-PROFILES,
+```
 
 Max Sessions: 32000, Max Sessions VSA Ignore: Off,
 
@@ -218,14 +302,20 @@ Total clients in lockout: 0
 
 Total clients in lockout grace period: 0
 
-- show pppoe interfaces brief
+```text
+show pppoe interfaces brief
+```
 
 - Allows to obtain underlying interface name and PPPoE session ID
 - Interface name can be an argument in the command
 
+```text
 lab@BNG-01> show pppoe interfaces brief
+```
 
+```text
 Interface      Underlying            State      Session    Remote
+```
 
 interface                        ID        MAC
 
@@ -261,7 +351,9 @@ pp0.3221225741  demux0.3221225687    Session Up  11        50:09:00:0E:0
 
 pp0.3221225742  demux0.3221225686    Session Up  15        50:09:00:0A:00:06
 
-- show pppoe lockout
+```text
+show pppoe lockout
+```
 
 - Underlying interface can be an argument in the command
 
@@ -270,7 +362,9 @@ root@ams\_bng1\_re> show subscribers user-name u1@orange.pl extensive | match PF
 PFE Flow ID: 112 <<<< VBF flow ID
 - **show pppoe lockout | match "VLAN|lockout:"**
 
+```text
 lab@BNG-01> show pppoe lockout
+```
 
 Device: ae5, VLAN: 100
 
@@ -280,13 +374,17 @@ demux0.3221225687 Index 536871167
 
 Device: ae5, VLAN: 200
 
+```text
 lab@BNG-01> show subscribers user-name MIK1-V\_100-HSI2 extensive | match PFE
+```
 
 PFE Flow ID: 308
 
 CLI commands (3/11)
 
+```text
 lab@BNG-01> show system subscriber-management statistics ppp
+```
 
 Session Manager started @ Wed Jun 16 06:29:43 2021
 
@@ -362,7 +460,9 @@ NET Statistics:
 
 ARP Statistics
 
+```text
 request packets                  : 0
+```
 
 reply packets                    : 0
 
@@ -370,12 +470,16 @@ invalid iffs                    : 64
 
 CLI commands (4/11)
 
-- show ppp interface
+```text
+show ppp interface
+```
 
 - Gives brief information about states of different phases
 - “extensive” knob gives more information:
 
+```text
 lab@BNG-01> show ppp interface pp0.3221225736 extensive
+```
 
 Session pp0.3221225736, Type: PPP, Phase: Network
 
@@ -385,7 +489,9 @@ Magic-Number validation: enable
 
 LCP
 
+```text
 State: Opened
+```
 
 Last started: 2021-06-16 11:53:41 UTC
 
@@ -397,7 +503,9 @@ Authentication protocol: pap, Magic number: 301491486, Initial Advertised MRU: 1
 
 Authentication: PAP
 
+```text
 State: Grant
+```
 
 IPCP
 
@@ -407,9 +515,13 @@ Negotiation mode: Passive
 
 CLI command (5/11)
 
-- show interface
+```text
+show interface
+```
 
+```text
 lab@BNG-01> show interfaces pp0.3221225736
+```
 
 Logical interface pp0.3221225736 (Index 536871216) (SNMP ifIndex 200000304)
 
@@ -417,7 +529,9 @@ Flags: Up Point-To-Point Encapsulation: PPPoE
 
 PPPoE:
 
+```text
 State: SessionUp, Session ID: 2,
+```
 
 Session AC name: BNG-01, Remote MAC address: 50:09:00:0a:00:05,
 
@@ -439,13 +553,21 @@ Output packets: 845
 
 Keepalive settings: Interval 60 seconds, Up-count 3, Down-count 3
 
+```text
 LCP state: Opened
+```
 
+```text
 NCP state: inet: Opened, inet6: Not-configured, iso: Not-configured, mpls: Not-configured
+```
 
+```text
 CHAP state: Closed
+```
 
+```text
 PAP state: Success
+```
 
 Protocol inet, MTU: 1480
 
@@ -457,24 +579,36 @@ Donor interface: lo0.13 (Index 71)
 
 Addresses, Flags: Is-Primary
 
+```text
 Local: 10.126.0.1
+```
 
 CLI commands (6/11)
 
-- show network-access aaa statistics
+```text
+show network-access aaa statistics
+```
 
 - Brief stats about RADIUS communication
 - “detail” knob gives more information about reasons of failures:
 
+```text
 lab@BNG-01> show network-access aaa statistics authentication detail
+```
 
 Authentication module statistics
 
+```text
 Requests received: 0
+```
 
+```text
 Accepts: 0
+```
 
+```text
 Rejects: 0
+```
 
 RADIUS authentication failures: 0
 
@@ -512,11 +646,15 @@ Local authentication failures: 0
 
 LDAP lookup failures: 0
 
+```text
 Challenges: 0
+```
 
 Timed out requests: 0
 
+```text
 lab@BNG-01> show network-access aaa statistics accounting detail
+```
 
 Accounting module statistics
 
@@ -556,7 +694,9 @@ Accounting retransmissions: 0
 
 Accounting bad authenticators: 0
 
+```text
 Accounting packets dropped: 0
+```
 
 Accounting backup record creation requests: 0
 
@@ -586,7 +726,9 @@ Accounting backup malformed responses: 0
 
 Accounting backup bad authenticators: 0
 
+```text
 Accounting backup responses dropped: 0
+```
 
 Accounting backup rollover requests: 0
 
@@ -594,7 +736,9 @@ Accounting backup unknown responses: 0
 
 CLI commands (7/11)
 
-- show network-access aaa terminate-code brief
+```text
+show network-access aaa terminate-code brief
+```
 
 - Shows aggregate counters explaining subscribers’ disconnect reasons
 - Most popular codes: https://kb.juniper.net/InfoCenter/index?page=content&id=KB33598
@@ -626,9 +770,13 @@ CLI Commands (8/11)
 
 - Subscriber’s route has “Private Unicast Next-Hop” in ‘show route’ output:
 
+```text
 lab@BNG-01> show route 10.126.0.102
+```
 
+```text
 VR-CGNAT.inet.0: 22 destinations, 22 routes (22 active, 0 holddown, 0 hidden)
+```
 
 + = Active Route, - = Last Active, \* = Both
 
@@ -638,9 +786,13 @@ Private unicast
 
 - To define physical next-hop, use ‘show system subscriber-management route’ command
 
+```text
 lab@BNG-01> show system subscriber-management route prefix 10.126.0.102
+```
 
+```text
 Route:  10.126.0.102/32
+```
 
 Routing-instance:        default:VR-CGNAT
 
@@ -662,22 +814,30 @@ Route index:              101
 
 Next-Hop index:          616
 
+```text
 Reference-count:          1
+```
 
 L2 Address:              50:09:00:0a:00:07
 
+```text
 Flags:                    0x0
+```
 
 CLI Commands (9/11)
 
-- Show class-of-service scheduler-hierarchy interface
-- Shows actual programming of CoS on the subscriber’s interface
+```text
+Show class-of-service scheduler-hierarchy interface
+Shows actual programming of CoS on the subscriber’s interface
+```
 
 root@ams\_bng2\_re> show class-of-service scheduler-hierarchy interface pp0.3221941191
 
 Interface/                        Shaping Guaranteed Guaranteed/  Queue  Excess
 
+```text
 Resource name                      rate      rate        Excess  weight  weight
+```
 
 kbits    kbits        priority          high/low
 
@@ -697,9 +857,13 @@ network-control                2000            0      High High
 
 CLI Commands (10/11)
 
-- show dynamic-configuration session information session-id
+```text
+show dynamic-configuration session information session-id
+```
 
-- display detailed information about dynamic variables and Radius-Returned values
+```text
+display detailed information about dynamic variables and Radius-Returned values
+```
 
 root@ams\_bng1\_re> show dynamic-configuration session information session-id 79
 
@@ -735,7 +899,9 @@ Interface name: pp0.3221225550
 
 Unit number of the interface: 3221225550
 
+```text
 Dynamic-configuration state: 2
+```
 
 Client session type: 64
 
@@ -759,9 +925,13 @@ Framed Protocol: 1
 
 Calling station id: cbr\_bng101#
 
+```text
 Advisory options upstream rate: 0
+```
 
+```text
 Advisory options downstream rate: 0
+```
 
 NAS port: 1001
 
@@ -777,13 +947,19 @@ Dynamic configuration:
 
 TCP-NEO-QOS-GENERIC-PROFILE: TCP-NEO-QOS-GENERIC-PROFILE\_UID1013
 
+```text
 dyn\_TCP-NEO-QOS-GENERIC-PROFILE: 0795e8c9c6fae9746bba5052d36dca02
+```
 
 junos-cos-scheduler-map: SCM-B2B-DATA-ONLY
 
+```text
 junos-cos-shaping-rate: 2M
+```
 
+```text
 junos-cos-shaping-rate-burst: 2M
+```
 
 junos-input-filter: FF-V4-NEO-DSL-50M-IN
 
@@ -797,9 +973,13 @@ junos-underlying-interface: demux0.1021001
 
 CLI Commands (11/11)
 
-- show dynamic-profile session client-id
+```text
+show dynamic-profile session client-id
+```
 
+```text
 lab@BNG-01> show dynamic-profile session client-id 1
+```
 
 SINGLE-VLAN {
 
@@ -827,7 +1007,9 @@ underlying-interface ae5;
 
 family {
 
+```text
 pppoe {
+```
 
 access-concentrator BNG-01;
 
@@ -847,73 +1029,137 @@ Traceoptions
 
 - In vast majority of the situation bbe-smgd logs are needed together with protocol logs:
 
+```text
 set system processes general-authentication-service traceoptions file debug\_gauthd
+```
 
+```text
 set system processes general-authentication-service traceoptions file size 10m
+```
 
+```text
 set system processes general-authentication-service traceoptions file files 10
+```
 
+```text
 set system processes general-authentication-service traceoptions flag all
+```
 
+```text
 set system processes smg-service traceoptions file debug\_bbe-smgd
+```
 
+```text
 set system processes smg-service traceoptions file size 10m
+```
 
+```text
 set system processes smg-service traceoptions file files 10
+```
 
+```text
 set system processes smg-service traceoptions level all
+```
 
+```text
 set system processes smg-service traceoptions flag all
+```
 
+```text
 set protocols ppp-service traceoptions file debug\_ppp
+```
 
+```text
 set protocols ppp-service traceoptions file size 10m
+```
 
+```text
 set protocols ppp-service traceoptions file files 10
+```
 
+```text
 set protocols ppp-service traceoptions level all
+```
 
+```text
 set protocols ppp-service traceoptions flag all
+```
 
+```text
 set protocols pppoe traceoptions file debug\_pppoe
+```
 
+```text
 set protocols pppoe traceoptions file size 10m
+```
 
+```text
 set protocols pppoe traceoptions file files 10
+```
 
+```text
 set protocols pppoe traceoptions level all
+```
 
+```text
 set protocols pppoe traceoptions flag all
+```
 
+```text
 set system services dhcp-local-server traceoptions file debug\_dhcp
+```
 
+```text
 set system services dhcp-local-server traceoptions file size 10m
+```
 
+```text
 set system services dhcp-local-server traceoptions file files 10
+```
 
+```text
 set system services dhcp-local-server traceoptions flag all
+```
 
 - -
 
 ### DHCP new traceoption
 
+```text
 set system processes dhcp-service traceoptions file debug\_dhcp
+```
 
+```text
 set system processes dhcp-service traceoptions file size 10m
+```
 
+```text
 set system processes dhcp-service traceoptions file files 10
+```
 
+```text
 set system processes dhcp-service traceoptions flag all
+```
 
+```text
 clear log debug\_gauthd all
+```
 
+```text
 clear log debug\_bbe-smgd all
+```
 
+```text
 clear log debug\_ppp all
+```
 
+```text
 clear log debug\_pppoe all
+```
 
+```text
 clear log debug\_dhcp all
+```
 
 - That’s possible to filter events related to only one subscriber using “filter user” knob
 
@@ -945,7 +1191,9 @@ root@ams\_bng1\_re> show shmlog entries logname
 
 - Shmlogs entries filtering functionality is subscriber centric i.e. filter per subscriber specific logs.
 
+```text
 > show shmlog entries logname all | match "session\_id=1"
+```
 
 - Events can be filtered for particular daemon log
 
@@ -967,7 +1215,9 @@ Shmlogs (3/3)
 
 - Shmlogs statistics can be displayed from CLI
 
+```text
 > show shmlog statistics logname
+```
 
 - Stores aggregated statistics about events happened on the router
 - Contains information about events, number of occurrence the particular event and timestamp of last event
@@ -1000,51 +1250,95 @@ Address resolution timeout is 4s.
 
 Listening on demux0.1021001, capture size 96 bytes
 
+```text
 15:23:15.666304  In PPPoE PADI
+```
 
+```text
 15:23:15.667966 Out PPPoE PADO [AC-Name "ams\_bng1\_re"] [Service-Name] [AC-Cookie UTF8]
+```
 
+```text
 15:23:15.731384  In PPPoE PADR [Service-Name] [AC-Cookie UTF8]
+```
 
+```text
 15:23:15.734075 Out PPPoE PADS [ses 1] [Service-Name] [AC-Name "ams\_bng1\_re"] [AC-Cookie UTF8]
+```
 
+```text
 15:23:15.803997 Out PPPoE  [ses 1]LCP, Conf-Request (0x01), id 54, length 21
+```
 
+```text
 15:23:15.810060  In PPPoE  [ses 1]LCP, Conf-Request (0x01), id 0, length 16
+```
 
+```text
 15:23:15.810626 Out PPPoE  [ses 1]LCP, Conf-Ack (0x02), id 0, length 16
+```
 
+```text
 15:23:15.843885  In PPPoE  [ses 1]LCP, Conf-Nack (0x03), id 54, length 10
+```
 
+```text
 15:23:15.844520 Out PPPoE  [ses 1]LCP, Conf-Request (0x01), id 55, length 21
+```
 
+```text
 15:23:15.953335  In PPPoE  [ses 1]LCP, Conf-Ack (0x02), id 55, length 21
+```
 
+```text
 15:23:15.954706 Out PPPoE  [ses 1]CHAP, Challenge (0x01), id 163, Value cc121a30f59566e5c03924d37c249f234372b4b45b0ccbd190, Name JUNOS
+```
 
+```text
 15:23:16.036460  In PPPoE  [ses 1]CHAP, Response (0x02), id 163, Value 9edf1d25a67432569e9b35458c4e2d6d, Name u1@orange.pl
+```
 
+```text
 15:23:16.158802 Out PPPoE  [ses 1]CHAP, Success (0x03), id 163, Msg
+```
 
+```text
 15:23:16.187564  In PPPoE  [ses 1]IPCP, Conf-Request (0x01), id 0, length 12
+```
 
+```text
 15:23:16.188347 Out PPPoE  [ses 1]IPCP, Conf-Request (0x01), id 242, length 12
+```
 
+```text
 15:23:16.188461 Out PPPoE  [ses 1]IPCP, Conf-Nack (0x03), id 0, length 12
+```
 
+```text
 15:23:16.190952  In PPPoE  [ses 1]IPCP, Conf-Ack (0x02), id 242, length 12
+```
 
+```text
 15:23:16.190957  In PPPoE  [ses 1]IPCP, Conf-Request (0x01), id 1, length 12
+```
 
+```text
 15:23:16.348215 Out PPPoE  [ses 1]IPCP, Conf-Ack (0x02), id 1, length 12
+```
 
 - Packet capture on interface downlink
 
+```text
 monitor traffic interface ae0 matching "ether host 00:1d:aa:9b:71:31" no-resolve detail|extensive
+```
 
+```text
 monitor traffic interface xe-0/0/0 matching "ether host 54:A6:78:CA:00:00" size 1500 extensive write-file PPPOE-capture.pcap
+```
 
+```text
 monitor traffic interface ae3 extensive matching "ether host 4c:d9:8f:ff:c8:ed" no-resolve extensive size 9000 /var/tmp/ECC-BDH2.pcap
+```
 
 capture SUBSCRIBERS’S PACKET on PFE level
 
@@ -1055,7 +1349,9 @@ capture SUBSCRIBERS’S PACKET on PFE level
 - If pattern locates after that value, offset must be defined
 - Do not forget to turn feature off after capturing
 
-- test jnh 0 packet-via-dmem disable
+```text
+test jnh 0 packet-via-dmem disable
+```
 
 VMX-0(ams\_bng1\_re vty)# test jnh 0 packet-via-dmem disable
 
@@ -1067,9 +1363,13 @@ VMX-0(ams\_bng1\_re vty)# test jnh 0 packet-via-dmem capture 0
 
 VMX-0(ams\_bng1\_re vty)# test jnh 0 packet-via-dmem dump
 
+```text
 Wallclock: 0x47859a3c
+```
 
+```text
 Received 74 byte parcel:
+```
 
 Dispatch cookie: 0x004a000000000000
 
@@ -1099,7 +1399,9 @@ root@ams\_bng1\_re> show system processes extensive | match bbe-smgd
 
 root@ams\_bng1\_re:~ # vty -s 7208 128.0.0.1
 
+```text
 show smd throttle ###collect output at least 3 times with 1 minute time interval
+```
 
 - from RE shell as a root user collect bbe-smgd live core at least two times with 1 minute interval
 
@@ -1107,9 +1409,13 @@ show smd throttle ###collect output at least 3 times with 1 minute time interval
 
 - From CLI collect twice with 1 minute interval:
 
+```text
 > show shmlog statistics logname all | save /var/log/jtac-shmlog-stats.log.0
+```
 
+```text
 > show shmlog entries logname all | save /var/log/jtac-shmlog-entries.log
+```
 
 - Normally issue resolves after restarting bbe-smgd:
 
@@ -1117,15 +1423,23 @@ root@ams\_bng1\_re> restart smg-service
 
 Wrong CHAP Password Configured on CPE
 
-- Step 1: check for amount of Access Reject received from RADIUS:
+```text
+Step 1: check for amount of Access Reject received from RADIUS:
+```
 
 root@ams\_bng1\_re> show network-access aaa statistics authentication
 
+```text
 Requests received: 99
+```
 
+```text
 Accepts: 89
+```
 
+```text
 Rejects: 10
+```
 
 - Alternatively can be found in shmlogs:
 
@@ -1143,7 +1457,9 @@ Mar 14 16:42:59.605918 authd\_radius\_build\_basic\_auth\_request: session-id:12
 
 Mar 14 16:43:00.608711 authd\_radius\_callback: RADIUS server sent an ACCESS\_REJECT, failing login for session-id:123
 
+```text
 Wrong FIREWALL PARAMETERS received from Radius
+```
 
 - Step 1: check shmlogs statistics for any uncommon amount failures. Failures related to this situation are:
 
@@ -1159,7 +1475,9 @@ root@ams\_bng1\_re> show shmlog entries logname bbe-dfw-\* start-from-latest-min
 
 bbe-dfw-prio            254 Mar 14 17:00:44.251891 BBE\_DFW\_DYN\_PROF\_ERR\_STR      session\_id=167: Can't find filter template named FF-V4-NEO-32K-VOIP-OU.
 
+```text
 bbe-dfw-prio            255 Mar 14 17:00:44.251898 BBE\_DFW\_DYN\_PROF\_ERR\_CODE  session\_id=167: Error code 13 (config err TRUE): Filter template not found.
+```
 
 - Step 3: confirm that logs belong to the problematic subscriber:
 
@@ -1169,11 +1487,15 @@ Mar 14 17:00:43.604816 authd\_radius\_build\_basic\_auth\_request: session-id:16
 
 Mar 14 17:00:44.194294 authd\_radius\_send\_acctg\_msg: session-id:167 profile=ACP-CUA username=u1@orange.pl acctg\_id=(167), ls=default, lr=default
 
+```text
 Clear Subscriber’s Session
+```
 
-- clear pppoe session interface
-- clear network-access aaa subscriber username
-- request system subscriber-management release-session id
+```text
+clear pppoe session interface
+clear network-access aaa subscriber username
+request system subscriber-management release-session id
+```
 
 - Hidden command of last resort to clear stuck session
 - Forcibly clears the client session
@@ -1184,27 +1506,43 @@ Clear Subscriber’s Session
 - Stores collected information at /var/tmp/subscribers\_debug\_sid\_session\_id\_cleanup.tar.gz
 - Forcibly clears the client session
 
+```text
 show route 203.113.131.2 | no-more
+```
 
+```text
 show route 203.113.131.2 extensive | no-more
+```
 
+```text
 show route forwarding-table destination 203.113.131.2 | no-more
+```
 
+```text
 show route forwarding-table destination 203.113.131.2 extensive | no-more
+```
 
 1. First test is to validate the PADI packet capture on PFE for GOOD connection on ae81.
 
+```text
 >start shell pfe network FPC2
+```
 
-test jnh 0 packet-via-dmem disable
-
+```text
 test jnh 0 packet-via-dmem enable
+```
 
+```text
 test jnh 0 packet-via-dmem capture 0x3 0x  20
+```
 
+```text
 test jnh 0 packet-via-dmem capture 0x0
+```
 
+```text
 test jnh 0 packet-via-dmem dump
+```
 
 flow-detection
 
@@ -1212,7 +1550,9 @@ global {
 
 flow-detection;
 
+```text
 flow-report-rate 100;
+```
 
 flow-detection-mode off;  ###GLOBAL OFF
 
@@ -1232,7 +1572,9 @@ logical-interface keep;
 
 physical-interface keep;
 
+```text
 lab@batman-re0> show configuration groups debug
+```
 
 system {
 
@@ -1240,7 +1582,9 @@ kernel-replication {
 
 traceoptions {
 
+```text
 file ksyncd size 100m;
+```
 
 level detail;
 
@@ -1250,11 +1594,15 @@ services {
 
 subscriber-management-helper {
 
+```text
 file subshelper.log;
+```
 
 subscriber-management {
 
+```text
 file subs.log;
+```
 
 flag database;
 
@@ -1264,21 +1612,31 @@ flag general;
 
 auto-configuration {
 
+```text
 file autoconfd.log size 10m;
+```
 
 processes {
 
 general-authentication-service {
 
+```text
 file authd.log size 100m files 2;
+```
 
 dhcp-service {
 
+```text
 file jdhcpd.log size 150m files 2;
+```
 
+```text
 file dcd.log size 100m files 2;
+```
 
+```text
 lab@batman-re0> show configuration apply-groups
+```
 
 ## Last commit: 2012-06-13 13:45:24 EST by lab
 
@@ -1298,9 +1656,13 @@ Nhờ anh Tú gửi thêm giúp em các thông tin dưới đây anh nhé:
 
 + Các output: (thực hiện trước khi lấy varlog)
 
+```text
 show shmlog entries logname all | save  /var/log/shmentries1.txt
+```
 
+```text
 show shmlog statistics logname all | save /var/log/shmstatistics1.txt
+```
 
 + RSI brief, varlog của box.
 
@@ -1312,25 +1674,43 @@ Bên em có thể sẽ cần onsite **vào thời điểm lỗi** này ngày mai
 
 2. **Traceoptions of authd/pppoe/ppp/smgd trong vòng 10 phút**
 
+```text
 set system processes general-authentication-service traceoptions file trace\_general-authentication
+```
 
+```text
 set system processes general-authentication-service traceoptions file size 50m
+```
 
+```text
 set system processes smg-service traceoptions file trace\_smg-service
+```
 
+```text
 set system processes smg-service traceoptions file size 100m
+```
 
+```text
 set protocols ppp-service traceoptions file trace\_ppp-service
+```
 
+```text
 set protocols ppp-service traceoptions file size 50m
+```
 
+```text
 set protocols pppoe traceoptions file trace\_pppoe
+```
 
+```text
 set protocols pppoe traceoptions file size 50m
+```
 
 3. **Monitor traffic**
 
+```text
 monitor traffic interface *interface\_name* matching "ether host *subscriber\_mac*" extensive
+```
 
 4. **Các log dưới shell, linecard nếu cần thiết**
 
@@ -1338,107 +1718,201 @@ monitor traffic interface *interface\_name* matching "ether host *subscriber\_ma
 
 Command to collect shmlogs :
 
+```text
 show shmlog entries logname all | save  /var/tmp/shmentries1.txt
+```
 
+```text
 show shmlog statistics logname all | save /var/tmp/shmstatistics1.txt
+```
 
 wait for a 2 minutes and collect
 
+```text
 show shmlog entries logname all | save  /var/tmp/shmentries2.txt
+```
 
+```text
 show shmlog statistics logname all | save /var/tmp/shmstatistics2.txt
+```
 
 6. **CLI logs :  ( the logging could change based on the issue) here are logs to start with.**
 
+```text
 set cli timestamp
+```
 
+```text
 show subscribers summary | no-more
+```
 
+```text
 show subscribers summary port | no-more
+```
 
+```text
 show subscribers summary slot | no-more
+```
 
+```text
 show subscribers summary all | no-more
+```
 
+```text
 show system alarms | no-more
+```
 
+```text
 show chassis fpc |no-more
+```
 
+```text
 show chassis fpc detail | no-more
+```
 
+```text
 show chassis alarms | no-more
+```
 
+```text
 show chassis routing-engine | no-more
+```
 
+```text
 show system subscriber-management info  | no-more
+```
 
+```text
 show system subscriber-management summary | no-more
+```
 
+```text
 show system subscriber-management detail | no-more
+```
 
+```text
 show system subscriber-management statistics all extensive | no-more
+```
 
+```text
 show system configuration database usage | no-more
+```
 
+```text
 show shm-ipc statistics | no-more
+```
 
+```text
 show shmlog statistics logname all | match fail | no-more
+```
 
+```text
 show shmlog statistics logname all | match err | no-more
+```
 
+```text
 show system resource-monitor summary | no-more
+```
 
+```text
 show system process extensive |no-more
+```
 
+```text
 show pppoe statistics | no-more
+```
 
+```text
 show ddos-protection protocols violations | no-more
+```
 
+```text
 show ddos-protection protocols statistics terse | no-more
+```
 
+```text
 show ddos-protection protocols pppoe padi | no-more
+```
 
+```text
 show ddos-protection protocols pppoe | no-more
+```
 
+```text
 clear pppoe statistics
+```
 
 start shell csh command "vty -c 'show smd throttle' -s 7208 128.0.0.1"
 
+```text
 show network-access aaa terminate-code brief | no-more
+```
 
+```text
 show network-access aaa terminate-code detail | no-more
+```
 
+```text
 show network-access aaa statistics address-assignment pool ftth\_private routing-instance VRF\_CGNAT | no-more
+```
 
+```text
 show network-access aaa statistics authentication detail | no-more
+```
 
+```text
 show network-access aaa statistics radius queue-info | no-more
+```
 
+```text
 show network-access aaa statistics radius detail | no-more
+```
 
+```text
 show network-access aaa statistics accounting detail | no-more
+```
 
+```text
 show network-access memory-pools | no-more
+```
 
+```text
 show ppp statistics detail | no-more
+```
 
+```text
 show accounting pending-accounting-stops brief | no-more
+```
 
 * *Clear the stats and collect again for 2 iterations.**
 
+```text
 clear shmlog entries logname all
+```
 
+```text
 clear shmlog statistics logname all
+```
 
+```text
 clear network-access aaa statistics radius
+```
 
+```text
 clear network-access aaa statistics accounting
+```
 
+```text
 clear network-access aaa statistics authentication
+```
 
+```text
 clear network-access aaa statistics terminate-code
+```
 
+```text
 clear ppp statistics
+```
 
 ## Source: `formatted/TS_notes/Command check user bras pppoe stuck.md`
 
@@ -1450,249 +1924,433 @@ Kịch bản công việc xử lý lỗi một số thuê bao không cutout đư
 
 1. Thực hiện thu thập thông tin các user bị treo:
 
+```text
 show subscribers physical-interface ae14 vlan-id 2036
+```
 
+```text
 show subscribers summary routing-instance
+```
 
+```text
 show subscribers username b651\_ipp\_hungcttxms extensive
+```
 
+```text
 show subscribers username b651\_ipp\_namcttcv1 extensive
+```
 
+```text
 show subscribers username b651\_gftth\_phuoccncttnmtv4 extensive
+```
 
+```text
 show subscribers username b651\_gftth\_doicnvbptdvtq90 extensive
+```
 
+```text
 show subscribers username b651\_gftth\_vietteltctcpbc16 extensive
+```
 
+```text
 show subscribers username b651\_gftth\_doivbpcntdcntq extensive
+```
 
 2. Thực hiện thu thập baseline thiết bị:
 
+```text
 set cli screen-width 300
+```
 
 /\* Lưu thông tin cấu hình và RSI \*/
 
+```text
 request support information brief | no-more | save /var/log/rsi\_before\_BPC8003BRA01\_20210415
+```
 
+```text
 show configuration |  no-more | save /var/tmp/configuration\_BPC8003BRA01\_20210415
+```
 
 /\* Lưu thông tin alarm/core \*/
 
+```text
 show version detail  | no-more
+```
 
+```text
 show version invoke-on all-routing-engines | no-more
+```
 
+```text
 show version invoke-on all-routing-engines | match "Junos:|RE" | no-more
+```
 
+```text
 show system core-dumps no-forwarding  | no-more
+```
 
+```text
 show chassis alarms no-forwarding  | no-more
+```
 
+```text
 show system processes extensive no-forwarding  | no-more
+```
 
+```text
 show pfe statistics error  | no-more
+```
 
+```text
 show chassis routing-engine no-forwarding  | no-more
+```
 
+```text
 show chassis environment no-forwarding  | no-more
+```
 
+```text
 show chassis fabric summary  | no-more
+```
 
+```text
 show chassis fabric fpcs  | no-more
+```
 
+```text
 show chassis fabric plan  | no-more
+```
 
 /\* Lưu thông tin về OSPF  version 2 \*/
 
+```text
 show ospf interface  | no-more
+```
 
+```text
 show ospf interface | count  | no-more
+```
 
+```text
 show ospf hostname | no-more
+```
 
+```text
 show ospf adjacency  | no-more
+```
 
+```text
 show ospf adjacency | count  | no-more
+```
 
 /\* Lưu thông tin về OSPF version 3 \*/
 
+```text
 show ospf3 interface  | no-more
+```
 
+```text
 show ospf3 interface | count  | no-more
+```
 
+```text
 show ospf3 hostname | no-more
+```
 
+```text
 show ospf3 adjacency  | no-more
+```
 
+```text
 show ospf3 adjacency | count | no-more
+```
 
 /\* Lưu thông tin về MPLS/LDP/RSVP \*/ -> không chạy MPLS
 
 /\* Lưu thông tin về BGP \*/
 
+```text
 show bgp summary  | no-more
+```
 
+```text
 show bgp neighbor  | no-more
+```
 
+```text
 show route summary | no-more
+```
 
 /\* Lưu thông tin về Multicast \*/ -> không chạy Multicast
 
 /\* Lưu thông tin LLDP/BFD \*/
 
+```text
 show lldp neighbors  | no-more
+```
 
+```text
 show bfd session detail  | no-more
+```
 
 /\* Lưu thông tin hardware/fabric/fpc \*/
 
+```text
 show chassis hardware  | no-more
+```
 
+```text
 show chassis fabric summary extended  | no-more
+```
 
+```text
 show chassis fabric plane  | no-more
+```
 
 /\* Lưu thông tin đồng bộ GRES and NSR - KB32931  \*/
 
+```text
 > Go to the Backup RE:
+```
 
+```text
 request routing-engine login backup
+```
 
+```text
 show system switchover | no-more
+```
 
+```text
 show task replication  | no-more
+```
 
+```text
 show database-replication summary | no-more
+```
 
+```text
 > Nhớ thoát để trở về RE master (RE0)
+```
 
 exit
 
+```text
 request chassis routing-engine master switch check | no-more
+```
 
 3. Thực hiện thực hiện thu thập các thông tin liên quan đến user đang bị treo:
 
 Debugging the stale pppoe sessions at the pfe.
 
-1) > show subscribers user-name  extensive
+```text
+> show subscribers user-name  extensive
+```
 
-2) > start shell
+```text
+> start shell
+```
 
 Important Note: use the fpc number on which the problematic subscriber is active. Based on the subscriber extensive output that you shared, it is on ae4 which uses xe-8/x/x i.e fpc8. However, please verify this once
 
+```text
 % cprod -A fpc8 -c "show vbf flow" | grep ""
+```
 
+```text
 % cprod -A fpc8 -c "show vbf flow "
+```
 
-3) % cprod -A fpc8 -c "show jnh inline-ka session 0 ppp 1073751809" // thực hiện 10 lần
+```text
+% cprod -A fpc8 -c "show jnh inline-ka session 0 ppp 1073751809" // thực hiện 10 lần
+```
 
-4) % cprod -A fpc8 -c "show jnh inline-ka session 1 ppp 1073751809" // thực hiện 10 lần
+```text
+% cprod -A fpc8 -c "show jnh inline-ka session 1 ppp 1073751809" // thực hiện 10 lần
+```
 
 Repeat the commands 3) and 4) multiple times (say about 10 times) with a time gap of 10 seconds between each iteration.
 
+```text
 Run Commands 1) to 4) for few of the problematic pppoe sessions and share it with us.
+```
 
 - ---------------------------------------------------------------
 
 Also, run the following commands for 2 iterations and share it with us. These are not specific to per subscriber.
 
-5) % cprod -A fpc8 -c "show jnh 0 exceptions terse"
+```text
+% cprod -A fpc8 -c "show jnh 0 exceptions terse"
+```
 
-6) % cprod -A fpc8 -c "show jnh 1 exceptions terse"
+```text
+% cprod -A fpc8 -c "show jnh 1 exceptions terse"
+```
 
-7) % cprod -A fpc8 -c "show jnh 0 ucode-vars"
+```text
+% cprod -A fpc8 -c "show jnh 0 ucode-vars"
+```
 
-8) % cprod -A fpc8 -c "show jnh 1 ucode-vars"
+```text
+% cprod -A fpc8 -c "show jnh 1 ucode-vars"
+```
 
-9) % cprod -A fpc8 -c "show jnh inline-ka summary"
+```text
+% cprod -A fpc8 -c "show jnh inline-ka summary"
+```
 
-10) % cprod -A fpc8 -c "show jnh inline-ka mgmt"
+```text
+% cprod -A fpc8 -c "show jnh inline-ka mgmt"
+```
 
-11) % cprod -A fpc8 -c "show jnh inline-ka session 0 ppp global-stats"
+```text
+% cprod -A fpc8 -c "show jnh inline-ka session 0 ppp global-stats"
+```
 
-12) % cprod -A fpc8 -c "show jnh inline-ka session 1 ppp global-stats"
+```text
+% cprod -A fpc8 -c "show jnh inline-ka session 1 ppp global-stats"
+```
 
-13) % cprod -A fpc8 -c "show jnh inline-ka session 0 ppp host-outbound-info"
+```text
+% cprod -A fpc8 -c "show jnh inline-ka session 0 ppp host-outbound-info"
+```
 
-14) % cprod -A fpc8 -c "show jnh inline-ka session 1 ppp host-outbound-info"
+```text
+% cprod -A fpc8 -c "show jnh inline-ka session 1 ppp host-outbound-info"
+```
 
-15) % cprod -A fpc8 -c "show jnh inline-ka pfe 0 steering stats”
+```text
+% cprod -A fpc8 -c "show jnh inline-ka pfe 0 steering stats”
+```
 
-16) % cprod -A fpc8 -c "show jnh inline-ka pfe 1 steering stats”
+```text
+% cprod -A fpc8 -c "show jnh inline-ka pfe 1 steering stats”
+```
 
-17) % cprod -A fpc8 -c "show jnh inline-ka pfe 0 ae-info”
+```text
+% cprod -A fpc8 -c "show jnh inline-ka pfe 0 ae-info”
+```
 
-18) % cprod -A fpc8 -c "show jnh inline-ka pfe 1 ae-info”
+```text
+% cprod -A fpc8 -c "show jnh inline-ka pfe 1 ae-info”
+```
 
-19) % cprod -A fpc8 -c "show vbf pfe-events"
+```text
+% cprod -A fpc8 -c "show vbf pfe-events"
+```
 
-20) % cprod -A fpc8 -c "show jnh host-path-stats"
+```text
+% cprod -A fpc8 -c "show jnh host-path-stats"
+```
 
-21) % cprod -A fpc8 -c "show vbf flow pppoe summary"
+```text
+% cprod -A fpc8 -c "show vbf flow pppoe summary"
+```
 
 4. Bật traceoptions để thu thập log của các tiến trình liên quan:
 
+```text
 set system processes smg-service traceoptions file trace\_bbesmgd
+```
 
+```text
 set system processes general-authentication-service traceoptions file trace\_gauthd
+```
 
 ## set system processes general-authentication-service traceoptions filter user b651\_ipp\_namcttcv1
 
 ## set protocols ppp-service traceoptions filter user b651\_ipp\_namcttcv1
 
+```text
 set protocols ppp traceoptions file trace\_ppp
+```
 
+```text
 set protocols ppp traceoptions file size 10m
+```
 
+```text
 set protocols ppp traceoptions file files 10
+```
 
+```text
 set protocols ppp traceoptions flag all
+```
 
 ## set protocols pppoe traceoptions filter user b651\_ipp\_namcttcv1
 
 5. Thực hiện cutout user bị treo bằng lệnh ẩn sau:
 
+```text
 request system subscriber-management release-session id
+```
 
 ## kiểm tra thông tin user
 
+```text
 show subscribers extensive username b651\_ipp\_namcttcv1
+```
 
 6. Nếu bước trên không cutout được thuê bao, tiếp tục thực hiện khởi động lại tiến trình quản lý thuê bao trên thiết bị:
 
 6. 1 Thực thi lệnh khởi động lại tiến trình:
 
+```text
 restart smg-service immediately
+```
 
 6. 2 Kiểm tra thông tin log để xác định việc restart có phát sinh bất thường:
 
+```text
 show log messages | find "restarting.\*Enhanced.\*Management"
+```
 
 6. 3 Thực thi lệnh cutout user bị treo:
 
+```text
 clear network-access aaa subscriber username
+```
 
+```text
 clear network-access aaa subscriber session-id
+```
 
 8. Thu thập các session output và thông tin log trên thiết bị để phục vụ cho công việc phân tích về sau:
 
+```text
 show shmlog entries logname all | save /var/log/shmlog\_BPC8003BRA01\_20210415
+```
 
+```text
 request support information brief | no-more | save /var/log/rsi\_after\_BPC8003BRA01\_20210415
+```
 
+```text
 file archive source /var/log/\* destination /tmp/LOG\_BPC8003BRA01\_20210415
+```
 
 9. Tắt các traceoption đã bật trên thiết bị:
 
+```text
 deactivate system processes smg-service traceoptions
+```
 
+```text
 deactivate system processes general-authentication-service traceoptions
+```
 
+```text
 deactivate protocols ppp-service traceoptions
+```
 
+```text
 deactivate protocols ppp traceoptions
+```
 
+```text
 deactivate protocols pppoe traceoptions
+```
 
 ###### ####################################################################
 
@@ -1708,19 +2366,33 @@ deactivate protocols pppoe traceoptions
 
 - Cấu hình
 
+```text
 user@host> show configuration interfaces ae104
+```
 
+```text
 user@host> show configuration interfaces ae104 | display inheritance
+```
 
+```text
 user@host> show configuration interfaces ae104 | display inheritance no-comments
+```
 
+```text
 user@host> show configuration dynamic-profiles
+```
 
+```text
 user@host> show configuration dynamic-profiles | display inheritance no-comments
+```
 
+```text
 user@host> show configuration dynamic-profiles | display inheritance no-comments | match dualstack-pppox-remote
+```
 
+```text
 user@host> show configuration dynamic-profiles | display inheritance no-comments | display set | match dualstack-pppox-remote
+```
 
 - Thông tin tổng quan về thuê bao
 
@@ -1730,11 +2402,15 @@ tailc@QNI-PE4-MX960\_RE0> show chassis hardware | match fpc
 
 tailc@QNI-PE4-MX960\_RE0> show chassis fpc detail
 
+```text
 user@host> show subscribers summary port
+```
 
 tailc@QNI-PE4-MX960\_RE0> show subscribers summary port | refresh 1
 
+```text
 user@host> show network-access aaa terminate-code summary
+```
 
 tailc@QNI-PE4-MX960\_RE0> show network-access aaa terminate-code brief
 
@@ -1834,11 +2510,17 @@ tailc@QNI-PE4-MX960\_RE0> request pfe execute command "show jnh 0 ex ter" target
 
 tailc@QNI-PE4-MX960\_RE0> start shell
 
+```text
 % cprod -A fpc7 -c "show jnh inline-ka session 0 ppp global-stats" ; date
+```
 
+```text
 % cprod -A fpc5 -c "show jnh inline-ka session 0 ppp global-stats" ; date
+```
 
+```text
 % cprod -A fpc3 -c "show jnh inline-ka session 0 ppp global-stats" ; date
+```
 
 - Archive shmlog thành file
 
@@ -1850,29 +2532,53 @@ tailc@QNI-PE4-MX960\_RE0> show shmlog entries logname all | save /var/tmp/shmlog
 
 [ October 21, 2023 11:40 ] ⁨Hung Le⁩: nếu nghi ngờ là KA có vấn dề thì cần show các lệnh này trên các pfe có sub
 
+```text
 show jnh  exception terse
+```
 
+```text
 show jnh  ucode-vars
+```
 
+```text
 show jnh inline-ka summary
+```
 
+```text
 show jnh inline-ka mgmt    Note:  This is before enqueue, if pkt validation failed stats are updated here.
+```
 
+```text
 show jnh inline-ka session  ppp global-stats
+```
 
+```text
 show jnh inline-ka session   ppp host-outbound-info
+```
 
+```text
 show jnh inline-ka pfe
+```
 
+```text
 show jnh inline-ka pfe  steering stats
+```
 
+```text
 show jnh inline-ka pfe  ae-info
+```
 
+```text
 show vbf pfe-events
+```
 
+```text
 show jnh host-path-stats
+```
 
+```text
 show vbf flow pppoe summary
+```
 
 [ October 21, 2023 22:23 ] ⁨Hung Le⁩: bngss@BRMJ00> show subscribers id 6067970
 
@@ -1882,7 +2588,9 @@ Total subscribers: 0, Active Subscribers: 0
 
 {master}
 
+```text
 bngss@BRMJ00> show subscribers id 7911013
+```
 
 Nov 10 11:20:22
 
@@ -1896,7 +2604,9 @@ ge-2/1/2.3221261020    138 L2BSA@dt.net default:L2RIID-4
 
 [ October 21, 2023 22:23 ] ⁨Hung Le⁩: 02:57:56 Uhr: ServiceStop für jnpr ge-2/1/2:6067970:6067971-1603943628 -> AcctResponse
 
+```text
 02:57:56 Uhr: ServiceStart für jnpr ge-2/1/2:6067970:7819259-1604973426 -> AcctResponse
+```
 
 [ October 21, 2023 22:24 ] ⁨Hung Le⁩: session cũ vẫn gửi acct sau khi sw
 
@@ -1920,7 +2630,9 @@ L2BSA\_SRL(10305,32587)    -na-          -na-            on/volume+
 
 [ October 21, 2023 22:24 ] ⁨Hung Le⁩: show lệnh này vẫn thấy thông tin session cũ
 
+```text
 [ October 21, 2023 22:26 ] ⁨Hung Le⁩: Checked the authd core, for sub 6067970 state is active (AUTH\_DONE\_STATE) and logout is not triggered from client.
+```
 
 This is the reason AST has the entry, and with this SDB entry should not have been deleted either. Client (autoconf plugin) should delete SDB entry only after logout/terminate ACK from authd, and clearly is misbehavior from client as earlier mentioned
 
@@ -1928,21 +2640,33 @@ This is the reason AST has the entry, and with this SDB entry should not have be
 
 [ October 21, 2023 22:27 ] ⁨Hung Le⁩: Nov 10 12:21:25.510 2020  BRMJ00 mgd[53913]: UI\_CMDLINE\_READ\_LINE: User 'J-apnbng', command 'set system processes general-authentication-service traceoptions file jtac-authd.log '
 
+```text
 Nov 10 12:21:32.033 2020  BRMJ00 authd[20689]: ../../../../../../../src/junos/usr.sbin/authd/plugin/radius/authd\_plugin\_radius\_module.cc:2332 Failed to get SDB snapshot for session-id:6709955
+```
 
+```text
 Nov 10 12:21:51.505 2020  BRMJ00 authd[20689]: NACK received for profile request with id=0x17fd3c58 from bbe-smgd daemon: No more resources retry FALSE result 0x00000020
+```
 
+```text
 Nov 10 12:21:51.505 2020  BRMJ00 authd[20689]: NACK received for profile request with id=0x17fd3c74 from bbe-smgd daemon: No more resources retry FALSE result 0x00000020
+```
 
+```text
 Nov 10 12:21:51.505 2020  BRMJ00 authd[20689]: NACK received for profile request with id=0x17fd3c90 from bbe-smgd daemon: No more resources retry FALSE result 0x00000020
+```
 
+```text
 Nov 10 12:21:51.506 2020  BRMJ00 authd[20689]: NACK received for profile request with id=0x17fd3cac from bbe-smgd daemon: No more resources retry FALSE result 0x00000020
+```
 
 [ October 21, 2023 22:29 ] ⁨Hung Le⁩: ======Thử với user stuck==== gửi CoA activate 1 cái service gì đó
 
 [ October 21, 2023 22:29 ] ⁨Hung Le⁩: ./BRMJ00-var-log-shmlog.txt:bbe-ljbase-hi        1755903 Nov 10 03:54:41.499135 jauthd: rx: trap                                            session\_id=6067970 trap-type=2 req-id=0x00000946 ch=0x00000002
 
+```text
 ./BRMJ00-var-log-shmlog.txt:bbe-autoconf-info    1755904 Nov 10 03:54:41.499138 BBE\_AUTOCONF\_I\_RX\_AUTH\_TRAP                                  auth trap 2 received for session session\_id=6067970
+```
 
 ./BRMJ00-var-log-shmlog.txt:bbe-ljbase-hi        1755905 Nov 10 03:54:41.499166 jauthd: tx: trap response queued                            session\_id=6067970 trap-type=2 req-id=0x00000946 result=ifd-1 ch=0x00000002 >>>>> Result=1 indicates autoconf could not find client session
 
@@ -1975,9 +2699,13 @@ If, for whatever reason, you do not want the packets to be processed by the PFE,
 
 The sysctl requires root access to the shell of the RE. The default value of ‘6’ indicates that the PFE will handle the keepalive messages. Changing it to ‘4’ causes all packets to be exceptioned to the RE:
 
+```text
 root@MX240% sysctl net.link.ppp.ppp\_dist\_ka=4
+```
 
+```text
 net.link.ppp.ppp\_dist\_ka: 6 -> 4
+```
 
 Notes:
 
@@ -1986,21 +2714,29 @@ Notes:
 
 Below are sample logs with the sysctl set to disable PFE keepalive messages:
 
+```text
 lab@MX240> show subscribers
+```
 
 pp0.1073746225 123.123.123.123 [kc@kc.com](mailto:kc@kc.com) default:internet
 
+```text
 lab@MX240> show interfaces pp0.1073746225 | match Underlying
+```
 
 Underlying interface: demux0.100 (Index 373)
 
+```text
 lab@MX240> monitor traffic interface demux0.100 extensive no-resolve
+```
 
 Address resolution is OFF.
 
 Listening on demux0.100, capture size 1514 bytes
 
+```text
 18:11:34.163752 In
+```
 
 Juniper PCAP Flags [Ext, In], PCAP Extension(s) total length 22
 
@@ -2016,7 +2752,9 @@ Logical Unit Number Extension TLV #5, length 4, value: 100
 
 - ----original packet-----
 
+```text
 00:00:69:03:01:02 > 88:e0:f3:84:a7:c1, ethertype 802.1Q (0x8100), length 34: vlan 100, p 0, ethertype PPPoE S, PPPoE [ses 1]LCP (0xc021), length 10: LCP, Echo-Request (0x09), id 58, length 10
+```
 
 encoded length 8 (=Option(s) length 4)
 
@@ -2024,7 +2762,9 @@ encoded length 8 (=Option(s) length 4)
 
 Magic-Num 0x0f47d4f8
 
+```text
 18:11:34.163766 Out
+```
 
 Juniper PCAP Flags [Ext], PCAP Extension(s) total length 22
 
@@ -2036,9 +2776,13 @@ Magic-Num 0x70fd8b2d
 
 ^C
 
+```text
 2 packets received by filter
+```
 
+```text
 0 packets dropped by kernel
+```
 
 And, as a final check, if all interfaces on a given PFE are logged in after you have changed to the sysctl, the PFE inline keepalive statistics should no longer increment:
 
@@ -2068,9 +2812,13 @@ Physical interface: xe-4/0/0, Enabled, Physical link is Up
 
 Interface index: 245, SNMP ifIndex: 1303, Generation: 318
 
+```text
 Description: 10G-CBG-PE1-4/0/0:CBG00TTM-2/2/2:06-Downlink-BNG
+```
 
+```text
 Link-level type: Flexible-Ethernet, MTU: 9192, MRU: 9200, LAN-PHY mode, Speed: 10Gbps, BPDU Error: None, Loop Detect PDU Error: None, MAC-REWRITE Error: None, Loopback: None, Source filtering: Disabled, Flow control: Disabled,
+```
 
 Speed Configuration: Auto
 
@@ -2086,23 +2834,33 @@ Schedulers     : 0
 
 Hold-times     : Up 0 ms, Down 0 ms
 
+```text
 Damping        : half-life: 0 sec, max-suppress: 0 sec, reuse: 0, suppress: 0, state: unsuppressed
+```
 
 Current address: f6:bf:a8:79:89:97, Hardware address: f4:bf:a8:79:8c:98
 
 * *Last flapped   : 2021-06-26 04:47:39 ICT (5w6d 19:00 ago)**
 
+```text
 This problem will cause the PADI to be dropped when a dynamic vlan must be created. As long as the dynamic vlan remains present on ae80, subscribers can establish PPPoE sessions at any time. With this problem, if all subscribers log out of a dynamic vlan, and that dynamic vlan is removed, it will not be recreated.
+```
 
 We are working to reproduce the issue in the JTAC lab, and will let you know once we have more information to share
 
+```text
 To recover this issue, we need to correct the flag stats in bbe-smgd. Below is what you can expect to see in the problem state and what you should see once ethe issue is corrected.
+```
 
+```text
 To view the bbe-smgd ifl state, you can use the following command from CLI:
+```
 
 * *start shell csh command "vty -c 'show ifl xe-4/0/0.32767' -s 7208 128.0.0.1"**
 
-* *Current Problem state:**
+```text
+*Current Problem state:**
+```
 
 hoanganh@CBG-PE1-MX2008\_RE0>  **start shell csh command "vty -c 'show ifl xe-4/0/0.32767' -s 7208 128.0.0.1"**
 
@@ -2126,13 +2884,19 @@ IFL Nexthop Total:       0
 
 Installed on PFE:        True
 
-* *IFL Flags:               0x10800  ß INCORRECT STATE**
+```text
+*IFL Flags:               0x10800  ß INCORRECT STATE**
+```
 
 IFL Local Flags:         0x0
 
-* *Correct state:**
+```text
+*Correct state:**
+```
 
-* *IFL Flags:               0x10000  ß CORRECT STATE**
+```text
+*IFL Flags:               0x10000  ß CORRECT STATE**
+```
 
 IFL Local Flags:         0x0Detailed IFL Info
 
@@ -2140,11 +2904,15 @@ IFL Local Flags:         0x0Detailed IFL Info
 
 To clear and correct the bbe-smgd ifl flag, we suggest trying the following actions. As we have not reproduced this issue in the JTAC lab yet, we can not be certain which of these steps will correct the problem, so we request that you verify if the flag is corrected after each step. Once you see “IFL Flags: 0x10000”,  then the issue should be solved and the subscribers from vlans 1131 and 514 should be able to establish sessions on ae80 again.
 
-1. Deactivate / then activate interface **xe-4/0/0**
+```text
+Deactivate / then activate interface **xe-4/0/0**
+```
 
 1. Check if flag is corrected
 
-2. Delete and then re-add interface **xe-4/0/0**
+```text
+Delete and then re-add interface **xe-4/0/0**
+```
 
 1. First, check active subscribers are cleared from xe-4/0/0 in the output of ‘show interfaces targeting ae80’” (it should be from step 1)
 2. If not, deactivate interface xe-4/0/0 again and verify all the subscribers are cleared from xe-4/0/0
@@ -2152,7 +2920,9 @@ To clear and correct the bbe-smgd ifl flag, we suggest trying the following acti
 4. Wait for 2 minutes, then add interface xe-4/0/0 back
 5. Check if flag is corrected
 
-3. Restart bbe-smgd process
+```text
+Restart bbe-smgd process
+```
 
 1. Issue command “restart smg-service” from cli
 2. Wait 5 minutes and check if flag is corrected

@@ -70,7 +70,9 @@
 
 # LACP Port State
 
+```text
 The LACP port state (also known as the actor state) field is a single byte, each bit of which is a flag indicating a particular status. In this table, mux (i.e. a multiplexer) refers to the logical unit which aggregates the links into a single logical transmitter/receiver.
+```
 
 The meaning of each bit is as follows:
 
@@ -90,11 +92,15 @@ The meaning of each bit is as follows:
 
 Junos OS users are probably smiling right now, as this should look very familiar:
 
+```text
 john@switch> show lacp interfaces ae1
+```
 
 Aggregated interface: ae1
 
+```text
 LACP state: Role Exp Def Dist Col Syn Aggr Timeout Activity
+```
 
 xe-1/0/0 Actor No No Yes Yes Yes Yes Fast Active
 
@@ -124,7 +130,9 @@ Eth1/6 127,39-0d-12-c2-2b-40 0x3 427434 SA
 
 LACP Partner Partner Partner
 
+```text
 Port Priority Oper Key Port State
+```
 
 127 0x2 0x3f
 
@@ -138,11 +146,15 @@ Eth2/6 127,39-0d-12-c2-2b-40 0x1 112 SA
 
 LACP Partner Partner Partner
 
+```text
 Port Priority Oper Key Port State
+```
 
 127 0x2 0x3f
 
+```text
 The partner port state is 0x3f, which is not very helpful. The good news is that looking at individual members does reveal the information in a more human-friendly format:
+```
 
 us-atl01-z1fa07a# show lacp interface eth 1/6
 
@@ -168,11 +180,17 @@ Distributing=true
 
 Partner information refresh timeout=Short Timeout (3s)
 
+```text
 Actor Admin State=(Ac-1:To-1:Ag-1:Sy-0:Co-0:Di-0:De-0:Ex-0)
+```
 
+```text
 Actor Oper State=(Ac-1:To-0:Ag-1:Sy-1:Co-1:Di-1:De-0:Ex-0)
+```
 
+```text
 Neighbor: 0x3
+```
 
 MAC Address= 39-0d-12-c2-2b-40
 
@@ -190,9 +208,13 @@ Collecting=true
 
 Distributing=true
 
+```text
 Partner Admin State=(Ac-0:To-1:Ag-0:Sy-0:Co-0:Di-0:De-0:Ex-0)
+```
 
+```text
 Partner Oper State=(Ac-1:To-1:Ag-1:Sy-1:Co-1:Di-1:De-0:Ex-0)
+```
 
 Aggregate or Individual(True=1)= 1
 
@@ -224,7 +246,9 @@ Alternatively, I suppose, flip the table so that the entries run from 7 to 0 ins
 
 Clearly what we want from a link is that bit 7 is 0 (not expired) and bits 2-5 are 1 (will aggregate, in sync, collecting, distributing).
 
+```text
 A recent port I had trouble with was reported as partner port state 0xC7, which in binary is 11000111, which when flipped to 11100011 means:
+```
 
 1 -> ACTIVE mode
 
