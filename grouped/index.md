@@ -19,6 +19,11 @@ Deterministic output generated from `reports/grouping-manifest.json`.
 - [MPC Insertion, Removal and Power Notes](hardware-maintenance/mpc-linecard/install-maintenance-guide.md) — install-maintenance-guide — Mixed
 - [NG-RE & RE Replacement Procedures](hardware-maintenance/re-scbe/install-maintenance-guide.md) — install-maintenance-guide — Mixed
 - [Chassis Power-Cycle and SFB Restart](hardware-maintenance/chassis-power/install-maintenance-guide.md) — install-maintenance-guide — Mixed
+- [BRAS PPPoE and DHCPv6 Configuration Guide](bras/configuration-guide.md) — configuration-guide — Mixed
+- [Switching Configuration Guide](switching/configuration-guide.md) — configuration-guide — Mixed
+- [Mirror Traffic Configuration Guide](switching/mirror-traffic/configuration-guide.md) — configuration-guide — Mixed
+- [Linecard Port Mapping Troubleshooting Guide](hardware-maintenance/linecard/troubleshooting-guide.md) — troubleshooting-guide — Mixed
+- [CGNAT AE Interface Configuration Guide](cgnat/configuration-guide.md) — configuration-guide — Mixed
 - [Case Notes Reference Index](case-notes/index.md) —  — Mixed
 - [Vendor PR & KB Reference Index](vendor-kb/index.md) —  — Mixed
 - [Mail Templates Index](mail-templates/index.md) —  — Mixed

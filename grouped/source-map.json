@@ -56,7 +56,8 @@
     "output": "bras/subscriber-management/concepts.md",
     "sources": [
       "formatted/TS_notes/BRAS.md",
-      "formatted/Recommends/Giới hạn số lượng phiên của một khách hàng trên BRAS Juniper (session-limit-per-username).md"
+      "formatted/Recommends/Giới hạn số lượng phiên của một khách hàng trên BRAS Juniper (session-limit-per-username).md",
+      "formatted/PR/pppoe client bras bng option.md"
     ],
     "type": "consolidate",
     "domain": "bras",
@@ -215,6 +216,56 @@
     "feature": "chassis-power",
     "doctype": "install-maintenance-guide"
   },
+  "bras-configuration-guide": {
+    "output": "bras/configuration-guide.md",
+    "sources": [
+      "formatted/PR/Cisco template pppoe DHCPv6 NA (PPPoE IPv6).md"
+    ],
+    "type": "consolidate",
+    "domain": "bras",
+    "feature": "subscriber-management",
+    "doctype": "configuration-guide"
+  },
+  "switching-configuration-guide": {
+    "output": "switching/configuration-guide.md",
+    "sources": [
+      "formatted/PR/MAC move.md"
+    ],
+    "type": "consolidate",
+    "domain": "switching",
+    "feature": "configuration",
+    "doctype": "configuration-guide"
+  },
+  "switching-mirror-traffic-guide": {
+    "output": "switching/mirror-traffic/configuration-guide.md",
+    "sources": [
+      "formatted/PR/TRIO Card_ packet capture with pfe commands.md"
+    ],
+    "type": "consolidate",
+    "domain": "switching",
+    "feature": "mirror-traffic",
+    "doctype": "configuration-guide"
+  },
+  "hardware-linecard-troubleshooting": {
+    "output": "hardware-maintenance/linecard/troubleshooting-guide.md",
+    "sources": [
+      "formatted/PR/show port mapping pfe.md"
+    ],
+    "type": "consolidate",
+    "domain": "hardware-maintenance",
+    "feature": "linecard",
+    "doctype": "troubleshooting-guide"
+  },
+  "cgnat-configuration-guide": {
+    "output": "cgnat/configuration-guide.md",
+    "sources": [
+      "formatted/PR/using AE interfaces with SPC3.md"
+    ],
+    "type": "consolidate",
+    "domain": "cgnat",
+    "feature": "ae-spc3",
+    "doctype": "configuration-guide"
+  },
   "case-notes-index": {
     "output": "case-notes/index.md",
     "sources": [
@@ -255,7 +306,6 @@
   "vendor-kb-index": {
     "output": "vendor-kb/index.md",
     "sources": [
-      "formatted/PR/Cisco template pppoe DHCPv6 NA (PPPoE IPv6).md",
       "formatted/PR/KB25839 - _Junos_ An improper egress-policy to LDP makes the _inet.3_ table become empty.md",
       "formatted/PR/KB27189 - _MX_ Optimizing heap utilization when applying a firewall filter on an interface using input and input-list keywords.md",
       "formatted/PR/KB31811__MX_ How to check if Enhanced Subscriber Management (bbe-smgd) is enabled and working.md",
@@ -263,15 +313,9 @@
       "formatted/PR/KB34539_.md",
       "formatted/PR/KB37106__Subscriber Management_ Understanding the _Standby is not synced_ error after a backup RE replacement.md",
       "formatted/PR/KB37435__Junos_ Default CoS behavior for schedulers with different scheduler priorities.md",
-      "formatted/PR/MAC move.md",
       "formatted/PR/PR check.md",
       "formatted/PR/PR1082932 - Data Error in shared LMEM of LU_XL chip causing a MQ_XM chip wedge.md",
-      "formatted/PR/PR1561855 - Continuous bbe-smgd cores are generated after restarting the smgd.md",
-      "formatted/PR/TRIO Card_ packet capture with pfe commands.md",
-      "formatted/PR/Untitled Note.md",
-      "formatted/PR/pppoe client bras bng option.md",
-      "formatted/PR/show port mapping pfe.md",
-      "formatted/PR/using AE interfaces with SPC3.md"
+      "formatted/PR/PR1561855 - Continuous bbe-smgd cores are generated after restarting the smgd.md"
     ],
     "type": "index-only",
     "domain": "vendor-kb",
