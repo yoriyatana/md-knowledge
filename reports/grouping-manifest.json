@@ -388,11 +388,11 @@
       "vendor": "Juniper"
     },
     {
-      "id": "v3-huawei-troubleshooting-guide-switching-huawei-vlan-manipulation",
-      "destination": "huawei/troubleshooting-guide/switching/huawei-vlan-manipulation.md",
+      "id": "v3-huawei-concepts-switching-huawei-vlan-manipulation",
+      "destination": "huawei/concepts/switching/huawei-vlan-manipulation.md",
       "level1_domain": "switching",
       "level3_feature": "huawei-vlan-manipulation",
-      "level2_doctype": "troubleshooting-guide",
+      "level2_doctype": "concepts",
       "topic": "Huawei VLAN Manipulation",
       "action": "consolidate",
       "approved": true,
@@ -402,11 +402,11 @@
       ]
     },
     {
-      "id": "v3-linux-concepts-linux-yum-groupinstall-development-tools",
-      "destination": "linux/concepts/linux/yum-groupinstall-development-tools.md",
-      "level1_domain": "linux",
+      "id": "v3-linux-configuration-guide-yum-yum-groupinstall-development-tools",
+      "destination": "linux/configuration-guide/yum/yum-groupinstall-development-tools.md",
+      "level1_domain": "yum",
       "level3_feature": "yum-groupinstall-development-tools",
-      "level2_doctype": "concepts",
+      "level2_doctype": "configuration-guide",
       "topic": "Linux yum groupinstall Development Tools",
       "action": "consolidate",
       "approved": true,

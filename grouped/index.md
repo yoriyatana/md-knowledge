@@ -12,9 +12,9 @@ Deterministic output generated from `reports/grouping-manifest.json`.
     - **general/**
       - [Cisco Command Health Check](cisco/troubleshooting-guide/general/cisco-command-health-check.md) — troubleshooting-guide — Mixed
 - **huawei/**
-  - **troubleshooting-guide/**
+  - **concepts/**
     - **switching/**
-      - [Huawei VLAN Manipulation](huawei/troubleshooting-guide/switching/huawei-vlan-manipulation.md) — troubleshooting-guide — Mixed
+      - [Huawei VLAN Manipulation](huawei/concepts/switching/huawei-vlan-manipulation.md) — concepts — Mixed
 - **juniper/**
   - **case-study/**
     - **routing/**
@@ -54,9 +54,9 @@ Deterministic output generated from `reports/grouping-manifest.json`.
     - **switching/**
       - [LACP Troubleshooting and Diagnostics (Juniper)](juniper/troubleshooting-guide/switching/lacp.md) — troubleshooting-guide — Mixed
 - **linux/**
-  - **concepts/**
-    - **linux/**
-      - [Linux yum groupinstall Development Tools](linux/concepts/linux/yum-groupinstall-development-tools.md) — concepts — Mixed
+  - **configuration-guide/**
+    - **yum/**
+      - [Linux yum groupinstall Development Tools](linux/configuration-guide/yum/yum-groupinstall-development-tools.md) — configuration-guide — Mixed
 
 ## Source Index
 
