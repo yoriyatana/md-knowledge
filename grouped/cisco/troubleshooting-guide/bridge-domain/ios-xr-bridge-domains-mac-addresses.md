@@ -16,42 +16,51 @@ Why type `show mac address VLAN foo` when you can type:
 ```cisco
 show l2vpn forwarding bridge-domain ZTP:ZTP mac-address location 0/0/CPU0
 ```
-**MAC Addresses**
-
-```cisco
-show l2vpn forwarding bridge-domain ZTP:ZTP mac-address location 0/0/CPU0
-```
 - --
 
 ## 1.    Kiểm tra học MAC trên Metro AGG, SRT
 
-|  |  |  |
-| --- | --- | --- |
-| **Thiết bị** | **Câu lệnh** | **Ý nghĩa** |
-| Metro AGG ASR903 | Kiểm tra học MAC trong bride-domain | |
-| show mac-address-table bdomain | kiểm tra học MAC trong bridge-domain  đảm bảo có MAC trên port downlink và qua PW |
-| Clear MAC trong bridge-domain | |
-| clear mac-address-table bdomain | xóa MAC trong bridge-domain để kiểm tra MAC có học lại không |
+**Thiết bị:  Metro AGG ASR903**
+
+**Kiểm tra học MAC trong bridge-domain**
+```cisco
+show mac-address-table bdomain <bridge-domain-id>
+```
+Kiểm tra học MAC trong bridge-domain đảm bảo có MAC trên port downlink và qua PW
+
+**Clear MAC trong bridge-domain**
+```cisco
+clear mac-address-table bdomain
+```
+Xóa MAC trong bridge-domain để kiểm tra MAC có học lại không?
 
 ## 2.    Kiểm tra học MAC trên Metro Core
 
-|  |  |  |
-| --- | --- | --- |
-| **Thiết bị** | **Câu lệnh** | **Ý nghĩa** |
-| Metro Core ASR9010 | Kiểm tra học MAC trong bride-domain | |
-| show l2vpn forwarding bridge-domain :  mac-address location 0/0/CPU0 | kiểm tra học MAC trong bridge-domain  đảm bảo có MAC trên port downlink và qua PW |
-| Clear MAC trong bridge-domain | |
-| clear l2vpn forwarding mac-address-table bridge-domain : location 0/0/CPU0 | xóa MAC trong bridge-domain để kiểm tra MAC có học lại không |
+**Thiết bị: Metro Core ASR9010**
+
+**Kiểm tra học MAC trong bride-domain**
+```cisco
+show l2vpn forwarding bridge-domain :  mac-address location 0/0/CPU0
+```
+kiểm tra học MAC trong bridge-domain đảm bảo có MAC trên port downlink và qua PW
+
+**Clear MAC trong bridge-domain**
+```cisco
+clear l2vpn forwarding mac-address-table bridge-domain : location 0/0/CPU0
+```
+xóa MAC trong bridge-domain để kiểm tra MAC có học lại không
 
 ## 3.    Kiểm tra các member thuộc bridge-domain
 
-|  |  |  |
-| --- | --- | --- |
-| **Thiết bị** | **Câu lệnh** | **Ý nghĩa** |
-| Metro AGG ASR903 | Kiểm tra các member thuộc bridge-domain | |
-| show bridge-domain | kiểm tra các member thuộc brigde-domain  phải đảm bảo chứa service-instance, có PW nối đến các MA khác |
+**Thiết bị: Metro AGG ASR903**
 
-Output câu lệnh
+**Kiểm tra các member thuộc bridge-domain**
+```cisco
+show bridge-domain
+```
+Kiểm tra các member thuộc brigde-domain phải đảm bảo chứa service-instance, có PW nối đến các MA khác
+
+**Output câu lệnh**
 ```cisco
 HCM100.MA01#show bridge-domain 3649
 
@@ -79,11 +88,13 @@ vfi VMS-3649 neighbor 172.20.96.28 26048
 ```
 ## 4.    Kiểm tra PW trong VFI MA, SRT
 
-|  |  |  |
-| --- | --- | --- |
-| Thiết bị | Câu lệnh | Ý nghĩa |
-| Metro AGG ASR903 | Kiểm tra trạng thái PW trong VFI | |
-| show l2vpn vfi name | kiểm tra PW trong vfi  yêu cầu vfi phải UP  yêu cầu các PW phải báo hiệu được local label, remote label  kiểm tra giá trị ve-id |
+**Thiết bị: Metro AGG ASR903**
+
+**Kiểm tra trạng thái PW trong VFI**
+```cisco
+show l2vpn vfi name
+```
+Kiểm tra PW trong vfi  yêu cầu vfi phải UP  yêu cầu các PW phải báo hiệu được local label, remote label  kiểm tra giá trị ve-id
 
 ```cisco
 HCM100.MA01#show l2vpn vfi name VMS-3649
@@ -114,11 +125,13 @@ pseudowire101928   172.20.96.22    27     26828        288340 �
 ```
 ## 5.    Kiểm tra PW trong bridge-domain MC
 
-|  |  |  |
-| --- | --- | --- |
-| Thiết bị | Câu lệnh | Ý nghĩa |
-| ASR9010 | Kiểm tra trạng thái PW | |
-| show l2vpn bridge-domain bd-name | hiển thị trạng thái PW trong bridge-domain |
+**Thiết bị: ASR9010**
+
+**Kiểm tra trạng thái PW**
+```cisco
+show l2vpn bridge-domain bd-name
+```
+Hiển thị trạng thái PW trong bridge-domain
 
 ```cisco
 RP/0/RSP1/CPU0:HCM.MC02#show l2vpn bridge-domain bd-name L2VPN-TAKEDA-VL890
@@ -151,13 +164,19 @@ List of VFIs:
 ```
 ## 6.    Kiểm tra cấu hình khai báo trên Switch AGG, MA, SRT
 
-|  |  |  |
-| --- | --- | --- |
-| Thiết bị | Câu lệnh | Ý nghĩa |
-| ASR903,  ASR920 | Kiểm tra cấu hình service-instance, bridge-domain | |
-| show run |  section | hiển thị tất cả cấu hình liên quan đến vlan dịch vụ  hiện thị được khai báo service-instance, bridge-domain vì quy hoạch bằng giá trị vlan |
-| Kiểm tra cấu hình VFI | |
-| show run |  section | hiển thị cấu hình liên quan đến vfi |
+**Thiết bị: ASR903,  ASR920**
+
+**Kiểm tra cấu hình service-instance, bridge-domain**
+```cisco
+show run |  section <vlan>
+```
+hiển thị tất cả cấu hình liên quan đến vlan dịch vụ  hiện thị được khai báo service-instance, bridge-domain vì quy hoạch bằng giá trị vlan
+
+**Kiểm tra cấu hình VFI**
+```cisco
+show run |  section <vfi-name>
+```
+hiển thị cấu hình liên quan đến vfi
 
 ```cisco
 HCM100.SRT01#show running-config | section 2607
@@ -197,15 +216,29 @@ HCM100.SRT01#show running-config | section L2VPN-ISHCMC-VL2607
 
 ## 7.    Kiểm tra ping từ MA, SRT đến IP khách hàng
 
-|  |  |  |
-| --- | --- | --- |
-| Thiết bị | Câu lệnh | Ý nghĩa |
-| ASR903,  ASR920 | Khai báo IP trên interface BDI, lưu ý: chỉ ping được từ BDI đến IP khách hàng khi có khai rewrite trong service-instance MA | |
-| interface | khai báo IP trên interface BDI  giá trị BDI-ID trùng vói bridge-domain |
-| ip address | khai báo địa chỉ IP thuộc subnet LAN khách hàng |
-| no shut | bật interface BDI, default sau khai báo thiết bị shutdown interface BDI |
-| ping đến IP khách hàng | |
-| ping |  |
+**Thiết bị: ASR903,  ASR920**
+
+**Khai báo IP trên interface BDI**, lưu ý: chỉ ping được từ BDI đến IP khách hàng khi có khai rewrite trong service-instance MA | |
+```cisco
+interface <bdi-id>
+```
+khai báo IP trên interface BDI  giá trị BDI-ID trùng vói bridge-domain
+
+```cisco
+ip address <dia-chi-ip> <subnet>
+```
+khai báo địa chỉ IP thuộc subnet LAN khách hàng
+
+```cisco
+no shut
+```
+bật interface BDI, default sau khai báo thiết bị shutdown interface BDI
+
+**Ping đến IP khách hàng**
+
+```cisco
+ping <ip-khach-hang>
+```
 
 - --
 
