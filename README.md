@@ -96,3 +96,18 @@ bởi Gemini). Hệ thống giữ ngôn ngữ và thuật ngữ nguồn, gửi �
 tả, yêu cầu tài liệu tổng hợp giữ phần Sources, và copy ảnh nguồn vào
 `grouped/assets/<group-id>/`. Nếu muốn lưu kết quả lên GitHub, hãy kiểm tra thủ
 công nội dung/OCR trước rồi bỏ `grouped/` khỏi `.gitignore`.
+
+## Xây dựng kho kiến thức grouped theo manifest
+
+Manifest deterministic chính thức nằm tại `reports/grouping-manifest.json`. Nó là
+nguồn cấu hình duy nhất cho các nhóm micro-topic, thứ tự nguồn và các index.
+
+```bash
+.venv/bin/python tools/build_grouped_knowledge.py plan
+.venv/bin/python tools/build_grouped_knowledge.py build
+```
+
+`plan` kiểm tra tất cả nguồn có tồn tại và in kế hoạch. `build` tạo lại toàn bộ
+`grouped/`, loại bỏ các block nội dung trùng nhau, sao chép ảnh với link tương đối
+đúng, tạo `grouped/index.md` và `grouped/source-map.json`. Thư mục `grouped/` là
+local-only cho đến khi nội dung được review.

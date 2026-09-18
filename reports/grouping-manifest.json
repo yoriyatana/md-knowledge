@@ -1,0 +1,286 @@
+{
+  "version": 1,
+  "source_root": "formatted",
+  "output_root": "grouped",
+  "groups": [
+    {
+      "id": "ospf-pe-ce-deep-dive",
+      "path": "concepts/routing/ospf-pe-ce-deep-dive.md",
+      "type": "consolidate",
+      "topic": "OSPF PE-CE Deep Dive",
+      "kind": "Concepts",
+      "platform": "Juniper/Junos",
+      "sources": [
+        "classification/Concepts_Theory/OSPF_SUMMARY.md",
+        "classification/Concepts_Theory/ospf_as_routing_protocol_for_CE-PE.md",
+        "classification/Concepts_Theory/OSPF AS THE PE-CE ROUTING PROTOCOLS DEEP DIVE – PART 1.md",
+        "classification/Concepts_Theory/OSPF AS THE PE-CE ROUTING PROTOCOLS DEEP DIVE – PART 2.md",
+        "classification/Concepts_Theory/OSPF AS THE PE-CE ROUTING PROTOCOLS DEEP DIVE – PART 3.md",
+        "classification/Concepts_Theory/OSPF_Back_Door_Links-A_Case_Study.md"
+      ]
+    },
+    {
+      "id": "bfd-theory",
+      "path": "concepts/routing/bfd-theory.md",
+      "type": "consolidate",
+      "topic": "BFD Theory",
+      "kind": "Concepts",
+      "platform": "Juniper/Junos",
+      "sources": [
+        "classification/Concepts_Theory/Bidirectional_Forwarding_Detection_(BFD).md",
+        "classification/Concepts_Theory/BFD_scales.md",
+        "classification/Concepts_Theory/pr1523537_nay_chu_yeu_giai_thich_ve_behaviour_cua_bfd_session_id.md"
+      ]
+    },
+    {
+      "id": "bfd-troubleshooting",
+      "path": "troubleshooting/bfd-troubleshooting.md",
+      "type": "consolidate",
+      "topic": "BFD Troubleshooting",
+      "kind": "Troubleshooting",
+      "platform": "Juniper/Junos",
+      "sources": [
+        "TS_notes/BFD_anchorship_PFE.md",
+        "TS_notes/command_list_to_collect_the_bfd_data_from_the_respective_fpc.md",
+        "TS_notes/commands_need_to_collect_to_check_BFD_(MPC10-11)-From_TAC.md",
+        "TS_notes/sử_dụng_BFD_cho_LSP.md",
+        "TS_notes/BFD.md",
+        "TS_notes/BFD_ISSUE_VIETTEL_KV3-BRAS28.md",
+        "TS_notes/[M-MX-T]_Troubleshooting_Checklist-BFD.md"
+      ]
+    },
+    {
+      "id": "bras-overview",
+      "path": "concepts/subscriber-management/bras-overview.md",
+      "type": "consolidate",
+      "topic": "BRAS Overview",
+      "kind": "Concepts",
+      "platform": "Juniper/Junos",
+      "sources": [
+        "TS_notes/BRAS.md",
+        "classification/Concepts_Theory/Address-Assignment_Pools_for_Subscriber_Management.md",
+        "classification/Concepts_Theory/Giới_hạn_số_lượng_phiên_của_một_khách_hàng_trên_BRAS_Juniper_(session-limit-per-username).md"
+      ]
+    },
+    {
+      "id": "address-assignment",
+      "path": "concepts/subscriber-management/address-assignment.md",
+      "type": "consolidate",
+      "topic": "Address Assignment and IP Pools",
+      "kind": "Concepts",
+      "platform": "Juniper/Junos",
+      "sources": [
+        "TS_notes/BRAS_check_address-assignment.md",
+        "Case_notes/Các_thuật_ngữ_sau_được_sử_dụng_để_giải_thích_cách_cấp_phát_địa_chỉ_IP_(address-assignment).md"
+      ]
+    },
+    {
+      "id": "ipv6-dual-stack",
+      "path": "concepts/subscriber-management/ipv6-dual-stack.md",
+      "type": "consolidate",
+      "topic": "Subscriber IPv6 and Dual Stack",
+      "kind": "Concepts",
+      "platform": "Juniper/Junos",
+      "sources": [
+        "TS_notes/Attribute_DNS_IPv6_từ_Radius_cho_Bras_Juniper.md",
+        "TS_notes/Example-Understanding_Dual-Stack_PPPoE_Subscriber.md",
+        "TS_notes/SR-2021-1215-1608-Hỗ_trợ_thử_nghiệm_IPv6_tĩnh_cho_KH_CĐBR.md"
+      ]
+    },
+    {
+      "id": "bras-pppoe-troubleshooting",
+      "path": "troubleshooting/bras-pppoe-troubleshooting.md",
+      "type": "consolidate",
+      "topic": "BRAS and PPPoE Troubleshooting",
+      "kind": "Troubleshooting",
+      "platform": "Juniper/Junos",
+      "sources": [
+        "TS_notes/BRAS-TROUBLESHOOTING_PPPoE_in_TOMCAT.md",
+        "TS_notes/BRAS-command_ouputs.md",
+        "TS_notes/Command_check_user_bras_pppoe_stuck.md",
+        "TS_notes/KA_LCP_PPP_command_checks.md",
+        "TS_notes/How_to_disable_PFE_inline_PPP_keepalive_messages.md",
+        "TS_notes/The_subscribers_cannot_online_on_AE_interface.md"
+      ]
+    },
+    {
+      "id": "bgp-rr-case-study",
+      "path": "case-notes/routing/bgp-route-reflector/toi-uu-bras-rr-juniper-viettel.md",
+      "type": "consolidate",
+      "topic": "BGP Route Reflector Case Study",
+      "kind": "Case study",
+      "platform": "Juniper/Junos, BRAS",
+      "sources": [
+        "TS_notes/Tối_ưu_BRAS_RR_Juniper_Viettel.md"
+      ]
+    },
+    {
+      "id": "interfaces-diagnostics",
+      "path": "troubleshooting/interfaces-optics/interface-diagnostics.md",
+      "type": "consolidate",
+      "topic": "Interface Diagnostics",
+      "kind": "Troubleshooting",
+      "platform": "Juniper/Junos",
+      "sources": [
+        "TS_notes/interfaces_diagnostics_optics.md",
+        "TS_notes/10GbE_LAN-PHY-40GbE-100GbE_LFS_(Link_fault_signalling).md",
+        "TS_notes/set_link-speed_100G_cho_interface_ae_với_et-8_interface.md"
+      ]
+    },
+    {
+      "id": "lacp-troubleshooting",
+      "path": "troubleshooting/interfaces-optics/lacp-troubleshooting.md",
+      "type": "consolidate",
+      "topic": "LACP Troubleshooting",
+      "kind": "Troubleshooting",
+      "platform": "Juniper/Junos",
+      "sources": [
+        "TS_notes/LACP_check-list_commands.md",
+        "TS_notes/MPC11E-LACP_không_up-join.md",
+        "TS_notes/lacp_flap_khi_dung_VC_mix-mode.md"
+      ]
+    },
+    {
+      "id": "optics-cfp-xfp",
+      "path": "troubleshooting/interfaces-optics/optics-cfp-xfp.md",
+      "type": "consolidate",
+      "topic": "Optics CFP and XFP",
+      "kind": "Troubleshooting",
+      "platform": "Juniper/Junos",
+      "sources": [
+        "TS_notes/CFP.md",
+        "TS_notes/Xử_lý_CFP,_XFP_bị_lõi.md",
+        "TS_notes/SNMP_interface_jnxDom_(laser)_MIB_OID.md"
+      ]
+    },
+    {
+      "id": "link-flap-physical",
+      "path": "troubleshooting/interfaces-optics/link-flap-physical.md",
+      "type": "consolidate",
+      "topic": "Link Flap and Physical Layer",
+      "kind": "Troubleshooting",
+      "platform": "Juniper/Junos",
+      "sources": [
+        "TS_notes/BUG_Hold-time_down_không_hoạt_động_được_nếu_cấu_hình_nhỏ_hơn_1s_trên_interface_chạy_WANPHY.md",
+        "TS_notes/Delay_thời_gian_up_time_của_CE_interfaces.md",
+        "TS_notes/Lệnh_off_laser_mode_shell_<<<_dùng_flap_link.md"
+      ]
+    },
+    {
+      "id": "mpls-ldp-labels",
+      "path": "concepts/mpls-vpn/mpls-ldp-labels.md",
+      "type": "consolidate",
+      "topic": "MPLS, LDP and Labels",
+      "kind": "Concepts",
+      "platform": "Juniper/Junos",
+      "sources": [
+        "TS_notes/LDP.md",
+        "TS_notes/Label_usage.md",
+        "classification/Concepts_Theory/No_more_doubt_with_LDP.md",
+        "classification/Concepts_Theory/LDP-tunnelling_and_hidden_routes_in_inet-3.md",
+        "TS_notes/ldp-tunneling_or_BGP-LU_(swap_label_0_behavior_change_from_19-x.md"
+      ]
+    },
+    {
+      "id": "l2vpn-vpls",
+      "path": "concepts/mpls-vpn/l2vpn-vpls.md",
+      "type": "consolidate",
+      "topic": "L2VPN, VPLS and L2 Circuit",
+      "kind": "Concepts",
+      "platform": "Juniper/Junos",
+      "sources": [
+        "TS_notes/L2circuit.md",
+        "TS_notes/Configure_connection_CCC_example.md",
+        "classification/Concepts_Theory/EoMPLS_VC_Type.md",
+        "TS_notes/Qui_tắc_về_forwarding_traffic_với_VPLS_mesh-group.md"
+      ]
+    },
+    {
+      "id": "l3vpn",
+      "path": "concepts/mpls-vpn/l3vpn.md",
+      "type": "consolidate",
+      "topic": "L3VPN",
+      "kind": "Concepts",
+      "platform": "Juniper/Junos",
+      "sources": [
+        "classification/Concepts_Theory/Layer-2 and Layer-3 VPN From JUNOS.md",
+        "classification/Concepts_Theory/Interprovider_Layer_3_VPN_option_C.md",
+        "classification/Concepts_Theory/L3VPN_per-prefix_label_allocation.md",
+        "classification/Concepts_Theory/l3vpn_hub_and_spoke.md",
+        "classification/Concepts_Theory/l3vpn_hub_and_spoke-1.md",
+        "classification/Concepts_Theory/multipath in L3VPN routing-instance.md"
+      ]
+    },
+    {
+      "id": "evpn-vxlan",
+      "path": "concepts/mpls-vpn/evpn-vxlan.md",
+      "type": "consolidate",
+      "topic": "EVPN and VXLAN",
+      "kind": "Concepts",
+      "platform": "Juniper/Junos",
+      "sources": [
+        "TS_notes/eVPN.md",
+        "TS_notes/evpn_command_check.md",
+        "TS_notes/commands_need_to_collect_to_check_EVPN-VXLAN_(From_This_Week-Data_Center_Deployment_with_EVPN-VXLAN).md"
+      ]
+    },
+    {
+      "id": "hardware-replacement",
+      "path": "maintenance/hardware-replacement.md",
+      "type": "consolidate",
+      "topic": "Hardware Replacement and Maintenance",
+      "kind": "Maintenance",
+      "platform": "Juniper/Junos",
+      "sources": [
+        "classification/Troubleshooting/Guide_MPC_insert_and_Power_note_on_MX2008.md",
+        "classification/Troubleshooting/Guide_NG-RE_insert_remove_on_SCBE2-E3.md",
+        "classification/Troubleshooting/Replacing_RE-phương_án_không_có_thiết_bị_lab.md"
+      ]
+    },
+    {
+      "id": "case-notes-index",
+      "path": "case-notes/index.md",
+      "type": "index-only",
+      "topic": "Case Notes",
+      "kind": "Index",
+      "platform": "Mixed",
+      "source_prefix": "Case_notes/"
+    },
+    {
+      "id": "vendor-kb-index",
+      "path": "vendor-kb/index.md",
+      "type": "index-only",
+      "topic": "Vendor PR and KB",
+      "kind": "Index",
+      "platform": "Juniper",
+      "source_prefix": "PR/"
+    },
+    {
+      "id": "mail-templates-index",
+      "path": "mail-templates/index.md",
+      "type": "index-only",
+      "topic": "Mail Templates",
+      "kind": "Index",
+      "platform": "Mixed",
+      "source_prefix": "Mail_template/"
+    },
+    {
+      "id": "lab-index",
+      "path": "lab/index.md",
+      "type": "index-only",
+      "topic": "Lab Scenarios",
+      "kind": "Index",
+      "platform": "Mixed",
+      "source_prefix": "LAB_SVT_GROUP/"
+    },
+    {
+      "id": "cli-index",
+      "path": "cli-cheatsheets/index.md",
+      "type": "index-only",
+      "topic": "CLI Cheatsheets",
+      "kind": "Index",
+      "platform": "Mixed",
+      "source_prefix": "classification/CLI_Cheatsheet/"
+    }
+  ]
+}
