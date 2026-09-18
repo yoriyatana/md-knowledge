@@ -269,8 +269,8 @@
   "case-notes-index": {
     "output": "case-notes/index.md",
     "sources": [
-      "formatted/Mail_template/Trả lời về việc khuyến nghị version.md",
-      "formatted/Mail_template/lỗi không ping được mpls ldp.md",
+      "formatted/Case_notes/Trả lời về việc khuyến nghị version.md",
+      "formatted/Case_notes/lỗi không ping được mpls ldp.md",
       "formatted/Case_notes/SR-2023-0425-1650 - MPC11E link recovery behavior.md",
       "formatted/Case_notes/MPC11E HW limit - link recovery and hold-time.md",
       "formatted/Case_notes/SR-2022-0311-1648 - PR1638410 and PR1642584.md",
