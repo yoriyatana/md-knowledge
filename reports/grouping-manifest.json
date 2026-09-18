@@ -608,130 +608,7 @@
       "level2_doctype": "index",
       "topic": "TS_notes Source Inventory",
       "sources": [
-        "TS_notes/1 số notes các ý cần khảo sát về nhà trạm đặt thiết bị.md",
-        "TS_notes/2021-0628-0028_ heap memory increase.md",
-        "TS_notes/2021-1108-356720 - SV TECHNOLOGIES JSC - Viettel_MX_Clarification on how to calculate temperature threshold and fan speed.md",
-        "TS_notes/2021-1228-388762, _Mobifone-IPBB_Behaviour Route-target Family eBGP Session.md",
-        "TS_notes/ACX2100 _ cách cấu hình event-option để active script thu thập thông tin thu phát của port quang.md",
-        "TS_notes/ACX2100_ACX2200 classsifier traffic mpls theo exp.md",
-        "TS_notes/ACX710 Known Limitations.md",
-        "TS_notes/ACX7100.md",
-        "TS_notes/Alarm on FPC.md",
-        "TS_notes/BGP errror messages.md",
-        "TS_notes/BGP flap.md",
-        "TS_notes/BGP.md",
-        "TS_notes/CGNAT  thêm range mới vào trong Pool đã khai báo.md",
-        "TS_notes/CGNAT troubleshoot commands.md",
-        "TS_notes/Call JTAC.md",
-        "TS_notes/Cisco command health check.md",
-        "TS_notes/Class of Services - CoS for ACX.md",
-        "TS_notes/Class of Services - CoS notes.md",
-        "TS_notes/Class of Services - CoS shell cmd on MPC7E (EA chip).md",
-        "TS_notes/CoS class-of-service default queue name and scheduler.md",
-        "TS_notes/CoS class-of-service shell commands.md",
-        "TS_notes/Collect log on MPC10E_MPC11E.md",
-        "TS_notes/Command check liên quan đến CGNAT services.md",
-        "TS_notes/Config CFM action down ifl.md",
-        "TS_notes/Cách fill file atp VNPT.md",
-        "TS_notes/Cơ chế điều chỉnh tốc độ quạt MX.md",
-        "TS_notes/DDOS pfe-RE TCP connections.md",
-        "TS_notes/Delay thời gian up time của CE interfaces.md",
-        "TS_notes/Destinations RTBH notes.md",
-        "TS_notes/Disable log to tty pfe.md",
-        "TS_notes/Entropy label capable.md",
-        "TS_notes/FPC.md",
-        "TS_notes/Firewall term scale.md",
-        "TS_notes/High CPU due to show route.md",
-        "TS_notes/How to collect _var_log files from Next Generation Routing Engine (NG-RE).md",
-        "TS_notes/How to collect vmhost coredumps from Next Generation Routing Engine (NG-RE).md",
-        "TS_notes/Huawei vlan manipulation.md",
-        "TS_notes/ICMP ping đấu nối nhảy time.md",
-        "TS_notes/IOS-XR Bridge Domains _ MAC Addresses.md",
-        "TS_notes/JTASK_SCHED_SLIP khi bật lấy gcore (coredump process).md",
-        "TS_notes/JunOS-EVO evo-pfemand.md",
-        "TS_notes/Juniper MX204 1G port.md",
-        "TS_notes/Juniper RA vs FA.md",
-        "TS_notes/Juniper syslog facility và Severity.md",
-        "TS_notes/KB26261__M_MX_T-series_ Troubleshooting Checklist - Routing Engine High CPU.md",
-        "TS_notes/Không commit được khi delete routing-instance ở trạng thái deactivate.md",
-        "TS_notes/Kiểm tra tác động nào liên quan đến software_hardware_config.md",
-        "TS_notes/Kênh IPTV đứng hình khi xem.md",
-        "TS_notes/Linecard reboot.md",
-        "TS_notes/Load-balance test.md",
-        "TS_notes/Local convergence breakdown.md",
-        "TS_notes/Lấy log VMHOST.md",
-        "TS_notes/Lệnh off laser mode shell _ dùng flap link.md",
-        "TS_notes/MPC3E Hard errors.md",
-        "TS_notes/MS-MPC throughput.md",
-        "TS_notes/MS-SPC3.md",
-        "TS_notes/MX960_MS-MPC_CGNAT SNMP OID monitor CPU, MEM of NPUs on MS-MPC.md",
-        "TS_notes/Manual way to trigger the CB 0 19.44 alarm.md",
-        "TS_notes/Memory RPD.md",
-        "TS_notes/Nâng cấp NG-RE từ Junos 17.X-18.X lên 19.3R1 or Later.md",
-        "TS_notes/OID Alarm count.md",
-        "TS_notes/OID BRAS relative.md",
-        "TS_notes/OID lấy VRF name.md",
-        "TS_notes/PEM.md",
-        "TS_notes/PFE disable script.md",
-        "TS_notes/PFE packet capture on MX104.md",
-        "TS_notes/PFE packet capture.md",
-        "TS_notes/PIM instances.md",
-        "TS_notes/Port mirror on Juniper MX.md",
-        "TS_notes/RE boot loop with SCBE3.md",
-        "TS_notes/RPD 64-bit_32-bit mode.md",
-        "TS_notes/RPD mode 64-bit.md",
-        "TS_notes/RR không nhận được route từ các PE tỉnh - SR-2021-1208-1924.md",
-        "TS_notes/Recommendation_Best Practise ACX7100.md",
-        "TS_notes/Restart the SNMP process.md",
-        "TS_notes/SCB.md",
-        "TS_notes/SCB_2.md",
-        "TS_notes/SCU-DCU on QFX10002 không hỗ trợ.md",
-        "TS_notes/SNMP Ifindex.md",
-        "TS_notes/SNMP LSP InOutOctet MIB OID copy.md",
-        "TS_notes/SNMP interface rate MIB OID.md",
-        "TS_notes/SNMP oid heap mem line card để giám sát.md",
-        "TS_notes/SR-2023-0301-1744 - Viettel- SLA- Check nguyên nhân không activate routing-instances mặc dù track không down rpm probe.md",
-        "TS_notes/Some AMS and MS-MPC notes.md",
-        "TS_notes/Source-base RTBH notes.md",
-        "TS_notes/Symmetric Load Balancing.md",
-        "TS_notes/Syslog message_ MQCHIP._FI Enqueuing error._type._seq._stream.md",
-        "TS_notes/TCAM ACX show.md",
-        "TS_notes/Tcpdump packet on RE MX.md",
-        "TS_notes/Temperature - fan speed.md",
-        "TS_notes/Test Juniper telemetry with jtimon (OpenConfig).md",
-        "TS_notes/Thu thập log PFE on RE.md",
-        "TS_notes/Track specific packet sizes or specific MAC.md",
-        "TS_notes/Untitled Note.md",
-        "TS_notes/Untitled Note_2.md",
-        "TS_notes/Untitled Note_3.md",
-        "TS_notes/_Internal Only_ Not able to enter CLI mode of router (RE type_ RE-S-X6-64G).md",
-        "TS_notes/_MX_ How to identify the link that may be causing interrupt throttling on an MPC.md",
-        "TS_notes/_MX_PTX_ How to determine which LSP is forwarding traffic on bypass LSP.md",
-        "TS_notes/_M_MX_ How to check PPMD mode and troubleshooting tips.md",
-        "TS_notes/_M_MX_ jnxFruOfflineReason.md",
-        "TS_notes/_QFX_ How to identify FPC line card offline reason from chassisd SNMP TRAP.md",
         "TS_notes/archival.md",
-        "TS_notes/auto-bandwidth notes.md",
-        "TS_notes/auto-negotiation on ACX.md",
-        "TS_notes/capture the ttrace output.md",
-        "TS_notes/commands need to collect to check high CPU.md",
-        "TS_notes/commands to trigger alarm on MX.md",
-        "TS_notes/các physical hw có trên jlab.md",
-        "TS_notes/cách upgrade_downgrade JunOS cho physical device on Jlab_vlab.md",
-        "TS_notes/ecmp-local-bias.md",
-        "TS_notes/enhanced subscriber management daemon runs in 64-bit_32-bit.md",
-        "TS_notes/kiểm tra default mac-limit learning trên interaces_instance.md",
-        "TS_notes/multiple Junos-cli commands at the same time.md",
-        "TS_notes/pfe local-bias.md",
-        "TS_notes/scale MPC4E.md",
-        "TS_notes/set system debugger-on-panic  and set system debugger-on-break.md",
-        "TS_notes/show firewall in PFE.md",
-        "TS_notes/switch EX2300 bị cao tải CPU -SNMP.md",
-        "TS_notes/switch EX2300 không commit được.md",
-        "TS_notes/traceoptions for specific RSVP.md",
-        "TS_notes/triển khai apply term Block_CTH_POLYCOM vào filter block-frag-in của Inside CGNAT.md",
-        "TS_notes/upgrade OS.md",
-        "TS_notes/xư lý cảnh báo RPD_MPLS_INTF_MAX_LABELS_ERROR HPG8001PRT02.md",
         "TS_notes/yum groupinstall _Development Tools_.md"
       ],
       "approved": true,
@@ -760,6 +637,668 @@
         "classification/Concepts_Theory/AJSPR-v19A/Chapter 7_ Advanced IS-IS Operations and Configuration Options.md",
         "classification/Concepts_Theory/AJSPR-v19A/Chapter 8_ Multilevel IS-IS Networks.md",
         "classification/Concepts_Theory/AJSPR-v19A/Chapter 9_ Troubleshooting IS-IS.md"
+      ],
+      "approved": true,
+      "action": "index-only"
+    },
+    {
+      "id": "classified-bras",
+      "destination": "bras/index.md",
+      "level1_domain": "bras",
+      "level3_feature": "general",
+      "level2_doctype": "index",
+      "topic": "bras Classified Notes",
+      "sources": [
+        "TS_notes/OID BRAS relative.md"
+      ],
+      "approved": true,
+      "action": "index-only"
+    },
+    {
+      "id": "classified-case-notes",
+      "destination": "case-notes/index.md",
+      "level1_domain": "case-notes",
+      "level3_feature": "general",
+      "level2_doctype": "index",
+      "topic": "case-notes Classified Notes",
+      "sources": [
+        "TS_notes/2021-1228-388762, _Mobifone-IPBB_Behaviour Route-target Family eBGP Session.md",
+        "TS_notes/JTASK_SCHED_SLIP khi bật lấy gcore (coredump process).md",
+        "TS_notes/Không commit được khi delete routing-instance ở trạng thái deactivate.md",
+        "TS_notes/Untitled Note_3.md",
+        "TS_notes/_Internal Only_ Not able to enter CLI mode of router (RE type_ RE-S-X6-64G).md",
+        "TS_notes/switch EX2300 bị cao tải CPU -SNMP.md",
+        "TS_notes/switch EX2300 không commit được.md",
+        "TS_notes/xư lý cảnh báo RPD_MPLS_INTF_MAX_LABELS_ERROR HPG8001PRT02.md"
+      ],
+      "approved": true,
+      "action": "index-only"
+    },
+    {
+      "id": "classified-cgnat",
+      "destination": "cgnat/index.md",
+      "level1_domain": "cgnat",
+      "level3_feature": "general",
+      "level2_doctype": "index",
+      "topic": "cgnat Classified Notes",
+      "sources": [
+        "TS_notes/MS-MPC throughput.md",
+        "TS_notes/MS-SPC3.md",
+        "TS_notes/MX960_MS-MPC_CGNAT SNMP OID monitor CPU, MEM of NPUs on MS-MPC.md",
+        "TS_notes/Some AMS and MS-MPC notes.md"
+      ],
+      "approved": true,
+      "action": "index-only"
+    },
+    {
+      "id": "classified-cgnat-case-study",
+      "destination": "cgnat/case-study/index.md",
+      "level1_domain": "cgnat",
+      "level3_feature": "case-study",
+      "level2_doctype": "index",
+      "topic": "cgnat/case-study Classified Notes",
+      "sources": [
+        "TS_notes/triển khai apply term Block_CTH_POLYCOM vào filter block-frag-in của Inside CGNAT.md"
+      ],
+      "approved": true,
+      "action": "index-only"
+    },
+    {
+      "id": "classified-cgnat-configuration-guide",
+      "destination": "cgnat/configuration-guide/index.md",
+      "level1_domain": "cgnat",
+      "level3_feature": "configuration-guide",
+      "level2_doctype": "index",
+      "topic": "cgnat/configuration-guide Classified Notes",
+      "sources": [
+        "TS_notes/CGNAT  thêm range mới vào trong Pool đã khai báo.md"
+      ],
+      "approved": true,
+      "action": "index-only"
+    },
+    {
+      "id": "classified-cgnat-troubleshooting-guide",
+      "destination": "cgnat/troubleshooting-guide/index.md",
+      "level1_domain": "cgnat",
+      "level3_feature": "troubleshooting-guide",
+      "level2_doctype": "index",
+      "topic": "cgnat/troubleshooting-guide Classified Notes",
+      "sources": [
+        "TS_notes/CGNAT troubleshoot commands.md",
+        "TS_notes/Command check liên quan đến CGNAT services.md"
+      ],
+      "approved": true,
+      "action": "index-only"
+    },
+    {
+      "id": "classified-hardware-maintenance",
+      "destination": "hardware-maintenance/index.md",
+      "level1_domain": "hardware-maintenance",
+      "level3_feature": "general",
+      "level2_doctype": "index",
+      "topic": "hardware-maintenance Classified Notes",
+      "sources": [
+        "TS_notes/1 số notes các ý cần khảo sát về nhà trạm đặt thiết bị.md"
+      ],
+      "approved": true,
+      "action": "index-only"
+    },
+    {
+      "id": "classified-hardware-maintenance-chassis-power",
+      "destination": "hardware-maintenance/chassis-power/index.md",
+      "level1_domain": "hardware-maintenance",
+      "level3_feature": "chassis-power",
+      "level2_doctype": "index",
+      "topic": "hardware-maintenance/chassis-power Classified Notes",
+      "sources": [
+        "TS_notes/Untitled Note.md",
+        "TS_notes/Cơ chế điều chỉnh tốc độ quạt MX.md",
+        "TS_notes/PEM.md",
+        "TS_notes/Temperature - fan speed.md"
+      ],
+      "approved": true,
+      "action": "index-only"
+    },
+    {
+      "id": "classified-hardware-maintenance-linecard",
+      "destination": "hardware-maintenance/linecard/index.md",
+      "level1_domain": "hardware-maintenance",
+      "level3_feature": "linecard",
+      "level2_doctype": "index",
+      "topic": "hardware-maintenance/linecard Classified Notes",
+      "sources": [
+        "TS_notes/Alarm on FPC.md",
+        "TS_notes/Disable log to tty pfe.md",
+        "TS_notes/FPC.md",
+        "TS_notes/Linecard reboot.md",
+        "TS_notes/PFE disable script.md",
+        "TS_notes/SNMP Ifindex.md",
+        "TS_notes/SNMP interface rate MIB OID.md",
+        "TS_notes/SNMP oid heap mem line card để giám sát.md",
+        "TS_notes/Syslog message_ MQCHIP._FI Enqueuing error._type._seq._stream.md",
+        "TS_notes/_M_MX_ jnxFruOfflineReason.md",
+        "TS_notes/_QFX_ How to identify FPC line card offline reason from chassisd SNMP TRAP.md",
+        "TS_notes/capture the ttrace output.md"
+      ],
+      "approved": true,
+      "action": "index-only"
+    },
+    {
+      "id": "classified-hardware-maintenance-linecard-ts-guide",
+      "destination": "hardware-maintenance/linecard/ts-guide/index.md",
+      "level1_domain": "hardware-maintenance",
+      "level3_feature": "linecard/ts-guide",
+      "level2_doctype": "index",
+      "topic": "hardware-maintenance/linecard/ts-guide Classified Notes",
+      "sources": [
+        "TS_notes/2021-0628-0028_ heap memory increase.md"
+      ],
+      "approved": true,
+      "action": "index-only"
+    },
+    {
+      "id": "classified-hardware-maintenance-mpc-linecard",
+      "destination": "hardware-maintenance/mpc-linecard/index.md",
+      "level1_domain": "hardware-maintenance",
+      "level3_feature": "mpc-linecard",
+      "level2_doctype": "index",
+      "topic": "hardware-maintenance/mpc-linecard Classified Notes",
+      "sources": [
+        "TS_notes/Collect log on MPC10E_MPC11E.md",
+        "TS_notes/MPC3E Hard errors.md",
+        "TS_notes/_MX_ How to identify the link that may be causing interrupt throttling on an MPC.md"
+      ],
+      "approved": true,
+      "action": "index-only"
+    },
+    {
+      "id": "classified-hardware-maintenance-optics-physical",
+      "destination": "hardware-maintenance/optics-physical/index.md",
+      "level1_domain": "hardware-maintenance",
+      "level3_feature": "optics-physical",
+      "level2_doctype": "index",
+      "topic": "hardware-maintenance/optics-physical Classified Notes",
+      "sources": [
+        "TS_notes/ACX2100 _ cách cấu hình event-option để active script thu thập thông tin thu phát của port quang.md",
+        "TS_notes/Delay thời gian up time của CE interfaces.md",
+        "TS_notes/Juniper MX204 1G port.md",
+        "TS_notes/Lệnh off laser mode shell _ dùng flap link.md",
+        "TS_notes/auto-negotiation on ACX.md"
+      ],
+      "approved": true,
+      "action": "index-only"
+    },
+    {
+      "id": "classified-hardware-maintenance-re-scbe",
+      "destination": "hardware-maintenance/re-scbe/index.md",
+      "level1_domain": "hardware-maintenance",
+      "level3_feature": "re-scbe",
+      "level2_doctype": "index",
+      "topic": "hardware-maintenance/re-scbe Classified Notes",
+      "sources": [
+        "TS_notes/DDOS pfe-RE TCP connections.md",
+        "TS_notes/High CPU due to show route.md",
+        "TS_notes/How to collect _var_log files from Next Generation Routing Engine (NG-RE).md",
+        "TS_notes/How to collect vmhost coredumps from Next Generation Routing Engine (NG-RE).md",
+        "TS_notes/KB26261__M_MX_T-series_ Troubleshooting Checklist - Routing Engine High CPU.md",
+        "TS_notes/Lấy log VMHOST.md",
+        "TS_notes/RE boot loop with SCBE3.md",
+        "TS_notes/SCB.md",
+        "TS_notes/SCB_2.md",
+        "TS_notes/commands need to collect to check high CPU.md"
+      ],
+      "approved": true,
+      "action": "index-only"
+    },
+    {
+      "id": "classified-hardware-maintenance-ts-guide",
+      "destination": "hardware-maintenance/ts-guide/index.md",
+      "level1_domain": "hardware-maintenance",
+      "level3_feature": "ts-guide",
+      "level2_doctype": "index",
+      "topic": "hardware-maintenance/ts-guide Classified Notes",
+      "sources": [
+        "TS_notes/Kiểm tra tác động nào liên quan đến software_hardware_config.md"
+      ],
+      "approved": true,
+      "action": "index-only"
+    },
+    {
+      "id": "classified-jtac-rma",
+      "destination": "jtac/rma/index.md",
+      "level1_domain": "jtac",
+      "level3_feature": "rma",
+      "level2_doctype": "index",
+      "topic": "jtac/rma Classified Notes",
+      "sources": [
+        "TS_notes/Juniper RA vs FA.md"
+      ],
+      "approved": true,
+      "action": "index-only"
+    },
+    {
+      "id": "classified-jtnoc",
+      "destination": "jtnoc/index.md",
+      "level1_domain": "jtnoc",
+      "level3_feature": "general",
+      "level2_doctype": "index",
+      "topic": "jtnoc Classified Notes",
+      "sources": [
+        "TS_notes/Call JTAC.md"
+      ],
+      "approved": true,
+      "action": "index-only"
+    },
+    {
+      "id": "classified-junos-general",
+      "destination": "junos-general/index.md",
+      "level1_domain": "junos-general",
+      "level3_feature": "general",
+      "level2_doctype": "index",
+      "topic": "junos-general Classified Notes",
+      "sources": [
+        "TS_notes/ICMP ping đấu nối nhảy time.md",
+        "TS_notes/JunOS-EVO evo-pfemand.md",
+        "TS_notes/OID Alarm count.md",
+        "TS_notes/Restart the SNMP process.md"
+      ],
+      "approved": true,
+      "action": "index-only"
+    },
+    {
+      "id": "classified-junos-general-cli-cheatsheet",
+      "destination": "junos-general/cli-cheatsheet/index.md",
+      "level1_domain": "junos-general",
+      "level3_feature": "cli-cheatsheet",
+      "level2_doctype": "index",
+      "topic": "junos-general/cli-cheatsheet Classified Notes",
+      "sources": [
+        "TS_notes/Manual way to trigger the CB 0 19.44 alarm.md",
+        "TS_notes/commands to trigger alarm on MX.md",
+        "TS_notes/multiple Junos-cli commands at the same time.md",
+        "TS_notes/set system debugger-on-panic  and set system debugger-on-break.md"
+      ],
+      "approved": true,
+      "action": "index-only"
+    },
+    {
+      "id": "classified-junos-general-oam",
+      "destination": "junos-general/oam/index.md",
+      "level1_domain": "junos-general",
+      "level3_feature": "oam",
+      "level2_doctype": "index",
+      "topic": "junos-general/oam Classified Notes",
+      "sources": [
+        "TS_notes/Config CFM action down ifl.md"
+      ],
+      "approved": true,
+      "action": "index-only"
+    },
+    {
+      "id": "classified-junos-general-ppmd",
+      "destination": "junos-general/ppmd/index.md",
+      "level1_domain": "junos-general",
+      "level3_feature": "ppmd",
+      "level2_doctype": "index",
+      "topic": "junos-general/ppmd Classified Notes",
+      "sources": [
+        "TS_notes/_M_MX_ How to check PPMD mode and troubleshooting tips.md"
+      ],
+      "approved": true,
+      "action": "index-only"
+    },
+    {
+      "id": "classified-junos-general-rpm",
+      "destination": "junos-general/rpm/index.md",
+      "level1_domain": "junos-general",
+      "level3_feature": "rpm",
+      "level2_doctype": "index",
+      "topic": "junos-general/rpm Classified Notes",
+      "sources": [
+        "TS_notes/SR-2023-0301-1744 - Viettel- SLA- Check nguyên nhân không activate routing-instances mặc dù track không down rpm probe.md"
+      ],
+      "approved": true,
+      "action": "index-only"
+    },
+    {
+      "id": "classified-junos-general-syslog",
+      "destination": "junos-general/syslog/index.md",
+      "level1_domain": "junos-general",
+      "level3_feature": "syslog",
+      "level2_doctype": "index",
+      "topic": "junos-general/syslog Classified Notes",
+      "sources": [
+        "TS_notes/Juniper syslog facility và Severity.md",
+        "TS_notes/Thu thập log PFE on RE.md"
+      ],
+      "approved": true,
+      "action": "index-only"
+    },
+    {
+      "id": "classified-lab-notes",
+      "destination": "lab-notes/index.md",
+      "level1_domain": "lab-notes",
+      "level3_feature": "general",
+      "level2_doctype": "index",
+      "topic": "lab-notes Classified Notes",
+      "sources": [
+        "TS_notes/các physical hw có trên jlab.md",
+        "TS_notes/cách upgrade_downgrade JunOS cho physical device on Jlab_vlab.md"
+      ],
+      "approved": true,
+      "action": "index-only"
+    },
+    {
+      "id": "classified-maintenance-junos-upgrade",
+      "destination": "maintenance/junos-upgrade/index.md",
+      "level1_domain": "maintenance",
+      "level3_feature": "junos-upgrade",
+      "level2_doctype": "index",
+      "topic": "maintenance/junos-upgrade Classified Notes",
+      "sources": [
+        "TS_notes/Nâng cấp NG-RE từ Junos 17.X-18.X lên 19.3R1 or Later.md",
+        "TS_notes/upgrade OS.md"
+      ],
+      "approved": true,
+      "action": "index-only"
+    },
+    {
+      "id": "classified-mpls-vpn-l3vpn",
+      "destination": "mpls-vpn/l3vpn/index.md",
+      "level1_domain": "mpls-vpn",
+      "level3_feature": "l3vpn",
+      "level2_doctype": "index",
+      "topic": "mpls-vpn/l3vpn Classified Notes",
+      "sources": [
+        "TS_notes/OID lấy VRF name.md"
+      ],
+      "approved": true,
+      "action": "index-only"
+    },
+    {
+      "id": "classified-mpls-vpn-rsvp",
+      "destination": "mpls-vpn/rsvp/index.md",
+      "level1_domain": "mpls-vpn",
+      "level3_feature": "rsvp",
+      "level2_doctype": "index",
+      "topic": "mpls-vpn/rsvp Classified Notes",
+      "sources": [
+        "TS_notes/SNMP LSP InOutOctet MIB OID copy.md",
+        "TS_notes/_MX_PTX_ How to determine which LSP is forwarding traffic on bypass LSP.md",
+        "TS_notes/auto-bandwidth notes.md"
+      ],
+      "approved": true,
+      "action": "index-only"
+    },
+    {
+      "id": "classified-mpls-vpn-rsvp-ts-guide",
+      "destination": "mpls-vpn/rsvp/ts-guide/index.md",
+      "level1_domain": "mpls-vpn",
+      "level3_feature": "rsvp/ts-guide",
+      "level2_doctype": "index",
+      "topic": "mpls-vpn/rsvp/ts-guide Classified Notes",
+      "sources": [
+        "TS_notes/traceoptions for specific RSVP.md"
+      ],
+      "approved": true,
+      "action": "index-only"
+    },
+    {
+      "id": "classified-other-tools-user-guide",
+      "destination": "other-tools/user-guide/index.md",
+      "level1_domain": "other-tools",
+      "level3_feature": "user-guide",
+      "level2_doctype": "index",
+      "topic": "other-tools/user-guide Classified Notes",
+      "sources": [
+        "TS_notes/Test Juniper telemetry with jtimon (OpenConfig).md"
+      ],
+      "approved": true,
+      "action": "index-only"
+    },
+    {
+      "id": "classified-other-tools-vnpt-atp",
+      "destination": "other-tools/vnpt-atp/index.md",
+      "level1_domain": "other-tools",
+      "level3_feature": "vnpt-atp",
+      "level2_doctype": "index",
+      "topic": "other-tools/vnpt-atp Classified Notes",
+      "sources": [
+        "TS_notes/Cách fill file atp VNPT.md"
+      ],
+      "approved": true,
+      "action": "index-only"
+    },
+    {
+      "id": "classified-routing",
+      "destination": "routing/index.md",
+      "level1_domain": "routing",
+      "level3_feature": "general",
+      "level2_doctype": "index",
+      "topic": "routing Classified Notes",
+      "sources": [
+        "TS_notes/Memory RPD.md",
+        "TS_notes/RPD 64-bit_32-bit mode.md",
+        "TS_notes/RPD mode 64-bit.md"
+      ],
+      "approved": true,
+      "action": "index-only"
+    },
+    {
+      "id": "classified-routing-bgp",
+      "destination": "routing/bgp/index.md",
+      "level1_domain": "routing",
+      "level3_feature": "bgp",
+      "level2_doctype": "index",
+      "topic": "routing/bgp Classified Notes",
+      "sources": [
+        "TS_notes/BGP errror messages.md",
+        "TS_notes/BGP flap.md",
+        "TS_notes/BGP.md",
+        "TS_notes/Destinations RTBH notes.md",
+        "TS_notes/Load-balance test.md",
+        "TS_notes/RR không nhận được route từ các PE tỉnh - SR-2021-1208-1924.md",
+        "TS_notes/Source-base RTBH notes.md"
+      ],
+      "approved": true,
+      "action": "index-only"
+    },
+    {
+      "id": "classified-routing-convergence",
+      "destination": "routing/convergence/index.md",
+      "level1_domain": "routing",
+      "level3_feature": "convergence",
+      "level2_doctype": "index",
+      "topic": "routing/convergence Classified Notes",
+      "sources": [
+        "TS_notes/Local convergence breakdown.md"
+      ],
+      "approved": true,
+      "action": "index-only"
+    },
+    {
+      "id": "classified-routing-firewall-ts-guide",
+      "destination": "routing/firewall/ts-guide/index.md",
+      "level1_domain": "routing",
+      "level3_feature": "firewall/ts-guide",
+      "level2_doctype": "index",
+      "topic": "routing/firewall/ts-guide Classified Notes",
+      "sources": [
+        "TS_notes/Firewall term scale.md",
+        "TS_notes/show firewall in PFE.md"
+      ],
+      "approved": true,
+      "action": "index-only"
+    },
+    {
+      "id": "classified-routing-loadbalance",
+      "destination": "routing/loadbalance/index.md",
+      "level1_domain": "routing",
+      "level3_feature": "loadbalance",
+      "level2_doctype": "index",
+      "topic": "routing/loadbalance Classified Notes",
+      "sources": [
+        "TS_notes/Entropy label capable.md",
+        "TS_notes/Symmetric Load Balancing.md",
+        "TS_notes/ecmp-local-bias.md",
+        "TS_notes/pfe local-bias.md"
+      ],
+      "approved": true,
+      "action": "index-only"
+    },
+    {
+      "id": "classified-routing-multicast",
+      "destination": "routing/multicast/index.md",
+      "level1_domain": "routing",
+      "level3_feature": "multicast",
+      "level2_doctype": "index",
+      "topic": "routing/multicast Classified Notes",
+      "sources": [
+        "TS_notes/Kênh IPTV đứng hình khi xem.md",
+        "TS_notes/PIM instances.md"
+      ],
+      "approved": true,
+      "action": "index-only"
+    },
+    {
+      "id": "classified-routing-scu-dcu",
+      "destination": "routing/scu-dcu/index.md",
+      "level1_domain": "routing",
+      "level3_feature": "scu-dcu",
+      "level2_doctype": "index",
+      "topic": "routing/scu-dcu Classified Notes",
+      "sources": [
+        "TS_notes/Untitled Note_2.md",
+        "TS_notes/SCU-DCU on QFX10002 không hỗ trợ.md"
+      ],
+      "approved": true,
+      "action": "index-only"
+    },
+    {
+      "id": "classified-scaling-limitations",
+      "destination": "scaling-limitations/index.md",
+      "level1_domain": "scaling-limitations",
+      "level3_feature": "general",
+      "level2_doctype": "index",
+      "topic": "scaling-limitations Classified Notes",
+      "sources": [
+        "TS_notes/ACX710 Known Limitations.md",
+        "TS_notes/ACX7100.md",
+        "TS_notes/Recommendation_Best Practise ACX7100.md",
+        "TS_notes/scale MPC4E.md"
+      ],
+      "approved": true,
+      "action": "index-only"
+    },
+    {
+      "id": "classified-subscriber-management",
+      "destination": "subscriber-management/index.md",
+      "level1_domain": "subscriber-management",
+      "level3_feature": "general",
+      "level2_doctype": "index",
+      "topic": "subscriber-management Classified Notes",
+      "sources": [
+        "TS_notes/enhanced subscriber management daemon runs in 64-bit_32-bit.md"
+      ],
+      "approved": true,
+      "action": "index-only"
+    },
+    {
+      "id": "classified-switching",
+      "destination": "switching/index.md",
+      "level1_domain": "switching",
+      "level3_feature": "general",
+      "level2_doctype": "index",
+      "topic": "switching Classified Notes",
+      "sources": [
+        "TS_notes/TCAM ACX show.md",
+        "TS_notes/Track specific packet sizes or specific MAC.md"
+      ],
+      "approved": true,
+      "action": "index-only"
+    },
+    {
+      "id": "classified-switching-cisco",
+      "destination": "switching/cisco/index.md",
+      "level1_domain": "switching",
+      "level3_feature": "cisco",
+      "level2_doctype": "index",
+      "topic": "switching/cisco Classified Notes",
+      "sources": [
+        "TS_notes/IOS-XR Bridge Domains _ MAC Addresses.md"
+      ],
+      "approved": true,
+      "action": "index-only"
+    },
+    {
+      "id": "classified-switching-cos",
+      "destination": "switching/cos/index.md",
+      "level1_domain": "switching",
+      "level3_feature": "cos",
+      "level2_doctype": "index",
+      "topic": "switching/cos Classified Notes",
+      "sources": [
+        "TS_notes/ACX2100_ACX2200 classsifier traffic mpls theo exp.md",
+        "TS_notes/Class of Services - CoS for ACX.md",
+        "TS_notes/Class of Services - CoS notes.md",
+        "TS_notes/Class of Services - CoS shell cmd on MPC7E (EA chip).md",
+        "TS_notes/CoS class-of-service default queue name and scheduler.md",
+        "TS_notes/CoS class-of-service shell commands.md"
+      ],
+      "approved": true,
+      "action": "index-only"
+    },
+    {
+      "id": "classified-switching-huawei",
+      "destination": "switching/huawei/index.md",
+      "level1_domain": "switching",
+      "level3_feature": "huawei",
+      "level2_doctype": "index",
+      "topic": "switching/huawei Classified Notes",
+      "sources": [
+        "TS_notes/Huawei vlan manipulation.md"
+      ],
+      "approved": true,
+      "action": "index-only"
+    },
+    {
+      "id": "classified-switching-mirror-traffic",
+      "destination": "switching/mirror-traffic/index.md",
+      "level1_domain": "switching",
+      "level3_feature": "mirror-traffic",
+      "level2_doctype": "index",
+      "topic": "switching/mirror-traffic Classified Notes",
+      "sources": [
+        "TS_notes/PFE packet capture on MX104.md",
+        "TS_notes/PFE packet capture.md",
+        "TS_notes/Port mirror on Juniper MX.md",
+        "TS_notes/Tcpdump packet on RE MX.md"
+      ],
+      "approved": true,
+      "action": "index-only"
+    },
+    {
+      "id": "classified-switching-ts-notes",
+      "destination": "switching/ts-notes/index.md",
+      "level1_domain": "switching",
+      "level3_feature": "ts-notes",
+      "level2_doctype": "index",
+      "topic": "switching/ts-notes Classified Notes",
+      "sources": [
+        "TS_notes/kiểm tra default mac-limit learning trên interaces_instance.md"
+      ],
+      "approved": true,
+      "action": "index-only"
+    },
+    {
+      "id": "classified-vendor-kb-cisco-troubleshooting",
+      "destination": "vendor-kb/cisco-troubleshooting/index.md",
+      "level1_domain": "vendor-kb",
+      "level3_feature": "cisco-troubleshooting",
+      "level2_doctype": "index",
+      "topic": "vendor-kb/cisco-troubleshooting Classified Notes",
+      "sources": [
+        "TS_notes/Cisco command health check.md"
       ],
       "approved": true,
       "action": "index-only"

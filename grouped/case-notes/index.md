@@ -1,10 +1,12 @@
-# Case Notes Reference Index
+# case-notes Classified Notes
 
 | Topic | Type | Platform/Vendor | Source | Related document |
 |---|---|---|---|---|
-| Trả lời về việc khuyến nghị version | Index | Mixed | `Case_notes/Trả lời về việc khuyến nghị version.md` |  |
-| lỗi không ping được mpls ldp | Index | Mixed | `Case_notes/lỗi không ping được mpls ldp.md` |  |
-| SR-2023-0425-1650 - MPC11E link recovery behavior | Index | Mixed | `Case_notes/SR-2023-0425-1650 - MPC11E link recovery behavior.md` |  |
-| MPC11E HW limit - link recovery and hold-time | Index | Mixed | `Case_notes/MPC11E HW limit - link recovery and hold-time.md` |  |
-| SR-2022-0311-1648 - PR1638410 and PR1642584 | Index | Mixed | `Case_notes/SR-2022-0311-1648 - PR1638410 and PR1642584.md` |  |
-| MPC10E-MPC11E PR overview | Index | Mixed | `Case_notes/MPC10E-MPC11E PR overview.md` |  |
+| 2021-1228-388762, _Mobifone-IPBB_Behaviour Route-target Family eBGP Session | index | Mixed | `TS_notes/2021-1228-388762, _Mobifone-IPBB_Behaviour Route-target Family eBGP Session.md` |  |
+| JTASK_SCHED_SLIP khi bật lấy gcore (coredump process) | index | Mixed | `TS_notes/JTASK_SCHED_SLIP khi bật lấy gcore (coredump process).md` |  |
+| Không commit được khi delete routing-instance ở trạng thái deactivate | index | Mixed | `TS_notes/Không commit được khi delete routing-instance ở trạng thái deactivate.md` |  |
+| Untitled Note_3 | index | Mixed | `TS_notes/Untitled Note_3.md` |  |
+| _Internal Only_ Not able to enter CLI mode of router (RE type_ RE-S-X6-64G) | index | Mixed | `TS_notes/_Internal Only_ Not able to enter CLI mode of router (RE type_ RE-S-X6-64G).md` |  |
+| switch EX2300 bị cao tải CPU -SNMP | index | Mixed | `TS_notes/switch EX2300 bị cao tải CPU -SNMP.md` |  |
+| switch EX2300 không commit được | index | Mixed | `TS_notes/switch EX2300 không commit được.md` |  |
+| xư lý cảnh báo RPD_MPLS_INTF_MAX_LABELS_ERROR HPG8001PRT02 | index | Mixed | `TS_notes/xư lý cảnh báo RPD_MPLS_INTF_MAX_LABELS_ERROR HPG8001PRT02.md` |  |

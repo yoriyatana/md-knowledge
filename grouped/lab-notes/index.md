@@ -1,8 +1,6 @@
-# Lab Scenarios and Environment Index
+# lab-notes Classified Notes
 
 | Topic | Type | Platform/Vendor | Source | Related document |
 |---|---|---|---|---|
-| LAB BRAS_service_lab_01 | Index | Mixed | `LAB_SVT_GROUP/LAB BRAS_service_lab_01.md` |  |
-| LAB advanced_l3vpn_lab_01 | Index | Mixed | `LAB_SVT_GROUP/LAB advanced_l3vpn_lab_01.md` |  |
-| LAB intermediate_l3vpn_lab_01 | Index | Mixed | `LAB_SVT_GROUP/LAB intermediate_l3vpn_lab_01.md` |  |
-| Lab advanced_igp_lab_01 | Index | Mixed | `LAB_SVT_GROUP/Lab advanced_igp_lab_01.md` |  |
+| các physical hw có trên jlab | index | Mixed | `TS_notes/các physical hw có trên jlab.md` |  |
+| cách upgrade_downgrade JunOS cho physical device on Jlab_vlab | index | Mixed | `TS_notes/cách upgrade_downgrade JunOS cho physical device on Jlab_vlab.md` |  |
