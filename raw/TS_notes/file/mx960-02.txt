@@ -1,0 +1,172 @@
+nhatnct@BTN.MX960.202.RE0> show system processes | no-more      
+  PID TT  STAT         TIME COMMAND
+    0  -  DLs      18:00.20 [kernel]
+    1  -  SLs       0:12.44 /sbin/init --
+    2  -  DL        0:00.00 [kpf0]
+    3  -  DL        0:00.00 [kpf1]
+    4  -  DL        0:00.00 [kpf2]
+    5  -  DL        0:00.00 [kpf3]
+    6  -  DL        0:00.00 [crypto]
+    7  -  DL        0:00.00 [crypto returns]
+    8  -  DL        0:00.40 [cam]
+    9  -  DL        0:00.02 [md0]
+   10  -  RL   924105:52.30 [idle]
+   11  -  WL     2440:19.41 [intr]
+   12  -  DL        0:16.07 [geom]
+   13  -  DL      110:59.15 [rand_harvestq]
+   14  -  DL        2:09.16 [usb]
+   15  -  DL      111:58.94 [ifstate notify]
+   16  -  IL        0:00.00 [kern_dump_proc]
+   17  -  DL       10:35.51 [pagedaemon]
+   18  -  DL        0:00.00 [vmdaemon]
+   19  -  DL        0:00.10 [pagezero]
+   20  -  DL        0:37.16 [bufdaemon]
+   21  -  DL        6:18.32 [syncer]
+   22  -  DL        0:37.93 [vnlru]
+   23  -  DL        0:00.00 [netdaemon]
+   24  -  SL        1:18.12 [jsr_kkcm]
+   25  -  DL        0:00.00 [jsr_jsm]
+   27  -  DL        0:00.00 [delayedexecd]
+   28  -  IL        0:00.00 [if_pfe_listen]
+   29  -  DL        0:00.00 [kern_pir_proc]
+   30  -  DL        0:11.05 [ifsclientclosed]
+   31  -  IL        0:00.00 [if_pic_listen0]
+   32  -  DL        3:35.38 [ddostasks]
+  139  -  DL        0:00.04 [md1]
+  238  -  DL        0:00.03 [md2]
+  522  -  DL        0:00.00 [md3]
+  569  -  DL        0:00.02 [md4]
+  617  -  DL        0:00.04 [md5]
+  665  -  DL        0:00.01 [md6]
+  715  -  DL        0:00.00 [md7]
+  763  -  DL        0:00.10 [md8]
+  843  -  DL        0:00.86 [md9]
+  918  -  DL        0:00.00 [md10]
+  968  -  DL        0:00.00 [md11]
+ 1018  -  DL        0:00.00 [md12]
+ 1068  -  DL        0:00.00 [md13]
+ 1128  -  DL        0:00.01 [md14]
+ 1189  -  DL        0:00.01 [md15]
+ 1237  -  DL        0:00.30 [md16]
+ 1285  -  DL        0:00.10 [md17]
+ 1333  -  DL        0:00.01 [md18]
+ 1383  -  DL        0:00.01 [md19]
+ 1433  -  DL        0:00.00 [md20]
+ 1481  -  DL        0:00.04 [md21]
+ 1531  -  DL        0:00.14 [md22]
+ 1581  -  DL        0:00.00 [md23]
+ 1679  -  DL        0:00.01 [md24]
+ 1729  -  DL        0:00.01 [md25]
+ 1779  -  DL        0:00.01 [md26]
+ 1826  -  DL        0:00.01 [md27]
+ 1876  -  DL        0:00.00 [md28]
+ 1926  -  DL        0:00.15 [md29]
+ 1976  -  DL        0:00.01 [md30]
+ 2026  -  DL        0:00.00 [md31]
+ 3461  -  DL        0:00.00 [ftcleanup]
+ 3813  -  DL        0:34.91 [bcmTX]
+ 3814  -  DL        0:35.06 [bcmXGS3AsyncTX]
+ 3819  -  DL       73:20.33 [bcmLINK.0]
+ 4623  -  Ss       60:05.18 /usr/sbin/eventd -r -s -A
+ 4627  -  Is        0:00.00 /sbin/jlaunchhelperd
+ 4629  -  S         0:29.65 /sbin/jlaunchd -N
+ 4643  -  S         0:41.14 /sbin/watchdog -t-1
+ 4644  -  Ss        0:21.94 /usr/sbin/cron -s
+ 4645  -  S        42:22.64 /usr/libexec/bslockd -mp -N
+ 4653  -  I         0:00.01 /usr/sbin/tnetd -N -l
+ 4655  -  S     10396:59.83 /usr/sbin/chassisd -N
+ 4656  -  S        11:56.61 /usr/sbin/sdk-vmmd -N
+ 4658  -  S         2:47.62 /usr/sbin/craftd -N
+ 4659  -  S         0:22.91 /usr/sbin/mgd -N
+ 4662  -  S        67:46.32 /usr/libexec/mosquitto-nossl -c /var/run/mqtt_broke
+ 4669  -  S       110:06.39 /usr/libexec64/rpd -N
+ 4671  -  S         2:11.23 /usr/sbin/inetd -N -w
+ 4680  -  S       351:39.52 /usr/sbin/ppmd -N
+ 4684  -  S         1:58.23 /usr/sbin/lmpd
+ 4686  -  I         0:03.24 /usr/sbin/smartd -n
+ 4701  -  S         5:40.06 /usr/sbin/bfdd -N
+ 4702  -  S       444:22.30 /usr/sbin/clksyncd -N
+ 4704  -  S         7:25.19 /usr/sbin/lacpd -N
+ 4709  -  S         5:02.45 /usr/sbin/lfmd -N
+ 4714  -  S        33:52.06 /usr/sbin/smid -N
+ 4719  -  S        51:55.94 /usr/sbin/shm-rtsdbd -N
+ 4720  -  S        28:53.08 /usr/sbin/gstatd -N
+ 4727  -  I         0:00.12 /usr/sbin/pmcd -N
+ 4728  -  I         0:00.00 /usr/sbin/inetd -p /var/run/inetd_4.pid -N -JU __ju
+ 4732  -  I         0:00.01 /usr/sbin/pmond -N
+ 4738  -  I         0:00.05 /usr/sbin/bbe-smgd -b -N
+ 4740  -  I         0:00.05 /usr/sbin/appidd -N
+ 4754  -  S        89:28.35 /usr/sbin/license-check -U -M -p 10 -i 10
+ 4820  -  S         0:32.97 /bin/sh /usr/sbin/rmpsd -N
+ 4822  -  S         0:32.76 /bin/sh /usr/sbin/charged -N
+ 4989  -  I       219:40.99 /usr/sbin/repd -N
+ 5395  -  SL      192:46.32 [ppt_07_80000006]
+ 5529  -  S         5:34.74 /usr/sbin/xntpd -j -N -g (ntpd)
+ 5531  -  S        87:26.31 /usr/sbin/l2ald -N
+ 5532  -  S<        1:41.14 /usr/sbin/apsd -N
+ 5533  -  S         1:46.56 /usr/sbin/rmopd -N
+ 5535  -  I        33:27.31 /usr/sbin/cosd
+ 5537  -  I         0:00.01 /usr/sbin/rtspd -N
+ 5538  -  I         0:26.97 /usr/sbin/fsad -N
+ 5539  -  I         0:02.17 /usr/sbin/rdd -N
+ 5542  -  I         0:00.10 /usr/sbin/pppd -N
+ 5544  -  S         2:05.84 /usr/sbin/dfcd -N
+ 5549  -  S        25:11.85 /usr/sbin/l2cpd -N
+ 5550  -  S         3:24.40 /usr/sbin/oamd -N
+ 5551  -  S         3:00.23 /usr/sbin/mplsoamd -N
+ 5552  -  I         0:00.01 /usr/sbin/sendd -N
+ 5553  -  S         0:32.54 /usr/sbin/iccpd -N
+ 5556  -  I         7:59.50 /usr/sbin/jddosd -N
+ 5557  -  I         0:06.07 /usr/sbin/rpcbind -N -I -h 128.0.0.1
+ 5562  -  I         0:00.09 /usr/sbin/mspd -N
+ 5563  -  I         0:00.01 /usr/sbin/mountd -N -s -h 128.0.0.1 -p 6666
+ 5564  -  S         1:45.51 /usr/sbin/smihelperd -N
+ 5567  -  S         1:10.04 /usr/sbin/kod -N
+ 5568  -  S         4:26.51 /usr/sbin/dot1xd -N
+ 5570  -  I         0:00.02 /usr/sbin/commit-syncd -N
+ 5572  -  S        25:44.71 /usr/sbin/na-mqttd -c /etc/na-mqtt.conf
+ 5573  -  I         0:00.01 /usr/sbin/mgd-api -N
+ 5574  -  I         0:00.02 /usr/sbin/xmlproxyd -N
+ 5575  -  S         1:09.63 /usr/sbin/overlayd -N
+ 5577  -  S         7:05.05 /usr/sbin/pkid -N
+ 5580  -  S      1542:10.71 /usr/sbin/rpd -N -JLHCM-GW2
+ 5584  -  S       190:30.42 /usr/sbin/rpd -N -JLHCM-P2
+ 5585  -  S       857:12.41 /usr/sbin/rpd -N -JLHCM-PE2
+ 5586  -  S      1084:54.69 /usr/sbin/rpd -N -JLHCM-RR2
+ 5588  -  S         1:09.91 /usr/sbin/lrmuxd -N
+ 5589  -  S        16:59.98 /usr/sbin/alarmd -N
+ 5590  -  S         9:01.91 /sbin/dcd -N
+ 5591  -  S      1063:44.21 /usr/sbin/snmpd -N
+ 5592  -  S      1152:44.86 /usr/sbin/mib2d -N
+ 5602  -  S         4:04.24 /usr/sbin/tnp.sntpd -N
+ 5605  -  S       325:55.10 /usr/sbin/pfed -N
+ 5606  -  S        21:59.76 /usr/sbin/irsd -N
+ 5607  -  S         2:14.45 /usr/sbin/kmd -N
+ 5608  -  S        73:51.79 /usr/libexec/mosquitto-nossl -c /var/run/mqtt_broke
+ 5609  -  S         0:46.03 /usr/sbin/dfwd -N
+ 5610  -  S        73:37.50 /usr/libexec/mosquitto-nossl -c /var/run/mqtt_broke
+ 5611  -  S        41:48.48 /usr/sbin/bdbrepd -N
+ 5612  -  I         0:00.01 /usr/sbin/stats-agentd -N
+ 5613  -  S        27:12.32 /usr/sbin/transportd -N
+ 5614  -  S         3:31.04 /usr/sbin/agentd -N
+ 5615  -  S        26:24.45 /usr/sbin/alarm-mgmtd -N
+ 5617  -  I         0:00.01 nfsd: master (nfsd)
+ 5801  -  S         7:54.46 nfsd: server (nfsd)
+ 5910  -  SL      106:47.91 [ppt_11_80000013]
+ 5915  -  SL       80:15.41 [ppt_11_80000018]
+39240  -  Is        0:00.12 sshd: longdh@0,1 (sshd)
+39244  -  Is        0:00.10 mgd: (mgd) (longdh)/dev/pts/0 (mgd)
+39612  -  Is        0:13.30 mgd: (mgd) (longdh)/dev/pts/1 (mgd)
+41875  -  S         0:00.00 sleep 30
+41876  -  S         0:00.00 sleep 30
+41877  -  Ss        0:00.02 sshd: nhatnct@2 (sshd)
+41881  -  Ss        0:00.01 mgd: (mgd) (nhatnct)/dev/pts/2 (mgd)
+41886  -  R         0:00.00 /bin/ps -ax
+79227  -  SL       57:19.56 [ppt_16_80000118]
+80564  -  S         0:38.74 /usr/sbin/datapath-traced -N
+80573  -  S         1:42.29 /usr/sbin/spd -N
+ 6039 u0  Is+       0:00.27 /usr/libexec/getty.real std ttyu0
+39243  0  Ss+       0:00.22 -cli (cli)
+39610  1  Is+       0:00.01 login [pam] (login)
+39611  1  S+        0:42.89 -cli (cli)
+41880  2  Ss+       0:00.13 -cli (cli)

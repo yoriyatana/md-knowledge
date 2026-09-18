@@ -1,9 +1,2355 @@
 {
   "input": "raw",
   "output": "formatted",
-  "files": [],
+  "files": [
+    {
+      "source": "raw/Case_notes/-MVT-HĐ_03-2020-Hỗ_trợ_xử_lý_lỗi_box_PR02-TET040.md",
+      "destination": "formatted/Case_notes/-MVT-HĐ_03-2020-Hỗ_trợ_xử_lý_lỗi_box_PR02-TET040.md",
+      "changed": true,
+      "input_bytes": 17880,
+      "output_bytes": 17880
+    },
+    {
+      "source": "raw/Case_notes/BPC8003BRA01_RE1_|_không_cutoff_được_user.md",
+      "destination": "formatted/Case_notes/BPC8003BRA01_RE1_|_không_cutoff_được_user.md",
+      "changed": false,
+      "input_bytes": 1248,
+      "output_bytes": 1248
+    },
+    {
+      "source": "raw/Case_notes/Các_thuật_ngữ_sau_được_sử_dụng_để_giải_thích_cách_cấp_phát_địa_chỉ_IP_(address-assignment).md",
+      "destination": "formatted/Case_notes/Các_thuật_ngữ_sau_được_sử_dụng_để_giải_thích_cách_cấp_phát_địa_chỉ_IP_(address-assignment).md",
+      "changed": false,
+      "input_bytes": 2616,
+      "output_bytes": 2616
+    },
+    {
+      "source": "raw/Case_notes/FTEL-Download_Microsoft_chậm.md",
+      "destination": "formatted/Case_notes/FTEL-Download_Microsoft_chậm.md",
+      "changed": false,
+      "input_bytes": 35,
+      "output_bytes": 35
+    },
+    {
+      "source": "raw/Case_notes/Lỗi_memory_trên_MPC7E-MRATE_cho_BNG.md",
+      "destination": "formatted/Case_notes/Lỗi_memory_trên_MPC7E-MRATE_cho_BNG.md",
+      "changed": true,
+      "input_bytes": 14990,
+      "output_bytes": 14826
+    },
+    {
+      "source": "raw/Case_notes/Movitel-Mất_dịch_vụ_3G,_4G.md",
+      "destination": "formatted/Case_notes/Movitel-Mất_dịch_vụ_3G,_4G.md",
+      "changed": false,
+      "input_bytes": 415,
+      "output_bytes": 415
+    },
+    {
+      "source": "raw/Case_notes/SR#01219162-Viettel-SLA-NFE-Viettel_||_MPC5E-2CGE-4XGE_cao_tải_CPU.md",
+      "destination": "formatted/Case_notes/SR#01219162-Viettel-SLA-NFE-Viettel_||_MPC5E-2CGE-4XGE_cao_tải_CPU.md",
+      "changed": true,
+      "input_bytes": 5264,
+      "output_bytes": 5198
+    },
+    {
+      "source": "raw/Case_notes/SR-2021-1125-1639-MVT-HĐ_SLA_03-2020-Hỗ_trợ_kiểm_tra_cảnh_báo_lỗi_FPC1_trên_MAN057.md",
+      "destination": "formatted/Case_notes/SR-2021-1125-1639-MVT-HĐ_SLA_03-2020-Hỗ_trợ_kiểm_tra_cảnh_báo_lỗi_FPC1_trên_MAN057.md",
+      "changed": true,
+      "input_bytes": 17438,
+      "output_bytes": 17460
+    },
+    {
+      "source": "raw/Case_notes/SR-2021-1201-0922-MVT-HĐ_03-2020-Hỗ_trợ_xử_lý_lỗi_box_PR01-GAZ020.md",
+      "destination": "formatted/Case_notes/SR-2021-1201-0922-MVT-HĐ_03-2020-Hỗ_trợ_xử_lý_lỗi_box_PR01-GAZ020.md",
+      "changed": true,
+      "input_bytes": 39694,
+      "output_bytes": 39694
+    },
+    {
+      "source": "raw/Case_notes/SR-2021-1215-0956-Hỗ_trợ_xử_lý_case_cảnh_báo_trên_thiết_bị_ME_AR03-MAP018.md",
+      "destination": "formatted/Case_notes/SR-2021-1215-0956-Hỗ_trợ_xử_lý_case_cảnh_báo_trên_thiết_bị_ME_AR03-MAP018.md",
+      "changed": true,
+      "input_bytes": 19691,
+      "output_bytes": 19624
+    },
+    {
+      "source": "raw/Case_notes/SR-2021-1215-1001-Hỗ_trợ_xử_lý_case_cảnh_báo_trên_thiết_bị_AR01-NIA088_copy.md",
+      "destination": "formatted/Case_notes/SR-2021-1215-1001-Hỗ_trợ_xử_lý_case_cảnh_báo_trên_thiết_bị_AR01-NIA088_copy.md",
+      "changed": true,
+      "input_bytes": 20038,
+      "output_bytes": 19971
+    },
+    {
+      "source": "raw/Case_notes/SR-2021-1216-0859-Hỗ_trợ_nâng_cấp_SCBE-MX_lên_SCBE2-MX_trên_thiết_bị_ME_AR02-GAZ185.md",
+      "destination": "formatted/Case_notes/SR-2021-1216-0859-Hỗ_trợ_nâng_cấp_SCBE-MX_lên_SCBE2-MX_trên_thiết_bị_ME_AR02-GAZ185.md",
+      "changed": true,
+      "input_bytes": 26544,
+      "output_bytes": 25826
+    },
+    {
+      "source": "raw/Case_notes/SR-2021-1223-1336-Viettel-HĐ_SLA_06-Hỗ_trợ_kiểm_tra_Thay_đổi_vlan_range_cổng_downlink_BRAS_|_Không_đá_thuê_bao_khỏi_cổng.md",
+      "destination": "formatted/Case_notes/SR-2021-1223-1336-Viettel-HĐ_SLA_06-Hỗ_trợ_kiểm_tra_Thay_đổi_vlan_range_cổng_downlink_BRAS_|_Không_đá_thuê_bao_khỏi_cổng.md",
+      "changed": true,
+      "input_bytes": 2794,
+      "output_bytes": 2792
+    },
+    {
+      "source": "raw/Case_notes/SR-2021-1225-2235-MVT-HĐ_SLA_03-Xử_lý_case_cảnh_báo_trên_thiết_bị_ME_AR03-GAZ080.md",
+      "destination": "formatted/Case_notes/SR-2021-1225-2235-MVT-HĐ_SLA_03-Xử_lý_case_cảnh_báo_trên_thiết_bị_ME_AR03-GAZ080.md",
+      "changed": true,
+      "input_bytes": 46574,
+      "output_bytes": 46296
+    },
+    {
+      "source": "raw/Case_notes/SR-2021-1226-1945-MVT-HĐ_SLA_03-2020-Hỗ_trợ_kiểm_tra_link_kết_nối_giữa_ME_AR03-GAZ080_và_ME_GAZ009SRT01.md",
+      "destination": "formatted/Case_notes/SR-2021-1226-1945-MVT-HĐ_SLA_03-2020-Hỗ_trợ_kiểm_tra_link_kết_nối_giữa_ME_AR03-GAZ080_và_ME_GAZ009SRT01.md",
+      "changed": true,
+      "input_bytes": 27011,
+      "output_bytes": 26774
+    },
+    {
+      "source": "raw/Case_notes/SR-2022-0106-0928-IPv6_ping_VPLS.md",
+      "destination": "formatted/Case_notes/SR-2022-0106-0928-IPv6_ping_VPLS.md",
+      "changed": true,
+      "input_bytes": 13786,
+      "output_bytes": 13759
+    },
+    {
+      "source": "raw/Case_notes/SR-2022-0117-0942-Viettel-HĐ_SLA_06-Hỗ_trợ_node_HHT9603CGT12_xử_lý_cảnh_báo_XMCHIP_trên_card_0,2,4_và_cảnh_báo_reset_trên_card_1.md",
+      "destination": "formatted/Case_notes/SR-2022-0117-0942-Viettel-HĐ_SLA_06-Hỗ_trợ_node_HHT9603CGT12_xử_lý_cảnh_báo_XMCHIP_trên_card_0,2,4_và_cảnh_báo_reset_trên_card_1.md",
+      "changed": true,
+      "input_bytes": 5376,
+      "output_bytes": 5392
+    },
+    {
+      "source": "raw/Case_notes/SR-2022-0128-1515_MVT-HĐ_03-2020-Support_to_check_alarms_on_the_device_ME_PR01-SOF055_after_device_reboot_due_to_power_failure.md",
+      "destination": "formatted/Case_notes/SR-2022-0128-1515_MVT-HĐ_03-2020-Support_to_check_alarms_on_the_device_ME_PR01-SOF055_after_device_reboot_due_to_power_failure.md",
+      "changed": true,
+      "input_bytes": 20119,
+      "output_bytes": 19955
+    },
+    {
+      "source": "raw/Case_notes/SR-2022-0408-1059-QTSC-Ngoài_HĐ-Hỗ_trợ_kiểm_tra_lỗi_Minor_backup_RE_active_trên_MX960.md",
+      "destination": "formatted/Case_notes/SR-2022-0408-1059-QTSC-Ngoài_HĐ-Hỗ_trợ_kiểm_tra_lỗi_Minor_backup_RE_active_trên_MX960.md",
+      "changed": true,
+      "input_bytes": 11748,
+      "output_bytes": 11795
+    },
+    {
+      "source": "raw/Case_notes/SR-2022-0627-1622-CMC-HĐ_050522-Hỗ_trợ_kiểm_tra_OSPF_bị_treo_trạng_thái_Exchange_khi_flap_link_vật_lý.md",
+      "destination": "formatted/Case_notes/SR-2022-0627-1622-CMC-HĐ_050522-Hỗ_trợ_kiểm_tra_OSPF_bị_treo_trạng_thái_Exchange_khi_flap_link_vật_lý.md",
+      "changed": true,
+      "input_bytes": 8853,
+      "output_bytes": 8840
+    },
+    {
+      "source": "raw/Case_notes/SR-2023-0406-1052-Viettel-HĐ_SLA_IP-Kiểm_tra_tốc_độ_upload_của_user_LeaseLine_trên_box_HHT9602-PECD-MX2020-02_(HHT9602CRT35).md",
+      "destination": "formatted/Case_notes/SR-2023-0406-1052-Viettel-HĐ_SLA_IP-Kiểm_tra_tốc_độ_upload_của_user_LeaseLine_trên_box_HHT9602-PECD-MX2020-02_(HHT9602CRT35).md",
+      "changed": true,
+      "input_bytes": 222076,
+      "output_bytes": 217557
+    },
+    {
+      "source": "raw/Case_notes/Untitled_Note.md",
+      "destination": "formatted/Case_notes/Untitled_Note.md",
+      "changed": false,
+      "input_bytes": 85,
+      "output_bytes": 85
+    },
+    {
+      "source": "raw/Case_notes/[Movitel]_Audit-Apply_micro-bfd_cho_các_kết_nối_Core.md",
+      "destination": "formatted/Case_notes/[Movitel]_Audit-Apply_micro-bfd_cho_các_kết_nối_Core.md",
+      "changed": true,
+      "input_bytes": 5002,
+      "output_bytes": 4996
+    },
+    {
+      "source": "raw/Case_notes/[Movitel]_Audit-Tối_ưu_syslog.md",
+      "destination": "formatted/Case_notes/[Movitel]_Audit-Tối_ưu_syslog.md",
+      "changed": true,
+      "input_bytes": 2324,
+      "output_bytes": 2329
+    },
+    {
+      "source": "raw/Case_notes/cmc-MX104_high_CPU.md",
+      "destination": "formatted/Case_notes/cmc-MX104_high_CPU.md",
+      "changed": true,
+      "input_bytes": 3672,
+      "output_bytes": 3681
+    },
+    {
+      "source": "raw/Case_notes/thay_doi_ve_cach_hanh_xu_route,nh,scu,dcu,sensor,rpf_check.md",
+      "destination": "formatted/Case_notes/thay_doi_ve_cach_hanh_xu_route,nh,scu,dcu,sensor,rpf_check.md",
+      "changed": false,
+      "input_bytes": 297,
+      "output_bytes": 297
+    },
+    {
+      "source": "raw/LAB_SVT_GROUP/LAB_BRAS_service_lab_01.md",
+      "destination": "formatted/LAB_SVT_GROUP/LAB_BRAS_service_lab_01.md",
+      "changed": true,
+      "input_bytes": 10315,
+      "output_bytes": 10058
+    },
+    {
+      "source": "raw/LAB_SVT_GROUP/LAB_advanced_l3vpn_lab_01.md",
+      "destination": "formatted/LAB_SVT_GROUP/LAB_advanced_l3vpn_lab_01.md",
+      "changed": true,
+      "input_bytes": 104106,
+      "output_bytes": 85474
+    },
+    {
+      "source": "raw/LAB_SVT_GROUP/LAB_intermediate_l3vpn_lab_01.md",
+      "destination": "formatted/LAB_SVT_GROUP/LAB_intermediate_l3vpn_lab_01.md",
+      "changed": true,
+      "input_bytes": 22689,
+      "output_bytes": 11310
+    },
+    {
+      "source": "raw/LAB_SVT_GROUP/Lab_advanced_igp_lab_01.md",
+      "destination": "formatted/LAB_SVT_GROUP/Lab_advanced_igp_lab_01.md",
+      "changed": true,
+      "input_bytes": 16138,
+      "output_bytes": 16145
+    },
+    {
+      "source": "raw/Mail_template/Close_case.md",
+      "destination": "formatted/Mail_template/Close_case.md",
+      "changed": true,
+      "input_bytes": 1311,
+      "output_bytes": 1295
+    },
+    {
+      "source": "raw/Mail_template/Email_Greetings.md",
+      "destination": "formatted/Mail_template/Email_Greetings.md",
+      "changed": true,
+      "input_bytes": 1641,
+      "output_bytes": 1637
+    },
+    {
+      "source": "raw/Mail_template/English.md",
+      "destination": "formatted/Mail_template/English.md",
+      "changed": true,
+      "input_bytes": 1873,
+      "output_bytes": 1825
+    },
+    {
+      "source": "raw/Mail_template/Trả_lời_về_việc_khuyến_nghị_version.md",
+      "destination": "formatted/Mail_template/Trả_lời_về_việc_khuyến_nghị_version.md",
+      "changed": false,
+      "input_bytes": 135,
+      "output_bytes": 135
+    },
+    {
+      "source": "raw/Mail_template/Vietnamese.md",
+      "destination": "formatted/Mail_template/Vietnamese.md",
+      "changed": true,
+      "input_bytes": 505,
+      "output_bytes": 508
+    },
+    {
+      "source": "raw/Mail_template/lỗi_không_ping_được_mpls_ldp.md",
+      "destination": "formatted/Mail_template/lỗi_không_ping_được_mpls_ldp.md",
+      "changed": true,
+      "input_bytes": 5124,
+      "output_bytes": 5119
+    },
+    {
+      "source": "raw/Mail_template/renew_service.md",
+      "destination": "formatted/Mail_template/renew_service.md",
+      "changed": true,
+      "input_bytes": 337,
+      "output_bytes": 324
+    },
+    {
+      "source": "raw/Outlook/Filter_Mail.md",
+      "destination": "formatted/Outlook/Filter_Mail.md",
+      "changed": false,
+      "input_bytes": 252,
+      "output_bytes": 252
+    },
+    {
+      "source": "raw/Outlook/Filter_reply-to-on_GMail.md",
+      "destination": "formatted/Outlook/Filter_reply-to-on_GMail.md",
+      "changed": false,
+      "input_bytes": 559,
+      "output_bytes": 559
+    },
+    {
+      "source": "raw/Outlook/How_to_Delete_Microsoft_AutoUpdate_from_Mac.md",
+      "destination": "formatted/Outlook/How_to_Delete_Microsoft_AutoUpdate_from_Mac.md",
+      "changed": true,
+      "input_bytes": 3039,
+      "output_bytes": 3040
+    },
+    {
+      "source": "raw/Outlook/License_key_Windows_10_Enterprise.md",
+      "destination": "formatted/Outlook/License_key_Windows_10_Enterprise.md",
+      "changed": false,
+      "input_bytes": 67,
+      "output_bytes": 67
+    },
+    {
+      "source": "raw/Outlook/Limit_20000_search_result_vs_code.md",
+      "destination": "formatted/Outlook/Limit_20000_search_result_vs_code.md",
+      "changed": false,
+      "input_bytes": 121,
+      "output_bytes": 121
+    },
+    {
+      "source": "raw/PR/KB25839-[Junos]_An_improper_egress-policy_to_LDP_makes_the_'inet-3'_table_become_empty.md",
+      "destination": "formatted/PR/KB25839-[Junos]_An_improper_egress-policy_to_LDP_makes_the_'inet-3'_table_become_empty.md",
+      "changed": true,
+      "input_bytes": 5383,
+      "output_bytes": 5226
+    },
+    {
+      "source": "raw/PR/KB27189-[MX]_Optimizing_heap_utilization_when_applying_a_firewall_filter_on_an_interface_using_input_and_input-list_keywords.md",
+      "destination": "formatted/PR/KB27189-[MX]_Optimizing_heap_utilization_when_applying_a_firewall_filter_on_an_interface_using_input_and_input-list_keywords.md",
+      "changed": true,
+      "input_bytes": 9251,
+      "output_bytes": 9227
+    },
+    {
+      "source": "raw/PR/KB31811_[MX]_How_to_check_if_Enhanced_Subscriber_Management_(bbe-smgd)_is_enabled_and_working.md",
+      "destination": "formatted/PR/KB31811_[MX]_How_to_check_if_Enhanced_Subscriber_Management_(bbe-smgd)_is_enabled_and_working.md",
+      "changed": true,
+      "input_bytes": 2245,
+      "output_bytes": 2252
+    },
+    {
+      "source": "raw/PR/KB34539_.md",
+      "destination": "formatted/PR/KB34539_.md",
+      "changed": true,
+      "input_bytes": 4361,
+      "output_bytes": 4348
+    },
+    {
+      "source": "raw/PR/KB37106_[Subscriber_Management]_Understanding_the_'Standby_is_not_synced'_error_after_a_backup_RE_replacement.md",
+      "destination": "formatted/PR/KB37106_[Subscriber_Management]_Understanding_the_'Standby_is_not_synced'_error_after_a_backup_RE_replacement.md",
+      "changed": true,
+      "input_bytes": 5286,
+      "output_bytes": 5289
+    },
+    {
+      "source": "raw/PR/KB37435_[Junos]_Default_CoS_behavior_for_schedulers_with_different_scheduler_priorities.md",
+      "destination": "formatted/PR/KB37435_[Junos]_Default_CoS_behavior_for_schedulers_with_different_scheduler_priorities.md",
+      "changed": false,
+      "input_bytes": 90,
+      "output_bytes": 90
+    },
+    {
+      "source": "raw/PR/PR1082932-Data_Error_in_shared_LMEM_of_LU-XL_chip_causing_a_MQ-XM_chip_wedge.md",
+      "destination": "formatted/PR/PR1082932-Data_Error_in_shared_LMEM_of_LU-XL_chip_causing_a_MQ-XM_chip_wedge.md",
+      "changed": false,
+      "input_bytes": 27751,
+      "output_bytes": 27751
+    },
+    {
+      "source": "raw/PR/PR1561855-Continuous_bbe-smgd_cores_are_generated_after_restarting_the_smgd.md",
+      "destination": "formatted/PR/PR1561855-Continuous_bbe-smgd_cores_are_generated_after_restarting_the_smgd.md",
+      "changed": true,
+      "input_bytes": 10494,
+      "output_bytes": 10497
+    },
+    {
+      "source": "raw/PR/PR_check.md",
+      "destination": "formatted/PR/PR_check.md",
+      "changed": true,
+      "input_bytes": 12526,
+      "output_bytes": 12538
+    },
+    {
+      "source": "raw/PR/using_AE_interfaces_with_SPC3.md",
+      "destination": "formatted/PR/using_AE_interfaces_with_SPC3.md",
+      "changed": false,
+      "input_bytes": 1119,
+      "output_bytes": 1119
+    },
+    {
+      "source": "raw/TS_notes/10GbE_LAN-PHY-40GbE-100GbE_LFS_(Link_fault_signalling).md",
+      "destination": "formatted/TS_notes/10GbE_LAN-PHY-40GbE-100GbE_LFS_(Link_fault_signalling).md",
+      "changed": false,
+      "input_bytes": 843,
+      "output_bytes": 843
+    },
+    {
+      "source": "raw/TS_notes/1_số_notes_các_ý_cần_khảo_sát_về_nhà_trạm_đặt_thiết_bị.md",
+      "destination": "formatted/TS_notes/1_số_notes_các_ý_cần_khảo_sát_về_nhà_trạm_đặt_thiết_bị.md",
+      "changed": false,
+      "input_bytes": 163,
+      "output_bytes": 163
+    },
+    {
+      "source": "raw/TS_notes/2021-0628-0028-heap_memory_increase.md",
+      "destination": "formatted/TS_notes/2021-0628-0028-heap_memory_increase.md",
+      "changed": true,
+      "input_bytes": 3389,
+      "output_bytes": 3342
+    },
+    {
+      "source": "raw/TS_notes/2021-1108-356720-SV_TECHNOLOGIES_JSC-Viettel_MX_Clarification_on_how_to_calculate_temperature_threshold_and_fan_speed.md",
+      "destination": "formatted/TS_notes/2021-1108-356720-SV_TECHNOLOGIES_JSC-Viettel_MX_Clarification_on_how_to_calculate_temperature_threshold_and_fan_speed.md",
+      "changed": false,
+      "input_bytes": 424,
+      "output_bytes": 424
+    },
+    {
+      "source": "raw/TS_notes/2021-1228-388762,_[Mobifone-IPBB]Behaviour_Route-target_Family_eBGP_Session.md",
+      "destination": "formatted/TS_notes/2021-1228-388762,_[Mobifone-IPBB]Behaviour_Route-target_Family_eBGP_Session.md",
+      "changed": false,
+      "input_bytes": 7252,
+      "output_bytes": 7252
+    },
+    {
+      "source": "raw/TS_notes/ACX2100-ACX2200_classsifier_traffic_mpls_theo_exp.md",
+      "destination": "formatted/TS_notes/ACX2100-ACX2200_classsifier_traffic_mpls_theo_exp.md",
+      "changed": false,
+      "input_bytes": 371,
+      "output_bytes": 371
+    },
+    {
+      "source": "raw/TS_notes/ACX2100-cách_cấu_hình_event-option_để_active_script_thu_thập_thông_tin_thu_phát_của_port_quang.md",
+      "destination": "formatted/TS_notes/ACX2100-cách_cấu_hình_event-option_để_active_script_thu_thập_thông_tin_thu_phát_của_port_quang.md",
+      "changed": true,
+      "input_bytes": 1456,
+      "output_bytes": 1475
+    },
+    {
+      "source": "raw/TS_notes/ACX7100.md",
+      "destination": "formatted/TS_notes/ACX7100.md",
+      "changed": true,
+      "input_bytes": 4350,
+      "output_bytes": 4282
+    },
+    {
+      "source": "raw/TS_notes/ACX710_Known_Limitations.md",
+      "destination": "formatted/TS_notes/ACX710_Known_Limitations.md",
+      "changed": false,
+      "input_bytes": 1631,
+      "output_bytes": 1631
+    },
+    {
+      "source": "raw/TS_notes/Alarm_on_FPC.md",
+      "destination": "formatted/TS_notes/Alarm_on_FPC.md",
+      "changed": true,
+      "input_bytes": 15755,
+      "output_bytes": 15444
+    },
+    {
+      "source": "raw/TS_notes/Attribute_DNS_IPv6_từ_Radius_cho_Bras_Juniper.md",
+      "destination": "formatted/TS_notes/Attribute_DNS_IPv6_từ_Radius_cho_Bras_Juniper.md",
+      "changed": true,
+      "input_bytes": 3229,
+      "output_bytes": 3200
+    },
+    {
+      "source": "raw/TS_notes/BFD.md",
+      "destination": "formatted/TS_notes/BFD.md",
+      "changed": true,
+      "input_bytes": 2975,
+      "output_bytes": 2956
+    },
+    {
+      "source": "raw/TS_notes/BFD_ISSUE_VIETTEL_KV3-BRAS28.md",
+      "destination": "formatted/TS_notes/BFD_ISSUE_VIETTEL_KV3-BRAS28.md",
+      "changed": true,
+      "input_bytes": 2615,
+      "output_bytes": 2624
+    },
+    {
+      "source": "raw/TS_notes/BFD_anchorship_PFE.md",
+      "destination": "formatted/TS_notes/BFD_anchorship_PFE.md",
+      "changed": true,
+      "input_bytes": 57383,
+      "output_bytes": 56972
+    },
+    {
+      "source": "raw/TS_notes/BGP.md",
+      "destination": "formatted/TS_notes/BGP.md",
+      "changed": true,
+      "input_bytes": 705,
+      "output_bytes": 703
+    },
+    {
+      "source": "raw/TS_notes/BGP_errror_messages.md",
+      "destination": "formatted/TS_notes/BGP_errror_messages.md",
+      "changed": true,
+      "input_bytes": 5334,
+      "output_bytes": 5326
+    },
+    {
+      "source": "raw/TS_notes/BGP_flap.md",
+      "destination": "formatted/TS_notes/BGP_flap.md",
+      "changed": false,
+      "input_bytes": 401,
+      "output_bytes": 401
+    },
+    {
+      "source": "raw/TS_notes/BRAS-TROUBLESHOOTING_PPPoE_in_TOMCAT.md",
+      "destination": "formatted/TS_notes/BRAS-TROUBLESHOOTING_PPPoE_in_TOMCAT.md",
+      "changed": true,
+      "input_bytes": 38454,
+      "output_bytes": 38080
+    },
+    {
+      "source": "raw/TS_notes/BRAS-command_ouputs.md",
+      "destination": "formatted/TS_notes/BRAS-command_ouputs.md",
+      "changed": true,
+      "input_bytes": 6579,
+      "output_bytes": 6428
+    },
+    {
+      "source": "raw/TS_notes/BRAS.md",
+      "destination": "formatted/TS_notes/BRAS.md",
+      "changed": true,
+      "input_bytes": 49468,
+      "output_bytes": 48741
+    },
+    {
+      "source": "raw/TS_notes/BRAS_check_address-assignment.md",
+      "destination": "formatted/TS_notes/BRAS_check_address-assignment.md",
+      "changed": true,
+      "input_bytes": 4002,
+      "output_bytes": 3419
+    },
+    {
+      "source": "raw/TS_notes/BUG_Hold-time_down_không_hoạt_động_được_nếu_cấu_hình_nhỏ_hơn_1s_trên_interface_chạy_WANPHY.md",
+      "destination": "formatted/TS_notes/BUG_Hold-time_down_không_hoạt_động_được_nếu_cấu_hình_nhỏ_hơn_1s_trên_interface_chạy_WANPHY.md",
+      "changed": true,
+      "input_bytes": 1648,
+      "output_bytes": 1630
+    },
+    {
+      "source": "raw/TS_notes/CFP.md",
+      "destination": "formatted/TS_notes/CFP.md",
+      "changed": true,
+      "input_bytes": 1373,
+      "output_bytes": 1362
+    },
+    {
+      "source": "raw/TS_notes/CGNAT-thêm_range_mới_vào_trong_Pool_đã_khai_báo.md",
+      "destination": "formatted/TS_notes/CGNAT-thêm_range_mới_vào_trong_Pool_đã_khai_báo.md",
+      "changed": true,
+      "input_bytes": 1528,
+      "output_bytes": 1532
+    },
+    {
+      "source": "raw/TS_notes/CGNAT_troubleshoot_commands.md",
+      "destination": "formatted/TS_notes/CGNAT_troubleshoot_commands.md",
+      "changed": true,
+      "input_bytes": 2399,
+      "output_bytes": 2402
+    },
+    {
+      "source": "raw/TS_notes/Call_JTAC.md",
+      "destination": "formatted/TS_notes/Call_JTAC.md",
+      "changed": false,
+      "input_bytes": 43,
+      "output_bytes": 43
+    },
+    {
+      "source": "raw/TS_notes/Cisco_command_health_check.md",
+      "destination": "formatted/TS_notes/Cisco_command_health_check.md",
+      "changed": true,
+      "input_bytes": 2931,
+      "output_bytes": 2887
+    },
+    {
+      "source": "raw/TS_notes/Class_of_Services-CoS_for_ACX.md",
+      "destination": "formatted/TS_notes/Class_of_Services-CoS_for_ACX.md",
+      "changed": true,
+      "input_bytes": 594,
+      "output_bytes": 589
+    },
+    {
+      "source": "raw/TS_notes/Class_of_Services-CoS_notes.md",
+      "destination": "formatted/TS_notes/Class_of_Services-CoS_notes.md",
+      "changed": true,
+      "input_bytes": 26485,
+      "output_bytes": 26126
+    },
+    {
+      "source": "raw/TS_notes/Class_of_Services-CoS_shell_cmd_on_MPC7E_(EA_chip).md",
+      "destination": "formatted/TS_notes/Class_of_Services-CoS_shell_cmd_on_MPC7E_(EA_chip).md",
+      "changed": true,
+      "input_bytes": 12134,
+      "output_bytes": 12169
+    },
+    {
+      "source": "raw/TS_notes/CoS_class-of-service_default_queue_name_and_scheduler.md",
+      "destination": "formatted/TS_notes/CoS_class-of-service_default_queue_name_and_scheduler.md",
+      "changed": false,
+      "input_bytes": 141,
+      "output_bytes": 141
+    },
+    {
+      "source": "raw/TS_notes/Collect_log_on_MPC10E-MPC11E.md",
+      "destination": "formatted/TS_notes/Collect_log_on_MPC10E-MPC11E.md",
+      "changed": true,
+      "input_bytes": 1403,
+      "output_bytes": 1392
+    },
+    {
+      "source": "raw/TS_notes/Command_check_liên_quan_đến_CGNAT_services.md",
+      "destination": "formatted/TS_notes/Command_check_liên_quan_đến_CGNAT_services.md",
+      "changed": true,
+      "input_bytes": 8005,
+      "output_bytes": 8013
+    },
+    {
+      "source": "raw/TS_notes/Command_check_user_bras_pppoe_stuck.md",
+      "destination": "formatted/TS_notes/Command_check_user_bras_pppoe_stuck.md",
+      "changed": true,
+      "input_bytes": 9489,
+      "output_bytes": 9329
+    },
+    {
+      "source": "raw/TS_notes/Config_CFM_action_down_ifl.md",
+      "destination": "formatted/TS_notes/Config_CFM_action_down_ifl.md",
+      "changed": false,
+      "input_bytes": 60,
+      "output_bytes": 60
+    },
+    {
+      "source": "raw/TS_notes/Configure_connection_CCC_example.md",
+      "destination": "formatted/TS_notes/Configure_connection_CCC_example.md",
+      "changed": true,
+      "input_bytes": 1297,
+      "output_bytes": 951
+    },
+    {
+      "source": "raw/TS_notes/Cách_fill_file_atp_VNPT.md",
+      "destination": "formatted/TS_notes/Cách_fill_file_atp_VNPT.md",
+      "changed": false,
+      "input_bytes": 58,
+      "output_bytes": 58
+    },
+    {
+      "source": "raw/TS_notes/Cơ_chế_điều_chỉnh_tốc_độ_quạt_MX.md",
+      "destination": "formatted/TS_notes/Cơ_chế_điều_chỉnh_tốc_độ_quạt_MX.md",
+      "changed": true,
+      "input_bytes": 2093,
+      "output_bytes": 2097
+    },
+    {
+      "source": "raw/TS_notes/DDOS_pfe-RE_TCP_connections.md",
+      "destination": "formatted/TS_notes/DDOS_pfe-RE_TCP_connections.md",
+      "changed": false,
+      "input_bytes": 788,
+      "output_bytes": 788
+    },
+    {
+      "source": "raw/TS_notes/Delay_thời_gian_up_time_của_CE_interfaces.md",
+      "destination": "formatted/TS_notes/Delay_thời_gian_up_time_của_CE_interfaces.md",
+      "changed": true,
+      "input_bytes": 547,
+      "output_bytes": 544
+    },
+    {
+      "source": "raw/TS_notes/Destinations_RTBH_notes.md",
+      "destination": "formatted/TS_notes/Destinations_RTBH_notes.md",
+      "changed": false,
+      "input_bytes": 111,
+      "output_bytes": 111
+    },
+    {
+      "source": "raw/TS_notes/Disable_log_to_tty_pfe.md",
+      "destination": "formatted/TS_notes/Disable_log_to_tty_pfe.md",
+      "changed": true,
+      "input_bytes": 51,
+      "output_bytes": 49
+    },
+    {
+      "source": "raw/TS_notes/Entropy_label_capable.md",
+      "destination": "formatted/TS_notes/Entropy_label_capable.md",
+      "changed": true,
+      "input_bytes": 2586,
+      "output_bytes": 2576
+    },
+    {
+      "source": "raw/TS_notes/Example-Understanding_Dual-Stack_PPPoE_Subscriber.md",
+      "destination": "formatted/TS_notes/Example-Understanding_Dual-Stack_PPPoE_Subscriber.md",
+      "changed": true,
+      "input_bytes": 13353,
+      "output_bytes": 13002
+    },
+    {
+      "source": "raw/TS_notes/Firewall_term_scale.md",
+      "destination": "formatted/TS_notes/Firewall_term_scale.md",
+      "changed": true,
+      "input_bytes": 300,
+      "output_bytes": 301
+    },
+    {
+      "source": "raw/TS_notes/High_CPU_due_to_show_route.md",
+      "destination": "formatted/TS_notes/High_CPU_due_to_show_route.md",
+      "changed": true,
+      "input_bytes": 1118,
+      "output_bytes": 1120
+    },
+    {
+      "source": "raw/TS_notes/How_to_collect-var-log_files_from_Next_Generation_Routing_Engine_(NG-RE).md",
+      "destination": "formatted/TS_notes/How_to_collect-var-log_files_from_Next_Generation_Routing_Engine_(NG-RE).md",
+      "changed": true,
+      "input_bytes": 2035,
+      "output_bytes": 1971
+    },
+    {
+      "source": "raw/TS_notes/How_to_collect_vmhost_coredumps_from_Next_Generation_Routing_Engine_(NG-RE).md",
+      "destination": "formatted/TS_notes/How_to_collect_vmhost_coredumps_from_Next_Generation_Routing_Engine_(NG-RE).md",
+      "changed": true,
+      "input_bytes": 939,
+      "output_bytes": 907
+    },
+    {
+      "source": "raw/TS_notes/How_to_disable_PFE_inline_PPP_keepalive_messages.md",
+      "destination": "formatted/TS_notes/How_to_disable_PFE_inline_PPP_keepalive_messages.md",
+      "changed": true,
+      "input_bytes": 4783,
+      "output_bytes": 4781
+    },
+    {
+      "source": "raw/TS_notes/Huawei_vlan_manipulation.md",
+      "destination": "formatted/TS_notes/Huawei_vlan_manipulation.md",
+      "changed": false,
+      "input_bytes": 112,
+      "output_bytes": 112
+    },
+    {
+      "source": "raw/TS_notes/ICMP_ping_đấu_nối_nhảy_time.md",
+      "destination": "formatted/TS_notes/ICMP_ping_đấu_nối_nhảy_time.md",
+      "changed": false,
+      "input_bytes": 744,
+      "output_bytes": 744
+    },
+    {
+      "source": "raw/TS_notes/IOS-XR_Bridge_Domains_&_MAC_Addresses.md",
+      "destination": "formatted/TS_notes/IOS-XR_Bridge_Domains_&_MAC_Addresses.md",
+      "changed": true,
+      "input_bytes": 12820,
+      "output_bytes": 12774
+    },
+    {
+      "source": "raw/TS_notes/JTASK_SCHED_SLIP_khi_bật_lấy_gcore_(coredump_process).md",
+      "destination": "formatted/TS_notes/JTASK_SCHED_SLIP_khi_bật_lấy_gcore_(coredump_process).md",
+      "changed": true,
+      "input_bytes": 1171,
+      "output_bytes": 1159
+    },
+    {
+      "source": "raw/TS_notes/JunOS-EVO_evo-pfemand.md",
+      "destination": "formatted/TS_notes/JunOS-EVO_evo-pfemand.md",
+      "changed": true,
+      "input_bytes": 8696,
+      "output_bytes": 8621
+    },
+    {
+      "source": "raw/TS_notes/Juniper_MX204_1G_port.md",
+      "destination": "formatted/TS_notes/Juniper_MX204_1G_port.md",
+      "changed": true,
+      "input_bytes": 806,
+      "output_bytes": 795
+    },
+    {
+      "source": "raw/TS_notes/Juniper_RA_vs_FA.md",
+      "destination": "formatted/TS_notes/Juniper_RA_vs_FA.md",
+      "changed": true,
+      "input_bytes": 3719,
+      "output_bytes": 3705
+    },
+    {
+      "source": "raw/TS_notes/Juniper_syslog_facility_và_Severity.md",
+      "destination": "formatted/TS_notes/Juniper_syslog_facility_và_Severity.md",
+      "changed": false,
+      "input_bytes": 163,
+      "output_bytes": 163
+    },
+    {
+      "source": "raw/TS_notes/KA_LCP_PPP_command_checks.md",
+      "destination": "formatted/TS_notes/KA_LCP_PPP_command_checks.md",
+      "changed": true,
+      "input_bytes": 11331,
+      "output_bytes": 11305
+    },
+    {
+      "source": "raw/TS_notes/KB26261_[M-MX-T-series]_Troubleshooting_Checklist-Routing_Engine_High_CPU.md",
+      "destination": "formatted/TS_notes/KB26261_[M-MX-T-series]_Troubleshooting_Checklist-Routing_Engine_High_CPU.md",
+      "changed": true,
+      "input_bytes": 19625,
+      "output_bytes": 19540
+    },
+    {
+      "source": "raw/TS_notes/Không_commit_được_khi_delete_routing-instance_ở_trạng_thái_deactivate.md",
+      "destination": "formatted/TS_notes/Không_commit_được_khi_delete_routing-instance_ở_trạng_thái_deactivate.md",
+      "changed": false,
+      "input_bytes": 2577,
+      "output_bytes": 2577
+    },
+    {
+      "source": "raw/TS_notes/Kiểm_tra_tác_động_nào_liên_quan_đến_software-hardware-config.md",
+      "destination": "formatted/TS_notes/Kiểm_tra_tác_động_nào_liên_quan_đến_software-hardware-config.md",
+      "changed": true,
+      "input_bytes": 1454,
+      "output_bytes": 1453
+    },
+    {
+      "source": "raw/TS_notes/Kênh_IPTV_đứng_hình_khi_xem.md",
+      "destination": "formatted/TS_notes/Kênh_IPTV_đứng_hình_khi_xem.md",
+      "changed": true,
+      "input_bytes": 613,
+      "output_bytes": 618
+    },
+    {
+      "source": "raw/TS_notes/L2circuit.md",
+      "destination": "formatted/TS_notes/L2circuit.md",
+      "changed": false,
+      "input_bytes": 93,
+      "output_bytes": 93
+    },
+    {
+      "source": "raw/TS_notes/LACP_check-list_commands.md",
+      "destination": "formatted/TS_notes/LACP_check-list_commands.md",
+      "changed": true,
+      "input_bytes": 5647,
+      "output_bytes": 5640
+    },
+    {
+      "source": "raw/TS_notes/LDP.md",
+      "destination": "formatted/TS_notes/LDP.md",
+      "changed": true,
+      "input_bytes": 358,
+      "output_bytes": 359
+    },
+    {
+      "source": "raw/TS_notes/Label_usage.md",
+      "destination": "formatted/TS_notes/Label_usage.md",
+      "changed": false,
+      "input_bytes": 82,
+      "output_bytes": 82
+    },
+    {
+      "source": "raw/TS_notes/Linecard_reboot.md",
+      "destination": "formatted/TS_notes/Linecard_reboot.md",
+      "changed": false,
+      "input_bytes": 168,
+      "output_bytes": 168
+    },
+    {
+      "source": "raw/TS_notes/Load-balance_test.md",
+      "destination": "formatted/TS_notes/Load-balance_test.md",
+      "changed": false,
+      "input_bytes": 304,
+      "output_bytes": 304
+    },
+    {
+      "source": "raw/TS_notes/Local_convergence_breakdown.md",
+      "destination": "formatted/TS_notes/Local_convergence_breakdown.md",
+      "changed": false,
+      "input_bytes": 61,
+      "output_bytes": 61
+    },
+    {
+      "source": "raw/TS_notes/Lấy_log_VMHOST.md",
+      "destination": "formatted/TS_notes/Lấy_log_VMHOST.md",
+      "changed": true,
+      "input_bytes": 1368,
+      "output_bytes": 1363
+    },
+    {
+      "source": "raw/TS_notes/Lệnh_off_laser_mode_shell_<<<_dùng_flap_link.md",
+      "destination": "formatted/TS_notes/Lệnh_off_laser_mode_shell_<<<_dùng_flap_link.md",
+      "changed": true,
+      "input_bytes": 2014,
+      "output_bytes": 1976
+    },
+    {
+      "source": "raw/TS_notes/MPC11E-LACP_không_up-join.md",
+      "destination": "formatted/TS_notes/MPC11E-LACP_không_up-join.md",
+      "changed": true,
+      "input_bytes": 6906,
+      "output_bytes": 6903
+    },
+    {
+      "source": "raw/TS_notes/MPC3E_Hard_errors.md",
+      "destination": "formatted/TS_notes/MPC3E_Hard_errors.md",
+      "changed": true,
+      "input_bytes": 1117,
+      "output_bytes": 1097
+    },
+    {
+      "source": "raw/TS_notes/MS-MPC_throughput.md",
+      "destination": "formatted/TS_notes/MS-MPC_throughput.md",
+      "changed": true,
+      "input_bytes": 2959,
+      "output_bytes": 2964
+    },
+    {
+      "source": "raw/TS_notes/MS-SPC3.md",
+      "destination": "formatted/TS_notes/MS-SPC3.md",
+      "changed": false,
+      "input_bytes": 226,
+      "output_bytes": 226
+    },
+    {
+      "source": "raw/TS_notes/MX960_MS-MPC_CGNAT_SNMP_OID_monitor_CPU,_MEM_of_NPUs_on_MS-MPC.md",
+      "destination": "formatted/TS_notes/MX960_MS-MPC_CGNAT_SNMP_OID_monitor_CPU,_MEM_of_NPUs_on_MS-MPC.md",
+      "changed": true,
+      "input_bytes": 2236,
+      "output_bytes": 2198
+    },
+    {
+      "source": "raw/TS_notes/Manual_way_to_trigger_the_CB_0_19-44_alarm.md",
+      "destination": "formatted/TS_notes/Manual_way_to_trigger_the_CB_0_19-44_alarm.md",
+      "changed": false,
+      "input_bytes": 1478,
+      "output_bytes": 1478
+    },
+    {
+      "source": "raw/TS_notes/Memory_RPD.md",
+      "destination": "formatted/TS_notes/Memory_RPD.md",
+      "changed": false,
+      "input_bytes": 418,
+      "output_bytes": 418
+    },
+    {
+      "source": "raw/TS_notes/Nâng_cấp_NG-RE_từ_Junos_17-X-18-X_lên_19-3R1_or_Later.md",
+      "destination": "formatted/TS_notes/Nâng_cấp_NG-RE_từ_Junos_17-X-18-X_lên_19-3R1_or_Later.md",
+      "changed": true,
+      "input_bytes": 4975,
+      "output_bytes": 4936
+    },
+    {
+      "source": "raw/TS_notes/OID_Alarm_count.md",
+      "destination": "formatted/TS_notes/OID_Alarm_count.md",
+      "changed": true,
+      "input_bytes": 1348,
+      "output_bytes": 1272
+    },
+    {
+      "source": "raw/TS_notes/OID_BRAS_relative.md",
+      "destination": "formatted/TS_notes/OID_BRAS_relative.md",
+      "changed": true,
+      "input_bytes": 1411,
+      "output_bytes": 1356
+    },
+    {
+      "source": "raw/TS_notes/OID_lấy_VRF_name.md",
+      "destination": "formatted/TS_notes/OID_lấy_VRF_name.md",
+      "changed": true,
+      "input_bytes": 1558,
+      "output_bytes": 1516
+    },
+    {
+      "source": "raw/TS_notes/PEM.md",
+      "destination": "formatted/TS_notes/PEM.md",
+      "changed": false,
+      "input_bytes": 818,
+      "output_bytes": 818
+    },
+    {
+      "source": "raw/TS_notes/PFE_disable_script.md",
+      "destination": "formatted/TS_notes/PFE_disable_script.md",
+      "changed": true,
+      "input_bytes": 1940,
+      "output_bytes": 1938
+    },
+    {
+      "source": "raw/TS_notes/PFE_packet_capture.md",
+      "destination": "formatted/TS_notes/PFE_packet_capture.md",
+      "changed": true,
+      "input_bytes": 1280,
+      "output_bytes": 1205
+    },
+    {
+      "source": "raw/TS_notes/PFE_packet_capture_on_MX104.md",
+      "destination": "formatted/TS_notes/PFE_packet_capture_on_MX104.md",
+      "changed": false,
+      "input_bytes": 577,
+      "output_bytes": 577
+    },
+    {
+      "source": "raw/TS_notes/PIM_instances.md",
+      "destination": "formatted/TS_notes/PIM_instances.md",
+      "changed": false,
+      "input_bytes": 572,
+      "output_bytes": 572
+    },
+    {
+      "source": "raw/TS_notes/Port_mirror_on_Juniper_MX.md",
+      "destination": "formatted/TS_notes/Port_mirror_on_Juniper_MX.md",
+      "changed": true,
+      "input_bytes": 1901,
+      "output_bytes": 1896
+    },
+    {
+      "source": "raw/TS_notes/Qui_tắc_về_forwarding_traffic_với_VPLS_mesh-group.md",
+      "destination": "formatted/TS_notes/Qui_tắc_về_forwarding_traffic_với_VPLS_mesh-group.md",
+      "changed": false,
+      "input_bytes": 1484,
+      "output_bytes": 1484
+    },
+    {
+      "source": "raw/TS_notes/RE_boot_loop_with_SCBE3.md",
+      "destination": "formatted/TS_notes/RE_boot_loop_with_SCBE3.md",
+      "changed": true,
+      "input_bytes": 220,
+      "output_bytes": 219
+    },
+    {
+      "source": "raw/TS_notes/RPD_64-bit-32-bit_mode.md",
+      "destination": "formatted/TS_notes/RPD_64-bit-32-bit_mode.md",
+      "changed": true,
+      "input_bytes": 3397,
+      "output_bytes": 2540
+    },
+    {
+      "source": "raw/TS_notes/RPD_mode_64-bit.md",
+      "destination": "formatted/TS_notes/RPD_mode_64-bit.md",
+      "changed": true,
+      "input_bytes": 5307,
+      "output_bytes": 4468
+    },
+    {
+      "source": "raw/TS_notes/RR_không_nhận_được_route_từ_các_PE_tỉnh-SR-2021-1208-1924.md",
+      "destination": "formatted/TS_notes/RR_không_nhận_được_route_từ_các_PE_tỉnh-SR-2021-1208-1924.md",
+      "changed": true,
+      "input_bytes": 19437,
+      "output_bytes": 16164
+    },
+    {
+      "source": "raw/TS_notes/Recommendation-Best_Practise_ACX7100.md",
+      "destination": "formatted/TS_notes/Recommendation-Best_Practise_ACX7100.md",
+      "changed": false,
+      "input_bytes": 70,
+      "output_bytes": 70
+    },
+    {
+      "source": "raw/TS_notes/Restart_SFB_4_MX2K.md",
+      "destination": "formatted/TS_notes/Restart_SFB_4_MX2K.md",
+      "changed": true,
+      "input_bytes": 732,
+      "output_bytes": 731
+    },
+    {
+      "source": "raw/TS_notes/Restart_the_SNMP_process.md",
+      "destination": "formatted/TS_notes/Restart_the_SNMP_process.md",
+      "changed": true,
+      "input_bytes": 702,
+      "output_bytes": 669
+    },
+    {
+      "source": "raw/TS_notes/SCB-1.md",
+      "destination": "formatted/TS_notes/SCB-1.md",
+      "changed": true,
+      "input_bytes": 3978,
+      "output_bytes": 3945
+    },
+    {
+      "source": "raw/TS_notes/SCB.md",
+      "destination": "formatted/TS_notes/SCB.md",
+      "changed": false,
+      "input_bytes": 618,
+      "output_bytes": 618
+    },
+    {
+      "source": "raw/TS_notes/SCU-DCU_on_QFX10002_không_hỗ_trợ.md",
+      "destination": "formatted/TS_notes/SCU-DCU_on_QFX10002_không_hỗ_trợ.md",
+      "changed": false,
+      "input_bytes": 885,
+      "output_bytes": 885
+    },
+    {
+      "source": "raw/TS_notes/SNMP_Ifindex.md",
+      "destination": "formatted/TS_notes/SNMP_Ifindex.md",
+      "changed": true,
+      "input_bytes": 1814,
+      "output_bytes": 1814
+    },
+    {
+      "source": "raw/TS_notes/SNMP_LSP_InOutOctet_MIB_OID_copy.md",
+      "destination": "formatted/TS_notes/SNMP_LSP_InOutOctet_MIB_OID_copy.md",
+      "changed": false,
+      "input_bytes": 302,
+      "output_bytes": 302
+    },
+    {
+      "source": "raw/TS_notes/SNMP_interface_jnxDom_(laser)_MIB_OID.md",
+      "destination": "formatted/TS_notes/SNMP_interface_jnxDom_(laser)_MIB_OID.md",
+      "changed": false,
+      "input_bytes": 266,
+      "output_bytes": 266
+    },
+    {
+      "source": "raw/TS_notes/SNMP_interface_rate_MIB_OID.md",
+      "destination": "formatted/TS_notes/SNMP_interface_rate_MIB_OID.md",
+      "changed": false,
+      "input_bytes": 432,
+      "output_bytes": 432
+    },
+    {
+      "source": "raw/TS_notes/SNMP_oid_heap_mem_line_card_để_giám_sát.md",
+      "destination": "formatted/TS_notes/SNMP_oid_heap_mem_line_card_để_giám_sát.md",
+      "changed": true,
+      "input_bytes": 269,
+      "output_bytes": 270
+    },
+    {
+      "source": "raw/TS_notes/SR-2021-1215-1608-Hỗ_trợ_thử_nghiệm_IPv6_tĩnh_cho_KH_CĐBR.md",
+      "destination": "formatted/TS_notes/SR-2021-1215-1608-Hỗ_trợ_thử_nghiệm_IPv6_tĩnh_cho_KH_CĐBR.md",
+      "changed": true,
+      "input_bytes": 2777,
+      "output_bytes": 2778
+    },
+    {
+      "source": "raw/TS_notes/SR-2023-0301-1744-Viettel-SLA-Check_nguyên_nhân_không_activate_routing-instances_mặc_dù_track_không_down_rpm_probe.md",
+      "destination": "formatted/TS_notes/SR-2023-0301-1744-Viettel-SLA-Check_nguyên_nhân_không_activate_routing-instances_mặc_dù_track_không_down_rpm_probe.md",
+      "changed": true,
+      "input_bytes": 7140,
+      "output_bytes": 7107
+    },
+    {
+      "source": "raw/TS_notes/Some_AMS_and_MS-MPC_notes.md",
+      "destination": "formatted/TS_notes/Some_AMS_and_MS-MPC_notes.md",
+      "changed": false,
+      "input_bytes": 253,
+      "output_bytes": 253
+    },
+    {
+      "source": "raw/TS_notes/Source-base_RTBH_notes.md",
+      "destination": "formatted/TS_notes/Source-base_RTBH_notes.md",
+      "changed": true,
+      "input_bytes": 175,
+      "output_bytes": 173
+    },
+    {
+      "source": "raw/TS_notes/Symmetric_Load_Balancing.md",
+      "destination": "formatted/TS_notes/Symmetric_Load_Balancing.md",
+      "changed": false,
+      "input_bytes": 537,
+      "output_bytes": 537
+    },
+    {
+      "source": "raw/TS_notes/Syslog_message-MQCHIP-*FI_Enqueuing_error-*type-*seq-*stream.md",
+      "destination": "formatted/TS_notes/Syslog_message-MQCHIP-*FI_Enqueuing_error-*type-*seq-*stream.md",
+      "changed": true,
+      "input_bytes": 260,
+      "output_bytes": 261
+    },
+    {
+      "source": "raw/TS_notes/TCAM_ACX_show.md",
+      "destination": "formatted/TS_notes/TCAM_ACX_show.md",
+      "changed": true,
+      "input_bytes": 539,
+      "output_bytes": 532
+    },
+    {
+      "source": "raw/TS_notes/Tcpdump_packet_on_RE_MX.md",
+      "destination": "formatted/TS_notes/Tcpdump_packet_on_RE_MX.md",
+      "changed": true,
+      "input_bytes": 5545,
+      "output_bytes": 5474
+    },
+    {
+      "source": "raw/TS_notes/Temperature-fan_speed.md",
+      "destination": "formatted/TS_notes/Temperature-fan_speed.md",
+      "changed": true,
+      "input_bytes": 2587,
+      "output_bytes": 2575
+    },
+    {
+      "source": "raw/TS_notes/Test_Juniper_telemetry_with_jtimon_(OpenConfig).md",
+      "destination": "formatted/TS_notes/Test_Juniper_telemetry_with_jtimon_(OpenConfig).md",
+      "changed": true,
+      "input_bytes": 6234,
+      "output_bytes": 5990
+    },
+    {
+      "source": "raw/TS_notes/The_subscribers_cannot_online_on_AE_interface.md",
+      "destination": "formatted/TS_notes/The_subscribers_cannot_online_on_AE_interface.md",
+      "changed": true,
+      "input_bytes": 4955,
+      "output_bytes": 4895
+    },
+    {
+      "source": "raw/TS_notes/Thu_thập_log_PFE_on_RE.md",
+      "destination": "formatted/TS_notes/Thu_thập_log_PFE_on_RE.md",
+      "changed": true,
+      "input_bytes": 845,
+      "output_bytes": 844
+    },
+    {
+      "source": "raw/TS_notes/Track_specific_packet_sizes_or_specific_MAC.md",
+      "destination": "formatted/TS_notes/Track_specific_packet_sizes_or_specific_MAC.md",
+      "changed": true,
+      "input_bytes": 1520,
+      "output_bytes": 1432
+    },
+    {
+      "source": "raw/TS_notes/Tối_ưu_BRAS_RR_Juniper_Viettel.md",
+      "destination": "formatted/TS_notes/Tối_ưu_BRAS_RR_Juniper_Viettel.md",
+      "changed": true,
+      "input_bytes": 2010,
+      "output_bytes": 2014
+    },
+    {
+      "source": "raw/TS_notes/Untitled_Note-1.md",
+      "destination": "formatted/TS_notes/Untitled_Note-1.md",
+      "changed": false,
+      "input_bytes": 426,
+      "output_bytes": 426
+    },
+    {
+      "source": "raw/TS_notes/Untitled_Note-2.md",
+      "destination": "formatted/TS_notes/Untitled_Note-2.md",
+      "changed": true,
+      "input_bytes": 4436,
+      "output_bytes": 4432
+    },
+    {
+      "source": "raw/TS_notes/Untitled_Note.md",
+      "destination": "formatted/TS_notes/Untitled_Note.md",
+      "changed": true,
+      "input_bytes": 1931,
+      "output_bytes": 1865
+    },
+    {
+      "source": "raw/TS_notes/Xử_lý_CFP,_XFP_bị_lõi.md",
+      "destination": "formatted/TS_notes/Xử_lý_CFP,_XFP_bị_lõi.md",
+      "changed": true,
+      "input_bytes": 4686,
+      "output_bytes": 4655
+    },
+    {
+      "source": "raw/TS_notes/[Internal_Only]_Not_able_to_enter_CLI_mode_of_router_(RE_type-RE-S-X6-64G).md",
+      "destination": "formatted/TS_notes/[Internal_Only]_Not_able_to_enter_CLI_mode_of_router_(RE_type-RE-S-X6-64G).md",
+      "changed": true,
+      "input_bytes": 1536,
+      "output_bytes": 1536
+    },
+    {
+      "source": "raw/TS_notes/[M-MX-T]_Troubleshooting_Checklist-BFD.md",
+      "destination": "formatted/TS_notes/[M-MX-T]_Troubleshooting_Checklist-BFD.md",
+      "changed": true,
+      "input_bytes": 14557,
+      "output_bytes": 14548
+    },
+    {
+      "source": "raw/TS_notes/[M-MX]_How_to_check_PPMD_mode_and_troubleshooting_tips.md",
+      "destination": "formatted/TS_notes/[M-MX]_How_to_check_PPMD_mode_and_troubleshooting_tips.md",
+      "changed": true,
+      "input_bytes": 3676,
+      "output_bytes": 3684
+    },
+    {
+      "source": "raw/TS_notes/[M-MX]_jnxFruOfflineReason.md",
+      "destination": "formatted/TS_notes/[M-MX]_jnxFruOfflineReason.md",
+      "changed": true,
+      "input_bytes": 10951,
+      "output_bytes": 10946
+    },
+    {
+      "source": "raw/TS_notes/[MX-PTX]_How_to_determine_which_LSP_is_forwarding_traffic_on_bypass_LSP.md",
+      "destination": "formatted/TS_notes/[MX-PTX]_How_to_determine_which_LSP_is_forwarding_traffic_on_bypass_LSP.md",
+      "changed": true,
+      "input_bytes": 5937,
+      "output_bytes": 5869
+    },
+    {
+      "source": "raw/TS_notes/[MX]_How_to_identify_the_link_that_may_be_causing_interrupt_throttling_on_an_MPC.md",
+      "destination": "formatted/TS_notes/[MX]_How_to_identify_the_link_that_may_be_causing_interrupt_throttling_on_an_MPC.md",
+      "changed": true,
+      "input_bytes": 156,
+      "output_bytes": 148
+    },
+    {
+      "source": "raw/TS_notes/[QFX]_How_to_identify_FPC_line_card_offline_reason_from_chassisd_SNMP_TRAP.md",
+      "destination": "formatted/TS_notes/[QFX]_How_to_identify_FPC_line_card_offline_reason_from_chassisd_SNMP_TRAP.md",
+      "changed": true,
+      "input_bytes": 8884,
+      "output_bytes": 8884
+    },
+    {
+      "source": "raw/TS_notes/archival.md",
+      "destination": "formatted/TS_notes/archival.md",
+      "changed": false,
+      "input_bytes": 55,
+      "output_bytes": 55
+    },
+    {
+      "source": "raw/TS_notes/auto-bandwidth_notes.md",
+      "destination": "formatted/TS_notes/auto-bandwidth_notes.md",
+      "changed": true,
+      "input_bytes": 466,
+      "output_bytes": 460
+    },
+    {
+      "source": "raw/TS_notes/auto-negotiation_on_ACX.md",
+      "destination": "formatted/TS_notes/auto-negotiation_on_ACX.md",
+      "changed": true,
+      "input_bytes": 1533,
+      "output_bytes": 1534
+    },
+    {
+      "source": "raw/TS_notes/capture_the_ttrace_output.md",
+      "destination": "formatted/TS_notes/capture_the_ttrace_output.md",
+      "changed": true,
+      "input_bytes": 2045,
+      "output_bytes": 1964
+    },
+    {
+      "source": "raw/TS_notes/command_list_to_collect_the_bfd_data_from_the_respective_fpc.md",
+      "destination": "formatted/TS_notes/command_list_to_collect_the_bfd_data_from_the_respective_fpc.md",
+      "changed": true,
+      "input_bytes": 301,
+      "output_bytes": 303
+    },
+    {
+      "source": "raw/TS_notes/commands_need_to_collect_to_check_BFD_(MPC10-11)-From_TAC.md",
+      "destination": "formatted/TS_notes/commands_need_to_collect_to_check_BFD_(MPC10-11)-From_TAC.md",
+      "changed": true,
+      "input_bytes": 3177,
+      "output_bytes": 3156
+    },
+    {
+      "source": "raw/TS_notes/commands_need_to_collect_to_check_EVPN-VXLAN_(From_This_Week-Data_Center_Deployment_with_EVPN-VXLAN).md",
+      "destination": "formatted/TS_notes/commands_need_to_collect_to_check_EVPN-VXLAN_(From_This_Week-Data_Center_Deployment_with_EVPN-VXLAN).md",
+      "changed": true,
+      "input_bytes": 3384,
+      "output_bytes": 3385
+    },
+    {
+      "source": "raw/TS_notes/commands_need_to_collect_to_check_high_CPU.md",
+      "destination": "formatted/TS_notes/commands_need_to_collect_to_check_high_CPU.md",
+      "changed": true,
+      "input_bytes": 1007,
+      "output_bytes": 969
+    },
+    {
+      "source": "raw/TS_notes/commands_to_trigger_alarm_on_MX.md",
+      "destination": "formatted/TS_notes/commands_to_trigger_alarm_on_MX.md",
+      "changed": true,
+      "input_bytes": 2266,
+      "output_bytes": 2204
+    },
+    {
+      "source": "raw/TS_notes/các_physical_hw_có_trên_jlab.md",
+      "destination": "formatted/TS_notes/các_physical_hw_có_trên_jlab.md",
+      "changed": true,
+      "input_bytes": 69,
+      "output_bytes": 65
+    },
+    {
+      "source": "raw/TS_notes/cách_upgrade-downgrade_JunOS_cho_physical_device_on_Jlab-vlab.md",
+      "destination": "formatted/TS_notes/cách_upgrade-downgrade_JunOS_cho_physical_device_on_Jlab-vlab.md",
+      "changed": true,
+      "input_bytes": 1495,
+      "output_bytes": 1492
+    },
+    {
+      "source": "raw/TS_notes/eVPN.md",
+      "destination": "formatted/TS_notes/eVPN.md",
+      "changed": false,
+      "input_bytes": 570,
+      "output_bytes": 570
+    },
+    {
+      "source": "raw/TS_notes/ecmp-local-bias.md",
+      "destination": "formatted/TS_notes/ecmp-local-bias.md",
+      "changed": false,
+      "input_bytes": 1506,
+      "output_bytes": 1506
+    },
+    {
+      "source": "raw/TS_notes/enhanced_subscriber_management_daemon_runs_in_64-bit-32-bit.md",
+      "destination": "formatted/TS_notes/enhanced_subscriber_management_daemon_runs_in_64-bit-32-bit.md",
+      "changed": false,
+      "input_bytes": 651,
+      "output_bytes": 651
+    },
+    {
+      "source": "raw/TS_notes/evpn_command_check.md",
+      "destination": "formatted/TS_notes/evpn_command_check.md",
+      "changed": false,
+      "input_bytes": 87,
+      "output_bytes": 87
+    },
+    {
+      "source": "raw/TS_notes/high_NPU_CPU_in_CGNAT.md",
+      "destination": "formatted/TS_notes/high_NPU_CPU_in_CGNAT.md",
+      "changed": true,
+      "input_bytes": 519,
+      "output_bytes": 520
+    },
+    {
+      "source": "raw/TS_notes/interfaces_diagnostics_optics.md",
+      "destination": "formatted/TS_notes/interfaces_diagnostics_optics.md",
+      "changed": true,
+      "input_bytes": 1489,
+      "output_bytes": 1470
+    },
+    {
+      "source": "raw/TS_notes/kiểm_tra_default_mac-limit_learning_trên_interaces-instance.md",
+      "destination": "formatted/TS_notes/kiểm_tra_default_mac-limit_learning_trên_interaces-instance.md",
+      "changed": false,
+      "input_bytes": 150,
+      "output_bytes": 150
+    },
+    {
+      "source": "raw/TS_notes/lacp_flap_khi_dung_VC_mix-mode.md",
+      "destination": "formatted/TS_notes/lacp_flap_khi_dung_VC_mix-mode.md",
+      "changed": true,
+      "input_bytes": 1431,
+      "output_bytes": 1433
+    },
+    {
+      "source": "raw/TS_notes/ldp-tunneling_or_BGP-LU_(swap_label_0_behavior_change_from_19-x.md",
+      "destination": "formatted/TS_notes/ldp-tunneling_or_BGP-LU_(swap_label_0_behavior_change_from_19-x.md",
+      "changed": false,
+      "input_bytes": 167,
+      "output_bytes": 167
+    },
+    {
+      "source": "raw/TS_notes/multiple_Junos-cli_commands_at_the_same_time.md",
+      "destination": "formatted/TS_notes/multiple_Junos-cli_commands_at_the_same_time.md",
+      "changed": false,
+      "input_bytes": 365,
+      "output_bytes": 365
+    },
+    {
+      "source": "raw/TS_notes/pfe_local-bias.md",
+      "destination": "formatted/TS_notes/pfe_local-bias.md",
+      "changed": true,
+      "input_bytes": 4108,
+      "output_bytes": 4106
+    },
+    {
+      "source": "raw/TS_notes/scale_MPC4E.md",
+      "destination": "formatted/TS_notes/scale_MPC4E.md",
+      "changed": true,
+      "input_bytes": 661,
+      "output_bytes": 658
+    },
+    {
+      "source": "raw/TS_notes/set_link-speed_100G_cho_interface_ae_với_et-8_interface.md",
+      "destination": "formatted/TS_notes/set_link-speed_100G_cho_interface_ae_với_et-8_interface.md",
+      "changed": false,
+      "input_bytes": 91,
+      "output_bytes": 91
+    },
+    {
+      "source": "raw/TS_notes/set_system_debugger-on-panic-and_set_system_debugger-on-break.md",
+      "destination": "formatted/TS_notes/set_system_debugger-on-panic-and_set_system_debugger-on-break.md",
+      "changed": false,
+      "input_bytes": 735,
+      "output_bytes": 735
+    },
+    {
+      "source": "raw/TS_notes/show_firewall_in_PFE.md",
+      "destination": "formatted/TS_notes/show_firewall_in_PFE.md",
+      "changed": true,
+      "input_bytes": 35368,
+      "output_bytes": 34973
+    },
+    {
+      "source": "raw/TS_notes/support_RE_and_Chassis_power-cycle.md",
+      "destination": "formatted/TS_notes/support_RE_and_Chassis_power-cycle.md",
+      "changed": false,
+      "input_bytes": 218,
+      "output_bytes": 218
+    },
+    {
+      "source": "raw/TS_notes/switch_EX2300_bị_cao_tải_CPU-SNMP.md",
+      "destination": "formatted/TS_notes/switch_EX2300_bị_cao_tải_CPU-SNMP.md",
+      "changed": true,
+      "input_bytes": 5714,
+      "output_bytes": 5703
+    },
+    {
+      "source": "raw/TS_notes/switch_EX2300_không_commit_được.md",
+      "destination": "formatted/TS_notes/switch_EX2300_không_commit_được.md",
+      "changed": true,
+      "input_bytes": 995,
+      "output_bytes": 985
+    },
+    {
+      "source": "raw/TS_notes/sử_dụng_BFD_cho_LSP.md",
+      "destination": "formatted/TS_notes/sử_dụng_BFD_cho_LSP.md",
+      "changed": true,
+      "input_bytes": 3638,
+      "output_bytes": 3625
+    },
+    {
+      "source": "raw/TS_notes/traceoptions_for_specific_RSVP.md",
+      "destination": "formatted/TS_notes/traceoptions_for_specific_RSVP.md",
+      "changed": true,
+      "input_bytes": 2118,
+      "output_bytes": 2115
+    },
+    {
+      "source": "raw/TS_notes/triển_khai_apply_term_Block_CTH_POLYCOM_vào_filter_block-frag-in_của_Inside_CGNAT.md",
+      "destination": "formatted/TS_notes/triển_khai_apply_term_Block_CTH_POLYCOM_vào_filter_block-frag-in_của_Inside_CGNAT.md",
+      "changed": true,
+      "input_bytes": 3854,
+      "output_bytes": 3832
+    },
+    {
+      "source": "raw/TS_notes/upgrade_OS.md",
+      "destination": "formatted/TS_notes/upgrade_OS.md",
+      "changed": true,
+      "input_bytes": 833,
+      "output_bytes": 834
+    },
+    {
+      "source": "raw/TS_notes/xư_lý_cảnh_báo_RPD_MPLS_INTF_MAX_LABELS_ERROR_HPG8001PRT02.md",
+      "destination": "formatted/TS_notes/xư_lý_cảnh_báo_RPD_MPLS_INTF_MAX_LABELS_ERROR_HPG8001PRT02.md",
+      "changed": true,
+      "input_bytes": 917,
+      "output_bytes": 928
+    },
+    {
+      "source": "raw/TS_notes/yum_groupinstall_\"Development_Tools\".md",
+      "destination": "formatted/TS_notes/yum_groupinstall_\"Development_Tools\".md",
+      "changed": false,
+      "input_bytes": 213,
+      "output_bytes": 213
+    },
+    {
+      "source": "raw/classification/CLI_Cheatsheet/Bash_command_cli_on_MacOS.md",
+      "destination": "formatted/classification/CLI_Cheatsheet/Bash_command_cli_on_MacOS.md",
+      "changed": true,
+      "input_bytes": 874,
+      "output_bytes": 881
+    },
+    {
+      "source": "raw/classification/CLI_Cheatsheet/Check_ddos-protection_param_on_QFX5K.md",
+      "destination": "formatted/classification/CLI_Cheatsheet/Check_ddos-protection_param_on_QFX5K.md",
+      "changed": false,
+      "input_bytes": 256,
+      "output_bytes": 256
+    },
+    {
+      "source": "raw/classification/CLI_Cheatsheet/Check_running_lab_on_eve.md",
+      "destination": "formatted/classification/CLI_Cheatsheet/Check_running_lab_on_eve.md",
+      "changed": true,
+      "input_bytes": 3344,
+      "output_bytes": 3297
+    },
+    {
+      "source": "raw/classification/CLI_Cheatsheet/Cisco_template_pppoe_DHCPv6_NA_(PPPoE_IPv6).md",
+      "destination": "formatted/classification/CLI_Cheatsheet/Cisco_template_pppoe_DHCPv6_NA_(PPPoE_IPv6).md",
+      "changed": true,
+      "input_bytes": 2005,
+      "output_bytes": 1899
+    },
+    {
+      "source": "raw/classification/CLI_Cheatsheet/Clear_OSPF_database.md",
+      "destination": "formatted/classification/CLI_Cheatsheet/Clear_OSPF_database.md",
+      "changed": false,
+      "input_bytes": 438,
+      "output_bytes": 438
+    },
+    {
+      "source": "raw/classification/CLI_Cheatsheet/CoS_class-of-service_shell_commands.md",
+      "destination": "formatted/classification/CLI_Cheatsheet/CoS_class-of-service_shell_commands.md",
+      "changed": false,
+      "input_bytes": 2382,
+      "output_bytes": 2382
+    },
+    {
+      "source": "raw/classification/CLI_Cheatsheet/FPC.md",
+      "destination": "formatted/classification/CLI_Cheatsheet/FPC.md",
+      "changed": true,
+      "input_bytes": 4045,
+      "output_bytes": 4018
+    },
+    {
+      "source": "raw/classification/CLI_Cheatsheet/KB33034_[MX]_Configuration_Example-Matching_IP_traffic_with_a_firewall_filter_for_family_CCC.md",
+      "destination": "formatted/classification/CLI_Cheatsheet/KB33034_[MX]_Configuration_Example-Matching_IP_traffic_with_a_firewall_filter_for_family_CCC.md",
+      "changed": false,
+      "input_bytes": 385,
+      "output_bytes": 385
+    },
+    {
+      "source": "raw/classification/CLI_Cheatsheet/MAC_move.md",
+      "destination": "formatted/classification/CLI_Cheatsheet/MAC_move.md",
+      "changed": true,
+      "input_bytes": 538,
+      "output_bytes": 531
+    },
+    {
+      "source": "raw/classification/CLI_Cheatsheet/TRIO_Card-packet_capture_with_pfe_commands.md",
+      "destination": "formatted/classification/CLI_Cheatsheet/TRIO_Card-packet_capture_with_pfe_commands.md",
+      "changed": true,
+      "input_bytes": 6669,
+      "output_bytes": 6615
+    },
+    {
+      "source": "raw/classification/CLI_Cheatsheet/config_template_Cisco_PPPoE_IPv4_and_PPPoE_IPv6_client.md",
+      "destination": "formatted/classification/CLI_Cheatsheet/config_template_Cisco_PPPoE_IPv4_and_PPPoE_IPv6_client.md",
+      "changed": true,
+      "input_bytes": 4023,
+      "output_bytes": 4036
+    },
+    {
+      "source": "raw/classification/CLI_Cheatsheet/show_port_mapping_pfe.md",
+      "destination": "formatted/classification/CLI_Cheatsheet/show_port_mapping_pfe.md",
+      "changed": false,
+      "input_bytes": 64,
+      "output_bytes": 64
+    },
+    {
+      "source": "raw/classification/CLI_compare_between_2_commit.md",
+      "destination": "formatted/classification/CLI_compare_between_2_commit.md",
+      "changed": false,
+      "input_bytes": 667,
+      "output_bytes": 667
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/1_số_thông_tin_requirements_để_cắm_đc_card_MPC7E-MPC7E-MRATE_trên_ MX240-480-960.md",
+      "destination": "formatted/classification/Concepts_Theory/1_số_thông_tin_requirements_để_cắm_đc_card_MPC7E-MPC7E-MRATE_trên_ MX240-480-960.md",
+      "changed": true,
+      "input_bytes": 1044,
+      "output_bytes": 1031
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/6PE/Configuring_BGP_for_IPv6_Unicast_NLRI_over_an_IPv4_Peering_session.md",
+      "destination": "formatted/classification/Concepts_Theory/6PE/Configuring_BGP_for_IPv6_Unicast_NLRI_over_an_IPv4_Peering_session.md",
+      "changed": true,
+      "input_bytes": 2538,
+      "output_bytes": 2539
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/6PE/IPv6_Free_Core-Configuring_IPv6_Labeled_Unicast_on_Juniper_MX.md",
+      "destination": "formatted/classification/Concepts_Theory/6PE/IPv6_Free_Core-Configuring_IPv6_Labeled_Unicast_on_Juniper_MX.md",
+      "changed": true,
+      "input_bytes": 12699,
+      "output_bytes": 12507
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/6PE/IPv6_NLRIs_over_IPv4_BGP_Peering_When_You're_Not_Using_Mapped_Addresses-.md",
+      "destination": "formatted/classification/Concepts_Theory/6PE/IPv6_NLRIs_over_IPv4_BGP_Peering_When_You're_Not_Using_Mapped_Addresses-.md",
+      "changed": true,
+      "input_bytes": 7879,
+      "output_bytes": 7884
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/6PE/IPv6_tunneling.md",
+      "destination": "formatted/classification/Concepts_Theory/6PE/IPv6_tunneling.md",
+      "changed": true,
+      "input_bytes": 6755,
+      "output_bytes": 6768
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/AJSPR-v19A/Chapter_10-BGP.md",
+      "destination": "formatted/classification/Concepts_Theory/AJSPR-v19A/Chapter_10-BGP.md",
+      "changed": true,
+      "input_bytes": 8532,
+      "output_bytes": 8556
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/AJSPR-v19A/Chapter_11-BGP_Attributes_and_Policy-Part1.md",
+      "destination": "formatted/classification/Concepts_Theory/AJSPR-v19A/Chapter_11-BGP_Attributes_and_Policy-Part1.md",
+      "changed": true,
+      "input_bytes": 6845,
+      "output_bytes": 6863
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/AJSPR-v19A/Chapter_12_BGP_Attributes_and_Policy-Part_2.md",
+      "destination": "formatted/classification/Concepts_Theory/AJSPR-v19A/Chapter_12_BGP_Attributes_and_Policy-Part_2.md",
+      "changed": true,
+      "input_bytes": 6369,
+      "output_bytes": 6380
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/AJSPR-v19A/Chapter_13_Route_Reflection_and_Confederations.md",
+      "destination": "formatted/classification/Concepts_Theory/AJSPR-v19A/Chapter_13_Route_Reflection_and_Confederations.md",
+      "changed": true,
+      "input_bytes": 4826,
+      "output_bytes": 4840
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/AJSPR-v19A/Chapter_14-BGP_FlowSpec.md",
+      "destination": "formatted/classification/Concepts_Theory/AJSPR-v19A/Chapter_14-BGP_FlowSpec.md",
+      "changed": true,
+      "input_bytes": 7107,
+      "output_bytes": 7127
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/AJSPR-v19A/Chapter_15-Troubleshooting_BGP.md",
+      "destination": "formatted/classification/Concepts_Theory/AJSPR-v19A/Chapter_15-Troubleshooting_BGP.md",
+      "changed": true,
+      "input_bytes": 5031,
+      "output_bytes": 5035
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/AJSPR-v19A/Chapter_16-Policy_Troubleshooting.md",
+      "destination": "formatted/classification/Concepts_Theory/AJSPR-v19A/Chapter_16-Policy_Troubleshooting.md",
+      "changed": true,
+      "input_bytes": 4141,
+      "output_bytes": 4146
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/AJSPR-v19A/Chapter_2-OSPF.md",
+      "destination": "formatted/classification/Concepts_Theory/AJSPR-v19A/Chapter_2-OSPF.md",
+      "changed": true,
+      "input_bytes": 33134,
+      "output_bytes": 33167
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/AJSPR-v19A/Chapter_3-Advanced_OSPF.md",
+      "destination": "formatted/classification/Concepts_Theory/AJSPR-v19A/Chapter_3-Advanced_OSPF.md",
+      "changed": true,
+      "input_bytes": 12826,
+      "output_bytes": 12832
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/AJSPR-v19A/Chapter_4-Advanced_OSPF_Options.md",
+      "destination": "formatted/classification/Concepts_Theory/AJSPR-v19A/Chapter_4-Advanced_OSPF_Options.md",
+      "changed": true,
+      "input_bytes": 4924,
+      "output_bytes": 4942
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/AJSPR-v19A/Chapter_5-Troubleshooting_OSPF.md",
+      "destination": "formatted/classification/Concepts_Theory/AJSPR-v19A/Chapter_5-Troubleshooting_OSPF.md",
+      "changed": true,
+      "input_bytes": 12100,
+      "output_bytes": 12128
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/AJSPR-v19A/Chapter_6-IS-IS.md",
+      "destination": "formatted/classification/Concepts_Theory/AJSPR-v19A/Chapter_6-IS-IS.md",
+      "changed": true,
+      "input_bytes": 29726,
+      "output_bytes": 29762
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/AJSPR-v19A/Chapter_7-Advanced_IS-IS_Operations_and_Configuration_Options.md",
+      "destination": "formatted/classification/Concepts_Theory/AJSPR-v19A/Chapter_7-Advanced_IS-IS_Operations_and_Configuration_Options.md",
+      "changed": true,
+      "input_bytes": 7934,
+      "output_bytes": 7953
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/AJSPR-v19A/Chapter_8-Multilevel_IS-IS_Networks.md",
+      "destination": "formatted/classification/Concepts_Theory/AJSPR-v19A/Chapter_8-Multilevel_IS-IS_Networks.md",
+      "changed": true,
+      "input_bytes": 6455,
+      "output_bytes": 6463
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/AJSPR-v19A/Chapter_9-Troubleshooting_IS-IS.md",
+      "destination": "formatted/classification/Concepts_Theory/AJSPR-v19A/Chapter_9-Troubleshooting_IS-IS.md",
+      "changed": true,
+      "input_bytes": 5257,
+      "output_bytes": 5272
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/ASIC_Architecture_in_Line_cards.md",
+      "destination": "formatted/classification/Concepts_Theory/ASIC_Architecture_in_Line_cards.md",
+      "changed": false,
+      "input_bytes": 90,
+      "output_bytes": 90
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/Address-Assignment_Pools_for_Subscriber_Management.md",
+      "destination": "formatted/classification/Concepts_Theory/Address-Assignment_Pools_for_Subscriber_Management.md",
+      "changed": true,
+      "input_bytes": 10751,
+      "output_bytes": 10163
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/BFD_scales.md",
+      "destination": "formatted/classification/Concepts_Theory/BFD_scales.md",
+      "changed": false,
+      "input_bytes": 98,
+      "output_bytes": 98
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/BGP_label-unicast_(LU).md",
+      "destination": "formatted/classification/Concepts_Theory/BGP_label-unicast_(LU).md",
+      "changed": false,
+      "input_bytes": 419,
+      "output_bytes": 419
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/BGP_notes.md",
+      "destination": "formatted/classification/Concepts_Theory/BGP_notes.md",
+      "changed": true,
+      "input_bytes": 12574,
+      "output_bytes": 12579
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/Bgp_multihop.md",
+      "destination": "formatted/classification/Concepts_Theory/Bgp_multihop.md",
+      "changed": false,
+      "input_bytes": 266,
+      "output_bytes": 266
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/Bidirectional_Forwarding_Detection_(BFD).md",
+      "destination": "formatted/classification/Concepts_Theory/Bidirectional_Forwarding_Detection_(BFD).md",
+      "changed": true,
+      "input_bytes": 14309,
+      "output_bytes": 14309
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/CE-CE_VRF_INTERFACE_Pings.md",
+      "destination": "formatted/classification/Concepts_Theory/CE-CE_VRF_INTERFACE_Pings.md",
+      "changed": false,
+      "input_bytes": 113,
+      "output_bytes": 113
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/CSPF_to_secondary_loopback.md",
+      "destination": "formatted/classification/Concepts_Theory/CSPF_to_secondary_loopback.md",
+      "changed": true,
+      "input_bytes": 21521,
+      "output_bytes": 21191
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/Cấu_hình_Secure_CRT_session_logs.md",
+      "destination": "formatted/classification/Concepts_Theory/Cấu_hình_Secure_CRT_session_logs.md",
+      "changed": true,
+      "input_bytes": 170,
+      "output_bytes": 168
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/DDoS_Protection_và_RE_Protection_trên_MX.md",
+      "destination": "formatted/classification/Concepts_Theory/DDoS_Protection_và_RE_Protection_trên_MX.md",
+      "changed": true,
+      "input_bytes": 1092,
+      "output_bytes": 1086
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/EoMPLS_VC_Type.md",
+      "destination": "formatted/classification/Concepts_Theory/EoMPLS_VC_Type.md",
+      "changed": true,
+      "input_bytes": 1735,
+      "output_bytes": 1736
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/Explain_Adaptive_SPF_Timers_in_JUNOS.md",
+      "destination": "formatted/classification/Concepts_Theory/Explain_Adaptive_SPF_Timers_in_JUNOS.md",
+      "changed": false,
+      "input_bytes": 1829,
+      "output_bytes": 1829
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/Explain_BGP_AS_4-bytes.md",
+      "destination": "formatted/classification/Concepts_Theory/Explain_BGP_AS_4-bytes.md",
+      "changed": true,
+      "input_bytes": 485,
+      "output_bytes": 489
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/Explain_DMEM_(Data_Memory).md",
+      "destination": "formatted/classification/Concepts_Theory/Explain_DMEM_(Data_Memory).md",
+      "changed": false,
+      "input_bytes": 47,
+      "output_bytes": 47
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/Explain_LMEM.md",
+      "destination": "formatted/classification/Concepts_Theory/Explain_LMEM.md",
+      "changed": false,
+      "input_bytes": 231,
+      "output_bytes": 231
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/Explain_Wanphy.md",
+      "destination": "formatted/classification/Concepts_Theory/Explain_Wanphy.md",
+      "changed": true,
+      "input_bytes": 109,
+      "output_bytes": 110
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/Explain_Zone_on_MPC.md",
+      "destination": "formatted/classification/Concepts_Theory/Explain_Zone_on_MPC.md",
+      "changed": false,
+      "input_bytes": 821,
+      "output_bytes": 821
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/Few_notes_about_MX_routers_.md",
+      "destination": "formatted/classification/Concepts_Theory/Few_notes_about_MX_routers_.md",
+      "changed": true,
+      "input_bytes": 9567,
+      "output_bytes": 9552
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/Generate_CHAP_response_string.md",
+      "destination": "formatted/classification/Concepts_Theory/Generate_CHAP_response_string.md",
+      "changed": true,
+      "input_bytes": 1094,
+      "output_bytes": 1091
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/Giới_hạn_số_lượng_phiên_của_một_khách_hàng_trên_BRAS_Juniper_(session-limit-per-username).md",
+      "destination": "formatted/classification/Concepts_Theory/Giới_hạn_số_lượng_phiên_của_một_khách_hàng_trên_BRAS_Juniper_(session-limit-per-username).md",
+      "changed": true,
+      "input_bytes": 4607,
+      "output_bytes": 4402
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/Hash_key_computation_on_MPC_cards.md",
+      "destination": "formatted/classification/Concepts_Theory/Hash_key_computation_on_MPC_cards.md",
+      "changed": true,
+      "input_bytes": 3947,
+      "output_bytes": 3952
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/Hold_timers.md",
+      "destination": "formatted/classification/Concepts_Theory/Hold_timers.md",
+      "changed": false,
+      "input_bytes": 99,
+      "output_bytes": 99
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/Hành_xử_(behavior)_với_per-nexthop_label_allocation.md",
+      "destination": "formatted/classification/Concepts_Theory/Hành_xử_(behavior)_với_per-nexthop_label_allocation.md",
+      "changed": false,
+      "input_bytes": 144,
+      "output_bytes": 144
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/Hỗ_trợ_giám_sát_bw_cho_term_fb_trên_BRAS.md",
+      "destination": "formatted/classification/Concepts_Theory/Hỗ_trợ_giám_sát_bw_cho_term_fb_trên_BRAS.md",
+      "changed": true,
+      "input_bytes": 4636,
+      "output_bytes": 4603
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/ISIS/ISIS_NARROW_and_WIDE_METRICs.md",
+      "destination": "formatted/classification/Concepts_Theory/ISIS/ISIS_NARROW_and_WIDE_METRICs.md",
+      "changed": true,
+      "input_bytes": 34132,
+      "output_bytes": 34014
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/ISIS/ISIS_SPF_caculation_when_overload_bit_set.md",
+      "destination": "formatted/classification/Concepts_Theory/ISIS/ISIS_SPF_caculation_when_overload_bit_set.md",
+      "changed": true,
+      "input_bytes": 45934,
+      "output_bytes": 45736
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/ISIS/IS_IS_Route_Selection.md",
+      "destination": "formatted/classification/Concepts_Theory/ISIS/IS_IS_Route_Selection.md",
+      "changed": false,
+      "input_bytes": 513,
+      "output_bytes": 513
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/Interprovider_Layer_3_VPN_option_C.md",
+      "destination": "formatted/classification/Concepts_Theory/Interprovider_Layer_3_VPN_option_C.md",
+      "changed": false,
+      "input_bytes": 179,
+      "output_bytes": 179
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/JNCIE_sources.md",
+      "destination": "formatted/classification/Concepts_Theory/JNCIE_sources.md",
+      "changed": true,
+      "input_bytes": 23830,
+      "output_bytes": 23833
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/JunOS_Release.md",
+      "destination": "formatted/classification/Concepts_Theory/JunOS_Release.md",
+      "changed": true,
+      "input_bytes": 571,
+      "output_bytes": 573
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/Juniper_load_balance.md",
+      "destination": "formatted/classification/Concepts_Theory/Juniper_load_balance.md",
+      "changed": true,
+      "input_bytes": 1102,
+      "output_bytes": 1105
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/Junos_–_LDP_troubleshooting.md",
+      "destination": "formatted/classification/Concepts_Theory/Junos_–_LDP_troubleshooting.md",
+      "changed": false,
+      "input_bytes": 5057,
+      "output_bytes": 5057
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/L3VPN_per-prefix_label_allocation.md",
+      "destination": "formatted/classification/Concepts_Theory/L3VPN_per-prefix_label_allocation.md",
+      "changed": false,
+      "input_bytes": 121,
+      "output_bytes": 121
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/LDP-tunnelling_and_hidden_routes_in_inet-3.md",
+      "destination": "formatted/classification/Concepts_Theory/LDP-tunnelling_and_hidden_routes_in_inet-3.md",
+      "changed": false,
+      "input_bytes": 130,
+      "output_bytes": 130
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/Layer-2 and Layer-3 VPN From JUNOS.md",
+      "destination": "formatted/classification/Concepts_Theory/Layer-2 and Layer-3 VPN From JUNOS.md",
+      "changed": true,
+      "input_bytes": 11731,
+      "output_bytes": 11734
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/Logical_Systems_and_Virtual_Routers.md",
+      "destination": "formatted/classification/Concepts_Theory/Logical_Systems_and_Virtual_Routers.md",
+      "changed": false,
+      "input_bytes": 776,
+      "output_bytes": 776
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/MPC10E-10C-MRATE.md",
+      "destination": "formatted/classification/Concepts_Theory/MPC10E-10C-MRATE.md",
+      "changed": false,
+      "input_bytes": 202,
+      "output_bytes": 202
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/MPC10E_vs_MPC7E_subscriber_SCALE.md",
+      "destination": "formatted/classification/Concepts_Theory/MPC10E_vs_MPC7E_subscriber_SCALE.md",
+      "changed": true,
+      "input_bytes": 789,
+      "output_bytes": 795
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/NAT_sesion_information.md",
+      "destination": "formatted/classification/Concepts_Theory/NAT_sesion_information.md",
+      "changed": false,
+      "input_bytes": 468,
+      "output_bytes": 468
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/No_more_doubt_with_LDP.md",
+      "destination": "formatted/classification/Concepts_Theory/No_more_doubt_with_LDP.md",
+      "changed": true,
+      "input_bytes": 21240,
+      "output_bytes": 21256
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/Nâng_cấp_bản_nào_bị_trùng_IP_trên_IFL_là_lỗi.md",
+      "destination": "formatted/classification/Concepts_Theory/Nâng_cấp_bản_nào_bị_trùng_IP_trên_IFL_là_lỗi.md",
+      "changed": false,
+      "input_bytes": 781,
+      "output_bytes": 781
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/OSPF AS THE PE-CE ROUTING PROTOCOLS DEEP DIVE – PART 1.md",
+      "destination": "formatted/classification/Concepts_Theory/OSPF AS THE PE-CE ROUTING PROTOCOLS DEEP DIVE – PART 1.md",
+      "changed": true,
+      "input_bytes": 13136,
+      "output_bytes": 13131
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/OSPF AS THE PE-CE ROUTING PROTOCOLS DEEP DIVE – PART 2.md",
+      "destination": "formatted/classification/Concepts_Theory/OSPF AS THE PE-CE ROUTING PROTOCOLS DEEP DIVE – PART 2.md",
+      "changed": true,
+      "input_bytes": 22450,
+      "output_bytes": 22454
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/OSPF AS THE PE-CE ROUTING PROTOCOLS DEEP DIVE – PART 3.md",
+      "destination": "formatted/classification/Concepts_Theory/OSPF AS THE PE-CE ROUTING PROTOCOLS DEEP DIVE – PART 3.md",
+      "changed": true,
+      "input_bytes": 13610,
+      "output_bytes": 13600
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/OSPF-Discontiguous_Nonzero_Areas.md",
+      "destination": "formatted/classification/Concepts_Theory/OSPF-Discontiguous_Nonzero_Areas.md",
+      "changed": true,
+      "input_bytes": 4529,
+      "output_bytes": 4531
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/OSPF_Back_Door_Links-A_Case_Study.md",
+      "destination": "formatted/classification/Concepts_Theory/OSPF_Back_Door_Links-A_Case_Study.md",
+      "changed": false,
+      "input_bytes": 168,
+      "output_bytes": 168
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/OSPF_LSA_Type_3_ABR_technical_vs_functional.md",
+      "destination": "formatted/classification/Concepts_Theory/OSPF_LSA_Type_3_ABR_technical_vs_functional.md",
+      "changed": true,
+      "input_bytes": 1055,
+      "output_bytes": 1057
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/OSPF_Path_Selection_Challenge.md",
+      "destination": "formatted/classification/Concepts_Theory/OSPF_Path_Selection_Challenge.md",
+      "changed": true,
+      "input_bytes": 7335,
+      "output_bytes": 7336
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/OSPF_SUMMARY.md",
+      "destination": "formatted/classification/Concepts_Theory/OSPF_SUMMARY.md",
+      "changed": true,
+      "input_bytes": 6690,
+      "output_bytes": 6723
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/OSPF_route_selection.md",
+      "destination": "formatted/classification/Concepts_Theory/OSPF_route_selection.md",
+      "changed": true,
+      "input_bytes": 1477,
+      "output_bytes": 1478
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/OSPF_route_withdraw.md",
+      "destination": "formatted/classification/Concepts_Theory/OSPF_route_withdraw.md",
+      "changed": true,
+      "input_bytes": 3142,
+      "output_bytes": 3143
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/OSPF_vs-ISIS.md",
+      "destination": "formatted/classification/Concepts_Theory/OSPF_vs-ISIS.md",
+      "changed": true,
+      "input_bytes": 62761,
+      "output_bytes": 62769
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/PPP_Fast_Keepalive.md",
+      "destination": "formatted/classification/Concepts_Theory/PPP_Fast_Keepalive.md",
+      "changed": false,
+      "input_bytes": 3961,
+      "output_bytes": 3961
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/PWEs_scaling_for_pppoe_DS.md",
+      "destination": "formatted/classification/Concepts_Theory/PWEs_scaling_for_pppoe_DS.md",
+      "changed": false,
+      "input_bytes": 1395,
+      "output_bytes": 1395
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/RR_for_VNPT-NET.md",
+      "destination": "formatted/classification/Concepts_Theory/RR_for_VNPT-NET.md",
+      "changed": true,
+      "input_bytes": 2476,
+      "output_bytes": 2478
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/Rib-groups.md",
+      "destination": "formatted/classification/Concepts_Theory/Rib-groups.md",
+      "changed": false,
+      "input_bytes": 98,
+      "output_bytes": 98
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/SNMP_MIB_thông_tin_module_quang_các_dòng_thiết_bị_của_Juniper.md",
+      "destination": "formatted/classification/Concepts_Theory/SNMP_MIB_thông_tin_module_quang_các_dòng_thiết_bị_của_Juniper.md",
+      "changed": true,
+      "input_bytes": 4134,
+      "output_bytes": 4125
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/SPNWHCM-TSB74336.md",
+      "destination": "formatted/classification/Concepts_Theory/SPNWHCM-TSB74336.md",
+      "changed": true,
+      "input_bytes": 12196,
+      "output_bytes": 12024
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/SPNWHCM-[Nội_bộ]_V-v_các_Junos_mới_nâng_cấp_cho_VNPT_VIETTEL-08-2023.md",
+      "destination": "formatted/classification/Concepts_Theory/SPNWHCM-[Nội_bộ]_V-v_các_Junos_mới_nâng_cấp_cho_VNPT_VIETTEL-08-2023.md",
+      "changed": true,
+      "input_bytes": 3152,
+      "output_bytes": 3148
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/Spanning_tree_protocol_(STP).md",
+      "destination": "formatted/classification/Concepts_Theory/Spanning_tree_protocol_(STP).md",
+      "changed": true,
+      "input_bytes": 406,
+      "output_bytes": 408
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/Subscriber_scale_MX204_vs_MX304.md",
+      "destination": "formatted/classification/Concepts_Theory/Subscriber_scale_MX204_vs_MX304.md",
+      "changed": true,
+      "input_bytes": 2943,
+      "output_bytes": 2945
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/Thông_tin_scaling_port_BRAS-1.md",
+      "destination": "formatted/classification/Concepts_Theory/Thông_tin_scaling_port_BRAS-1.md",
+      "changed": true,
+      "input_bytes": 2452,
+      "output_bytes": 2433
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/Thông_tin_scaling_port_BRAS.md",
+      "destination": "formatted/classification/Concepts_Theory/Thông_tin_scaling_port_BRAS.md",
+      "changed": true,
+      "input_bytes": 2092,
+      "output_bytes": 2069
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/Understanding_the_effects_of_ISIS_wide-metric-only_and_traffic-engineering_disable_configuration_options_in_Junos.md",
+      "destination": "formatted/classification/Concepts_Theory/Understanding_the_effects_of_ISIS_wide-metric-only_and_traffic-engineering_disable_configuration_options_in_Junos.md",
+      "changed": true,
+      "input_bytes": 1523,
+      "output_bytes": 1522
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/as-path-expand vs as-path-prepend.md",
+      "destination": "formatted/classification/Concepts_Theory/as-path-expand vs as-path-prepend.md",
+      "changed": true,
+      "input_bytes": 1293,
+      "output_bytes": 1295
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/how_to_local_PE_choose_routes_to_adv_to_remote_PE.md",
+      "destination": "formatted/classification/Concepts_Theory/how_to_local_PE_choose_routes_to_adv_to_remote_PE.md",
+      "changed": false,
+      "input_bytes": 865,
+      "output_bytes": 865
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/l3vpn_hub_and_spoke-1.md",
+      "destination": "formatted/classification/Concepts_Theory/l3vpn_hub_and_spoke-1.md",
+      "changed": false,
+      "input_bytes": 206,
+      "output_bytes": 206
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/l3vpn_hub_and_spoke.md",
+      "destination": "formatted/classification/Concepts_Theory/l3vpn_hub_and_spoke.md",
+      "changed": true,
+      "input_bytes": 1621,
+      "output_bytes": 1625
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/mc-lag_upgrade.md",
+      "destination": "formatted/classification/Concepts_Theory/mc-lag_upgrade.md",
+      "changed": false,
+      "input_bytes": 563,
+      "output_bytes": 563
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/multipath in L3VPN routing-instance.md",
+      "destination": "formatted/classification/Concepts_Theory/multipath in L3VPN routing-instance.md",
+      "changed": false,
+      "input_bytes": 458,
+      "output_bytes": 458
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/ospf_as_routing_protocol_for_CE-PE.md",
+      "destination": "formatted/classification/Concepts_Theory/ospf_as_routing_protocol_for_CE-PE.md",
+      "changed": true,
+      "input_bytes": 14289,
+      "output_bytes": 14281
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/policy-statement_from_route-type_external_vs_from_external.md",
+      "destination": "formatted/classification/Concepts_Theory/policy-statement_from_route-type_external_vs_from_external.md",
+      "changed": true,
+      "input_bytes": 1714,
+      "output_bytes": 1715
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/pppoe_client_bras_bng_option.md",
+      "destination": "formatted/classification/Concepts_Theory/pppoe_client_bras_bng_option.md",
+      "changed": true,
+      "input_bytes": 856,
+      "output_bytes": 854
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/pr1523537_nay_chu_yeu_giai_thich_ve_behaviour_cua_bfd_session_id.md",
+      "destination": "formatted/classification/Concepts_Theory/pr1523537_nay_chu_yeu_giai_thich_ve_behaviour_cua_bfd_session_id.md",
+      "changed": true,
+      "input_bytes": 12475,
+      "output_bytes": 12459
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/rib-groups_behavior.md",
+      "destination": "formatted/classification/Concepts_Theory/rib-groups_behavior.md",
+      "changed": false,
+      "input_bytes": 85,
+      "output_bytes": 85
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/route-reflector_outside_the_PE_(out_of_path).md",
+      "destination": "formatted/classification/Concepts_Theory/route-reflector_outside_the_PE_(out_of_path).md",
+      "changed": true,
+      "input_bytes": 4525,
+      "output_bytes": 4527
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/set_protocols_ospf-no-active-backbone.md",
+      "destination": "formatted/classification/Concepts_Theory/set_protocols_ospf-no-active-backbone.md",
+      "changed": false,
+      "input_bytes": 1279,
+      "output_bytes": 1279
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/slot_gắn_card_FPC.md",
+      "destination": "formatted/classification/Concepts_Theory/slot_gắn_card_FPC.md",
+      "changed": false,
+      "input_bytes": 107,
+      "output_bytes": 107
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/tính_năng_link-degrade_để_detect_BER_trên_thiết_bị_Juniper.md",
+      "destination": "formatted/classification/Concepts_Theory/tính_năng_link-degrade_để_detect_BER_trên_thiết_bị_Juniper.md",
+      "changed": true,
+      "input_bytes": 7578,
+      "output_bytes": 7518
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/vpn-apply-export_and_advertise-from-main-vpn-tables.md",
+      "destination": "formatted/classification/Concepts_Theory/vpn-apply-export_and_advertise-from-main-vpn-tables.md",
+      "changed": true,
+      "input_bytes": 1285,
+      "output_bytes": 1287
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/Điều_kiện_phát_sinh_BGP_rsync.md",
+      "destination": "formatted/classification/Concepts_Theory/Điều_kiện_phát_sinh_BGP_rsync.md",
+      "changed": false,
+      "input_bytes": 123,
+      "output_bytes": 123
+    },
+    {
+      "source": "raw/classification/Troubleshooting/Guide_MPC_insert_and_Power_note_on_MX2008.md",
+      "destination": "formatted/classification/Troubleshooting/Guide_MPC_insert_and_Power_note_on_MX2008.md",
+      "changed": false,
+      "input_bytes": 1044,
+      "output_bytes": 1044
+    },
+    {
+      "source": "raw/classification/Troubleshooting/Guide_NG-RE_insert_remove_on_SCBE2-E3.md",
+      "destination": "formatted/classification/Troubleshooting/Guide_NG-RE_insert_remove_on_SCBE2-E3.md",
+      "changed": true,
+      "input_bytes": 630,
+      "output_bytes": 629
+    },
+    {
+      "source": "raw/classification/Troubleshooting/Guide_Upgrade_NG-RE_Junos_17-18-X_to_19-3R1_or_Later.md",
+      "destination": "formatted/classification/Troubleshooting/Guide_Upgrade_NG-RE_Junos_17-18-X_to_19-3R1_or_Later.md",
+      "changed": true,
+      "input_bytes": 5068,
+      "output_bytes": 5033
+    },
+    {
+      "source": "raw/classification/Troubleshooting/Replacing_RE-phương_án_không_có_thiết_bị_lab.md",
+      "destination": "formatted/classification/Troubleshooting/Replacing_RE-phương_án_không_có_thiết_bị_lab.md",
+      "changed": true,
+      "input_bytes": 10463,
+      "output_bytes": 10296
+    }
+  ],
   "summary": {
-    "total": 0,
-    "changed": 0
+    "total": 335,
+    "changed": 232
   }
 }

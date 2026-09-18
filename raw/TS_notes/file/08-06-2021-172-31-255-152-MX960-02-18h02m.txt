@@ -1,0 +1,38 @@
+﻿Last login: Tue Jun  8 16:08:50 2021 from 172.20.11.195
+--- JUNOS 17.3R3-S9.3 Kernel 64-bit  JNPR-10.3-20200624.0e4f83a_buil
+{master}
+baovg@BTN.MX960.202.RE0> show task memory logical-system all 
+ 
+logical-system: HCM-GW2
+Memory                 Size (kB)  Percentage  When
+  Currently In Use:      1210958         37%  now
+  Maximum Ever Used:     1399587         43%  21/05/29 23:12:33
+  Available:             3221225        100%  now
+-----
+ 
+logical-system: HCM-P2
+  Currently In Use:        16302          0%  now
+  Maximum Ever Used:       17580          0%  20/12/26 11:00:33
+  Available:             3221225        100%  now
+-----
+ 
+logical-system: HCM-PE2
+  Currently In Use:       860709         26%  now
+  Maximum Ever Used:      865219         26%  21/04/06 17:32:33
+  Available:             3221225        100%  now
+-----
+ 
+logical-system: HCM-RR2
+  Currently In Use:       719921         22%  now
+  Maximum Ever Used:      866779         26%  21/04/06 17:30:33
+  Available:             3221225        100%  now
+-----
+ 
+logical-system: default
+  Currently In Use:        29856          0%  now
+  Maximum Ever Used:       30355          0%  20/12/26 10:59:24
+  Available:            51476578        100%  now
+
+{master}
+baovg@BTN.MX960.202.RE0> exit 
+

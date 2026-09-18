@@ -14,8 +14,12 @@ ATX_HEADING = re.compile(r"^(?P<indent>\s{0,3})(?P<marks>#{1,6})\s*(?P<text>.*?)
 LIST_ITEM = re.compile(r"^(?P<indent>\s*)(?P<marker>[-+*]|\d+[.)])\s*(?P<text>.*)$")
 
 
-def iter_markdown_files(root: Path) -> Iterable[Path]:
-    yield from sorted(path for path in root.rglob("*.md") if path.is_file())
+def iter_markdown_files(root: Path, excluded_dirs: set[str]) -> Iterable[Path]:
+    yield from sorted(
+        path
+        for path in root.rglob("*.md")
+        if path.is_file() and not any(part in excluded_dirs for part in path.relative_to(root).parts)
+    )
 
 
 def format_markdown(text: str) -> str:
@@ -67,13 +71,19 @@ def main() -> int:
     parser.add_argument("--input", type=Path, default=Path("raw"))
     parser.add_argument("--output", type=Path, default=Path("formatted"))
     parser.add_argument("--report", type=Path, default=Path("reports/reformat-report.json"))
+    parser.add_argument(
+        "--exclude-dir",
+        action="append",
+        default=[],
+        help="directory name to exclude recursively; may be repeated",
+    )
     args = parser.parse_args()
 
     if not args.input.is_dir():
         parser.error(f"input directory does not exist: {args.input}")
 
     results = []
-    for source in iter_markdown_files(args.input):
+    for source in iter_markdown_files(args.input, set(args.exclude_dir)):
         relative = source.relative_to(args.input)
         results.append(process_file(source, args.output / relative))
 

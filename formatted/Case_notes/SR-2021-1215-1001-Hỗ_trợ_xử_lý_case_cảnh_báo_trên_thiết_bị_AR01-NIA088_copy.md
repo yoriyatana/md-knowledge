@@ -1,0 +1,610 @@
+# SR-2021-1215-1001 - Hỗ trợ xử lý case cảnh báo trên thiết bị AR01.NIA088 copy
+
+- --
+
+* *Phát sinh: alarm CB1 trên�**�**AR01.NIA088**
+
+- --
+
+* *Ghi nhận ban đầu**
+
+- Trên AR01.NIA088 phát sinh các cảnh báo lỗi:
+
+{master}
+
+vietpn@AR01.NIA088_RE0> show chassis alarms
+
+2 alarms currently active
+
+Alarm time               Class  Description
+
+<span style="background-color: #ffaaaa"><span style="background-color: #ffaaaa">2021-01-28 13:06:39 CAT  Minor  CB 1 Fabric Chip 1 Not Online</span></span>
+
+<span style="background-color: #ffaaaa"><span style="background-color: #ffaaaa">2021-01-28 13:06:38 CAT  Minor  CB 1 Fabric Chip 0 Not Online</span></span>
+
+- --
+
+* *Các bước xử lý**
+
+- --
+
+* *Kiểm tra sơ bộ**
+
+- IP MNS thiết bị <span style="background-color: #ffaaaa">**10.250.28.41**</span>
+- Cảnh báo phát sinh giống lỗi trên thiết bị ME_PR01.GAZ020 (case ID SR-2021-1201-0922).
+- Health check thiết bị
+    - CPU (2%), MEM(8%), TEMP (35C) không có bất thường, system boot (466 ngày)
+
+{master}
+
+[vietpn@AR01.NIA](mailto:vietpn@AR01.NIA)088_RE0> show chassis routing-engine no-forwarding
+
+Routing Engine status:
+
+  Slot 0:
+
+    Current state                  Master
+
+    Election priority              Master
+
+    <span style="background-color: #ffaaaa">Temperature                 33 degrees C / 91 degrees F</span>
+
+    CPU temperature             30 degrees C / 86 degrees F
+
+    DRAM                      32713 MB (32768 MB installed)
+
+    <span style="background-color: #ffaaaa">Memory utilization           8 percent</span>
+
+    5 sec CPU utilization:
+
+      User                       0 percent
+
+      Background                 0 percent
+
+      Kernel                     1 percent
+
+      Interrupt                  0 percent
+
+      <span style="background-color: #ffaaaa">Idle                      98 percent</span>
+
+    1 min CPU utilization:
+
+      User                       0 percent
+
+      Background                 0 percent
+
+      Kernel                     1 percent
+
+      Interrupt                  0 percent
+
+      Idle                      98 percent
+
+    5 min CPU utilization:
+
+      User                       0 percent
+
+      Background                 0 percent
+
+      Kernel                     1 percent
+
+      Interrupt                  0 percent
+
+      Idle                      98 percent
+
+    15 min CPU utilization:
+
+      User                       0 percent
+
+      Background                 0 percent
+
+      Kernel                     1 percent
+
+      Interrupt                  0 percent
+
+      Idle                      98 percent
+
+    Model                          RE-S-1800x4
+
+    Serial ID                      9016065507
+
+    Start time                     2020-09-04 23:25:59 CAT
+
+    Uptime                         466 days, 43 minutes
+
+    Last reboot reason             Router rebooted after a normal shutdown.
+
+    Load averages:                 1 minute   5 minute  15 minute
+
+                                       0. 31       0.28       0.25
+
+Routing Engine status:
+
+  Slot 1:
+
+    Current state                  Backup
+
+    Election priority              Backup
+
+    <span style="background-color: #ffaaaa">Temperature                 32 degrees C / 89 degrees F</span>
+
+    CPU temperature             30 degrees C / 86 degrees F
+
+    DRAM                      32713 MB (32768 MB installed)
+
+    <span style="background-color: #ffaaaa">Memory utilization           9 percent</span>
+
+    5 sec CPU utilization:
+
+      User                       0 percent
+
+      Background                 0 percent
+
+      Kernel                     0 percent
+
+      Interrupt                  0 percent
+
+      <span style="background-color: #ffaaaa">Idle                     100 percent</span>
+
+    Model                          RE-S-1800x4
+
+    Serial ID                      9016065286
+
+    Start time                     2020-09-04 23:15:28 CAT
+
+    Uptime                         466 days, 53 minutes, 20 seconds
+
+    Last reboot reason             Router rebooted after a normal shutdown.
+
+    Load averages:                 1 minute   5 minute  15 minute
+
+                                       0. 16       0.19       0.16
+
+    - Không có process chiếm CPU
+
+{master}
+
+[vietpn@AR01.NIA](mailto:vietpn@AR01.NIA)088_RE0> show system processes extensive no-forwarding
+
+last pid: 88761;  <span style="background-color: #ffaaaa">load averages:  0.26,  0.27,  0.25</span>  up 466+00:43:31    00:09:30
+
+237 processes: 5 running, 202 sleeping, 30 waiting
+
+<span style="background-color: #ffaaaa"><span style="background-color: #ffaaaa">Mem: 94M Active, 6567M Inact, 1684M Wired, 1675M Buf, 23G Free</span></span>
+
+Swap: 8192M Total, 8192M Free
+
+  PID USERNAME PRI NICE   SIZE    RES STATE   C   TIME    WCPU COMMAND
+
+   10 root     155 ki31     0K    64K CPU1    1    ??? 100.00% idle{idle: cpu1}
+
+   10 root     155 ki31     0K    64K CPU3    3    ??? 100.00% idle{idle: cpu3}
+
+   10 root     155 ki31     0K    64K CPU2    2    ??? 100.00% idle{idle: cpu2}
+
+   10 root     155 ki31     0K    64K RUN     0    ??? 100.00% idle{idle: cpu0}
+
+16705 root       4    0   825M 48640K select  3 467.9H   3.96% chassisd{chassisd}
+
+17094 root      20    0   806M 17020K select  0 857:11   0.20% repd{repd}
+
+16738 root      20    0  1467M   532M kqread  3  46.7H   0.00% rpd{rpd}
+
+- Health check show system storage no-forwarding  <<< còn trống 7.8G
+
+{master}
+
+[vietpn@AR01.NIA](mailto:vietpn@AR01.NIA)088_RE0> show system storage no-forwarding
+
+Filesystem              Size       Used      Avail  Capacity   Mounted on
+
+/dev/md0.uzip            21M        21M         0B      100%  /
+
+devfs                   1.0K       1.0K         0B      100%  /dev
+
+<span style="background-color: #ffaaaa"><span style="background-color: #ffaaaa">/dev/gpt/junos           19G       9.8G       7.8G       56%  /.mount</span></span>
+
+        - show version detail no-forwarding
+
+{master}
+
+[vietpn@AR01.NIA](mailto:vietpn@AR01.NIA)088_RE0> show version invoke-on all-routing-engines | match "re0|re1|Junos:"
+
+re0:
+
+- -------------------------------------------------------------------------
+
+Hostname: AR01.NIA088_RE0
+
+Junos: 17.3R3-S8.1
+
+re1:
+
+- -------------------------------------------------------------------------
+
+Hostname: AR01.NIA088_RE1
+
+Junos: 17.3R3-S8.1
+
+- Không phát sinh core-dump
+
+{master}
+
+[vietpn@AR01.NIA](mailto:vietpn@AR01.NIA)088_RE0> show system core-dumps
+
+- rw-r--r--  1 root  wheel   50787532 Aug 25  2020 /var/crash/core-NPC0.gz.core.0
+
+/var/tmp/*core*: No such file or directory
+
+/var/tmp/pics/*core*: No such file or directory
+
+/var/crash/kernel.*: No such file or directory
+
+/var/jails/rest-api/tmp/*core*: No such file or directory
+
+/tftpboot/corefiles/*core*: No such file or directory
+
+total files: 1
+
+- Show system resource-monitor fpc <<< không bất tường
+
+{master}
+
+[vietpn@AR01.NIA](mailto:vietpn@AR01.NIA)088_RE0> show system resource-monitor fpc
+
+FPC Resource Usage Summary
+
+Free Heap Mem Watermark         : 20  %
+
+Free NH Mem Watermark           : 20  %
+
+Free Filter Mem Watermark       : 20  %
+
+* - Watermark reached
+
+                    Heap            Avg                   ENCAP mem       NH mem          FW mem
+
+   Slot #         % Free       RTT  RTT        PFE #        % Free       % Free          % Free
+
+       <span style="background-color: #ffaaaa"> 0             90       --     --(--)      0            NA          88              99</span>
+
+<span style="background-color: #ffaaaa"><span style="background-color: #ffaaaa">        1             89       --     --(--)      0            NA          88              99</span></span>
+
+- show route summary <<< route không nhiều
+
+{master}
+
+[vietpn@AR01.NIA](mailto:vietpn@AR01.NIA)088_RE0> show route summary
+
+Autonomous system number: 37342
+
+Router ID: 10.250.92.41
+
+<span style="background-color: #ffaaaa">inet.0: 2945 destinations, 3949 routes</span> (2940 active, 0 holddown, 5 hidden)
+
+              Direct:     13 routes,     12 active
+
+               Local:     14 routes,     14 active
+
+                OSPF:   1885 routes,   1885 active
+
+                 BGP:   2032 routes,   1028 active
+
+                RSVP:      4 routes,      0 active
+
+                 LDP:      1 routes,      1 active
+
+- <span style="background-color: #ffaaaa">Log messages <<< không có log lạ</span>
+- <span style="background-color: #ffaaaa">Log interactive-commands <<< chưa check</span>
+- <span style="background-color: #ffaaaa">Log chassisd <<< chưa check</span>
+
+* *Thu thập các thông tin liên quan**
+
+request support information | no-more | save /var/log/RSI_AR01.NIA088_20211215
+
+file archive source /var/log/* destination /var/log/LOG_AR01.NIA088_20211215
+
+> show version invoke-on all-routing-engines | match "re0|re1|Junos:"
+
+> show chassis alarms
+
+> show system alarms
+
+> show system core-dumps
+
+> show chassis routing-engine | no-more
+
+> show chassis routing-engine | match "Slot|State|Start"
+
+show chassis environment cb | no-more
+
+show chassis environment cb | match "CB|State"
+
+> show chassis fabric summary | no-more
+
+/* Lưu thông tin hardware/fabric/fpc */
+
+> show chassis hardware | no-more
+
+> show chassis fabric fpcs | no-more
+
+> show chassis fabric summary extended | no-more
+
+> show chassis fabric plane | no-more
+
+/* Lưu thông tin đồng bộ GRES and NSR - KB32931  */
+
+> show system switchover /* Show on <span style="background-color: #ffaaaa">Backup RE</span> – GRES Readiness Check*/
+
+> show task replication  /* Show on <span style="background-color: #ffaaaa">Master RE</span> – RPD Synchronization Check*/
+
+> show database-replication summary /* Show on <span style="background-color: #ffaaaa">Master RE</span> – For BNG only */
+
+{master}
+
+[vietpn@AR01.NIA](mailto:vietpn@AR01.NIA)088_RE0> show chassis environment cb | match "CB|State"
+
+CB 0 status:
+
+  State                      Online Master
+
+<span style="background-color: #ffaaaa"><span style="background-color: #ffaaaa">CB 1 status:</span></span>
+
+<span style="background-color: #ffaaaa"><span style="background-color: #ffaaaa">  State                      Online Standby</span></span>
+
+{master}
+
+[vietpn@AR01.NIA](mailto:vietpn@AR01.NIA)088_RE0> show chassis fabric summary | no-more
+
+Plane   State    Uptime
+
+0      Online   465 days, 23 hours, 45 minutes, 37 seconds
+
+1      Online   465 days, 23 hours, 45 minutes, 37 seconds
+
+2      Online   465 days, 23 hours, 45 minutes, 37 seconds
+
+3      Online   465 days, 23 hours, 45 minutes, 37 seconds
+
+<span style="background-color: #ffaaaa"><span style="background-color: #ffaaaa">4      Offline  </span></span>
+
+<span style="background-color: #ffaaaa"><span style="background-color: #ffaaaa">5      Offline  </span></span>
+
+<span style="background-color: #ffaaaa"><span style="background-color: #ffaaaa">6      Offline  </span></span>
+
+<span style="background-color: #ffaaaa"><span style="background-color: #ffaaaa">7      Offline  </span></span>
+
+Note: For extended summary, use
+
+       show chassis fabric summary extended
+
+{master}
+
+[vietpn@AR01.NIA](mailto:vietpn@AR01.NIA)088_RE0> show chassis alarms
+
+2 alarms currently active
+
+Alarm time               Class  Description
+
+<span style="background-color: #ffaaaa"><span style="background-color: #ffaaaa">2021-01-28 13:06:39 CAT  Minor  CB 1 Fabric Chip 1 Not Online</span></span>
+
+<span style="background-color: #ffaaaa"><span style="background-color: #ffaaaa">2021-01-28 13:06:38 CAT  Minor  CB 1 Fabric Chip 0 Not Online</span></span>
+
+* *Kiểm tra các case cũ, google với alarm phát sinh**
+
+- Ghi nhận <span style="background-color: #ffaaaa">giống case </span><span style="background-color: #ffaaaa">SR-2021-1201-0922</span>
+    - <span style="background-color: #ffaaaa">Hướng xử lý: restart lại CB1</span>
+
+* *Xử lý trên thiết bị**
+
+- Thu thập baseline
+
+/* Lưu thông tin cấu hình và RSI */
+
+> set cli timestamp
+
+> show configuration | no-more
+
+> request support information | no-more
+
+/* Lưu thông tin alarm/core */
+
+> show system alarms
+
+> show chassis alarms
+
+> show system core-dumps
+
+/* Lưu thông tin về IGP */
+
+> show ospf interface | no-more
+
+> show ospf interface | count
+
+> show ospf neighbor instance all | no-more
+
+> show ospf3 interface | no-more
+
+> show ospf3 interface | count
+
+> show ospf3 neighbor instance all | no-more
+
+/* Lưu thông tin về MPLS/LDP/RSVP */
+
+> show mpls interface | no-more
+
+> show mpls interface | count
+
+> show ldp interface | no-more
+
+> show ldp interface | count
+
+> show rsvp interface | no-more
+
+> show rsvp interface | count
+
+> show ldp neighbor | no-more
+
+> show ldp neighbor | count
+
+> show ldp session | no-more
+
+> show ldp session | count
+
+> show rsvp session | no-more
+
+> show rsvp session | count
+
+> show mpls lsp | no-more
+
+/* Lưu thông tin về BGP */
+
+> shwo bgp sum | no-more
+
+show bgp summary | match Establ | count
+
+> show bgp neighbor | no-more
+
+> show route summary | no-more
+
+> show bfd session detail | no-more
+
+/* Lưu thông tin VRRP/L2VPN/VPLS/LLDP/BFD */
+
+> show vrrp | no-more
+
+> show l2circuit connections | no-more
+
+> show vpls connections | no-more
+
+> show vpls mac-table | no-more
+
+> show lldp neighbors | no-more
+
+> show bfd session detail | no-more
+
+/* Lưu thông tin hardware/fabric/fpc */
+
+> show chassis hardware | no-more
+
+> show chassis fabric fpcs | no-more
+
+> show chassis fabric summary extended | no-more
+
+> show chassis fabric plane | no-more
+
+/* Lưu thông tin đồng bộ GRES and NSR - KB32931  */
+
+> show system switchover /* Show on Backup RE – GRES Readiness Check */
+
+> show task replication  /* Show on Master RE – RPD Synchronization Check */
+
+> show database-replication summary /* Show on Master RE – For BNG only */
+
+> show system subscriber-management summary
+
+- Tiến hành reseat CB1 >>> KB [https://kb.juniper.net/InfoCenter/index?page=content&id=KB23067&actp=METADATA](https://kb.juniper.net/InfoCenter/index?page=content&id=KB23067&actp=METADATA)
+
+### Kiểm tra trạng thái RE1
+
+###### Đảm bảo RE1 đang ở trạng thái Backup vì mình sẽ tác động vào SCB slot 1, dẫn tới tác  động trên RE1.
+
+{master}
+
+[vietpn@AR01.NIA](mailto:vietpn@AR01.NIA)088_RE0> show chassis routing-engine | match "Slot|State|Start"
+
+Dec 15 00:26:27
+
+  Slot 0:
+
+    Current state                  Master
+
+    Start time                     2020-09-04 23:25:59 CAT
+
+  Slot 1:
+
+    Current state                  Backup
+
+    Start time                     2020-09-04 23:15:28 CAT
+
+### Thực hiện offline RE1
+
+###### Đứng trên RE0, offline RE1 bằng lệnh:
+
+<span style="background-color: #ffaaaa"><span style="background-color: #ffaaaa">> request system power-off other-routing-engine</span></span>
+
+###### Kiểm tra RE1 đã offline
+
+<span style="background-color: #ffaaaa"><span style="background-color: #ffaaaa">> show chassis routing-engine | match "Slot|State|Start"</span></span>
+
+  Slot 0:
+
+    Current state                  Master
+
+    Start time                     2020-09-04 23:25:59 CAT
+
+  Slot 1:
+
+    Current state                  Present
+
+### Thực hiện offline CB1
+
+###### Offline CB1 bằng lệnh:
+
+<span style="background-color: #ffaaaa"><span style="background-color: #ffaaaa">> request chassis cb offline slot 1</span></span>
+
+###### Xác nhận CB1 ở trạng thái offline
+
+<span style="background-color: #ffaaaa"><span style="background-color: #ffaaaa">> show chassis environment cb | match "CB|State"</span></span>
+
+CB 0 status:
+
+  State                      Online Master
+
+CB 1 status:
+
+  State                      Offline
+
+###### Kiểm tra trạng thái các fabric plane
+
+<span style="background-color: #ffaaaa">> show chassis fabric summary </span><span style="background-color: #ffaaaa">extended</span>
+
+0      Online     NO     NO        NO/  NO         465 days, 23 hours, 47 minutes, 47 seconds
+
+1      Online     NO     NO        NO/  NO         465 days, 23 hours, 47 minutes, 47 seconds
+
+2      Online     NO     NO        NO/  NO         465 days, 23 hours, 47 minutes, 47 seconds
+
+3      Online     NO     NO        NO/  NO         465 days, 23 hours, 47 minutes, 47 seconds
+
+4      Offline
+
+5      Offline
+
+6      Offline
+
+7      Offline
+
+<span style="background-color: #ffaaaa"><span style="background-color: #ffaaaa">>>> Sau khi Offline CB1 và RE1 thì cảnh báo vẫn chưa clear.</span></span>
+
+### Thực hiện online CB1 bằng lệnh
+
+<span style="background-color: #ffaaaa"><span style="background-color: #ffaaaa">> request chassis cb online slot 1</span></span>
+
+<span style="background-color: #ffaaaa">**>>> Sau khi CB1 online trở lại thì cảnh báo liên quan CB1 đã được clear**</span>
+
+<span style="background-color: #ffaaaa">
+
+</span>
+
+[vietpn@AR01.NIA](mailto:vietpn@AR01.NIA)088_RE0> show system alarms
+
+Dec 15 00:32:19
+
+No alarms currently active
+
+<span style="background-color: #ffaaaa">**### Kiểm tra trạng thái đồng bộ trên RE1 đã được đồng bộ, quá trình thực hiện không ghi nhận phát sinh ngoài dự kiến**</span>
+
+* *Kết quả xử lý trên thiết bị**
+
+- Xử lý ngày 15/12:
+    - Sau khi thực hiện OFF/ON lại CB1 thì cảnh báo đã được clear

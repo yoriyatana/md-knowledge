@@ -1,0 +1,177 @@
+ show system processes | no-more 
+  PID TT  STAT         TIME COMMAND
+    0  -  DLs      17:45.82 [kernel]
+    1  -  SLs       0:12.64 /sbin/init --
+    2  -  DL        0:00.00 [kpf0]
+    3  -  DL        0:00.00 [kpf1]
+    4  -  DL        0:00.00 [kpf2]
+    5  -  DL        0:00.00 [kpf3]
+    6  -  DL        0:00.00 [crypto]
+    7  -  DL        0:00.00 [crypto returns]
+    8  -  DL        0:00.40 [cam]
+    9  -  DL        0:00.02 [md0]
+   10  -  RL   920740:22.31 [idle]
+   11  -  WL     2731:04.29 [intr]
+   12  -  DL        0:18.47 [geom]
+   13  -  DL      125:51.85 [rand_harvestq]
+   14  -  DL        2:08.64 [usb]
+   15  -  DL      128:22.97 [ifstate notify]
+   16  -  IL        0:00.00 [kern_dump_proc]
+   17  -  DL        9:10.34 [pagedaemon]
+   18  -  DL        0:00.00 [vmdaemon]
+   19  -  DL        0:00.11 [pagezero]
+   20  -  DL        0:36.64 [bufdaemon]
+   21  -  DL        8:06.66 [syncer]
+   22  -  DL        0:36.16 [vnlru]
+   23  -  DL        0:00.01 [netdaemon]
+   24  -  SL        1:18.84 [jsr_kkcm]
+   25  -  DL        0:00.00 [jsr_jsm]
+   27  -  DL        0:00.00 [delayedexecd]
+   28  -  IL        0:00.00 [if_pfe_listen]
+   29  -  DL        0:00.00 [kern_pir_proc]
+   30  -  DL        0:08.34 [ifsclientclosed]
+   31  -  IL        0:00.00 [if_pic_listen0]
+   32  -  DL        3:32.45 [ddostasks]
+  139  -  DL        0:00.04 [md1]
+  238  -  DL        0:00.03 [md2]
+  522  -  DL        0:00.00 [md3]
+  569  -  DL        0:00.03 [md4]
+  617  -  DL        0:00.04 [md5]
+  665  -  DL        0:00.01 [md6]
+  715  -  DL        0:00.00 [md7]
+  763  -  DL        0:00.10 [md8]
+  843  -  DL        0:01.02 [md9]
+  918  -  DL        0:00.00 [md10]
+  968  -  DL        0:00.00 [md11]
+ 1018  -  DL        0:00.00 [md12]
+ 1068  -  DL        0:00.00 [md13]
+ 1128  -  DL        0:00.01 [md14]
+ 1189  -  DL        0:00.01 [md15]
+ 1237  -  DL        0:00.36 [md16]
+ 1285  -  DL        0:00.11 [md17]
+ 1333  -  DL        0:00.01 [md18]
+ 1383  -  DL        0:00.01 [md19]
+ 1433  -  DL        0:00.00 [md20]
+ 1481  -  DL        0:00.05 [md21]
+ 1531  -  DL        0:00.19 [md22]
+ 1581  -  DL        0:00.00 [md23]
+ 1679  -  DL        0:00.01 [md24]
+ 1729  -  DL        0:00.01 [md25]
+ 1779  -  DL        0:00.01 [md26]
+ 1826  -  DL        0:00.01 [md27]
+ 1876  -  DL        0:00.00 [md28]
+ 1926  -  DL        0:00.15 [md29]
+ 1976  -  DL        0:00.01 [md30]
+ 2026  -  DL        0:00.00 [md31]
+ 3461  -  DL        0:00.00 [ftcleanup]
+ 3813  -  DL        0:34.67 [bcmTX]
+ 3814  -  DL        0:35.05 [bcmXGS3AsyncTX]
+ 3819  -  DL       74:09.95 [bcmLINK.0]
+ 4631  -  Ss       93:29.98 /usr/sbin/eventd -r -s -A
+ 4635  -  Is        0:00.00 /sbin/jlaunchhelperd
+ 4637  -  S         0:29.59 /sbin/jlaunchd -N
+ 4651  -  S         0:40.26 /sbin/watchdog -t-1
+ 4652  -  Ss        0:22.03 /usr/sbin/cron -s
+ 4653  -  S        48:45.72 /usr/libexec/bslockd -mp -N
+ 4661  -  I         0:00.01 /usr/sbin/tnetd -N -l
+ 4663  -  S     10410:41.55 /usr/sbin/chassisd -N
+ 4664  -  S        11:27.16 /usr/sbin/sdk-vmmd -N
+ 4666  -  S         2:43.13 /usr/sbin/craftd -N
+ 4667  -  I         0:22.65 /usr/sbin/mgd -N
+ 4670  -  S        67:46.51 /usr/libexec/mosquitto-nossl -c /var/run/mqtt_broke
+ 4678  -  S       113:47.09 /usr/libexec64/rpd -N
+ 4680  -  S         2:10.99 /usr/sbin/inetd -N -w
+ 4689  -  S       379:16.36 /usr/sbin/pfed -N
+ 4692  -  S       406:43.09 /usr/sbin/ppmd -N
+ 4695  -  S         2:07.84 /usr/sbin/lmpd
+ 4699  -  I         0:03.24 /usr/sbin/smartd -n
+ 4709  -  S         6:03.61 /usr/sbin/bfdd -N
+ 4715  -  S       437:42.53 /usr/sbin/clksyncd -N
+ 4719  -  S         6:48.35 /usr/sbin/lacpd -N
+ 4723  -  S         4:55.05 /usr/sbin/lfmd -N
+ 4737  -  S        37:01.30 /usr/sbin/smid -N
+ 4748  -  S        51:00.08 /usr/sbin/shm-rtsdbd -N
+ 4749  -  S        28:47.60 /usr/sbin/gstatd -N
+ 4752  -  I         0:00.12 /usr/sbin/pmcd -N
+ 4753  -  I         0:00.00 /usr/sbin/inetd -p /var/run/inetd_4.pid -N -JU __ju
+ 4758  -  I         0:00.02 /usr/sbin/pmond -N
+ 4760  -  I         0:00.03 /usr/sbin/appidd -N
+ 4764  -  S       190:22.34 /usr/sbin/bbe-mibd -N
+ 4768  -  S       118:33.04 /usr/sbin/license-check -U -M -p 10 -i 10
+ 4822  -  R       599:56.50 /usr/sbin/authd -N
+ 4826  -  I       531:04.71 /usr/sbin/bbe-smgd -b -N
+ 4827  -  S        19:08.27 /usr/sbin/mobiled -N
+ 5007  -  S      1355:14.53 /usr/sbin/mib2d -N
+ 5008  -  I         0:31.58 /bin/sh /usr/sbin/rmpsd -N
+ 5011  -  I         0:31.89 /bin/sh /usr/sbin/charged -N
+ 5085  -  I       338:20.09 /usr/sbin/repd -N
+ 5147  -  SL      179:18.43 [ppt_07_80000006]
+ 5399  -  S         5:24.64 /usr/sbin/xntpd -j -N -g (ntpd)
+ 5400  -  S        76:56.79 /usr/sbin/l2ald -N
+ 5401  -  S<        1:43.07 /usr/sbin/apsd -N
+ 5403  -  S         1:53.78 /usr/sbin/rmopd -N
+ 5404  -  I        32:09.59 /usr/sbin/cosd
+ 5405  -  I         0:00.01 /usr/sbin/rtspd -N
+ 5406  -  I         0:19.26 /usr/sbin/fsad -N
+ 5407  -  I       142:29.35 /usr/sbin/pppoed -N
+ 5408  -  S         0:06.63 /usr/sbin/rdd -N
+ 5409  -  I         0:04.82 /usr/sbin/pppd -N
+ 5410  -  S         2:07.75 /usr/sbin/dfcd -N
+ 5415  -  S        22:45.10 /usr/sbin/l2cpd -N
+ 5416  -  S         3:15.24 /usr/sbin/oamd -N
+ 5417  -  S         2:47.11 /usr/sbin/mplsoamd -N
+ 5418  -  I         0:00.01 /usr/sbin/sendd -N
+ 5419  -  S         0:31.22 /usr/sbin/iccpd -N
+ 5420  -  I         7:43.74 /usr/sbin/jddosd -N
+ 5421  -  S         0:05.93 /usr/sbin/rpcbind -N -I -h 128.0.0.1
+ 5422  -  I         0:00.01 nfsd: master (nfsd)
+ 5423  -  I         0:04.78 /usr/sbin/mspd -N
+ 5424  -  I         0:00.01 /usr/sbin/mountd -N -s -h 128.0.0.1 -p 6666
+ 5425  -  S        63:38.54 /usr/sbin/autoconfd -N
+ 5426  -  S         1:44.34 /usr/sbin/smihelperd -N
+ 5427  -  S         1:07.02 /usr/sbin/kod -N
+ 5428  -  S         4:28.86 /usr/sbin/dot1xd -N
+ 5429  -  I         0:00.02 /usr/sbin/commit-syncd -N
+ 5430  -  S        26:17.18 /usr/sbin/na-mqttd -c /etc/na-mqtt.conf
+ 5431  -  I         0:00.01 /usr/sbin/mgd-api -N
+ 5432  -  I         0:00.03 /usr/sbin/xmlproxyd -N
+ 5433  -  S         1:08.73 /usr/sbin/overlayd -N
+ 5434  -  S         6:52.37 /usr/sbin/pkid -N
+ 5436  -  S      1100:07.79 /usr/sbin/rpd -N -JLHCM-GW1
+ 5437  -  S         8:37.72 nfsd: server (nfsd)
+ 5438  -  S       174:29.22 /usr/sbin/rpd -N -JLHCM-P1
+ 5439  -  S       988:15.17 /usr/sbin/rpd -N -JLHCM-PE1
+ 5440  -  S      1098:57.65 /usr/sbin/rpd -N -JLHCM-RR1
+ 5441  -  S         1:07.96 /usr/sbin/lrmuxd -N
+ 5442  -  S        20:28.18 /usr/sbin/alarmd -N
+ 5443  -  S         8:44.12 /sbin/dcd -N
+ 5444  -  S      1291:13.01 /usr/sbin/snmpd -N
+ 5445  -  S        21:19.49 /usr/sbin/irsd -N
+ 5446  -  S         4:02.62 /usr/sbin/tnp.sntpd -N
+ 5447  -  S         2:15.07 /usr/sbin/kmd -N
+ 5448  -  S         1:00.01 /usr/sbin/dfwd -N
+ 5449  -  S        73:10.84 /usr/libexec/mosquitto-nossl -c /var/run/mqtt_broke
+ 5450  -  S        73:22.27 /usr/libexec/mosquitto-nossl -c /var/run/mqtt_broke
+ 5451  -  I       314:34.99 /usr/sbin/jl2tpd -N
+ 5452  -  I       219:26.40 /usr/sbin/jpppd -N
+ 5453  -  S        39:49.24 /usr/sbin/bdbrepd -N
+ 5454  -  I         0:00.01 /usr/sbin/stats-agentd -N
+ 5455  -  S        40:55.24 /usr/sbin/transportd -N
+ 5456  -  S         3:27.03 /usr/sbin/agentd -N
+ 5457  -  S        26:42.02 /usr/sbin/alarm-mgmtd -N
+ 5593  -  SL      121:08.52 [ppt_11_80000013]
+ 5600  -  SL       92:33.50 [ppt_11_80000018]
+24141  -  SL       47:50.15 [ppt_16_80000118]
+27455  -  I       494:13.42 /usr/sbin/jdhcpd -N
+28638  -  S         1:39.69 /usr/sbin/spd -N
+28639  -  S         0:37.45 /usr/sbin/datapath-traced -N
+57322  -  Is        0:00.10 sshd: nhatnct@0 (sshd)
+57326  -  Is        0:04.60 mgd: (mgd) (nhatnct)/dev/pts/0 (mgd)
+59393  -  Ss        0:00.09 sshd: nhatnct@1 (sshd)
+59397  -  Ss        0:00.14 mgd: (mgd) (nhatnct)/dev/pts/1 (mgd)
+59402  -  I         0:00.00 sleep 30
+59403  -  I         0:00.00 sleep 30
+59408  -  R         0:00.00 /bin/ps -ax
+23980 u0  Is+       0:00.13 /usr/libexec/getty.real std ttyu0
+57325  0  Ss+       0:14.65 -cli (cli)
+59396  1  Ss+       0:00.33 -cli (cli)
