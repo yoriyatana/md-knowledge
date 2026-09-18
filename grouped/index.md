@@ -26,5 +26,4 @@ Deterministic output generated from `reports/grouping-manifest.json`.
 - [CGNAT AE Interface Configuration Guide](cgnat/configuration-guide.md) — configuration-guide — Mixed
 - [Case Notes Reference Index](case-notes/index.md) —  — Mixed
 - [Vendor PR & KB Reference Index](vendor-kb/index.md) —  — Mixed
-- [Mail Templates Index](mail-templates/index.md) —  — Mixed
 - [Lab Scenarios and Environment Index](lab-notes/index.md) —  — Mixed

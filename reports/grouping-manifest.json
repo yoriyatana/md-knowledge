@@ -344,6 +344,10 @@
       "source_directories": [
         "Case_notes/"
       ],
+      "sources": [
+        "Mail_template/Trả lời về việc khuyến nghị version.md",
+        "Mail_template/lỗi không ping được mpls ldp.md"
+      ],
       "approved": true,
       "action": "index-only"
     },
@@ -366,17 +370,6 @@
         "PR/PR1082932 - Data Error in shared LMEM of LU_XL chip causing a MQ_XM chip wedge.md",
         "PR/PR1561855 - Continuous bbe-smgd cores are generated after restarting the smgd.md"
       ]
-    },
-    {
-      "id": "mail-templates-index",
-      "destination": "mail-templates/index.md",
-      "level1_domain": "mail-templates",
-      "topic": "Mail Templates Index",
-      "source_directories": [
-        "Mail_template/"
-      ],
-      "approved": true,
-      "action": "index-only"
     },
     {
       "id": "lab-notes-index",
