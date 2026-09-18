@@ -1,2 +1,2 @@
-markitdown[all]>=0.1.0
+markitdown==0.1.7
 openai>=1.68.0

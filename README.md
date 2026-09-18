@@ -58,13 +58,17 @@ commit để cập nhật `formatted/` và `reports/`.
 
 ## MarkItDown
 
-MarkItDown được khai báo như plugin tùy chọn để chuyển đổi các định dạng tài liệu
+MarkItDown được khai báo để chuyển đổi các định dạng tài liệu
 khác sang Markdown trước khi đưa vào `raw/`:
 
 ```bash
 .venv/bin/python -m pip install -r requirements.txt
 .venv/bin/markitdown input.docx > raw/input.md
 ```
+
+MarkItDown được pin ở bản `0.1.7`. Không dùng extra `all` trong môi trường Python
+3.14 trên macOS vì extra này kéo theo một số dependency tùy chọn chưa có wheel
+tương thích.
 
 ## Gom nhóm theo chủ đề bằng OpenAI
 
