@@ -2,122 +2,136 @@
 
 Deterministic output generated from `reports/grouping-manifest.json`.
 
-- **mixed/**
-  - **case-study/**
-    - **routing/**
-      - [BGP Route Reflector Redundancy and Optimization Case Study](mixed/case-study/routing/bgp.md) — case-study — Mixed
-  - **concepts/**
-    - **bras/**
-      - [BRAS Address Assignment Pools](mixed/concepts/bras/ip-address-assignment.md) — concepts — Mixed
-      - [BRAS Dual-Stack PPPoE & RADIUS Attributes](mixed/concepts/bras/ipv6-dual-stack.md) — concepts — Mixed
-      - [BRAS Overview and Session Limits](mixed/concepts/bras/subscriber-management.md) — concepts — Mixed
-    - **mpls-vpn/**
-      - [EVPN-VXLAN Concepts and Command Checks](mixed/concepts/mpls-vpn/evpn-vxlan.md) — concepts — Mixed
-      - [L2VPN, VPLS, and CCC Configuration](mixed/concepts/mpls-vpn/l2vpn-vpls.md) — concepts — Mixed
-      - [L3VPN Architecture, Interprovider & Label Allocation](mixed/concepts/mpls-vpn/l3vpn.md) — concepts — Mixed
-      - [MPLS LDP Fundamentals & Label Behavior](mixed/concepts/mpls-vpn/ldp.md) — concepts — Mixed
-    - **routing/**
-      - [BFD Theory and Scaling](mixed/concepts/routing/bfd.md) — concepts — Mixed
-      - [OSPF PE-CE Deep Dive and Fundamentals](mixed/concepts/routing/ospf.md) — concepts — Mixed
+- **cisco/**
   - **configuration-guide/**
     - **bras/**
-      - [BRAS PPPoE and DHCPv6 Configuration Guide](mixed/configuration-guide/bras/subscriber-management.md) — configuration-guide — Mixed
-    - **cgnat/**
-      - [CGNAT AE Interface Configuration Guide](mixed/configuration-guide/cgnat/ae-spc3.md) — configuration-guide — Mixed
+      - [BRAS PPPoE and DHCPv6 Configuration Guide](cisco/configuration-guide/bras/subscriber-management.md) — configuration-guide — Mixed
+  - **index/**
+    - **source-inventory/**
+      - [Procedures Source Inventory (Cisco)](cisco/index/source-inventory/procedures.md) — index — Mixed
     - **switching/**
-      - [Switching Configuration Guide](mixed/configuration-guide/switching/configuration.md) — configuration-guide — Mixed
-      - [Mirror Traffic Configuration Guide](mixed/configuration-guide/switching/mirror-traffic.md) — configuration-guide — Mixed
+      - [switching/cisco Classified Notes](cisco/index/switching/cisco.md) — index — Mixed
+    - **vendor-kb/**
+      - [vendor-kb/cisco-troubleshooting Classified Notes](cisco/index/vendor-kb/cisco-troubleshooting.md) — index — Mixed
+- **huawei/**
+  - **index/**
+    - **switching/**
+      - [switching/huawei Classified Notes](huawei/index/switching/huawei.md) — index — Mixed
+- **juniper/**
+  - **case-study/**
+    - **routing/**
+      - [BGP Route Reflector Redundancy and Optimization Case Study](juniper/case-study/routing/bgp.md) — case-study — Mixed
+  - **concepts/**
+    - **bras/**
+      - [BRAS Address Assignment Pools](juniper/concepts/bras/ip-address-assignment.md) — concepts — Mixed
+      - [BRAS Dual-Stack PPPoE & RADIUS Attributes](juniper/concepts/bras/ipv6-dual-stack.md) — concepts — Mixed
+      - [BRAS Overview and Session Limits](juniper/concepts/bras/subscriber-management.md) — concepts — Mixed
+    - **mpls-vpn/**
+      - [EVPN-VXLAN Concepts and Command Checks](juniper/concepts/mpls-vpn/evpn-vxlan.md) — concepts — Mixed
+      - [L2VPN, VPLS, and CCC Configuration](juniper/concepts/mpls-vpn/l2vpn-vpls.md) — concepts — Mixed
+      - [L3VPN Architecture, Interprovider & Label Allocation](juniper/concepts/mpls-vpn/l3vpn.md) — concepts — Mixed
+      - [MPLS LDP Fundamentals & Label Behavior](juniper/concepts/mpls-vpn/ldp.md) — concepts — Mixed
+    - **routing/**
+      - [BFD Theory and Scaling](juniper/concepts/routing/bfd.md) — concepts — Mixed
+      - [OSPF PE-CE Deep Dive and Fundamentals](juniper/concepts/routing/ospf.md) — concepts — Mixed
+  - **configuration-guide/**
+    - **cgnat/**
+      - [CGNAT AE Interface Configuration Guide](juniper/configuration-guide/cgnat/ae-spc3.md) — configuration-guide — Mixed
+    - **switching/**
+      - [Switching Configuration Guide](juniper/configuration-guide/switching/configuration.md) — configuration-guide — Mixed
+      - [Mirror Traffic Configuration Guide](juniper/configuration-guide/switching/mirror-traffic.md) — configuration-guide — Mixed
   - **index/**
     - **bras/**
-      - [bras Classified Notes](mixed/index/bras/general.md) — index — Mixed
+      - [bras Classified Notes](juniper/index/bras/general.md) — index — Mixed
     - **case-notes/**
-      - [case-notes Classified Notes](mixed/index/case-notes/general.md) — index — Mixed
-      - [Case Notes Reference Index](mixed/index/case-notes/notes.md) — index — Mixed
+      - [case-notes Classified Notes](juniper/index/case-notes/general.md) — index — Mixed
+      - [Case Notes Reference Index](juniper/index/case-notes/notes.md) — index — Mixed
     - **cgnat/**
-      - [cgnat/case-study Classified Notes](mixed/index/cgnat/case-study.md) — index — Mixed
-      - [cgnat/configuration-guide Classified Notes](mixed/index/cgnat/configuration-guide.md) — index — Mixed
-      - [cgnat Classified Notes](mixed/index/cgnat/general.md) — index — Mixed
-      - [cgnat/troubleshooting-guide Classified Notes](mixed/index/cgnat/troubleshooting-guide.md) — index — Mixed
+      - [cgnat/case-study Classified Notes](juniper/index/cgnat/case-study.md) — index — Mixed
+      - [cgnat/configuration-guide Classified Notes](juniper/index/cgnat/configuration-guide.md) — index — Mixed
+      - [cgnat Classified Notes](juniper/index/cgnat/general.md) — index — Mixed
+      - [cgnat/troubleshooting-guide Classified Notes](juniper/index/cgnat/troubleshooting-guide.md) — index — Mixed
     - **cos/**
-      - [cos Classified Notes](mixed/index/cos/general.md) — index — Mixed
+      - [cos Classified Notes](juniper/index/cos/general.md) — index — Mixed
     - **hardware-maintenance/**
-      - [hardware-maintenance/chassis-power Classified Notes](mixed/index/hardware-maintenance/chassis-power.md) — index — Mixed
-      - [hardware-maintenance Classified Notes](mixed/index/hardware-maintenance/general.md) — index — Mixed
-      - [hardware-maintenance/linecard/ts-guide Classified Notes](mixed/index/hardware-maintenance/linecard-ts-guide.md) — index — Mixed
-      - [hardware-maintenance/linecard Classified Notes](mixed/index/hardware-maintenance/linecard.md) — index — Mixed
-      - [hardware-maintenance/mpc-linecard Classified Notes](mixed/index/hardware-maintenance/mpc-linecard.md) — index — Mixed
-      - [hardware-maintenance/optics-physical Classified Notes](mixed/index/hardware-maintenance/optics-physical.md) — index — Mixed
-      - [hardware-maintenance/re-scbe Classified Notes](mixed/index/hardware-maintenance/re-scbe.md) — index — Mixed
-      - [hardware-maintenance/ts-guide Classified Notes](mixed/index/hardware-maintenance/ts-guide.md) — index — Mixed
+      - [hardware-maintenance/chassis-power Classified Notes](juniper/index/hardware-maintenance/chassis-power.md) — index — Mixed
+      - [hardware-maintenance Classified Notes](juniper/index/hardware-maintenance/general.md) — index — Mixed
+      - [hardware-maintenance/linecard/ts-guide Classified Notes](juniper/index/hardware-maintenance/linecard-ts-guide.md) — index — Mixed
+      - [hardware-maintenance/linecard Classified Notes](juniper/index/hardware-maintenance/linecard.md) — index — Mixed
+      - [hardware-maintenance/mpc-linecard Classified Notes](juniper/index/hardware-maintenance/mpc-linecard.md) — index — Mixed
+      - [hardware-maintenance/optics-physical Classified Notes](juniper/index/hardware-maintenance/optics-physical.md) — index — Mixed
+      - [hardware-maintenance/re-scbe Classified Notes (Juniper)](juniper/index/hardware-maintenance/re-scbe.md) — index — Mixed
+      - [hardware-maintenance/ts-guide Classified Notes](juniper/index/hardware-maintenance/ts-guide.md) — index — Mixed
     - **jtac/**
-      - [jtac/rma Classified Notes](mixed/index/jtac/rma.md) — index — Mixed
+      - [jtac/rma Classified Notes](juniper/index/jtac/rma.md) — index — Mixed
     - **jtnoc/**
-      - [jtnoc Classified Notes](mixed/index/jtnoc/general.md) — index — Mixed
+      - [jtnoc Classified Notes](juniper/index/jtnoc/general.md) — index — Mixed
     - **junos-general/**
-      - [junos-general/cli-cheatsheet Classified Notes](mixed/index/junos-general/cli-cheatsheet.md) — index — Mixed
-      - [junos-general Classified Notes](mixed/index/junos-general/general.md) — index — Mixed
-      - [junos-general/oam Classified Notes](mixed/index/junos-general/oam.md) — index — Mixed
-      - [junos-general/ppmd Classified Notes](mixed/index/junos-general/ppmd.md) — index — Mixed
-      - [junos-general/rpm Classified Notes](mixed/index/junos-general/rpm.md) — index — Mixed
-      - [junos-general/syslog Classified Notes](mixed/index/junos-general/syslog.md) — index — Mixed
+      - [junos-general/cli-cheatsheet Classified Notes](juniper/index/junos-general/cli-cheatsheet.md) — index — Mixed
+      - [junos-general Classified Notes](juniper/index/junos-general/general.md) — index — Mixed
+      - [junos-general/oam Classified Notes](juniper/index/junos-general/oam.md) — index — Mixed
+      - [junos-general/ppmd Classified Notes](juniper/index/junos-general/ppmd.md) — index — Mixed
+      - [junos-general/rpm Classified Notes](juniper/index/junos-general/rpm.md) — index — Mixed
+      - [junos-general/syslog Classified Notes](juniper/index/junos-general/syslog.md) — index — Mixed
     - **lab-notes/**
-      - [lab-notes Classified Notes](mixed/index/lab-notes/general.md) — index — Mixed
-      - [Lab Scenarios and Environment Index](mixed/index/lab-notes/notes.md) — index — Mixed
+      - [lab-notes Classified Notes (Juniper)](juniper/index/lab-notes/general.md) — index — Mixed
+      - [Lab Scenarios and Environment Index](juniper/index/lab-notes/notes.md) — index — Mixed
     - **maintenance/**
-      - [maintenance/junos-upgrade Classified Notes](mixed/index/maintenance/junos-upgrade.md) — index — Mixed
+      - [maintenance/junos-upgrade Classified Notes](juniper/index/maintenance/junos-upgrade.md) — index — Mixed
     - **mpls-vpn/**
-      - [mpls-vpn/l3vpn Classified Notes](mixed/index/mpls-vpn/l3vpn.md) — index — Mixed
-      - [mpls-vpn/rsvp/ts-guide Classified Notes](mixed/index/mpls-vpn/rsvp-ts-guide.md) — index — Mixed
-      - [mpls-vpn/rsvp Classified Notes](mixed/index/mpls-vpn/rsvp.md) — index — Mixed
+      - [mpls-vpn/l3vpn Classified Notes](juniper/index/mpls-vpn/l3vpn.md) — index — Mixed
+      - [mpls-vpn/rsvp/ts-guide Classified Notes](juniper/index/mpls-vpn/rsvp-ts-guide.md) — index — Mixed
+      - [mpls-vpn/rsvp Classified Notes](juniper/index/mpls-vpn/rsvp.md) — index — Mixed
     - **other-tools/**
-      - [other-tools/user-guide Classified Notes](mixed/index/other-tools/user-guide.md) — index — Mixed
-      - [other-tools/vnpt-atp Classified Notes](mixed/index/other-tools/vnpt-atp.md) — index — Mixed
+      - [other-tools/user-guide Classified Notes](juniper/index/other-tools/user-guide.md) — index — Mixed
+      - [other-tools/vnpt-atp Classified Notes](juniper/index/other-tools/vnpt-atp.md) — index — Mixed
     - **routing/**
-      - [routing/bgp Classified Notes](mixed/index/routing/bgp.md) — index — Mixed
-      - [routing/convergence Classified Notes](mixed/index/routing/convergence.md) — index — Mixed
-      - [routing/firewall/ts-guide Classified Notes](mixed/index/routing/firewall-ts-guide.md) — index — Mixed
-      - [routing Classified Notes](mixed/index/routing/general.md) — index — Mixed
-      - [routing/loadbalance Classified Notes](mixed/index/routing/loadbalance.md) — index — Mixed
-      - [routing/multicast Classified Notes](mixed/index/routing/multicast.md) — index — Mixed
-      - [routing/scu-dcu Classified Notes](mixed/index/routing/scu-dcu.md) — index — Mixed
+      - [routing/bgp Classified Notes](juniper/index/routing/bgp.md) — index — Mixed
+      - [routing/convergence Classified Notes](juniper/index/routing/convergence.md) — index — Mixed
+      - [routing/firewall/ts-guide Classified Notes](juniper/index/routing/firewall-ts-guide.md) — index — Mixed
+      - [routing Classified Notes](juniper/index/routing/general.md) — index — Mixed
+      - [routing/loadbalance Classified Notes](juniper/index/routing/loadbalance.md) — index — Mixed
+      - [routing/multicast Classified Notes](juniper/index/routing/multicast.md) — index — Mixed
+      - [routing/scu-dcu Classified Notes](juniper/index/routing/scu-dcu.md) — index — Mixed
     - **scaling-limitations/**
-      - [scaling-limitations Classified Notes](mixed/index/scaling-limitations/general.md) — index — Mixed
+      - [scaling-limitations Classified Notes](juniper/index/scaling-limitations/general.md) — index — Mixed
     - **source-inventory/**
-      - [2022_FTEL-PS Source Inventory](mixed/index/source-inventory/2022-ftel-ps.md) — index — Mixed
-      - [Best_Practise Source Inventory](mixed/index/source-inventory/best-practise.md) — index — Mixed
-      - [classification Source Inventory](mixed/index/source-inventory/classification.md) — index — Mixed
-      - [JTAC_Descriptions Source Inventory](mixed/index/source-inventory/jtac-descriptions.md) — index — Mixed
-      - [Learning_Notes Source Inventory](mixed/index/source-inventory/learning-notes.md) — index — Mixed
-      - [MX_series_Architecture Source Inventory](mixed/index/source-inventory/mx-series-architecture.md) — index — Mixed
-      - [Outlook Source Inventory](mixed/index/source-inventory/outlook.md) — index — Mixed
-      - [Procedures Source Inventory](mixed/index/source-inventory/procedures.md) — index — Mixed
-      - [Recommends Source Inventory](mixed/index/source-inventory/recommends.md) — index — Mixed
-      - [SLA Source Inventory](mixed/index/source-inventory/sla.md) — index — Mixed
-      - [SVT-LAB Source Inventory](mixed/index/source-inventory/svt-lab.md) — index — Mixed
-      - [TS_notes Source Inventory](mixed/index/source-inventory/ts-notes.md) — index — Mixed
+      - [2022_FTEL-PS Source Inventory](juniper/index/source-inventory/2022-ftel-ps.md) — index — Mixed
+      - [Best_Practise Source Inventory](juniper/index/source-inventory/best-practise.md) — index — Mixed
+      - [classification Source Inventory](juniper/index/source-inventory/classification.md) — index — Mixed
+      - [JTAC_Descriptions Source Inventory](juniper/index/source-inventory/jtac-descriptions.md) — index — Mixed
+      - [Learning_Notes Source Inventory](juniper/index/source-inventory/learning-notes.md) — index — Mixed
+      - [MX_series_Architecture Source Inventory](juniper/index/source-inventory/mx-series-architecture.md) — index — Mixed
+      - [Outlook Source Inventory](juniper/index/source-inventory/outlook.md) — index — Mixed
+      - [Procedures Source Inventory (Juniper)](juniper/index/source-inventory/procedures.md) — index — Mixed
+      - [Recommends Source Inventory](juniper/index/source-inventory/recommends.md) — index — Mixed
+      - [SLA Source Inventory](juniper/index/source-inventory/sla.md) — index — Mixed
+      - [SVT-LAB Source Inventory](juniper/index/source-inventory/svt-lab.md) — index — Mixed
+      - [TS_notes Source Inventory (Juniper)](juniper/index/source-inventory/ts-notes.md) — index — Mixed
     - **subscriber-management/**
-      - [subscriber-management Classified Notes](mixed/index/subscriber-management/general.md) — index — Mixed
+      - [subscriber-management Classified Notes](juniper/index/subscriber-management/general.md) — index — Mixed
     - **switching/**
-      - [switching/cisco Classified Notes](mixed/index/switching/cisco.md) — index — Mixed
-      - [switching Classified Notes](mixed/index/switching/general.md) — index — Mixed
-      - [switching/huawei Classified Notes](mixed/index/switching/huawei.md) — index — Mixed
-      - [switching/mirror-traffic Classified Notes](mixed/index/switching/mirror-traffic.md) — index — Mixed
-      - [switching/ts-notes Classified Notes](mixed/index/switching/ts-notes.md) — index — Mixed
+      - [switching Classified Notes](juniper/index/switching/general.md) — index — Mixed
+      - [switching/mirror-traffic Classified Notes](juniper/index/switching/mirror-traffic.md) — index — Mixed
+      - [switching/ts-notes Classified Notes](juniper/index/switching/ts-notes.md) — index — Mixed
     - **vendor-kb/**
-      - [vendor-kb/cisco-troubleshooting Classified Notes](mixed/index/vendor-kb/cisco-troubleshooting.md) — index — Mixed
-      - [Vendor PR & KB Reference Index](mixed/index/vendor-kb/kb.md) — index — Mixed
+      - [Vendor PR & KB Reference Index](juniper/index/vendor-kb/kb.md) — index — Mixed
   - **install-maintenance-guide/**
     - **hardware-maintenance/**
-      - [Chassis Power-Cycle and SFB Restart](mixed/install-maintenance-guide/hardware-maintenance/chassis-power.md) — install-maintenance-guide — Mixed
-      - [MPC Insertion, Removal and Power Notes](mixed/install-maintenance-guide/hardware-maintenance/mpc-linecard.md) — install-maintenance-guide — Mixed
-      - [NG-RE & RE Replacement Procedures](mixed/install-maintenance-guide/hardware-maintenance/re-scbe.md) — install-maintenance-guide — Mixed
+      - [Chassis Power-Cycle and SFB Restart](juniper/install-maintenance-guide/hardware-maintenance/chassis-power.md) — install-maintenance-guide — Mixed
+      - [MPC Insertion, Removal and Power Notes](juniper/install-maintenance-guide/hardware-maintenance/mpc-linecard.md) — install-maintenance-guide — Mixed
+      - [NG-RE & RE Replacement Procedures](juniper/install-maintenance-guide/hardware-maintenance/re-scbe.md) — install-maintenance-guide — Mixed
   - **troubleshooting-guide/**
     - **bras/**
-      - [BRAS PPPoE Subscriber Troubleshooting](mixed/troubleshooting-guide/bras/subscriber-management.md) — troubleshooting-guide — Mixed
+      - [BRAS PPPoE Subscriber Troubleshooting](juniper/troubleshooting-guide/bras/subscriber-management.md) — troubleshooting-guide — Mixed
     - **hardware-maintenance/**
-      - [Linecard Port Mapping Troubleshooting Guide](mixed/troubleshooting-guide/hardware-maintenance/linecard.md) — troubleshooting-guide — Mixed
-      - [Optics, CFP, XFP & Physical Layer Diagnostics](mixed/troubleshooting-guide/hardware-maintenance/optics-physical.md) — troubleshooting-guide — Mixed
+      - [Linecard Port Mapping Troubleshooting Guide](juniper/troubleshooting-guide/hardware-maintenance/linecard.md) — troubleshooting-guide — Mixed
+      - [Optics, CFP, XFP & Physical Layer Diagnostics](juniper/troubleshooting-guide/hardware-maintenance/optics-physical.md) — troubleshooting-guide — Mixed
     - **routing/**
-      - [BFD Troubleshooting, Anchorship, and PFE Commands](mixed/troubleshooting-guide/routing/bfd.md) — troubleshooting-guide — Mixed
+      - [BFD Troubleshooting, Anchorship, and PFE Commands](juniper/troubleshooting-guide/routing/bfd.md) — troubleshooting-guide — Mixed
     - **switching/**
-      - [LACP Troubleshooting and Diagnostics](mixed/troubleshooting-guide/switching/lacp.md) — troubleshooting-guide — Mixed
+      - [LACP Troubleshooting and Diagnostics (Juniper)](juniper/troubleshooting-guide/switching/lacp.md) — troubleshooting-guide — Mixed
+- **linux/**
+  - **index/**
+    - **source-inventory/**
+      - [TS_notes Source Inventory (Linux)](linux/index/source-inventory/ts-notes.md) — index — Mixed
