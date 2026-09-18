@@ -70,12 +70,13 @@ MarkItDown được pin ở bản `0.1.7`. Không dùng extra `all` trong môi t
 3.14 trên macOS vì extra này kéo theo một số dependency tùy chọn chưa có wheel
 tương thích.
 
-## Gom nhóm theo chủ đề bằng OpenAI
+## Gom nhóm theo chủ đề bằng Gemini
 
-Đây là quy trình hai bước. API key chỉ đặt trong biến môi trường, không commit vào Git:
+Đây là quy trình hai bước. Gemini API key chỉ đặt trong biến môi trường, không
+commit vào Git. Tạo key tại <https://aistudio.google.com/app/apikey>:
 
 ```bash
-export OPENAI_API_KEY="..."
+export GEMINI_API_KEY="..."
 .venv/bin/python -m pip install -r requirements.txt
 .venv/bin/python tools/group_markdown.py propose --input formatted
 ```
@@ -89,7 +90,7 @@ Sau đó chạy:
 ```
 
 Kết quả được tạo trong `grouped/` (local-only mặc định vì nội dung được viết lại
-bởi API). Hệ thống giữ ngôn ngữ và thuật ngữ nguồn, gửi ảnh liên quan để OCR/mô
+bởi Gemini). Hệ thống giữ ngôn ngữ và thuật ngữ nguồn, gửi ảnh liên quan để OCR/mô
 tả, yêu cầu tài liệu tổng hợp giữ phần Sources, và copy ảnh nguồn vào
 `grouped/assets/<group-id>/`. Nếu muốn lưu kết quả lên GitHub, hãy kiểm tra thủ
 công nội dung/OCR trước rồi bỏ `grouped/` khỏi `.gitignore`.

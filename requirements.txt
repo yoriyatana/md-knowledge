@@ -1,2 +1,2 @@
 markitdown==0.1.7
-openai>=1.68.0
+google-genai>=1.30.0

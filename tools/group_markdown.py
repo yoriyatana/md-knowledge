@@ -1,10 +1,9 @@
 #!/usr/bin/env python3
-"""Propose semantic Markdown groups and build reviewed topic documents with OpenAI."""
+"""Propose semantic Markdown groups and build reviewed topic documents with Gemini."""
 
 from __future__ import annotations
 
 import argparse
-import base64
 import hashlib
 import json
 import math
@@ -14,12 +13,13 @@ import shutil
 from pathlib import Path
 from typing import Any
 
-from openai import OpenAI
+from google import genai
+from google.genai import types
 
 
 IMAGE_EXTENSIONS = {".png", ".jpg", ".jpeg", ".gif", ".webp"}
-DEFAULT_EMBEDDING_MODEL = "text-embedding-3-small"
-DEFAULT_WRITING_MODEL = "gpt-4.1-mini"
+DEFAULT_EMBEDDING_MODEL = "gemini-embedding-001"
+DEFAULT_WRITING_MODEL = "gemini-2.5-flash"
 
 
 def markdown_files(root: Path, excluded: set[str]) -> list[Path]:
@@ -53,7 +53,7 @@ def load_cache(path: Path) -> dict[str, list[float]]:
 
 
 def propose(args: argparse.Namespace) -> None:
-    client = OpenAI()
+    client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
     files = markdown_files(args.input, set(args.exclude_dir))
     cache = load_cache(args.cache)
     texts: list[str] = []
@@ -67,12 +67,13 @@ def propose(args: argparse.Namespace) -> None:
 
     for start in range(0, len(pending), args.batch_size):
         batch = pending[start : start + args.batch_size]
-        response = client.embeddings.create(
+        response = client.models.embed_content(
             model=args.embedding_model,
-            input=[embedding_text(path) for path, _ in batch],
+            contents=[embedding_text(path) for path, _ in batch],
+            config=types.EmbedContentConfig(task_type="SEMANTIC_SIMILARITY"),
         )
-        for item, (_, key) in zip(response.data, batch):
-            cache[key] = item.embedding
+        for item, (_, key) in zip(response.embeddings or [], batch):
+            cache[key] = list(item.values or [])
     args.cache.parent.mkdir(parents=True, exist_ok=True)
     args.cache.write_text(json.dumps(cache), encoding="utf-8")
 
@@ -111,21 +112,20 @@ def propose(args: argparse.Namespace) -> None:
     print(f"Created {len(output['groups'])} proposed group(s); review {args.proposals}.")
 
 
-def image_inputs(source: Path) -> list[dict[str, Any]]:
-    inputs: list[dict[str, Any]] = []
+def image_inputs(source: Path) -> list[types.Part]:
+    inputs: list[types.Part] = []
     pattern = re.compile(r"!\[[^\]]*\]\(([^)]+)\)")
     for target in pattern.findall(source.read_text(encoding="utf-8", errors="replace")):
         image = (source.parent / target.split()[0].strip("<>")).resolve()
         if image.suffix.lower() not in IMAGE_EXTENSIONS or not image.is_file():
             continue
-        encoded = base64.b64encode(image.read_bytes()).decode("ascii")
         mime = "image/jpeg" if image.suffix.lower() in {".jpg", ".jpeg"} else f"image/{image.suffix.lower().lstrip('.')}"
-        inputs.append({"type": "input_image", "image_url": f"data:{mime};base64,{encoded}"})
+        inputs.append(types.Part.from_bytes(data=image.read_bytes(), mime_type=mime))
     return inputs
 
 
 def build(args: argparse.Namespace) -> None:
-    client = OpenAI()
+    client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
     proposals = json.loads(args.proposals.read_text(encoding="utf-8"))
     approved = [group for group in proposals["groups"] if group.get("approved") is True]
     if not approved:
@@ -145,18 +145,16 @@ def build(args: argparse.Namespace) -> None:
             "describe useful text or diagrams from it under an 'Image notes' subsection "
             "and keep the image embedded after the description."
         )
-        content: list[dict[str, Any]] = [
-            {"type": "input_text", "text": prompt + "\n\n" + source_text}
-        ]
+        content: list[types.Part] = [types.Part.from_text(text=prompt + "\n\n" + source_text)]
         for path in source_paths:
             content.extend(image_inputs(path))
-        response = client.responses.create(
+        response = client.models.generate_content(
             model=args.writing_model,
-            input=[{"role": "user", "content": content}],
+            contents=types.Content(role="user", parts=content),
         )
         destination = args.output / f"{group['id']}.md"
         destination.parent.mkdir(parents=True, exist_ok=True)
-        document = response.output_text.strip()
+        document = (response.text or "").strip()
         image_lines: list[str] = []
         image_dir = args.output / "assets" / group["id"]
         for source in source_paths:
@@ -200,8 +198,8 @@ def main() -> int:
     build_parser.set_defaults(function=build)
 
     args = parser.parse_args()
-    if not os.environ.get("OPENAI_API_KEY"):
-        parser.error("OPENAI_API_KEY is required; do not store it in the repository.")
+    if not os.environ.get("GEMINI_API_KEY"):
+        parser.error("GEMINI_API_KEY is required; do not store it in the repository.")
     args.function(args)
     return 0
 
