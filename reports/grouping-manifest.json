@@ -1,15 +1,14 @@
 {
-  "version": 1,
-  "source_root": "formatted",
-  "output_root": "grouped",
+  "version": 2,
+  "description": "Grouping manifest organized by Level 1 (Domain) -> Level 3 (Feature) -> Level 2 (Doc Type)",
   "groups": [
     {
-      "id": "ospf-pe-ce-deep-dive",
-      "path": "concepts/routing/ospf-pe-ce-deep-dive.md",
-      "type": "consolidate",
-      "topic": "OSPF PE-CE Deep Dive",
-      "kind": "Concepts",
-      "platform": "Juniper/Junos",
+      "id": "routing-ospf-concepts",
+      "destination": "routing/ospf/concepts.md",
+      "level1_domain": "routing",
+      "level3_feature": "ospf",
+      "level2_doctype": "concepts",
+      "topic": "OSPF PE-CE Deep Dive and Fundamentals",
       "sources": [
         "Learning_Notes/OSPF SUMMARY.md",
         "Learning_Notes/ospf as routing protocol for CE-PE.md",
@@ -17,28 +16,33 @@
         "Learning_Notes/Untitled Note_6.md",
         "Learning_Notes/Untitled Note_7.md",
         "Learning_Notes/OSPF Back Door Links_ A Case Study.md"
-      ]
+      ],
+      "deduplicate": true,
+      "approved": true,
+      "action": "consolidate"
     },
     {
-      "id": "bfd-theory",
-      "path": "concepts/routing/bfd-theory.md",
-      "type": "consolidate",
-      "topic": "BFD Theory",
-      "kind": "Concepts",
-      "platform": "Juniper/Junos",
+      "id": "routing-bfd-concepts",
+      "destination": "routing/bfd/concepts.md",
+      "level1_domain": "routing",
+      "level3_feature": "bfd",
+      "level2_doctype": "concepts",
+      "topic": "BFD Theory and Scaling",
       "sources": [
         "Learning_Notes/Bidirectional Forwarding Detection (BFD).md",
         "Recommends/BFD scales.md",
         "Case_notes/pr1523537 nay chu yeu giai thich ve behaviour cua bfd session id.md"
-      ]
+      ],
+      "approved": true,
+      "action": "consolidate"
     },
     {
-      "id": "bfd-troubleshooting",
-      "path": "troubleshooting/bfd-troubleshooting.md",
-      "type": "consolidate",
-      "topic": "BFD Troubleshooting",
-      "kind": "Troubleshooting",
-      "platform": "Juniper/Junos",
+      "id": "routing-bfd-troubleshooting",
+      "destination": "routing/bfd/troubleshooting-guide.md",
+      "level1_domain": "routing",
+      "level3_feature": "bfd",
+      "level2_doctype": "troubleshooting-guide",
+      "topic": "BFD Troubleshooting, Anchorship, and PFE Commands",
       "sources": [
         "TS_notes/BFD anchorship PFE.md",
         "TS_notes/command list to collect the bfd data from the respective fpc.md",
@@ -47,52 +51,44 @@
         "TS_notes/BFD.md",
         "TS_notes/BFD ISSUE VIETTEL KV3_BRAS28.md",
         "TS_notes/_M_MX_T_ Troubleshooting Checklist - BFD.md"
-      ]
+      ],
+      "approved": true,
+      "action": "consolidate"
     },
     {
-      "id": "bras-overview",
-      "path": "concepts/subscriber-management/bras-overview.md",
-      "type": "consolidate",
-      "topic": "BRAS Overview",
-      "kind": "Concepts",
-      "platform": "Juniper/Junos",
+      "id": "routing-bgp-case-study-rr",
+      "destination": "routing/bgp/case-study.md",
+      "level1_domain": "routing",
+      "level3_feature": "bgp",
+      "level2_doctype": "case-study",
+      "topic": "BGP Route Reflector Redundancy and Optimization Case Study",
+      "sources": [
+        "TS_notes/Tối ưu BRAS RR Juniper Viettel.md"
+      ],
+      "approved": true,
+      "action": "consolidate"
+    },
+    {
+      "id": "bras-subscriber-concepts",
+      "destination": "bras/subscriber-management/concepts.md",
+      "level1_domain": "bras",
+      "level3_feature": "subscriber-management",
+      "level2_doctype": "concepts",
+      "topic": "BRAS Overview and Session Limits",
       "sources": [
         "TS_notes/BRAS.md",
         "Recommends/Giới hạn số lượng phiên của một khách hàng trên BRAS Juniper (session-limit-per-username).md"
-      ]
+      ],
+      "approved": true,
+      "action": "consolidate"
     },
     {
-      "id": "address-assignment",
-      "path": "concepts/subscriber-management/address-assignment.md",
-      "type": "consolidate",
-      "topic": "Address Assignment and IP Pools",
-      "kind": "Concepts",
-      "platform": "Juniper/Junos",
-      "sources": [
-        "TS_notes/BRAS check address-assignment.md",
-        "Case_notes/Các thuật ngữ sau được sử dụng để giải thích cách cấp phát địa chỉ IP (address-assignment).md"
-      ]
-    },
-    {
-      "id": "ipv6-dual-stack",
-      "path": "concepts/subscriber-management/ipv6-dual-stack.md",
-      "type": "consolidate",
-      "topic": "Subscriber IPv6 and Dual Stack",
-      "kind": "Concepts",
-      "platform": "Juniper/Junos",
-      "sources": [
-        "TS_notes/Attribute DNS IPv6 từ Radius cho Bras Juniper.md",
-        "TS_notes/Example - Understanding Dual-Stack PPPoE Subscriber.md",
-        "TS_notes/SR-2021-1215-1608 - Hỗ trợ thử nghiệm IPv6 tĩnh cho KH CĐBR.md"
-      ]
-    },
-    {
-      "id": "bras-pppoe-troubleshooting",
-      "path": "troubleshooting/bras-pppoe-troubleshooting.md",
-      "type": "consolidate",
-      "topic": "BRAS and PPPoE Troubleshooting",
-      "kind": "Troubleshooting",
-      "platform": "Juniper/Junos",
+      "id": "bras-subscriber-troubleshooting",
+      "destination": "bras/subscriber-management/troubleshooting-guide.md",
+      "level1_domain": "bras",
+      "level3_feature": "subscriber-management",
+      "level2_doctype": "troubleshooting-guide",
+      "topic": "BRAS PPPoE Subscriber Troubleshooting",
       "sources": [
         "TS_notes/BRAS - TROUBLESHOOTING PPPoE in TOMCAT.md",
         "TS_notes/BRAS - command ouputs.md",
@@ -100,107 +96,113 @@
         "TS_notes/KA LCP PPP command checks.md",
         "TS_notes/How to disable PFE inline PPP keepalive messages.md",
         "TS_notes/The subscribers cannot online on AE interface.md"
-      ]
+      ],
+      "approved": true,
+      "action": "consolidate"
     },
     {
-      "id": "bgp-rr-case-study",
-      "path": "case-notes/routing/bgp-route-reflector/toi-uu-bras-rr-juniper-viettel.md",
-      "type": "consolidate",
-      "topic": "BGP Route Reflector Case Study",
-      "kind": "Case study",
-      "platform": "Juniper/Junos, BRAS",
+      "id": "bras-ip-assignment-concepts",
+      "destination": "bras/ip-address-assignment/concepts.md",
+      "level1_domain": "bras",
+      "level3_feature": "ip-address-assignment",
+      "level2_doctype": "concepts",
+      "topic": "BRAS Address Assignment Pools",
       "sources": [
-        "TS_notes/Tối ưu BRAS RR Juniper Viettel.md"
-      ]
+        "Case_notes/Các thuật ngữ sau được sử dụng để giải thích cách cấp phát địa chỉ IP (address-assignment).md",
+        "TS_notes/BRAS check address-assignment.md"
+      ],
+      "approved": true,
+      "action": "consolidate"
     },
     {
-      "id": "interfaces-diagnostics",
-      "path": "troubleshooting/interfaces-optics/interface-diagnostics.md",
-      "type": "consolidate",
-      "topic": "Interface Diagnostics",
-      "kind": "Troubleshooting",
-      "platform": "Juniper/Junos",
+      "id": "bras-ipv6-concepts",
+      "destination": "bras/ipv6-dual-stack/concepts.md",
+      "level1_domain": "bras",
+      "level3_feature": "ipv6-dual-stack",
+      "level2_doctype": "concepts",
+      "topic": "BRAS Dual-Stack PPPoE & RADIUS Attributes",
       "sources": [
-        "TS_notes/interfaces diagnostics optics.md",
-        "TS_notes/10GbE LAN-PHY_40GbE_100GbE LFS (Link fault signalling).md",
-        "TS_notes/set link-speed 100G cho interface ae với et-8 interface.md"
-      ]
+        "TS_notes/Attribute DNS IPv6 từ Radius cho Bras Juniper.md",
+        "TS_notes/Example - Understanding Dual-Stack PPPoE Subscriber.md",
+        "TS_notes/SR-2021-1215-1608 - Hỗ trợ thử nghiệm IPv6 tĩnh cho KH CĐBR.md"
+      ],
+      "approved": true,
+      "action": "consolidate"
     },
     {
-      "id": "lacp-troubleshooting",
-      "path": "troubleshooting/interfaces-optics/lacp-troubleshooting.md",
-      "type": "consolidate",
-      "topic": "LACP Troubleshooting",
-      "kind": "Troubleshooting",
-      "platform": "Juniper/Junos",
+      "id": "switching-lacp-troubleshooting",
+      "destination": "switching/lacp/troubleshooting-guide.md",
+      "level1_domain": "switching",
+      "level3_feature": "lacp",
+      "level2_doctype": "troubleshooting-guide",
+      "topic": "LACP Troubleshooting and Diagnostics",
       "sources": [
         "TS_notes/LACP check-list commands.md",
         "TS_notes/MPC11E - LACP không up_join.md",
         "TS_notes/lacp flap khi dung VC mix-mode.md"
-      ]
+      ],
+      "approved": true,
+      "action": "consolidate"
     },
     {
-      "id": "optics-cfp-xfp",
-      "path": "troubleshooting/interfaces-optics/optics-cfp-xfp.md",
-      "type": "consolidate",
-      "topic": "Optics CFP and XFP",
-      "kind": "Troubleshooting",
-      "platform": "Juniper/Junos",
+      "id": "switching-optics-troubleshooting",
+      "destination": "switching/optics-physical/troubleshooting-guide.md",
+      "level1_domain": "switching",
+      "level3_feature": "optics-physical",
+      "level2_doctype": "troubleshooting-guide",
+      "topic": "Optics, CFP, XFP & Physical Layer Diagnostics",
       "sources": [
+        "TS_notes/interfaces diagnostics optics.md",
+        "TS_notes/10GbE LAN-PHY_40GbE_100GbE LFS (Link fault signalling).md",
+        "TS_notes/set link-speed 100G cho interface ae với et-8 interface.md",
         "TS_notes/CFP.md",
         "TS_notes/Xử lý CFP, XFP bị lõi.md",
-        "TS_notes/SNMP interface jnxDom (laser) MIB OID.md"
-      ]
+        "TS_notes/SNMP interface jnxDom (laser) MIB OID.md",
+        "TS_notes/BUG Hold-time down không hoạt động được nếu cấu hình nhỏ hơn 1s trên interface chạy WANPHY.md"
+      ],
+      "approved": true,
+      "action": "consolidate"
     },
     {
-      "id": "link-flap-physical",
-      "path": "troubleshooting/interfaces-optics/link-flap-physical.md",
-      "type": "consolidate",
-      "topic": "Link Flap and Physical Layer",
-      "kind": "Troubleshooting",
-      "platform": "Juniper/Junos",
-      "sources": [
-        "TS_notes/BUG Hold-time down không hoạt động được nếu cấu hình nhỏ hơn 1s trên interface chạy WANPHY.md",
-        "TS_notes/Delay thời gian up time của CE interfaces.md",
-        "TS_notes/Lệnh off laser mode shell _ dùng flap link.md"
-      ]
-    },
-    {
-      "id": "mpls-ldp-labels",
-      "path": "concepts/mpls-vpn/mpls-ldp-labels.md",
-      "type": "consolidate",
-      "topic": "MPLS, LDP and Labels",
-      "kind": "Concepts",
-      "platform": "Juniper/Junos",
+      "id": "mpls-ldp-concepts",
+      "destination": "mpls-vpn/ldp/concepts.md",
+      "level1_domain": "mpls-vpn",
+      "level3_feature": "ldp",
+      "level2_doctype": "concepts",
+      "topic": "MPLS LDP Fundamentals & Label Behavior",
       "sources": [
         "TS_notes/LDP.md",
         "TS_notes/Label usage.md",
         "Learning_Notes/No more doubt with LDP.md",
         "Learning_Notes/LDP-tunnelling and hidden routes in inet.3.md",
         "TS_notes/ldp-tunneling or BGP-LU (swap label 0 behavior change from 19.x.md"
-      ]
+      ],
+      "approved": true,
+      "action": "consolidate"
     },
     {
-      "id": "l2vpn-vpls",
-      "path": "concepts/mpls-vpn/l2vpn-vpls.md",
-      "type": "consolidate",
-      "topic": "L2VPN, VPLS and L2 Circuit",
-      "kind": "Concepts",
-      "platform": "Juniper/Junos",
+      "id": "mpls-l2vpn-concepts",
+      "destination": "mpls-vpn/l2vpn-vpls/concepts.md",
+      "level1_domain": "mpls-vpn",
+      "level3_feature": "l2vpn-vpls",
+      "level2_doctype": "concepts",
+      "topic": "L2VPN, VPLS, and CCC Configuration",
       "sources": [
         "TS_notes/L2circuit.md",
         "TS_notes/Configure connection CCC example.md",
         "Learning_Notes/EoMPLS VC Type.md",
         "TS_notes/Qui tắc về forwarding traffic với VPLS mesh-group.md"
-      ]
+      ],
+      "approved": true,
+      "action": "consolidate"
     },
     {
-      "id": "l3vpn",
-      "path": "concepts/mpls-vpn/l3vpn.md",
-      "type": "consolidate",
-      "topic": "L3VPN",
-      "kind": "Concepts",
-      "platform": "Juniper/Junos",
+      "id": "mpls-l3vpn-concepts",
+      "destination": "mpls-vpn/l3vpn/concepts.md",
+      "level1_domain": "mpls-vpn",
+      "level3_feature": "l3vpn",
+      "level2_doctype": "concepts",
+      "topic": "L3VPN Architecture, Interprovider & Label Allocation",
       "sources": [
         "Learning_Notes/Untitled Note_4.md",
         "Learning_Notes/Interprovider Layer 3 VPN option C.md",
@@ -208,91 +210,111 @@
         "Learning_Notes/l3vpn hub and spoke.md",
         "Learning_Notes/l3vpn hub and spoke_2.md",
         "Learning_Notes/Untitled Note_3.md"
-      ]
+      ],
+      "approved": true,
+      "action": "consolidate"
     },
     {
-      "id": "evpn-vxlan",
-      "path": "concepts/mpls-vpn/evpn-vxlan.md",
-      "type": "consolidate",
-      "topic": "EVPN and VXLAN",
-      "kind": "Concepts",
-      "platform": "Juniper/Junos",
+      "id": "mpls-evpn-concepts",
+      "destination": "mpls-vpn/evpn-vxlan/concepts.md",
+      "level1_domain": "mpls-vpn",
+      "level3_feature": "evpn-vxlan",
+      "level2_doctype": "concepts",
+      "topic": "EVPN-VXLAN Concepts and Command Checks",
       "sources": [
         "TS_notes/eVPN.md",
         "TS_notes/evpn command check.md",
         "TS_notes/commands need to collect to check EVPN-VXLAN (From This Week_ Data Center Deployment with EVPN_VXLAN).md"
-      ]
+      ],
+      "approved": true,
+      "action": "consolidate"
     },
     {
-      "id": "hardware-replacement",
-      "path": "maintenance/hardware-replacement.md",
-      "type": "consolidate",
-      "topic": "Hardware Replacement and Maintenance",
-      "kind": "Maintenance",
-      "platform": "Juniper/Junos",
+      "id": "hardware-mpc-maintenance",
+      "destination": "hardware-maintenance/mpc-linecard/install-maintenance-guide.md",
+      "level1_domain": "hardware-maintenance",
+      "level3_feature": "mpc-linecard",
+      "level2_doctype": "install-maintenance-guide",
+      "topic": "MPC Insertion, Removal and Power Notes",
       "sources": [
-        "Best_Practise/MX2008.md",
+        "Best_Practise/MX2008.md"
+      ],
+      "approved": true,
+      "action": "consolidate"
+    },
+    {
+      "id": "hardware-re-scbe-maintenance",
+      "destination": "hardware-maintenance/re-scbe/install-maintenance-guide.md",
+      "level1_domain": "hardware-maintenance",
+      "level3_feature": "re-scbe",
+      "level2_doctype": "install-maintenance-guide",
+      "topic": "NG-RE & RE Replacement Procedures",
+      "sources": [
         "Best_Practise/Tháo_cắm NG-RE vào SCBE2_E3.md",
         "Procedures/Thực hiện thay thế (replacing) RE - phương án không có thiết bị lab.md"
-      ]
+      ],
+      "approved": true,
+      "action": "consolidate"
+    },
+    {
+      "id": "hardware-chassis-maintenance",
+      "destination": "hardware-maintenance/chassis-power/install-maintenance-guide.md",
+      "level1_domain": "hardware-maintenance",
+      "level3_feature": "chassis-power",
+      "level2_doctype": "install-maintenance-guide",
+      "topic": "Chassis Power-Cycle and SFB Restart",
+      "sources": [
+        "TS_notes/support RE and Chassis power-cycle.md",
+        "TS_notes/Restart SFB 4 MX2K.md"
+      ],
+      "approved": true,
+      "action": "consolidate"
     },
     {
       "id": "case-notes-index",
-      "path": "case-notes/index.md",
-      "type": "index-only",
-      "topic": "Case Notes",
-      "kind": "Index",
-      "platform": "Mixed",
-      "source_prefix": "Case_notes/"
+      "destination": "case-notes/index.md",
+      "level1_domain": "case-notes",
+      "topic": "Case Notes Reference Index",
+      "source_directories": [
+        "Case_notes/"
+      ],
+      "approved": true,
+      "action": "index-only"
     },
     {
       "id": "vendor-kb-index",
-      "path": "vendor-kb/index.md",
-      "type": "index-only",
-      "topic": "Vendor PR and KB",
-      "kind": "Index",
-      "platform": "Juniper",
-      "source_prefix": "PR/"
+      "destination": "vendor-kb/index.md",
+      "level1_domain": "vendor-kb",
+      "topic": "Vendor PR & KB Reference Index",
+      "source_directories": [
+        "PR/"
+      ],
+      "approved": true,
+      "action": "index-only"
     },
     {
       "id": "mail-templates-index",
-      "path": "mail-templates/index.md",
-      "type": "index-only",
-      "topic": "Mail Templates",
-      "kind": "Index",
-      "platform": "Mixed",
-      "source_prefix": "Mail_template/"
+      "destination": "mail-templates/index.md",
+      "level1_domain": "mail-templates",
+      "topic": "Mail Templates Index",
+      "source_directories": [
+        "Mail_template/"
+      ],
+      "approved": true,
+      "action": "index-only"
     },
     {
-      "id": "lab-index",
-      "path": "lab/index.md",
-      "type": "index-only",
-      "topic": "Lab Scenarios",
-      "kind": "Index",
-      "platform": "Mixed",
-      "source_prefix": "LAB_SVT_GROUP/"
-    },
-    {
-      "id": "cli-index",
-      "path": "cli-cheatsheets/index.md",
-      "type": "index-only",
-      "topic": "CLI Cheatsheets",
-      "kind": "Index",
-      "platform": "Mixed",
-      "sources": [
-        "Outlook/Bash command cli on MacOS.md",
-        "Learning_Notes/Check ddos-protection param on QFX5K.md",
-        "Learning_Notes/Check running lab on eve.md",
-        "PR/Cisco template pppoe DHCPv6 NA (PPPoE IPv6).md",
-        "Learning_Notes/Clear OSPF database.md",
-        "TS_notes/Class of Services - CoS shell cmd on MPC7E (EA chip).md",
-        "TS_notes/FPC.md",
-        "PR/KB33034__MX_ Configuration Example - Matching IP traffic with a firewall filter for family CCC.md",
-        "PR/MAC move.md",
-        "PR/TRIO Card_ packet capture with pfe commands.md",
-        "Procedures/config template Cisco PPPoE IPv4 and PPPoE IPv6 client.md",
-        "PR/show port mapping pfe.md"
-      ]
+      "id": "lab-notes-index",
+      "destination": "lab-notes/index.md",
+      "level1_domain": "lab-notes",
+      "topic": "Lab Scenarios and Environment Index",
+      "source_directories": [
+        "LAB_SVT_GROUP/"
+      ],
+      "approved": true,
+      "action": "index-only"
     }
-  ]
+  ],
+  "source_root": "formatted",
+  "output_root": "grouped"
 }

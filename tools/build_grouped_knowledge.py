@@ -23,8 +23,22 @@ def load_manifest(path: Path) -> dict[str, Any]:
 def source_files(root: Path, group: dict[str, Any]) -> list[Path]:
     if "sources" in group:
         return [root / item for item in group["sources"]]
-    prefix = group["source_prefix"]
-    return sorted(root.glob(f"{prefix}*.md"))
+    if "source_prefix" in group:
+        return sorted(root.glob(f"{group['source_prefix']}*.md"))
+    directories = group.get("source_directories", [])
+    return sorted(
+        path
+        for directory in directories
+        for path in (root / directory).glob("*.md")
+    )
+
+
+def group_type(group: dict[str, Any]) -> str:
+    return group.get("type", group.get("action", ""))
+
+
+def group_path(group: dict[str, Any]) -> str:
+    return group.get("path", group.get("destination", ""))
 
 
 def validate(manifest: dict[str, Any], root: Path) -> list[str]:
@@ -73,7 +87,7 @@ def dedupe_blocks(text: str, seen: set[str]) -> str:
 
 
 def build_consolidate(group: dict[str, Any], root: Path, output_root: Path) -> list[str]:
-    destination = output_root / group["path"]
+    destination = output_root / group_path(group)
     destination.parent.mkdir(parents=True, exist_ok=True)
     seen: set[str] = set()
     sections = [f"# {group['topic']}\n\n> Generated deterministically from the approved grouping manifest.\n"]
@@ -87,7 +101,7 @@ def build_consolidate(group: dict[str, Any], root: Path, output_root: Path) -> l
 
 
 def build_index(group: dict[str, Any], root: Path, output_root: Path) -> list[str]:
-    destination = output_root / group["path"]
+    destination = output_root / group_path(group)
     destination.parent.mkdir(parents=True, exist_ok=True)
     sources = source_files(root, group)
     lines = [
@@ -97,9 +111,11 @@ def build_index(group: dict[str, Any], root: Path, output_root: Path) -> list[st
         "|---|---|---|---|---|",
     ]
     related = ""
+    kind = group.get("kind", group.get("level2_doctype", "Index"))
+    platform = group.get("platform", "Mixed")
     for source in sources:
         relative = source.relative_to(root).as_posix()
-        lines.append(f"| {source.stem} | {group['kind']} | {group['platform']} | `{relative}` | {related} |")
+        lines.append(f"| {source.stem} | {kind} | {platform} | `{relative}` | {related} |")
     destination.write_text("\n".join(lines) + "\n", encoding="utf-8")
     return [source.as_posix() for source in sources]
 
@@ -107,7 +123,11 @@ def build_index(group: dict[str, Any], root: Path, output_root: Path) -> list[st
 def build_index_root(manifest: dict[str, Any], output_root: Path) -> None:
     lines = ["# Grouped Knowledge", "", "Deterministic output generated from `reports/grouping-manifest.json`.", ""]
     for group in manifest["groups"]:
-        lines.append(f"- [{group['topic']}]({group['path']}) — {group['kind']} — {group['platform']}")
+        path = group_path(group)
+        lines.append(
+            f"- [{group['topic']}]({path}) — {group.get('kind', group.get('level2_doctype', ''))}"
+            f" — {group.get('platform', 'Mixed')}"
+        )
     (output_root / "index.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
@@ -127,7 +147,7 @@ def main() -> int:
     if args.command == "plan":
         for group in manifest["groups"]:
             count = len(source_files(source_root, group))
-            print(f"{group['id']}: {group['type']} ({count} source(s)) -> {group['path']}")
+            print(f"{group['id']}: {group_type(group)} ({count} source(s)) -> {group_path(group)}")
         return 0
     if output_root.exists():
         shutil.rmtree(output_root)
@@ -136,10 +156,17 @@ def main() -> int:
     for group in manifest["groups"]:
         sources = (
             build_consolidate(group, source_root, output_root)
-            if group["type"] == "consolidate"
+            if group_type(group) == "consolidate"
             else build_index(group, source_root, output_root)
         )
-        mapping[group["id"]] = {"output": group["path"], "sources": sources, "type": group["type"]}
+        mapping[group["id"]] = {
+            "output": group_path(group),
+            "sources": sources,
+            "type": group_type(group),
+            "domain": group.get("level1_domain"),
+            "feature": group.get("level3_feature"),
+            "doctype": group.get("level2_doctype"),
+        }
     build_index_root(manifest, output_root)
     (output_root / "source-map.json").write_text(json.dumps(mapping, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(f"Built {len(mapping)} grouped entries in {output_root}.")

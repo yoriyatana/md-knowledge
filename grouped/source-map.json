@@ -1,6 +1,6 @@
 {
-  "ospf-pe-ce-deep-dive": {
-    "output": "concepts/routing/ospf-pe-ce-deep-dive.md",
+  "routing-ospf-concepts": {
+    "output": "routing/ospf/concepts.md",
     "sources": [
       "formatted/Learning_Notes/OSPF SUMMARY.md",
       "formatted/Learning_Notes/ospf as routing protocol for CE-PE.md",
@@ -9,19 +9,25 @@
       "formatted/Learning_Notes/Untitled Note_7.md",
       "formatted/Learning_Notes/OSPF Back Door Links_ A Case Study.md"
     ],
-    "type": "consolidate"
+    "type": "consolidate",
+    "domain": "routing",
+    "feature": "ospf",
+    "doctype": "concepts"
   },
-  "bfd-theory": {
-    "output": "concepts/routing/bfd-theory.md",
+  "routing-bfd-concepts": {
+    "output": "routing/bfd/concepts.md",
     "sources": [
       "formatted/Learning_Notes/Bidirectional Forwarding Detection (BFD).md",
       "formatted/Recommends/BFD scales.md",
       "formatted/Case_notes/pr1523537 nay chu yeu giai thich ve behaviour cua bfd session id.md"
     ],
-    "type": "consolidate"
+    "type": "consolidate",
+    "domain": "routing",
+    "feature": "bfd",
+    "doctype": "concepts"
   },
-  "bfd-troubleshooting": {
-    "output": "troubleshooting/bfd-troubleshooting.md",
+  "routing-bfd-troubleshooting": {
+    "output": "routing/bfd/troubleshooting-guide.md",
     "sources": [
       "formatted/TS_notes/BFD anchorship PFE.md",
       "formatted/TS_notes/command list to collect the bfd data from the respective fpc.md",
@@ -31,35 +37,34 @@
       "formatted/TS_notes/BFD ISSUE VIETTEL KV3_BRAS28.md",
       "formatted/TS_notes/_M_MX_T_ Troubleshooting Checklist - BFD.md"
     ],
-    "type": "consolidate"
+    "type": "consolidate",
+    "domain": "routing",
+    "feature": "bfd",
+    "doctype": "troubleshooting-guide"
   },
-  "bras-overview": {
-    "output": "concepts/subscriber-management/bras-overview.md",
+  "routing-bgp-case-study-rr": {
+    "output": "routing/bgp/case-study.md",
+    "sources": [
+      "formatted/TS_notes/Tối ưu BRAS RR Juniper Viettel.md"
+    ],
+    "type": "consolidate",
+    "domain": "routing",
+    "feature": "bgp",
+    "doctype": "case-study"
+  },
+  "bras-subscriber-concepts": {
+    "output": "bras/subscriber-management/concepts.md",
     "sources": [
       "formatted/TS_notes/BRAS.md",
       "formatted/Recommends/Giới hạn số lượng phiên của một khách hàng trên BRAS Juniper (session-limit-per-username).md"
     ],
-    "type": "consolidate"
+    "type": "consolidate",
+    "domain": "bras",
+    "feature": "subscriber-management",
+    "doctype": "concepts"
   },
-  "address-assignment": {
-    "output": "concepts/subscriber-management/address-assignment.md",
-    "sources": [
-      "formatted/TS_notes/BRAS check address-assignment.md",
-      "formatted/Case_notes/Các thuật ngữ sau được sử dụng để giải thích cách cấp phát địa chỉ IP (address-assignment).md"
-    ],
-    "type": "consolidate"
-  },
-  "ipv6-dual-stack": {
-    "output": "concepts/subscriber-management/ipv6-dual-stack.md",
-    "sources": [
-      "formatted/TS_notes/Attribute DNS IPv6 từ Radius cho Bras Juniper.md",
-      "formatted/TS_notes/Example - Understanding Dual-Stack PPPoE Subscriber.md",
-      "formatted/TS_notes/SR-2021-1215-1608 - Hỗ trợ thử nghiệm IPv6 tĩnh cho KH CĐBR.md"
-    ],
-    "type": "consolidate"
-  },
-  "bras-pppoe-troubleshooting": {
-    "output": "troubleshooting/bras-pppoe-troubleshooting.md",
+  "bras-subscriber-troubleshooting": {
+    "output": "bras/subscriber-management/troubleshooting-guide.md",
     "sources": [
       "formatted/TS_notes/BRAS - TROUBLESHOOTING PPPoE in TOMCAT.md",
       "formatted/TS_notes/BRAS - command ouputs.md",
@@ -68,53 +73,64 @@
       "formatted/TS_notes/How to disable PFE inline PPP keepalive messages.md",
       "formatted/TS_notes/The subscribers cannot online on AE interface.md"
     ],
-    "type": "consolidate"
+    "type": "consolidate",
+    "domain": "bras",
+    "feature": "subscriber-management",
+    "doctype": "troubleshooting-guide"
   },
-  "bgp-rr-case-study": {
-    "output": "case-notes/routing/bgp-route-reflector/toi-uu-bras-rr-juniper-viettel.md",
+  "bras-ip-assignment-concepts": {
+    "output": "bras/ip-address-assignment/concepts.md",
     "sources": [
-      "formatted/TS_notes/Tối ưu BRAS RR Juniper Viettel.md"
+      "formatted/Case_notes/Các thuật ngữ sau được sử dụng để giải thích cách cấp phát địa chỉ IP (address-assignment).md",
+      "formatted/TS_notes/BRAS check address-assignment.md"
     ],
-    "type": "consolidate"
+    "type": "consolidate",
+    "domain": "bras",
+    "feature": "ip-address-assignment",
+    "doctype": "concepts"
   },
-  "interfaces-diagnostics": {
-    "output": "troubleshooting/interfaces-optics/interface-diagnostics.md",
+  "bras-ipv6-concepts": {
+    "output": "bras/ipv6-dual-stack/concepts.md",
     "sources": [
-      "formatted/TS_notes/interfaces diagnostics optics.md",
-      "formatted/TS_notes/10GbE LAN-PHY_40GbE_100GbE LFS (Link fault signalling).md",
-      "formatted/TS_notes/set link-speed 100G cho interface ae với et-8 interface.md"
+      "formatted/TS_notes/Attribute DNS IPv6 từ Radius cho Bras Juniper.md",
+      "formatted/TS_notes/Example - Understanding Dual-Stack PPPoE Subscriber.md",
+      "formatted/TS_notes/SR-2021-1215-1608 - Hỗ trợ thử nghiệm IPv6 tĩnh cho KH CĐBR.md"
     ],
-    "type": "consolidate"
+    "type": "consolidate",
+    "domain": "bras",
+    "feature": "ipv6-dual-stack",
+    "doctype": "concepts"
   },
-  "lacp-troubleshooting": {
-    "output": "troubleshooting/interfaces-optics/lacp-troubleshooting.md",
+  "switching-lacp-troubleshooting": {
+    "output": "switching/lacp/troubleshooting-guide.md",
     "sources": [
       "formatted/TS_notes/LACP check-list commands.md",
       "formatted/TS_notes/MPC11E - LACP không up_join.md",
       "formatted/TS_notes/lacp flap khi dung VC mix-mode.md"
     ],
-    "type": "consolidate"
+    "type": "consolidate",
+    "domain": "switching",
+    "feature": "lacp",
+    "doctype": "troubleshooting-guide"
   },
-  "optics-cfp-xfp": {
-    "output": "troubleshooting/interfaces-optics/optics-cfp-xfp.md",
+  "switching-optics-troubleshooting": {
+    "output": "switching/optics-physical/troubleshooting-guide.md",
     "sources": [
+      "formatted/TS_notes/interfaces diagnostics optics.md",
+      "formatted/TS_notes/10GbE LAN-PHY_40GbE_100GbE LFS (Link fault signalling).md",
+      "formatted/TS_notes/set link-speed 100G cho interface ae với et-8 interface.md",
       "formatted/TS_notes/CFP.md",
       "formatted/TS_notes/Xử lý CFP, XFP bị lõi.md",
-      "formatted/TS_notes/SNMP interface jnxDom (laser) MIB OID.md"
+      "formatted/TS_notes/SNMP interface jnxDom (laser) MIB OID.md",
+      "formatted/TS_notes/BUG Hold-time down không hoạt động được nếu cấu hình nhỏ hơn 1s trên interface chạy WANPHY.md"
     ],
-    "type": "consolidate"
+    "type": "consolidate",
+    "domain": "switching",
+    "feature": "optics-physical",
+    "doctype": "troubleshooting-guide"
   },
-  "link-flap-physical": {
-    "output": "troubleshooting/interfaces-optics/link-flap-physical.md",
-    "sources": [
-      "formatted/TS_notes/BUG Hold-time down không hoạt động được nếu cấu hình nhỏ hơn 1s trên interface chạy WANPHY.md",
-      "formatted/TS_notes/Delay thời gian up time của CE interfaces.md",
-      "formatted/TS_notes/Lệnh off laser mode shell _ dùng flap link.md"
-    ],
-    "type": "consolidate"
-  },
-  "mpls-ldp-labels": {
-    "output": "concepts/mpls-vpn/mpls-ldp-labels.md",
+  "mpls-ldp-concepts": {
+    "output": "mpls-vpn/ldp/concepts.md",
     "sources": [
       "formatted/TS_notes/LDP.md",
       "formatted/TS_notes/Label usage.md",
@@ -122,20 +138,26 @@
       "formatted/Learning_Notes/LDP-tunnelling and hidden routes in inet.3.md",
       "formatted/TS_notes/ldp-tunneling or BGP-LU (swap label 0 behavior change from 19.x.md"
     ],
-    "type": "consolidate"
+    "type": "consolidate",
+    "domain": "mpls-vpn",
+    "feature": "ldp",
+    "doctype": "concepts"
   },
-  "l2vpn-vpls": {
-    "output": "concepts/mpls-vpn/l2vpn-vpls.md",
+  "mpls-l2vpn-concepts": {
+    "output": "mpls-vpn/l2vpn-vpls/concepts.md",
     "sources": [
       "formatted/TS_notes/L2circuit.md",
       "formatted/TS_notes/Configure connection CCC example.md",
       "formatted/Learning_Notes/EoMPLS VC Type.md",
       "formatted/TS_notes/Qui tắc về forwarding traffic với VPLS mesh-group.md"
     ],
-    "type": "consolidate"
+    "type": "consolidate",
+    "domain": "mpls-vpn",
+    "feature": "l2vpn-vpls",
+    "doctype": "concepts"
   },
-  "l3vpn": {
-    "output": "concepts/mpls-vpn/l3vpn.md",
+  "mpls-l3vpn-concepts": {
+    "output": "mpls-vpn/l3vpn/concepts.md",
     "sources": [
       "formatted/Learning_Notes/Untitled Note_4.md",
       "formatted/Learning_Notes/Interprovider Layer 3 VPN option C.md",
@@ -144,25 +166,54 @@
       "formatted/Learning_Notes/l3vpn hub and spoke_2.md",
       "formatted/Learning_Notes/Untitled Note_3.md"
     ],
-    "type": "consolidate"
+    "type": "consolidate",
+    "domain": "mpls-vpn",
+    "feature": "l3vpn",
+    "doctype": "concepts"
   },
-  "evpn-vxlan": {
-    "output": "concepts/mpls-vpn/evpn-vxlan.md",
+  "mpls-evpn-concepts": {
+    "output": "mpls-vpn/evpn-vxlan/concepts.md",
     "sources": [
       "formatted/TS_notes/eVPN.md",
       "formatted/TS_notes/evpn command check.md",
       "formatted/TS_notes/commands need to collect to check EVPN-VXLAN (From This Week_ Data Center Deployment with EVPN_VXLAN).md"
     ],
-    "type": "consolidate"
+    "type": "consolidate",
+    "domain": "mpls-vpn",
+    "feature": "evpn-vxlan",
+    "doctype": "concepts"
   },
-  "hardware-replacement": {
-    "output": "maintenance/hardware-replacement.md",
+  "hardware-mpc-maintenance": {
+    "output": "hardware-maintenance/mpc-linecard/install-maintenance-guide.md",
     "sources": [
-      "formatted/Best_Practise/MX2008.md",
+      "formatted/Best_Practise/MX2008.md"
+    ],
+    "type": "consolidate",
+    "domain": "hardware-maintenance",
+    "feature": "mpc-linecard",
+    "doctype": "install-maintenance-guide"
+  },
+  "hardware-re-scbe-maintenance": {
+    "output": "hardware-maintenance/re-scbe/install-maintenance-guide.md",
+    "sources": [
       "formatted/Best_Practise/Tháo_cắm NG-RE vào SCBE2_E3.md",
       "formatted/Procedures/Thực hiện thay thế (replacing) RE - phương án không có thiết bị lab.md"
     ],
-    "type": "consolidate"
+    "type": "consolidate",
+    "domain": "hardware-maintenance",
+    "feature": "re-scbe",
+    "doctype": "install-maintenance-guide"
+  },
+  "hardware-chassis-maintenance": {
+    "output": "hardware-maintenance/chassis-power/install-maintenance-guide.md",
+    "sources": [
+      "formatted/TS_notes/support RE and Chassis power-cycle.md",
+      "formatted/TS_notes/Restart SFB 4 MX2K.md"
+    ],
+    "type": "consolidate",
+    "domain": "hardware-maintenance",
+    "feature": "chassis-power",
+    "doctype": "install-maintenance-guide"
   },
   "case-notes-index": {
     "output": "case-notes/index.md",
@@ -196,7 +247,10 @@
       "formatted/Case_notes/thay doi ve cach hanh xu route,nh,scu,dcu,sensor,rpf check.md",
       "formatted/Case_notes/Điều kiện phát sinh BGP rsync.md"
     ],
-    "type": "index-only"
+    "type": "index-only",
+    "domain": "case-notes",
+    "feature": null,
+    "doctype": null
   },
   "vendor-kb-index": {
     "output": "vendor-kb/index.md",
@@ -219,7 +273,10 @@
       "formatted/PR/show port mapping pfe.md",
       "formatted/PR/using AE interfaces with SPC3.md"
     ],
-    "type": "index-only"
+    "type": "index-only",
+    "domain": "vendor-kb",
+    "feature": null,
+    "doctype": null
   },
   "mail-templates-index": {
     "output": "mail-templates/index.md",
@@ -232,34 +289,22 @@
       "formatted/Mail_template/lỗi không ping được mpls ldp.md",
       "formatted/Mail_template/renew service.md"
     ],
-    "type": "index-only"
+    "type": "index-only",
+    "domain": "mail-templates",
+    "feature": null,
+    "doctype": null
   },
-  "lab-index": {
-    "output": "lab/index.md",
+  "lab-notes-index": {
+    "output": "lab-notes/index.md",
     "sources": [
       "formatted/LAB_SVT_GROUP/LAB BRAS_service_lab_01.md",
       "formatted/LAB_SVT_GROUP/LAB advanced_l3vpn_lab_01.md",
       "formatted/LAB_SVT_GROUP/LAB intermediate_l3vpn_lab_01.md",
       "formatted/LAB_SVT_GROUP/Lab advanced_igp_lab_01.md"
     ],
-    "type": "index-only"
-  },
-  "cli-index": {
-    "output": "cli-cheatsheets/index.md",
-    "sources": [
-      "formatted/Outlook/Bash command cli on MacOS.md",
-      "formatted/Learning_Notes/Check ddos-protection param on QFX5K.md",
-      "formatted/Learning_Notes/Check running lab on eve.md",
-      "formatted/PR/Cisco template pppoe DHCPv6 NA (PPPoE IPv6).md",
-      "formatted/Learning_Notes/Clear OSPF database.md",
-      "formatted/TS_notes/Class of Services - CoS shell cmd on MPC7E (EA chip).md",
-      "formatted/TS_notes/FPC.md",
-      "formatted/PR/KB33034__MX_ Configuration Example - Matching IP traffic with a firewall filter for family CCC.md",
-      "formatted/PR/MAC move.md",
-      "formatted/PR/TRIO Card_ packet capture with pfe commands.md",
-      "formatted/Procedures/config template Cisco PPPoE IPv4 and PPPoE IPv6 client.md",
-      "formatted/PR/show port mapping pfe.md"
-    ],
-    "type": "index-only"
+    "type": "index-only",
+    "domain": "lab-notes",
+    "feature": null,
+    "doctype": null
   }
 }

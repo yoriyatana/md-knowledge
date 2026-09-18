@@ -1,4 +1,4 @@
-# Mail Templates
+# Mail Templates Index
 
 | Topic | Type | Platform/Vendor | Source | Related document |
 |---|---|---|---|---|

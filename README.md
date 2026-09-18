@@ -115,7 +115,9 @@ công nội dung/OCR trước rồi bỏ `grouped/` khỏi `.gitignore`.
 ## Xây dựng kho kiến thức grouped theo manifest
 
 Manifest deterministic chính thức nằm tại `reports/grouping-manifest.json`. Nó là
-nguồn cấu hình duy nhất cho các nhóm micro-topic, thứ tự nguồn và các index.
+nguồn cấu hình duy nhất cho các nhóm theo domain, feature và loại tài liệu, thứ tự
+nguồn và các index. Manifest dùng `destination`/`action`; các source là đường dẫn
+tương đối bên trong `formatted/`. Nhóm index dùng `source_directories`.
 
 ```bash
 .venv/bin/python tools/build_grouped_knowledge.py plan
@@ -123,6 +125,7 @@ nguồn cấu hình duy nhất cho các nhóm micro-topic, thứ tự nguồn v�
 ```
 
 `plan` kiểm tra tất cả nguồn có tồn tại và in kế hoạch. `build` tạo lại toàn bộ
-`grouped/`, loại bỏ các block nội dung trùng nhau, sao chép ảnh với link tương đối
-đúng, tạo `grouped/index.md` và `grouped/source-map.json`. Thư mục `grouped/` là
-local-only cho đến khi nội dung được review.
+`grouped/`, loại bỏ các block nội dung trùng nhau, sao chép ảnh và attachment được
+tham chiếu với link tương đối đúng, tạo `grouped/index.md` và
+`grouped/source-map.json`. Thư mục `grouped/` là local-only cho đến khi nội dung
+được review.
