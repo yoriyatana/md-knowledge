@@ -121,13 +121,43 @@ def build_index(group: dict[str, Any], root: Path, output_root: Path) -> list[st
 
 
 def build_index_root(manifest: dict[str, Any], output_root: Path) -> None:
-    lines = ["# Grouped Knowledge", "", "Deterministic output generated from `reports/grouping-manifest.json`.", ""]
-    for group in manifest["groups"]:
-        path = group_path(group)
-        lines.append(
-            f"- [{group['topic']}]({path}) — {group.get('kind', group.get('level2_doctype', ''))}"
-            f" — {group.get('platform', 'Mixed')}"
-        )
+    entries = {
+        group_path(group): group
+        for group in manifest["groups"]
+    }
+    tree: dict[str, dict[str, Any]] = {}
+    for path in entries:
+        node = tree
+        parts = Path(path).parts
+        for part in parts[:-1]:
+            node = node.setdefault(part, {})
+        node.setdefault(parts[-1], None)
+
+    lines = [
+        "# Grouped Knowledge",
+        "",
+        "Deterministic output generated from `reports/grouping-manifest.json`.",
+        "",
+    ]
+
+    def render(node: dict[str, Any], prefix: str = "") -> None:
+        for name in sorted(node):
+            child = node[name]
+            if child is None:
+                path = name if not prefix else f"{prefix}/{name}"
+                group = entries[path]
+                kind = group.get("kind", group.get("level2_doctype", ""))
+                platform = group.get("platform", "Mixed")
+                lines.append(
+                    f"{'  ' * (len(Path(path).parts) - 1)}- "
+                    f"[{group['topic']}]({path}) — {kind} — {platform}"
+                )
+            else:
+                path = name if not prefix else f"{prefix}/{name}"
+                lines.append(f"{'  ' * len(Path(path).parts[:-1])}- **{name}/**")
+                render(child, path)
+
+    render(tree)
     (output_root / "index.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
