@@ -9,6 +9,7 @@ Project lưu trữ file Markdown raw và bản đã chuẩn hóa.
   và các asset (ảnh, file đính kèm) tương ứng với `raw/`.
 - `reports/`: báo cáo JSON của mỗi lần chạy.
 - `tools/reformat_markdown.py`: formatter batch, không tự sửa câu chữ.
+- `tools/group_markdown.py`: đề xuất nhóm theo embeddings và tạo tài liệu tổng hợp sau duyệt.
 
 ## Cài đặt
 
@@ -64,3 +65,27 @@ khác sang Markdown trước khi đưa vào `raw/`:
 .venv/bin/python -m pip install -r requirements.txt
 .venv/bin/markitdown input.docx > raw/input.md
 ```
+
+## Gom nhóm theo chủ đề bằng OpenAI
+
+Đây là quy trình hai bước. API key chỉ đặt trong biến môi trường, không commit vào Git:
+
+```bash
+export OPENAI_API_KEY="..."
+.venv/bin/python -m pip install -r requirements.txt
+.venv/bin/python tools/group_markdown.py propose --input formatted
+```
+
+Lệnh trên tạo `reports/group-proposals.json` và cache embeddings trong `.cache/`.
+Mở JSON, kiểm tra từng nhóm rồi đổi `approved` thành `true` cho nhóm muốn gom.
+Sau đó chạy:
+
+```bash
+.venv/bin/python tools/group_markdown.py build
+```
+
+Kết quả được tạo trong `grouped/` (local-only mặc định vì nội dung được viết lại
+bởi API). Hệ thống giữ ngôn ngữ và thuật ngữ nguồn, gửi ảnh liên quan để OCR/mô
+tả, yêu cầu tài liệu tổng hợp giữ phần Sources, và copy ảnh nguồn vào
+`grouped/assets/<group-id>/`. Nếu muốn lưu kết quả lên GitHub, hãy kiểm tra thủ
+công nội dung/OCR trước rồi bỏ `grouped/` khỏi `.gitignore`.

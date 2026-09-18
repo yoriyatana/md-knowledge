@@ -3,7 +3,9 @@ node_modules/
 .DS_Store
 __pycache__/
 *.py[cod]
+.cache/
 
 # Local-only material that may contain credentials or other secrets.
 raw/Login_Credentials/
 formatted/Login_Credentials/
+grouped/
