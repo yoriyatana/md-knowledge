@@ -15,11 +15,10 @@ from typing import Any
 
 IMAGE_LINK = re.compile(r"(!\[[^\]]*\])\(([^)]+)\)")
 FIXED_DOCTYPES = {
-    "index",
     "concepts",
     "configuration-guide",
     "troubleshooting-guide",
-    "install-maintenance-guide",
+    "maintenance-guide",
     "case-study",
 }
 
@@ -87,6 +86,9 @@ def validate(manifest: dict[str, Any], root: Path) -> list[str]:
         for source in source_files(root, group):
             if not source.is_file():
                 errors.append(f"missing source: {source}")
+    for source in manifest.get("index_sources", []):
+        if not (root / source).is_file():
+            errors.append(f"missing index source: {root / source}")
     return errors
 
 
@@ -194,6 +196,18 @@ def build_index_root(manifest: dict[str, Any], output_root: Path) -> None:
                 render(child, path)
 
     render(tree)
+    index_sources = manifest.get("index_sources", [])
+    if index_sources:
+        lines.extend(
+            [
+                "",
+                "## Source Index",
+                "",
+                "| Source |",
+                "|---|",
+            ]
+        )
+        lines.extend(f"| `{source}` |" for source in sorted(index_sources))
     (output_root / "index.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 

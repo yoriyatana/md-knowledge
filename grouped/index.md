@@ -6,18 +6,11 @@ Deterministic output generated from `reports/grouping-manifest.json`.
   - **configuration-guide/**
     - **pppoe/**
       - [Cisco PPPoE Dual-Stack DHCPv6-NA Server and Client](cisco/configuration-guide/pppoe/dual-stacked-dhcpv6-na-server-and-client.md) — configuration-guide — Mixed
-  - **index/**
-    - **source-inventory/**
-      - [Procedures Source Inventory (Cisco)](cisco/index/source-inventory/procedures.md) — index — Mixed
   - **troubleshooting-guide/**
     - **bridge-domain/**
       - [Cisco IOS-XR Bridge Domains and MAC Addresses](cisco/troubleshooting-guide/bridge-domain/ios-xr-bridge-domains-mac-addresses.md) — troubleshooting-guide — Mixed
     - **general/**
       - [Cisco Command Health Check](cisco/troubleshooting-guide/general/cisco-command-health-check.md) — troubleshooting-guide — Mixed
-- **huawei/**
-  - **index/**
-    - **switching/**
-      - [switching/huawei Classified Notes](huawei/index/switching/huawei.md) — index — Mixed
 - **juniper/**
   - **case-study/**
     - **routing/**
@@ -41,87 +34,11 @@ Deterministic output generated from `reports/grouping-manifest.json`.
     - **switching/**
       - [Switching Configuration Guide](juniper/configuration-guide/switching/configuration.md) — configuration-guide — Mixed
       - [Mirror Traffic Configuration Guide](juniper/configuration-guide/switching/mirror-traffic.md) — configuration-guide — Mixed
-  - **index/**
-    - **bras/**
-      - [bras Classified Notes](juniper/index/bras/general.md) — index — Mixed
-    - **case-notes/**
-      - [case-notes Classified Notes](juniper/index/case-notes/general.md) — index — Mixed
-      - [Case Notes Reference Index](juniper/index/case-notes/notes.md) — index — Mixed
-    - **cgnat/**
-      - [cgnat/case-study Classified Notes](juniper/index/cgnat/case-study.md) — index — Mixed
-      - [cgnat/configuration-guide Classified Notes](juniper/index/cgnat/configuration-guide.md) — index — Mixed
-      - [cgnat Classified Notes](juniper/index/cgnat/general.md) — index — Mixed
-      - [cgnat/troubleshooting-guide Classified Notes](juniper/index/cgnat/troubleshooting-guide.md) — index — Mixed
-    - **cos/**
-      - [cos Classified Notes](juniper/index/cos/general.md) — index — Mixed
+  - **maintenance-guide/**
     - **hardware-maintenance/**
-      - [hardware-maintenance/chassis-power Classified Notes](juniper/index/hardware-maintenance/chassis-power.md) — index — Mixed
-      - [hardware-maintenance Classified Notes](juniper/index/hardware-maintenance/general.md) — index — Mixed
-      - [hardware-maintenance/linecard/ts-guide Classified Notes](juniper/index/hardware-maintenance/linecard-ts-guide.md) — index — Mixed
-      - [hardware-maintenance/linecard Classified Notes](juniper/index/hardware-maintenance/linecard.md) — index — Mixed
-      - [hardware-maintenance/mpc-linecard Classified Notes](juniper/index/hardware-maintenance/mpc-linecard.md) — index — Mixed
-      - [hardware-maintenance/optics-physical Classified Notes](juniper/index/hardware-maintenance/optics-physical.md) — index — Mixed
-      - [hardware-maintenance/re-scbe Classified Notes (Juniper)](juniper/index/hardware-maintenance/re-scbe.md) — index — Mixed
-      - [hardware-maintenance/ts-guide Classified Notes](juniper/index/hardware-maintenance/ts-guide.md) — index — Mixed
-    - **jtac/**
-      - [jtac/rma Classified Notes](juniper/index/jtac/rma.md) — index — Mixed
-    - **jtnoc/**
-      - [jtnoc Classified Notes](juniper/index/jtnoc/general.md) — index — Mixed
-    - **junos-general/**
-      - [junos-general/cli-cheatsheet Classified Notes](juniper/index/junos-general/cli-cheatsheet.md) — index — Mixed
-      - [junos-general Classified Notes](juniper/index/junos-general/general.md) — index — Mixed
-      - [junos-general/oam Classified Notes](juniper/index/junos-general/oam.md) — index — Mixed
-      - [junos-general/ppmd Classified Notes](juniper/index/junos-general/ppmd.md) — index — Mixed
-      - [junos-general/rpm Classified Notes](juniper/index/junos-general/rpm.md) — index — Mixed
-      - [junos-general/syslog Classified Notes](juniper/index/junos-general/syslog.md) — index — Mixed
-    - **lab-notes/**
-      - [lab-notes Classified Notes (Juniper)](juniper/index/lab-notes/general.md) — index — Mixed
-      - [Lab Scenarios and Environment Index](juniper/index/lab-notes/notes.md) — index — Mixed
-    - **maintenance/**
-      - [maintenance/junos-upgrade Classified Notes](juniper/index/maintenance/junos-upgrade.md) — index — Mixed
-    - **mpls-vpn/**
-      - [mpls-vpn/l3vpn Classified Notes](juniper/index/mpls-vpn/l3vpn.md) — index — Mixed
-      - [mpls-vpn/rsvp/ts-guide Classified Notes](juniper/index/mpls-vpn/rsvp-ts-guide.md) — index — Mixed
-      - [mpls-vpn/rsvp Classified Notes](juniper/index/mpls-vpn/rsvp.md) — index — Mixed
-    - **other-tools/**
-      - [other-tools/user-guide Classified Notes](juniper/index/other-tools/user-guide.md) — index — Mixed
-      - [other-tools/vnpt-atp Classified Notes](juniper/index/other-tools/vnpt-atp.md) — index — Mixed
-    - **routing/**
-      - [routing/bgp Classified Notes](juniper/index/routing/bgp.md) — index — Mixed
-      - [routing/convergence Classified Notes](juniper/index/routing/convergence.md) — index — Mixed
-      - [routing/firewall/ts-guide Classified Notes](juniper/index/routing/firewall-ts-guide.md) — index — Mixed
-      - [routing Classified Notes](juniper/index/routing/general.md) — index — Mixed
-      - [routing/loadbalance Classified Notes](juniper/index/routing/loadbalance.md) — index — Mixed
-      - [routing/multicast Classified Notes](juniper/index/routing/multicast.md) — index — Mixed
-      - [routing/scu-dcu Classified Notes](juniper/index/routing/scu-dcu.md) — index — Mixed
-    - **scaling-limitations/**
-      - [scaling-limitations Classified Notes](juniper/index/scaling-limitations/general.md) — index — Mixed
-    - **source-inventory/**
-      - [2022_FTEL-PS Source Inventory](juniper/index/source-inventory/2022-ftel-ps.md) — index — Mixed
-      - [Best_Practise Source Inventory](juniper/index/source-inventory/best-practise.md) — index — Mixed
-      - [classification Source Inventory](juniper/index/source-inventory/classification.md) — index — Mixed
-      - [JTAC_Descriptions Source Inventory](juniper/index/source-inventory/jtac-descriptions.md) — index — Mixed
-      - [Learning_Notes Source Inventory](juniper/index/source-inventory/learning-notes.md) — index — Mixed
-      - [MX_series_Architecture Source Inventory](juniper/index/source-inventory/mx-series-architecture.md) — index — Mixed
-      - [Outlook Source Inventory](juniper/index/source-inventory/outlook.md) — index — Mixed
-      - [Procedures Source Inventory (Juniper)](juniper/index/source-inventory/procedures.md) — index — Mixed
-      - [Recommends Source Inventory](juniper/index/source-inventory/recommends.md) — index — Mixed
-      - [SLA Source Inventory](juniper/index/source-inventory/sla.md) — index — Mixed
-      - [SVT-LAB Source Inventory](juniper/index/source-inventory/svt-lab.md) — index — Mixed
-      - [TS_notes Source Inventory (Juniper)](juniper/index/source-inventory/ts-notes.md) — index — Mixed
-    - **subscriber-management/**
-      - [subscriber-management Classified Notes](juniper/index/subscriber-management/general.md) — index — Mixed
-    - **switching/**
-      - [switching Classified Notes](juniper/index/switching/general.md) — index — Mixed
-      - [switching/mirror-traffic Classified Notes](juniper/index/switching/mirror-traffic.md) — index — Mixed
-      - [switching/ts-notes Classified Notes](juniper/index/switching/ts-notes.md) — index — Mixed
-    - **vendor-kb/**
-      - [Vendor PR & KB Reference Index](juniper/index/vendor-kb/kb.md) — index — Mixed
-  - **install-maintenance-guide/**
-    - **hardware-maintenance/**
-      - [Chassis Power-Cycle and SFB Restart](juniper/install-maintenance-guide/hardware-maintenance/chassis-power.md) — install-maintenance-guide — Mixed
-      - [MPC Insertion, Removal and Power Notes](juniper/install-maintenance-guide/hardware-maintenance/mpc-linecard.md) — install-maintenance-guide — Mixed
-      - [NG-RE & RE Replacement Procedures](juniper/install-maintenance-guide/hardware-maintenance/re-scbe.md) — install-maintenance-guide — Mixed
+      - [Chassis Power-Cycle and SFB Restart](juniper/maintenance-guide/hardware-maintenance/chassis-power.md) — maintenance-guide — Mixed
+      - [MPC Insertion, Removal and Power Notes](juniper/maintenance-guide/hardware-maintenance/mpc-linecard.md) — maintenance-guide — Mixed
+      - [NG-RE & RE Replacement Procedures](juniper/maintenance-guide/hardware-maintenance/re-scbe.md) — maintenance-guide — Mixed
   - **troubleshooting-guide/**
     - **bras/**
       - [BRAS PPPoE Subscriber Troubleshooting](juniper/troubleshooting-guide/bras/subscriber-management.md) — troubleshooting-guide — Mixed
@@ -132,7 +49,284 @@ Deterministic output generated from `reports/grouping-manifest.json`.
       - [BFD Troubleshooting, Anchorship, and PFE Commands](juniper/troubleshooting-guide/routing/bfd.md) — troubleshooting-guide — Mixed
     - **switching/**
       - [LACP Troubleshooting and Diagnostics (Juniper)](juniper/troubleshooting-guide/switching/lacp.md) — troubleshooting-guide — Mixed
-- **linux/**
-  - **index/**
-    - **source-inventory/**
-      - [TS_notes Source Inventory (Linux)](linux/index/source-inventory/ts-notes.md) — index — Mixed
+
+## Source Index
+
+| Source |
+|---|
+| `2022_FTEL-PS/HCM-MP-Backup VPLS up chậm, dial rate thấp.md` |
+| `2022_FTEL-PS/Meeting FTEL 20230622.md` |
+| `2022_FTEL-PS/Recap note trao đổi nội bộ trong quá trình khảo sát FTel.md` |
+| `2022_FTEL-PS/Untitled Note.md` |
+| `2022_FTEL-PS/Untitled Note_2.md` |
+| `Best_Practise/compare giữa 2 lần commit.md` |
+| `Best_Practise/nâng cấp NG-RE từ Junos 17.X-18.X lên 19.3R1 or Later.md` |
+| `Case_notes/- MVT_ HĐ 03-2020_ Hỗ trợ xử lý lỗi box PR02.TET040.md` |
+| `Case_notes/BPC8003BRA01_RE1 | không cutoff được user.md` |
+| `Case_notes/FTEL - Download Microsoft chậm.md` |
+| `Case_notes/Lỗi memory trên MPC7E-MRATE cho BNG.md` |
+| `Case_notes/MPC10E-MPC11E PR overview.md` |
+| `Case_notes/MPC11E HW limit - link recovery and hold-time.md` |
+| `Case_notes/Movitel - Mất dịch vụ 3G, 4G.md` |
+| `Case_notes/SR#01219162_Viettel_SLA_NFE_Viettel || MPC5E-2CGE-4XGE cao tải CPU.md` |
+| `Case_notes/SR-2021-1125-1639 - MVT_ HĐ SLA 03_2020_ Hỗ trợ kiểm tra cảnh báo lỗi FPC1 trên MAN057.md` |
+| `Case_notes/SR-2021-1201-0922 - MVT_ HĐ 03-2020_ Hỗ trợ xử lý lỗi box PR01.GAZ020.md` |
+| `Case_notes/SR-2021-1215-0956 - Hỗ trợ xử lý case cảnh báo trên thiết bị ME_AR03.MAP018.md` |
+| `Case_notes/SR-2021-1215-1001 - Hỗ trợ xử lý case cảnh báo trên thiết bị AR01.NIA088 copy.md` |
+| `Case_notes/SR-2021-1216-0859 - Hỗ trợ nâng cấp SCBE-MX lên SCBE2-MX trên thiết bị ME_AR02.GAZ185.md` |
+| `Case_notes/SR-2021-1223-1336 - Viettel_HĐ SLA 06_Hỗ trợ kiểm tra Thay đổi vlan range cổng downlink BRAS | Không đá thuê bao khỏi cổng.md` |
+| `Case_notes/SR-2021-1225-2235 - MVT_HĐ SLA 03_Xử lý case cảnh báo trên thiết bị ME_AR03.GAZ080.md` |
+| `Case_notes/SR-2021-1226-1945 - MVT_HĐ SLA 03_2020_ Hỗ trợ kiểm tra link kết nối giữa ME_AR03.GAZ080 và ME_GAZ009SRT01.md` |
+| `Case_notes/SR-2022-0106-0928-IPv6 ping VPLS.md` |
+| `Case_notes/SR-2022-0117-0942 - Viettel_HĐ SLA 06_Hỗ trợ node HHT9603CGT12 xử lý cảnh báo XMCHIP trên card 0,2,4 và cảnh báo reset trên card 1.md` |
+| `Case_notes/SR-2022-0128-1515 MVT_HĐ 03-2020_Support to check alarms on the device ME_PR01.SOF055 after device reboot due to power failure.md` |
+| `Case_notes/SR-2022-0311-1648 - PR1638410 and PR1642584.md` |
+| `Case_notes/SR-2022-0408-1059 - QTSC_Ngoài HĐ_Hỗ trợ kiểm tra lỗi Minor backup RE active trên MX960.md` |
+| `Case_notes/SR-2022-0627-1622 - CMC_HĐ 050522_Hỗ trợ kiểm tra OSPF bị treo trạng thái Exchange khi flap link vật lý.md` |
+| `Case_notes/SR-2023-0406-1052 - Viettel_HĐ SLA IP_Kiểm tra tốc độ upload của user LeaseLine trên box HHT9602.PECD.MX2020.02 (HHT9602CRT35).md` |
+| `Case_notes/SR-2023-0425-1650 - MPC11E link recovery behavior.md` |
+| `Case_notes/Trả lời về việc khuyến nghị version.md` |
+| `Case_notes/Untitled Note.md` |
+| `Case_notes/_Movitel_ Audit - Apply micro-bfd cho các kết nối Core.md` |
+| `Case_notes/_Movitel_ Audit - Tối ưu syslog.md` |
+| `Case_notes/cmc _ MX104 high CPU.md` |
+| `Case_notes/lỗi không ping được mpls ldp.md` |
+| `Case_notes/thay doi ve cach hanh xu route,nh,scu,dcu,sensor,rpf check.md` |
+| `Case_notes/Điều kiện phát sinh BGP rsync.md` |
+| `JTAC_Descriptions/2016-1226-0071 FTEL-MX960-LUCHIP lmem data error on MPC.md` |
+| `JTAC_Descriptions/DMEM (Data Memory).md` |
+| `JTAC_Descriptions/LMEM.md` |
+| `LAB_SVT_GROUP/LAB BRAS_service_lab_01.md` |
+| `LAB_SVT_GROUP/LAB advanced_l3vpn_lab_01.md` |
+| `LAB_SVT_GROUP/LAB intermediate_l3vpn_lab_01.md` |
+| `LAB_SVT_GROUP/Lab advanced_igp_lab_01.md` |
+| `Learning_Notes/Adaptive SPF Timers in JUNOS.md` |
+| `Learning_Notes/BGP AS 4-bytes.md` |
+| `Learning_Notes/BGP label-unicast (LU).md` |
+| `Learning_Notes/BGP notes.md` |
+| `Learning_Notes/Bgp multihop.md` |
+| `Learning_Notes/CE-CE VRF INTERFACE Pings.md` |
+| `Learning_Notes/CSPF to secondary loopback.md` |
+| `Learning_Notes/Check ddos-protection param on QFX5K.md` |
+| `Learning_Notes/Check running lab on eve.md` |
+| `Learning_Notes/Clear OSPF database.md` |
+| `Learning_Notes/Configuring BGP for IPv6 Unicast NLRI over an IPv4 Peering session.md` |
+| `Learning_Notes/DDoS Protection và RE Protection trên MX.md` |
+| `Learning_Notes/Few notes about MX routers_.md` |
+| `Learning_Notes/Generate CHAP response string.md` |
+| `Learning_Notes/Hash key computation on MPC cards.md` |
+| `Learning_Notes/Hành xử (behavior) với per-nexthop label allocation.md` |
+| `Learning_Notes/IPv6 Free Core_ Configuring IPv6 Labeled Unicast on Juniper MX.md` |
+| `Learning_Notes/IPv6 NLRIs over IPv4 BGP Peering When You_re Not Using Mapped Addresses.md` |
+| `Learning_Notes/IPv6 tunneling.md` |
+| `Learning_Notes/IS IS Route Selection.md` |
+| `Learning_Notes/ISIS NARROW and WIDE METRICs.md` |
+| `Learning_Notes/ISIS SPF caculation when overload bit set.md` |
+| `Learning_Notes/JNCIE sources.md` |
+| `Learning_Notes/Juniper load balance.md` |
+| `Learning_Notes/Junos – LDP troubleshooting.md` |
+| `Learning_Notes/Logical Systems and Virtual Routers.md` |
+| `Learning_Notes/NAT sesion information.md` |
+| `Learning_Notes/OSPF - Discontiguous Nonzero Areas.md` |
+| `Learning_Notes/OSPF LSA Type 3 ABR technical vs functional.md` |
+| `Learning_Notes/OSPF Path Selection Challenge.md` |
+| `Learning_Notes/OSPF route selection.md` |
+| `Learning_Notes/OSPF route withdraw.md` |
+| `Learning_Notes/OSPF vs. ISIS.md` |
+| `Learning_Notes/PPP Fast Keepalive.md` |
+| `Learning_Notes/Rib-groups.md` |
+| `Learning_Notes/Spanning tree protocol (STP).md` |
+| `Learning_Notes/Understanding the effects of ISIS wide-metric-only and traffic-engineering disable configuration options in Junos.md` |
+| `Learning_Notes/Untitled Note.md` |
+| `Learning_Notes/Untitled Note_2.md` |
+| `Learning_Notes/Wanphy.md` |
+| `Learning_Notes/how to local PE choose routes to adv to remote PE.md` |
+| `Learning_Notes/policy-statement from route-type external vs from external.md` |
+| `Learning_Notes/rib-groups behavior.md` |
+| `Learning_Notes/route-reflector outside the PE (out of path).md` |
+| `Learning_Notes/set protocols ospf  no-active-backbone.md` |
+| `Learning_Notes/vpn-apply-export and advertise-from-main-vpn-tables.md` |
+| `MX_series_Architecture/1 số thông tin requirements để cắm đc card MPC7E_ MPC7E-MRATE trên  MX240_480_960.md` |
+| `MX_series_Architecture/ASIC Architecture in Line cards.md` |
+| `MX_series_Architecture/Hold timers.md` |
+| `MX_series_Architecture/JunOS Release.md` |
+| `MX_series_Architecture/MPC10E-10C-MRATE.md` |
+| `Outlook/Bash command cli on MacOS.md` |
+| `Outlook/Filter Mail.md` |
+| `Outlook/Filter reply-to_ on GMail.md` |
+| `Outlook/How to Delete Microsoft AutoUpdate from Mac.md` |
+| `Outlook/License key Windows 10 Enterprise.md` |
+| `Outlook/Limit 20000 search result vs code.md` |
+| `PR/KB25839 - _Junos_ An improper egress-policy to LDP makes the _inet.3_ table become empty.md` |
+| `PR/KB27189 - _MX_ Optimizing heap utilization when applying a firewall filter on an interface using input and input-list keywords.md` |
+| `PR/KB31811__MX_ How to check if Enhanced Subscriber Management (bbe-smgd) is enabled and working.md` |
+| `PR/KB33034__MX_ Configuration Example - Matching IP traffic with a firewall filter for family CCC.md` |
+| `PR/KB34539_.md` |
+| `PR/KB37106__Subscriber Management_ Understanding the _Standby is not synced_ error after a backup RE replacement.md` |
+| `PR/KB37435__Junos_ Default CoS behavior for schedulers with different scheduler priorities.md` |
+| `PR/PR1082932 - Data Error in shared LMEM of LU_XL chip causing a MQ_XM chip wedge.md` |
+| `PR/PR1561855 - Continuous bbe-smgd cores are generated after restarting the smgd.md` |
+| `PR/PR1639518 - Mixed AFT and non-AFT AE traffic behavior.md` |
+| `PR/PR1648059 - Mixed AFT and non-AFT AE traffic.md` |
+| `PR/PR1688972 - PFE wedge fast link flaps.md` |
+| `PR/PR1715264 - MPC11E system firmware state.md` |
+| `PR/PR1718595 - BRAS AE disable-pfe.md` |
+| `Procedures/Untitled Note.md` |
+| `Procedures/config template Cisco PPPoE IPv4 and PPPoE IPv6 client.md` |
+| `Recommends/Cấu hình Secure CRT session logs.md` |
+| `Recommends/Hỗ trợ giám sát bw cho term fb trên BRAS.md` |
+| `Recommends/MPC10E vs MPC7E subscriber SCALE.md` |
+| `Recommends/Nâng cấp bản nào bị trùng IP trên IFL là lỗi.md` |
+| `Recommends/PWEs scaling for pppoe DS.md` |
+| `Recommends/RR for VNPT-NET.md` |
+| `Recommends/SNMP MIB thông tin module quang các dòng thiết bị của Juniper.md` |
+| `Recommends/SPNWHCM - TSB74336.md` |
+| `Recommends/SPNWHCM - _Nội bộ_ V_v các Junos mới nâng cấp cho VNPT VIETTEL - 08_2023.md` |
+| `Recommends/Subscriber scale MX204 vs MX304.md` |
+| `Recommends/Thông tin scaling port BRAS.md` |
+| `Recommends/Thông tin scaling port BRAS_2.md` |
+| `Recommends/mc-lag upgrade.md` |
+| `Recommends/slot gắn card FPC.md` |
+| `Recommends/tính năng link-degrade để detect BER trên thiết bị Juniper.md` |
+| `SLA/VIETTEL.md` |
+| `SLA/VNPT-NET _ INOC3.md` |
+| `SVT-LAB/EVE - 192.168.3.10.md` |
+| `SVT-LAB/Hướng dẫn login vào sử dụng lab EVE-NG.md` |
+| `SVT-LAB/ms-mpc on eve-ng.md` |
+| `TS_notes/1 số notes các ý cần khảo sát về nhà trạm đặt thiết bị.md` |
+| `TS_notes/2021-0628-0028_ heap memory increase.md` |
+| `TS_notes/2021-1228-388762, _Mobifone-IPBB_Behaviour Route-target Family eBGP Session.md` |
+| `TS_notes/ACX2100 _ cách cấu hình event-option để active script thu thập thông tin thu phát của port quang.md` |
+| `TS_notes/ACX2100_ACX2200 classsifier traffic mpls theo exp.md` |
+| `TS_notes/ACX710 Known Limitations.md` |
+| `TS_notes/ACX7100.md` |
+| `TS_notes/Alarm on FPC.md` |
+| `TS_notes/BGP errror messages.md` |
+| `TS_notes/BGP flap.md` |
+| `TS_notes/BGP.md` |
+| `TS_notes/CGNAT  thêm range mới vào trong Pool đã khai báo.md` |
+| `TS_notes/CGNAT troubleshoot commands.md` |
+| `TS_notes/Call JTAC.md` |
+| `TS_notes/Class of Services - CoS for ACX.md` |
+| `TS_notes/Class of Services - CoS notes.md` |
+| `TS_notes/Class of Services - CoS shell cmd on MPC7E (EA chip).md` |
+| `TS_notes/CoS class-of-service default queue name and scheduler.md` |
+| `TS_notes/CoS class-of-service shell commands.md` |
+| `TS_notes/Collect log on MPC10E_MPC11E.md` |
+| `TS_notes/Command check liên quan đến CGNAT services.md` |
+| `TS_notes/Config CFM action down ifl.md` |
+| `TS_notes/Cách fill file atp VNPT.md` |
+| `TS_notes/Cơ chế điều chỉnh tốc độ quạt MX.md` |
+| `TS_notes/DDOS pfe-RE TCP connections.md` |
+| `TS_notes/Delay thời gian up time của CE interfaces.md` |
+| `TS_notes/Destinations RTBH notes.md` |
+| `TS_notes/Disable log to tty pfe.md` |
+| `TS_notes/Entropy label capable.md` |
+| `TS_notes/FPC.md` |
+| `TS_notes/Firewall term scale.md` |
+| `TS_notes/High CPU due to show route.md` |
+| `TS_notes/How to collect _var_log files from Next Generation Routing Engine (NG-RE).md` |
+| `TS_notes/How to collect vmhost coredumps from Next Generation Routing Engine (NG-RE).md` |
+| `TS_notes/Huawei vlan manipulation.md` |
+| `TS_notes/ICMP ping đấu nối nhảy time.md` |
+| `TS_notes/JTASK_SCHED_SLIP khi bật lấy gcore (coredump process).md` |
+| `TS_notes/JunOS-EVO evo-pfemand.md` |
+| `TS_notes/Juniper MX204 1G port.md` |
+| `TS_notes/Juniper RA vs FA.md` |
+| `TS_notes/Juniper syslog facility và Severity.md` |
+| `TS_notes/KB26261__M_MX_T-series_ Troubleshooting Checklist - Routing Engine High CPU.md` |
+| `TS_notes/Không commit được khi delete routing-instance ở trạng thái deactivate.md` |
+| `TS_notes/Kiểm tra tác động nào liên quan đến software_hardware_config.md` |
+| `TS_notes/Kênh IPTV đứng hình khi xem.md` |
+| `TS_notes/Linecard reboot.md` |
+| `TS_notes/Load-balance test.md` |
+| `TS_notes/Local convergence breakdown.md` |
+| `TS_notes/Lấy log VMHOST.md` |
+| `TS_notes/Lệnh off laser mode shell _ dùng flap link.md` |
+| `TS_notes/MPC3E Hard errors.md` |
+| `TS_notes/MS-MPC throughput.md` |
+| `TS_notes/MS-SPC3.md` |
+| `TS_notes/MX960_MS-MPC_CGNAT SNMP OID monitor CPU, MEM of NPUs on MS-MPC.md` |
+| `TS_notes/Manual way to trigger the CB 0 19.44 alarm.md` |
+| `TS_notes/Memory RPD.md` |
+| `TS_notes/Nâng cấp NG-RE từ Junos 17.X-18.X lên 19.3R1 or Later.md` |
+| `TS_notes/OID Alarm count.md` |
+| `TS_notes/OID BRAS relative.md` |
+| `TS_notes/OID lấy VRF name.md` |
+| `TS_notes/PEM.md` |
+| `TS_notes/PFE disable script.md` |
+| `TS_notes/PFE packet capture on MX104.md` |
+| `TS_notes/PFE packet capture.md` |
+| `TS_notes/PIM instances.md` |
+| `TS_notes/Port mirror on Juniper MX.md` |
+| `TS_notes/RE boot loop with SCBE3.md` |
+| `TS_notes/RPD 64-bit_32-bit mode.md` |
+| `TS_notes/RPD mode 64-bit.md` |
+| `TS_notes/RR không nhận được route từ các PE tỉnh - SR-2021-1208-1924.md` |
+| `TS_notes/Recommendation_Best Practise ACX7100.md` |
+| `TS_notes/Restart the SNMP process.md` |
+| `TS_notes/SCB.md` |
+| `TS_notes/SCB_2.md` |
+| `TS_notes/SCU-DCU on QFX10002 không hỗ trợ.md` |
+| `TS_notes/SNMP Ifindex.md` |
+| `TS_notes/SNMP LSP InOutOctet MIB OID copy.md` |
+| `TS_notes/SNMP interface rate MIB OID.md` |
+| `TS_notes/SNMP oid heap mem line card để giám sát.md` |
+| `TS_notes/SR-2023-0301-1744 - Viettel- SLA- Check nguyên nhân không activate routing-instances mặc dù track không down rpm probe.md` |
+| `TS_notes/Some AMS and MS-MPC notes.md` |
+| `TS_notes/Source-base RTBH notes.md` |
+| `TS_notes/Symmetric Load Balancing.md` |
+| `TS_notes/Syslog message_ MQCHIP._FI Enqueuing error._type._seq._stream.md` |
+| `TS_notes/TCAM ACX show.md` |
+| `TS_notes/Tcpdump packet on RE MX.md` |
+| `TS_notes/Temperature - fan speed.md` |
+| `TS_notes/Test Juniper telemetry with jtimon (OpenConfig).md` |
+| `TS_notes/Thu thập log PFE on RE.md` |
+| `TS_notes/Track specific packet sizes or specific MAC.md` |
+| `TS_notes/Untitled Note.md` |
+| `TS_notes/Untitled Note_2.md` |
+| `TS_notes/Untitled Note_3.md` |
+| `TS_notes/_Internal Only_ Not able to enter CLI mode of router (RE type_ RE-S-X6-64G).md` |
+| `TS_notes/_MX_ How to identify the link that may be causing interrupt throttling on an MPC.md` |
+| `TS_notes/_MX_PTX_ How to determine which LSP is forwarding traffic on bypass LSP.md` |
+| `TS_notes/_M_MX_ How to check PPMD mode and troubleshooting tips.md` |
+| `TS_notes/_M_MX_ jnxFruOfflineReason.md` |
+| `TS_notes/_QFX_ How to identify FPC line card offline reason from chassisd SNMP TRAP.md` |
+| `TS_notes/archival.md` |
+| `TS_notes/auto-bandwidth notes.md` |
+| `TS_notes/auto-negotiation on ACX.md` |
+| `TS_notes/capture the ttrace output.md` |
+| `TS_notes/commands need to collect to check high CPU.md` |
+| `TS_notes/commands to trigger alarm on MX.md` |
+| `TS_notes/các physical hw có trên jlab.md` |
+| `TS_notes/cách upgrade_downgrade JunOS cho physical device on Jlab_vlab.md` |
+| `TS_notes/ecmp-local-bias.md` |
+| `TS_notes/enhanced subscriber management daemon runs in 64-bit_32-bit.md` |
+| `TS_notes/kiểm tra default mac-limit learning trên interaces_instance.md` |
+| `TS_notes/multiple Junos-cli commands at the same time.md` |
+| `TS_notes/pfe local-bias.md` |
+| `TS_notes/scale MPC4E.md` |
+| `TS_notes/set system debugger-on-panic  and set system debugger-on-break.md` |
+| `TS_notes/show firewall in PFE.md` |
+| `TS_notes/switch EX2300 bị cao tải CPU -SNMP.md` |
+| `TS_notes/switch EX2300 không commit được.md` |
+| `TS_notes/traceoptions for specific RSVP.md` |
+| `TS_notes/triển khai apply term Block_CTH_POLYCOM vào filter block-frag-in của Inside CGNAT.md` |
+| `TS_notes/upgrade OS.md` |
+| `TS_notes/xư lý cảnh báo RPD_MPLS_INTF_MAX_LABELS_ERROR HPG8001PRT02.md` |
+| `TS_notes/yum groupinstall _Development Tools_.md` |
+| `classification/Concepts_Theory/AJSPR-v19A/Chapter 10_ BGP.md` |
+| `classification/Concepts_Theory/AJSPR-v19A/Chapter 11_ BGP Attributes and Policy - Part1.md` |
+| `classification/Concepts_Theory/AJSPR-v19A/Chapter 12_BGP Attributes and Policy - Part 2.md` |
+| `classification/Concepts_Theory/AJSPR-v19A/Chapter 13_Route Reflection and Confederations.md` |
+| `classification/Concepts_Theory/AJSPR-v19A/Chapter 14_ BGP FlowSpec.md` |
+| `classification/Concepts_Theory/AJSPR-v19A/Chapter 15_ Troubleshooting BGP.md` |
+| `classification/Concepts_Theory/AJSPR-v19A/Chapter 16_ Policy Troubleshooting.md` |
+| `classification/Concepts_Theory/AJSPR-v19A/Chapter 2_ OSPF.md` |
+| `classification/Concepts_Theory/AJSPR-v19A/Chapter 3_ Advanced OSPF.md` |
+| `classification/Concepts_Theory/AJSPR-v19A/Chapter 4_ Advanced OSPF Options.md` |
+| `classification/Concepts_Theory/AJSPR-v19A/Chapter 5_ Troubleshooting OSPF.md` |
+| `classification/Concepts_Theory/AJSPR-v19A/Chapter 6_ IS-IS.md` |
+| `classification/Concepts_Theory/AJSPR-v19A/Chapter 7_ Advanced IS-IS Operations and Configuration Options.md` |
+| `classification/Concepts_Theory/AJSPR-v19A/Chapter 8_ Multilevel IS-IS Networks.md` |
+| `classification/Concepts_Theory/AJSPR-v19A/Chapter 9_ Troubleshooting IS-IS.md` |

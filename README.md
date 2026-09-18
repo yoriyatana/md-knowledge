@@ -116,21 +116,22 @@ công nội dung/OCR trước rồi bỏ `grouped/` khỏi `.gitignore`.
 
 Manifest deterministic chính thức nằm tại `reports/grouping-manifest.json`. Đây là
 manifest version 3, với cấu trúc `Vendor -> Level 2 DocType -> Level 1 Domain ->
-Level 3 Feature`. Tên thư mục và file generated luôn là lowercase kebab-case.
+Level 3 Feature`, với một file index riêng tại `grouped/index.md`. Tên thư mục
+và file generated luôn là lowercase kebab-case.
 Các DocType cấp 2 cố định là:
 
-- `index` — chỉ mục/source inventory được sinh tự động
 - `concepts` — tài liệu khái niệm
 - `configuration-guide` — tài liệu cấu hình
 - `troubleshooting-guide` — tài liệu xử lý sự cố
-- `install-maintenance-guide` — cài đặt/bảo trì
+- `maintenance-guide` — cài đặt/bảo trì
 - `case-study` — case study
 
 Mỗi group khai báo `vendor`, `level2_doctype`, `level1_domain`,
 `level3_feature`; builder sinh `destination` theo mẫu
 `vendor/doctype/domain/feature.md`. Dùng `configuration-guide` thống nhất,
 không dùng `configuration-template`. Các source là đường dẫn tương đối bên trong
-`formatted/`; nhóm index có thể dùng `source_directories`.
+`formatted/`; source inventory được tổng hợp trong `grouped/index.md`, không tạo
+DocType `index` riêng.
 
 ```bash
 .venv/bin/python tools/build_grouped_knowledge.py plan
@@ -141,6 +142,6 @@ không dùng `configuration-template`. Các source là đường dẫn tương �
 `grouped/`, loại bỏ các block nội dung trùng nhau, sao chép ảnh và attachment được
 tham chiếu với link tương đối đúng, tạo `grouped/index.md` và
 `grouped/source-map.json`. Các note public chưa được consolidate vẫn được đưa vào
-các nhóm `source-inventory/` theo thư mục nguồn để không bị bỏ sót; credentials
-được loại trừ khỏi inventory. Thư mục `grouped/` là local-only cho đến khi nội
+các nhóm theo thư mục nguồn để không bị bỏ sót; credentials được loại trừ khỏi inventory.
+Thư mục `grouped/` là local-only cho đến khi nội
 dung được review.
