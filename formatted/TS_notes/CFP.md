@@ -10,15 +10,15 @@
 
 # show cfp list ### get the cfp id from here and below outputs
 
-# show cfp <index> alarms
+# show cfp  alarms
 
-# show cfp <index> diagnostics
+# show cfp  diagnostics
 
-# show cfp <index> identifier
+# show cfp  identifier
 
-# show cfp <index> info
+# show cfp  info
 
-# show cfp <index> mdio-bus-error-count
+# show cfp  mdio-bus-error-count
 
 # show cmic 0 info
 
@@ -30,15 +30,15 @@
 
 >> Thử laser on/ laser off CFP bằng câu lệnh:
 
-test cfp <cfp index> laser  off
+test cfp  laser  off
 
-test cfp <cfp index> laser  on
+test cfp  laser  on
 
 >> Thu thập rsi, var/log:
 
 request support information | save /var/log/rsi-after
 
-file archive compress source /var/log/* destination /var/tmp/varlogs-jtac.tgz
+file archive compress source /var/log/\* destination /var/tmp/varlogs-jtac.tgz
 
 [ Tuesday, June 15, 2021 2:06 PM ] ⁨SVT.Thái.NĐ⁩: hard-loop là lấy 1 sợi dây đơn -> 1 đầu cắm vào port Tx (transmit), 1 đầu còn lại cắm vào port Rx (receive)
 

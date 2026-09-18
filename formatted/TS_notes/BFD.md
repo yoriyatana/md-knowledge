@@ -1,17 +1,22 @@
 # BFD
 
-```
 run show bfd session
+
 run show bfd session detail
+
 run show ppm adjacencies protocol bfd detail
+
 run request pfe execute command "show ppm adjacencies protocol bfd" target fpc7
+
 run show chassis fabric fpcs
 
 run request chassis fabric pfe 0 fpc 7 offline
+
 run show bfd session
+
 run show ppm adjacencies protocol bfd detail
+
 run request pfe execute command "show ppm adjacencies protocol bfd" target fpc7
-```
 
 show ppm transmissions protocol bfd detail
 
@@ -53,11 +58,11 @@ show threads verbose
 
 show pfe bfdsession all
 
-show pfe bfdsession id <session_id> extensive
+show pfe bfdsession id  extensive
 
 show filter
 
-show filter index <ppmd_filter> program
+show filter index  program
 
 show packet
 
@@ -75,7 +80,7 @@ show chassis routing-engine
 
 show system processes extensive no-forwarding | except 0.00
 
-show system processes memory <pid|process-name>
+show system processes memory
 
 show system virtual-memory | no-more
 
@@ -83,7 +88,7 @@ show task memory detail | no-more
 
 show log messages | no-more
 
-show log messages | match RPD_SCHED_SLIP
+show log messages | match RPD\_SCHED\_SLIP
 
 show task accounting
 
@@ -139,7 +144,7 @@ request pfe execute command "show jnh 0 pool stats fw" target fpc0
 
 request pfe execute command "show jnh 0 pool stats cnt" target fpc0
 
-request pfe execute command "show cassis_alloc" target fpc0
+request pfe execute command "show cassis\_alloc" target fpc0
 
 request pfe execute command "show sample-rr summary" target fpc0
 

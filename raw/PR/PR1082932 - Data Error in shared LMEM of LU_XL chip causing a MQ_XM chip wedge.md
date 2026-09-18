@@ -1,0 +1,16 @@
+# PR1082932 - Data Error in shared LMEM of LU/XL chip causing a MQ/XM chip wedge
+
+| Problem Report​ | |
+| --- | --- |
+| **Number** | PR1082932 |
+| **Title** | Data Error in shared LMEM of LU/XL chip causing a MQ/XM chip wedge |
+| **Release Note​** | |  | | --- | | ``` LMEM is an internal memory in LU/XL ASIC chip. It has private and shared regions for Packet Processing Engines. LMEM data errors are very rare events caused by environmental factors (this is not created by software). Due to a software defect, an error in the shared LMEM region will result in corruption of critical data structures of Packet Processing Engines that causes unpredictable communication of LU/XL ASIC chip with MQ/XM ASIC chip. These events will corrupt the state in MQ/XM and lead to a MQ/XM wedge. The MQ/XM wedge would cause fabric blackhole and finally reboot the line card. ``` | |
+| **Severity** | Critical |
+| **Status** | Closed |
+| **Last Modified​** | 2019-05-16 12:00:49 EDT |
+| **Resolved In​** | |  |  | | --- | --- | | **Release** | **junos** | | **13.3R4-S6** | x | | **13.3R5-S4** | x | | **14.1R5** | x | | **14.2R4** | x | | **13.3R6-S1** | x | | **14.1R3-S7** | x | | **14.2R3** | x | | **13.3R3-S11** | x | | **14.1X50-D91** | x | | **15.1R1** | x | | **16.1R1** | x | | **13.3R7** | x | |
+| **Product** | T Series, MX-series, EX Series, SRX Series |
+| **Functional Area​** | software |
+| **Feature Group​** | Platform and Infrastructure |
+| **Problem** | |  | | --- | | ``` An error in the shared LMEM region might lead to a MQ/XM wedge. The MQ/XM wedge would cause fabric blackhole and finally reboot the line card.  When this issue occurs error log messages like the following might be seen: %PFE-3: fpc2 LUCHIP(0) PPE_3 Errors lmem data error 0x00000c0a tnp.tftpd[2739]: %DAEMON-6-TFTPD_CONNECT_INFO: TFTP write from address 18 port 1 file /var/tmp/ppe_trap_fpc2_LU_0_0_00 %PFE-3: fpc2 Did not find TTRACE client.  Use 'show ttrace' %PFE-6: fpc2 PPE Thread Timeout Trap:  Count 146, PC 30f,     0x030f:  send_encapped_pkt_and_post_process     0x030f:  send_xm_reorder_send %PFE-3: fpc2 LUCHIP(0) PPE_0 Errors thread timeout error %PFE-3: fpc2 LUCHIP(0) PPE_3 Errors trap term error thread timeout error %PFE-3: fpc2 LUCHIP(0) PPE_4 Errors thread timeout error %PFE-3: fpc2 LUCHIP(0) PPE_7 Errors thread timeout error %PFE-3: fpc2 LUCHIP(0) PPE_8 Errors thread timeout error  On SRX5000 series platform, the fix is available starting from 15.1X49-D15. ``` | |
+| **Triggers** | |  | | --- | | ``` This issue might be seen if following conditions are met: * Trio-based line card * An error in the shared LMEM region occurs (due to environmental/external/physical conditions) ``` | |

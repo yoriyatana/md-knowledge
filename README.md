@@ -70,6 +70,21 @@ MarkItDown được pin ở bản `0.1.7`. Không dùng extra `all` trong môi t
 3.14 trên macOS vì extra này kéo theo một số dependency tùy chọn chưa có wheel
 tương thích.
 
+## Chuyển Evernote ENEX sang Markdown
+
+Để tạo lại dữ liệu từ bản backup Evernote, đặt các file `.enex` vào
+`raw_evernote/` rồi chạy:
+
+```bash
+.venv/bin/python tools/convert_evernote.py
+```
+
+Kết quả được tạo trước trong `raw_evernote_converted/` cùng báo cáo
+`reports/evernote-conversion-report.json`. Công cụ giữ từng notebook thành thư mục,
+chuyển ENML sang Markdown, giải mã resource nhúng và tạo link ảnh tương đối. Notebook
+`Login Credentials` được bỏ qua để không đưa dữ liệu nhạy cảm vào vùng xử lý công khai.
+Chỉ sau khi kiểm tra báo cáo và nội dung, mới đồng bộ kết quả vào `raw/`.
+
 ## Gom nhóm theo chủ đề bằng local embeddings và Gemini
 
 Đây là quy trình hai bước. Bước phân nhóm chạy local, miễn phí và không cần API

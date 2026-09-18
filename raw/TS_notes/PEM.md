@@ -32,6 +32,6 @@ show chassis environment no-forwarding | no-more
 
 show chassis environment pem | no-more
 
-request support information brief | no-more | save /var/log/rsi_hostname_datetime
+request support information brief | no-more | save /var/log/rsi\_hostname\_datetime
 
-file archive source /var/log/* destination /tmp/LOG_hostname_datetime
+file archive source /var/log/\* destination /tmp/LOG\_hostname\_datetime

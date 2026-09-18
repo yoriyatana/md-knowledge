@@ -2,23 +2,15 @@
 
 Hi Nirosh,
 
- 
-
 Please share further update on this case.
 
 ---
 
 Hi Siva,
 
- 
-
 Thanks for your information.
 
- 
-
 You can proceed with the case closure now.
-
- 
 
 It was my pleasure working with you.
 
@@ -26,27 +18,15 @@ It was my pleasure working with you.
 
 Hello Anh,
 
- 
-
 Thank you for your confirmation on closure of this case!
-
- 
 
 I am glad to hear that the box is stable now.
 
- 
-
 That was great working with you!
-
- 
 
 I would like to thank you for choosing Juniper TAC support. It has been a pleasure assisting you. I hope that I have provided you with the support that you expect. I am closing this case as we have agreed.
 
- 
-
 It has been an absolute pleasure working with you, thank you for continuing to choose Juniper Networks.
-
- 
 
 Thanks again, for all your time and patience and have a nice day.
 
@@ -54,11 +34,7 @@ Thanks again, for all your time and patience and have a nice day.
 
 Hi Anh,
 
- 
-
 I hope you are doing well.
-
- 
 
 Please provide an update on this case.
 
@@ -66,19 +42,13 @@ Please provide an update on this case.
 
 Hi Tuan,
 
- 
-
 Good day to you !!!
-
- 
 
 Pls update us the current status.
 
 ---
 
 Hi Team,
-
- 
 
 Please let me know if there are any updates for me on this case ?
 

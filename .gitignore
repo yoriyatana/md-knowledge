@@ -8,5 +8,7 @@ __pycache__/
 # Local-only material that may contain credentials or other secrets.
 raw/Login_Credentials/
 formatted/Login_Credentials/
+raw_evernote/
+raw_evernote_converted/
 grouped/
 reports/group-proposals.json

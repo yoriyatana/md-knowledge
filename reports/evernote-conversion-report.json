@@ -1,0 +1,2176 @@
+{
+  "input": "raw_evernote",
+  "output": "raw_evernote_converted",
+  "skipped_notebooks": [
+    "Login Credentials.enex"
+  ],
+  "notebooks": [
+    {
+      "source": "raw_evernote/2022_FTEL-PS.enex",
+      "notes": [
+        {
+          "title": "Untitled Note",
+          "destination": "raw_evernote_converted/2022_FTEL-PS/Untitled Note.md",
+          "resources": 0,
+          "content_chars": 130
+        },
+        {
+          "title": "Untitled Note",
+          "destination": "raw_evernote_converted/2022_FTEL-PS/Untitled Note_2.md",
+          "resources": 0,
+          "content_chars": 1119
+        },
+        {
+          "title": "HCM-MP-Backup VPLS up chậm, dial rate thấp",
+          "destination": "raw_evernote_converted/2022_FTEL-PS/HCM-MP-Backup VPLS up chậm, dial rate thấp.md",
+          "resources": 1,
+          "content_chars": 21310
+        },
+        {
+          "title": "Meeting FTEL 20230622",
+          "destination": "raw_evernote_converted/2022_FTEL-PS/Meeting FTEL 20230622.md",
+          "resources": 2,
+          "content_chars": 1764
+        },
+        {
+          "title": "Recap note trao đổi nội bộ trong quá trình khảo sát FTel",
+          "destination": "raw_evernote_converted/2022_FTEL-PS/Recap note trao đổi nội bộ trong quá trình khảo sát FTel.md",
+          "resources": 0,
+          "content_chars": 25096
+        }
+      ]
+    },
+    {
+      "source": "raw_evernote/AJSPR-v19A.enex",
+      "notes": [
+        {
+          "title": "Chapter 10: BGP",
+          "destination": "raw_evernote_converted/classification/Concepts_Theory/AJSPR-v19A/Chapter 10_ BGP.md",
+          "resources": 1,
+          "content_chars": 8249
+        },
+        {
+          "title": "Chapter 11: BGP Attributes and Policy - Part1",
+          "destination": "raw_evernote_converted/classification/Concepts_Theory/AJSPR-v19A/Chapter 11_ BGP Attributes and Policy - Part1.md",
+          "resources": 4,
+          "content_chars": 6445
+        },
+        {
+          "title": "Chapter 12:BGP Attributes and Policy - Part 2",
+          "destination": "raw_evernote_converted/classification/Concepts_Theory/AJSPR-v19A/Chapter 12_BGP Attributes and Policy - Part 2.md",
+          "resources": 0,
+          "content_chars": 6092
+        },
+        {
+          "title": "Chapter 13:Route Reflection and Confederations",
+          "destination": "raw_evernote_converted/classification/Concepts_Theory/AJSPR-v19A/Chapter 13_Route Reflection and Confederations.md",
+          "resources": 0,
+          "content_chars": 4549
+        },
+        {
+          "title": "Chapter 14: BGP FlowSpec",
+          "destination": "raw_evernote_converted/classification/Concepts_Theory/AJSPR-v19A/Chapter 14_ BGP FlowSpec.md",
+          "resources": 2,
+          "content_chars": 6765
+        },
+        {
+          "title": "Chapter 15: Troubleshooting BGP",
+          "destination": "raw_evernote_converted/classification/Concepts_Theory/AJSPR-v19A/Chapter 15_ Troubleshooting BGP.md",
+          "resources": 3,
+          "content_chars": 4742
+        },
+        {
+          "title": "Chapter 16: Policy Troubleshooting",
+          "destination": "raw_evernote_converted/classification/Concepts_Theory/AJSPR-v19A/Chapter 16_ Policy Troubleshooting.md",
+          "resources": 2,
+          "content_chars": 3091
+        },
+        {
+          "title": "Chapter 2: OSPF",
+          "destination": "raw_evernote_converted/classification/Concepts_Theory/AJSPR-v19A/Chapter 2_ OSPF.md",
+          "resources": 18,
+          "content_chars": 27057
+        },
+        {
+          "title": "Chapter 3: Advanced OSPF",
+          "destination": "raw_evernote_converted/classification/Concepts_Theory/AJSPR-v19A/Chapter 3_ Advanced OSPF.md",
+          "resources": 7,
+          "content_chars": 12070
+        },
+        {
+          "title": "Chapter 4: Advanced OSPF Options",
+          "destination": "raw_evernote_converted/classification/Concepts_Theory/AJSPR-v19A/Chapter 4_ Advanced OSPF Options.md",
+          "resources": 5,
+          "content_chars": 4162
+        },
+        {
+          "title": "Chapter 5: Troubleshooting OSPF",
+          "destination": "raw_evernote_converted/classification/Concepts_Theory/AJSPR-v19A/Chapter 5_ Troubleshooting OSPF.md",
+          "resources": 6,
+          "content_chars": 10996
+        },
+        {
+          "title": "Chapter 6: IS-IS",
+          "destination": "raw_evernote_converted/classification/Concepts_Theory/AJSPR-v19A/Chapter 6_ IS-IS.md",
+          "resources": 13,
+          "content_chars": 22947
+        },
+        {
+          "title": "Chapter 7: Advanced IS-IS Operations and Configuration Options",
+          "destination": "raw_evernote_converted/classification/Concepts_Theory/AJSPR-v19A/Chapter 7_ Advanced IS-IS Operations and Configuration Options.md",
+          "resources": 3,
+          "content_chars": 6945
+        },
+        {
+          "title": "Chapter 8: Multilevel IS-IS Networks",
+          "destination": "raw_evernote_converted/classification/Concepts_Theory/AJSPR-v19A/Chapter 8_ Multilevel IS-IS Networks.md",
+          "resources": 4,
+          "content_chars": 5977
+        },
+        {
+          "title": "Chapter 9: Troubleshooting IS-IS",
+          "destination": "raw_evernote_converted/classification/Concepts_Theory/AJSPR-v19A/Chapter 9_ Troubleshooting IS-IS.md",
+          "resources": 1,
+          "content_chars": 5067
+        }
+      ]
+    },
+    {
+      "source": "raw_evernote/Best Practise.enex",
+      "notes": [
+        {
+          "title": "compare giữa 2 lần commit",
+          "destination": "raw_evernote_converted/Best_Practise/compare giữa 2 lần commit.md",
+          "resources": 0,
+          "content_chars": 634
+        },
+        {
+          "title": "MX2008",
+          "destination": "raw_evernote_converted/Best_Practise/MX2008.md",
+          "resources": 1,
+          "content_chars": 914
+        },
+        {
+          "title": "nâng cấp NG-RE từ Junos 17.X-18.X lên 19.3R1 or Later",
+          "destination": "raw_evernote_converted/Best_Practise/nâng cấp NG-RE từ Junos 17.X-18.X lên 19.3R1 or Later.md",
+          "resources": 0,
+          "content_chars": 3327
+        },
+        {
+          "title": "Tháo/cắm NG-RE vào SCBE2/E3",
+          "destination": "raw_evernote_converted/Best_Practise/Tháo_cắm NG-RE vào SCBE2_E3.md",
+          "resources": 0,
+          "content_chars": 539
+        }
+      ]
+    },
+    {
+      "source": "raw_evernote/Case notes.enex",
+      "notes": [
+        {
+          "title": "- MVT/ HĐ 03-2020/ Hỗ trợ xử lý lỗi box PR02.TET040",
+          "destination": "raw_evernote_converted/Case_notes/- MVT_ HĐ 03-2020_ Hỗ trợ xử lý lỗi box PR02.TET040.md",
+          "resources": 0,
+          "content_chars": 13641
+        },
+        {
+          "title": "[Movitel] Audit - Apply micro-bfd cho các kết nối Core",
+          "destination": "raw_evernote_converted/Case_notes/_Movitel_ Audit - Apply micro-bfd cho các kết nối Core.md",
+          "resources": 1,
+          "content_chars": 4474
+        },
+        {
+          "title": "[Movitel] Audit - Tối ưu syslog",
+          "destination": "raw_evernote_converted/Case_notes/_Movitel_ Audit - Tối ưu syslog.md",
+          "resources": 0,
+          "content_chars": 2181
+        },
+        {
+          "title": "BPC8003BRA01_RE1 | không cutoff được user",
+          "destination": "raw_evernote_converted/Case_notes/BPC8003BRA01_RE1 | không cutoff được user.md",
+          "resources": 0,
+          "content_chars": 1070
+        },
+        {
+          "title": "cmc _ MX104 high CPU",
+          "destination": "raw_evernote_converted/Case_notes/cmc _ MX104 high CPU.md",
+          "resources": 0,
+          "content_chars": 3491
+        },
+        {
+          "title": "Các thuật ngữ sau được sử dụng để giải thích cách cấp phát địa chỉ IP (address-assignment)",
+          "destination": "raw_evernote_converted/Case_notes/Các thuật ngữ sau được sử dụng để giải thích cách cấp phát địa chỉ IP (address-assignment).md",
+          "resources": 0,
+          "content_chars": 1933
+        },
+        {
+          "title": "Untitled Note",
+          "destination": "raw_evernote_converted/Case_notes/Untitled Note.md",
+          "resources": 0,
+          "content_chars": 58
+        },
+        {
+          "title": "FTEL - Download Microsoft chậm",
+          "destination": "raw_evernote_converted/Case_notes/FTEL - Download Microsoft chậm.md",
+          "resources": 0,
+          "content_chars": 0
+        },
+        {
+          "title": "Lỗi memory trên MPC7E-MRATE cho BNG",
+          "destination": "raw_evernote_converted/Case_notes/Lỗi memory trên MPC7E-MRATE cho BNG.md",
+          "resources": 0,
+          "content_chars": 9009
+        },
+        {
+          "title": "Movitel - Mất dịch vụ 3G, 4G",
+          "destination": "raw_evernote_converted/Case_notes/Movitel - Mất dịch vụ 3G, 4G.md",
+          "resources": 0,
+          "content_chars": 287
+        },
+        {
+          "title": "pr1523537 nay chu yeu giai thich ve behaviour cua bfd session id",
+          "destination": "raw_evernote_converted/Case_notes/pr1523537 nay chu yeu giai thich ve behaviour cua bfd session id.md",
+          "resources": 0,
+          "content_chars": 10817
+        },
+        {
+          "title": "SR#01219162/Viettel/SLA/NFE/Viettel || MPC5E-2CGE-4XGE cao tải CPU",
+          "destination": "raw_evernote_converted/Case_notes/SR#01219162_Viettel_SLA_NFE_Viettel || MPC5E-2CGE-4XGE cao tải CPU.md",
+          "resources": 0,
+          "content_chars": 4657
+        },
+        {
+          "title": "SR-2021-1125-1639 - MVT/ HĐ SLA 03/2020/ Hỗ trợ kiểm tra cảnh báo lỗi FPC1 trên MAN057",
+          "destination": "raw_evernote_converted/Case_notes/SR-2021-1125-1639 - MVT_ HĐ SLA 03_2020_ Hỗ trợ kiểm tra cảnh báo lỗi FPC1 trên MAN057.md",
+          "resources": 0,
+          "content_chars": 12606
+        },
+        {
+          "title": "SR-2021-1201-0922 - MVT/ HĐ 03-2020/ Hỗ trợ xử lý lỗi box PR01.GAZ020",
+          "destination": "raw_evernote_converted/Case_notes/SR-2021-1201-0922 - MVT_ HĐ 03-2020_ Hỗ trợ xử lý lỗi box PR01.GAZ020.md",
+          "resources": 0,
+          "content_chars": 32979
+        },
+        {
+          "title": "SR-2021-1215-0956 - Hỗ trợ xử lý case cảnh báo trên thiết bị ME_AR03.MAP018",
+          "destination": "raw_evernote_converted/Case_notes/SR-2021-1215-0956 - Hỗ trợ xử lý case cảnh báo trên thiết bị ME_AR03.MAP018.md",
+          "resources": 0,
+          "content_chars": 13158
+        },
+        {
+          "title": "SR-2021-1215-1001 - Hỗ trợ xử lý case cảnh báo trên thiết bị AR01.NIA088 copy",
+          "destination": "raw_evernote_converted/Case_notes/SR-2021-1215-1001 - Hỗ trợ xử lý case cảnh báo trên thiết bị AR01.NIA088 copy.md",
+          "resources": 0,
+          "content_chars": 13232
+        },
+        {
+          "title": "SR-2021-1216-0859 - Hỗ trợ nâng cấp SCBE-MX lên SCBE2-MX trên thiết bị ME_AR02.GAZ185",
+          "destination": "raw_evernote_converted/Case_notes/SR-2021-1216-0859 - Hỗ trợ nâng cấp SCBE-MX lên SCBE2-MX trên thiết bị ME_AR02.GAZ185.md",
+          "resources": 0,
+          "content_chars": 19276
+        },
+        {
+          "title": "SR-2021-1223-1336 - Viettel/HĐ SLA 06/Hỗ trợ kiểm tra Thay đổi vlan range cổng downlink BRAS | Không đá thuê bao khỏi cổng",
+          "destination": "raw_evernote_converted/Case_notes/SR-2021-1223-1336 - Viettel_HĐ SLA 06_Hỗ trợ kiểm tra Thay đổi vlan range cổng downlink BRAS | Không đá thuê bao khỏi cổng.md",
+          "resources": 0,
+          "content_chars": 1795
+        },
+        {
+          "title": "SR-2021-1225-2235 - MVT/HĐ SLA 03/Xử lý case cảnh báo trên thiết bị ME_AR03.GAZ080",
+          "destination": "raw_evernote_converted/Case_notes/SR-2021-1225-2235 - MVT_HĐ SLA 03_Xử lý case cảnh báo trên thiết bị ME_AR03.GAZ080.md",
+          "resources": 0,
+          "content_chars": 37209
+        },
+        {
+          "title": "SR-2021-1226-1945 - MVT/HĐ SLA 03/2020/ Hỗ trợ kiểm tra link kết nối giữa ME_AR03.GAZ080 và ME_GAZ009SRT01",
+          "destination": "raw_evernote_converted/Case_notes/SR-2021-1226-1945 - MVT_HĐ SLA 03_2020_ Hỗ trợ kiểm tra link kết nối giữa ME_AR03.GAZ080 và ME_GAZ009SRT01.md",
+          "resources": 3,
+          "content_chars": 21912
+        },
+        {
+          "title": "SR-2022-0106-0928-IPv6 ping VPLS",
+          "destination": "raw_evernote_converted/Case_notes/SR-2022-0106-0928-IPv6 ping VPLS.md",
+          "resources": 4,
+          "content_chars": 10542
+        },
+        {
+          "title": "SR-2022-0117-0942 - Viettel/HĐ SLA 06/Hỗ trợ node HHT9603CGT12 xử lý cảnh báo XMCHIP trên card 0,2,4 và cảnh báo reset trên card 1",
+          "destination": "raw_evernote_converted/Case_notes/SR-2022-0117-0942 - Viettel_HĐ SLA 06_Hỗ trợ node HHT9603CGT12 xử lý cảnh báo XMCHIP trên card 0,2,4 và cảnh báo reset trên card 1.md",
+          "resources": 0,
+          "content_chars": 5139
+        },
+        {
+          "title": "SR-2022-0128-1515 MVT/HĐ 03-2020/Support to check alarms on the device ME_PR01.SOF055 after device reboot due to power failure",
+          "destination": "raw_evernote_converted/Case_notes/SR-2022-0128-1515 MVT_HĐ 03-2020_Support to check alarms on the device ME_PR01.SOF055 after device reboot due to power failure.md",
+          "resources": 0,
+          "content_chars": 17200
+        },
+        {
+          "title": "SR-2022-0408-1059 - QTSC/Ngoài HĐ/Hỗ trợ kiểm tra lỗi Minor backup RE active trên MX960",
+          "destination": "raw_evernote_converted/Case_notes/SR-2022-0408-1059 - QTSC_Ngoài HĐ_Hỗ trợ kiểm tra lỗi Minor backup RE active trên MX960.md",
+          "resources": 1,
+          "content_chars": 9115
+        },
+        {
+          "title": "SR-2022-0627-1622 - CMC/HĐ 050522/Hỗ trợ kiểm tra OSPF bị treo trạng thái Exchange khi flap link vật lý",
+          "destination": "raw_evernote_converted/Case_notes/SR-2022-0627-1622 - CMC_HĐ 050522_Hỗ trợ kiểm tra OSPF bị treo trạng thái Exchange khi flap link vật lý.md",
+          "resources": 1,
+          "content_chars": 7635
+        },
+        {
+          "title": "SR-2023-0406-1052 - Viettel/HĐ SLA IP/Kiểm tra tốc độ upload của user LeaseLine trên box HHT9602.PECD.MX2020.02 (HHT9602CRT35)",
+          "destination": "raw_evernote_converted/Case_notes/SR-2023-0406-1052 - Viettel_HĐ SLA IP_Kiểm tra tốc độ upload của user LeaseLine trên box HHT9602.PECD.MX2020.02 (HHT9602CRT35).md",
+          "resources": 1,
+          "content_chars": 170607
+        },
+        {
+          "title": "thay doi ve cach hanh xu route,nh,scu,dcu,sensor,rpf check",
+          "destination": "raw_evernote_converted/Case_notes/thay doi ve cach hanh xu route,nh,scu,dcu,sensor,rpf check.md",
+          "resources": 0,
+          "content_chars": 227
+        },
+        {
+          "title": "Điều kiện phát sinh BGP rsync",
+          "destination": "raw_evernote_converted/Case_notes/Điều kiện phát sinh BGP rsync.md",
+          "resources": 1,
+          "content_chars": 48
+        }
+      ]
+    },
+    {
+      "source": "raw_evernote/JTAC Descriptions.enex",
+      "notes": [
+        {
+          "title": "2016-1226-0071 FTEL-MX960-LUCHIP lmem data error on MPC",
+          "destination": "raw_evernote_converted/JTAC_Descriptions/2016-1226-0071 FTEL-MX960-LUCHIP lmem data error on MPC.md",
+          "resources": 0,
+          "content_chars": 753
+        },
+        {
+          "title": "DMEM (Data Memory)",
+          "destination": "raw_evernote_converted/JTAC_Descriptions/DMEM (Data Memory).md",
+          "resources": 0,
+          "content_chars": 25
+        },
+        {
+          "title": "LMEM",
+          "destination": "raw_evernote_converted/JTAC_Descriptions/LMEM.md",
+          "resources": 0,
+          "content_chars": 223
+        }
+      ]
+    },
+    {
+      "source": "raw_evernote/LAB_SVT_GROUP.enex",
+      "notes": [
+        {
+          "title": "Lab advanced_igp_lab_01",
+          "destination": "raw_evernote_converted/LAB_SVT_GROUP/Lab advanced_igp_lab_01.md",
+          "resources": 0,
+          "content_chars": 15504
+        },
+        {
+          "title": "LAB advanced_l3vpn_lab_01",
+          "destination": "raw_evernote_converted/LAB_SVT_GROUP/LAB advanced_l3vpn_lab_01.md",
+          "resources": 0,
+          "content_chars": 58816
+        },
+        {
+          "title": "LAB BRAS_service_lab_01",
+          "destination": "raw_evernote_converted/LAB_SVT_GROUP/LAB BRAS_service_lab_01.md",
+          "resources": 3,
+          "content_chars": 7161
+        },
+        {
+          "title": "LAB intermediate_l3vpn_lab_01",
+          "destination": "raw_evernote_converted/LAB_SVT_GROUP/LAB intermediate_l3vpn_lab_01.md",
+          "resources": 0,
+          "content_chars": 16930
+        }
+      ]
+    },
+    {
+      "source": "raw_evernote/Learning Notes.enex",
+      "notes": [
+        {
+          "title": "Adaptive SPF Timers in JUNOS",
+          "destination": "raw_evernote_converted/Learning_Notes/Adaptive SPF Timers in JUNOS.md",
+          "resources": 1,
+          "content_chars": 1531
+        },
+        {
+          "title": "Untitled Note",
+          "destination": "raw_evernote_converted/Learning_Notes/Untitled Note.md",
+          "resources": 1,
+          "content_chars": 8589
+        },
+        {
+          "title": "Untitled Note",
+          "destination": "raw_evernote_converted/Learning_Notes/Untitled Note_2.md",
+          "resources": 5,
+          "content_chars": 851
+        },
+        {
+          "title": "BGP AS 4-bytes",
+          "destination": "raw_evernote_converted/Learning_Notes/BGP AS 4-bytes.md",
+          "resources": 3,
+          "content_chars": 336
+        },
+        {
+          "title": "BGP label-unicast (LU)",
+          "destination": "raw_evernote_converted/Learning_Notes/BGP label-unicast (LU).md",
+          "resources": 0,
+          "content_chars": 341
+        },
+        {
+          "title": "Bgp multihop",
+          "destination": "raw_evernote_converted/Learning_Notes/Bgp multihop.md",
+          "resources": 0,
+          "content_chars": 244
+        },
+        {
+          "title": "BGP notes",
+          "destination": "raw_evernote_converted/Learning_Notes/BGP notes.md",
+          "resources": 5,
+          "content_chars": 11865
+        },
+        {
+          "title": "Bidirectional Forwarding Detection (BFD)",
+          "destination": "raw_evernote_converted/Learning_Notes/Bidirectional Forwarding Detection (BFD).md",
+          "resources": 11,
+          "content_chars": 12475
+        },
+        {
+          "title": "CE-CE VRF INTERFACE Pings",
+          "destination": "raw_evernote_converted/Learning_Notes/CE-CE VRF INTERFACE Pings.md",
+          "resources": 1,
+          "content_chars": 48
+        },
+        {
+          "title": "Check ddos-protection param on QFX5K",
+          "destination": "raw_evernote_converted/Learning_Notes/Check ddos-protection param on QFX5K.md",
+          "resources": 0,
+          "content_chars": 215
+        },
+        {
+          "title": "Check running lab on eve",
+          "destination": "raw_evernote_converted/Learning_Notes/Check running lab on eve.md",
+          "resources": 0,
+          "content_chars": 2521
+        },
+        {
+          "title": "Clear OSPF database",
+          "destination": "raw_evernote_converted/Learning_Notes/Clear OSPF database.md",
+          "resources": 0,
+          "content_chars": 327
+        },
+        {
+          "title": "Configuring BGP for IPv6 Unicast NLRI over an IPv4 Peering session",
+          "destination": "raw_evernote_converted/Learning_Notes/Configuring BGP for IPv6 Unicast NLRI over an IPv4 Peering session.md",
+          "resources": 2,
+          "content_chars": 2355
+        },
+        {
+          "title": "CSPF to secondary loopback",
+          "destination": "raw_evernote_converted/Learning_Notes/CSPF to secondary loopback.md",
+          "resources": 0,
+          "content_chars": 18892
+        },
+        {
+          "title": "DDoS Protection và RE Protection trên MX",
+          "destination": "raw_evernote_converted/Learning_Notes/DDoS Protection và RE Protection trên MX.md",
+          "resources": 0,
+          "content_chars": 844
+        },
+        {
+          "title": "EoMPLS VC Type",
+          "destination": "raw_evernote_converted/Learning_Notes/EoMPLS VC Type.md",
+          "resources": 0,
+          "content_chars": 1718
+        },
+        {
+          "title": "Few notes about MX routers:",
+          "destination": "raw_evernote_converted/Learning_Notes/Few notes about MX routers_.md",
+          "resources": 1,
+          "content_chars": 4519
+        },
+        {
+          "title": "Generate CHAP response string",
+          "destination": "raw_evernote_converted/Learning_Notes/Generate CHAP response string.md",
+          "resources": 1,
+          "content_chars": 964
+        },
+        {
+          "title": "Hash key computation on MPC cards",
+          "destination": "raw_evernote_converted/Learning_Notes/Hash key computation on MPC cards.md",
+          "resources": 4,
+          "content_chars": 3622
+        },
+        {
+          "title": "Untitled Note",
+          "destination": "raw_evernote_converted/Learning_Notes/Untitled Note_3.md",
+          "resources": 0,
+          "content_chars": 299
+        },
+        {
+          "title": "how to local PE choose routes to adv to remote PE",
+          "destination": "raw_evernote_converted/Learning_Notes/how to local PE choose routes to adv to remote PE.md",
+          "resources": 0,
+          "content_chars": 812
+        },
+        {
+          "title": "Hành xử (behavior) với per-nexthop label allocation",
+          "destination": "raw_evernote_converted/Learning_Notes/Hành xử (behavior) với per-nexthop label allocation.md",
+          "resources": 1,
+          "content_chars": 48
+        },
+        {
+          "title": "Interprovider Layer 3 VPN option C",
+          "destination": "raw_evernote_converted/Learning_Notes/Interprovider Layer 3 VPN option C.md",
+          "resources": 0,
+          "content_chars": 72
+        },
+        {
+          "title": "IPv6 Free Core: Configuring IPv6 Labeled Unicast on Juniper MX",
+          "destination": "raw_evernote_converted/Learning_Notes/IPv6 Free Core_ Configuring IPv6 Labeled Unicast on Juniper MX.md",
+          "resources": 2,
+          "content_chars": 10405
+        },
+        {
+          "title": "IPv6 NLRIs over IPv4 BGP Peering When You're Not Using Mapped Addresses.",
+          "destination": "raw_evernote_converted/Learning_Notes/IPv6 NLRIs over IPv4 BGP Peering When You_re Not Using Mapped Addresses.md",
+          "resources": 0,
+          "content_chars": 6689
+        },
+        {
+          "title": "IPv6 tunneling",
+          "destination": "raw_evernote_converted/Learning_Notes/IPv6 tunneling.md",
+          "resources": 0,
+          "content_chars": 5556
+        },
+        {
+          "title": "IS IS Route Selection",
+          "destination": "raw_evernote_converted/Learning_Notes/IS IS Route Selection.md",
+          "resources": 0,
+          "content_chars": 419
+        },
+        {
+          "title": "ISIS NARROW and WIDE METRICs",
+          "destination": "raw_evernote_converted/Learning_Notes/ISIS NARROW and WIDE METRICs.md",
+          "resources": 106,
+          "content_chars": 34663
+        },
+        {
+          "title": "ISIS SPF caculation when overload bit set",
+          "destination": "raw_evernote_converted/Learning_Notes/ISIS SPF caculation when overload bit set.md",
+          "resources": 11,
+          "content_chars": 41349
+        },
+        {
+          "title": "JNCIE sources",
+          "destination": "raw_evernote_converted/Learning_Notes/JNCIE sources.md",
+          "resources": 5,
+          "content_chars": 20018
+        },
+        {
+          "title": "Juniper load balance",
+          "destination": "raw_evernote_converted/Learning_Notes/Juniper load balance.md",
+          "resources": 7,
+          "content_chars": 685
+        },
+        {
+          "title": "Junos – LDP troubleshooting",
+          "destination": "raw_evernote_converted/Learning_Notes/Junos – LDP troubleshooting.md",
+          "resources": 6,
+          "content_chars": 4680
+        },
+        {
+          "title": "l3vpn hub and spoke",
+          "destination": "raw_evernote_converted/Learning_Notes/l3vpn hub and spoke.md",
+          "resources": 0,
+          "content_chars": 1576
+        },
+        {
+          "title": "l3vpn hub and spoke",
+          "destination": "raw_evernote_converted/Learning_Notes/l3vpn hub and spoke_2.md",
+          "resources": 0,
+          "content_chars": 147
+        },
+        {
+          "title": "L3VPN per-prefix label allocation",
+          "destination": "raw_evernote_converted/Learning_Notes/L3VPN per-prefix label allocation.md",
+          "resources": 1,
+          "content_chars": 48
+        },
+        {
+          "title": "Untitled Note",
+          "destination": "raw_evernote_converted/Learning_Notes/Untitled Note_4.md",
+          "resources": 0,
+          "content_chars": 10866
+        },
+        {
+          "title": "LDP-tunnelling and hidden routes in inet.3",
+          "destination": "raw_evernote_converted/Learning_Notes/LDP-tunnelling and hidden routes in inet.3.md",
+          "resources": 1,
+          "content_chars": 48
+        },
+        {
+          "title": "Logical Systems and Virtual Routers",
+          "destination": "raw_evernote_converted/Learning_Notes/Logical Systems and Virtual Routers.md",
+          "resources": 0,
+          "content_chars": 426
+        },
+        {
+          "title": "NAT sesion information",
+          "destination": "raw_evernote_converted/Learning_Notes/NAT sesion information.md",
+          "resources": 0,
+          "content_chars": 442
+        },
+        {
+          "title": "No more doubt with LDP",
+          "destination": "raw_evernote_converted/Learning_Notes/No more doubt with LDP.md",
+          "resources": 35,
+          "content_chars": 19684
+        },
+        {
+          "title": "OSPF - Discontiguous Nonzero Areas",
+          "destination": "raw_evernote_converted/Learning_Notes/OSPF - Discontiguous Nonzero Areas.md",
+          "resources": 0,
+          "content_chars": 4464
+        },
+        {
+          "title": "ospf as routing protocol for CE-PE",
+          "destination": "raw_evernote_converted/Learning_Notes/ospf as routing protocol for CE-PE.md",
+          "resources": 0,
+          "content_chars": 13594
+        },
+        {
+          "title": "Untitled Note",
+          "destination": "raw_evernote_converted/Learning_Notes/Untitled Note_5.md",
+          "resources": 0,
+          "content_chars": 13005
+        },
+        {
+          "title": "Untitled Note",
+          "destination": "raw_evernote_converted/Learning_Notes/Untitled Note_6.md",
+          "resources": 0,
+          "content_chars": 22262
+        },
+        {
+          "title": "Untitled Note",
+          "destination": "raw_evernote_converted/Learning_Notes/Untitled Note_7.md",
+          "resources": 0,
+          "content_chars": 13487
+        },
+        {
+          "title": "OSPF Back Door Links: A Case Study",
+          "destination": "raw_evernote_converted/Learning_Notes/OSPF Back Door Links_ A Case Study.md",
+          "resources": 3,
+          "content_chars": 130
+        },
+        {
+          "title": "OSPF LSA Type 3 ABR technical vs functional",
+          "destination": "raw_evernote_converted/Learning_Notes/OSPF LSA Type 3 ABR technical vs functional.md",
+          "resources": 2,
+          "content_chars": 809
+        },
+        {
+          "title": "OSPF Path Selection Challenge",
+          "destination": "raw_evernote_converted/Learning_Notes/OSPF Path Selection Challenge.md",
+          "resources": 1,
+          "content_chars": 6943
+        },
+        {
+          "title": "OSPF route selection",
+          "destination": "raw_evernote_converted/Learning_Notes/OSPF route selection.md",
+          "resources": 1,
+          "content_chars": 1219
+        },
+        {
+          "title": "OSPF route withdraw",
+          "destination": "raw_evernote_converted/Learning_Notes/OSPF route withdraw.md",
+          "resources": 3,
+          "content_chars": 2915
+        },
+        {
+          "title": "OSPF SUMMARY",
+          "destination": "raw_evernote_converted/Learning_Notes/OSPF SUMMARY.md",
+          "resources": 27,
+          "content_chars": 6867
+        },
+        {
+          "title": "OSPF vs. ISIS",
+          "destination": "raw_evernote_converted/Learning_Notes/OSPF vs. ISIS.md",
+          "resources": 16,
+          "content_chars": 16355
+        },
+        {
+          "title": "policy-statement from route-type external vs from external",
+          "destination": "raw_evernote_converted/Learning_Notes/policy-statement from route-type external vs from external.md",
+          "resources": 2,
+          "content_chars": 1429
+        },
+        {
+          "title": "PPP Fast Keepalive",
+          "destination": "raw_evernote_converted/Learning_Notes/PPP Fast Keepalive.md",
+          "resources": 0,
+          "content_chars": 3641
+        },
+        {
+          "title": "Rib-groups",
+          "destination": "raw_evernote_converted/Learning_Notes/Rib-groups.md",
+          "resources": 1,
+          "content_chars": 48
+        },
+        {
+          "title": "rib-groups behavior",
+          "destination": "raw_evernote_converted/Learning_Notes/rib-groups behavior.md",
+          "resources": 1,
+          "content_chars": 52
+        },
+        {
+          "title": "route-reflector outside the PE (out of path)",
+          "destination": "raw_evernote_converted/Learning_Notes/route-reflector outside the PE (out of path).md",
+          "resources": 0,
+          "content_chars": 3676
+        },
+        {
+          "title": "set protocols ospf  no-active-backbone",
+          "destination": "raw_evernote_converted/Learning_Notes/set protocols ospf  no-active-backbone.md",
+          "resources": 0,
+          "content_chars": 1092
+        },
+        {
+          "title": "Spanning tree protocol (STP)",
+          "destination": "raw_evernote_converted/Learning_Notes/Spanning tree protocol (STP).md",
+          "resources": 2,
+          "content_chars": 212
+        },
+        {
+          "title": "Understanding the effects of ISIS wide-metric-only and traffic-engineering disable configuration options in Junos",
+          "destination": "raw_evernote_converted/Learning_Notes/Understanding the effects of ISIS wide-metric-only and traffic-engineering disable configuration options in Junos.md",
+          "resources": 0,
+          "content_chars": 1276
+        },
+        {
+          "title": "vpn-apply-export and advertise-from-main-vpn-tables",
+          "destination": "raw_evernote_converted/Learning_Notes/vpn-apply-export and advertise-from-main-vpn-tables.md",
+          "resources": 1,
+          "content_chars": 912
+        },
+        {
+          "title": "Wanphy",
+          "destination": "raw_evernote_converted/Learning_Notes/Wanphy.md",
+          "resources": 1,
+          "content_chars": 63
+        }
+      ]
+    },
+    {
+      "source": "raw_evernote/MX series Architecture.enex",
+      "notes": [
+        {
+          "title": "1 số thông tin requirements để cắm đc card MPC7E/ MPC7E-MRATE trên  MX240/480/960",
+          "destination": "raw_evernote_converted/MX_series_Architecture/1 số thông tin requirements để cắm đc card MPC7E_ MPC7E-MRATE trên  MX240_480_960.md",
+          "resources": 0,
+          "content_chars": 813
+        },
+        {
+          "title": "ASIC Architecture in Line cards",
+          "destination": "raw_evernote_converted/MX_series_Architecture/ASIC Architecture in Line cards.md",
+          "resources": 1,
+          "content_chars": 73
+        },
+        {
+          "title": "Hold timers",
+          "destination": "raw_evernote_converted/MX_series_Architecture/Hold timers.md",
+          "resources": 1,
+          "content_chars": 48
+        },
+        {
+          "title": "JunOS Release",
+          "destination": "raw_evernote_converted/MX_series_Architecture/JunOS Release.md",
+          "resources": 1,
+          "content_chars": 495
+        },
+        {
+          "title": "MPC10E-10C-MRATE",
+          "destination": "raw_evernote_converted/MX_series_Architecture/MPC10E-10C-MRATE.md",
+          "resources": 0,
+          "content_chars": 182
+        }
+      ]
+    },
+    {
+      "source": "raw_evernote/Mail template.enex",
+      "notes": [
+        {
+          "title": "Close case",
+          "destination": "raw_evernote_converted/Mail_template/Close case.md",
+          "resources": 0,
+          "content_chars": 939
+        },
+        {
+          "title": "Email Greetings",
+          "destination": "raw_evernote_converted/Mail_template/Email Greetings.md",
+          "resources": 0,
+          "content_chars": 1642
+        },
+        {
+          "title": "English",
+          "destination": "raw_evernote_converted/Mail_template/English.md",
+          "resources": 0,
+          "content_chars": 1801
+        },
+        {
+          "title": "lỗi không ping được mpls ldp",
+          "destination": "raw_evernote_converted/Mail_template/lỗi không ping được mpls ldp.md",
+          "resources": 1,
+          "content_chars": 3223
+        },
+        {
+          "title": "renew service",
+          "destination": "raw_evernote_converted/Mail_template/renew service.md",
+          "resources": 0,
+          "content_chars": 307
+        },
+        {
+          "title": "Trả lời về việc khuyến nghị version",
+          "destination": "raw_evernote_converted/Mail_template/Trả lời về việc khuyến nghị version.md",
+          "resources": 1,
+          "content_chars": 48
+        },
+        {
+          "title": "Vietnamese",
+          "destination": "raw_evernote_converted/Mail_template/Vietnamese.md",
+          "resources": 0,
+          "content_chars": 412
+        }
+      ]
+    },
+    {
+      "source": "raw_evernote/Outlook Tips & Tricks.enex",
+      "notes": [
+        {
+          "title": "Bash command cli on MacOS",
+          "destination": "raw_evernote_converted/Outlook/Bash command cli on MacOS.md",
+          "resources": 0,
+          "content_chars": 816
+        },
+        {
+          "title": "Filter Mail",
+          "destination": "raw_evernote_converted/Outlook/Filter Mail.md",
+          "resources": 1,
+          "content_chars": 229
+        },
+        {
+          "title": "Filter reply-to: on GMail",
+          "destination": "raw_evernote_converted/Outlook/Filter reply-to_ on GMail.md",
+          "resources": 0,
+          "content_chars": 530
+        },
+        {
+          "title": "How to Delete Microsoft AutoUpdate from Mac",
+          "destination": "raw_evernote_converted/Outlook/How to Delete Microsoft AutoUpdate from Mac.md",
+          "resources": 2,
+          "content_chars": 2850
+        },
+        {
+          "title": "License key Windows 10 Enterprise",
+          "destination": "raw_evernote_converted/Outlook/License key Windows 10 Enterprise.md",
+          "resources": 0,
+          "content_chars": 30
+        },
+        {
+          "title": "Limit 20000 search result vs code",
+          "destination": "raw_evernote_converted/Outlook/Limit 20000 search result vs code.md",
+          "resources": 1,
+          "content_chars": 48
+        }
+      ]
+    },
+    {
+      "source": "raw_evernote/PR.enex",
+      "notes": [
+        {
+          "title": "Cisco template pppoe DHCPv6 NA (PPPoE IPv6)",
+          "destination": "raw_evernote_converted/PR/Cisco template pppoe DHCPv6 NA (PPPoE IPv6).md",
+          "resources": 0,
+          "content_chars": 1992
+        },
+        {
+          "title": "KB25839 - [Junos] An improper egress-policy to LDP makes the 'inet.3' table become empty",
+          "destination": "raw_evernote_converted/PR/KB25839 - _Junos_ An improper egress-policy to LDP makes the _inet.3_ table become empty.md",
+          "resources": 0,
+          "content_chars": 4395
+        },
+        {
+          "title": "KB27189 - [MX] Optimizing heap utilization when applying a firewall filter on an interface using input and input-list keywords",
+          "destination": "raw_evernote_converted/PR/KB27189 - _MX_ Optimizing heap utilization when applying a firewall filter on an interface using input and input-list keywords.md",
+          "resources": 0,
+          "content_chars": 7601
+        },
+        {
+          "title": "KB31811_[MX] How to check if Enhanced Subscriber Management (bbe-smgd) is enabled and working",
+          "destination": "raw_evernote_converted/PR/KB31811__MX_ How to check if Enhanced Subscriber Management (bbe-smgd) is enabled and working.md",
+          "resources": 0,
+          "content_chars": 2152
+        },
+        {
+          "title": "KB33034_[MX] Configuration Example - Matching IP traffic with a firewall filter for family CCC",
+          "destination": "raw_evernote_converted/PR/KB33034__MX_ Configuration Example - Matching IP traffic with a firewall filter for family CCC.md",
+          "resources": 0,
+          "content_chars": 144
+        },
+        {
+          "title": "KB34539_",
+          "destination": "raw_evernote_converted/PR/KB34539_.md",
+          "resources": 0,
+          "content_chars": 4282
+        },
+        {
+          "title": "KB37106_[Subscriber Management] Understanding the 'Standby is not synced' error after a backup RE replacement",
+          "destination": "raw_evernote_converted/PR/KB37106__Subscriber Management_ Understanding the _Standby is not synced_ error after a backup RE replacement.md",
+          "resources": 0,
+          "content_chars": 4888
+        },
+        {
+          "title": "KB37435_[Junos] Default CoS behavior for schedulers with different scheduler priorities",
+          "destination": "raw_evernote_converted/PR/KB37435__Junos_ Default CoS behavior for schedulers with different scheduler priorities.md",
+          "resources": 0,
+          "content_chars": 0
+        },
+        {
+          "title": "MAC move",
+          "destination": "raw_evernote_converted/PR/MAC move.md",
+          "resources": 1,
+          "content_chars": 428
+        },
+        {
+          "title": "pppoe client bras bng option",
+          "destination": "raw_evernote_converted/PR/pppoe client bras bng option.md",
+          "resources": 0,
+          "content_chars": 822
+        },
+        {
+          "title": "PR check",
+          "destination": "raw_evernote_converted/PR/PR check.md",
+          "resources": 0,
+          "content_chars": 10848
+        },
+        {
+          "title": "PR1082932 - Data Error in shared LMEM of LU/XL chip causing a MQ/XM chip wedge",
+          "destination": "raw_evernote_converted/PR/PR1082932 - Data Error in shared LMEM of LU_XL chip causing a MQ_XM chip wedge.md",
+          "resources": 0,
+          "content_chars": 2605
+        },
+        {
+          "title": "PR1561855 - Continuous bbe-smgd cores are generated after restarting the smgd",
+          "destination": "raw_evernote_converted/PR/PR1561855 - Continuous bbe-smgd cores are generated after restarting the smgd.md",
+          "resources": 0,
+          "content_chars": 1573
+        },
+        {
+          "title": "show port mapping pfe",
+          "destination": "raw_evernote_converted/PR/show port mapping pfe.md",
+          "resources": 0,
+          "content_chars": 39
+        },
+        {
+          "title": "TRIO Card: packet capture with pfe commands",
+          "destination": "raw_evernote_converted/PR/TRIO Card_ packet capture with pfe commands.md",
+          "resources": 1,
+          "content_chars": 6291
+        },
+        {
+          "title": "using AE interfaces with SPC3",
+          "destination": "raw_evernote_converted/PR/using AE interfaces with SPC3.md",
+          "resources": 0,
+          "content_chars": 1086
+        },
+        {
+          "title": "Untitled Note",
+          "destination": "raw_evernote_converted/PR/Untitled Note.md",
+          "resources": 0,
+          "content_chars": 130
+        }
+      ]
+    },
+    {
+      "source": "raw_evernote/Procedures.enex",
+      "notes": [
+        {
+          "title": "config template Cisco PPPoE IPv4 and PPPoE IPv6 client",
+          "destination": "raw_evernote_converted/Procedures/config template Cisco PPPoE IPv4 and PPPoE IPv6 client.md",
+          "resources": 1,
+          "content_chars": 3858
+        },
+        {
+          "title": "Thực hiện thay thế (replacing) RE - phương án không có thiết bị lab",
+          "destination": "raw_evernote_converted/Procedures/Thực hiện thay thế (replacing) RE - phương án không có thiết bị lab.md",
+          "resources": 0,
+          "content_chars": 5241
+        },
+        {
+          "title": "Untitled Note",
+          "destination": "raw_evernote_converted/Procedures/Untitled Note.md",
+          "resources": 0,
+          "content_chars": 7316
+        }
+      ]
+    },
+    {
+      "source": "raw_evernote/Recommends.enex",
+      "notes": [
+        {
+          "title": "BFD scales",
+          "destination": "raw_evernote_converted/Recommends/BFD scales.md",
+          "resources": 1,
+          "content_chars": 48
+        },
+        {
+          "title": "Cấu hình Secure CRT session logs",
+          "destination": "raw_evernote_converted/Recommends/Cấu hình Secure CRT session logs.md",
+          "resources": 0,
+          "content_chars": 121
+        },
+        {
+          "title": "Giới hạn số lượng phiên của một khách hàng trên BRAS Juniper (session-limit-per-username)",
+          "destination": "raw_evernote_converted/Recommends/Giới hạn số lượng phiên của một khách hàng trên BRAS Juniper (session-limit-per-username).md",
+          "resources": 0,
+          "content_chars": 2275
+        },
+        {
+          "title": "Hỗ trợ giám sát bw cho term fb trên BRAS",
+          "destination": "raw_evernote_converted/Recommends/Hỗ trợ giám sát bw cho term fb trên BRAS.md",
+          "resources": 0,
+          "content_chars": 3696
+        },
+        {
+          "title": "mc-lag upgrade",
+          "destination": "raw_evernote_converted/Recommends/mc-lag upgrade.md",
+          "resources": 4,
+          "content_chars": 299
+        },
+        {
+          "title": "MPC10E vs MPC7E subscriber SCALE",
+          "destination": "raw_evernote_converted/Recommends/MPC10E vs MPC7E subscriber SCALE.md",
+          "resources": 0,
+          "content_chars": 283
+        },
+        {
+          "title": "Nâng cấp bản nào bị trùng IP trên IFL là lỗi",
+          "destination": "raw_evernote_converted/Recommends/Nâng cấp bản nào bị trùng IP trên IFL là lỗi.md",
+          "resources": 0,
+          "content_chars": 586
+        },
+        {
+          "title": "PWEs scaling for pppoe DS",
+          "destination": "raw_evernote_converted/Recommends/PWEs scaling for pppoe DS.md",
+          "resources": 2,
+          "content_chars": 1140
+        },
+        {
+          "title": "RR for VNPT-NET",
+          "destination": "raw_evernote_converted/Recommends/RR for VNPT-NET.md",
+          "resources": 0,
+          "content_chars": 2322
+        },
+        {
+          "title": "slot gắn card FPC",
+          "destination": "raw_evernote_converted/Recommends/slot gắn card FPC.md",
+          "resources": 1,
+          "content_chars": 48
+        },
+        {
+          "title": "SNMP MIB thông tin module quang các dòng thiết bị của Juniper",
+          "destination": "raw_evernote_converted/Recommends/SNMP MIB thông tin module quang các dòng thiết bị của Juniper.md",
+          "resources": 0,
+          "content_chars": 1874
+        },
+        {
+          "title": "SPNWHCM - [Nội bộ] V/v các Junos mới nâng cấp cho VNPT VIETTEL - 08/2023",
+          "destination": "raw_evernote_converted/Recommends/SPNWHCM - _Nội bộ_ V_v các Junos mới nâng cấp cho VNPT VIETTEL - 08_2023.md",
+          "resources": 0,
+          "content_chars": 1040
+        },
+        {
+          "title": "SPNWHCM - TSB74336",
+          "destination": "raw_evernote_converted/Recommends/SPNWHCM - TSB74336.md",
+          "resources": 0,
+          "content_chars": 5907
+        },
+        {
+          "title": "Subscriber scale MX204 vs MX304",
+          "destination": "raw_evernote_converted/Recommends/Subscriber scale MX204 vs MX304.md",
+          "resources": 0,
+          "content_chars": 1574
+        },
+        {
+          "title": "Thông tin scaling port BRAS",
+          "destination": "raw_evernote_converted/Recommends/Thông tin scaling port BRAS.md",
+          "resources": 0,
+          "content_chars": 749
+        },
+        {
+          "title": "Thông tin scaling port BRAS",
+          "destination": "raw_evernote_converted/Recommends/Thông tin scaling port BRAS_2.md",
+          "resources": 0,
+          "content_chars": 1017
+        },
+        {
+          "title": "tính năng link-degrade để detect BER trên thiết bị Juniper",
+          "destination": "raw_evernote_converted/Recommends/tính năng link-degrade để detect BER trên thiết bị Juniper.md",
+          "resources": 0,
+          "content_chars": 5831
+        }
+      ]
+    },
+    {
+      "source": "raw_evernote/SLA.enex",
+      "notes": [
+        {
+          "title": "VIETTEL",
+          "destination": "raw_evernote_converted/SLA/VIETTEL.md",
+          "resources": 0,
+          "content_chars": 402
+        },
+        {
+          "title": "VNPT-NET / INOC3",
+          "destination": "raw_evernote_converted/SLA/VNPT-NET _ INOC3.md",
+          "resources": 0,
+          "content_chars": 357
+        }
+      ]
+    },
+    {
+      "source": "raw_evernote/SVT-LAB.enex",
+      "notes": [
+        {
+          "title": "EVE - 192.168.3.10",
+          "destination": "raw_evernote_converted/SVT-LAB/EVE - 192.168.3.10.md",
+          "resources": 0,
+          "content_chars": 700
+        },
+        {
+          "title": "Hướng dẫn login vào sử dụng lab EVE-NG",
+          "destination": "raw_evernote_converted/SVT-LAB/Hướng dẫn login vào sử dụng lab EVE-NG.md",
+          "resources": 11,
+          "content_chars": 2368
+        },
+        {
+          "title": "ms-mpc on eve-ng",
+          "destination": "raw_evernote_converted/SVT-LAB/ms-mpc on eve-ng.md",
+          "resources": 1,
+          "content_chars": 144
+        }
+      ]
+    },
+    {
+      "source": "raw_evernote/TS notes.enex",
+      "notes": [
+        {
+          "title": "1 số notes các ý cần khảo sát về nhà trạm đặt thiết bị",
+          "destination": "raw_evernote_converted/TS_notes/1 số notes các ý cần khảo sát về nhà trạm đặt thiết bị.md",
+          "resources": 1,
+          "content_chars": 48
+        },
+        {
+          "title": "10GbE LAN-PHY/40GbE/100GbE LFS (Link fault signalling)",
+          "destination": "raw_evernote_converted/TS_notes/10GbE LAN-PHY_40GbE_100GbE LFS (Link fault signalling).md",
+          "resources": 4,
+          "content_chars": 789
+        },
+        {
+          "title": "2021-0628-0028: heap memory increase",
+          "destination": "raw_evernote_converted/TS_notes/2021-0628-0028_ heap memory increase.md",
+          "resources": 1,
+          "content_chars": 3387
+        },
+        {
+          "title": "2021-1108-356720 - SV TECHNOLOGIES JSC - Viettel_MX_Clarification on how to calculate temperature threshold and fan speed",
+          "destination": "raw_evernote_converted/TS_notes/2021-1108-356720 - SV TECHNOLOGIES JSC - Viettel_MX_Clarification on how to calculate temperature threshold and fan speed.md",
+          "resources": 0,
+          "content_chars": 298
+        },
+        {
+          "title": "2021-1228-388762, [Mobifone-IPBB]Behaviour Route-target Family eBGP Session",
+          "destination": "raw_evernote_converted/TS_notes/2021-1228-388762, _Mobifone-IPBB_Behaviour Route-target Family eBGP Session.md",
+          "resources": 1,
+          "content_chars": 3123
+        },
+        {
+          "title": "[Internal Only] Not able to enter CLI mode of router (RE type: RE-S-X6-64G)",
+          "destination": "raw_evernote_converted/TS_notes/_Internal Only_ Not able to enter CLI mode of router (RE type_ RE-S-X6-64G).md",
+          "resources": 0,
+          "content_chars": 1155
+        },
+        {
+          "title": "[M/MX/T] Troubleshooting Checklist - BFD",
+          "destination": "raw_evernote_converted/TS_notes/_M_MX_T_ Troubleshooting Checklist - BFD.md",
+          "resources": 0,
+          "content_chars": 13968
+        },
+        {
+          "title": "[M/MX] How to check PPMD mode and troubleshooting tips",
+          "destination": "raw_evernote_converted/TS_notes/_M_MX_ How to check PPMD mode and troubleshooting tips.md",
+          "resources": 0,
+          "content_chars": 3504
+        },
+        {
+          "title": "[M/MX] jnxFruOfflineReason",
+          "destination": "raw_evernote_converted/TS_notes/_M_MX_ jnxFruOfflineReason.md",
+          "resources": 0,
+          "content_chars": 8634
+        },
+        {
+          "title": "[MX/PTX] How to determine which LSP is forwarding traffic on bypass LSP",
+          "destination": "raw_evernote_converted/TS_notes/_MX_PTX_ How to determine which LSP is forwarding traffic on bypass LSP.md",
+          "resources": 0,
+          "content_chars": 5633
+        },
+        {
+          "title": "[MX] How to identify the link that may be causing interrupt throttling on an MPC",
+          "destination": "raw_evernote_converted/TS_notes/_MX_ How to identify the link that may be causing interrupt throttling on an MPC.md",
+          "resources": 0,
+          "content_chars": 64
+        },
+        {
+          "title": "[QFX] How to identify FPC line card offline reason from chassisd SNMP TRAP",
+          "destination": "raw_evernote_converted/TS_notes/_QFX_ How to identify FPC line card offline reason from chassisd SNMP TRAP.md",
+          "resources": 0,
+          "content_chars": 7800
+        },
+        {
+          "title": "ACX2100 _ cách cấu hình event-option để active script thu thập thông tin thu phát của port quang",
+          "destination": "raw_evernote_converted/TS_notes/ACX2100 _ cách cấu hình event-option để active script thu thập thông tin thu phát của port quang.md",
+          "resources": 0,
+          "content_chars": 1015
+        },
+        {
+          "title": "ACX2100/ACX2200 classsifier traffic mpls theo exp",
+          "destination": "raw_evernote_converted/TS_notes/ACX2100_ACX2200 classsifier traffic mpls theo exp.md",
+          "resources": 0,
+          "content_chars": 241
+        },
+        {
+          "title": "ACX710 Known Limitations",
+          "destination": "raw_evernote_converted/TS_notes/ACX710 Known Limitations.md",
+          "resources": 0,
+          "content_chars": 1297
+        },
+        {
+          "title": "ACX7100",
+          "destination": "raw_evernote_converted/TS_notes/ACX7100.md",
+          "resources": 0,
+          "content_chars": 2652
+        },
+        {
+          "title": "Alarm on FPC",
+          "destination": "raw_evernote_converted/TS_notes/Alarm on FPC.md",
+          "resources": 0,
+          "content_chars": 13616
+        },
+        {
+          "title": "archival",
+          "destination": "raw_evernote_converted/TS_notes/archival.md",
+          "resources": 0,
+          "content_chars": 35
+        },
+        {
+          "title": "Attribute DNS IPv6 từ Radius cho Bras Juniper",
+          "destination": "raw_evernote_converted/TS_notes/Attribute DNS IPv6 từ Radius cho Bras Juniper.md",
+          "resources": 2,
+          "content_chars": 2090
+        },
+        {
+          "title": "auto-bandwidth notes",
+          "destination": "raw_evernote_converted/TS_notes/auto-bandwidth notes.md",
+          "resources": 0,
+          "content_chars": 365
+        },
+        {
+          "title": "auto-negotiation on ACX",
+          "destination": "raw_evernote_converted/TS_notes/auto-negotiation on ACX.md",
+          "resources": 1,
+          "content_chars": 1406
+        },
+        {
+          "title": "BFD",
+          "destination": "raw_evernote_converted/TS_notes/BFD.md",
+          "resources": 0,
+          "content_chars": 2914
+        },
+        {
+          "title": "BFD anchorship PFE",
+          "destination": "raw_evernote_converted/TS_notes/BFD anchorship PFE.md",
+          "resources": 1,
+          "content_chars": 27936
+        },
+        {
+          "title": "BFD ISSUE VIETTEL KV3/BRAS28",
+          "destination": "raw_evernote_converted/TS_notes/BFD ISSUE VIETTEL KV3_BRAS28.md",
+          "resources": 0,
+          "content_chars": 2280
+        },
+        {
+          "title": "BGP",
+          "destination": "raw_evernote_converted/TS_notes/BGP.md",
+          "resources": 0,
+          "content_chars": 696
+        },
+        {
+          "title": "BGP errror messages",
+          "destination": "raw_evernote_converted/TS_notes/BGP errror messages.md",
+          "resources": 5,
+          "content_chars": 4813
+        },
+        {
+          "title": "BGP flap",
+          "destination": "raw_evernote_converted/TS_notes/BGP flap.md",
+          "resources": 0,
+          "content_chars": 355
+        },
+        {
+          "title": "BRAS",
+          "destination": "raw_evernote_converted/TS_notes/BRAS.md",
+          "resources": 16,
+          "content_chars": 39737
+        },
+        {
+          "title": "BRAS - command ouputs",
+          "destination": "raw_evernote_converted/TS_notes/BRAS - command ouputs.md",
+          "resources": 0,
+          "content_chars": 6288
+        },
+        {
+          "title": "BRAS - TROUBLESHOOTING PPPoE in TOMCAT",
+          "destination": "raw_evernote_converted/TS_notes/BRAS - TROUBLESHOOTING PPPoE in TOMCAT.md",
+          "resources": 1,
+          "content_chars": 32533
+        },
+        {
+          "title": "BRAS check address-assignment",
+          "destination": "raw_evernote_converted/TS_notes/BRAS check address-assignment.md",
+          "resources": 0,
+          "content_chars": 3386
+        },
+        {
+          "title": "BUG Hold-time down không hoạt động được nếu cấu hình nhỏ hơn 1s trên interface chạy WANPHY",
+          "destination": "raw_evernote_converted/TS_notes/BUG Hold-time down không hoạt động được nếu cấu hình nhỏ hơn 1s trên interface chạy WANPHY.md",
+          "resources": 0,
+          "content_chars": 1213
+        },
+        {
+          "title": "Call JTAC",
+          "destination": "raw_evernote_converted/TS_notes/Call JTAC.md",
+          "resources": 1,
+          "content_chars": 48
+        },
+        {
+          "title": "capture the ttrace output",
+          "destination": "raw_evernote_converted/TS_notes/capture the ttrace output.md",
+          "resources": 0,
+          "content_chars": 1811
+        },
+        {
+          "title": "CFP",
+          "destination": "raw_evernote_converted/TS_notes/CFP.md",
+          "resources": 0,
+          "content_chars": 1184
+        },
+        {
+          "title": "CGNAT  thêm range mới vào trong Pool đã khai báo",
+          "destination": "raw_evernote_converted/TS_notes/CGNAT  thêm range mới vào trong Pool đã khai báo.md",
+          "resources": 1,
+          "content_chars": 1346
+        },
+        {
+          "title": "CGNAT troubleshoot commands",
+          "destination": "raw_evernote_converted/TS_notes/CGNAT troubleshoot commands.md",
+          "resources": 0,
+          "content_chars": 2358
+        },
+        {
+          "title": "Cisco command health check",
+          "destination": "raw_evernote_converted/TS_notes/Cisco command health check.md",
+          "resources": 0,
+          "content_chars": 2616
+        },
+        {
+          "title": "Class of Services - CoS for ACX",
+          "destination": "raw_evernote_converted/TS_notes/Class of Services - CoS for ACX.md",
+          "resources": 2,
+          "content_chars": 506
+        },
+        {
+          "title": "Class of Services - CoS notes",
+          "destination": "raw_evernote_converted/TS_notes/Class of Services - CoS notes.md",
+          "resources": 0,
+          "content_chars": 17503
+        },
+        {
+          "title": "Class of Services - CoS shell cmd on MPC7E (EA chip)",
+          "destination": "raw_evernote_converted/TS_notes/Class of Services - CoS shell cmd on MPC7E (EA chip).md",
+          "resources": 1,
+          "content_chars": 9366
+        },
+        {
+          "title": "Collect log on MPC10E/MPC11E",
+          "destination": "raw_evernote_converted/TS_notes/Collect log on MPC10E_MPC11E.md",
+          "resources": 0,
+          "content_chars": 1203
+        },
+        {
+          "title": "Command check liên quan đến CGNAT services",
+          "destination": "raw_evernote_converted/TS_notes/Command check liên quan đến CGNAT services.md",
+          "resources": 6,
+          "content_chars": 5436
+        },
+        {
+          "title": "Command check user bras pppoe stuck",
+          "destination": "raw_evernote_converted/TS_notes/Command check user bras pppoe stuck.md",
+          "resources": 1,
+          "content_chars": 8692
+        },
+        {
+          "title": "command list to collect the bfd data from the respective fpc",
+          "destination": "raw_evernote_converted/TS_notes/command list to collect the bfd data from the respective fpc.md",
+          "resources": 0,
+          "content_chars": 232
+        },
+        {
+          "title": "commands need to collect to check BFD (MPC10/11) - From TAC",
+          "destination": "raw_evernote_converted/TS_notes/commands need to collect to check BFD (MPC10_11) - From TAC.md",
+          "resources": 0,
+          "content_chars": 3083
+        },
+        {
+          "title": "commands need to collect to check EVPN-VXLAN (From This Week: Data Center Deployment with EVPN/VXLAN)",
+          "destination": "raw_evernote_converted/TS_notes/commands need to collect to check EVPN-VXLAN (From This Week_ Data Center Deployment with EVPN_VXLAN).md",
+          "resources": 0,
+          "content_chars": 3277
+        },
+        {
+          "title": "commands need to collect to check high CPU",
+          "destination": "raw_evernote_converted/TS_notes/commands need to collect to check high CPU.md",
+          "resources": 0,
+          "content_chars": 909
+        },
+        {
+          "title": "commands to trigger alarm on MX",
+          "destination": "raw_evernote_converted/TS_notes/commands to trigger alarm on MX.md",
+          "resources": 0,
+          "content_chars": 2050
+        },
+        {
+          "title": "Config CFM action down ifl",
+          "destination": "raw_evernote_converted/TS_notes/Config CFM action down ifl.md",
+          "resources": 1,
+          "content_chars": 48
+        },
+        {
+          "title": "Configure connection CCC example",
+          "destination": "raw_evernote_converted/TS_notes/Configure connection CCC example.md",
+          "resources": 0,
+          "content_chars": 1097
+        },
+        {
+          "title": "CoS class-of-service default queue name and scheduler",
+          "destination": "raw_evernote_converted/TS_notes/CoS class-of-service default queue name and scheduler.md",
+          "resources": 1,
+          "content_chars": 48
+        },
+        {
+          "title": "CoS class-of-service shell commands",
+          "destination": "raw_evernote_converted/TS_notes/CoS class-of-service shell commands.md",
+          "resources": 0,
+          "content_chars": 1179
+        },
+        {
+          "title": "các physical hw có trên jlab",
+          "destination": "raw_evernote_converted/TS_notes/các physical hw có trên jlab.md",
+          "resources": 1,
+          "content_chars": 48
+        },
+        {
+          "title": "Cách fill file atp VNPT",
+          "destination": "raw_evernote_converted/TS_notes/Cách fill file atp VNPT.md",
+          "resources": 1,
+          "content_chars": 48
+        },
+        {
+          "title": "cách upgrade/downgrade JunOS cho physical device on Jlab/vlab",
+          "destination": "raw_evernote_converted/TS_notes/cách upgrade_downgrade JunOS cho physical device on Jlab_vlab.md",
+          "resources": 0,
+          "content_chars": 1335
+        },
+        {
+          "title": "Cơ chế điều chỉnh tốc độ quạt MX",
+          "destination": "raw_evernote_converted/TS_notes/Cơ chế điều chỉnh tốc độ quạt MX.md",
+          "resources": 0,
+          "content_chars": 1620
+        },
+        {
+          "title": "DDOS pfe-RE TCP connections",
+          "destination": "raw_evernote_converted/TS_notes/DDOS pfe-RE TCP connections.md",
+          "resources": 0,
+          "content_chars": 757
+        },
+        {
+          "title": "Delay thời gian up time của CE interfaces",
+          "destination": "raw_evernote_converted/TS_notes/Delay thời gian up time của CE interfaces.md",
+          "resources": 0,
+          "content_chars": 414
+        },
+        {
+          "title": "Destinations RTBH notes",
+          "destination": "raw_evernote_converted/TS_notes/Destinations RTBH notes.md",
+          "resources": 1,
+          "content_chars": 48
+        },
+        {
+          "title": "Disable log to tty pfe",
+          "destination": "raw_evernote_converted/TS_notes/Disable log to tty pfe.md",
+          "resources": 0,
+          "content_chars": 23
+        },
+        {
+          "title": "ecmp-local-bias",
+          "destination": "raw_evernote_converted/TS_notes/ecmp-local-bias.md",
+          "resources": 0,
+          "content_chars": 1477
+        },
+        {
+          "title": "enhanced subscriber management daemon runs in 64-bit/32-bit",
+          "destination": "raw_evernote_converted/TS_notes/enhanced subscriber management daemon runs in 64-bit_32-bit.md",
+          "resources": 3,
+          "content_chars": 314
+        },
+        {
+          "title": "Entropy label capable",
+          "destination": "raw_evernote_converted/TS_notes/Entropy label capable.md",
+          "resources": 7,
+          "content_chars": 2041
+        },
+        {
+          "title": "eVPN",
+          "destination": "raw_evernote_converted/TS_notes/eVPN.md",
+          "resources": 0,
+          "content_chars": 302
+        },
+        {
+          "title": "evpn command check",
+          "destination": "raw_evernote_converted/TS_notes/evpn command check.md",
+          "resources": 2,
+          "content_chars": 95
+        },
+        {
+          "title": "Example - Understanding Dual-Stack PPPoE Subscriber",
+          "destination": "raw_evernote_converted/TS_notes/Example - Understanding Dual-Stack PPPoE Subscriber.md",
+          "resources": 0,
+          "content_chars": 12465
+        },
+        {
+          "title": "Firewall term scale",
+          "destination": "raw_evernote_converted/TS_notes/Firewall term scale.md",
+          "resources": 0,
+          "content_chars": 271
+        },
+        {
+          "title": "FPC",
+          "destination": "raw_evernote_converted/TS_notes/FPC.md",
+          "resources": 0,
+          "content_chars": 3407
+        },
+        {
+          "title": "High CPU due to show route",
+          "destination": "raw_evernote_converted/TS_notes/High CPU due to show route.md",
+          "resources": 0,
+          "content_chars": 1004
+        },
+        {
+          "title": "high NPU CPU in CGNAT",
+          "destination": "raw_evernote_converted/TS_notes/high NPU CPU in CGNAT.md",
+          "resources": 0,
+          "content_chars": 495
+        },
+        {
+          "title": "How to collect /var/log files from Next Generation Routing Engine (NG-RE)",
+          "destination": "raw_evernote_converted/TS_notes/How to collect _var_log files from Next Generation Routing Engine (NG-RE).md",
+          "resources": 0,
+          "content_chars": 1863
+        },
+        {
+          "title": "How to collect vmhost coredumps from Next Generation Routing Engine (NG-RE)",
+          "destination": "raw_evernote_converted/TS_notes/How to collect vmhost coredumps from Next Generation Routing Engine (NG-RE).md",
+          "resources": 0,
+          "content_chars": 756
+        },
+        {
+          "title": "How to disable PFE inline PPP keepalive messages",
+          "destination": "raw_evernote_converted/TS_notes/How to disable PFE inline PPP keepalive messages.md",
+          "resources": 0,
+          "content_chars": 4630
+        },
+        {
+          "title": "Huawei vlan manipulation",
+          "destination": "raw_evernote_converted/TS_notes/Huawei vlan manipulation.md",
+          "resources": 1,
+          "content_chars": 48
+        },
+        {
+          "title": "ICMP ping đấu nối nhảy time",
+          "destination": "raw_evernote_converted/TS_notes/ICMP ping đấu nối nhảy time.md",
+          "resources": 1,
+          "content_chars": 472
+        },
+        {
+          "title": "interfaces diagnostics optics",
+          "destination": "raw_evernote_converted/TS_notes/interfaces diagnostics optics.md",
+          "resources": 0,
+          "content_chars": 1268
+        },
+        {
+          "title": "IOS-XR Bridge Domains & MAC Addresses",
+          "destination": "raw_evernote_converted/TS_notes/IOS-XR Bridge Domains _ MAC Addresses.md",
+          "resources": 0,
+          "content_chars": 7869
+        },
+        {
+          "title": "JTASK_SCHED_SLIP khi bật lấy gcore (coredump process)",
+          "destination": "raw_evernote_converted/TS_notes/JTASK_SCHED_SLIP khi bật lấy gcore (coredump process).md",
+          "resources": 0,
+          "content_chars": 1108
+        },
+        {
+          "title": "Juniper MX204 1G port",
+          "destination": "raw_evernote_converted/TS_notes/Juniper MX204 1G port.md",
+          "resources": 0,
+          "content_chars": 692
+        },
+        {
+          "title": "Juniper RA vs FA",
+          "destination": "raw_evernote_converted/TS_notes/Juniper RA vs FA.md",
+          "resources": 0,
+          "content_chars": 3109
+        },
+        {
+          "title": "Juniper syslog facility và Severity",
+          "destination": "raw_evernote_converted/TS_notes/Juniper syslog facility và Severity.md",
+          "resources": 1,
+          "content_chars": 142
+        },
+        {
+          "title": "JunOS-EVO evo-pfemand",
+          "destination": "raw_evernote_converted/TS_notes/JunOS-EVO evo-pfemand.md",
+          "resources": 0,
+          "content_chars": 7506
+        },
+        {
+          "title": "KA LCP PPP command checks",
+          "destination": "raw_evernote_converted/TS_notes/KA LCP PPP command checks.md",
+          "resources": 0,
+          "content_chars": 10836
+        },
+        {
+          "title": "KB26261_[M/MX/T-series] Troubleshooting Checklist - Routing Engine High CPU",
+          "destination": "raw_evernote_converted/TS_notes/KB26261__M_MX_T-series_ Troubleshooting Checklist - Routing Engine High CPU.md",
+          "resources": 0,
+          "content_chars": 17686
+        },
+        {
+          "title": "Không commit được khi delete routing-instance ở trạng thái deactivate",
+          "destination": "raw_evernote_converted/TS_notes/Không commit được khi delete routing-instance ở trạng thái deactivate.md",
+          "resources": 0,
+          "content_chars": 1772
+        },
+        {
+          "title": "kiểm tra default mac-limit learning trên interaces/instance",
+          "destination": "raw_evernote_converted/TS_notes/kiểm tra default mac-limit learning trên interaces_instance.md",
+          "resources": 1,
+          "content_chars": 48
+        },
+        {
+          "title": "Kiểm tra tác động nào liên quan đến software/hardware/config",
+          "destination": "raw_evernote_converted/TS_notes/Kiểm tra tác động nào liên quan đến software_hardware_config.md",
+          "resources": 0,
+          "content_chars": 1169
+        },
+        {
+          "title": "Kênh IPTV đứng hình khi xem",
+          "destination": "raw_evernote_converted/TS_notes/Kênh IPTV đứng hình khi xem.md",
+          "resources": 0,
+          "content_chars": 498
+        },
+        {
+          "title": "L2circuit",
+          "destination": "raw_evernote_converted/TS_notes/L2circuit.md",
+          "resources": 0,
+          "content_chars": 80
+        },
+        {
+          "title": "Label usage",
+          "destination": "raw_evernote_converted/TS_notes/Label usage.md",
+          "resources": 0,
+          "content_chars": 67
+        },
+        {
+          "title": "LACP check-list commands",
+          "destination": "raw_evernote_converted/TS_notes/LACP check-list commands.md",
+          "resources": 0,
+          "content_chars": 5458
+        },
+        {
+          "title": "lacp flap khi dung VC mix-mode",
+          "destination": "raw_evernote_converted/TS_notes/lacp flap khi dung VC mix-mode.md",
+          "resources": 0,
+          "content_chars": 1169
+        },
+        {
+          "title": "LDP",
+          "destination": "raw_evernote_converted/TS_notes/LDP.md",
+          "resources": 0,
+          "content_chars": 332
+        },
+        {
+          "title": "ldp-tunneling or BGP-LU (swap label 0 behavior change from 19.x",
+          "destination": "raw_evernote_converted/TS_notes/ldp-tunneling or BGP-LU (swap label 0 behavior change from 19.x.md",
+          "resources": 3,
+          "content_chars": 142
+        },
+        {
+          "title": "Linecard reboot",
+          "destination": "raw_evernote_converted/TS_notes/Linecard reboot.md",
+          "resources": 0,
+          "content_chars": 142
+        },
+        {
+          "title": "Load-balance test",
+          "destination": "raw_evernote_converted/TS_notes/Load-balance test.md",
+          "resources": 1,
+          "content_chars": 276
+        },
+        {
+          "title": "Local convergence breakdown",
+          "destination": "raw_evernote_converted/TS_notes/Local convergence breakdown.md",
+          "resources": 1,
+          "content_chars": 48
+        },
+        {
+          "title": "Lấy log VMHOST",
+          "destination": "raw_evernote_converted/TS_notes/Lấy log VMHOST.md",
+          "resources": 0,
+          "content_chars": 674
+        },
+        {
+          "title": "Lệnh off laser mode shell <<< dùng flap link",
+          "destination": "raw_evernote_converted/TS_notes/Lệnh off laser mode shell _ dùng flap link.md",
+          "resources": 0,
+          "content_chars": 1642
+        },
+        {
+          "title": "Manual way to trigger the CB 0 19.44 alarm",
+          "destination": "raw_evernote_converted/TS_notes/Manual way to trigger the CB 0 19.44 alarm.md",
+          "resources": 0,
+          "content_chars": 1395
+        },
+        {
+          "title": "Memory RPD",
+          "destination": "raw_evernote_converted/TS_notes/Memory RPD.md",
+          "resources": 7,
+          "content_chars": 330
+        },
+        {
+          "title": "MPC11E - LACP không up/join",
+          "destination": "raw_evernote_converted/TS_notes/MPC11E - LACP không up_join.md",
+          "resources": 0,
+          "content_chars": 5565
+        },
+        {
+          "title": "MPC3E Hard errors",
+          "destination": "raw_evernote_converted/TS_notes/MPC3E Hard errors.md",
+          "resources": 0,
+          "content_chars": 1055
+        },
+        {
+          "title": "MS-MPC throughput",
+          "destination": "raw_evernote_converted/TS_notes/MS-MPC throughput.md",
+          "resources": 1,
+          "content_chars": 2432
+        },
+        {
+          "title": "MS-SPC3",
+          "destination": "raw_evernote_converted/TS_notes/MS-SPC3.md",
+          "resources": 2,
+          "content_chars": 139
+        },
+        {
+          "title": "multiple Junos-cli commands at the same time",
+          "destination": "raw_evernote_converted/TS_notes/multiple Junos-cli commands at the same time.md",
+          "resources": 0,
+          "content_chars": 307
+        },
+        {
+          "title": "MX960_MS-MPC_CGNAT SNMP OID monitor CPU, MEM of NPUs on MS-MPC",
+          "destination": "raw_evernote_converted/TS_notes/MX960_MS-MPC_CGNAT SNMP OID monitor CPU, MEM of NPUs on MS-MPC.md",
+          "resources": 0,
+          "content_chars": 1848
+        },
+        {
+          "title": "Nâng cấp NG-RE từ Junos 17.X-18.X lên 19.3R1 or Later",
+          "destination": "raw_evernote_converted/TS_notes/Nâng cấp NG-RE từ Junos 17.X-18.X lên 19.3R1 or Later.md",
+          "resources": 0,
+          "content_chars": 3296
+        },
+        {
+          "title": "OID Alarm count",
+          "destination": "raw_evernote_converted/TS_notes/OID Alarm count.md",
+          "resources": 0,
+          "content_chars": 1168
+        },
+        {
+          "title": "OID BRAS relative",
+          "destination": "raw_evernote_converted/TS_notes/OID BRAS relative.md",
+          "resources": 0,
+          "content_chars": 1200
+        },
+        {
+          "title": "OID lấy VRF name",
+          "destination": "raw_evernote_converted/TS_notes/OID lấy VRF name.md",
+          "resources": 0,
+          "content_chars": 1350
+        },
+        {
+          "title": "PEM",
+          "destination": "raw_evernote_converted/TS_notes/PEM.md",
+          "resources": 0,
+          "content_chars": 816
+        },
+        {
+          "title": "PFE disable script",
+          "destination": "raw_evernote_converted/TS_notes/PFE disable script.md",
+          "resources": 0,
+          "content_chars": 1610
+        },
+        {
+          "title": "pfe local-bias",
+          "destination": "raw_evernote_converted/TS_notes/pfe local-bias.md",
+          "resources": 0,
+          "content_chars": 3727
+        },
+        {
+          "title": "PFE packet capture",
+          "destination": "raw_evernote_converted/TS_notes/PFE packet capture.md",
+          "resources": 0,
+          "content_chars": 1180
+        },
+        {
+          "title": "PFE packet capture on MX104",
+          "destination": "raw_evernote_converted/TS_notes/PFE packet capture on MX104.md",
+          "resources": 0,
+          "content_chars": 544
+        },
+        {
+          "title": "PIM instances",
+          "destination": "raw_evernote_converted/TS_notes/PIM instances.md",
+          "resources": 1,
+          "content_chars": 556
+        },
+        {
+          "title": "Port mirror on Juniper MX",
+          "destination": "raw_evernote_converted/TS_notes/Port mirror on Juniper MX.md",
+          "resources": 0,
+          "content_chars": 1428
+        },
+        {
+          "title": "Qui tắc về forwarding traffic với VPLS mesh-group",
+          "destination": "raw_evernote_converted/TS_notes/Qui tắc về forwarding traffic với VPLS mesh-group.md",
+          "resources": 0,
+          "content_chars": 1101
+        },
+        {
+          "title": "RE boot loop with SCBE3",
+          "destination": "raw_evernote_converted/TS_notes/RE boot loop with SCBE3.md",
+          "resources": 0,
+          "content_chars": 169
+        },
+        {
+          "title": "Recommendation/Best Practise ACX7100",
+          "destination": "raw_evernote_converted/TS_notes/Recommendation_Best Practise ACX7100.md",
+          "resources": 1,
+          "content_chars": 48
+        },
+        {
+          "title": "Restart SFB 4 MX2K",
+          "destination": "raw_evernote_converted/TS_notes/Restart SFB 4 MX2K.md",
+          "resources": 0,
+          "content_chars": 616
+        },
+        {
+          "title": "Restart the SNMP process",
+          "destination": "raw_evernote_converted/TS_notes/Restart the SNMP process.md",
+          "resources": 0,
+          "content_chars": 562
+        },
+        {
+          "title": "RPD 64-bit/32-bit mode",
+          "destination": "raw_evernote_converted/TS_notes/RPD 64-bit_32-bit mode.md",
+          "resources": 0,
+          "content_chars": 1920
+        },
+        {
+          "title": "RPD mode 64-bit",
+          "destination": "raw_evernote_converted/TS_notes/RPD mode 64-bit.md",
+          "resources": 0,
+          "content_chars": 3637
+        },
+        {
+          "title": "RR không nhận được route từ các PE tỉnh - SR-2021-1208-1924",
+          "destination": "raw_evernote_converted/TS_notes/RR không nhận được route từ các PE tỉnh - SR-2021-1208-1924.md",
+          "resources": 2,
+          "content_chars": 12004
+        },
+        {
+          "title": "scale MPC4E",
+          "destination": "raw_evernote_converted/TS_notes/scale MPC4E.md",
+          "resources": 0,
+          "content_chars": 532
+        },
+        {
+          "title": "SCB",
+          "destination": "raw_evernote_converted/TS_notes/SCB.md",
+          "resources": 0,
+          "content_chars": 474
+        },
+        {
+          "title": "SCB",
+          "destination": "raw_evernote_converted/TS_notes/SCB_2.md",
+          "resources": 0,
+          "content_chars": 3017
+        },
+        {
+          "title": "SCU-DCU on QFX10002 không hỗ trợ",
+          "destination": "raw_evernote_converted/TS_notes/SCU-DCU on QFX10002 không hỗ trợ.md",
+          "resources": 0,
+          "content_chars": 681
+        },
+        {
+          "title": "set link-speed 100G cho interface ae với et-8 interface",
+          "destination": "raw_evernote_converted/TS_notes/set link-speed 100G cho interface ae với et-8 interface.md",
+          "resources": 1,
+          "content_chars": 48
+        },
+        {
+          "title": "set system debugger-on-panic  and set system debugger-on-break",
+          "destination": "raw_evernote_converted/TS_notes/set system debugger-on-panic  and set system debugger-on-break.md",
+          "resources": 0,
+          "content_chars": 666
+        },
+        {
+          "title": "show firewall in PFE",
+          "destination": "raw_evernote_converted/TS_notes/show firewall in PFE.md",
+          "resources": 0,
+          "content_chars": 24812
+        },
+        {
+          "title": "SNMP Ifindex",
+          "destination": "raw_evernote_converted/TS_notes/SNMP Ifindex.md",
+          "resources": 0,
+          "content_chars": 1471
+        },
+        {
+          "title": "SNMP interface jnxDom (laser) MIB OID",
+          "destination": "raw_evernote_converted/TS_notes/SNMP interface jnxDom (laser) MIB OID.md",
+          "resources": 0,
+          "content_chars": 225
+        },
+        {
+          "title": "SNMP interface rate MIB OID",
+          "destination": "raw_evernote_converted/TS_notes/SNMP interface rate MIB OID.md",
+          "resources": 0,
+          "content_chars": 387
+        },
+        {
+          "title": "SNMP LSP InOutOctet MIB OID copy",
+          "destination": "raw_evernote_converted/TS_notes/SNMP LSP InOutOctet MIB OID copy.md",
+          "resources": 0,
+          "content_chars": 165
+        },
+        {
+          "title": "SNMP oid heap mem line card để giám sát",
+          "destination": "raw_evernote_converted/TS_notes/SNMP oid heap mem line card để giám sát.md",
+          "resources": 0,
+          "content_chars": 201
+        },
+        {
+          "title": "Some AMS and MS-MPC notes",
+          "destination": "raw_evernote_converted/TS_notes/Some AMS and MS-MPC notes.md",
+          "resources": 1,
+          "content_chars": 192
+        },
+        {
+          "title": "Untitled Note",
+          "destination": "raw_evernote_converted/TS_notes/Untitled Note.md",
+          "resources": 0,
+          "content_chars": 1736
+        },
+        {
+          "title": "Source-base RTBH notes",
+          "destination": "raw_evernote_converted/TS_notes/Source-base RTBH notes.md",
+          "resources": 1,
+          "content_chars": 137
+        },
+        {
+          "title": "SR-2021-1215-1608 - Hỗ trợ thử nghiệm IPv6 tĩnh cho KH CĐBR",
+          "destination": "raw_evernote_converted/TS_notes/SR-2021-1215-1608 - Hỗ trợ thử nghiệm IPv6 tĩnh cho KH CĐBR.md",
+          "resources": 0,
+          "content_chars": 1241
+        },
+        {
+          "title": "SR-2023-0301-1744 - Viettel- SLA- Check nguyên nhân không activate routing-instances mặc dù track không down rpm probe",
+          "destination": "raw_evernote_converted/TS_notes/SR-2023-0301-1744 - Viettel- SLA- Check nguyên nhân không activate routing-instances mặc dù track không down rpm probe.md",
+          "resources": 0,
+          "content_chars": 4756
+        },
+        {
+          "title": "support RE and Chassis power-cycle",
+          "destination": "raw_evernote_converted/TS_notes/support RE and Chassis power-cycle.md",
+          "resources": 0,
+          "content_chars": 180
+        },
+        {
+          "title": "switch EX2300 bị cao tải CPU -SNMP",
+          "destination": "raw_evernote_converted/TS_notes/switch EX2300 bị cao tải CPU -SNMP.md",
+          "resources": 0,
+          "content_chars": 3436
+        },
+        {
+          "title": "switch EX2300 không commit được",
+          "destination": "raw_evernote_converted/TS_notes/switch EX2300 không commit được.md",
+          "resources": 0,
+          "content_chars": 602
+        },
+        {
+          "title": "Symmetric Load Balancing",
+          "destination": "raw_evernote_converted/TS_notes/Symmetric Load Balancing.md",
+          "resources": 6,
+          "content_chars": 293
+        },
+        {
+          "title": "Syslog message: MQCHIP.*FI Enqueuing error.*type.*seq.*stream",
+          "destination": "raw_evernote_converted/TS_notes/Syslog message_ MQCHIP._FI Enqueuing error._type._seq._stream.md",
+          "resources": 1,
+          "content_chars": 149
+        },
+        {
+          "title": "sử dụng BFD cho LSP",
+          "destination": "raw_evernote_converted/TS_notes/sử dụng BFD cho LSP.md",
+          "resources": 0,
+          "content_chars": 2020
+        },
+        {
+          "title": "TCAM ACX show",
+          "destination": "raw_evernote_converted/TS_notes/TCAM ACX show.md",
+          "resources": 0,
+          "content_chars": 404
+        },
+        {
+          "title": "Tcpdump packet on RE MX",
+          "destination": "raw_evernote_converted/TS_notes/Tcpdump packet on RE MX.md",
+          "resources": 0,
+          "content_chars": 4918
+        },
+        {
+          "title": "Temperature - fan speed",
+          "destination": "raw_evernote_converted/TS_notes/Temperature - fan speed.md",
+          "resources": 3,
+          "content_chars": 2214
+        },
+        {
+          "title": "Test Juniper telemetry with jtimon (OpenConfig)",
+          "destination": "raw_evernote_converted/TS_notes/Test Juniper telemetry with jtimon (OpenConfig).md",
+          "resources": 2,
+          "content_chars": 5656
+        },
+        {
+          "title": "The subscribers cannot online on AE interface",
+          "destination": "raw_evernote_converted/TS_notes/The subscribers cannot online on AE interface.md",
+          "resources": 0,
+          "content_chars": 4452
+        },
+        {
+          "title": "Thu thập log PFE on RE",
+          "destination": "raw_evernote_converted/TS_notes/Thu thập log PFE on RE.md",
+          "resources": 1,
+          "content_chars": 673
+        },
+        {
+          "title": "traceoptions for specific RSVP",
+          "destination": "raw_evernote_converted/TS_notes/traceoptions for specific RSVP.md",
+          "resources": 0,
+          "content_chars": 1397
+        },
+        {
+          "title": "Track specific packet sizes or specific MAC",
+          "destination": "raw_evernote_converted/TS_notes/Track specific packet sizes or specific MAC.md",
+          "resources": 0,
+          "content_chars": 1240
+        },
+        {
+          "title": "triển khai apply term Block_CTH_POLYCOM vào filter block-frag-in của Inside CGNAT",
+          "destination": "raw_evernote_converted/TS_notes/triển khai apply term Block_CTH_POLYCOM vào filter block-frag-in của Inside CGNAT.md",
+          "resources": 0,
+          "content_chars": 1654
+        },
+        {
+          "title": "Tối ưu BRAS RR Juniper Viettel",
+          "destination": "raw_evernote_converted/TS_notes/Tối ưu BRAS RR Juniper Viettel.md",
+          "resources": 1,
+          "content_chars": 1448
+        },
+        {
+          "title": "Untitled Note",
+          "destination": "raw_evernote_converted/TS_notes/Untitled Note_2.md",
+          "resources": 0,
+          "content_chars": 409
+        },
+        {
+          "title": "Untitled Note",
+          "destination": "raw_evernote_converted/TS_notes/Untitled Note_3.md",
+          "resources": 0,
+          "content_chars": 2784
+        },
+        {
+          "title": "upgrade OS",
+          "destination": "raw_evernote_converted/TS_notes/upgrade OS.md",
+          "resources": 0,
+          "content_chars": 718
+        },
+        {
+          "title": "xư lý cảnh báo RPD_MPLS_INTF_MAX_LABELS_ERROR HPG8001PRT02",
+          "destination": "raw_evernote_converted/TS_notes/xư lý cảnh báo RPD_MPLS_INTF_MAX_LABELS_ERROR HPG8001PRT02.md",
+          "resources": 0,
+          "content_chars": 735
+        },
+        {
+          "title": "Xử lý CFP, XFP bị lõi",
+          "destination": "raw_evernote_converted/TS_notes/Xử lý CFP, XFP bị lõi.md",
+          "resources": 0,
+          "content_chars": 3728
+        },
+        {
+          "title": "yum groupinstall \"Development Tools\"",
+          "destination": "raw_evernote_converted/TS_notes/yum groupinstall _Development Tools_.md",
+          "resources": 0,
+          "content_chars": 167
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "notebooks": 16,
+    "notes": 347,
+    "resources": 493
+  }
+}

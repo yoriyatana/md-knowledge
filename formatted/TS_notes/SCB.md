@@ -16,9 +16,9 @@ MX240 & MX480:
 
 - Redundancy:
 
-   + SCB/SCBE/SCBE2: 1+1 (4 plane active - 4 plane spare)
++ SCB/SCBE/SCBE2: 1+1 (4 plane active - 4 plane spare)
 
-   + SCBE3: [https://www.juniper.net/documentation/us/en/hardware/mx960/topics/concept/scbe3-desc.html](https://www.juniper.net/documentation/us/en/hardware/mx960/topics/concept/scbe3-desc.html)
++ SCBE3: <https://www.juniper.net/documentation/us/en/hardware/mx960/topics/concept/scbe3-desc.html>
 
 MX960: (SCB/SCBE/SCBE2/SCBE3)
 

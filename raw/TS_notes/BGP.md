@@ -8,9 +8,9 @@ show interfaces diagnostics optics | no-more
 
 show interfaces extensive | no-more
 
-show chassis alarms 
+show chassis alarms
 
-show chassis hardware models 
+show chassis hardware models
 
 show system uptime no-forwarding
 
