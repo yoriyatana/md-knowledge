@@ -5,8 +5,8 @@ Project lưu trữ file Markdown raw và bản đã chuẩn hóa.
 ## Cấu trúc
 
 - `raw/`: đặt các file Markdown gốc, có thể chia thành nhiều thư mục con.
-- `formatted/`: kết quả được tạo tự động, giữ nguyên tên và toàn bộ cấu trúc thư mục
-  tương ứng với `raw/`.
+- `formatted/`: kết quả được tạo tự động, giữ nguyên tên, toàn bộ cấu trúc thư mục
+  và các asset (ảnh, file đính kèm) tương ứng với `raw/`.
 - `reports/`: báo cáo JSON của mỗi lần chạy.
 - `tools/reformat_markdown.py`: formatter batch, không tự sửa câu chữ.
 
@@ -31,7 +31,7 @@ gốc của project:
 
 Ví dụ `raw/classification/Concepts_Theory/topic.md` sẽ tạo thành
 `formatted/classification/Concepts_Theory/topic.md`. Các file không phải `.md`
-trong `raw/` sẽ không bị đọc hoặc sao chép.
+trong `raw/` được sao chép nguyên trạng để các link ảnh/file tương đối tiếp tục hoạt động.
 
 Để loại trừ thư mục local-only khỏi kết quả public, dùng `--exclude-dir`:
 

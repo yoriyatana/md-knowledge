@@ -2348,8 +2348,3226 @@
       "output_bytes": 10296
     }
   ],
+  "assets": [
+    {
+      "source": "raw/.gitkeep",
+      "destination": "formatted/.gitkeep",
+      "bytes": 0
+    },
+    {
+      "source": "raw/Case_notes/image/15333a63ca9e9860d57c5d99b2215662.png",
+      "destination": "formatted/Case_notes/image/15333a63ca9e9860d57c5d99b2215662.png",
+      "bytes": 39532
+    },
+    {
+      "source": "raw/Case_notes/image/216f3edd004bc887c474eabc1c7ed14a.png",
+      "destination": "formatted/Case_notes/image/216f3edd004bc887c474eabc1c7ed14a.png",
+      "bytes": 13400
+    },
+    {
+      "source": "raw/Case_notes/image/2428d66518d7dc8e0f0a90ae63124371.png",
+      "destination": "formatted/Case_notes/image/2428d66518d7dc8e0f0a90ae63124371.png",
+      "bytes": 243910
+    },
+    {
+      "source": "raw/Case_notes/image/3d20d7497ac2423853494a76ef07d7e8.png",
+      "destination": "formatted/Case_notes/image/3d20d7497ac2423853494a76ef07d7e8.png",
+      "bytes": 32592
+    },
+    {
+      "source": "raw/Case_notes/image/5c8cde33bb23e0bf662b1e0691bc1ff5.png",
+      "destination": "formatted/Case_notes/image/5c8cde33bb23e0bf662b1e0691bc1ff5.png",
+      "bytes": 84656
+    },
+    {
+      "source": "raw/Case_notes/image/6b75e57088fe2d9ffccce50b0e82ba7a.png",
+      "destination": "formatted/Case_notes/image/6b75e57088fe2d9ffccce50b0e82ba7a.png",
+      "bytes": 51658
+    },
+    {
+      "source": "raw/Case_notes/image/75437703d27a24fd42cecc1142f7741e.png",
+      "destination": "formatted/Case_notes/image/75437703d27a24fd42cecc1142f7741e.png",
+      "bytes": 43408
+    },
+    {
+      "source": "raw/Case_notes/image/7aa2d13613d916f8d88d6110007ca111.png",
+      "destination": "formatted/Case_notes/image/7aa2d13613d916f8d88d6110007ca111.png",
+      "bytes": 976717
+    },
+    {
+      "source": "raw/Case_notes/image/8523735b713016e15af506736027b823.png",
+      "destination": "formatted/Case_notes/image/8523735b713016e15af506736027b823.png",
+      "bytes": 419833
+    },
+    {
+      "source": "raw/Case_notes/image/ab249447d19ad731dc6f9d2278cfd119.jpg",
+      "destination": "formatted/Case_notes/image/ab249447d19ad731dc6f9d2278cfd119.jpg",
+      "bytes": 60257
+    },
+    {
+      "source": "raw/Case_notes/image/ed2ea2b47fb2c274231beedc2ed70529.png",
+      "destination": "formatted/Case_notes/image/ed2ea2b47fb2c274231beedc2ed70529.png",
+      "bytes": 97422
+    },
+    {
+      "source": "raw/LAB_SVT_GROUP/image/4c243552e663f0278f0c16261d721c57.png",
+      "destination": "formatted/LAB_SVT_GROUP/image/4c243552e663f0278f0c16261d721c57.png",
+      "bytes": 12975
+    },
+    {
+      "source": "raw/LAB_SVT_GROUP/image/583c0da0d8b4fee9aca5d8a03528a276.png",
+      "destination": "formatted/LAB_SVT_GROUP/image/583c0da0d8b4fee9aca5d8a03528a276.png",
+      "bytes": 9511
+    },
+    {
+      "source": "raw/LAB_SVT_GROUP/image/6a728e569c81d8fb1a9dbb477e5bc8c4.png",
+      "destination": "formatted/LAB_SVT_GROUP/image/6a728e569c81d8fb1a9dbb477e5bc8c4.png",
+      "bytes": 18408
+    },
+    {
+      "source": "raw/Learning_Notes/image/0018d7d9cd094b3c7004ba211e706c22.png",
+      "destination": "formatted/Learning_Notes/image/0018d7d9cd094b3c7004ba211e706c22.png",
+      "bytes": 25286
+    },
+    {
+      "source": "raw/Learning_Notes/image/020260dad93102953c83169a17586a38.png",
+      "destination": "formatted/Learning_Notes/image/020260dad93102953c83169a17586a38.png",
+      "bytes": 361422
+    },
+    {
+      "source": "raw/Learning_Notes/image/04eccf8291c33ffc01cfd574dc080f00.png",
+      "destination": "formatted/Learning_Notes/image/04eccf8291c33ffc01cfd574dc080f00.png",
+      "bytes": 9626
+    },
+    {
+      "source": "raw/Learning_Notes/image/058f2558addaf8e0da51baf851eed836.png",
+      "destination": "formatted/Learning_Notes/image/058f2558addaf8e0da51baf851eed836.png",
+      "bytes": 915457
+    },
+    {
+      "source": "raw/Learning_Notes/image/06fa87acc516f41dc3dd96d38ba765ea.png",
+      "destination": "formatted/Learning_Notes/image/06fa87acc516f41dc3dd96d38ba765ea.png",
+      "bytes": 341790
+    },
+    {
+      "source": "raw/Learning_Notes/image/0b90d9d776a9b292c2f28666b78574e2.png",
+      "destination": "formatted/Learning_Notes/image/0b90d9d776a9b292c2f28666b78574e2.png",
+      "bytes": 2633
+    },
+    {
+      "source": "raw/Learning_Notes/image/0bf5673e621d9a52297e8f539fb76c64.png",
+      "destination": "formatted/Learning_Notes/image/0bf5673e621d9a52297e8f539fb76c64.png",
+      "bytes": 5663
+    },
+    {
+      "source": "raw/Learning_Notes/image/0cadf6b35a39d6eba7587d87de124e1b.png",
+      "destination": "formatted/Learning_Notes/image/0cadf6b35a39d6eba7587d87de124e1b.png",
+      "bytes": 254268
+    },
+    {
+      "source": "raw/Learning_Notes/image/129917427ae5a81bc3c3380e2245856e.png",
+      "destination": "formatted/Learning_Notes/image/129917427ae5a81bc3c3380e2245856e.png",
+      "bytes": 845065
+    },
+    {
+      "source": "raw/Learning_Notes/image/12e14f68e6c81150f15f7c32198c8634.png",
+      "destination": "formatted/Learning_Notes/image/12e14f68e6c81150f15f7c32198c8634.png",
+      "bytes": 35419
+    },
+    {
+      "source": "raw/Learning_Notes/image/13fb4cd0e3b432d6795c91da6895fc7d.png",
+      "destination": "formatted/Learning_Notes/image/13fb4cd0e3b432d6795c91da6895fc7d.png",
+      "bytes": 172094
+    },
+    {
+      "source": "raw/Learning_Notes/image/189dd75f3a1a0d39a8613d9a8f66e1e4.png",
+      "destination": "formatted/Learning_Notes/image/189dd75f3a1a0d39a8613d9a8f66e1e4.png",
+      "bytes": 7250
+    },
+    {
+      "source": "raw/Learning_Notes/image/19ed1ddf82d019257306166f5668417f.png",
+      "destination": "formatted/Learning_Notes/image/19ed1ddf82d019257306166f5668417f.png",
+      "bytes": 2096
+    },
+    {
+      "source": "raw/Learning_Notes/image/1a45d63be156f5863c1853784da5ebe5.png",
+      "destination": "formatted/Learning_Notes/image/1a45d63be156f5863c1853784da5ebe5.png",
+      "bytes": 68512
+    },
+    {
+      "source": "raw/Learning_Notes/image/1b24fd30cbae38d22bc376d39f298e2e.png",
+      "destination": "formatted/Learning_Notes/image/1b24fd30cbae38d22bc376d39f298e2e.png",
+      "bytes": 596614
+    },
+    {
+      "source": "raw/Learning_Notes/image/1c120fc52c6b7e97f6e39c52805c6478.png",
+      "destination": "formatted/Learning_Notes/image/1c120fc52c6b7e97f6e39c52805c6478.png",
+      "bytes": 3019
+    },
+    {
+      "source": "raw/Learning_Notes/image/1f60a.svg",
+      "destination": "formatted/Learning_Notes/image/1f60a.svg",
+      "bytes": 1055
+    },
+    {
+      "source": "raw/Learning_Notes/image/1fdc4f39897578df1027e973696cb238.png",
+      "destination": "formatted/Learning_Notes/image/1fdc4f39897578df1027e973696cb238.png",
+      "bytes": 158905
+    },
+    {
+      "source": "raw/Learning_Notes/image/21ff5a283ddd7d617bb33e5e9f13b632.png",
+      "destination": "formatted/Learning_Notes/image/21ff5a283ddd7d617bb33e5e9f13b632.png",
+      "bytes": 375267
+    },
+    {
+      "source": "raw/Learning_Notes/image/235cfd21dab7eecdc370c68db21eec7c.png",
+      "destination": "formatted/Learning_Notes/image/235cfd21dab7eecdc370c68db21eec7c.png",
+      "bytes": 1561
+    },
+    {
+      "source": "raw/Learning_Notes/image/26c83b01459943205743e6d24fd60fb7.jpg",
+      "destination": "formatted/Learning_Notes/image/26c83b01459943205743e6d24fd60fb7.jpg",
+      "bytes": 16560
+    },
+    {
+      "source": "raw/Learning_Notes/image/2806ccffa77b1c8a241dbab4e195fd13.png",
+      "destination": "formatted/Learning_Notes/image/2806ccffa77b1c8a241dbab4e195fd13.png",
+      "bytes": 8202
+    },
+    {
+      "source": "raw/Learning_Notes/image/2888ddbb7ec4828f93c7bf1fad707de8.png",
+      "destination": "formatted/Learning_Notes/image/2888ddbb7ec4828f93c7bf1fad707de8.png",
+      "bytes": 51114
+    },
+    {
+      "source": "raw/Learning_Notes/image/2cf4ec57e40546c4a512c838aab44a10.png",
+      "destination": "formatted/Learning_Notes/image/2cf4ec57e40546c4a512c838aab44a10.png",
+      "bytes": 1650
+    },
+    {
+      "source": "raw/Learning_Notes/image/2d8639e8942c6b17a3483525a4e62c50.png",
+      "destination": "formatted/Learning_Notes/image/2d8639e8942c6b17a3483525a4e62c50.png",
+      "bytes": 30834
+    },
+    {
+      "source": "raw/Learning_Notes/image/2f36f4e1aaa4b4f96998dc60d7c9176e.png",
+      "destination": "formatted/Learning_Notes/image/2f36f4e1aaa4b4f96998dc60d7c9176e.png",
+      "bytes": 13106
+    },
+    {
+      "source": "raw/Learning_Notes/image/2fab0157d62b553c2097538dce06f042.png",
+      "destination": "formatted/Learning_Notes/image/2fab0157d62b553c2097538dce06f042.png",
+      "bytes": 7086
+    },
+    {
+      "source": "raw/Learning_Notes/image/32a14eecf94af999fa9331e6d97e14ee.png",
+      "destination": "formatted/Learning_Notes/image/32a14eecf94af999fa9331e6d97e14ee.png",
+      "bytes": 10435
+    },
+    {
+      "source": "raw/Learning_Notes/image/340a0e6070e4f294f2d38fac6bf215a2.png",
+      "destination": "formatted/Learning_Notes/image/340a0e6070e4f294f2d38fac6bf215a2.png",
+      "bytes": 12099
+    },
+    {
+      "source": "raw/Learning_Notes/image/386a9961a3c49427942f52d41d2ff263.png",
+      "destination": "formatted/Learning_Notes/image/386a9961a3c49427942f52d41d2ff263.png",
+      "bytes": 13019
+    },
+    {
+      "source": "raw/Learning_Notes/image/39339a35cfd838d1ef2389165ed50372.png",
+      "destination": "formatted/Learning_Notes/image/39339a35cfd838d1ef2389165ed50372.png",
+      "bytes": 15955
+    },
+    {
+      "source": "raw/Learning_Notes/image/399618e58888dcd04231156c6b2afe93.png",
+      "destination": "formatted/Learning_Notes/image/399618e58888dcd04231156c6b2afe93.png",
+      "bytes": 10349
+    },
+    {
+      "source": "raw/Learning_Notes/image/3bd7eea83b85fede19e2ebd684e8c324.png",
+      "destination": "formatted/Learning_Notes/image/3bd7eea83b85fede19e2ebd684e8c324.png",
+      "bytes": 9512
+    },
+    {
+      "source": "raw/Learning_Notes/image/3cc2c3aa670e9d618445bc2ed7736bc9.png",
+      "destination": "formatted/Learning_Notes/image/3cc2c3aa670e9d618445bc2ed7736bc9.png",
+      "bytes": 441565
+    },
+    {
+      "source": "raw/Learning_Notes/image/3d5a542d078afd3293e1bd700d3f39c4.png",
+      "destination": "formatted/Learning_Notes/image/3d5a542d078afd3293e1bd700d3f39c4.png",
+      "bytes": 9924
+    },
+    {
+      "source": "raw/Learning_Notes/image/3de1e58b4b03eeab604dc614e7daf23d.png",
+      "destination": "formatted/Learning_Notes/image/3de1e58b4b03eeab604dc614e7daf23d.png",
+      "bytes": 62676
+    },
+    {
+      "source": "raw/Learning_Notes/image/401bb25769f9c31e61053bab4cbd46f0.jpg",
+      "destination": "formatted/Learning_Notes/image/401bb25769f9c31e61053bab4cbd46f0.jpg",
+      "bytes": 18437
+    },
+    {
+      "source": "raw/Learning_Notes/image/426b19d1fa4c00361b89872e05bf01f3.jpg",
+      "destination": "formatted/Learning_Notes/image/426b19d1fa4c00361b89872e05bf01f3.jpg",
+      "bytes": 21765
+    },
+    {
+      "source": "raw/Learning_Notes/image/46f6d30146ca06af992ff423aff94ec5.png",
+      "destination": "formatted/Learning_Notes/image/46f6d30146ca06af992ff423aff94ec5.png",
+      "bytes": 24616
+    },
+    {
+      "source": "raw/Learning_Notes/image/491c37f817906ffff70e417365484bc3.png",
+      "destination": "formatted/Learning_Notes/image/491c37f817906ffff70e417365484bc3.png",
+      "bytes": 63888
+    },
+    {
+      "source": "raw/Learning_Notes/image/491ffb9211b788648e25aec4442a780d.png",
+      "destination": "formatted/Learning_Notes/image/491ffb9211b788648e25aec4442a780d.png",
+      "bytes": 1632
+    },
+    {
+      "source": "raw/Learning_Notes/image/4c54e4782944ef074635ecfaecaa98b8.png",
+      "destination": "formatted/Learning_Notes/image/4c54e4782944ef074635ecfaecaa98b8.png",
+      "bytes": 265909
+    },
+    {
+      "source": "raw/Learning_Notes/image/4ebc621e514dd96bca784c0eafd1b1e4.png",
+      "destination": "formatted/Learning_Notes/image/4ebc621e514dd96bca784c0eafd1b1e4.png",
+      "bytes": 68433
+    },
+    {
+      "source": "raw/Learning_Notes/image/50d68996b9165030d19aec1dd370eb88.png",
+      "destination": "formatted/Learning_Notes/image/50d68996b9165030d19aec1dd370eb88.png",
+      "bytes": 5854
+    },
+    {
+      "source": "raw/Learning_Notes/image/50eb6ea052a2e1201ed566cbe2d9a1a2.png",
+      "destination": "formatted/Learning_Notes/image/50eb6ea052a2e1201ed566cbe2d9a1a2.png",
+      "bytes": 9206
+    },
+    {
+      "source": "raw/Learning_Notes/image/534eebdc7ca8e2e42e26eb6110ef24ed.png",
+      "destination": "formatted/Learning_Notes/image/534eebdc7ca8e2e42e26eb6110ef24ed.png",
+      "bytes": 585037
+    },
+    {
+      "source": "raw/Learning_Notes/image/54e273f22a919f6c46c0d2443fbe9c67.jpg",
+      "destination": "formatted/Learning_Notes/image/54e273f22a919f6c46c0d2443fbe9c67.jpg",
+      "bytes": 53300
+    },
+    {
+      "source": "raw/Learning_Notes/image/57c027dead16dbc2ac9b41bded59b51d.png",
+      "destination": "formatted/Learning_Notes/image/57c027dead16dbc2ac9b41bded59b51d.png",
+      "bytes": 24139
+    },
+    {
+      "source": "raw/Learning_Notes/image/5b08f8ce518ce1350ae212e24468eecf.png",
+      "destination": "formatted/Learning_Notes/image/5b08f8ce518ce1350ae212e24468eecf.png",
+      "bytes": 257730
+    },
+    {
+      "source": "raw/Learning_Notes/image/5ec075157566c05b21a469be6dbf3a4f.png",
+      "destination": "formatted/Learning_Notes/image/5ec075157566c05b21a469be6dbf3a4f.png",
+      "bytes": 25112
+    },
+    {
+      "source": "raw/Learning_Notes/image/62e5e98893424ee10828297a0a2d175f.png",
+      "destination": "formatted/Learning_Notes/image/62e5e98893424ee10828297a0a2d175f.png",
+      "bytes": 4114
+    },
+    {
+      "source": "raw/Learning_Notes/image/636f7c8bb4e2e6eab8d1f5d92f7e24c0.png",
+      "destination": "formatted/Learning_Notes/image/636f7c8bb4e2e6eab8d1f5d92f7e24c0.png",
+      "bytes": 16298
+    },
+    {
+      "source": "raw/Learning_Notes/image/65a074fd16c63f38fdcefebde295d9da.png",
+      "destination": "formatted/Learning_Notes/image/65a074fd16c63f38fdcefebde295d9da.png",
+      "bytes": 12662
+    },
+    {
+      "source": "raw/Learning_Notes/image/6775dcd7bbfef34fe97304b374e0daf8.png",
+      "destination": "formatted/Learning_Notes/image/6775dcd7bbfef34fe97304b374e0daf8.png",
+      "bytes": 198084
+    },
+    {
+      "source": "raw/Learning_Notes/image/6a4fcc6e9440506e86d0736b592f0ab8.png",
+      "destination": "formatted/Learning_Notes/image/6a4fcc6e9440506e86d0736b592f0ab8.png",
+      "bytes": 5160
+    },
+    {
+      "source": "raw/Learning_Notes/image/6b3824d06382c3469b9886c43ae97fc3.png",
+      "destination": "formatted/Learning_Notes/image/6b3824d06382c3469b9886c43ae97fc3.png",
+      "bytes": 142628
+    },
+    {
+      "source": "raw/Learning_Notes/image/6fc05c2d0cf240ed6e6863584a470ee5.png",
+      "destination": "formatted/Learning_Notes/image/6fc05c2d0cf240ed6e6863584a470ee5.png",
+      "bytes": 25029
+    },
+    {
+      "source": "raw/Learning_Notes/image/72f85189de830e569cb77e0b46ac692b.png",
+      "destination": "formatted/Learning_Notes/image/72f85189de830e569cb77e0b46ac692b.png",
+      "bytes": 28661
+    },
+    {
+      "source": "raw/Learning_Notes/image/74cd80c4be57f1143d251e7624d2dc9e.png",
+      "destination": "formatted/Learning_Notes/image/74cd80c4be57f1143d251e7624d2dc9e.png",
+      "bytes": 8106
+    },
+    {
+      "source": "raw/Learning_Notes/image/754ab35408643a6c5a196a9bfbc5fac6.png",
+      "destination": "formatted/Learning_Notes/image/754ab35408643a6c5a196a9bfbc5fac6.png",
+      "bytes": 419371
+    },
+    {
+      "source": "raw/Learning_Notes/image/7af8427f0febe8c680e563f2cb17087a.png",
+      "destination": "formatted/Learning_Notes/image/7af8427f0febe8c680e563f2cb17087a.png",
+      "bytes": 598905
+    },
+    {
+      "source": "raw/Learning_Notes/image/82303206d8c7192b065f466398287ca1.jpg",
+      "destination": "formatted/Learning_Notes/image/82303206d8c7192b065f466398287ca1.jpg",
+      "bytes": 30229
+    },
+    {
+      "source": "raw/Learning_Notes/image/93918ddaccf3d2524006557cea0a2223.jpg",
+      "destination": "formatted/Learning_Notes/image/93918ddaccf3d2524006557cea0a2223.jpg",
+      "bytes": 19202
+    },
+    {
+      "source": "raw/Learning_Notes/image/947efe96414af0fc72679cb3ea2e2f3b.png",
+      "destination": "formatted/Learning_Notes/image/947efe96414af0fc72679cb3ea2e2f3b.png",
+      "bytes": 428215
+    },
+    {
+      "source": "raw/Learning_Notes/image/96219a6e02e0b2cd95c9e14df2f05e55.png",
+      "destination": "formatted/Learning_Notes/image/96219a6e02e0b2cd95c9e14df2f05e55.png",
+      "bytes": 150621
+    },
+    {
+      "source": "raw/Learning_Notes/image/Attachment-1.png",
+      "destination": "formatted/Learning_Notes/image/Attachment-1.png",
+      "bytes": 146392
+    },
+    {
+      "source": "raw/Learning_Notes/image/Attachment-10.png",
+      "destination": "formatted/Learning_Notes/image/Attachment-10.png",
+      "bytes": 196756
+    },
+    {
+      "source": "raw/Learning_Notes/image/Attachment-2.png",
+      "destination": "formatted/Learning_Notes/image/Attachment-2.png",
+      "bytes": 103970
+    },
+    {
+      "source": "raw/Learning_Notes/image/Attachment-3.png",
+      "destination": "formatted/Learning_Notes/image/Attachment-3.png",
+      "bytes": 212717
+    },
+    {
+      "source": "raw/Learning_Notes/image/Attachment-4.png",
+      "destination": "formatted/Learning_Notes/image/Attachment-4.png",
+      "bytes": 164137
+    },
+    {
+      "source": "raw/Learning_Notes/image/Attachment-5.png",
+      "destination": "formatted/Learning_Notes/image/Attachment-5.png",
+      "bytes": 187376
+    },
+    {
+      "source": "raw/Learning_Notes/image/Attachment-6.png",
+      "destination": "formatted/Learning_Notes/image/Attachment-6.png",
+      "bytes": 54043
+    },
+    {
+      "source": "raw/Learning_Notes/image/Attachment-7.png",
+      "destination": "formatted/Learning_Notes/image/Attachment-7.png",
+      "bytes": 136418
+    },
+    {
+      "source": "raw/Learning_Notes/image/Attachment-8.png",
+      "destination": "formatted/Learning_Notes/image/Attachment-8.png",
+      "bytes": 169484
+    },
+    {
+      "source": "raw/Learning_Notes/image/Attachment-9.png",
+      "destination": "formatted/Learning_Notes/image/Attachment-9.png",
+      "bytes": 192270
+    },
+    {
+      "source": "raw/Learning_Notes/image/Attachment.png",
+      "destination": "formatted/Learning_Notes/image/Attachment.png",
+      "bytes": 113480
+    },
+    {
+      "source": "raw/Learning_Notes/image/ISIS-BACKBONE.png",
+      "destination": "formatted/Learning_Notes/image/ISIS-BACKBONE.png",
+      "bytes": 23166
+    },
+    {
+      "source": "raw/Learning_Notes/image/ISIS-area.png",
+      "destination": "formatted/Learning_Notes/image/ISIS-area.png",
+      "bytes": 7488
+    },
+    {
+      "source": "raw/Learning_Notes/image/ISIS-boundary.png",
+      "destination": "formatted/Learning_Notes/image/ISIS-boundary.png",
+      "bytes": 19577
+    },
+    {
+      "source": "raw/Learning_Notes/image/ISIS-picture.png",
+      "destination": "formatted/Learning_Notes/image/ISIS-picture.png",
+      "bytes": 38146
+    },
+    {
+      "source": "raw/Learning_Notes/image/ISIS_title.png",
+      "destination": "formatted/Learning_Notes/image/ISIS_title.png",
+      "bytes": 4842
+    },
+    {
+      "source": "raw/Learning_Notes/image/JUNOS-diagram1.png",
+      "destination": "formatted/Learning_Notes/image/JUNOS-diagram1.png",
+      "bytes": 17923
+    },
+    {
+      "source": "raw/Learning_Notes/image/NET.png",
+      "destination": "formatted/Learning_Notes/image/NET.png",
+      "bytes": 8790
+    },
+    {
+      "source": "raw/Learning_Notes/image/OSPF-BACKBONE.png",
+      "destination": "formatted/Learning_Notes/image/OSPF-BACKBONE.png",
+      "bytes": 15184
+    },
+    {
+      "source": "raw/Learning_Notes/image/OSPF-boundary.png",
+      "destination": "formatted/Learning_Notes/image/OSPF-boundary.png",
+      "bytes": 18610
+    },
+    {
+      "source": "raw/Learning_Notes/image/OSPF_title-1.png",
+      "destination": "formatted/Learning_Notes/image/OSPF_title-1.png",
+      "bytes": 6055
+    },
+    {
+      "source": "raw/Learning_Notes/image/a231dfd34d4cc7c1434d14ba2c35605c.png",
+      "destination": "formatted/Learning_Notes/image/a231dfd34d4cc7c1434d14ba2c35605c.png",
+      "bytes": 15747
+    },
+    {
+      "source": "raw/Learning_Notes/image/a272d5f14568fdf38db2e246b8007f92.png",
+      "destination": "formatted/Learning_Notes/image/a272d5f14568fdf38db2e246b8007f92.png",
+      "bytes": 663159
+    },
+    {
+      "source": "raw/Learning_Notes/image/a50ec60c64e5af1915f1f4b076f2389e.png",
+      "destination": "formatted/Learning_Notes/image/a50ec60c64e5af1915f1f4b076f2389e.png",
+      "bytes": 8841
+    },
+    {
+      "source": "raw/Learning_Notes/image/a956e8461b2102891c73a3b78b0f2ed7.png",
+      "destination": "formatted/Learning_Notes/image/a956e8461b2102891c73a3b78b0f2ed7.png",
+      "bytes": 14090
+    },
+    {
+      "source": "raw/Learning_Notes/image/ae934991f1d3ed822ac890c388981610.png",
+      "destination": "formatted/Learning_Notes/image/ae934991f1d3ed822ac890c388981610.png",
+      "bytes": 8793
+    },
+    {
+      "source": "raw/Learning_Notes/image/af75725a0edad614cc38cceca7a4a00a.png",
+      "destination": "formatted/Learning_Notes/image/af75725a0edad614cc38cceca7a4a00a.png",
+      "bytes": 99513
+    },
+    {
+      "source": "raw/Learning_Notes/image/area0-ospf-route-removal.png",
+      "destination": "formatted/Learning_Notes/image/area0-ospf-route-removal.png",
+      "bytes": 53504
+    },
+    {
+      "source": "raw/Learning_Notes/image/b1eaa9c5ad90409336e54e94005e2a82.png",
+      "destination": "formatted/Learning_Notes/image/b1eaa9c5ad90409336e54e94005e2a82.png",
+      "bytes": 72110
+    },
+    {
+      "source": "raw/Learning_Notes/image/b3b8fa0848870df564768e4b6169d465.png",
+      "destination": "formatted/Learning_Notes/image/b3b8fa0848870df564768e4b6169d465.png",
+      "bytes": 2822
+    },
+    {
+      "source": "raw/Learning_Notes/image/b3c72649203c6ed8e43fe3999b6a4578.png",
+      "destination": "formatted/Learning_Notes/image/b3c72649203c6ed8e43fe3999b6a4578.png",
+      "bytes": 21828
+    },
+    {
+      "source": "raw/Learning_Notes/image/b5d311873770adc72b11105196b3c010.png",
+      "destination": "formatted/Learning_Notes/image/b5d311873770adc72b11105196b3c010.png",
+      "bytes": 7979
+    },
+    {
+      "source": "raw/Learning_Notes/image/b758a0dd1992948251108cafce1b9bff.png",
+      "destination": "formatted/Learning_Notes/image/b758a0dd1992948251108cafce1b9bff.png",
+      "bytes": 5775
+    },
+    {
+      "source": "raw/Learning_Notes/image/bc1e687bdf47c5f0e6d908168513f506.png",
+      "destination": "formatted/Learning_Notes/image/bc1e687bdf47c5f0e6d908168513f506.png",
+      "bytes": 487740
+    },
+    {
+      "source": "raw/Learning_Notes/image/bc273e50b20ffe8e59d39e83aebd9f15.png",
+      "destination": "formatted/Learning_Notes/image/bc273e50b20ffe8e59d39e83aebd9f15.png",
+      "bytes": 14515
+    },
+    {
+      "source": "raw/Learning_Notes/image/bd2b178fb52ba7d4e0175b25c7da9461.png",
+      "destination": "formatted/Learning_Notes/image/bd2b178fb52ba7d4e0175b25c7da9461.png",
+      "bytes": 177706
+    },
+    {
+      "source": "raw/Learning_Notes/image/c2607cc4621f985c63cf95560ed66ec4.png",
+      "destination": "formatted/Learning_Notes/image/c2607cc4621f985c63cf95560ed66ec4.png",
+      "bytes": 867518
+    },
+    {
+      "source": "raw/Learning_Notes/image/c5296c1130b4968992d80cdc8a7f9839.jpg",
+      "destination": "formatted/Learning_Notes/image/c5296c1130b4968992d80cdc8a7f9839.jpg",
+      "bytes": 20344
+    },
+    {
+      "source": "raw/Learning_Notes/image/c5ae1f82b34f4eead51c3f1dc2054f4f.png",
+      "destination": "formatted/Learning_Notes/image/c5ae1f82b34f4eead51c3f1dc2054f4f.png",
+      "bytes": 46208
+    },
+    {
+      "source": "raw/Learning_Notes/image/c77a0edfbc5f2d627d04451ab74380ee.png",
+      "destination": "formatted/Learning_Notes/image/c77a0edfbc5f2d627d04451ab74380ee.png",
+      "bytes": 180625
+    },
+    {
+      "source": "raw/Learning_Notes/image/ce3f43ffe5174a0af2d77e8988fe7fdd.png",
+      "destination": "formatted/Learning_Notes/image/ce3f43ffe5174a0af2d77e8988fe7fdd.png",
+      "bytes": 32923
+    },
+    {
+      "source": "raw/Learning_Notes/image/d405eb1219dcb94b395cb8c0840c74d3.png",
+      "destination": "formatted/Learning_Notes/image/d405eb1219dcb94b395cb8c0840c74d3.png",
+      "bytes": 48043
+    },
+    {
+      "source": "raw/Learning_Notes/image/d5a1003fda0c0fbcdac4f75efbc587f2.png",
+      "destination": "formatted/Learning_Notes/image/d5a1003fda0c0fbcdac4f75efbc587f2.png",
+      "bytes": 28377
+    },
+    {
+      "source": "raw/Learning_Notes/image/d7fe9e2495701a9f8e9682aa6cbfd6bf.png",
+      "destination": "formatted/Learning_Notes/image/d7fe9e2495701a9f8e9682aa6cbfd6bf.png",
+      "bytes": 220156
+    },
+    {
+      "source": "raw/Learning_Notes/image/dcbc9ba59285d80ed7a7f4e5561dc289.png",
+      "destination": "formatted/Learning_Notes/image/dcbc9ba59285d80ed7a7f4e5561dc289.png",
+      "bytes": 7930
+    },
+    {
+      "source": "raw/Learning_Notes/image/e506f183715f8ac897180d17063a505c.png",
+      "destination": "formatted/Learning_Notes/image/e506f183715f8ac897180d17063a505c.png",
+      "bytes": 13887
+    },
+    {
+      "source": "raw/Learning_Notes/image/e64dd97d311f08e1158056e6290402ca.png",
+      "destination": "formatted/Learning_Notes/image/e64dd97d311f08e1158056e6290402ca.png",
+      "bytes": 129645
+    },
+    {
+      "source": "raw/Learning_Notes/image/e69530714442021d241271af6fd08b8f.png",
+      "destination": "formatted/Learning_Notes/image/e69530714442021d241271af6fd08b8f.png",
+      "bytes": 9695
+    },
+    {
+      "source": "raw/Learning_Notes/image/e76870c2ce4d1deac33a6f6975af6257.jpg",
+      "destination": "formatted/Learning_Notes/image/e76870c2ce4d1deac33a6f6975af6257.jpg",
+      "bytes": 14613
+    },
+    {
+      "source": "raw/Learning_Notes/image/eaa170dbfb0c22897208fb4d38370fbf.png",
+      "destination": "formatted/Learning_Notes/image/eaa170dbfb0c22897208fb4d38370fbf.png",
+      "bytes": 346178
+    },
+    {
+      "source": "raw/Learning_Notes/image/ec445b0653da61e0e217f659304045da.png",
+      "destination": "formatted/Learning_Notes/image/ec445b0653da61e0e217f659304045da.png",
+      "bytes": 18674
+    },
+    {
+      "source": "raw/Learning_Notes/image/eff14548d757016110e7c0d95c16afbf.png",
+      "destination": "formatted/Learning_Notes/image/eff14548d757016110e7c0d95c16afbf.png",
+      "bytes": 13994
+    },
+    {
+      "source": "raw/Learning_Notes/image/f207ac509158b91c6e87250b97b66b46.png",
+      "destination": "formatted/Learning_Notes/image/f207ac509158b91c6e87250b97b66b46.png",
+      "bytes": 5089
+    },
+    {
+      "source": "raw/Learning_Notes/image/f31eb230c50cc5f9e81041356eebda4b.png",
+      "destination": "formatted/Learning_Notes/image/f31eb230c50cc5f9e81041356eebda4b.png",
+      "bytes": 29951
+    },
+    {
+      "source": "raw/Learning_Notes/image/f5f99722918393d06a1b15f1f4af1435.png",
+      "destination": "formatted/Learning_Notes/image/f5f99722918393d06a1b15f1f4af1435.png",
+      "bytes": 97296
+    },
+    {
+      "source": "raw/Learning_Notes/image/fafc9f9503add0c340c04133e12eda91.png",
+      "destination": "formatted/Learning_Notes/image/fafc9f9503add0c340c04133e12eda91.png",
+      "bytes": 31274
+    },
+    {
+      "source": "raw/Learning_Notes/image/ff3e7b227ffd108333463ac672168359.png",
+      "destination": "formatted/Learning_Notes/image/ff3e7b227ffd108333463ac672168359.png",
+      "bytes": 55881
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-1.png",
+      "destination": "formatted/Learning_Notes/image/image-1.png",
+      "bytes": 2816575
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-10.png",
+      "destination": "formatted/Learning_Notes/image/image-10.png",
+      "bytes": 61603
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-100.png",
+      "destination": "formatted/Learning_Notes/image/image-100.png",
+      "bytes": 10903
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-101.png",
+      "destination": "formatted/Learning_Notes/image/image-101.png",
+      "bytes": 10821
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-102.png",
+      "destination": "formatted/Learning_Notes/image/image-102.png",
+      "bytes": 18169
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-103.png",
+      "destination": "formatted/Learning_Notes/image/image-103.png",
+      "bytes": 8408
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-104.png",
+      "destination": "formatted/Learning_Notes/image/image-104.png",
+      "bytes": 32948
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-105.png",
+      "destination": "formatted/Learning_Notes/image/image-105.png",
+      "bytes": 34907
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-106.png",
+      "destination": "formatted/Learning_Notes/image/image-106.png",
+      "bytes": 22063
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-107.png",
+      "destination": "formatted/Learning_Notes/image/image-107.png",
+      "bytes": 13583
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-108.png",
+      "destination": "formatted/Learning_Notes/image/image-108.png",
+      "bytes": 20882
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-109.png",
+      "destination": "formatted/Learning_Notes/image/image-109.png",
+      "bytes": 14019
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-110.png",
+      "destination": "formatted/Learning_Notes/image/image-110.png",
+      "bytes": 10522
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-111.png",
+      "destination": "formatted/Learning_Notes/image/image-111.png",
+      "bytes": 13954
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-112.png",
+      "destination": "formatted/Learning_Notes/image/image-112.png",
+      "bytes": 10039
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-113.png",
+      "destination": "formatted/Learning_Notes/image/image-113.png",
+      "bytes": 10487
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-114.png",
+      "destination": "formatted/Learning_Notes/image/image-114.png",
+      "bytes": 10605
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-115.png",
+      "destination": "formatted/Learning_Notes/image/image-115.png",
+      "bytes": 17691
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-116.png",
+      "destination": "formatted/Learning_Notes/image/image-116.png",
+      "bytes": 31137
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-117.png",
+      "destination": "formatted/Learning_Notes/image/image-117.png",
+      "bytes": 14075
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-118.png",
+      "destination": "formatted/Learning_Notes/image/image-118.png",
+      "bytes": 29416
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-119.png",
+      "destination": "formatted/Learning_Notes/image/image-119.png",
+      "bytes": 44371
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-12.png",
+      "destination": "formatted/Learning_Notes/image/image-12.png",
+      "bytes": 10647
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-120.png",
+      "destination": "formatted/Learning_Notes/image/image-120.png",
+      "bytes": 65464
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-13.png",
+      "destination": "formatted/Learning_Notes/image/image-13.png",
+      "bytes": 15592
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-14.png",
+      "destination": "formatted/Learning_Notes/image/image-14.png",
+      "bytes": 11163
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-15.png",
+      "destination": "formatted/Learning_Notes/image/image-15.png",
+      "bytes": 4391
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-16.png",
+      "destination": "formatted/Learning_Notes/image/image-16.png",
+      "bytes": 12729
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-17.png",
+      "destination": "formatted/Learning_Notes/image/image-17.png",
+      "bytes": 21535
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-18.png",
+      "destination": "formatted/Learning_Notes/image/image-18.png",
+      "bytes": 23412
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-19.png",
+      "destination": "formatted/Learning_Notes/image/image-19.png",
+      "bytes": 33617
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-2.png",
+      "destination": "formatted/Learning_Notes/image/image-2.png",
+      "bytes": 4601
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-20.png",
+      "destination": "formatted/Learning_Notes/image/image-20.png",
+      "bytes": 46427
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-21.png",
+      "destination": "formatted/Learning_Notes/image/image-21.png",
+      "bytes": 31680
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-22.png",
+      "destination": "formatted/Learning_Notes/image/image-22.png",
+      "bytes": 24235
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-23.png",
+      "destination": "formatted/Learning_Notes/image/image-23.png",
+      "bytes": 10994
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-24.png",
+      "destination": "formatted/Learning_Notes/image/image-24.png",
+      "bytes": 14470
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-25.png",
+      "destination": "formatted/Learning_Notes/image/image-25.png",
+      "bytes": 3605
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-26.png",
+      "destination": "formatted/Learning_Notes/image/image-26.png",
+      "bytes": 6517
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-27.png",
+      "destination": "formatted/Learning_Notes/image/image-27.png",
+      "bytes": 20527
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-28.png",
+      "destination": "formatted/Learning_Notes/image/image-28.png",
+      "bytes": 125765
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-29.png",
+      "destination": "formatted/Learning_Notes/image/image-29.png",
+      "bytes": 8274
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-30.png",
+      "destination": "formatted/Learning_Notes/image/image-30.png",
+      "bytes": 4757
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-31.png",
+      "destination": "formatted/Learning_Notes/image/image-31.png",
+      "bytes": 60927
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-33.png",
+      "destination": "formatted/Learning_Notes/image/image-33.png",
+      "bytes": 66686
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-34.png",
+      "destination": "formatted/Learning_Notes/image/image-34.png",
+      "bytes": 49213
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-35.png",
+      "destination": "formatted/Learning_Notes/image/image-35.png",
+      "bytes": 8274
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-36.png",
+      "destination": "formatted/Learning_Notes/image/image-36.png",
+      "bytes": 80881
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-37.png",
+      "destination": "formatted/Learning_Notes/image/image-37.png",
+      "bytes": 2840
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-38.png",
+      "destination": "formatted/Learning_Notes/image/image-38.png",
+      "bytes": 28928
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-39.png",
+      "destination": "formatted/Learning_Notes/image/image-39.png",
+      "bytes": 9731
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-40.png",
+      "destination": "formatted/Learning_Notes/image/image-40.png",
+      "bytes": 13606
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-41.png",
+      "destination": "formatted/Learning_Notes/image/image-41.png",
+      "bytes": 14207
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-42.png",
+      "destination": "formatted/Learning_Notes/image/image-42.png",
+      "bytes": 15201
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-43.png",
+      "destination": "formatted/Learning_Notes/image/image-43.png",
+      "bytes": 23140
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-44.png",
+      "destination": "formatted/Learning_Notes/image/image-44.png",
+      "bytes": 33280
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-45.png",
+      "destination": "formatted/Learning_Notes/image/image-45.png",
+      "bytes": 7165
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-46.png",
+      "destination": "formatted/Learning_Notes/image/image-46.png",
+      "bytes": 8397
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-48.png",
+      "destination": "formatted/Learning_Notes/image/image-48.png",
+      "bytes": 7534
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-49.png",
+      "destination": "formatted/Learning_Notes/image/image-49.png",
+      "bytes": 7060
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-50.png",
+      "destination": "formatted/Learning_Notes/image/image-50.png",
+      "bytes": 6322
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-51.png",
+      "destination": "formatted/Learning_Notes/image/image-51.png",
+      "bytes": 4337
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-52.png",
+      "destination": "formatted/Learning_Notes/image/image-52.png",
+      "bytes": 8168
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-53.png",
+      "destination": "formatted/Learning_Notes/image/image-53.png",
+      "bytes": 7239
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-54.png",
+      "destination": "formatted/Learning_Notes/image/image-54.png",
+      "bytes": 8323
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-55.png",
+      "destination": "formatted/Learning_Notes/image/image-55.png",
+      "bytes": 50146
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-56.png",
+      "destination": "formatted/Learning_Notes/image/image-56.png",
+      "bytes": 8740
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-57.png",
+      "destination": "formatted/Learning_Notes/image/image-57.png",
+      "bytes": 65822
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-58.png",
+      "destination": "formatted/Learning_Notes/image/image-58.png",
+      "bytes": 31158
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-59.png",
+      "destination": "formatted/Learning_Notes/image/image-59.png",
+      "bytes": 8922
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-6.png",
+      "destination": "formatted/Learning_Notes/image/image-6.png",
+      "bytes": 4231
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-60.png",
+      "destination": "formatted/Learning_Notes/image/image-60.png",
+      "bytes": 13079
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-61.png",
+      "destination": "formatted/Learning_Notes/image/image-61.png",
+      "bytes": 10014
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-62.png",
+      "destination": "formatted/Learning_Notes/image/image-62.png",
+      "bytes": 9921
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-63.png",
+      "destination": "formatted/Learning_Notes/image/image-63.png",
+      "bytes": 15646
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-64.png",
+      "destination": "formatted/Learning_Notes/image/image-64.png",
+      "bytes": 12352
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-65.png",
+      "destination": "formatted/Learning_Notes/image/image-65.png",
+      "bytes": 12436
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-67.png",
+      "destination": "formatted/Learning_Notes/image/image-67.png",
+      "bytes": 10819
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-68.png",
+      "destination": "formatted/Learning_Notes/image/image-68.png",
+      "bytes": 5616
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-69.png",
+      "destination": "formatted/Learning_Notes/image/image-69.png",
+      "bytes": 30507
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-70.png",
+      "destination": "formatted/Learning_Notes/image/image-70.png",
+      "bytes": 7224
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-71.png",
+      "destination": "formatted/Learning_Notes/image/image-71.png",
+      "bytes": 10077
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-72.png",
+      "destination": "formatted/Learning_Notes/image/image-72.png",
+      "bytes": 34643
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-73.png",
+      "destination": "formatted/Learning_Notes/image/image-73.png",
+      "bytes": 11339
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-74.png",
+      "destination": "formatted/Learning_Notes/image/image-74.png",
+      "bytes": 10238
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-75.png",
+      "destination": "formatted/Learning_Notes/image/image-75.png",
+      "bytes": 10154
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-76.png",
+      "destination": "formatted/Learning_Notes/image/image-76.png",
+      "bytes": 11419
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-77.png",
+      "destination": "formatted/Learning_Notes/image/image-77.png",
+      "bytes": 7553
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-78.png",
+      "destination": "formatted/Learning_Notes/image/image-78.png",
+      "bytes": 21487
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-79.png",
+      "destination": "formatted/Learning_Notes/image/image-79.png",
+      "bytes": 11409
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-80.png",
+      "destination": "formatted/Learning_Notes/image/image-80.png",
+      "bytes": 10191
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-81.png",
+      "destination": "formatted/Learning_Notes/image/image-81.png",
+      "bytes": 11355
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-82.png",
+      "destination": "formatted/Learning_Notes/image/image-82.png",
+      "bytes": 10241
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-83.png",
+      "destination": "formatted/Learning_Notes/image/image-83.png",
+      "bytes": 10170
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-84.png",
+      "destination": "formatted/Learning_Notes/image/image-84.png",
+      "bytes": 10109
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-85.png",
+      "destination": "formatted/Learning_Notes/image/image-85.png",
+      "bytes": 10509
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-86.png",
+      "destination": "formatted/Learning_Notes/image/image-86.png",
+      "bytes": 5078
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-87.png",
+      "destination": "formatted/Learning_Notes/image/image-87.png",
+      "bytes": 17534
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-88.png",
+      "destination": "formatted/Learning_Notes/image/image-88.png",
+      "bytes": 9624
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-89.png",
+      "destination": "formatted/Learning_Notes/image/image-89.png",
+      "bytes": 9882
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-9.png",
+      "destination": "formatted/Learning_Notes/image/image-9.png",
+      "bytes": 34827
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-90.png",
+      "destination": "formatted/Learning_Notes/image/image-90.png",
+      "bytes": 9828
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-92.png",
+      "destination": "formatted/Learning_Notes/image/image-92.png",
+      "bytes": 9850
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-93.png",
+      "destination": "formatted/Learning_Notes/image/image-93.png",
+      "bytes": 34191
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-94.png",
+      "destination": "formatted/Learning_Notes/image/image-94.png",
+      "bytes": 11279
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-95.png",
+      "destination": "formatted/Learning_Notes/image/image-95.png",
+      "bytes": 10904
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-96.png",
+      "destination": "formatted/Learning_Notes/image/image-96.png",
+      "bytes": 11000
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-97.png",
+      "destination": "formatted/Learning_Notes/image/image-97.png",
+      "bytes": 10861
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-98.png",
+      "destination": "formatted/Learning_Notes/image/image-98.png",
+      "bytes": 10980
+    },
+    {
+      "source": "raw/Learning_Notes/image/image-99.png",
+      "destination": "formatted/Learning_Notes/image/image-99.png",
+      "bytes": 11327
+    },
+    {
+      "source": "raw/Learning_Notes/image/image.png",
+      "destination": "formatted/Learning_Notes/image/image.png",
+      "bytes": 7580
+    },
+    {
+      "source": "raw/Learning_Notes/image/isis-rules-1.png",
+      "destination": "formatted/Learning_Notes/image/isis-rules-1.png",
+      "bytes": 18939
+    },
+    {
+      "source": "raw/Learning_Notes/image/ospf-areas.png",
+      "destination": "formatted/Learning_Notes/image/ospf-areas.png",
+      "bytes": 11466
+    },
+    {
+      "source": "raw/Learning_Notes/image/ospf-route-removal-withdraw.png",
+      "destination": "formatted/Learning_Notes/image/ospf-route-removal-withdraw.png",
+      "bytes": 38195
+    },
+    {
+      "source": "raw/Learning_Notes/image/policy_isis-1.png",
+      "destination": "formatted/Learning_Notes/image/policy_isis-1.png",
+      "bytes": 30620
+    },
+    {
+      "source": "raw/Learning_Notes/image/policy_isis_2-1.png",
+      "destination": "formatted/Learning_Notes/image/policy_isis_2-1.png",
+      "bytes": 17509
+    },
+    {
+      "source": "raw/Learning_Notes/image/policy_ospf_1-1.png",
+      "destination": "formatted/Learning_Notes/image/policy_ospf_1-1.png",
+      "bytes": 7078
+    },
+    {
+      "source": "raw/Learning_Notes/image/policy_ospf_2.png",
+      "destination": "formatted/Learning_Notes/image/policy_ospf_2.png",
+      "bytes": 7643
+    },
+    {
+      "source": "raw/Learning_Notes/image/router-lsa1-junos.png",
+      "destination": "formatted/Learning_Notes/image/router-lsa1-junos.png",
+      "bytes": 51415
+    },
+    {
+      "source": "raw/Mail_template/image/654d00ac6e9f633cd2db22bb1a7166aa.png",
+      "destination": "formatted/Mail_template/image/654d00ac6e9f633cd2db22bb1a7166aa.png",
+      "bytes": 837806
+    },
+    {
+      "source": "raw/Mail_template/image/mo_hinh_KH.PNG",
+      "destination": "formatted/Mail_template/image/mo_hinh_KH.PNG",
+      "bytes": 238878
+    },
+    {
+      "source": "raw/Outlook/image/3a0d0cc33a66c8db47700b61138c132b.jpg",
+      "destination": "formatted/Outlook/image/3a0d0cc33a66c8db47700b61138c132b.jpg",
+      "bytes": 11809
+    },
+    {
+      "source": "raw/Outlook/image/d5958167b911febf6df521f179c54c97.png",
+      "destination": "formatted/Outlook/image/d5958167b911febf6df521f179c54c97.png",
+      "bytes": 229752
+    },
+    {
+      "source": "raw/Outlook/image/f95e09c1593a7358f4aa8d8232d7f48f.jpg",
+      "destination": "formatted/Outlook/image/f95e09c1593a7358f4aa8d8232d7f48f.jpg",
+      "bytes": 23359
+    },
+    {
+      "source": "raw/Outlook/image/image.png",
+      "destination": "formatted/Outlook/image/image.png",
+      "bytes": 348622
+    },
+    {
+      "source": "raw/PR/image/1d8b846eab97f3aed29cc9b271f68de1.png",
+      "destination": "formatted/PR/image/1d8b846eab97f3aed29cc9b271f68de1.png",
+      "bytes": 84118
+    },
+    {
+      "source": "raw/PR/image/5d28333f60c53b8f872901817f0a3b24.png",
+      "destination": "formatted/PR/image/5d28333f60c53b8f872901817f0a3b24.png",
+      "bytes": 86061
+    },
+    {
+      "source": "raw/TS_notes/file/08-06-2021-172-31-255-150-MX960-01-18h01m.txt",
+      "destination": "formatted/TS_notes/file/08-06-2021-172-31-255-150-MX960-01-18h01m.txt",
+      "bytes": 1391
+    },
+    {
+      "source": "raw/TS_notes/file/08-06-2021-172-31-255-152-MX960-02-18h02m.txt",
+      "destination": "formatted/TS_notes/file/08-06-2021-172-31-255-152-MX960-02-18h02m.txt",
+      "bytes": 1303
+    },
+    {
+      "source": "raw/TS_notes/file/[Junos_OS]_ICMP_Ping_Showing_Latency_for_Host_Inbound_and_Outbound_traffic.pdf",
+      "destination": "formatted/TS_notes/file/[Junos_OS]_ICMP_Ping_Showing_Latency_for_Host_Inbound_and_Outbound_traffic.pdf",
+      "bytes": 108117
+    },
+    {
+      "source": "raw/TS_notes/file/mx960-01.txt",
+      "destination": "formatted/TS_notes/file/mx960-01.txt",
+      "bytes": 8195
+    },
+    {
+      "source": "raw/TS_notes/file/mx960-01_&_mx960-02.txt",
+      "destination": "formatted/TS_notes/file/mx960-01_&_mx960-02.txt",
+      "bytes": 530
+    },
+    {
+      "source": "raw/TS_notes/file/mx960-02.txt",
+      "destination": "formatted/TS_notes/file/mx960-02.txt",
+      "bytes": 7984
+    },
+    {
+      "source": "raw/TS_notes/file/pfe_commands.docx",
+      "destination": "formatted/TS_notes/file/pfe_commands.docx",
+      "bytes": 33434
+    },
+    {
+      "source": "raw/TS_notes/file/telemetry.pcap",
+      "destination": "formatted/TS_notes/file/telemetry.pcap",
+      "bytes": 6121311
+    },
+    {
+      "source": "raw/TS_notes/file/test_MX204_1-ouput.log",
+      "destination": "formatted/TS_notes/file/test_MX204_1-ouput.log",
+      "bytes": 639544
+    },
+    {
+      "source": "raw/TS_notes/image/015cf4d97125aa4ef7be3489fa3071cc.png",
+      "destination": "formatted/TS_notes/image/015cf4d97125aa4ef7be3489fa3071cc.png",
+      "bytes": 94260
+    },
+    {
+      "source": "raw/TS_notes/image/07d62a12387ca567daf5dfc555b70cbf.png",
+      "destination": "formatted/TS_notes/image/07d62a12387ca567daf5dfc555b70cbf.png",
+      "bytes": 44611
+    },
+    {
+      "source": "raw/TS_notes/image/0eafeffb5e279249486125fce18ca8f3.png",
+      "destination": "formatted/TS_notes/image/0eafeffb5e279249486125fce18ca8f3.png",
+      "bytes": 99003
+    },
+    {
+      "source": "raw/TS_notes/image/124b05a3de06a7732d930e7377fad80d.png",
+      "destination": "formatted/TS_notes/image/124b05a3de06a7732d930e7377fad80d.png",
+      "bytes": 156465
+    },
+    {
+      "source": "raw/TS_notes/image/131c0a66e023fede9f88f41641be5bbd.png",
+      "destination": "formatted/TS_notes/image/131c0a66e023fede9f88f41641be5bbd.png",
+      "bytes": 474711
+    },
+    {
+      "source": "raw/TS_notes/image/170b341d5882683062b2c9cd522d1a85.jpg",
+      "destination": "formatted/TS_notes/image/170b341d5882683062b2c9cd522d1a85.jpg",
+      "bytes": 16327
+    },
+    {
+      "source": "raw/TS_notes/image/222bab838a4ba93f82e38be436650ad2.png",
+      "destination": "formatted/TS_notes/image/222bab838a4ba93f82e38be436650ad2.png",
+      "bytes": 22923
+    },
+    {
+      "source": "raw/TS_notes/image/2964793d43258c79de15131494c4a687.png",
+      "destination": "formatted/TS_notes/image/2964793d43258c79de15131494c4a687.png",
+      "bytes": 23681
+    },
+    {
+      "source": "raw/TS_notes/image/2f68c2d9c8f6aec8222547dbdaddb1d7.png",
+      "destination": "formatted/TS_notes/image/2f68c2d9c8f6aec8222547dbdaddb1d7.png",
+      "bytes": 112752
+    },
+    {
+      "source": "raw/TS_notes/image/2fee46b7af4f6bc48075ca075fac4571.png",
+      "destination": "formatted/TS_notes/image/2fee46b7af4f6bc48075ca075fac4571.png",
+      "bytes": 289768
+    },
+    {
+      "source": "raw/TS_notes/image/30b2c49eb961b1561bbf3f9b02f0d86f.png",
+      "destination": "formatted/TS_notes/image/30b2c49eb961b1561bbf3f9b02f0d86f.png",
+      "bytes": 124179
+    },
+    {
+      "source": "raw/TS_notes/image/3cd9b6c5c80792070bc1b8bfdc457bfe.png",
+      "destination": "formatted/TS_notes/image/3cd9b6c5c80792070bc1b8bfdc457bfe.png",
+      "bytes": 7625
+    },
+    {
+      "source": "raw/TS_notes/image/3d3c368d0cd5634e2d3060ae96907229.png",
+      "destination": "formatted/TS_notes/image/3d3c368d0cd5634e2d3060ae96907229.png",
+      "bytes": 266744
+    },
+    {
+      "source": "raw/TS_notes/image/3f76e9ff0232893810c2153a04b7497c.png",
+      "destination": "formatted/TS_notes/image/3f76e9ff0232893810c2153a04b7497c.png",
+      "bytes": 107485
+    },
+    {
+      "source": "raw/TS_notes/image/405b4cbb5620b644316c7a8bf87d5ff0.png",
+      "destination": "formatted/TS_notes/image/405b4cbb5620b644316c7a8bf87d5ff0.png",
+      "bytes": 453340
+    },
+    {
+      "source": "raw/TS_notes/image/418aa4cd1f3e3a492e5071ab75fb5069.png",
+      "destination": "formatted/TS_notes/image/418aa4cd1f3e3a492e5071ab75fb5069.png",
+      "bytes": 650355
+    },
+    {
+      "source": "raw/TS_notes/image/4528838a262f14fa9415be3f09874e9d.png",
+      "destination": "formatted/TS_notes/image/4528838a262f14fa9415be3f09874e9d.png",
+      "bytes": 68533
+    },
+    {
+      "source": "raw/TS_notes/image/5890f0f54e9051b6ca76c078576d5dcc.png",
+      "destination": "formatted/TS_notes/image/5890f0f54e9051b6ca76c078576d5dcc.png",
+      "bytes": 163427
+    },
+    {
+      "source": "raw/TS_notes/image/68d93f97cef84e7fd03ce4f9c55f6d98.png",
+      "destination": "formatted/TS_notes/image/68d93f97cef84e7fd03ce4f9c55f6d98.png",
+      "bytes": 695693
+    },
+    {
+      "source": "raw/TS_notes/image/7280e19e1e010e1a63ef3aa8fefb2cd3.png",
+      "destination": "formatted/TS_notes/image/7280e19e1e010e1a63ef3aa8fefb2cd3.png",
+      "bytes": 590448
+    },
+    {
+      "source": "raw/TS_notes/image/7e7e9cd94a8ebc27b2fcf4a7118a198d.png",
+      "destination": "formatted/TS_notes/image/7e7e9cd94a8ebc27b2fcf4a7118a198d.png",
+      "bytes": 90092
+    },
+    {
+      "source": "raw/TS_notes/image/7f8f5cf31a15e7f93f783ff99d5d538d.png",
+      "destination": "formatted/TS_notes/image/7f8f5cf31a15e7f93f783ff99d5d538d.png",
+      "bytes": 77335
+    },
+    {
+      "source": "raw/TS_notes/image/8912ce4cc4673e2f7fe273667ac4dee7.png",
+      "destination": "formatted/TS_notes/image/8912ce4cc4673e2f7fe273667ac4dee7.png",
+      "bytes": 109832
+    },
+    {
+      "source": "raw/TS_notes/image/8aece4fe0a55e9af26b5645d4dfcc12a.png",
+      "destination": "formatted/TS_notes/image/8aece4fe0a55e9af26b5645d4dfcc12a.png",
+      "bytes": 10644
+    },
+    {
+      "source": "raw/TS_notes/image/9365136662f96435df651ebd0fdf7e2c.png",
+      "destination": "formatted/TS_notes/image/9365136662f96435df651ebd0fdf7e2c.png",
+      "bytes": 108108
+    },
+    {
+      "source": "raw/TS_notes/image/9c8e161b17fce292250815cb71aa94d0.png",
+      "destination": "formatted/TS_notes/image/9c8e161b17fce292250815cb71aa94d0.png",
+      "bytes": 682734
+    },
+    {
+      "source": "raw/TS_notes/image/Attachment-1.png",
+      "destination": "formatted/TS_notes/image/Attachment-1.png",
+      "bytes": 188958
+    },
+    {
+      "source": "raw/TS_notes/image/Attachment-2.png",
+      "destination": "formatted/TS_notes/image/Attachment-2.png",
+      "bytes": 231431
+    },
+    {
+      "source": "raw/TS_notes/image/Attachment-3.png",
+      "destination": "formatted/TS_notes/image/Attachment-3.png",
+      "bytes": 66340
+    },
+    {
+      "source": "raw/TS_notes/image/Attachment-4.png",
+      "destination": "formatted/TS_notes/image/Attachment-4.png",
+      "bytes": 632139
+    },
+    {
+      "source": "raw/TS_notes/image/Attachment.png",
+      "destination": "formatted/TS_notes/image/Attachment.png",
+      "bytes": 3001584
+    },
+    {
+      "source": "raw/TS_notes/image/IMG_1670.JPG",
+      "destination": "formatted/TS_notes/image/IMG_1670.JPG",
+      "bytes": 353151
+    },
+    {
+      "source": "raw/TS_notes/image/ab9697dba559f02c9d848702d75b1bde.png",
+      "destination": "formatted/TS_notes/image/ab9697dba559f02c9d848702d75b1bde.png",
+      "bytes": 647837
+    },
+    {
+      "source": "raw/TS_notes/image/b9967898aa7b62ef04263a0f0c2b442b.png",
+      "destination": "formatted/TS_notes/image/b9967898aa7b62ef04263a0f0c2b442b.png",
+      "bytes": 12637
+    },
+    {
+      "source": "raw/TS_notes/image/bda04bb85ab4b616932be5eb1b1e3cf0.png",
+      "destination": "formatted/TS_notes/image/bda04bb85ab4b616932be5eb1b1e3cf0.png",
+      "bytes": 40443
+    },
+    {
+      "source": "raw/TS_notes/image/c0e3997d733b4dc36e44c02bb3181ff9.png",
+      "destination": "formatted/TS_notes/image/c0e3997d733b4dc36e44c02bb3181ff9.png",
+      "bytes": 186524
+    },
+    {
+      "source": "raw/TS_notes/image/c58fefab5f9b30c68ec388cb2e4ef18a.png",
+      "destination": "formatted/TS_notes/image/c58fefab5f9b30c68ec388cb2e4ef18a.png",
+      "bytes": 218385
+    },
+    {
+      "source": "raw/TS_notes/image/d54b2d8113667acaba0e4f68b7433c71.png",
+      "destination": "formatted/TS_notes/image/d54b2d8113667acaba0e4f68b7433c71.png",
+      "bytes": 28427
+    },
+    {
+      "source": "raw/TS_notes/image/dcf1fa4aba09667e9e2067e997f7aa9f.png",
+      "destination": "formatted/TS_notes/image/dcf1fa4aba09667e9e2067e997f7aa9f.png",
+      "bytes": 41288
+    },
+    {
+      "source": "raw/TS_notes/image/e0fab88b8267de078ae5930f706cf9b6.png",
+      "destination": "formatted/TS_notes/image/e0fab88b8267de078ae5930f706cf9b6.png",
+      "bytes": 40078
+    },
+    {
+      "source": "raw/TS_notes/image/e7159429b13d3b23b07930758e318980.png",
+      "destination": "formatted/TS_notes/image/e7159429b13d3b23b07930758e318980.png",
+      "bytes": 18675
+    },
+    {
+      "source": "raw/TS_notes/image/ed950b89ca5e60bbcb652eae1474ebd7.png",
+      "destination": "formatted/TS_notes/image/ed950b89ca5e60bbcb652eae1474ebd7.png",
+      "bytes": 1208621
+    },
+    {
+      "source": "raw/TS_notes/image/ee04c57f342f84d2c786f0cb4b11a3f2.png",
+      "destination": "formatted/TS_notes/image/ee04c57f342f84d2c786f0cb4b11a3f2.png",
+      "bytes": 757718
+    },
+    {
+      "source": "raw/TS_notes/image/f12e0f6f1051875d42847624de5f560c.png",
+      "destination": "formatted/TS_notes/image/f12e0f6f1051875d42847624de5f560c.png",
+      "bytes": 117170
+    },
+    {
+      "source": "raw/TS_notes/image/f64466a37dc0ed7aa4419729ba2517de.png",
+      "destination": "formatted/TS_notes/image/f64466a37dc0ed7aa4419729ba2517de.png",
+      "bytes": 853844
+    },
+    {
+      "source": "raw/TS_notes/image/image-1.png",
+      "destination": "formatted/TS_notes/image/image-1.png",
+      "bytes": 27356
+    },
+    {
+      "source": "raw/TS_notes/image/image-10.png",
+      "destination": "formatted/TS_notes/image/image-10.png",
+      "bytes": 67095
+    },
+    {
+      "source": "raw/TS_notes/image/image-11.png",
+      "destination": "formatted/TS_notes/image/image-11.png",
+      "bytes": 121189
+    },
+    {
+      "source": "raw/TS_notes/image/image-12.png",
+      "destination": "formatted/TS_notes/image/image-12.png",
+      "bytes": 210082
+    },
+    {
+      "source": "raw/TS_notes/image/image-13.png",
+      "destination": "formatted/TS_notes/image/image-13.png",
+      "bytes": 224315
+    },
+    {
+      "source": "raw/TS_notes/image/image-14.png",
+      "destination": "formatted/TS_notes/image/image-14.png",
+      "bytes": 256404
+    },
+    {
+      "source": "raw/TS_notes/image/image-2.png",
+      "destination": "formatted/TS_notes/image/image-2.png",
+      "bytes": 99959
+    },
+    {
+      "source": "raw/TS_notes/image/image-3.png",
+      "destination": "formatted/TS_notes/image/image-3.png",
+      "bytes": 30382
+    },
+    {
+      "source": "raw/TS_notes/image/image-4.png",
+      "destination": "formatted/TS_notes/image/image-4.png",
+      "bytes": 34454
+    },
+    {
+      "source": "raw/TS_notes/image/image-5.png",
+      "destination": "formatted/TS_notes/image/image-5.png",
+      "bytes": 32566
+    },
+    {
+      "source": "raw/TS_notes/image/image-6.png",
+      "destination": "formatted/TS_notes/image/image-6.png",
+      "bytes": 39568
+    },
+    {
+      "source": "raw/TS_notes/image/image-7.png",
+      "destination": "formatted/TS_notes/image/image-7.png",
+      "bytes": 73381
+    },
+    {
+      "source": "raw/TS_notes/image/image-8.png",
+      "destination": "formatted/TS_notes/image/image-8.png",
+      "bytes": 27230
+    },
+    {
+      "source": "raw/TS_notes/image/image-9.png",
+      "destination": "formatted/TS_notes/image/image-9.png",
+      "bytes": 26972
+    },
+    {
+      "source": "raw/TS_notes/image/image.png",
+      "destination": "formatted/TS_notes/image/image.png",
+      "bytes": 58479
+    },
+    {
+      "source": "raw/TS_notes/image/zz.png",
+      "destination": "formatted/TS_notes/image/zz.png",
+      "bytes": 24273
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/AJSPR-v19A/image/0bd6a9f17f0845ef408f1099a03cb1cd.png",
+      "destination": "formatted/classification/Concepts_Theory/AJSPR-v19A/image/0bd6a9f17f0845ef408f1099a03cb1cd.png",
+      "bytes": 60771
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/AJSPR-v19A/image/0d0db9cc7e550a12b7b6859d799cca0d.png",
+      "destination": "formatted/classification/Concepts_Theory/AJSPR-v19A/image/0d0db9cc7e550a12b7b6859d799cca0d.png",
+      "bytes": 129583
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/AJSPR-v19A/image/108a9786a38d7447408cdc9aa03467b0.png",
+      "destination": "formatted/classification/Concepts_Theory/AJSPR-v19A/image/108a9786a38d7447408cdc9aa03467b0.png",
+      "bytes": 71870
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/AJSPR-v19A/image/1754e3e12c7ad3dfeebd72bd9c379d81.png",
+      "destination": "formatted/classification/Concepts_Theory/AJSPR-v19A/image/1754e3e12c7ad3dfeebd72bd9c379d81.png",
+      "bytes": 87831
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/AJSPR-v19A/image/1bc697c867951ddbde0e661220ff3676.png",
+      "destination": "formatted/classification/Concepts_Theory/AJSPR-v19A/image/1bc697c867951ddbde0e661220ff3676.png",
+      "bytes": 192168
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/AJSPR-v19A/image/1ec5df6a73b3d54dd5e0032f6dff6caa.png",
+      "destination": "formatted/classification/Concepts_Theory/AJSPR-v19A/image/1ec5df6a73b3d54dd5e0032f6dff6caa.png",
+      "bytes": 155176
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/AJSPR-v19A/image/22fe76e7a4b3b4c7af125676bb21adc2.png",
+      "destination": "formatted/classification/Concepts_Theory/AJSPR-v19A/image/22fe76e7a4b3b4c7af125676bb21adc2.png",
+      "bytes": 90712
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/AJSPR-v19A/image/2688bed59c28e91bb2bab5ff210796d1.png",
+      "destination": "formatted/classification/Concepts_Theory/AJSPR-v19A/image/2688bed59c28e91bb2bab5ff210796d1.png",
+      "bytes": 99279
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/AJSPR-v19A/image/2f327159fc404e20429460170101f6fd.png",
+      "destination": "formatted/classification/Concepts_Theory/AJSPR-v19A/image/2f327159fc404e20429460170101f6fd.png",
+      "bytes": 112727
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/AJSPR-v19A/image/31f8429cb34ab7846915d255598f5dc3.png",
+      "destination": "formatted/classification/Concepts_Theory/AJSPR-v19A/image/31f8429cb34ab7846915d255598f5dc3.png",
+      "bytes": 135950
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/AJSPR-v19A/image/34437faeb820977ad9edb6f4b20a41c4.png",
+      "destination": "formatted/classification/Concepts_Theory/AJSPR-v19A/image/34437faeb820977ad9edb6f4b20a41c4.png",
+      "bytes": 98092
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/AJSPR-v19A/image/3fec914974d254cd0e5e77c3aec3d427.png",
+      "destination": "formatted/classification/Concepts_Theory/AJSPR-v19A/image/3fec914974d254cd0e5e77c3aec3d427.png",
+      "bytes": 48457
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/AJSPR-v19A/image/4647ef7fb2a193490ad16bc4d12a326d.png",
+      "destination": "formatted/classification/Concepts_Theory/AJSPR-v19A/image/4647ef7fb2a193490ad16bc4d12a326d.png",
+      "bytes": 223035
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/AJSPR-v19A/image/49a6912dae19819469df0e11d39846af.png",
+      "destination": "formatted/classification/Concepts_Theory/AJSPR-v19A/image/49a6912dae19819469df0e11d39846af.png",
+      "bytes": 65296
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/AJSPR-v19A/image/4a2b05d4f2fa4a35af6f474a7076c807.png",
+      "destination": "formatted/classification/Concepts_Theory/AJSPR-v19A/image/4a2b05d4f2fa4a35af6f474a7076c807.png",
+      "bytes": 117355
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/AJSPR-v19A/image/502d64f4efb1c2169ba957bcddfbe323.png",
+      "destination": "formatted/classification/Concepts_Theory/AJSPR-v19A/image/502d64f4efb1c2169ba957bcddfbe323.png",
+      "bytes": 305893
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/AJSPR-v19A/image/53998c961063858cb46420e5ff867bae.png",
+      "destination": "formatted/classification/Concepts_Theory/AJSPR-v19A/image/53998c961063858cb46420e5ff867bae.png",
+      "bytes": 63773
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/AJSPR-v19A/image/59a41de793f71dd13050349a2bad46c0.png",
+      "destination": "formatted/classification/Concepts_Theory/AJSPR-v19A/image/59a41de793f71dd13050349a2bad46c0.png",
+      "bytes": 67569
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/AJSPR-v19A/image/5d8cb58f96b5c1bccd7bd3f50f761e14.png",
+      "destination": "formatted/classification/Concepts_Theory/AJSPR-v19A/image/5d8cb58f96b5c1bccd7bd3f50f761e14.png",
+      "bytes": 143355
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/AJSPR-v19A/image/5e2b24ed87e17570a6321a1c61d985e6.png",
+      "destination": "formatted/classification/Concepts_Theory/AJSPR-v19A/image/5e2b24ed87e17570a6321a1c61d985e6.png",
+      "bytes": 116593
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/AJSPR-v19A/image/5e396664ddb19ed816df8d64a8ff8076.png",
+      "destination": "formatted/classification/Concepts_Theory/AJSPR-v19A/image/5e396664ddb19ed816df8d64a8ff8076.png",
+      "bytes": 68882
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/AJSPR-v19A/image/771075fafbcd70892c2f7fdf7d4751c4.png",
+      "destination": "formatted/classification/Concepts_Theory/AJSPR-v19A/image/771075fafbcd70892c2f7fdf7d4751c4.png",
+      "bytes": 55272
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/AJSPR-v19A/image/78976ce143532fc8a2e11f5db6a1142a.png",
+      "destination": "formatted/classification/Concepts_Theory/AJSPR-v19A/image/78976ce143532fc8a2e11f5db6a1142a.png",
+      "bytes": 54594
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/AJSPR-v19A/image/7c5a006d475a2d40ce8b400726ea6ad8.png",
+      "destination": "formatted/classification/Concepts_Theory/AJSPR-v19A/image/7c5a006d475a2d40ce8b400726ea6ad8.png",
+      "bytes": 130326
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/AJSPR-v19A/image/7d1d0566a0cce54a53f73585b2ab6db4.png",
+      "destination": "formatted/classification/Concepts_Theory/AJSPR-v19A/image/7d1d0566a0cce54a53f73585b2ab6db4.png",
+      "bytes": 33280
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/AJSPR-v19A/image/84b2658cf04ecb4434625db3cff90649.png",
+      "destination": "formatted/classification/Concepts_Theory/AJSPR-v19A/image/84b2658cf04ecb4434625db3cff90649.png",
+      "bytes": 185083
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/AJSPR-v19A/image/88872649d4da1c161d689650f26f9708.png",
+      "destination": "formatted/classification/Concepts_Theory/AJSPR-v19A/image/88872649d4da1c161d689650f26f9708.png",
+      "bytes": 74956
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/AJSPR-v19A/image/98566389a15bfd468bd885446cdbc495.png",
+      "destination": "formatted/classification/Concepts_Theory/AJSPR-v19A/image/98566389a15bfd468bd885446cdbc495.png",
+      "bytes": 226628
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/AJSPR-v19A/image/9978ce46683a2d50b49b0dd43ce91a3d.png",
+      "destination": "formatted/classification/Concepts_Theory/AJSPR-v19A/image/9978ce46683a2d50b49b0dd43ce91a3d.png",
+      "bytes": 154661
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/AJSPR-v19A/image/9d602013974e7f7f9bfed7682e431bd4.png",
+      "destination": "formatted/classification/Concepts_Theory/AJSPR-v19A/image/9d602013974e7f7f9bfed7682e431bd4.png",
+      "bytes": 180176
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/AJSPR-v19A/image/JUNOS-diagram1.png",
+      "destination": "formatted/classification/Concepts_Theory/AJSPR-v19A/image/JUNOS-diagram1.png",
+      "bytes": 17923
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/AJSPR-v19A/image/aa864b83683f6db12e7c57e6472e1eb3.png",
+      "destination": "formatted/classification/Concepts_Theory/AJSPR-v19A/image/aa864b83683f6db12e7c57e6472e1eb3.png",
+      "bytes": 58382
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/AJSPR-v19A/image/b4ef2db38f688aa77ec44e8650479da2.png",
+      "destination": "formatted/classification/Concepts_Theory/AJSPR-v19A/image/b4ef2db38f688aa77ec44e8650479da2.png",
+      "bytes": 114507
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/AJSPR-v19A/image/b5dff370e7614f081ca42726bec28c85.png",
+      "destination": "formatted/classification/Concepts_Theory/AJSPR-v19A/image/b5dff370e7614f081ca42726bec28c85.png",
+      "bytes": 53340
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/AJSPR-v19A/image/b8197e13dffa51b605c48107d6b400f5.png",
+      "destination": "formatted/classification/Concepts_Theory/AJSPR-v19A/image/b8197e13dffa51b605c48107d6b400f5.png",
+      "bytes": 115585
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/AJSPR-v19A/image/b9fbb484962a91e35710f6208175cf19.png",
+      "destination": "formatted/classification/Concepts_Theory/AJSPR-v19A/image/b9fbb484962a91e35710f6208175cf19.png",
+      "bytes": 140323
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/AJSPR-v19A/image/bf4d9160d499537eaa7c6d32478b4b47.png",
+      "destination": "formatted/classification/Concepts_Theory/AJSPR-v19A/image/bf4d9160d499537eaa7c6d32478b4b47.png",
+      "bytes": 68779
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/AJSPR-v19A/image/c2ab576db69be4a998d0b5203304df61.png",
+      "destination": "formatted/classification/Concepts_Theory/AJSPR-v19A/image/c2ab576db69be4a998d0b5203304df61.png",
+      "bytes": 121258
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/AJSPR-v19A/image/c8fc76958bcdc196d2b0397fc12334f7.png",
+      "destination": "formatted/classification/Concepts_Theory/AJSPR-v19A/image/c8fc76958bcdc196d2b0397fc12334f7.png",
+      "bytes": 93078
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/AJSPR-v19A/image/d018a1880aa1aa8221f781dadf02bc4a.png",
+      "destination": "formatted/classification/Concepts_Theory/AJSPR-v19A/image/d018a1880aa1aa8221f781dadf02bc4a.png",
+      "bytes": 157069
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/AJSPR-v19A/image/d5cdf4a99660a8df69e292ee18828031.png",
+      "destination": "formatted/classification/Concepts_Theory/AJSPR-v19A/image/d5cdf4a99660a8df69e292ee18828031.png",
+      "bytes": 14326
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/AJSPR-v19A/image/db5bacd43850982651a8c841d5f4ef12.png",
+      "destination": "formatted/classification/Concepts_Theory/AJSPR-v19A/image/db5bacd43850982651a8c841d5f4ef12.png",
+      "bytes": 47449
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/AJSPR-v19A/image/e8497c8ea044fe09fc4f22d0cd113b0c.png",
+      "destination": "formatted/classification/Concepts_Theory/AJSPR-v19A/image/e8497c8ea044fe09fc4f22d0cd113b0c.png",
+      "bytes": 88210
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/AJSPR-v19A/image/edf2ac6107a7ab1440c24a1b0500036b.png",
+      "destination": "formatted/classification/Concepts_Theory/AJSPR-v19A/image/edf2ac6107a7ab1440c24a1b0500036b.png",
+      "bytes": 73237
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/AJSPR-v19A/image/fda8c1ef3922be2381d4d3498096eba6.png",
+      "destination": "formatted/classification/Concepts_Theory/AJSPR-v19A/image/fda8c1ef3922be2381d4d3498096eba6.png",
+      "bytes": 73363
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/AJSPR-v19A/image/image-1.png",
+      "destination": "formatted/classification/Concepts_Theory/AJSPR-v19A/image/image-1.png",
+      "bytes": 136294
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/AJSPR-v19A/image/image-17.png",
+      "destination": "formatted/classification/Concepts_Theory/AJSPR-v19A/image/image-17.png",
+      "bytes": 21535
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/AJSPR-v19A/image/image-2.png",
+      "destination": "formatted/classification/Concepts_Theory/AJSPR-v19A/image/image-2.png",
+      "bytes": 115453
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/AJSPR-v19A/image/image-3.png",
+      "destination": "formatted/classification/Concepts_Theory/AJSPR-v19A/image/image-3.png",
+      "bytes": 126801
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/AJSPR-v19A/image/image-67.png",
+      "destination": "formatted/classification/Concepts_Theory/AJSPR-v19A/image/image-67.png",
+      "bytes": 10819
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/AJSPR-v19A/image/image-68.png",
+      "destination": "formatted/classification/Concepts_Theory/AJSPR-v19A/image/image-68.png",
+      "bytes": 5616
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/AJSPR-v19A/image/image.png",
+      "destination": "formatted/classification/Concepts_Theory/AJSPR-v19A/image/image.png",
+      "bytes": 65755
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/file/6PE_Notes.pdf",
+      "destination": "formatted/classification/Concepts_Theory/file/6PE_Notes.pdf",
+      "bytes": 428078
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/file/VRFs.pptx",
+      "destination": "formatted/classification/Concepts_Theory/file/VRFs.pptx",
+      "bytes": 676372
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/file/rg-understanding-tn.pdf",
+      "destination": "formatted/classification/Concepts_Theory/file/rg-understanding-tn.pdf",
+      "bytes": 239334
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/0018d7d9cd094b3c7004ba211e706c22.png",
+      "destination": "formatted/classification/Concepts_Theory/image/0018d7d9cd094b3c7004ba211e706c22.png",
+      "bytes": 25286
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/020260dad93102953c83169a17586a38.png",
+      "destination": "formatted/classification/Concepts_Theory/image/020260dad93102953c83169a17586a38.png",
+      "bytes": 361422
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/04eccf8291c33ffc01cfd574dc080f00.png",
+      "destination": "formatted/classification/Concepts_Theory/image/04eccf8291c33ffc01cfd574dc080f00.png",
+      "bytes": 9626
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/058f2558addaf8e0da51baf851eed836.png",
+      "destination": "formatted/classification/Concepts_Theory/image/058f2558addaf8e0da51baf851eed836.png",
+      "bytes": 915457
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/06fa87acc516f41dc3dd96d38ba765ea.png",
+      "destination": "formatted/classification/Concepts_Theory/image/06fa87acc516f41dc3dd96d38ba765ea.png",
+      "bytes": 341790
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/0b90d9d776a9b292c2f28666b78574e2.png",
+      "destination": "formatted/classification/Concepts_Theory/image/0b90d9d776a9b292c2f28666b78574e2.png",
+      "bytes": 2633
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/0bf5673e621d9a52297e8f539fb76c64.png",
+      "destination": "formatted/classification/Concepts_Theory/image/0bf5673e621d9a52297e8f539fb76c64.png",
+      "bytes": 5663
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/0cadf6b35a39d6eba7587d87de124e1b.png",
+      "destination": "formatted/classification/Concepts_Theory/image/0cadf6b35a39d6eba7587d87de124e1b.png",
+      "bytes": 254268
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/129917427ae5a81bc3c3380e2245856e.png",
+      "destination": "formatted/classification/Concepts_Theory/image/129917427ae5a81bc3c3380e2245856e.png",
+      "bytes": 845065
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/12e14f68e6c81150f15f7c32198c8634.png",
+      "destination": "formatted/classification/Concepts_Theory/image/12e14f68e6c81150f15f7c32198c8634.png",
+      "bytes": 35419
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/13fb4cd0e3b432d6795c91da6895fc7d.png",
+      "destination": "formatted/classification/Concepts_Theory/image/13fb4cd0e3b432d6795c91da6895fc7d.png",
+      "bytes": 172094
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/189dd75f3a1a0d39a8613d9a8f66e1e4.png",
+      "destination": "formatted/classification/Concepts_Theory/image/189dd75f3a1a0d39a8613d9a8f66e1e4.png",
+      "bytes": 7250
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/19ed1ddf82d019257306166f5668417f.png",
+      "destination": "formatted/classification/Concepts_Theory/image/19ed1ddf82d019257306166f5668417f.png",
+      "bytes": 2096
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/1a45d63be156f5863c1853784da5ebe5.png",
+      "destination": "formatted/classification/Concepts_Theory/image/1a45d63be156f5863c1853784da5ebe5.png",
+      "bytes": 68512
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/1b24fd30cbae38d22bc376d39f298e2e.png",
+      "destination": "formatted/classification/Concepts_Theory/image/1b24fd30cbae38d22bc376d39f298e2e.png",
+      "bytes": 596614
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/1c120fc52c6b7e97f6e39c52805c6478.png",
+      "destination": "formatted/classification/Concepts_Theory/image/1c120fc52c6b7e97f6e39c52805c6478.png",
+      "bytes": 3019
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/1f60a.svg",
+      "destination": "formatted/classification/Concepts_Theory/image/1f60a.svg",
+      "bytes": 1055
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/1fdc4f39897578df1027e973696cb238.png",
+      "destination": "formatted/classification/Concepts_Theory/image/1fdc4f39897578df1027e973696cb238.png",
+      "bytes": 158905
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/21ff5a283ddd7d617bb33e5e9f13b632.png",
+      "destination": "formatted/classification/Concepts_Theory/image/21ff5a283ddd7d617bb33e5e9f13b632.png",
+      "bytes": 375267
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/22417de2b861bcf1e9e98fa309bef1ea.png",
+      "destination": "formatted/classification/Concepts_Theory/image/22417de2b861bcf1e9e98fa309bef1ea.png",
+      "bytes": 297216
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/235cfd21dab7eecdc370c68db21eec7c.png",
+      "destination": "formatted/classification/Concepts_Theory/image/235cfd21dab7eecdc370c68db21eec7c.png",
+      "bytes": 1561
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/26c83b01459943205743e6d24fd60fb7.jpg",
+      "destination": "formatted/classification/Concepts_Theory/image/26c83b01459943205743e6d24fd60fb7.jpg",
+      "bytes": 16560
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/2806ccffa77b1c8a241dbab4e195fd13.png",
+      "destination": "formatted/classification/Concepts_Theory/image/2806ccffa77b1c8a241dbab4e195fd13.png",
+      "bytes": 8202
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/2888ddbb7ec4828f93c7bf1fad707de8.png",
+      "destination": "formatted/classification/Concepts_Theory/image/2888ddbb7ec4828f93c7bf1fad707de8.png",
+      "bytes": 51114
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/2cf4ec57e40546c4a512c838aab44a10.png",
+      "destination": "formatted/classification/Concepts_Theory/image/2cf4ec57e40546c4a512c838aab44a10.png",
+      "bytes": 1650
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/2d8639e8942c6b17a3483525a4e62c50.png",
+      "destination": "formatted/classification/Concepts_Theory/image/2d8639e8942c6b17a3483525a4e62c50.png",
+      "bytes": 30834
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/2f36f4e1aaa4b4f96998dc60d7c9176e.png",
+      "destination": "formatted/classification/Concepts_Theory/image/2f36f4e1aaa4b4f96998dc60d7c9176e.png",
+      "bytes": 13106
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/2fab0157d62b553c2097538dce06f042.png",
+      "destination": "formatted/classification/Concepts_Theory/image/2fab0157d62b553c2097538dce06f042.png",
+      "bytes": 7086
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/32a14eecf94af999fa9331e6d97e14ee.png",
+      "destination": "formatted/classification/Concepts_Theory/image/32a14eecf94af999fa9331e6d97e14ee.png",
+      "bytes": 10435
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/340a0e6070e4f294f2d38fac6bf215a2.png",
+      "destination": "formatted/classification/Concepts_Theory/image/340a0e6070e4f294f2d38fac6bf215a2.png",
+      "bytes": 12099
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/386a9961a3c49427942f52d41d2ff263.png",
+      "destination": "formatted/classification/Concepts_Theory/image/386a9961a3c49427942f52d41d2ff263.png",
+      "bytes": 13019
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/39339a35cfd838d1ef2389165ed50372.png",
+      "destination": "formatted/classification/Concepts_Theory/image/39339a35cfd838d1ef2389165ed50372.png",
+      "bytes": 15955
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/399618e58888dcd04231156c6b2afe93.png",
+      "destination": "formatted/classification/Concepts_Theory/image/399618e58888dcd04231156c6b2afe93.png",
+      "bytes": 10349
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/3bd7eea83b85fede19e2ebd684e8c324.png",
+      "destination": "formatted/classification/Concepts_Theory/image/3bd7eea83b85fede19e2ebd684e8c324.png",
+      "bytes": 9512
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/3cc2c3aa670e9d618445bc2ed7736bc9.png",
+      "destination": "formatted/classification/Concepts_Theory/image/3cc2c3aa670e9d618445bc2ed7736bc9.png",
+      "bytes": 441565
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/3d5a542d078afd3293e1bd700d3f39c4.png",
+      "destination": "formatted/classification/Concepts_Theory/image/3d5a542d078afd3293e1bd700d3f39c4.png",
+      "bytes": 9924
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/3de1e58b4b03eeab604dc614e7daf23d.png",
+      "destination": "formatted/classification/Concepts_Theory/image/3de1e58b4b03eeab604dc614e7daf23d.png",
+      "bytes": 62676
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/401bb25769f9c31e61053bab4cbd46f0.jpg",
+      "destination": "formatted/classification/Concepts_Theory/image/401bb25769f9c31e61053bab4cbd46f0.jpg",
+      "bytes": 18437
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/41845ba5f6231e66a6603b24986d6545.png",
+      "destination": "formatted/classification/Concepts_Theory/image/41845ba5f6231e66a6603b24986d6545.png",
+      "bytes": 132775
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/426b19d1fa4c00361b89872e05bf01f3.jpg",
+      "destination": "formatted/classification/Concepts_Theory/image/426b19d1fa4c00361b89872e05bf01f3.jpg",
+      "bytes": 21765
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/431d2530294d98459d7d7f5ff111c4f6.png",
+      "destination": "formatted/classification/Concepts_Theory/image/431d2530294d98459d7d7f5ff111c4f6.png",
+      "bytes": 67952
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/46f6d30146ca06af992ff423aff94ec5.png",
+      "destination": "formatted/classification/Concepts_Theory/image/46f6d30146ca06af992ff423aff94ec5.png",
+      "bytes": 24616
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/471528b9be787ab786cc3a1a0cce811c.png",
+      "destination": "formatted/classification/Concepts_Theory/image/471528b9be787ab786cc3a1a0cce811c.png",
+      "bytes": 183198
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/490617b7d4ddb3b1d42801cc83a8c249.png",
+      "destination": "formatted/classification/Concepts_Theory/image/490617b7d4ddb3b1d42801cc83a8c249.png",
+      "bytes": 144637
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/491c37f817906ffff70e417365484bc3.png",
+      "destination": "formatted/classification/Concepts_Theory/image/491c37f817906ffff70e417365484bc3.png",
+      "bytes": 63888
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/491ffb9211b788648e25aec4442a780d.png",
+      "destination": "formatted/classification/Concepts_Theory/image/491ffb9211b788648e25aec4442a780d.png",
+      "bytes": 1632
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/4929325fa8a0cc68e65e2bbb125c7ffc.png",
+      "destination": "formatted/classification/Concepts_Theory/image/4929325fa8a0cc68e65e2bbb125c7ffc.png",
+      "bytes": 139264
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/4b62000cd4a25b982c5fd450c56ffb80.png",
+      "destination": "formatted/classification/Concepts_Theory/image/4b62000cd4a25b982c5fd450c56ffb80.png",
+      "bytes": 319909
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/4c54e4782944ef074635ecfaecaa98b8.png",
+      "destination": "formatted/classification/Concepts_Theory/image/4c54e4782944ef074635ecfaecaa98b8.png",
+      "bytes": 265909
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/4ebc621e514dd96bca784c0eafd1b1e4.png",
+      "destination": "formatted/classification/Concepts_Theory/image/4ebc621e514dd96bca784c0eafd1b1e4.png",
+      "bytes": 68433
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/50d68996b9165030d19aec1dd370eb88.png",
+      "destination": "formatted/classification/Concepts_Theory/image/50d68996b9165030d19aec1dd370eb88.png",
+      "bytes": 5854
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/50eb6ea052a2e1201ed566cbe2d9a1a2.png",
+      "destination": "formatted/classification/Concepts_Theory/image/50eb6ea052a2e1201ed566cbe2d9a1a2.png",
+      "bytes": 9206
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/534eebdc7ca8e2e42e26eb6110ef24ed.png",
+      "destination": "formatted/classification/Concepts_Theory/image/534eebdc7ca8e2e42e26eb6110ef24ed.png",
+      "bytes": 585037
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/54e273f22a919f6c46c0d2443fbe9c67.jpg",
+      "destination": "formatted/classification/Concepts_Theory/image/54e273f22a919f6c46c0d2443fbe9c67.jpg",
+      "bytes": 53300
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/57c027dead16dbc2ac9b41bded59b51d.png",
+      "destination": "formatted/classification/Concepts_Theory/image/57c027dead16dbc2ac9b41bded59b51d.png",
+      "bytes": 24139
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/5b08f8ce518ce1350ae212e24468eecf.png",
+      "destination": "formatted/classification/Concepts_Theory/image/5b08f8ce518ce1350ae212e24468eecf.png",
+      "bytes": 257730
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/5d9eab86af6c3ca715ad67b5f1d4b924.png",
+      "destination": "formatted/classification/Concepts_Theory/image/5d9eab86af6c3ca715ad67b5f1d4b924.png",
+      "bytes": 439364
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/5ec075157566c05b21a469be6dbf3a4f.png",
+      "destination": "formatted/classification/Concepts_Theory/image/5ec075157566c05b21a469be6dbf3a4f.png",
+      "bytes": 25112
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/62e5e98893424ee10828297a0a2d175f.png",
+      "destination": "formatted/classification/Concepts_Theory/image/62e5e98893424ee10828297a0a2d175f.png",
+      "bytes": 4114
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/636f7c8bb4e2e6eab8d1f5d92f7e24c0.png",
+      "destination": "formatted/classification/Concepts_Theory/image/636f7c8bb4e2e6eab8d1f5d92f7e24c0.png",
+      "bytes": 16298
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/65a074fd16c63f38fdcefebde295d9da.png",
+      "destination": "formatted/classification/Concepts_Theory/image/65a074fd16c63f38fdcefebde295d9da.png",
+      "bytes": 12662
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/6775dcd7bbfef34fe97304b374e0daf8.png",
+      "destination": "formatted/classification/Concepts_Theory/image/6775dcd7bbfef34fe97304b374e0daf8.png",
+      "bytes": 198084
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/6a4fcc6e9440506e86d0736b592f0ab8.png",
+      "destination": "formatted/classification/Concepts_Theory/image/6a4fcc6e9440506e86d0736b592f0ab8.png",
+      "bytes": 5160
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/6b3824d06382c3469b9886c43ae97fc3.png",
+      "destination": "formatted/classification/Concepts_Theory/image/6b3824d06382c3469b9886c43ae97fc3.png",
+      "bytes": 142628
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/6fc05c2d0cf240ed6e6863584a470ee5.png",
+      "destination": "formatted/classification/Concepts_Theory/image/6fc05c2d0cf240ed6e6863584a470ee5.png",
+      "bytes": 25029
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/72f85189de830e569cb77e0b46ac692b.png",
+      "destination": "formatted/classification/Concepts_Theory/image/72f85189de830e569cb77e0b46ac692b.png",
+      "bytes": 28661
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/74cd80c4be57f1143d251e7624d2dc9e.png",
+      "destination": "formatted/classification/Concepts_Theory/image/74cd80c4be57f1143d251e7624d2dc9e.png",
+      "bytes": 8106
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/754ab35408643a6c5a196a9bfbc5fac6.png",
+      "destination": "formatted/classification/Concepts_Theory/image/754ab35408643a6c5a196a9bfbc5fac6.png",
+      "bytes": 419371
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/7af8427f0febe8c680e563f2cb17087a.png",
+      "destination": "formatted/classification/Concepts_Theory/image/7af8427f0febe8c680e563f2cb17087a.png",
+      "bytes": 598905
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/82303206d8c7192b065f466398287ca1.jpg",
+      "destination": "formatted/classification/Concepts_Theory/image/82303206d8c7192b065f466398287ca1.jpg",
+      "bytes": 30229
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/93918ddaccf3d2524006557cea0a2223.jpg",
+      "destination": "formatted/classification/Concepts_Theory/image/93918ddaccf3d2524006557cea0a2223.jpg",
+      "bytes": 19202
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/947efe96414af0fc72679cb3ea2e2f3b.png",
+      "destination": "formatted/classification/Concepts_Theory/image/947efe96414af0fc72679cb3ea2e2f3b.png",
+      "bytes": 428215
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/96219a6e02e0b2cd95c9e14df2f05e55.png",
+      "destination": "formatted/classification/Concepts_Theory/image/96219a6e02e0b2cd95c9e14df2f05e55.png",
+      "bytes": 150621
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/9e388e706ef658500201e8594c7c7bf9.png",
+      "destination": "formatted/classification/Concepts_Theory/image/9e388e706ef658500201e8594c7c7bf9.png",
+      "bytes": 138522
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/Attachment-1.png",
+      "destination": "formatted/classification/Concepts_Theory/image/Attachment-1.png",
+      "bytes": 146392
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/Attachment-10.png",
+      "destination": "formatted/classification/Concepts_Theory/image/Attachment-10.png",
+      "bytes": 196756
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/Attachment-2.png",
+      "destination": "formatted/classification/Concepts_Theory/image/Attachment-2.png",
+      "bytes": 103970
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/Attachment-3.png",
+      "destination": "formatted/classification/Concepts_Theory/image/Attachment-3.png",
+      "bytes": 212717
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/Attachment-4.png",
+      "destination": "formatted/classification/Concepts_Theory/image/Attachment-4.png",
+      "bytes": 164137
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/Attachment-5.png",
+      "destination": "formatted/classification/Concepts_Theory/image/Attachment-5.png",
+      "bytes": 187376
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/Attachment-6.png",
+      "destination": "formatted/classification/Concepts_Theory/image/Attachment-6.png",
+      "bytes": 54043
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/Attachment-7.png",
+      "destination": "formatted/classification/Concepts_Theory/image/Attachment-7.png",
+      "bytes": 136418
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/Attachment-8.png",
+      "destination": "formatted/classification/Concepts_Theory/image/Attachment-8.png",
+      "bytes": 169484
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/Attachment-9.png",
+      "destination": "formatted/classification/Concepts_Theory/image/Attachment-9.png",
+      "bytes": 192270
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/Attachment.png",
+      "destination": "formatted/classification/Concepts_Theory/image/Attachment.png",
+      "bytes": 113480
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/ISIS-BACKBONE.png",
+      "destination": "formatted/classification/Concepts_Theory/image/ISIS-BACKBONE.png",
+      "bytes": 23166
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/ISIS-area.png",
+      "destination": "formatted/classification/Concepts_Theory/image/ISIS-area.png",
+      "bytes": 7488
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/ISIS-boundary.png",
+      "destination": "formatted/classification/Concepts_Theory/image/ISIS-boundary.png",
+      "bytes": 19577
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/ISIS-picture.png",
+      "destination": "formatted/classification/Concepts_Theory/image/ISIS-picture.png",
+      "bytes": 38146
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/ISIS_title.png",
+      "destination": "formatted/classification/Concepts_Theory/image/ISIS_title.png",
+      "bytes": 4842
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/JUNOS-diagram1.png",
+      "destination": "formatted/classification/Concepts_Theory/image/JUNOS-diagram1.png",
+      "bytes": 17923
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/NET.png",
+      "destination": "formatted/classification/Concepts_Theory/image/NET.png",
+      "bytes": 8790
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/OSPF-BACKBONE.png",
+      "destination": "formatted/classification/Concepts_Theory/image/OSPF-BACKBONE.png",
+      "bytes": 15184
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/OSPF-boundary.png",
+      "destination": "formatted/classification/Concepts_Theory/image/OSPF-boundary.png",
+      "bytes": 18610
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/OSPF_title-1.png",
+      "destination": "formatted/classification/Concepts_Theory/image/OSPF_title-1.png",
+      "bytes": 6055
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/a231dfd34d4cc7c1434d14ba2c35605c.png",
+      "destination": "formatted/classification/Concepts_Theory/image/a231dfd34d4cc7c1434d14ba2c35605c.png",
+      "bytes": 15747
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/a272d5f14568fdf38db2e246b8007f92.png",
+      "destination": "formatted/classification/Concepts_Theory/image/a272d5f14568fdf38db2e246b8007f92.png",
+      "bytes": 663159
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/a50ec60c64e5af1915f1f4b076f2389e.png",
+      "destination": "formatted/classification/Concepts_Theory/image/a50ec60c64e5af1915f1f4b076f2389e.png",
+      "bytes": 8841
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/a956e8461b2102891c73a3b78b0f2ed7.png",
+      "destination": "formatted/classification/Concepts_Theory/image/a956e8461b2102891c73a3b78b0f2ed7.png",
+      "bytes": 14090
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/ae934991f1d3ed822ac890c388981610.png",
+      "destination": "formatted/classification/Concepts_Theory/image/ae934991f1d3ed822ac890c388981610.png",
+      "bytes": 8793
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/af75725a0edad614cc38cceca7a4a00a.png",
+      "destination": "formatted/classification/Concepts_Theory/image/af75725a0edad614cc38cceca7a4a00a.png",
+      "bytes": 99513
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/area0-ospf-route-removal.png",
+      "destination": "formatted/classification/Concepts_Theory/image/area0-ospf-route-removal.png",
+      "bytes": 53504
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/b1eaa9c5ad90409336e54e94005e2a82.png",
+      "destination": "formatted/classification/Concepts_Theory/image/b1eaa9c5ad90409336e54e94005e2a82.png",
+      "bytes": 72110
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/b3b8fa0848870df564768e4b6169d465.png",
+      "destination": "formatted/classification/Concepts_Theory/image/b3b8fa0848870df564768e4b6169d465.png",
+      "bytes": 2822
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/b3c72649203c6ed8e43fe3999b6a4578.png",
+      "destination": "formatted/classification/Concepts_Theory/image/b3c72649203c6ed8e43fe3999b6a4578.png",
+      "bytes": 21828
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/b5d311873770adc72b11105196b3c010.png",
+      "destination": "formatted/classification/Concepts_Theory/image/b5d311873770adc72b11105196b3c010.png",
+      "bytes": 7979
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/b758a0dd1992948251108cafce1b9bff.png",
+      "destination": "formatted/classification/Concepts_Theory/image/b758a0dd1992948251108cafce1b9bff.png",
+      "bytes": 5775
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/bc1e687bdf47c5f0e6d908168513f506.png",
+      "destination": "formatted/classification/Concepts_Theory/image/bc1e687bdf47c5f0e6d908168513f506.png",
+      "bytes": 487740
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/bc273e50b20ffe8e59d39e83aebd9f15.png",
+      "destination": "formatted/classification/Concepts_Theory/image/bc273e50b20ffe8e59d39e83aebd9f15.png",
+      "bytes": 14515
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/bd2b178fb52ba7d4e0175b25c7da9461.png",
+      "destination": "formatted/classification/Concepts_Theory/image/bd2b178fb52ba7d4e0175b25c7da9461.png",
+      "bytes": 177706
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/c2607cc4621f985c63cf95560ed66ec4.png",
+      "destination": "formatted/classification/Concepts_Theory/image/c2607cc4621f985c63cf95560ed66ec4.png",
+      "bytes": 867518
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/c5296c1130b4968992d80cdc8a7f9839.jpg",
+      "destination": "formatted/classification/Concepts_Theory/image/c5296c1130b4968992d80cdc8a7f9839.jpg",
+      "bytes": 20344
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/c5ae1f82b34f4eead51c3f1dc2054f4f.png",
+      "destination": "formatted/classification/Concepts_Theory/image/c5ae1f82b34f4eead51c3f1dc2054f4f.png",
+      "bytes": 46208
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/c77a0edfbc5f2d627d04451ab74380ee.png",
+      "destination": "formatted/classification/Concepts_Theory/image/c77a0edfbc5f2d627d04451ab74380ee.png",
+      "bytes": 180625
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/c77e6de94adccd49e8dda04cb4388b90.png",
+      "destination": "formatted/classification/Concepts_Theory/image/c77e6de94adccd49e8dda04cb4388b90.png",
+      "bytes": 211653
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/ce3f43ffe5174a0af2d77e8988fe7fdd.png",
+      "destination": "formatted/classification/Concepts_Theory/image/ce3f43ffe5174a0af2d77e8988fe7fdd.png",
+      "bytes": 32923
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/d405eb1219dcb94b395cb8c0840c74d3.png",
+      "destination": "formatted/classification/Concepts_Theory/image/d405eb1219dcb94b395cb8c0840c74d3.png",
+      "bytes": 48043
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/d5a1003fda0c0fbcdac4f75efbc587f2.png",
+      "destination": "formatted/classification/Concepts_Theory/image/d5a1003fda0c0fbcdac4f75efbc587f2.png",
+      "bytes": 28377
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/d7fe9e2495701a9f8e9682aa6cbfd6bf.png",
+      "destination": "formatted/classification/Concepts_Theory/image/d7fe9e2495701a9f8e9682aa6cbfd6bf.png",
+      "bytes": 220156
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/dcbc9ba59285d80ed7a7f4e5561dc289.png",
+      "destination": "formatted/classification/Concepts_Theory/image/dcbc9ba59285d80ed7a7f4e5561dc289.png",
+      "bytes": 7930
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/e506f183715f8ac897180d17063a505c.png",
+      "destination": "formatted/classification/Concepts_Theory/image/e506f183715f8ac897180d17063a505c.png",
+      "bytes": 13887
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/e64dd97d311f08e1158056e6290402ca.png",
+      "destination": "formatted/classification/Concepts_Theory/image/e64dd97d311f08e1158056e6290402ca.png",
+      "bytes": 129645
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/e69530714442021d241271af6fd08b8f.png",
+      "destination": "formatted/classification/Concepts_Theory/image/e69530714442021d241271af6fd08b8f.png",
+      "bytes": 9695
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/e76870c2ce4d1deac33a6f6975af6257.jpg",
+      "destination": "formatted/classification/Concepts_Theory/image/e76870c2ce4d1deac33a6f6975af6257.jpg",
+      "bytes": 14613
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/eaa170dbfb0c22897208fb4d38370fbf.png",
+      "destination": "formatted/classification/Concepts_Theory/image/eaa170dbfb0c22897208fb4d38370fbf.png",
+      "bytes": 346178
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/ec445b0653da61e0e217f659304045da.png",
+      "destination": "formatted/classification/Concepts_Theory/image/ec445b0653da61e0e217f659304045da.png",
+      "bytes": 18674
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/eff14548d757016110e7c0d95c16afbf.png",
+      "destination": "formatted/classification/Concepts_Theory/image/eff14548d757016110e7c0d95c16afbf.png",
+      "bytes": 13994
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/f207ac509158b91c6e87250b97b66b46.png",
+      "destination": "formatted/classification/Concepts_Theory/image/f207ac509158b91c6e87250b97b66b46.png",
+      "bytes": 5089
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/f31eb230c50cc5f9e81041356eebda4b.png",
+      "destination": "formatted/classification/Concepts_Theory/image/f31eb230c50cc5f9e81041356eebda4b.png",
+      "bytes": 29951
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/f5f99722918393d06a1b15f1f4af1435 copy.png",
+      "destination": "formatted/classification/Concepts_Theory/image/f5f99722918393d06a1b15f1f4af1435 copy.png",
+      "bytes": 97296
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/f5f99722918393d06a1b15f1f4af1435.png",
+      "destination": "formatted/classification/Concepts_Theory/image/f5f99722918393d06a1b15f1f4af1435.png",
+      "bytes": 97296
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/fafc9f9503add0c340c04133e12eda91.png",
+      "destination": "formatted/classification/Concepts_Theory/image/fafc9f9503add0c340c04133e12eda91.png",
+      "bytes": 31274
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/ff3e7b227ffd108333463ac672168359.png",
+      "destination": "formatted/classification/Concepts_Theory/image/ff3e7b227ffd108333463ac672168359.png",
+      "bytes": 55881
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image copy.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image copy.png",
+      "bytes": 796250
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-1.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-1.png",
+      "bytes": 2816575
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-10.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-10.png",
+      "bytes": 61603
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-100.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-100.png",
+      "bytes": 10903
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-101.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-101.png",
+      "bytes": 10821
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-102.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-102.png",
+      "bytes": 18169
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-103.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-103.png",
+      "bytes": 8408
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-104.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-104.png",
+      "bytes": 32948
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-105.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-105.png",
+      "bytes": 34907
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-106.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-106.png",
+      "bytes": 22063
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-107.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-107.png",
+      "bytes": 13583
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-108.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-108.png",
+      "bytes": 20882
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-109.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-109.png",
+      "bytes": 14019
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-110.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-110.png",
+      "bytes": 10522
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-111.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-111.png",
+      "bytes": 13954
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-112.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-112.png",
+      "bytes": 10039
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-113.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-113.png",
+      "bytes": 10487
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-114.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-114.png",
+      "bytes": 10605
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-115.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-115.png",
+      "bytes": 17691
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-116.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-116.png",
+      "bytes": 31137
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-117.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-117.png",
+      "bytes": 14075
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-118.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-118.png",
+      "bytes": 29416
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-119.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-119.png",
+      "bytes": 44371
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-12.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-12.png",
+      "bytes": 10647
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-120.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-120.png",
+      "bytes": 65464
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-13.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-13.png",
+      "bytes": 15592
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-14.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-14.png",
+      "bytes": 11163
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-15.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-15.png",
+      "bytes": 4391
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-16.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-16.png",
+      "bytes": 12729
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-17.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-17.png",
+      "bytes": 21535
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-18.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-18.png",
+      "bytes": 23412
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-19.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-19.png",
+      "bytes": 33617
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-2.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-2.png",
+      "bytes": 4601
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-20.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-20.png",
+      "bytes": 46427
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-21.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-21.png",
+      "bytes": 31680
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-22.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-22.png",
+      "bytes": 24235
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-23.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-23.png",
+      "bytes": 10994
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-24.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-24.png",
+      "bytes": 14470
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-25.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-25.png",
+      "bytes": 3605
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-26.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-26.png",
+      "bytes": 6517
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-27.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-27.png",
+      "bytes": 20527
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-28.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-28.png",
+      "bytes": 125765
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-29.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-29.png",
+      "bytes": 8274
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-30.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-30.png",
+      "bytes": 4757
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-31.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-31.png",
+      "bytes": 60927
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-33.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-33.png",
+      "bytes": 66686
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-34.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-34.png",
+      "bytes": 49213
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-35.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-35.png",
+      "bytes": 8274
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-36.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-36.png",
+      "bytes": 80881
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-37.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-37.png",
+      "bytes": 2840
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-38.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-38.png",
+      "bytes": 28928
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-39.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-39.png",
+      "bytes": 9731
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-40.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-40.png",
+      "bytes": 13606
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-41.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-41.png",
+      "bytes": 14207
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-42.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-42.png",
+      "bytes": 15201
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-43.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-43.png",
+      "bytes": 23140
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-44.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-44.png",
+      "bytes": 33280
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-45.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-45.png",
+      "bytes": 7165
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-46.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-46.png",
+      "bytes": 8397
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-48.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-48.png",
+      "bytes": 7534
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-49.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-49.png",
+      "bytes": 7060
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-50.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-50.png",
+      "bytes": 6322
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-51.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-51.png",
+      "bytes": 4337
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-52.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-52.png",
+      "bytes": 8168
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-53.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-53.png",
+      "bytes": 7239
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-54.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-54.png",
+      "bytes": 8323
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-55.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-55.png",
+      "bytes": 50146
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-56.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-56.png",
+      "bytes": 8740
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-57.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-57.png",
+      "bytes": 65822
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-58.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-58.png",
+      "bytes": 31158
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-59.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-59.png",
+      "bytes": 8922
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-6.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-6.png",
+      "bytes": 4231
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-60.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-60.png",
+      "bytes": 13079
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-61.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-61.png",
+      "bytes": 10014
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-62.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-62.png",
+      "bytes": 9921
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-63.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-63.png",
+      "bytes": 15646
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-64.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-64.png",
+      "bytes": 12352
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-65.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-65.png",
+      "bytes": 12436
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-67.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-67.png",
+      "bytes": 10819
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-68.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-68.png",
+      "bytes": 5616
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-69.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-69.png",
+      "bytes": 30507
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-70.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-70.png",
+      "bytes": 7224
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-71.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-71.png",
+      "bytes": 10077
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-72.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-72.png",
+      "bytes": 34643
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-73.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-73.png",
+      "bytes": 11339
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-74.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-74.png",
+      "bytes": 10238
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-75.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-75.png",
+      "bytes": 10154
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-76.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-76.png",
+      "bytes": 11419
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-77.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-77.png",
+      "bytes": 7553
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-78.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-78.png",
+      "bytes": 21487
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-79.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-79.png",
+      "bytes": 11409
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-80.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-80.png",
+      "bytes": 10191
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-81.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-81.png",
+      "bytes": 11355
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-82.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-82.png",
+      "bytes": 10241
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-83.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-83.png",
+      "bytes": 10170
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-84.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-84.png",
+      "bytes": 10109
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-85.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-85.png",
+      "bytes": 10509
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-86.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-86.png",
+      "bytes": 5078
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-87.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-87.png",
+      "bytes": 17534
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-88.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-88.png",
+      "bytes": 9624
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-89.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-89.png",
+      "bytes": 9882
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-9.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-9.png",
+      "bytes": 34827
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-90.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-90.png",
+      "bytes": 9828
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-92.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-92.png",
+      "bytes": 9850
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-93.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-93.png",
+      "bytes": 34191
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-94.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-94.png",
+      "bytes": 11279
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-95.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-95.png",
+      "bytes": 10904
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-96.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-96.png",
+      "bytes": 11000
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-97.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-97.png",
+      "bytes": 10861
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-98.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-98.png",
+      "bytes": 10980
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image-99.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image-99.png",
+      "bytes": 11327
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/image.png",
+      "destination": "formatted/classification/Concepts_Theory/image/image.png",
+      "bytes": 7580
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/isis-rules-1.png",
+      "destination": "formatted/classification/Concepts_Theory/image/isis-rules-1.png",
+      "bytes": 18939
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/ospf-areas.png",
+      "destination": "formatted/classification/Concepts_Theory/image/ospf-areas.png",
+      "bytes": 11466
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/ospf-route-removal-withdraw.png",
+      "destination": "formatted/classification/Concepts_Theory/image/ospf-route-removal-withdraw.png",
+      "bytes": 38195
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/policy_isis-1.png",
+      "destination": "formatted/classification/Concepts_Theory/image/policy_isis-1.png",
+      "bytes": 30620
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/policy_isis_2-1.png",
+      "destination": "formatted/classification/Concepts_Theory/image/policy_isis_2-1.png",
+      "bytes": 17509
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/policy_ospf_1-1.png",
+      "destination": "formatted/classification/Concepts_Theory/image/policy_ospf_1-1.png",
+      "bytes": 7078
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/policy_ospf_2.png",
+      "destination": "formatted/classification/Concepts_Theory/image/policy_ospf_2.png",
+      "bytes": 7643
+    },
+    {
+      "source": "raw/classification/Concepts_Theory/image/router-lsa1-junos.png",
+      "destination": "formatted/classification/Concepts_Theory/image/router-lsa1-junos.png",
+      "bytes": 51415
+    },
+    {
+      "source": "raw/classification/Troubleshooting/image/image.png",
+      "destination": "formatted/classification/Troubleshooting/image/image.png",
+      "bytes": 581268
+    }
+  ],
   "summary": {
     "total": 335,
-    "changed": 232
+    "changed": 232,
+    "assets": 643
   }
 }

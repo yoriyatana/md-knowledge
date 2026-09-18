@@ -1,0 +1,10 @@
+nhatnct@BTN.MX960.201_RE0> show task memory 
+Memory                 Size (kB)  Percentage  When
+  Currently In Use:        31236          0%  now
+  Maximum Ever Used:       31261          0%  20/12/26 10:58:52
+  Available:            51476578        100%  now
+  nhatnct@BTN.MX960.202.RE0> show task memory 
+Memory                 Size (kB)  Percentage  When
+  Currently In Use:        29860          0%  now
+  Maximum Ever Used:       30355          0%  20/12/26 10:59:24
+  Available:            51476578        100%  now

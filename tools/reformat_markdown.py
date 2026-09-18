@@ -6,6 +6,7 @@ from __future__ import annotations
 import argparse
 import json
 import re
+import shutil
 from pathlib import Path
 from typing import Iterable
 
@@ -19,6 +20,17 @@ def iter_markdown_files(root: Path, excluded_dirs: set[str]) -> Iterable[Path]:
         path
         for path in root.rglob("*.md")
         if path.is_file() and not any(part in excluded_dirs for part in path.relative_to(root).parts)
+    )
+
+
+def iter_assets(root: Path, excluded_dirs: set[str]) -> Iterable[Path]:
+    yield from sorted(
+        path
+        for path in root.rglob("*")
+        if path.is_file()
+        and path.suffix.lower() not in {".md", ".markdown"}
+        and path.name != ".DS_Store"
+        and not any(part in excluded_dirs for part in path.relative_to(root).parts)
     )
 
 
@@ -83,17 +95,34 @@ def main() -> int:
         parser.error(f"input directory does not exist: {args.input}")
 
     results = []
-    for source in iter_markdown_files(args.input, set(args.exclude_dir)):
+    excluded_dirs = set(args.exclude_dir)
+    for source in iter_markdown_files(args.input, excluded_dirs):
         relative = source.relative_to(args.input)
         results.append(process_file(source, args.output / relative))
+
+    assets = []
+    for source in iter_assets(args.input, excluded_dirs):
+        relative = source.relative_to(args.input)
+        destination = args.output / relative
+        destination.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(source, destination)
+        assets.append(
+            {
+                "source": str(source),
+                "destination": str(destination),
+                "bytes": source.stat().st_size,
+            }
+        )
 
     report = {
         "input": str(args.input),
         "output": str(args.output),
         "files": results,
+        "assets": assets,
         "summary": {
             "total": len(results),
             "changed": sum(bool(item["changed"]) for item in results),
+            "assets": len(assets),
         },
     }
     args.report.parent.mkdir(parents=True, exist_ok=True)
