@@ -45,6 +45,19 @@ Deterministic output generated from `reports/grouping-manifest.json`.
     - [BGP Route Reflector Redundancy and Optimization Case Study](routing/bgp/case-study.md) — case-study — Mixed
   - **ospf/**
     - [OSPF PE-CE Deep Dive and Fundamentals](routing/ospf/concepts.md) — concepts — Mixed
+- **source-inventory/**
+  - [2022_FTEL-PS Source Inventory](source-inventory/2022-ftel-ps.md) — index — Mixed
+  - [Best_Practise Source Inventory](source-inventory/best-practise.md) — index — Mixed
+  - [classification Source Inventory](source-inventory/classification.md) — index — Mixed
+  - [JTAC_Descriptions Source Inventory](source-inventory/jtac-descriptions.md) — index — Mixed
+  - [Learning_Notes Source Inventory](source-inventory/learning-notes.md) — index — Mixed
+  - [MX_series_Architecture Source Inventory](source-inventory/mx-series-architecture.md) — index — Mixed
+  - [Outlook Source Inventory](source-inventory/outlook.md) — index — Mixed
+  - [Procedures Source Inventory](source-inventory/procedures.md) — index — Mixed
+  - [Recommends Source Inventory](source-inventory/recommends.md) — index — Mixed
+  - [SLA Source Inventory](source-inventory/sla.md) — index — Mixed
+  - [SVT-LAB Source Inventory](source-inventory/svt-lab.md) — index — Mixed
+  - [TS_notes Source Inventory](source-inventory/ts-notes.md) — index — Mixed
 - **switching/**
   - [Switching Configuration Guide](switching/configuration-guide.md) — configuration-guide — Mixed
   - **lacp/**

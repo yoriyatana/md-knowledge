@@ -127,5 +127,7 @@ tương đối bên trong `formatted/`. Nhóm index dùng `source_directories`.
 `plan` kiểm tra tất cả nguồn có tồn tại và in kế hoạch. `build` tạo lại toàn bộ
 `grouped/`, loại bỏ các block nội dung trùng nhau, sao chép ảnh và attachment được
 tham chiếu với link tương đối đúng, tạo `grouped/index.md` và
-`grouped/source-map.json`. Thư mục `grouped/` là local-only cho đến khi nội dung
-được review.
+`grouped/source-map.json`. Các note public chưa được consolidate vẫn được đưa vào
+các nhóm `source-inventory/` theo thư mục nguồn để không bị bỏ sót; credentials
+được loại trừ khỏi inventory. Thư mục `grouped/` là local-only cho đến khi nội
+dung được review.
