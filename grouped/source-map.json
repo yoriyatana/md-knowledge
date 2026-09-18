@@ -892,7 +892,6 @@
       "formatted/TS_notes/BGP flap.md",
       "formatted/TS_notes/BGP.md",
       "formatted/TS_notes/Destinations RTBH notes.md",
-      "formatted/TS_notes/Load-balance test.md",
       "formatted/TS_notes/RR không nhận được route từ các PE tỉnh - SR-2021-1208-1924.md",
       "formatted/TS_notes/Source-base RTBH notes.md"
     ],
@@ -926,6 +925,7 @@
     "output": "routing/loadbalance/index.md",
     "sources": [
       "formatted/TS_notes/Entropy label capable.md",
+      "formatted/TS_notes/Load-balance test.md",
       "formatted/TS_notes/Symmetric Load Balancing.md",
       "formatted/TS_notes/ecmp-local-bias.md",
       "formatted/TS_notes/pfe local-bias.md"
