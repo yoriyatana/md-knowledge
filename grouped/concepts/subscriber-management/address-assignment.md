@@ -3,7 +3,7 @@
 > Generated deterministically from the approved grouping manifest.
 
 
-## Source: `formatted/TS_notes/BRAS_check_address-assignment.md`
+## Source: `formatted/TS_notes/BRAS check address-assignment.md`
 
 # BRAS check address-assignment
 
@@ -77,7 +77,7 @@
 
 > show network-access aaa statistics address-assignment pool IPv6-Front
 
-## Source: `formatted/Case_notes/Các_thuật_ngữ_sau_được_sử_dụng_để_giải_thích_cách_cấp_phát_địa_chỉ_IP_(address-assignment).md`
+## Source: `formatted/Case_notes/Các thuật ngữ sau được sử dụng để giải thích cách cấp phát địa chỉ IP (address-assignment).md`
 
 # Các thuật ngữ sau được sử dụng để giải thích cách cấp phát địa chỉ IP (address-assignment)
 
@@ -96,7 +96,8 @@ Ví dụ dãy A có chỉ có 1 đoạn IP gồm 192.0.2.1, 192.0.2.2, 192.0.2.
 Cách cấp phát liên tục (mặc định) để tìm ra IP address trống dùng cấp cho thuê bao:
 
 - Ví dụ: dãy địa chỉ IP đang được cấu hình gồm 4 dãy là A, B, C, và D. Dãy địa chỉ vừa được cấp phát là C.
-    - Mỗi dãy chia thành 3 đoạn địa chỉ IP là r1, r2, r3. Đoạn địa chỉ vừa được sử dụng là r2.
+
+- Mỗi dãy chia thành 3 đoạn địa chỉ IP là r1, r2, r3. Đoạn địa chỉ vừa được sử dụng là r2.
 
 Tiến trình tìm địa chỉ IP trong để cấp phát sẽ diễn ra như sau:
 

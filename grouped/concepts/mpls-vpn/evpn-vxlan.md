@@ -9,25 +9,23 @@
 
 1. Following command can be used to check if the next hop is going to be installed in FPC or not:
 
-" **show route <prefix> extensive expanded-nh** "
+" show route  extensive expanded-nh "
 
 2. Document for deleting communities:
 
-"[https://www.juniper.net/documentation/us/en/software/junos/routing-policy/bgp/topics/example/policy-community-remove.html](https://www.juniper.net/documentation/us/en/software/junos/routing-policy/bgp/topics/example/policy-community-remove.html)
+"<https://www.juniper.net/documentation/us/en/software/junos/routing-policy/bgp/topics/example/policy-community-remove.html>
 
-## Source: `formatted/TS_notes/evpn_command_check.md`
+## Source: `formatted/TS_notes/evpn command check.md`
 
 # evpn command check
 
-![image.png](../../assets/evpn-vxlan/50bd5b1924-image.png)
+![](../../assets/evpn-vxlan/54ef5cf0b2-d1594a64ce07ca64ebd89311766eda84.png)![](../../assets/evpn-vxlan/c380dd4ef7-7b22fc83ad06b517e0a2a0a96b401d3e.png)
 
-![image-1.png](../../assets/evpn-vxlan/4d8c8dfcb9-image-1.png)
-
-## Source: `formatted/TS_notes/commands_need_to_collect_to_check_EVPN-VXLAN_(From_This_Week-Data_Center_Deployment_with_EVPN-VXLAN).md`
+## Source: `formatted/TS_notes/commands need to collect to check EVPN-VXLAN (From This Week_ Data Center Deployment with EVPN_VXLAN).md`
 
 # commands need to collect to check EVPN-VXLAN (From This Week: Data Center Deployment with EVPN/VXLAN)
 
-tung.nt@MX960-01_RE1> show ddos-protection protocols statistics brief | no-more
+tung.nt@MX960-01\_RE1> show ddos-protection protocols statistics brief | no-more
 
 check crc >>> có tính băng link-direct
 
@@ -61,11 +59,11 @@ jnpr@LEAF-1> show bfd session
 
 Verify exchange of Ethernet Segment (Type 4) routes used for ES Discovery to enable multihoming, DF Election, and Split Horizon/Local Bias.
 
-jnpr@LEAF-1> show route instance __default_evpn__ detail
+jnpr@LEAF-1> show route instance \_\_default\_evpn\_\_ detail
 
-jnpr@LEAF-1> show policy __vrf-import-__default_evpn__-internal__
+jnpr@LEAF-1> show policy \_\_vrf-import-\_\_default\_evpn\_\_-internal\_\_
 
-jnpr@LEAF-1> show route community-name __vrf-community-__default_evpn__-import-internal__
+jnpr@LEAF-1> show route community-name \_\_vrf-community-\_\_default\_evpn\_\_-import-internal\_\_
 
 jnpr@LEAF-1> show route table bgp.evpn.0 extensive | find ^4:
 

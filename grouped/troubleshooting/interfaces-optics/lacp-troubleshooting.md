@@ -3,21 +3,18 @@
 > Generated deterministically from the approved grouping manifest.
 
 
-## Source: `formatted/TS_notes/LACP_check-list_commands.md`
+## Source: `formatted/TS_notes/LACP check-list commands.md`
 
 # LACP check-list commands
 
-```
 Phía MX:
 
 1. Apply traceoptions LACP và PPM trên cả 4 thiết bị QFX & MX.
 
-2. Thu thập thông tin và enable event-options để MX tự động thu thập log khi có trigger liên quan đến event lacpd_timeout và lacp_intf_down.
+2. Thu thập thông tin và enable event-options để MX tự động thu thập log khi có trigger liên quan đến event lacpd\_timeout và lacp\_intf\_down.
 
 3. Thu thập thông tin dưới shell mode và kernel
-```
 
-```
 [ Thursday, January 13, 2022 11:13 AM ] ⁨SVT.Thái.NĐ⁩: 1. Enable cli timestamp
 
 set cli timestamp
@@ -38,7 +35,7 @@ show lacp interfaces extensive
 
 show lacp statistics interfaces
 
-show interfaces ae<intf_num> | match flap
+show interfaces ae | match flap
 
 show lacp timeouts (multiple times)
 
@@ -54,13 +51,13 @@ show ppm transmissions protocol lacp
 
 a. While at the CLI prompt
 
-start shell pfe network fpc<fpc_num>
+start shell pfe network fpc
 
 OR
 
 b. While at the FreeBSD prompt of RE
 
-vty fpc<fpc_num>
+vty fpc
 
 clear ppm statistics first before collecting any data.
 
@@ -74,17 +71,17 @@ set ppm utrace proto
 
 set ppm utrace all
 
-show ukern_trace handles <<<<
+show ukern\_trace handles <<<<
 
 search for PPM handle <<<<
 
-set ukern_trace <handle num> level extensive
+set ukern\_trace  level extensive
 
-set ukern_trace <handle num> logging enable
+set ukern\_trace  logging enable
 
-set ukern_trace <handle num> buffer 100000000
+set ukern\_trace  buffer 100000000
 
-set ukern_trace <handle num> printf enable
+set ukern\_trace  printf enable
 
 Above debugs will be coming continuously. keep separate console and collect the above debugs running on both DUT and PEER device through out the logs collection.
 
@@ -105,14 +102,14 @@ freebsd promt:
 copy paste the clis continuously for few times.
 
 date
-cprod -A fpc<num> -c "show sched"
-date
-cprod -A fpc<num> -c "show threads cpu"
-date
-cprod -A fpc<num> -c "show ttp statistics"
-date
-cprod -A fpc<num> -c " show ppm statistics"
-date
+
+cprod -A fpc -c "show sched"
+
+cprod -A fpc -c "show threads cpu"
+
+cprod -A fpc -c "show ttp statistics"
+
+cprod -A fpc -c " show ppm statistics"
 
 PFE BCM commands to Collect.
 
@@ -134,27 +131,27 @@ If drop is seen on PFE-SHIM/HALP, there are commands to enable debug. "debug hal
 
 Output of "debug halp tx/rx" can be seen in as below
 
-FPC0(PE-3 vty)# show ukern_trace handles
+FPC0(PE-3 vty)# show ukern\_trace handles
 
-FPC0(PE-3 vty)# show ukern_trace 13
+FPC0(PE-3 vty)# show ukern\_trace 13
 
-[Tue Oct 13 10:42:24.314] [9430] brcm_rx_init:408 (init) rx init done
+[Tue Oct 13 10:42:24.314] [9430] brcm\_rx\_init:408 (init) rx init done
 
-[Tue Oct 13 10:42:24.314] [9431] brcm_tx_init:441 (init) tx init done
+[Tue Oct 13 10:42:24.314] [9431] brcm\_tx\_init:441 (init) tx init done
 
-[Tue Oct 13 10:42:24.317] [9432] brcm_pkt_fastpath_init:754 (init) pkt fp thread started
+[Tue Oct 13 10:42:24.317] [9432] brcm\_pkt\_fastpath\_init:754 (init) pkt fp thread started
 
-[Fri Oct 23 04:04:02.702] [13917] brcm_pkt_debug_tx:1827 (tx_api_entry) pkt 0xaf5f0178  ifd  idx 656 len 74
+[Fri Oct 23 04:04:02.702] [13917] brcm\_pkt\_debug\_tx:1827 (tx\_api\_entry) pkt 0xaf5f0178  ifd  idx 656 len 74
 
-proto 0 ifl_inp 0 hint 40009001 msec 840115082
+proto 0 ifl\_inp 0 hint 40009001 msec 840115082
 
 18 2a d3 9c d8 35 78 4f 9b eb fc d1 08 00 45 c0 00 3c d2 51 00 00 01 2e 8e 61 ab 0a 01 06 ab 0a
 
 01 07 11 14 bc 3d 01 00 00 28 00 0c 16 01 1b d7 9c 5e e6 ab 73 68 00 0c 83 01 00 00 00 00 00 00
 
-[Fri Oct 23 04:04:02.867] [13918] brcm_pkt_debug_tx:1827 (tx_api_entry) pkt 0xaf5f0178  ifd  idx 656 len 85
+[Fri Oct 23 04:04:02.867] [13918] brcm\_pkt\_debug\_tx:1827 (tx\_api\_entry) pkt 0xaf5f0178  ifd  idx 656 len 85
 
-proto 0 ifl_inp 0 hint 9001 msec 840115247
+proto 0 ifl\_inp 0 hint 9001 msec 840115247
 
 However if drop is in HW/BCM then need to check why HW is dropping.
 
@@ -164,42 +161,61 @@ Show c
 
 Show c cpu
 
-tcpdump -ni <intf#>
-```
+tcpdump -ni
 
-```
 Lấy giúp em các output dưới đây (ở mức shell) vào giờ thấp điểm, và chạy từng lệnh một:
+
 set cli screen-length 0
+
 ## Check linecard shell-mode
+
 request pfe execute command "show syslog messages" target fpc2
+
 request pfe execute command "show nvram" target fpc2
+
 request pfe execute command "show cmerror module" target fpc2
+
 request pfe execute command "show hsl2 statistics" target fpc2
+
 request pfe execute command "show hsl2 statistics crc" target fpc2
+
 request pfe execute command "show threads cpu" target fpc2
+
 request pfe execute command "show sched" target fpc2
+
 >>>> take this output 3 times in the interval of 30secs
+
 request pfe execute command "show ppm transmits protocol lacp" target fpc2
+
 request pfe execute command "show ppm adjacencies protocol lacp" target fpc2
+
 request pfe execute command "show ppm statistics protocol lacp" target fpc2
-## Check linecard shell-mode
+
 request pfe execute command "show syslog messages" target fpc4
+
 request pfe execute command "show nvram" target fpc4
+
 request pfe execute command "show cmerror module" target fpc4
+
 request pfe execute command "show hsl2 statistics" target fpc4
+
 request pfe execute command "show hsl2 statistics crc" target fpc4
+
 request pfe execute command "show threads cpu" target fpc4
+
 request pfe execute command "show sched" target fpc4
->>>> take this output 3 times in the interval of 30secs
+
 request pfe execute command "show ppm transmits protocol lacp" target fpc4
+
 request pfe execute command "show ppm adjacencies protocol lacp" target fpc4
+
 request pfe execute command "show ppm statistics protocol lacp" target fpc4
+
 # ------------------------
+
 set cli screen-length 30
 
-```
-
-## Source: `formatted/TS_notes/MPC11E-LACP_không_up-join.md`
+## Source: `formatted/TS_notes/MPC11E - LACP không up_join.md`
 
 # MPC11E - LACP không up/join
 
@@ -245,32 +261,25 @@ set cli screen-length 30
 
 - --
 
-# **LACP Port State**
+# LACP Port State
 
 The LACP port state (also known as the actor state) field is a single byte, each bit of which is a flag indicating a particular status. In this table, mux (i.e. a multiplexer) refers to the logical unit which aggregates the links into a single logical transmitter/receiver.
 
 The meaning of each bit is as follows:
 
-|Bit|Name           |Meaning                                                                                                                                                                                                          |
-|---|---------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|0  |LACP_Activity  |1 = Active, 0 = Passive.
-Device intends to transmit periodically in order to find potential members for the aggregate. This is toggled by mode active in the channel-group configuration on the member interfaces.|
-|1  |LACP_Timeout   |1 = Short Timeout, 0 = Long Timeout
-Length of the LACP timeout.                                                                                                                                                   |
-|2  |Aggregation    |1 = Yes, 0 = No (individual link)
-Will allow the link to be aggregated.                                                                                                                                           |
-|3  |Synchronization|1 = In sync, 0 = Not in sync
-Indicates that the mux on the transmitting machine is in sync with what’s being advertised in the LACP frames.                                                                       |
-|4  |Collecting     |1 = Yes, 0 = No
-Mux is accepting traffic received on this port                                                                                                                                                    |
-|5  |Distributing   |1 = Yes, 0 = No
-Mux is sending traffic using this port                                                                                                                                                            |
-|6  |Defaulted      |1 = default settings, 0 = via LACP PDU
-Whether the receiving mux is using default (administratively defined) parameters, if the information was received in an LACP PDU.                                          |
-|7  |Expired        |1 = Yes, 0 = No
-In an expired state                                                                                                                                                                               |
+|  |  |  |
+| --- | --- | --- |
+| Bit | Name | Meaning |
+| 0 | LACP\_Activity | Device intends to transmit periodically in order to find potential members for the aggregate. This is toggled by mode active in the channel-group configuration on the member interfaces.  1 = Active, 0 = Passive. |
+| 1 | LACP\_Timeout | Length of the LACP timeout.  1 = Short Timeout, 0 = Long Timeout |
+| 2 | Aggregation | Will allow the link to be aggregated.  1 = Yes, 0 = No (individual link) |
+| 3 | Synchronization | Indicates that the mux on the transmitting machine is in sync with what’s being advertised in the LACP frames.  1 = In sync, 0 = Not in sync |
+| 4 | Collecting | Mux is accepting traffic received on this port  1 = Yes, 0 = No |
+| 5 | Distributing | Mux is sending traffic using this port  1 = Yes, 0 = No |
+| 6 | Defaulted | Whether the receiving mux is using default (administratively defined) parameters, if the information was received in an LACP PDU.  1 = default settings, 0 = via LACP PDU |
+| 7 | Expired | In an expired state  1 = Yes, 0 = No |
 
-# **Junos OS and NXOS**
+# Junos OS and NXOS
 
 Junos OS users are probably smiling right now, as this should look very familiar:
 
@@ -328,11 +337,11 @@ System Identifier=0x8000, Port Identifier=0x8000,0x106
 
 Operational key=100
 
-LACP_Activity=active
+LACP\_Activity=active
 
-LACP_Timeout=Long Timeout (30s)
+LACP\_Timeout=Long Timeout (30s)
 
-Synchronization=IN_SYNC
+Synchronization=IN\_SYNC
 
 Collecting=true
 
@@ -352,7 +361,7 @@ System Identifier=0x7f, Port Identifier=0x7f,0x3
 
 Operational key=2
 
-LACP_Timeout=short Timeout (1s)
+LACP\_Timeout=short Timeout (1s)
 
 Partner Admin State=(Ac-0:To-1:Ag-0:Sy-0:Co-0:Di-0:De-0:Ex-0)
 
@@ -362,7 +371,7 @@ Aggregate or Individual(True=1)= 1
 
 However, for the sake of anybody who has been sent output from show lacp neighbor interface port-channel X and wants to understand the hex value that’s displayed (0x3F in this case), it’s pretty simple.
 
-# **Decode-o-matic**
+# Decode-o-matic
 
 - Convert hexadecimal to binary. Hexadecimal 0x3F is 00111111 in binary.
 - Flip the bits around. 00111111 becomes 11111100
@@ -404,7 +413,7 @@ Clearly this link was not happy, but thankfully a shut / no shut sequence was en
 
 Happy aggregating!
 
-## Source: `formatted/TS_notes/lacp_flap_khi_dung_VC_mix-mode.md`
+## Source: `formatted/TS_notes/lacp flap khi dung VC mix-mode.md`
 
 # lacp flap khi dung VC mix-mode
 

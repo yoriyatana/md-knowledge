@@ -47,7 +47,7 @@ def copy_images(text: str, source: Path, destination: Path, output_root: Path) -
     def replace(match: re.Match[str]) -> str:
         target = match.group(2).split()[0].strip("<>")
         image = (source.parent / target).resolve()
-        if not image.is_file() or image.suffix.lower() not in {".png", ".jpg", ".jpeg", ".gif", ".webp", ".svg"}:
+        if not image.is_file():
             return match.group(0)
         digest = hashlib.sha1(str(image).encode("utf-8")).hexdigest()[:10]
         asset_name = f"{digest}-{image.name}"

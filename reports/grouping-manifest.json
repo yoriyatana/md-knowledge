@@ -11,12 +11,12 @@
       "kind": "Concepts",
       "platform": "Juniper/Junos",
       "sources": [
-        "classification/Concepts_Theory/OSPF_SUMMARY.md",
-        "classification/Concepts_Theory/ospf_as_routing_protocol_for_CE-PE.md",
-        "classification/Concepts_Theory/OSPF AS THE PE-CE ROUTING PROTOCOLS DEEP DIVE – PART 1.md",
-        "classification/Concepts_Theory/OSPF AS THE PE-CE ROUTING PROTOCOLS DEEP DIVE – PART 2.md",
-        "classification/Concepts_Theory/OSPF AS THE PE-CE ROUTING PROTOCOLS DEEP DIVE – PART 3.md",
-        "classification/Concepts_Theory/OSPF_Back_Door_Links-A_Case_Study.md"
+        "Learning_Notes/OSPF SUMMARY.md",
+        "Learning_Notes/ospf as routing protocol for CE-PE.md",
+        "Learning_Notes/Untitled Note_5.md",
+        "Learning_Notes/Untitled Note_6.md",
+        "Learning_Notes/Untitled Note_7.md",
+        "Learning_Notes/OSPF Back Door Links_ A Case Study.md"
       ]
     },
     {
@@ -27,9 +27,9 @@
       "kind": "Concepts",
       "platform": "Juniper/Junos",
       "sources": [
-        "classification/Concepts_Theory/Bidirectional_Forwarding_Detection_(BFD).md",
-        "classification/Concepts_Theory/BFD_scales.md",
-        "classification/Concepts_Theory/pr1523537_nay_chu_yeu_giai_thich_ve_behaviour_cua_bfd_session_id.md"
+        "Learning_Notes/Bidirectional Forwarding Detection (BFD).md",
+        "Recommends/BFD scales.md",
+        "Case_notes/pr1523537 nay chu yeu giai thich ve behaviour cua bfd session id.md"
       ]
     },
     {
@@ -40,13 +40,13 @@
       "kind": "Troubleshooting",
       "platform": "Juniper/Junos",
       "sources": [
-        "TS_notes/BFD_anchorship_PFE.md",
-        "TS_notes/command_list_to_collect_the_bfd_data_from_the_respective_fpc.md",
-        "TS_notes/commands_need_to_collect_to_check_BFD_(MPC10-11)-From_TAC.md",
-        "TS_notes/sử_dụng_BFD_cho_LSP.md",
+        "TS_notes/BFD anchorship PFE.md",
+        "TS_notes/command list to collect the bfd data from the respective fpc.md",
+        "TS_notes/commands need to collect to check BFD (MPC10_11) - From TAC.md",
+        "TS_notes/sử dụng BFD cho LSP.md",
         "TS_notes/BFD.md",
-        "TS_notes/BFD_ISSUE_VIETTEL_KV3-BRAS28.md",
-        "TS_notes/[M-MX-T]_Troubleshooting_Checklist-BFD.md"
+        "TS_notes/BFD ISSUE VIETTEL KV3_BRAS28.md",
+        "TS_notes/_M_MX_T_ Troubleshooting Checklist - BFD.md"
       ]
     },
     {
@@ -58,7 +58,7 @@
       "platform": "Juniper/Junos",
       "sources": [
         "TS_notes/BRAS.md",
-        "classification/Concepts_Theory/Giới_hạn_số_lượng_phiên_của_một_khách_hàng_trên_BRAS_Juniper_(session-limit-per-username).md"
+        "Recommends/Giới hạn số lượng phiên của một khách hàng trên BRAS Juniper (session-limit-per-username).md"
       ]
     },
     {
@@ -69,8 +69,8 @@
       "kind": "Concepts",
       "platform": "Juniper/Junos",
       "sources": [
-        "TS_notes/BRAS_check_address-assignment.md",
-        "Case_notes/Các_thuật_ngữ_sau_được_sử_dụng_để_giải_thích_cách_cấp_phát_địa_chỉ_IP_(address-assignment).md"
+        "TS_notes/BRAS check address-assignment.md",
+        "Case_notes/Các thuật ngữ sau được sử dụng để giải thích cách cấp phát địa chỉ IP (address-assignment).md"
       ]
     },
     {
@@ -81,9 +81,9 @@
       "kind": "Concepts",
       "platform": "Juniper/Junos",
       "sources": [
-        "TS_notes/Attribute_DNS_IPv6_từ_Radius_cho_Bras_Juniper.md",
-        "TS_notes/Example-Understanding_Dual-Stack_PPPoE_Subscriber.md",
-        "TS_notes/SR-2021-1215-1608-Hỗ_trợ_thử_nghiệm_IPv6_tĩnh_cho_KH_CĐBR.md"
+        "TS_notes/Attribute DNS IPv6 từ Radius cho Bras Juniper.md",
+        "TS_notes/Example - Understanding Dual-Stack PPPoE Subscriber.md",
+        "TS_notes/SR-2021-1215-1608 - Hỗ trợ thử nghiệm IPv6 tĩnh cho KH CĐBR.md"
       ]
     },
     {
@@ -94,12 +94,12 @@
       "kind": "Troubleshooting",
       "platform": "Juniper/Junos",
       "sources": [
-        "TS_notes/BRAS-TROUBLESHOOTING_PPPoE_in_TOMCAT.md",
-        "TS_notes/BRAS-command_ouputs.md",
-        "TS_notes/Command_check_user_bras_pppoe_stuck.md",
-        "TS_notes/KA_LCP_PPP_command_checks.md",
-        "TS_notes/How_to_disable_PFE_inline_PPP_keepalive_messages.md",
-        "TS_notes/The_subscribers_cannot_online_on_AE_interface.md"
+        "TS_notes/BRAS - TROUBLESHOOTING PPPoE in TOMCAT.md",
+        "TS_notes/BRAS - command ouputs.md",
+        "TS_notes/Command check user bras pppoe stuck.md",
+        "TS_notes/KA LCP PPP command checks.md",
+        "TS_notes/How to disable PFE inline PPP keepalive messages.md",
+        "TS_notes/The subscribers cannot online on AE interface.md"
       ]
     },
     {
@@ -110,7 +110,7 @@
       "kind": "Case study",
       "platform": "Juniper/Junos, BRAS",
       "sources": [
-        "TS_notes/Tối_ưu_BRAS_RR_Juniper_Viettel.md"
+        "TS_notes/Tối ưu BRAS RR Juniper Viettel.md"
       ]
     },
     {
@@ -121,9 +121,9 @@
       "kind": "Troubleshooting",
       "platform": "Juniper/Junos",
       "sources": [
-        "TS_notes/interfaces_diagnostics_optics.md",
-        "TS_notes/10GbE_LAN-PHY-40GbE-100GbE_LFS_(Link_fault_signalling).md",
-        "TS_notes/set_link-speed_100G_cho_interface_ae_với_et-8_interface.md"
+        "TS_notes/interfaces diagnostics optics.md",
+        "TS_notes/10GbE LAN-PHY_40GbE_100GbE LFS (Link fault signalling).md",
+        "TS_notes/set link-speed 100G cho interface ae với et-8 interface.md"
       ]
     },
     {
@@ -134,9 +134,9 @@
       "kind": "Troubleshooting",
       "platform": "Juniper/Junos",
       "sources": [
-        "TS_notes/LACP_check-list_commands.md",
-        "TS_notes/MPC11E-LACP_không_up-join.md",
-        "TS_notes/lacp_flap_khi_dung_VC_mix-mode.md"
+        "TS_notes/LACP check-list commands.md",
+        "TS_notes/MPC11E - LACP không up_join.md",
+        "TS_notes/lacp flap khi dung VC mix-mode.md"
       ]
     },
     {
@@ -148,8 +148,8 @@
       "platform": "Juniper/Junos",
       "sources": [
         "TS_notes/CFP.md",
-        "TS_notes/Xử_lý_CFP,_XFP_bị_lõi.md",
-        "TS_notes/SNMP_interface_jnxDom_(laser)_MIB_OID.md"
+        "TS_notes/Xử lý CFP, XFP bị lõi.md",
+        "TS_notes/SNMP interface jnxDom (laser) MIB OID.md"
       ]
     },
     {
@@ -160,9 +160,9 @@
       "kind": "Troubleshooting",
       "platform": "Juniper/Junos",
       "sources": [
-        "TS_notes/BUG_Hold-time_down_không_hoạt_động_được_nếu_cấu_hình_nhỏ_hơn_1s_trên_interface_chạy_WANPHY.md",
-        "TS_notes/Delay_thời_gian_up_time_của_CE_interfaces.md",
-        "TS_notes/Lệnh_off_laser_mode_shell_<<<_dùng_flap_link.md"
+        "TS_notes/BUG Hold-time down không hoạt động được nếu cấu hình nhỏ hơn 1s trên interface chạy WANPHY.md",
+        "TS_notes/Delay thời gian up time của CE interfaces.md",
+        "TS_notes/Lệnh off laser mode shell _ dùng flap link.md"
       ]
     },
     {
@@ -174,10 +174,10 @@
       "platform": "Juniper/Junos",
       "sources": [
         "TS_notes/LDP.md",
-        "TS_notes/Label_usage.md",
-        "classification/Concepts_Theory/No_more_doubt_with_LDP.md",
-        "classification/Concepts_Theory/LDP-tunnelling_and_hidden_routes_in_inet-3.md",
-        "TS_notes/ldp-tunneling_or_BGP-LU_(swap_label_0_behavior_change_from_19-x.md"
+        "TS_notes/Label usage.md",
+        "Learning_Notes/No more doubt with LDP.md",
+        "Learning_Notes/LDP-tunnelling and hidden routes in inet.3.md",
+        "TS_notes/ldp-tunneling or BGP-LU (swap label 0 behavior change from 19.x.md"
       ]
     },
     {
@@ -189,9 +189,9 @@
       "platform": "Juniper/Junos",
       "sources": [
         "TS_notes/L2circuit.md",
-        "TS_notes/Configure_connection_CCC_example.md",
-        "classification/Concepts_Theory/EoMPLS_VC_Type.md",
-        "TS_notes/Qui_tắc_về_forwarding_traffic_với_VPLS_mesh-group.md"
+        "TS_notes/Configure connection CCC example.md",
+        "Learning_Notes/EoMPLS VC Type.md",
+        "TS_notes/Qui tắc về forwarding traffic với VPLS mesh-group.md"
       ]
     },
     {
@@ -202,12 +202,12 @@
       "kind": "Concepts",
       "platform": "Juniper/Junos",
       "sources": [
-        "classification/Concepts_Theory/Layer-2 and Layer-3 VPN From JUNOS.md",
-        "classification/Concepts_Theory/Interprovider_Layer_3_VPN_option_C.md",
-        "classification/Concepts_Theory/L3VPN_per-prefix_label_allocation.md",
-        "classification/Concepts_Theory/l3vpn_hub_and_spoke.md",
-        "classification/Concepts_Theory/l3vpn_hub_and_spoke-1.md",
-        "classification/Concepts_Theory/multipath in L3VPN routing-instance.md"
+        "Learning_Notes/Untitled Note_4.md",
+        "Learning_Notes/Interprovider Layer 3 VPN option C.md",
+        "Learning_Notes/L3VPN per-prefix label allocation.md",
+        "Learning_Notes/l3vpn hub and spoke.md",
+        "Learning_Notes/l3vpn hub and spoke_2.md",
+        "Learning_Notes/Untitled Note_3.md"
       ]
     },
     {
@@ -219,8 +219,8 @@
       "platform": "Juniper/Junos",
       "sources": [
         "TS_notes/eVPN.md",
-        "TS_notes/evpn_command_check.md",
-        "TS_notes/commands_need_to_collect_to_check_EVPN-VXLAN_(From_This_Week-Data_Center_Deployment_with_EVPN-VXLAN).md"
+        "TS_notes/evpn command check.md",
+        "TS_notes/commands need to collect to check EVPN-VXLAN (From This Week_ Data Center Deployment with EVPN_VXLAN).md"
       ]
     },
     {
@@ -231,9 +231,9 @@
       "kind": "Maintenance",
       "platform": "Juniper/Junos",
       "sources": [
-        "classification/Troubleshooting/Guide_MPC_insert_and_Power_note_on_MX2008.md",
-        "classification/Troubleshooting/Guide_NG-RE_insert_remove_on_SCBE2-E3.md",
-        "classification/Troubleshooting/Replacing_RE-phương_án_không_có_thiết_bị_lab.md"
+        "Best_Practise/MX2008.md",
+        "Best_Practise/Tháo_cắm NG-RE vào SCBE2_E3.md",
+        "Procedures/Thực hiện thay thế (replacing) RE - phương án không có thiết bị lab.md"
       ]
     },
     {
@@ -279,7 +279,20 @@
       "topic": "CLI Cheatsheets",
       "kind": "Index",
       "platform": "Mixed",
-      "source_prefix": "classification/CLI_Cheatsheet/"
+      "sources": [
+        "Outlook/Bash command cli on MacOS.md",
+        "Learning_Notes/Check ddos-protection param on QFX5K.md",
+        "Learning_Notes/Check running lab on eve.md",
+        "PR/Cisco template pppoe DHCPv6 NA (PPPoE IPv6).md",
+        "Learning_Notes/Clear OSPF database.md",
+        "TS_notes/Class of Services - CoS shell cmd on MPC7E (EA chip).md",
+        "TS_notes/FPC.md",
+        "PR/KB33034__MX_ Configuration Example - Matching IP traffic with a firewall filter for family CCC.md",
+        "PR/MAC move.md",
+        "PR/TRIO Card_ packet capture with pfe commands.md",
+        "Procedures/config template Cisco PPPoE IPv4 and PPPoE IPv6 client.md",
+        "PR/show port mapping pfe.md"
+      ]
     }
   ]
 }

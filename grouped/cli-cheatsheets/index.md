@@ -2,15 +2,15 @@
 
 | Topic | Type | Platform/Vendor | Source | Related document |
 |---|---|---|---|---|
-| Bash_command_cli_on_MacOS | Index | Mixed | `classification/CLI_Cheatsheet/Bash_command_cli_on_MacOS.md` |  |
-| Check_ddos-protection_param_on_QFX5K | Index | Mixed | `classification/CLI_Cheatsheet/Check_ddos-protection_param_on_QFX5K.md` |  |
-| Check_running_lab_on_eve | Index | Mixed | `classification/CLI_Cheatsheet/Check_running_lab_on_eve.md` |  |
-| Cisco_template_pppoe_DHCPv6_NA_(PPPoE_IPv6) | Index | Mixed | `classification/CLI_Cheatsheet/Cisco_template_pppoe_DHCPv6_NA_(PPPoE_IPv6).md` |  |
-| Clear_OSPF_database | Index | Mixed | `classification/CLI_Cheatsheet/Clear_OSPF_database.md` |  |
-| CoS_class-of-service_shell_commands | Index | Mixed | `classification/CLI_Cheatsheet/CoS_class-of-service_shell_commands.md` |  |
-| FPC | Index | Mixed | `classification/CLI_Cheatsheet/FPC.md` |  |
-| KB33034_[MX]_Configuration_Example-Matching_IP_traffic_with_a_firewall_filter_for_family_CCC | Index | Mixed | `classification/CLI_Cheatsheet/KB33034_[MX]_Configuration_Example-Matching_IP_traffic_with_a_firewall_filter_for_family_CCC.md` |  |
-| MAC_move | Index | Mixed | `classification/CLI_Cheatsheet/MAC_move.md` |  |
-| TRIO_Card-packet_capture_with_pfe_commands | Index | Mixed | `classification/CLI_Cheatsheet/TRIO_Card-packet_capture_with_pfe_commands.md` |  |
-| config_template_Cisco_PPPoE_IPv4_and_PPPoE_IPv6_client | Index | Mixed | `classification/CLI_Cheatsheet/config_template_Cisco_PPPoE_IPv4_and_PPPoE_IPv6_client.md` |  |
-| show_port_mapping_pfe | Index | Mixed | `classification/CLI_Cheatsheet/show_port_mapping_pfe.md` |  |
+| Bash command cli on MacOS | Index | Mixed | `Outlook/Bash command cli on MacOS.md` |  |
+| Check ddos-protection param on QFX5K | Index | Mixed | `Learning_Notes/Check ddos-protection param on QFX5K.md` |  |
+| Check running lab on eve | Index | Mixed | `Learning_Notes/Check running lab on eve.md` |  |
+| Cisco template pppoe DHCPv6 NA (PPPoE IPv6) | Index | Mixed | `PR/Cisco template pppoe DHCPv6 NA (PPPoE IPv6).md` |  |
+| Clear OSPF database | Index | Mixed | `Learning_Notes/Clear OSPF database.md` |  |
+| Class of Services - CoS shell cmd on MPC7E (EA chip) | Index | Mixed | `TS_notes/Class of Services - CoS shell cmd on MPC7E (EA chip).md` |  |
+| FPC | Index | Mixed | `TS_notes/FPC.md` |  |
+| KB33034__MX_ Configuration Example - Matching IP traffic with a firewall filter for family CCC | Index | Mixed | `PR/KB33034__MX_ Configuration Example - Matching IP traffic with a firewall filter for family CCC.md` |  |
+| MAC move | Index | Mixed | `PR/MAC move.md` |  |
+| TRIO Card_ packet capture with pfe commands | Index | Mixed | `PR/TRIO Card_ packet capture with pfe commands.md` |  |
+| config template Cisco PPPoE IPv4 and PPPoE IPv6 client | Index | Mixed | `Procedures/config template Cisco PPPoE IPv4 and PPPoE IPv6 client.md` |  |
+| show port mapping pfe | Index | Mixed | `PR/show port mapping pfe.md` |  |

@@ -11,61 +11,63 @@ show l2circuit connections history
 
 show l2circuit connections instance-history
 
-## Source: `formatted/TS_notes/Configure_connection_CCC_example.md`
+## Source: `formatted/TS_notes/Configure connection CCC example.md`
 
 # Configure connection CCC example
 
-```
 lab@MX204-01> show configuration | compare
+
 [edit interfaces xe-0/1/5]
+
 + unit 2000 {
+
 + encapsulation vlan-ccc;
+
 + vlan-id-list [ 2000-2100 4000 ];
+
 + }
+
 [edit interfaces ae100]
-+ unit 2000 {
-+ encapsulation vlan-ccc;
-+ vlan-id-list [ 2000-2100 4000 ];
-+ }
+
 [edit protocols]
+
 + mpls {
+
 + interface xe-0/1/5.2000;
+
 + interface ae100.2000;
-+ }
+
 + connections {
-+ interface-switch EndUser_to_SRT {
-+ interface xe-0/1/5.2000;
-+ interface ae100.2000;
-+ }
-+ }
-```
 
-```
++ interface-switch EndUser\_to\_SRT {
+
 [edit interfaces xe-0/1/0]
-+ description To-MX104_01-ge-0/0/3;
-+ mtu 9192;
-+ encapsulation ethernet-ccc;
-+ unit 0 {
-+ family ccc;
-+ }
-[edit interfaces xe-0/1/1]
-+ description To-MX104_01-ge-0/0/4;
-+ mtu 9192;
-+ encapsulation ethernet-ccc;
-+ unit 0 {
-+ family ccc;
-+ }
-[edit protocols mpls]
-+ interface xe-0/1/0.0;
-+ interface xe-0/1/1.0;
-[edit protocols connections]
-+ interface-switch LOOP_MX960_02 {
-+ interface xe-0/1/0.0;
-+ interface xe-0/1/1.0;
-+ }
-```
 
-## Source: `formatted/classification/Concepts_Theory/EoMPLS_VC_Type.md`
++ description To-MX104\_01-ge-0/0/3;
+
++ mtu 9192;
+
++ encapsulation ethernet-ccc;
+
++ unit 0 {
+
++ family ccc;
+
+[edit interfaces xe-0/1/1]
+
++ description To-MX104\_01-ge-0/0/4;
+
+[edit protocols mpls]
+
++ interface xe-0/1/0.0;
+
++ interface xe-0/1/1.0;
+
+[edit protocols connections]
+
++ interface-switch LOOP\_MX960\_02 {
+
+## Source: `formatted/Learning_Notes/EoMPLS VC Type.md`
 
 # EoMPLS VC Type
 
@@ -76,6 +78,7 @@ VC Type 4 is used for Ethernet VLAN mode.
 VC Type 5 is used for Ethernet Port mode.
 
 - --
+
 you are referring to EoMPLS Pseudowire Types (which are better defined in rfc4446 and not 4448) and indeed there are 2 ways to handle tags.
 
 VC Type 4 : The original 802.1Q tag is inserted in the EoMPLS payload (along with the MPLS label) before forwarding it to the MPLS core. At the ingress of the remote end or receiving PE the 802.1Q tag is stripped off before its transmission to the internal bus. If a packet is received from the MPLS core without a tag (ether type of the packet is other than 0x8100) the packet is dropped.
@@ -88,7 +91,7 @@ VC type 4 or VC type 5 is not a configurable option and is platform dependent, t
 
 sensed at control plane level"
 
-## Source: `formatted/TS_notes/Qui_tắc_về_forwarding_traffic_với_VPLS_mesh-group.md`
+## Source: `formatted/TS_notes/Qui tắc về forwarding traffic với VPLS mesh-group.md`
 
 # Qui tắc về forwarding traffic với VPLS mesh-group
 
@@ -98,7 +101,7 @@ Qui tắc về forwarding traffic với VPLS mesh-group:
 
 ○ Tất cả các interface nối đến CE sẽ nằm trong group này
 
-○ Local-switching ON (default), có thể OFF bằng cách dùng no-local-switching ở mức [routing-instance <instance-name>].
+○ Local-switching ON (default), có thể OFF bằng cách dùng no-local-switching ở mức [routing-instance ].
 
 ○ Lưu ý, traffic multicast không bị ảnh hưởng bởi lệnh no-local-switching.
 
@@ -118,13 +121,13 @@ mesh-group này
 
 - mặc định no-local-switching, có thể thay đổi bằng lệnh local-switching ở mức
 
-[routing-instance <instance-name> protocols vpls mess-group <mess-group-name>]
+[routing-instance  protocols vpls mess-group ]
 
 - Floods tới CE meshgroup và tất cả mesh-group khác
 
 Cấu hình core-facing:
 
-- Tại [interfaces <interface-name> unit <n> family vpls]
+- Tại [interfaces  unit  family vpls]
 
 - Config này chuyển CE interface từ CE meshgroup tới VE mesh-group (default mesh-group).
 

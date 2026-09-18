@@ -3,7 +3,7 @@
 > Generated deterministically from the approved grouping manifest.
 
 
-## Source: `formatted/classification/Concepts_Theory/Bidirectional_Forwarding_Detection_(BFD).md`
+## Source: `formatted/Learning_Notes/Bidirectional Forwarding Detection (BFD).md`
 
 # Bidirectional Forwarding Detection (BFD)
 
@@ -17,137 +17,166 @@ The device detects a neighbor failure when the routing device stops receiving a 
 
 There are four types of BFD sessions based on the source from which BFD packets are sent to the neighbors. The different types of BFD sessions are:
 
-|Type of BFD session                 |Description                                       |
-|------------------------------------|--------------------------------------------------|
-|Centralized (or non-distributed) BFD|BFD sessions run completely on the Routing Engine.|
-|Distributed BFD                     |BFD sessions run completely on the FPC CPU.       |
-|Inline BFD                          |BFD sessions run on the FPC software.             |
-|Hardware-assisted inline BFD        |BFD sessions run on the ASIC firmware.            |
+|  |  |
+| --- | --- |
+| Type of BFD session | Description |
+| Centralized (or non-distributed) BFD | BFD sessions run completely on the Routing Engine. |
+| Distributed BFD | BFD sessions run completely on the FPC CPU. |
+| Inline BFD | BFD sessions run on the FPC software. |
+| Hardware-assisted inline BFD | BFD sessions run on the ASIC firmware. |
 
 * *Single-hop and Multihop BFD**
 
 - Single-hop BFD—Single-hop BFD in Junos OS runs in distributed mode by default.
-    - The exceptions are OSPFv3 BFD and PIMv6 BFD, which only support non-distributed BFD.
-    - Single-hop BFD control packets use UDP port 3784.
+
+- The exceptions are OSPFv3 BFD and PIMv6 BFD, which only support non-distributed BFD.
+- Single-hop BFD control packets use UDP port 3784.
+
 - Multihop BFD—One desirable application of BFD is to detect connectivity to routing devices that span multiple network hops and follow unpredictable paths.
-    - This is known as a multihop session.
-    - Multihop BFD control packets use UDP port 4784.
+
+- This is known as a multihop session.
+- Multihop BFD control packets use UDP port 4784.
 
 * *Consider the following when using multihop BFD:**
 
 - Prior to Junos OS Release 12.3, multihop BFD is non-distributed and runs on the Routing Engine.
-    - Starting in Junos OS Release 12.3, multihop BFD runs in distributed mode by default.
+
+- Starting in Junos OS Release 12.3, multihop BFD runs in distributed mode by default.
+
 - In a multichassis link aggregation group (MC-LAG) setup, Inter-Chassis Control Protocol (ICCP) uses BFD in multihop mode.
-    - Multihop BFD runs in centralized mode in this kind of setup.
+
+- Multihop BFD runs in centralized mode in this kind of setup.
+
 - Starting in Junos OS Release 13.3R5, Junos OS does not execute firewall filters that you apply on a loopback interface for a multihop BFD session with a delegated anchor FPC.
-    - There is an implicit filter on all ingress FPCs to forward packets to the anchor FPC. Therefore, the firewall filter on the loopback interface is not applied on these packets.
-    - If you do not want these packets to be forwarded to the anchor FPC, you can configure the no-delegate-processing option.
+
+- There is an implicit filter on all ingress FPCs to forward packets to the anchor FPC. Therefore, the firewall filter on the loopback interface is not applied on these packets.
+- If you do not want these packets to be forwarded to the anchor FPC, you can configure the no-delegate-processing option.
 
 ## **Centralized BFD**
 
-- In _centralized BFD_ mode (also called _non-distributed BFD_ mode), the Routing Engine handles BFD.
-    - For both single-hop BFD and multihop BFD, you can run the BFD session in non-distributed mode by:
-        - Configuring set routing-options ppm no-delegate-processing
-        - And then running the clear bfd session command.
-    - If the Routing Engine CPU goes too high, there is a chance that BFD will flap.
-        - Even in cases where the Routing Engine CPU is normal, smaller values of minimum-interval can lead to BFD packets not being processed if other higher priority tasks are running.
-        - You should select the minimum interval value based on proper testing.
+- In *centralized BFD* mode (also called *non-distributed BFD* mode), the Routing Engine handles BFD.
+
+- For both single-hop BFD and multihop BFD, you can run the BFD session in non-distributed mode by:
+
+- Configuring set routing-options ppm no-delegate-processing
+- And then running the clear bfd session command.
+
+- If the Routing Engine CPU goes too high, there is a chance that BFD will flap.
+
+- Even in cases where the Routing Engine CPU is normal, smaller values of minimum-interval can lead to BFD packets not being processed if other higher priority tasks are running.
+- You should select the minimum interval value based on proper testing.
 
 ## **Distributed BFD**
 
-- The term _distributed BFD_ refers to BFD that runs on the FPC CPU.
-    - The Routing Engine creates the BFD sessions and the FPC CPU processes them.
+- The term *distributed BFD* refers to BFD that runs on the FPC CPU.
+
+- The Routing Engine creates the BFD sessions and the FPC CPU processes them.
 
 ### **Benefits**
 
 - The benefits of distributed BFD are mainly in the scaling and performance areas. Distributed BFD:
-    - Allows for the creation of a larger number of BFD sessions.
-    - Runs BFD sessions with a shorter transfer/receive timer interval, which can in turn be used to bring down the overall detection time.
-    - Separates the functionality of BFD from that of the Routing Engine.
-    - A BFD session can stay up during graceful restart, even with an aggressive interval.
-        - The minimum interval for Routing Engine-based BFD sessions to survive _graceful Routing Engine switchover_ is 2500 ms.
-        - Distributed BFD sessions have a minimum interval of less than a second.
-    - Frees up the Routing Engine CPU, which improves scaling and performance for Routing Engine-based applications.
-    - BFD protocol packets flow even when the Routing Engine CPU is congested.
+
+- Allows for the creation of a larger number of BFD sessions.
+- Runs BFD sessions with a shorter transfer/receive timer interval, which can in turn be used to bring down the overall detection time.
+- Separates the functionality of BFD from that of the Routing Engine.
+- A BFD session can stay up during graceful restart, even with an aggressive interval.
+
+- The minimum interval for Routing Engine-based BFD sessions to survive *graceful Routing Engine switchover* is 2500 ms.
+- Distributed BFD sessions have a minimum interval of less than a second.
+
+- Frees up the Routing Engine CPU, which improves scaling and performance for Routing Engine-based applications.
+- BFD protocol packets flow even when the Routing Engine CPU is congested.
 
 ### **Configuration and Support**
 
 - To determine if a BFD peer is running distributed BFD:
-    - run the **show bfd sessions extensive** command
-    - And look for Remote is control-plane independent in the command output.
+
+- run the **show bfd sessions extensive** command
+- And look for Remote is control-plane independent in the command output.
+
 - For distributed BFD to work, you need to configure the lo0 interface with unit 0 and the appropriate family.
 
-```
 # set interfaces lo0 unit 0 family inet
+
 # set interfaces lo0 unit 0 family inet6
+
 # set interfaces lo0 unit 0 family mpls
-```
 
 - This is true for the following types of BFD sessions:
-    - BFD over aggregated Ethernet logical interfaces, both IPv4 and IPv6
-    - Multihop BFD, both IPv4 and IPv6
-    - BFD over VLAN interfaces in EX Series switches, both IPv4 and IPv6
-    - Virtual Circuit Connectivity Verification (VCCV) BFD (Layer 2 circuit, Layer 3 VPN, and VPLS) (MPLS)
+
+- BFD over aggregated Ethernet logical interfaces, both IPv4 and IPv6
+- Multihop BFD, both IPv4 and IPv6
+- BFD over VLAN interfaces in EX Series switches, both IPv4 and IPv6
+- Virtual Circuit Connectivity Verification (VCCV) BFD (Layer 2 circuit, Layer 3 VPN, and VPLS) (MPLS)
 
 ## **Inline BFD**
 
 - We support two types of inline BFD: inline BFD and hardware-assisted inline BFD.
-    - _Inline BFD_ sessions run on the FPC software.
-    - _Hardware-assisted inline BFD_ sessions run on the ASIC firmware.
+
+- *Inline BFD* sessions run on the FPC software.
+- *Hardware-assisted inline BFD* sessions run on the ASIC firmware.
+
 - Support depends on your device and software version.
 
 - Inline BFD sessions can have keepalive intervals of less than a second, so you can detect errors in milliseconds.
 - If you are running inline BFD and the Routing Engine crashes, the inline BFD sessions will continue without interruption for 15 seconds.
 - Inline BFD has many of the same benefits as distributed BFD since it also separates the functionality of BFD from the Routing Engine.
 - The Packet Forwarding Engine software and the ASIC firmware process the packets more quickly than the FPC CPU
-    - so inline BFD is faster than distributed BFD.
 
-```
+- so inline BFD is faster than distributed BFD.
+
 NOTE: Starting in Junos OS Release 13.3, the distribution of adjacency entry (the IP addresses of adjacent routers) and transmit entry (the IP address of transmitting routers) for a BFD session is asymmetric. This is because an adjacency entry that requires rules might or might not be distributed based on the redirect rule, and the distribution of transmit entries is not dependent on the redirect rule.
+
 The term redirect rule here denotes the capability of an interface to send protocol redirect messages. See Disabling the Transmission of Redirect Messages on an Interface.
-```
 
 ### **Inline BFD**
 
-- _Inline BFD_ sessions run on the FPC software.
-    - The Routing Engine creates the BFD sessions and the Packet Forwarding Engine software processes them.
-    - Starting in Junos OS Release 16.1R1, integrated routing and bridging (IRB) interfaces support inline BFD sessions.
-    - MX Series routers only support inline BFD if the router is static and has MPCs/MICs with enhanced-ip configured.
+- *Inline BFD* sessions run on the FPC software.
+
+- The Routing Engine creates the BFD sessions and the Packet Forwarding Engine software processes them.
+- Starting in Junos OS Release 16.1R1, integrated routing and bridging (IRB) interfaces support inline BFD sessions.
+- MX Series routers only support inline BFD if the router is static and has MPCs/MICs with enhanced-ip configured.
 
 ### **Hardware-Assisted Inline BFD**
 
-- _Hardware-assisted inline BFD_ sessions run on the ASIC firmware.
-    - Hardware-assisted inline BFD is a hardware implementation of the inline BFD protocol.
-    - The Routing Engine creates BFD sessions and passes them to the ASIC firmware for processing.
-    - The device uses existing paths to forward any BFD events that need to be processed by protocol processes.
+- *Hardware-assisted inline BFD* sessions run on the ASIC firmware.
+
+- Hardware-assisted inline BFD is a hardware implementation of the inline BFD protocol.
+- The Routing Engine creates BFD sessions and passes them to the ASIC firmware for processing.
+- The device uses existing paths to forward any BFD events that need to be processed by protocol processes.
+
 - Regular inline BFD is a software approach. In hardware-assisted inline BFD, the firmware handles most of the BFD protocol processing.
-    - The ASIC firmware processes the packets more quickly than the software, so hardware-assisted inline BFD is faster than regular inline BFD.
-    - We support this feature for single-hop and multihop IPv4 and IPv6 BFD sessions.
+
+- The ASIC firmware processes the packets more quickly than the software, so hardware-assisted inline BFD is faster than regular inline BFD.
+- We support this feature for single-hop and multihop IPv4 and IPv6 BFD sessions.
 
 #### **Limitations**
 
 - If the Packet Forwarding Engine process restarts or the system reboots, the BFD sessions will go down.
 - Hardware-assisted inline BFD:
-    - Does not support micro BFD.
-    - Is only supported on standalone devices.
-    - Does not support BFD authentication.
-    - Does not support IPv6 link local BFD sessions.
-    - Cannot be used with VXLAN encapsulation of BFD packets.
+
+- Does not support micro BFD.
+- Is only supported on standalone devices.
+- Does not support BFD authentication.
+- Does not support IPv6 link local BFD sessions.
+- Cannot be used with VXLAN encapsulation of BFD packets.
 
 ### **Configuration**
 
 - Devices support either regular inline BFD or hardware-assisted inline BFD.
-    - Use the set routing-options ppm inline-processing-enable command to enable the type of inline BFD that your device supports.
-    - To return BFD to the default mode, delete the configuration.
+
+- Use the set routing-options ppm inline-processing-enable command to enable the type of inline BFD that your device supports.
+- To return BFD to the default mode, delete the configuration.
 
 Release History Table
 
-|Release    |Description                                                                                                                                                                                                                                                                             |
-|-----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-|16.1R1     |Starting in Junos OS Release 16.1R1, inline BFD sessions are supported on integrated routing and bridging (IRB) interfaces.                                                                                                                                                             |
-|13.3R5     |Starting in Junos OS Release 13.3R5, if you apply a firewall filter on a loopback interface for a multihop BFD session with a delegated anchor FPC, Junos OS does not execute this filter, because there is an implicit filter on all ingress FPCs to forward packets to the anchor FPC.|
-|13.3       |Starting in Junos OS Release 13.3, the distribution of adjacency entry (the IP addresses of adjacent routers) and transmit entry (the IP address of transmitting routers) for a BFD session is asymmetric.                                                                              |
-|13.3       |Starting in Junos OS Release 13.3, inline BFD is supported only on static MX Series routers with MPCs/MICs that have configured enhanced-ip.                                                                                                                                            |
+|  |  |
+| --- | --- |
+| Release | Description |
+| 16.1R1 | Starting in Junos OS Release 16.1R1, inline BFD sessions are supported on integrated routing and bridging (IRB) interfaces. |
+| 13.3R5 | Starting in Junos OS Release 13.3R5, if you apply a firewall filter on a loopback interface for a multihop BFD session with a delegated anchor FPC, Junos OS does not execute this filter, because there is an implicit filter on all ingress FPCs to forward packets to the anchor FPC. |
+| 13.3 | Starting in Junos OS Release 13.3, the distribution of adjacency entry (the IP addresses of adjacent routers) and transmit entry (the IP address of transmitting routers) for a BFD session is asymmetric. |
+| 13.3 | Starting in Junos OS Release 13.3, inline BFD is supported only on static MX Series routers with MPCs/MICs that have configured enhanced-ip. |
 
 - --
 
@@ -155,25 +184,13 @@ View PR 1086674 [Confidential] - first pfe(anchor pfe) on FPC is key and we shou
 
 PR 1298369 [single-source-commit] - inline-bfd on irb will be broken after NSR switchover and subsequent offlining anchor FPC.
 
-![3de1e58b4b03eeab604dc614e7daf23d.png](../../assets/bfd-theory/428880a2b1-3de1e58b4b03eeab604dc614e7daf23d.png)
-
-![f31eb230c50cc5f9e81041356eebda4b.png](../../assets/bfd-theory/3b4c7ea9f7-f31eb230c50cc5f9e81041356eebda4b.png)
-
-![06fa87acc516f41dc3dd96d38ba765ea.png](../../assets/bfd-theory/adbadc4e4a-06fa87acc516f41dc3dd96d38ba765ea.png)
+![](../../assets/bfd-theory/a23fafc044-3de1e58b4b03eeab604dc614e7daf23d.png)![](../../assets/bfd-theory/34cb2be4a9-f31eb230c50cc5f9e81041356eebda4b.png)![](../../assets/bfd-theory/a4bc68d3a7-06fa87acc516f41dc3dd96d38ba765ea.png)
 
 Responsible for establish the sessions initiated by PPMD from RE execute all periodic packet processing events. absorb all packets and forward unabsorbed packets to the clients receive packets from clients and forward them out inform ppmd on RE if there are session flaps ppm data thread processes the received packets
 
-![0cadf6b35a39d6eba7587d87de124e1b.png](../../assets/bfd-theory/301e4900de-0cadf6b35a39d6eba7587d87de124e1b.png)
+![](../../assets/bfd-theory/ebc3350650-0cadf6b35a39d6eba7587d87de124e1b.png)![](../../assets/bfd-theory/838b8f56fe-754ab35408643a6c5a196a9bfbc5fac6.png)![](../../assets/bfd-theory/1930fe6969-bd2b178fb52ba7d4e0175b25c7da9461.png)![](../../assets/bfd-theory/2b2b43aaf4-058f2558addaf8e0da51baf851eed836.png)
 
-![754ab35408643a6c5a196a9bfbc5fac6.png](../../assets/bfd-theory/b792b6f78c-754ab35408643a6c5a196a9bfbc5fac6.png)
-
-![bd2b178fb52ba7d4e0175b25c7da9461.png](../../assets/bfd-theory/113659a0ea-bd2b178fb52ba7d4e0175b25c7da9461.png)
-
-![058f2558addaf8e0da51baf851eed836.png](../../assets/bfd-theory/5101f9384d-058f2558addaf8e0da51baf851eed836.png)
-
-![f5f99722918393d06a1b15f1f4af1435.png](../../assets/bfd-theory/44d3452117-f5f99722918393d06a1b15f1f4af1435.png)
-
-![image.png](../../assets/bfd-theory/ba5c89f8d1-image.png)
+![](../../assets/bfd-theory/0c325cfdff-f5f99722918393d06a1b15f1f4af1435.png)![](../../assets/bfd-theory/aac8f726e5-7a2189eaab66e6fc9f9ab88ed341e571.png)
 
 [ August 10, 2023 09:12 ] ⁨Hung Le⁩: Luu y:
 
@@ -214,7 +231,8 @@ multiplier 3;
 [28/08/2023 10:51:10] HungLNM: -ngoài ra với qfx 10k thì có dùng micro bfd cho ae(qfx 5k chưa sp micro bfd)
 
 [28/08/2023 11:26:42] HungLNM:
-![image-1.png](../../assets/bfd-theory/d26a91d831-image-1.png)
+
+![](../../assets/bfd-theory/59dcaccd04-27e89546850b97d3fc98ed5a3cb2a46d.png)
 
 [28/08/2023 11:27:07] HungLNM: Đây là thông tin thêm về qfx5k có thể sp sub second
 
@@ -223,15 +241,18 @@ multiplier 3;
 [28/08/2023 11:27:57] HungLNM: Ae nhìn thấy có sự thay đổi về BA của bfd qua từng junos
 
 [28/08/2023 11:30:54] HungLNM:
-![image-2.png](../../assets/bfd-theory/f63fce0554-image-2.png)
+
+![](../../assets/bfd-theory/3f15f45ca8-4ae13d32053334f2e428a99309d07d03.png)
 
 [28/08/2023 11:31:05] HungLNM: Lí do dùng bfd trong ipfabric
 
-## Source: `formatted/classification/Concepts_Theory/BFD_scales.md`
+## Source: `formatted/Recommends/BFD scales.md`
 
 # BFD scales
 
-## Source: `formatted/classification/Concepts_Theory/pr1523537_nay_chu_yeu_giai_thich_ve_behaviour_cua_bfd_session_id.md`
+![](../../assets/bfd-theory/c5c214ca53-f5f99722918393d06a1b15f1f4af1435.png)
+
+## Source: `formatted/Case_notes/pr1523537 nay chu yeu giai thich ve behaviour cua bfd session id.md`
 
 # pr1523537 nay chu yeu giai thich ve behaviour cua bfd session id
 
@@ -355,7 +376,7 @@ NHID list : 632 629 627 626 625 624
 
 [ June 21, 2023 21:14 ] ⁨Hung Le⁩: Just checked 21.4R1 would had the fix of the issue:
 
-[https://www.juniper.net/documentation/us/en/software/junos/release-notes/21.4/junos-release-notes-21.4r1/junos-release-notes-21.4r1.pdf](https://www.juniper.net/documentation/us/en/software/junos/release-notes/21.4/junos-release-notes-21.4r1/junos-release-notes-21.4r1.pdf)
+<https://www.juniper.net/documentation/us/en/software/junos/release-notes/21.4/junos-release-notes-21.4r1/junos-release-notes-21.4r1.pdf>
 
 ######
 
@@ -409,13 +430,13 @@ Enhancements to BFD-triggered FRR for unicast next hops and forwarding-table ses
 
 If FPC0 PFE0 doesn't have the AE membership port, and FPC1 also has the AE membership port:
 
-- PFE0 disable will *not* cause the max weight issue, even the BFD remains in Down state and BFD session ID remains in Down state on FPC.
+- PFE0 disable will \*not\* cause the max weight issue, even the BFD remains in Down state and BFD session ID remains in Down state on FPC.
 
 - Issue is not seen in this scenario - I can't explain the reason.
 
 If FPC0 PFE0 doesn't have the AE membership port, and FPC0 PFEx have the membership port:
 
-- FPC0 reboot will *not* make the anchor FPC switch to FPC1, but the BFD session ID on FPC1 will remain. Hence max weight on FPC1 will also remain.
+- FPC0 reboot will \*not\* make the anchor FPC switch to FPC1, but the BFD session ID on FPC1 will remain. Hence max weight on FPC1 will also remain.
 
 - Problem can be resolved by restarting all FPCs....
 

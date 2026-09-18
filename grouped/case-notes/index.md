@@ -2,29 +2,31 @@
 
 | Topic | Type | Platform/Vendor | Source | Related document |
 |---|---|---|---|---|
-| -MVT-HĐ_03-2020-Hỗ_trợ_xử_lý_lỗi_box_PR02-TET040 | Index | Mixed | `Case_notes/-MVT-HĐ_03-2020-Hỗ_trợ_xử_lý_lỗi_box_PR02-TET040.md` |  |
-| BPC8003BRA01_RE1_|_không_cutoff_được_user | Index | Mixed | `Case_notes/BPC8003BRA01_RE1_|_không_cutoff_được_user.md` |  |
-| Các_thuật_ngữ_sau_được_sử_dụng_để_giải_thích_cách_cấp_phát_địa_chỉ_IP_(address-assignment) | Index | Mixed | `Case_notes/Các_thuật_ngữ_sau_được_sử_dụng_để_giải_thích_cách_cấp_phát_địa_chỉ_IP_(address-assignment).md` |  |
-| FTEL-Download_Microsoft_chậm | Index | Mixed | `Case_notes/FTEL-Download_Microsoft_chậm.md` |  |
-| Lỗi_memory_trên_MPC7E-MRATE_cho_BNG | Index | Mixed | `Case_notes/Lỗi_memory_trên_MPC7E-MRATE_cho_BNG.md` |  |
-| Movitel-Mất_dịch_vụ_3G,_4G | Index | Mixed | `Case_notes/Movitel-Mất_dịch_vụ_3G,_4G.md` |  |
-| SR#01219162-Viettel-SLA-NFE-Viettel_||_MPC5E-2CGE-4XGE_cao_tải_CPU | Index | Mixed | `Case_notes/SR#01219162-Viettel-SLA-NFE-Viettel_||_MPC5E-2CGE-4XGE_cao_tải_CPU.md` |  |
-| SR-2021-1125-1639-MVT-HĐ_SLA_03-2020-Hỗ_trợ_kiểm_tra_cảnh_báo_lỗi_FPC1_trên_MAN057 | Index | Mixed | `Case_notes/SR-2021-1125-1639-MVT-HĐ_SLA_03-2020-Hỗ_trợ_kiểm_tra_cảnh_báo_lỗi_FPC1_trên_MAN057.md` |  |
-| SR-2021-1201-0922-MVT-HĐ_03-2020-Hỗ_trợ_xử_lý_lỗi_box_PR01-GAZ020 | Index | Mixed | `Case_notes/SR-2021-1201-0922-MVT-HĐ_03-2020-Hỗ_trợ_xử_lý_lỗi_box_PR01-GAZ020.md` |  |
-| SR-2021-1215-0956-Hỗ_trợ_xử_lý_case_cảnh_báo_trên_thiết_bị_ME_AR03-MAP018 | Index | Mixed | `Case_notes/SR-2021-1215-0956-Hỗ_trợ_xử_lý_case_cảnh_báo_trên_thiết_bị_ME_AR03-MAP018.md` |  |
-| SR-2021-1215-1001-Hỗ_trợ_xử_lý_case_cảnh_báo_trên_thiết_bị_AR01-NIA088_copy | Index | Mixed | `Case_notes/SR-2021-1215-1001-Hỗ_trợ_xử_lý_case_cảnh_báo_trên_thiết_bị_AR01-NIA088_copy.md` |  |
-| SR-2021-1216-0859-Hỗ_trợ_nâng_cấp_SCBE-MX_lên_SCBE2-MX_trên_thiết_bị_ME_AR02-GAZ185 | Index | Mixed | `Case_notes/SR-2021-1216-0859-Hỗ_trợ_nâng_cấp_SCBE-MX_lên_SCBE2-MX_trên_thiết_bị_ME_AR02-GAZ185.md` |  |
-| SR-2021-1223-1336-Viettel-HĐ_SLA_06-Hỗ_trợ_kiểm_tra_Thay_đổi_vlan_range_cổng_downlink_BRAS_|_Không_đá_thuê_bao_khỏi_cổng | Index | Mixed | `Case_notes/SR-2021-1223-1336-Viettel-HĐ_SLA_06-Hỗ_trợ_kiểm_tra_Thay_đổi_vlan_range_cổng_downlink_BRAS_|_Không_đá_thuê_bao_khỏi_cổng.md` |  |
-| SR-2021-1225-2235-MVT-HĐ_SLA_03-Xử_lý_case_cảnh_báo_trên_thiết_bị_ME_AR03-GAZ080 | Index | Mixed | `Case_notes/SR-2021-1225-2235-MVT-HĐ_SLA_03-Xử_lý_case_cảnh_báo_trên_thiết_bị_ME_AR03-GAZ080.md` |  |
-| SR-2021-1226-1945-MVT-HĐ_SLA_03-2020-Hỗ_trợ_kiểm_tra_link_kết_nối_giữa_ME_AR03-GAZ080_và_ME_GAZ009SRT01 | Index | Mixed | `Case_notes/SR-2021-1226-1945-MVT-HĐ_SLA_03-2020-Hỗ_trợ_kiểm_tra_link_kết_nối_giữa_ME_AR03-GAZ080_và_ME_GAZ009SRT01.md` |  |
-| SR-2022-0106-0928-IPv6_ping_VPLS | Index | Mixed | `Case_notes/SR-2022-0106-0928-IPv6_ping_VPLS.md` |  |
-| SR-2022-0117-0942-Viettel-HĐ_SLA_06-Hỗ_trợ_node_HHT9603CGT12_xử_lý_cảnh_báo_XMCHIP_trên_card_0,2,4_và_cảnh_báo_reset_trên_card_1 | Index | Mixed | `Case_notes/SR-2022-0117-0942-Viettel-HĐ_SLA_06-Hỗ_trợ_node_HHT9603CGT12_xử_lý_cảnh_báo_XMCHIP_trên_card_0,2,4_và_cảnh_báo_reset_trên_card_1.md` |  |
-| SR-2022-0128-1515_MVT-HĐ_03-2020-Support_to_check_alarms_on_the_device_ME_PR01-SOF055_after_device_reboot_due_to_power_failure | Index | Mixed | `Case_notes/SR-2022-0128-1515_MVT-HĐ_03-2020-Support_to_check_alarms_on_the_device_ME_PR01-SOF055_after_device_reboot_due_to_power_failure.md` |  |
-| SR-2022-0408-1059-QTSC-Ngoài_HĐ-Hỗ_trợ_kiểm_tra_lỗi_Minor_backup_RE_active_trên_MX960 | Index | Mixed | `Case_notes/SR-2022-0408-1059-QTSC-Ngoài_HĐ-Hỗ_trợ_kiểm_tra_lỗi_Minor_backup_RE_active_trên_MX960.md` |  |
-| SR-2022-0627-1622-CMC-HĐ_050522-Hỗ_trợ_kiểm_tra_OSPF_bị_treo_trạng_thái_Exchange_khi_flap_link_vật_lý | Index | Mixed | `Case_notes/SR-2022-0627-1622-CMC-HĐ_050522-Hỗ_trợ_kiểm_tra_OSPF_bị_treo_trạng_thái_Exchange_khi_flap_link_vật_lý.md` |  |
-| SR-2023-0406-1052-Viettel-HĐ_SLA_IP-Kiểm_tra_tốc_độ_upload_của_user_LeaseLine_trên_box_HHT9602-PECD-MX2020-02_(HHT9602CRT35) | Index | Mixed | `Case_notes/SR-2023-0406-1052-Viettel-HĐ_SLA_IP-Kiểm_tra_tốc_độ_upload_của_user_LeaseLine_trên_box_HHT9602-PECD-MX2020-02_(HHT9602CRT35).md` |  |
-| Untitled_Note | Index | Mixed | `Case_notes/Untitled_Note.md` |  |
-| [Movitel]_Audit-Apply_micro-bfd_cho_các_kết_nối_Core | Index | Mixed | `Case_notes/[Movitel]_Audit-Apply_micro-bfd_cho_các_kết_nối_Core.md` |  |
-| [Movitel]_Audit-Tối_ưu_syslog | Index | Mixed | `Case_notes/[Movitel]_Audit-Tối_ưu_syslog.md` |  |
-| cmc-MX104_high_CPU | Index | Mixed | `Case_notes/cmc-MX104_high_CPU.md` |  |
-| thay_doi_ve_cach_hanh_xu_route,nh,scu,dcu,sensor,rpf_check | Index | Mixed | `Case_notes/thay_doi_ve_cach_hanh_xu_route,nh,scu,dcu,sensor,rpf_check.md` |  |
+| - MVT_ HĐ 03-2020_ Hỗ trợ xử lý lỗi box PR02.TET040 | Index | Mixed | `Case_notes/- MVT_ HĐ 03-2020_ Hỗ trợ xử lý lỗi box PR02.TET040.md` |  |
+| BPC8003BRA01_RE1 | không cutoff được user | Index | Mixed | `Case_notes/BPC8003BRA01_RE1 | không cutoff được user.md` |  |
+| Các thuật ngữ sau được sử dụng để giải thích cách cấp phát địa chỉ IP (address-assignment) | Index | Mixed | `Case_notes/Các thuật ngữ sau được sử dụng để giải thích cách cấp phát địa chỉ IP (address-assignment).md` |  |
+| FTEL - Download Microsoft chậm | Index | Mixed | `Case_notes/FTEL - Download Microsoft chậm.md` |  |
+| Lỗi memory trên MPC7E-MRATE cho BNG | Index | Mixed | `Case_notes/Lỗi memory trên MPC7E-MRATE cho BNG.md` |  |
+| Movitel - Mất dịch vụ 3G, 4G | Index | Mixed | `Case_notes/Movitel - Mất dịch vụ 3G, 4G.md` |  |
+| SR#01219162_Viettel_SLA_NFE_Viettel || MPC5E-2CGE-4XGE cao tải CPU | Index | Mixed | `Case_notes/SR#01219162_Viettel_SLA_NFE_Viettel || MPC5E-2CGE-4XGE cao tải CPU.md` |  |
+| SR-2021-1125-1639 - MVT_ HĐ SLA 03_2020_ Hỗ trợ kiểm tra cảnh báo lỗi FPC1 trên MAN057 | Index | Mixed | `Case_notes/SR-2021-1125-1639 - MVT_ HĐ SLA 03_2020_ Hỗ trợ kiểm tra cảnh báo lỗi FPC1 trên MAN057.md` |  |
+| SR-2021-1201-0922 - MVT_ HĐ 03-2020_ Hỗ trợ xử lý lỗi box PR01.GAZ020 | Index | Mixed | `Case_notes/SR-2021-1201-0922 - MVT_ HĐ 03-2020_ Hỗ trợ xử lý lỗi box PR01.GAZ020.md` |  |
+| SR-2021-1215-0956 - Hỗ trợ xử lý case cảnh báo trên thiết bị ME_AR03.MAP018 | Index | Mixed | `Case_notes/SR-2021-1215-0956 - Hỗ trợ xử lý case cảnh báo trên thiết bị ME_AR03.MAP018.md` |  |
+| SR-2021-1215-1001 - Hỗ trợ xử lý case cảnh báo trên thiết bị AR01.NIA088 copy | Index | Mixed | `Case_notes/SR-2021-1215-1001 - Hỗ trợ xử lý case cảnh báo trên thiết bị AR01.NIA088 copy.md` |  |
+| SR-2021-1216-0859 - Hỗ trợ nâng cấp SCBE-MX lên SCBE2-MX trên thiết bị ME_AR02.GAZ185 | Index | Mixed | `Case_notes/SR-2021-1216-0859 - Hỗ trợ nâng cấp SCBE-MX lên SCBE2-MX trên thiết bị ME_AR02.GAZ185.md` |  |
+| SR-2021-1223-1336 - Viettel_HĐ SLA 06_Hỗ trợ kiểm tra Thay đổi vlan range cổng downlink BRAS | Không đá thuê bao khỏi cổng | Index | Mixed | `Case_notes/SR-2021-1223-1336 - Viettel_HĐ SLA 06_Hỗ trợ kiểm tra Thay đổi vlan range cổng downlink BRAS | Không đá thuê bao khỏi cổng.md` |  |
+| SR-2021-1225-2235 - MVT_HĐ SLA 03_Xử lý case cảnh báo trên thiết bị ME_AR03.GAZ080 | Index | Mixed | `Case_notes/SR-2021-1225-2235 - MVT_HĐ SLA 03_Xử lý case cảnh báo trên thiết bị ME_AR03.GAZ080.md` |  |
+| SR-2021-1226-1945 - MVT_HĐ SLA 03_2020_ Hỗ trợ kiểm tra link kết nối giữa ME_AR03.GAZ080 và ME_GAZ009SRT01 | Index | Mixed | `Case_notes/SR-2021-1226-1945 - MVT_HĐ SLA 03_2020_ Hỗ trợ kiểm tra link kết nối giữa ME_AR03.GAZ080 và ME_GAZ009SRT01.md` |  |
+| SR-2022-0106-0928-IPv6 ping VPLS | Index | Mixed | `Case_notes/SR-2022-0106-0928-IPv6 ping VPLS.md` |  |
+| SR-2022-0117-0942 - Viettel_HĐ SLA 06_Hỗ trợ node HHT9603CGT12 xử lý cảnh báo XMCHIP trên card 0,2,4 và cảnh báo reset trên card 1 | Index | Mixed | `Case_notes/SR-2022-0117-0942 - Viettel_HĐ SLA 06_Hỗ trợ node HHT9603CGT12 xử lý cảnh báo XMCHIP trên card 0,2,4 và cảnh báo reset trên card 1.md` |  |
+| SR-2022-0128-1515 MVT_HĐ 03-2020_Support to check alarms on the device ME_PR01.SOF055 after device reboot due to power failure | Index | Mixed | `Case_notes/SR-2022-0128-1515 MVT_HĐ 03-2020_Support to check alarms on the device ME_PR01.SOF055 after device reboot due to power failure.md` |  |
+| SR-2022-0408-1059 - QTSC_Ngoài HĐ_Hỗ trợ kiểm tra lỗi Minor backup RE active trên MX960 | Index | Mixed | `Case_notes/SR-2022-0408-1059 - QTSC_Ngoài HĐ_Hỗ trợ kiểm tra lỗi Minor backup RE active trên MX960.md` |  |
+| SR-2022-0627-1622 - CMC_HĐ 050522_Hỗ trợ kiểm tra OSPF bị treo trạng thái Exchange khi flap link vật lý | Index | Mixed | `Case_notes/SR-2022-0627-1622 - CMC_HĐ 050522_Hỗ trợ kiểm tra OSPF bị treo trạng thái Exchange khi flap link vật lý.md` |  |
+| SR-2023-0406-1052 - Viettel_HĐ SLA IP_Kiểm tra tốc độ upload của user LeaseLine trên box HHT9602.PECD.MX2020.02 (HHT9602CRT35) | Index | Mixed | `Case_notes/SR-2023-0406-1052 - Viettel_HĐ SLA IP_Kiểm tra tốc độ upload của user LeaseLine trên box HHT9602.PECD.MX2020.02 (HHT9602CRT35).md` |  |
+| Untitled Note | Index | Mixed | `Case_notes/Untitled Note.md` |  |
+| _Movitel_ Audit - Apply micro-bfd cho các kết nối Core | Index | Mixed | `Case_notes/_Movitel_ Audit - Apply micro-bfd cho các kết nối Core.md` |  |
+| _Movitel_ Audit - Tối ưu syslog | Index | Mixed | `Case_notes/_Movitel_ Audit - Tối ưu syslog.md` |  |
+| cmc _ MX104 high CPU | Index | Mixed | `Case_notes/cmc _ MX104 high CPU.md` |  |
+| pr1523537 nay chu yeu giai thich ve behaviour cua bfd session id | Index | Mixed | `Case_notes/pr1523537 nay chu yeu giai thich ve behaviour cua bfd session id.md` |  |
+| thay doi ve cach hanh xu route,nh,scu,dcu,sensor,rpf check | Index | Mixed | `Case_notes/thay doi ve cach hanh xu route,nh,scu,dcu,sensor,rpf check.md` |  |
+| Điều kiện phát sinh BGP rsync | Index | Mixed | `Case_notes/Điều kiện phát sinh BGP rsync.md` |  |

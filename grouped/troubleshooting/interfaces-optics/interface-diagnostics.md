@@ -3,7 +3,7 @@
 > Generated deterministically from the approved grouping manifest.
 
 
-## Source: `formatted/TS_notes/interfaces_diagnostics_optics.md`
+## Source: `formatted/TS_notes/interfaces diagnostics optics.md`
 
 # interfaces diagnostics optics
 
@@ -21,15 +21,15 @@ MX2010-ADV-NPE-01:
 
 # show cfp list
 
-# show cfp <index> alarms
+# show cfp  alarms
 
-# show cfp <index> diagnostics
+# show cfp  diagnostics
 
-# show cfp <index> identifier
+# show cfp  identifier
 
-# show cfp <index> info
+# show cfp  info
 
-# show cfp <index> mdio-bus-error-count
+# show cfp  mdio-bus-error-count
 
 # show cmic 0 info
 
@@ -37,19 +37,19 @@ MX2010-ADV-NPE-01:
 
 # show mtip-cgpcs summary
 
-# show mtip-cgpcs <index> registers
+# show mtip-cgpcs  registers
 
-# show mtip-cgpcs <index> errors
+# show mtip-cgpcs  errors
 
-# show mtip-cgpcs <index> error-count
+# show mtip-cgpcs  error-count
 
-# show mtip-cgpcs <index> block-lock
+# show mtip-cgpcs  block-lock
 
-# show mtip-cgpcs <index> fault-condition
+# show mtip-cgpcs  fault-condition
 
-# show mtip-cgpcs <index> high-BER
+# show mtip-cgpcs  high-BER
 
-# show mtip-cgpcs <index> link-status
+# show mtip-cgpcs  link-status
 
 # show syslog messages
 
@@ -65,22 +65,22 @@ MX2010-GDI-P-01:
 
 > start shell pfe network fpc3
 
-## Source: `formatted/TS_notes/10GbE_LAN-PHY-40GbE-100GbE_LFS_(Link_fault_signalling).md`
+## Source: `formatted/TS_notes/10GbE LAN-PHY_40GbE_100GbE LFS (Link fault signalling).md`
 
 # 10GbE LAN-PHY/40GbE/100GbE LFS (Link fault signalling)
 
 10GbE LAN-PHY/40GbE/100GbE LFS operates between remote Reconciliation Sublayers (RS) and local RS. Link faults detected between remote RSs and local RSs are received by local RSs. Only the RS originates Remote Fault signals. When this Local Fault status reaches an RS, the RS stops sending MAC data, and continuously generates a Remote Fault status on the transmit data path. When Remote Fault status is received by an RS, the RS stops sending MAC data, and continuously generates Idle control characters. When the RS no longer receives fault status messages, it returns to normal operation, sending MAC data
 
-![Attachment.png](../../assets/interface-diagnostics/9ef3a4b0c9-Attachment.png)
+![](../../assets/interface-diagnostics/c5fe9577fa-a29c8b33b3303696d0641b4e0f996313)
 
-![Attachment-1.png](../../assets/interface-diagnostics/7843a0904d-Attachment-1.png)
+![](../../assets/interface-diagnostics/b775079e65-56fd4a9d253fc2834603fafb0e64d8e5)
 
-![Attachment-2.png](../../assets/interface-diagnostics/03d20a8d86-Attachment-2.png)
+![](../../assets/interface-diagnostics/cba69894db-1c9c67fbaf70d67ac3e2bdd28d79c141)
 
-![Attachment-3.png](../../assets/interface-diagnostics/3fb97c1e29-Attachment-3.png)
+![](../../assets/interface-diagnostics/b7c73abdac-4fb016033ce3685396eacd9e69017339)
 
-## Source: `formatted/TS_notes/set_link-speed_100G_cho_interface_ae_với_et-8_interface.md`
+## Source: `formatted/TS_notes/set link-speed 100G cho interface ae với et-8 interface.md`
 
 # set link-speed 100G cho interface ae với et-8 interface
 
-![image.png](../../assets/interface-diagnostics/50bd5b1924-image.png)
+![](../../assets/interface-diagnostics/5cc96a11cc-8978cf3f97651ac41f377624e9931b65.png)

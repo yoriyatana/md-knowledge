@@ -2,34 +2,34 @@
   "ospf-pe-ce-deep-dive": {
     "output": "concepts/routing/ospf-pe-ce-deep-dive.md",
     "sources": [
-      "formatted/classification/Concepts_Theory/OSPF_SUMMARY.md",
-      "formatted/classification/Concepts_Theory/ospf_as_routing_protocol_for_CE-PE.md",
-      "formatted/classification/Concepts_Theory/OSPF AS THE PE-CE ROUTING PROTOCOLS DEEP DIVE – PART 1.md",
-      "formatted/classification/Concepts_Theory/OSPF AS THE PE-CE ROUTING PROTOCOLS DEEP DIVE – PART 2.md",
-      "formatted/classification/Concepts_Theory/OSPF AS THE PE-CE ROUTING PROTOCOLS DEEP DIVE – PART 3.md",
-      "formatted/classification/Concepts_Theory/OSPF_Back_Door_Links-A_Case_Study.md"
+      "formatted/Learning_Notes/OSPF SUMMARY.md",
+      "formatted/Learning_Notes/ospf as routing protocol for CE-PE.md",
+      "formatted/Learning_Notes/Untitled Note_5.md",
+      "formatted/Learning_Notes/Untitled Note_6.md",
+      "formatted/Learning_Notes/Untitled Note_7.md",
+      "formatted/Learning_Notes/OSPF Back Door Links_ A Case Study.md"
     ],
     "type": "consolidate"
   },
   "bfd-theory": {
     "output": "concepts/routing/bfd-theory.md",
     "sources": [
-      "formatted/classification/Concepts_Theory/Bidirectional_Forwarding_Detection_(BFD).md",
-      "formatted/classification/Concepts_Theory/BFD_scales.md",
-      "formatted/classification/Concepts_Theory/pr1523537_nay_chu_yeu_giai_thich_ve_behaviour_cua_bfd_session_id.md"
+      "formatted/Learning_Notes/Bidirectional Forwarding Detection (BFD).md",
+      "formatted/Recommends/BFD scales.md",
+      "formatted/Case_notes/pr1523537 nay chu yeu giai thich ve behaviour cua bfd session id.md"
     ],
     "type": "consolidate"
   },
   "bfd-troubleshooting": {
     "output": "troubleshooting/bfd-troubleshooting.md",
     "sources": [
-      "formatted/TS_notes/BFD_anchorship_PFE.md",
-      "formatted/TS_notes/command_list_to_collect_the_bfd_data_from_the_respective_fpc.md",
-      "formatted/TS_notes/commands_need_to_collect_to_check_BFD_(MPC10-11)-From_TAC.md",
-      "formatted/TS_notes/sử_dụng_BFD_cho_LSP.md",
+      "formatted/TS_notes/BFD anchorship PFE.md",
+      "formatted/TS_notes/command list to collect the bfd data from the respective fpc.md",
+      "formatted/TS_notes/commands need to collect to check BFD (MPC10_11) - From TAC.md",
+      "formatted/TS_notes/sử dụng BFD cho LSP.md",
       "formatted/TS_notes/BFD.md",
-      "formatted/TS_notes/BFD_ISSUE_VIETTEL_KV3-BRAS28.md",
-      "formatted/TS_notes/[M-MX-T]_Troubleshooting_Checklist-BFD.md"
+      "formatted/TS_notes/BFD ISSUE VIETTEL KV3_BRAS28.md",
+      "formatted/TS_notes/_M_MX_T_ Troubleshooting Checklist - BFD.md"
     ],
     "type": "consolidate"
   },
@@ -37,61 +37,61 @@
     "output": "concepts/subscriber-management/bras-overview.md",
     "sources": [
       "formatted/TS_notes/BRAS.md",
-      "formatted/classification/Concepts_Theory/Giới_hạn_số_lượng_phiên_của_một_khách_hàng_trên_BRAS_Juniper_(session-limit-per-username).md"
+      "formatted/Recommends/Giới hạn số lượng phiên của một khách hàng trên BRAS Juniper (session-limit-per-username).md"
     ],
     "type": "consolidate"
   },
   "address-assignment": {
     "output": "concepts/subscriber-management/address-assignment.md",
     "sources": [
-      "formatted/TS_notes/BRAS_check_address-assignment.md",
-      "formatted/Case_notes/Các_thuật_ngữ_sau_được_sử_dụng_để_giải_thích_cách_cấp_phát_địa_chỉ_IP_(address-assignment).md"
+      "formatted/TS_notes/BRAS check address-assignment.md",
+      "formatted/Case_notes/Các thuật ngữ sau được sử dụng để giải thích cách cấp phát địa chỉ IP (address-assignment).md"
     ],
     "type": "consolidate"
   },
   "ipv6-dual-stack": {
     "output": "concepts/subscriber-management/ipv6-dual-stack.md",
     "sources": [
-      "formatted/TS_notes/Attribute_DNS_IPv6_từ_Radius_cho_Bras_Juniper.md",
-      "formatted/TS_notes/Example-Understanding_Dual-Stack_PPPoE_Subscriber.md",
-      "formatted/TS_notes/SR-2021-1215-1608-Hỗ_trợ_thử_nghiệm_IPv6_tĩnh_cho_KH_CĐBR.md"
+      "formatted/TS_notes/Attribute DNS IPv6 từ Radius cho Bras Juniper.md",
+      "formatted/TS_notes/Example - Understanding Dual-Stack PPPoE Subscriber.md",
+      "formatted/TS_notes/SR-2021-1215-1608 - Hỗ trợ thử nghiệm IPv6 tĩnh cho KH CĐBR.md"
     ],
     "type": "consolidate"
   },
   "bras-pppoe-troubleshooting": {
     "output": "troubleshooting/bras-pppoe-troubleshooting.md",
     "sources": [
-      "formatted/TS_notes/BRAS-TROUBLESHOOTING_PPPoE_in_TOMCAT.md",
-      "formatted/TS_notes/BRAS-command_ouputs.md",
-      "formatted/TS_notes/Command_check_user_bras_pppoe_stuck.md",
-      "formatted/TS_notes/KA_LCP_PPP_command_checks.md",
-      "formatted/TS_notes/How_to_disable_PFE_inline_PPP_keepalive_messages.md",
-      "formatted/TS_notes/The_subscribers_cannot_online_on_AE_interface.md"
+      "formatted/TS_notes/BRAS - TROUBLESHOOTING PPPoE in TOMCAT.md",
+      "formatted/TS_notes/BRAS - command ouputs.md",
+      "formatted/TS_notes/Command check user bras pppoe stuck.md",
+      "formatted/TS_notes/KA LCP PPP command checks.md",
+      "formatted/TS_notes/How to disable PFE inline PPP keepalive messages.md",
+      "formatted/TS_notes/The subscribers cannot online on AE interface.md"
     ],
     "type": "consolidate"
   },
   "bgp-rr-case-study": {
     "output": "case-notes/routing/bgp-route-reflector/toi-uu-bras-rr-juniper-viettel.md",
     "sources": [
-      "formatted/TS_notes/Tối_ưu_BRAS_RR_Juniper_Viettel.md"
+      "formatted/TS_notes/Tối ưu BRAS RR Juniper Viettel.md"
     ],
     "type": "consolidate"
   },
   "interfaces-diagnostics": {
     "output": "troubleshooting/interfaces-optics/interface-diagnostics.md",
     "sources": [
-      "formatted/TS_notes/interfaces_diagnostics_optics.md",
-      "formatted/TS_notes/10GbE_LAN-PHY-40GbE-100GbE_LFS_(Link_fault_signalling).md",
-      "formatted/TS_notes/set_link-speed_100G_cho_interface_ae_với_et-8_interface.md"
+      "formatted/TS_notes/interfaces diagnostics optics.md",
+      "formatted/TS_notes/10GbE LAN-PHY_40GbE_100GbE LFS (Link fault signalling).md",
+      "formatted/TS_notes/set link-speed 100G cho interface ae với et-8 interface.md"
     ],
     "type": "consolidate"
   },
   "lacp-troubleshooting": {
     "output": "troubleshooting/interfaces-optics/lacp-troubleshooting.md",
     "sources": [
-      "formatted/TS_notes/LACP_check-list_commands.md",
-      "formatted/TS_notes/MPC11E-LACP_không_up-join.md",
-      "formatted/TS_notes/lacp_flap_khi_dung_VC_mix-mode.md"
+      "formatted/TS_notes/LACP check-list commands.md",
+      "formatted/TS_notes/MPC11E - LACP không up_join.md",
+      "formatted/TS_notes/lacp flap khi dung VC mix-mode.md"
     ],
     "type": "consolidate"
   },
@@ -99,17 +99,17 @@
     "output": "troubleshooting/interfaces-optics/optics-cfp-xfp.md",
     "sources": [
       "formatted/TS_notes/CFP.md",
-      "formatted/TS_notes/Xử_lý_CFP,_XFP_bị_lõi.md",
-      "formatted/TS_notes/SNMP_interface_jnxDom_(laser)_MIB_OID.md"
+      "formatted/TS_notes/Xử lý CFP, XFP bị lõi.md",
+      "formatted/TS_notes/SNMP interface jnxDom (laser) MIB OID.md"
     ],
     "type": "consolidate"
   },
   "link-flap-physical": {
     "output": "troubleshooting/interfaces-optics/link-flap-physical.md",
     "sources": [
-      "formatted/TS_notes/BUG_Hold-time_down_không_hoạt_động_được_nếu_cấu_hình_nhỏ_hơn_1s_trên_interface_chạy_WANPHY.md",
-      "formatted/TS_notes/Delay_thời_gian_up_time_của_CE_interfaces.md",
-      "formatted/TS_notes/Lệnh_off_laser_mode_shell_<<<_dùng_flap_link.md"
+      "formatted/TS_notes/BUG Hold-time down không hoạt động được nếu cấu hình nhỏ hơn 1s trên interface chạy WANPHY.md",
+      "formatted/TS_notes/Delay thời gian up time của CE interfaces.md",
+      "formatted/TS_notes/Lệnh off laser mode shell _ dùng flap link.md"
     ],
     "type": "consolidate"
   },
@@ -117,10 +117,10 @@
     "output": "concepts/mpls-vpn/mpls-ldp-labels.md",
     "sources": [
       "formatted/TS_notes/LDP.md",
-      "formatted/TS_notes/Label_usage.md",
-      "formatted/classification/Concepts_Theory/No_more_doubt_with_LDP.md",
-      "formatted/classification/Concepts_Theory/LDP-tunnelling_and_hidden_routes_in_inet-3.md",
-      "formatted/TS_notes/ldp-tunneling_or_BGP-LU_(swap_label_0_behavior_change_from_19-x.md"
+      "formatted/TS_notes/Label usage.md",
+      "formatted/Learning_Notes/No more doubt with LDP.md",
+      "formatted/Learning_Notes/LDP-tunnelling and hidden routes in inet.3.md",
+      "formatted/TS_notes/ldp-tunneling or BGP-LU (swap label 0 behavior change from 19.x.md"
     ],
     "type": "consolidate"
   },
@@ -128,21 +128,21 @@
     "output": "concepts/mpls-vpn/l2vpn-vpls.md",
     "sources": [
       "formatted/TS_notes/L2circuit.md",
-      "formatted/TS_notes/Configure_connection_CCC_example.md",
-      "formatted/classification/Concepts_Theory/EoMPLS_VC_Type.md",
-      "formatted/TS_notes/Qui_tắc_về_forwarding_traffic_với_VPLS_mesh-group.md"
+      "formatted/TS_notes/Configure connection CCC example.md",
+      "formatted/Learning_Notes/EoMPLS VC Type.md",
+      "formatted/TS_notes/Qui tắc về forwarding traffic với VPLS mesh-group.md"
     ],
     "type": "consolidate"
   },
   "l3vpn": {
     "output": "concepts/mpls-vpn/l3vpn.md",
     "sources": [
-      "formatted/classification/Concepts_Theory/Layer-2 and Layer-3 VPN From JUNOS.md",
-      "formatted/classification/Concepts_Theory/Interprovider_Layer_3_VPN_option_C.md",
-      "formatted/classification/Concepts_Theory/L3VPN_per-prefix_label_allocation.md",
-      "formatted/classification/Concepts_Theory/l3vpn_hub_and_spoke.md",
-      "formatted/classification/Concepts_Theory/l3vpn_hub_and_spoke-1.md",
-      "formatted/classification/Concepts_Theory/multipath in L3VPN routing-instance.md"
+      "formatted/Learning_Notes/Untitled Note_4.md",
+      "formatted/Learning_Notes/Interprovider Layer 3 VPN option C.md",
+      "formatted/Learning_Notes/L3VPN per-prefix label allocation.md",
+      "formatted/Learning_Notes/l3vpn hub and spoke.md",
+      "formatted/Learning_Notes/l3vpn hub and spoke_2.md",
+      "formatted/Learning_Notes/Untitled Note_3.md"
     ],
     "type": "consolidate"
   },
@@ -150,106 +150,115 @@
     "output": "concepts/mpls-vpn/evpn-vxlan.md",
     "sources": [
       "formatted/TS_notes/eVPN.md",
-      "formatted/TS_notes/evpn_command_check.md",
-      "formatted/TS_notes/commands_need_to_collect_to_check_EVPN-VXLAN_(From_This_Week-Data_Center_Deployment_with_EVPN-VXLAN).md"
+      "formatted/TS_notes/evpn command check.md",
+      "formatted/TS_notes/commands need to collect to check EVPN-VXLAN (From This Week_ Data Center Deployment with EVPN_VXLAN).md"
     ],
     "type": "consolidate"
   },
   "hardware-replacement": {
     "output": "maintenance/hardware-replacement.md",
     "sources": [
-      "formatted/classification/Troubleshooting/Guide_MPC_insert_and_Power_note_on_MX2008.md",
-      "formatted/classification/Troubleshooting/Guide_NG-RE_insert_remove_on_SCBE2-E3.md",
-      "formatted/classification/Troubleshooting/Replacing_RE-phương_án_không_có_thiết_bị_lab.md"
+      "formatted/Best_Practise/MX2008.md",
+      "formatted/Best_Practise/Tháo_cắm NG-RE vào SCBE2_E3.md",
+      "formatted/Procedures/Thực hiện thay thế (replacing) RE - phương án không có thiết bị lab.md"
     ],
     "type": "consolidate"
   },
   "case-notes-index": {
     "output": "case-notes/index.md",
     "sources": [
-      "formatted/Case_notes/-MVT-HĐ_03-2020-Hỗ_trợ_xử_lý_lỗi_box_PR02-TET040.md",
-      "formatted/Case_notes/BPC8003BRA01_RE1_|_không_cutoff_được_user.md",
-      "formatted/Case_notes/Các_thuật_ngữ_sau_được_sử_dụng_để_giải_thích_cách_cấp_phát_địa_chỉ_IP_(address-assignment).md",
-      "formatted/Case_notes/FTEL-Download_Microsoft_chậm.md",
-      "formatted/Case_notes/Lỗi_memory_trên_MPC7E-MRATE_cho_BNG.md",
-      "formatted/Case_notes/Movitel-Mất_dịch_vụ_3G,_4G.md",
-      "formatted/Case_notes/SR#01219162-Viettel-SLA-NFE-Viettel_||_MPC5E-2CGE-4XGE_cao_tải_CPU.md",
-      "formatted/Case_notes/SR-2021-1125-1639-MVT-HĐ_SLA_03-2020-Hỗ_trợ_kiểm_tra_cảnh_báo_lỗi_FPC1_trên_MAN057.md",
-      "formatted/Case_notes/SR-2021-1201-0922-MVT-HĐ_03-2020-Hỗ_trợ_xử_lý_lỗi_box_PR01-GAZ020.md",
-      "formatted/Case_notes/SR-2021-1215-0956-Hỗ_trợ_xử_lý_case_cảnh_báo_trên_thiết_bị_ME_AR03-MAP018.md",
-      "formatted/Case_notes/SR-2021-1215-1001-Hỗ_trợ_xử_lý_case_cảnh_báo_trên_thiết_bị_AR01-NIA088_copy.md",
-      "formatted/Case_notes/SR-2021-1216-0859-Hỗ_trợ_nâng_cấp_SCBE-MX_lên_SCBE2-MX_trên_thiết_bị_ME_AR02-GAZ185.md",
-      "formatted/Case_notes/SR-2021-1223-1336-Viettel-HĐ_SLA_06-Hỗ_trợ_kiểm_tra_Thay_đổi_vlan_range_cổng_downlink_BRAS_|_Không_đá_thuê_bao_khỏi_cổng.md",
-      "formatted/Case_notes/SR-2021-1225-2235-MVT-HĐ_SLA_03-Xử_lý_case_cảnh_báo_trên_thiết_bị_ME_AR03-GAZ080.md",
-      "formatted/Case_notes/SR-2021-1226-1945-MVT-HĐ_SLA_03-2020-Hỗ_trợ_kiểm_tra_link_kết_nối_giữa_ME_AR03-GAZ080_và_ME_GAZ009SRT01.md",
-      "formatted/Case_notes/SR-2022-0106-0928-IPv6_ping_VPLS.md",
-      "formatted/Case_notes/SR-2022-0117-0942-Viettel-HĐ_SLA_06-Hỗ_trợ_node_HHT9603CGT12_xử_lý_cảnh_báo_XMCHIP_trên_card_0,2,4_và_cảnh_báo_reset_trên_card_1.md",
-      "formatted/Case_notes/SR-2022-0128-1515_MVT-HĐ_03-2020-Support_to_check_alarms_on_the_device_ME_PR01-SOF055_after_device_reboot_due_to_power_failure.md",
-      "formatted/Case_notes/SR-2022-0408-1059-QTSC-Ngoài_HĐ-Hỗ_trợ_kiểm_tra_lỗi_Minor_backup_RE_active_trên_MX960.md",
-      "formatted/Case_notes/SR-2022-0627-1622-CMC-HĐ_050522-Hỗ_trợ_kiểm_tra_OSPF_bị_treo_trạng_thái_Exchange_khi_flap_link_vật_lý.md",
-      "formatted/Case_notes/SR-2023-0406-1052-Viettel-HĐ_SLA_IP-Kiểm_tra_tốc_độ_upload_của_user_LeaseLine_trên_box_HHT9602-PECD-MX2020-02_(HHT9602CRT35).md",
-      "formatted/Case_notes/Untitled_Note.md",
-      "formatted/Case_notes/[Movitel]_Audit-Apply_micro-bfd_cho_các_kết_nối_Core.md",
-      "formatted/Case_notes/[Movitel]_Audit-Tối_ưu_syslog.md",
-      "formatted/Case_notes/cmc-MX104_high_CPU.md",
-      "formatted/Case_notes/thay_doi_ve_cach_hanh_xu_route,nh,scu,dcu,sensor,rpf_check.md"
+      "formatted/Case_notes/- MVT_ HĐ 03-2020_ Hỗ trợ xử lý lỗi box PR02.TET040.md",
+      "formatted/Case_notes/BPC8003BRA01_RE1 | không cutoff được user.md",
+      "formatted/Case_notes/Các thuật ngữ sau được sử dụng để giải thích cách cấp phát địa chỉ IP (address-assignment).md",
+      "formatted/Case_notes/FTEL - Download Microsoft chậm.md",
+      "formatted/Case_notes/Lỗi memory trên MPC7E-MRATE cho BNG.md",
+      "formatted/Case_notes/Movitel - Mất dịch vụ 3G, 4G.md",
+      "formatted/Case_notes/SR#01219162_Viettel_SLA_NFE_Viettel || MPC5E-2CGE-4XGE cao tải CPU.md",
+      "formatted/Case_notes/SR-2021-1125-1639 - MVT_ HĐ SLA 03_2020_ Hỗ trợ kiểm tra cảnh báo lỗi FPC1 trên MAN057.md",
+      "formatted/Case_notes/SR-2021-1201-0922 - MVT_ HĐ 03-2020_ Hỗ trợ xử lý lỗi box PR01.GAZ020.md",
+      "formatted/Case_notes/SR-2021-1215-0956 - Hỗ trợ xử lý case cảnh báo trên thiết bị ME_AR03.MAP018.md",
+      "formatted/Case_notes/SR-2021-1215-1001 - Hỗ trợ xử lý case cảnh báo trên thiết bị AR01.NIA088 copy.md",
+      "formatted/Case_notes/SR-2021-1216-0859 - Hỗ trợ nâng cấp SCBE-MX lên SCBE2-MX trên thiết bị ME_AR02.GAZ185.md",
+      "formatted/Case_notes/SR-2021-1223-1336 - Viettel_HĐ SLA 06_Hỗ trợ kiểm tra Thay đổi vlan range cổng downlink BRAS | Không đá thuê bao khỏi cổng.md",
+      "formatted/Case_notes/SR-2021-1225-2235 - MVT_HĐ SLA 03_Xử lý case cảnh báo trên thiết bị ME_AR03.GAZ080.md",
+      "formatted/Case_notes/SR-2021-1226-1945 - MVT_HĐ SLA 03_2020_ Hỗ trợ kiểm tra link kết nối giữa ME_AR03.GAZ080 và ME_GAZ009SRT01.md",
+      "formatted/Case_notes/SR-2022-0106-0928-IPv6 ping VPLS.md",
+      "formatted/Case_notes/SR-2022-0117-0942 - Viettel_HĐ SLA 06_Hỗ trợ node HHT9603CGT12 xử lý cảnh báo XMCHIP trên card 0,2,4 và cảnh báo reset trên card 1.md",
+      "formatted/Case_notes/SR-2022-0128-1515 MVT_HĐ 03-2020_Support to check alarms on the device ME_PR01.SOF055 after device reboot due to power failure.md",
+      "formatted/Case_notes/SR-2022-0408-1059 - QTSC_Ngoài HĐ_Hỗ trợ kiểm tra lỗi Minor backup RE active trên MX960.md",
+      "formatted/Case_notes/SR-2022-0627-1622 - CMC_HĐ 050522_Hỗ trợ kiểm tra OSPF bị treo trạng thái Exchange khi flap link vật lý.md",
+      "formatted/Case_notes/SR-2023-0406-1052 - Viettel_HĐ SLA IP_Kiểm tra tốc độ upload của user LeaseLine trên box HHT9602.PECD.MX2020.02 (HHT9602CRT35).md",
+      "formatted/Case_notes/Untitled Note.md",
+      "formatted/Case_notes/_Movitel_ Audit - Apply micro-bfd cho các kết nối Core.md",
+      "formatted/Case_notes/_Movitel_ Audit - Tối ưu syslog.md",
+      "formatted/Case_notes/cmc _ MX104 high CPU.md",
+      "formatted/Case_notes/pr1523537 nay chu yeu giai thich ve behaviour cua bfd session id.md",
+      "formatted/Case_notes/thay doi ve cach hanh xu route,nh,scu,dcu,sensor,rpf check.md",
+      "formatted/Case_notes/Điều kiện phát sinh BGP rsync.md"
     ],
     "type": "index-only"
   },
   "vendor-kb-index": {
     "output": "vendor-kb/index.md",
     "sources": [
-      "formatted/PR/KB25839-[Junos]_An_improper_egress-policy_to_LDP_makes_the_'inet-3'_table_become_empty.md",
-      "formatted/PR/KB27189-[MX]_Optimizing_heap_utilization_when_applying_a_firewall_filter_on_an_interface_using_input_and_input-list_keywords.md",
-      "formatted/PR/KB31811_[MX]_How_to_check_if_Enhanced_Subscriber_Management_(bbe-smgd)_is_enabled_and_working.md",
+      "formatted/PR/Cisco template pppoe DHCPv6 NA (PPPoE IPv6).md",
+      "formatted/PR/KB25839 - _Junos_ An improper egress-policy to LDP makes the _inet.3_ table become empty.md",
+      "formatted/PR/KB27189 - _MX_ Optimizing heap utilization when applying a firewall filter on an interface using input and input-list keywords.md",
+      "formatted/PR/KB31811__MX_ How to check if Enhanced Subscriber Management (bbe-smgd) is enabled and working.md",
+      "formatted/PR/KB33034__MX_ Configuration Example - Matching IP traffic with a firewall filter for family CCC.md",
       "formatted/PR/KB34539_.md",
-      "formatted/PR/KB37106_[Subscriber_Management]_Understanding_the_'Standby_is_not_synced'_error_after_a_backup_RE_replacement.md",
-      "formatted/PR/KB37435_[Junos]_Default_CoS_behavior_for_schedulers_with_different_scheduler_priorities.md",
-      "formatted/PR/PR1082932-Data_Error_in_shared_LMEM_of_LU-XL_chip_causing_a_MQ-XM_chip_wedge.md",
-      "formatted/PR/PR1561855-Continuous_bbe-smgd_cores_are_generated_after_restarting_the_smgd.md",
-      "formatted/PR/PR_check.md",
-      "formatted/PR/using_AE_interfaces_with_SPC3.md"
+      "formatted/PR/KB37106__Subscriber Management_ Understanding the _Standby is not synced_ error after a backup RE replacement.md",
+      "formatted/PR/KB37435__Junos_ Default CoS behavior for schedulers with different scheduler priorities.md",
+      "formatted/PR/MAC move.md",
+      "formatted/PR/PR check.md",
+      "formatted/PR/PR1082932 - Data Error in shared LMEM of LU_XL chip causing a MQ_XM chip wedge.md",
+      "formatted/PR/PR1561855 - Continuous bbe-smgd cores are generated after restarting the smgd.md",
+      "formatted/PR/TRIO Card_ packet capture with pfe commands.md",
+      "formatted/PR/Untitled Note.md",
+      "formatted/PR/pppoe client bras bng option.md",
+      "formatted/PR/show port mapping pfe.md",
+      "formatted/PR/using AE interfaces with SPC3.md"
     ],
     "type": "index-only"
   },
   "mail-templates-index": {
     "output": "mail-templates/index.md",
     "sources": [
-      "formatted/Mail_template/Close_case.md",
-      "formatted/Mail_template/Email_Greetings.md",
+      "formatted/Mail_template/Close case.md",
+      "formatted/Mail_template/Email Greetings.md",
       "formatted/Mail_template/English.md",
-      "formatted/Mail_template/Trả_lời_về_việc_khuyến_nghị_version.md",
+      "formatted/Mail_template/Trả lời về việc khuyến nghị version.md",
       "formatted/Mail_template/Vietnamese.md",
-      "formatted/Mail_template/lỗi_không_ping_được_mpls_ldp.md",
-      "formatted/Mail_template/renew_service.md"
+      "formatted/Mail_template/lỗi không ping được mpls ldp.md",
+      "formatted/Mail_template/renew service.md"
     ],
     "type": "index-only"
   },
   "lab-index": {
     "output": "lab/index.md",
     "sources": [
-      "formatted/LAB_SVT_GROUP/LAB_BRAS_service_lab_01.md",
-      "formatted/LAB_SVT_GROUP/LAB_advanced_l3vpn_lab_01.md",
-      "formatted/LAB_SVT_GROUP/LAB_intermediate_l3vpn_lab_01.md",
-      "formatted/LAB_SVT_GROUP/Lab_advanced_igp_lab_01.md"
+      "formatted/LAB_SVT_GROUP/LAB BRAS_service_lab_01.md",
+      "formatted/LAB_SVT_GROUP/LAB advanced_l3vpn_lab_01.md",
+      "formatted/LAB_SVT_GROUP/LAB intermediate_l3vpn_lab_01.md",
+      "formatted/LAB_SVT_GROUP/Lab advanced_igp_lab_01.md"
     ],
     "type": "index-only"
   },
   "cli-index": {
     "output": "cli-cheatsheets/index.md",
     "sources": [
-      "formatted/classification/CLI_Cheatsheet/Bash_command_cli_on_MacOS.md",
-      "formatted/classification/CLI_Cheatsheet/Check_ddos-protection_param_on_QFX5K.md",
-      "formatted/classification/CLI_Cheatsheet/Check_running_lab_on_eve.md",
-      "formatted/classification/CLI_Cheatsheet/Cisco_template_pppoe_DHCPv6_NA_(PPPoE_IPv6).md",
-      "formatted/classification/CLI_Cheatsheet/Clear_OSPF_database.md",
-      "formatted/classification/CLI_Cheatsheet/CoS_class-of-service_shell_commands.md",
-      "formatted/classification/CLI_Cheatsheet/FPC.md",
-      "formatted/classification/CLI_Cheatsheet/KB33034_[MX]_Configuration_Example-Matching_IP_traffic_with_a_firewall_filter_for_family_CCC.md",
-      "formatted/classification/CLI_Cheatsheet/MAC_move.md",
-      "formatted/classification/CLI_Cheatsheet/TRIO_Card-packet_capture_with_pfe_commands.md",
-      "formatted/classification/CLI_Cheatsheet/config_template_Cisco_PPPoE_IPv4_and_PPPoE_IPv6_client.md",
-      "formatted/classification/CLI_Cheatsheet/show_port_mapping_pfe.md"
+      "formatted/Outlook/Bash command cli on MacOS.md",
+      "formatted/Learning_Notes/Check ddos-protection param on QFX5K.md",
+      "formatted/Learning_Notes/Check running lab on eve.md",
+      "formatted/PR/Cisco template pppoe DHCPv6 NA (PPPoE IPv6).md",
+      "formatted/Learning_Notes/Clear OSPF database.md",
+      "formatted/TS_notes/Class of Services - CoS shell cmd on MPC7E (EA chip).md",
+      "formatted/TS_notes/FPC.md",
+      "formatted/PR/KB33034__MX_ Configuration Example - Matching IP traffic with a firewall filter for family CCC.md",
+      "formatted/PR/MAC move.md",
+      "formatted/PR/TRIO Card_ packet capture with pfe commands.md",
+      "formatted/Procedures/config template Cisco PPPoE IPv4 and PPPoE IPv6 client.md",
+      "formatted/PR/show port mapping pfe.md"
     ],
     "type": "index-only"
   }

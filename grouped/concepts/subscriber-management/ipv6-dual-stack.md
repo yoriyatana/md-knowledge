@@ -3,7 +3,7 @@
 > Generated deterministically from the approved grouping manifest.
 
 
-## Source: `formatted/TS_notes/Attribute_DNS_IPv6_từ_Radius_cho_Bras_Juniper.md`
+## Source: `formatted/TS_notes/Attribute DNS IPv6 từ Radius cho Bras Juniper.md`
 
 # Attribute DNS IPv6 từ Radius cho Bras Juniper
 
@@ -17,52 +17,41 @@ Trên radius juniper có thể hỗ trợ 2 attribute cho DNSv6 theo 2 format
 
 1. Format hexadecimal:
 
-|#JUNOS and JUNOSe
-
-ATTRIBUTE Unisphere-Ipv6-Primary-Dns               ERX-VSA(47, hexadecimal) r
-
-# JUNOS and JUNOSe
-
-ATTRIBUTE Unisphere-Ipv6-Secondary-Dns             ERX-VSA(48, hexadecimal) r
- |
-|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|  |
+| --- |
+| #JUNOS and JUNOSe  ATTRIBUTE Unisphere-Ipv6-Primary-Dns               ERX-VSA(47, hexadecimal) r    #JUNOS and JUNOSe  ATTRIBUTE Unisphere-Ipv6-Secondary-Dns             ERX-VSA(48, hexadecimal) r |
 
 Với format này thì mình cần convert DNSv6 sang dạng hexa rồi mới điền nội dung vào profile của khách hàng. Ví dụ 2001:ee0:23::23 convert thành **0x20010ee0002300000000000000000023**
 
-![Attachment-1.png](../../assets/ipv6-dual-stack/7843a0904d-Attachment-1.png)
+![](../../assets/ipv6-dual-stack/99576b1080-3df30ea924832007feee27b9ac5126db)
 
-1. Format ipv6:
+2. Format ipv6:
 
-ATTRIBUTE Unisphere-Ipv6-Primary-Dns               ERX-VSA(47, ipv6addr) r
-
-ATTRIBUTE Unisphere-Ipv6-Secondary-Dns             ERX-VSA(48, ipv6addr) r
- |
-|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|  |
+| --- |
+| #JUNOS and JUNOSe  ATTRIBUTE Unisphere-Ipv6-Primary-Dns               ERX-VSA(47, ipv6addr) r    #JUNOS and JUNOSe  ATTRIBUTE Unisphere-Ipv6-Secondary-Dns             ERX-VSA(48, ipv6addr) r |
 
 Kết quả test:
-![Attachment.png](../../assets/ipv6-dual-stack/9ef3a4b0c9-Attachment.png)
+
+![](../../assets/ipv6-dual-stack/7a89a1eb4d-024b090baece2ea3e47ae482096cf2c0)
 
 Log bras nhận được:
 
-|Nov 25 13:55:24.257865 radius-access-accept: IPv6-Delegated-Pool-Name (Juniper-ERX-VSA) received: FTTH-V6-LAN
-
-Nov 25 13:55:24.257926 radius-access-accept: **IPv6-Primary-DNS (Juniper-ERX-VSA) received: 2001:ee0:23::23**
-
-Nov 25 13:55:24.257978 radius-access-accept: **IPv6-Secondary-DNS (Juniper-ERX-VSA) received: 2001:ee0:26::26**
-Nov 25 13:55:24.257825 radius-access-accept: Class received: 53 42 52 32 43 4c 89 ae f4 86 9f 94 90 c9 d6 80 11 80 21 01 80 02 81 98 80 02 80 05 81 aa 91 aa b5 a0 12 80 0e 81 89 ae f4 86 9f 94 90 c9 d6 80 80 80 89 c8|
-|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|  |
+| --- |
+| Nov 25 13:55:24.257825 radius-access-accept: Class received: 53 42 52 32 43 4c 89 ae f4 86 9f 94 90 c9 d6 80 11 80 21 01 80 02 81 98 80 02 80 05 81 aa 91 aa b5 a0 12 80 0e 81 89 ae f4 86 9f 94 90 c9 d6 80 80 80 89 c8  Nov 25 13:55:24.257865 radius-access-accept: IPv6-Delegated-Pool-Name (Juniper-ERX-VSA) received: FTTH-V6-LAN  Nov 25 13:55:24.257926 radius-access-accept: **IPv6-Primary-DNS (Juniper-ERX-VSA) received: 2001:ee0:23::23**  Nov 25 13:55:24.257978 radius-access-accept: **IPv6-Secondary-DNS (Juniper-ERX-VSA) received: 2001:ee0:26::26** |
 
 Vậy anh xem lựa chọn và thực hiện cấu hình thử nghiệm 1 trong 2 kiểu trên nhé anh.
 
 Trân trọng cám ơn!
 
-## Source: `formatted/TS_notes/Example-Understanding_Dual-Stack_PPPoE_Subscriber.md`
+## Source: `formatted/TS_notes/Example - Understanding Dual-Stack PPPoE Subscriber.md`
 
 # Example - Understanding Dual-Stack PPPoE Subscriber
 
 [Subscriber Management] Example - Understanding end-to-end IPv6/Dual-Stack PPPoE Subscriber config on MX with Static/Dynamic VLAN option
 
-Article ID**KB36443**
+Article IDKB36443
 
 Created2021-01-21
 
@@ -82,7 +71,7 @@ In this example:
 
 Solution
 
-* *Topology**
+Topology
 
 > IPv4/IPv6/Dual-Stack PPPoE subscriber <----> ([vlan 3320] ge-0/0/2) MX (ge-0/0/0) <----> Radius Server(192.168.40.26)
 
@@ -95,48 +84,49 @@ There are two types of addressing for IPv6 in a subscriber access network:
 
 You can use the following methods for assigning IPv6 addresses:
 
-- For WAN link addressing, you can use ND/RA or DHCPv6 IA_NA to provision a global IPv6 address.
+- For WAN link addressing, you can use ND/RA or DHCPv6 IA\_NA to provision a global IPv6 address.
 - For subscriber LAN addressing, you can use DHCPv6 prefix delegation to provision global IPv6 addresses to the subscribers on the LAN.
 
 IPv6 PPPoE subscriber (WAN link’s IPv6 address assignment of CPE) can be deployed in two ways:
 
 1. Via ND/RA messages
-2. Via DHCPv6 IA_NA or PD
+2. Via DHCPv6 IA\_NA or PD
 
-* *MX(BNG) Configuration Steps for IPv4 / IPv6 / Dual-Stack PPPoE Subscriber**
+MX(BNG) Configuration Steps for IPv4 / IPv6 / Dual-Stack PPPoE Subscriber
 
 1. Configure the following:
-    1. Dynamic profile " **PPPoE** " for both IPv4 and IPv6/Dual-Stack PPPoE subscribers
-    2. Access Profile " **ACCESS-FTTH** " for subscriber user authentication via the RADIUS server
-    3. IPv4 Address Pool " **dhcpv4-pool** " (default pool) and " **V4-IP-POOL** " (user defined; used via the RADIUS attribute "Framed-Pool")
-    4. IPv6 Address pools " **V6-DHCP-POOL** " (default pool) and " **IP-POOL-V6** " (user defined; used via the RADIUS attribute "Framed-IPv6-Pool")
-    5. Domain map " **default** " with a default dynamic-profile, access-profile, and address-pool mapping
-    6. IPv4 firewall filter " **default** " and IPv6 firewall filter " **default-v6** " to be used by the dynamic-profile " **PPPoE** " as default in/out firewall filter (in case not provided via the RADIUS attribute)
-    7. MX as the DHCPv6 (only) server (dhcp-local-server dhcpv6 group " **PPPV6** ") for PPPoE subscriber IPv6 address assignment
-    8. Dynamic profile " **PPPoE** " under static VLAN/unit number for an interface with PPPoE encapsulation
 
-> **For Auto-VLAN (dynamic VLAN) Configuration:**  ( Continue after Step f onward as shown below. )
+1. Dynamic profile " PPPoE " for both IPv4 and IPv6/Dual-Stack PPPoE subscribers
+2. Access Profile " ACCESS-FTTH " for subscriber user authentication via the RADIUS server
+3. IPv4 Address Pool " dhcpv4-pool " (default pool) and " V4-IP-POOL " (user defined; used via the RADIUS attribute "Framed-Pool")
+4. IPv6 Address pools " V6-DHCP-POOL " (default pool) and " IP-POOL-V6 " (user defined; used via the RADIUS attribute "Framed-IPv6-Pool")
+5. Domain map " default " with a default dynamic-profile, access-profile, and address-pool mapping
+6. IPv4 firewall filter " default " and IPv6 firewall filter " default-v6 " to be used by the dynamic-profile " PPPoE " as default in/out firewall filter (in case not provided via the RADIUS attribute)
+7. MX as the DHCPv6 (only) server (dhcp-local-server dhcpv6 group " PPPV6 ") for PPPoE subscriber IPv6 address assignment
+8. Dynamic profile " PPPoE " under static VLAN/unit number for an interface with PPPoE encapsulation
 
-1. Configure a dynamic profile " **AUTO-VLAN-PPP** " (dot1q) or " **AUTO-VLAN-STACK-PPP** " (q-in-q) for the dynamic VLAN PPPoE subscriber interface.
-2. Finally configure the physical interface with auto-configure (with dynamic profile  _"_ **AUTO-VLAN-PPP** _" / "_ **AUTO-VLAN-STACK-PPP** _"_ ) to activate dynamic-VLAN-based PPPoE subscribers.
+> For Auto-VLAN (dynamic VLAN) Configuration:  ( Continue after Step f onward as shown below. )
 
-* *Configuration**
+7. Configure a dynamic profile " AUTO-VLAN-PPP " (dot1q) or " AUTO-VLAN-STACK-PPP " (q-in-q) for the dynamic VLAN PPPoE subscriber interface.
+8. Finally configure the physical interface with auto-configure (with dynamic profile  " AUTO-VLAN-PPP " / " AUTO-VLAN-STACK-PPP " ) to activate dynamic-VLAN-based PPPoE subscribers.
 
-* *Dynamic-profile configuration for static VLAN bind IPv4 only, IPv6 (ND/RA, DHCPv6 IA_NA / PD), and Dual-Stack (ND/RA, DHCPv6 IA_NA / PD) PPPoE subscriber deployment**
+Configuration
+
+Dynamic-profile configuration for static VLAN bind IPv4 only, IPv6 (ND/RA, DHCPv6 IA\_NA / PD), and Dual-Stack (ND/RA, DHCPv6 IA\_NA / PD) PPPoE subscriber deployment
 
 > dynamic-profiles {
 >
-> **PPPoE** { ## "dynamic-profile" name
+> PPPoE { ## "dynamic-profile" name
 >
 > predefined-variable-defaults { ## Pre-defines the variable’s default value
 >
-> input-filter **default**;
+> input-filter default;
 >
-> output-filter **default**;
+> output-filter default;
 >
-> output-ipv6-filter **default-v6**;
+> output-ipv6-filter default-v6;
 >
-> input-ipv6-filter **default-v6**;
+> input-ipv6-filter default-v6;
 >
 > }
 >
@@ -194,10 +184,6 @@ IPv6 PPPoE subscriber (WAN link’s IPv6 address assignment of CPE) can be deplo
 >
 > }
 >
->
->
->
->
 > interfaces {
 >
 > pp0 {
@@ -222,7 +208,7 @@ IPv6 PPPoE subscriber (WAN link’s IPv6 address assignment of CPE) can be deplo
 >
 > }
 >
-> mtu **1492**; ## PPP mtu to be set during pap auth
+> mtu 1492; ## PPP mtu to be set during pap auth
 >
 > }
 >
@@ -270,13 +256,9 @@ IPv6 PPPoE subscriber (WAN link’s IPv6 address assignment of CPE) can be deplo
 >
 > }
 >
->
->
->
->
 > protocols {
 >
-> router-advertisement { ## For IPv6 IA_NA /128 address, disable "router-advertisement."
+> router-advertisement { ## For IPv6 IA\_NA /128 address, disable "router-advertisement."
 >
 > interface "$junos-interface-name" {
 >
@@ -302,10 +284,6 @@ IPv6 PPPoE subscriber (WAN link’s IPv6 address assignment of CPE) can be deplo
 >
 > }
 >
->
->
->
->
 > system {
 >
 > services {
@@ -314,7 +292,7 @@ IPv6 PPPoE subscriber (WAN link’s IPv6 address assignment of CPE) can be deplo
 >
 > dhcpv6 {
 >
-> group **PPPV6** {
+> group PPPV6 {
 >
 > interface demux0.0;
 >
@@ -330,13 +308,9 @@ IPv6 PPPoE subscriber (WAN link’s IPv6 address assignment of CPE) can be deplo
 >
 > }
 >
->
->
->
->
 > access {
 >
-> profile **ACCESS-FTTH** { ## Access-profile name
+> profile ACCESS-FTTH { ## Access-profile name
 >
 > accounting-order radius;
 >
@@ -344,9 +318,9 @@ IPv6 PPPoE subscriber (WAN link’s IPv6 address assignment of CPE) can be deplo
 >
 > radius {
 >
-> authentication-server **192.168.40.26**;
+> authentication-server 192.168.40.26;
 >
-> accounting-server **192.168.40.26**;
+> accounting-server 192.168.40.26;
 >
 > options {
 >
@@ -360,13 +334,13 @@ IPv6 PPPoE subscriber (WAN link’s IPv6 address assignment of CPE) can be deplo
 >
 > radius-server {
 >
-> **192.168.40.26** {
+> 192.168.40.26 {
 >
-> port **1812**; ## RADIUS authentication port number
+> port 1812; ## RADIUS authentication port number
 >
-> accounting-port **1813**; ## RADIUS accounting port number
+> accounting-port 1813; ## RADIUS accounting port number
 >
-> dynamic-request-port **3799**; ## RADIUS CoA/dynamic-request port number
+> dynamic-request-port 3799; ## RADIUS CoA/dynamic-request port number
 >
 > secret "$ABC123"; ## SECRET-DATA
 >
@@ -388,7 +362,7 @@ IPv6 PPPoE subscriber (WAN link’s IPv6 address assignment of CPE) can be deplo
 >
 > coa-immediate-update;
 >
-> update-interval **10**; ## Interim accounting update interval in minutes
+> update-interval 10; ## Interim accounting update interval in minutes
 >
 > statistics volume-time; ## Both data volume & session duration for accounting
 >
@@ -398,9 +372,9 @@ IPv6 PPPoE subscriber (WAN link’s IPv6 address assignment of CPE) can be deplo
 >
 > address-assignment {
 >
-> neighbor-discovery-router-advertisement **V6-DHCP-POOL**;
+> neighbor-discovery-router-advertisement V6-DHCP-POOL;
 >
-> pool **V6-DHCP-POOL** {
+> pool V6-DHCP-POOL {
 >
 > family inet6 {
 >
@@ -412,7 +386,7 @@ IPv6 PPPoE subscriber (WAN link’s IPv6 address assignment of CPE) can be deplo
 >
 > }
 >
-> pool **IP-POOL-v6** {
+> pool IP-POOL-v6 {
 >
 > family inet6 {
 >
@@ -420,7 +394,7 @@ IPv6 PPPoE subscriber (WAN link’s IPv6 address assignment of CPE) can be deplo
 >
 > inactive: range ndra-range prefix-length 64;
 >
-> range **ixia** {
+> range ixia {
 >
 > low 2004:2003::10/128;
 >
@@ -432,7 +406,7 @@ IPv6 PPPoE subscriber (WAN link’s IPv6 address assignment of CPE) can be deplo
 >
 > }
 >
-> pool **pppv4-pool** {
+> pool pppv4-pool {
 >
 > family inet {
 >
@@ -442,7 +416,7 @@ IPv6 PPPoE subscriber (WAN link’s IPv6 address assignment of CPE) can be deplo
 >
 > }
 >
-> pool **V4-IP-POOL** {
+> pool V4-IP-POOL {
 >
 > family inet {
 >
@@ -462,37 +436,29 @@ IPv6 PPPoE subscriber (WAN link’s IPv6 address assignment of CPE) can be deplo
 >
 > }
 >
->
->
->
->
 > domain { ## Map domain-id with access-profile, pool, dynamic-profile
 >
-> map **default** { ## Default domain map; matches all/no domain-id
+> map default { ## Default domain map; matches all/no domain-id
 >
-> access-profile **ACCESS-FTTH**;
+> access-profile ACCESS-FTTH;
 >
-> address-pool **pppv4-pool**;
+> address-pool pppv4-pool;
 >
-> dynamic-profile **PPPoE**;
->
-> }
->
-> delimiter "**@**"; ## Delimiter character to identify start of domain-id
+> dynamic-profile PPPoE;
 >
 > }
 >
+> delimiter "@"; ## Delimiter character to identify start of domain-id
+>
 > }
 >
->
->
->
+> }
 >
 > firewall {
 >
 > family inet {
 >
-> filter **default** {
+> filter default {
 >
 > interface-specific;
 >
@@ -505,14 +471,10 @@ IPv6 PPPoE subscriber (WAN link’s IPv6 address assignment of CPE) can be deplo
 > }
 >
 > }
->
->
->
->
 >
 > family inet6 {
 >
-> filter **default-v6** {
+> filter default-v6 {
 >
 > interface-specific;
 >
@@ -528,27 +490,23 @@ IPv6 PPPoE subscriber (WAN link’s IPv6 address assignment of CPE) can be deplo
 >
 > }
 >
->
->
->
->
 > interfaces {
 >
-> **ge-0/0/2** {
+> ge-0/0/2 {
 >
 > hierarchical-scheduler maximum-hierarchy-levels 2;
 >
 > flexible-vlan-tagging;
 >
-> unit **3320** { ## Static unit number for static VLAN subscriber int.
+> unit 3320 { ## Static unit number for static VLAN subscriber int.
 >
 > encapsulation ppp-over-ether;
 >
-> vlan-id **3320**; ## Single stack(dot1q) static VLAN ID for incoming PPPoE
+> vlan-id 3320; ## Single stack(dot1q) static VLAN ID for incoming PPPoE
 >
 > pppoe-underlying-options {
 >
-> dynamic-profile **PPPoE**;
+> dynamic-profile PPPoE;
 >
 > }
 >
@@ -558,11 +516,11 @@ IPv6 PPPoE subscriber (WAN link’s IPv6 address assignment of CPE) can be deplo
 >
 > }
 
-* *Extra dynamic-profile and interface configurations for dot1q / single VLAN IPv4 PPPoE subscriber deployment**
+Extra dynamic-profile and interface configurations for dot1q / single VLAN IPv4 PPPoE subscriber deployment
 
 > dynamic-profiles {
 >
-> **AUTO-VLAN-PPP** {
+> AUTO-VLAN-PPP {
 >
 > interfaces {
 >
@@ -584,7 +542,7 @@ IPv6 PPPoE subscriber (WAN link’s IPv6 address assignment of CPE) can be deplo
 >
 > family pppoe {
 >
-> dynamic-profile **PPPoE**;
+> dynamic-profile PPPoE;
 >
 > }
 >
@@ -597,14 +555,10 @@ IPv6 PPPoE subscriber (WAN link’s IPv6 address assignment of CPE) can be deplo
 > }
 >
 > }
->
->
->
->
 >
 > interfaces {
 >
-> **ge-0/0/2** {
+> ge-0/0/2 {
 >
 > hierarchical-scheduler maximum-hierarchy-levels 2;
 >
@@ -614,13 +568,13 @@ IPv6 PPPoE subscriber (WAN link’s IPv6 address assignment of CPE) can be deplo
 >
 > vlan-ranges {
 >
-> dynamic-profile **AUTO-VLAN-PPP** {
+> dynamic-profile AUTO-VLAN-PPP {
 >
 > accept pppoe;
 >
 > ranges {
 >
-> **3000-4000**; ## VLAN ranges for incoming PPPoE connection
+> 3000-4000; ## VLAN ranges for incoming PPPoE connection
 >
 > }
 >
@@ -636,11 +590,11 @@ IPv6 PPPoE subscriber (WAN link’s IPv6 address assignment of CPE) can be deplo
 >
 > }
 
-* *Extra dynamic-profile and interface configurations for q-in-q / stacked VLAN IPv4/IPv6 PPPoE subscriber deployment**
+Extra dynamic-profile and interface configurations for q-in-q / stacked VLAN IPv4/IPv6 PPPoE subscriber deployment
 
 > dynamic-profiles {
 >
-> **AUTO-VLAN-STACK-PPP** {
+> AUTO-VLAN-STACK-PPP {
 >
 > interfaces {
 >
@@ -662,7 +616,7 @@ IPv6 PPPoE subscriber (WAN link’s IPv6 address assignment of CPE) can be deplo
 >
 > family pppoe {
 >
-> dynamic-profile **PPPoE**;
+> dynamic-profile PPPoE;
 >
 > }
 >
@@ -678,7 +632,7 @@ IPv6 PPPoE subscriber (WAN link’s IPv6 address assignment of CPE) can be deplo
 >
 > interfaces {
 >
-> **ge-0/0/2** {
+> ge-0/0/2 {
 >
 > hierarchical-scheduler maximum-hierarchy-levels 2;
 >
@@ -688,13 +642,13 @@ IPv6 PPPoE subscriber (WAN link’s IPv6 address assignment of CPE) can be deplo
 >
 > stacked-vlan-ranges {
 >
-> dynamic-profile **AUTO-VLAN-STACK-PPP** {
+> dynamic-profile AUTO-VLAN-STACK-PPP {
 >
 > accept pppoe;
 >
 > ranges {
 >
-> **3000-4000,any**; ## Outer, inner VLAN ranges for incoming PPPoE connection
+> 3000-4000,any; ## Outer, inner VLAN ranges for incoming PPPoE connection
 >
 > }
 >
@@ -710,7 +664,7 @@ IPv6 PPPoE subscriber (WAN link’s IPv6 address assignment of CPE) can be deplo
 >
 > }
 
-* *RADIUS User Configuration**
+RADIUS User Configuration
 
 RADIUS Attributes Specific to IPv6
 
@@ -721,37 +675,37 @@ RADIUS Attributes Specific to IPv6
 - Delegated-Ipv6-Prefix
 - Framed-IPv6-Route
 
-* *RADIUS User Example (can be used in addition with PPPoE IPv4 attributes) specific for IPv6 / Dual-Stack User**
+RADIUS User Example (can be used in addition with PPPoE IPv4 attributes) specific for IPv6 / Dual-Stack User
 
-1. **Fixed IA_NA IPv6 /128 IPv6 Address User Example:�**� (for IA_NA address, disable dynamic-profiles > protocols > router-advertisement)
+1. Fixed IA\_NA IPv6 /128 IPv6 Address User Example:  (for IA\_NA address, disable dynamic-profiles > protocols > router-advertisement)
 
-> _Username1@domain_ Auth-Type := Local, User-Password := "_Password_"
+> Username1@domain Auth-Type := Local, User-Password := "Password"
 >
 > Service-Type = Framed-User,
 >
 > Framed-Protocol = PPP,
 >
-> Framed-IPv6-Prefix = _"4001:1:1:1::100/128"_,
->
-> Framed-IP-Address = _10.200.200.26_
-
-1. **NDRA/IPv6 Prefix Address Assignment User Example:**
-
-> _Username1@domain_ Auth-Type := Local, User-Password := "_Password_"
->
-> Service-Type = Framed-User,
->
-> Framed-Protocol = PPP,
->
-> # Framed-IPv6-Prefix = _"4001:1:1:1::100/128"_,
->
-> Framed-IPv6-Prefix = _"4010:1:1:10::/64"_,
+> Framed-IPv6-Prefix = "4001:1:1:1::100/128",
 >
 > Framed-IP-Address = 10.200.200.26
 
-1. **IPv6 Address Assignment via IPv6 Pool Name User Example:**
+2. NDRA/IPv6 Prefix Address Assignment User Example:
 
-> _Username1@domain_ Auth-Type := Local, User-Password := "_Password_"
+> Username1@domain Auth-Type := Local, User-Password := "Password"
+>
+> Service-Type = Framed-User,
+>
+> Framed-Protocol = PPP,
+>
+> # Framed-IPv6-Prefix = "4001:1:1:1::100/128",
+>
+> Framed-IPv6-Prefix = "4010:1:1:10::/64",
+>
+> Framed-IP-Address = 10.200.200.26
+
+3. IPv6 Address Assignment via IPv6 Pool Name User Example:
+
+> Username1@domain Auth-Type := Local, User-Password := "Password"
 >
 > Service-Type = Framed-User,
 >
@@ -759,29 +713,29 @@ RADIUS Attributes Specific to IPv6
 >
 > Framed-Pool = "V4-DHCP-POOL",
 >
-> Framed-IPv6-Pool = _"IP-POOL-V6"_,
+> Framed-IPv6-Pool = "IP-POOL-V6",
 >
 > ERX-Primary-Dns = 8.8.8.8
 
-1. **IPv6 Prefix Delegation Address Assignment User Example:**
+4. IPv6 Prefix Delegation Address Assignment User Example:
 
-> _Username1@domain_ Auth-Type := Local, User-Password := "_Password_"
+> Username1@domain Auth-Type := Local, User-Password := "Password"
 >
 > Service-Type = Framed-User,
 >
 > Framed-Protocol = PPP,
 >
-> Framed-IP-Address = _10.200.200.26,_
+> Framed-IP-Address = 10.200.200.26,
 >
-> Framed-IPv6-Prefix = _"4001:1:1:1::/64"_,
+> Framed-IPv6-Prefix = "4001:1:1:1::/64",
 >
 > # Framed-IPv6-Route = "2000:a600:0106::/48 :: 1",
 >
-> Delegated-IPv6-Prefix = _"4001:1:1:10::/64"_,
+> Delegated-IPv6-Prefix = "4001:1:1:10::/64",
 >
 > ERX-Primary-Dns = 8.8.8.8
 
-## Source: `formatted/TS_notes/SR-2021-1215-1608-Hỗ_trợ_thử_nghiệm_IPv6_tĩnh_cho_KH_CĐBR.md`
+## Source: `formatted/TS_notes/SR-2021-1215-1608 - Hỗ trợ thử nghiệm IPv6 tĩnh cho KH CĐBR.md`
 
 # SR-2021-1215-1608 - Hỗ trợ thử nghiệm IPv6 tĩnh cho KH CĐBR
 
@@ -791,17 +745,17 @@ Anh gửi thêm ID của Attribute nhé:
 
 - IPv6 WAN
 
-Attribute: **Framed-IPv6-Prefix**
+Attribute: Framed-IPv6-Prefix
 
-Type: **ipv6addr**
+Type: ipv6addr
 
-ID**: 97**
+ID: 97
 
 - IPv6 LAN
 
-Attribute: **Delegated-IPv6-Prefix**
+Attribute: Delegated-IPv6-Prefix
 
-ID**: 123**
+ID: 123
 
 Các attribute này anh đã test trên lab hoạt động bình thường nhé.
 
@@ -811,51 +765,56 @@ Các attribute này anh đã test trên lab hoạt động bình thường nhé.
 
 Anh gửi phần khai báo trên BRAS:
 
-```
 dynamic-profiles {
-    dualstack-PPPoE-Profile {
-        interfaces {
-            pp0 {
-                unit "$junos-interface-unit" {
-                    no-traps;
-                    ppp-options {
-                        chap;
-                        pap;
-                    }
-                    pppoe-options {
-                        underlying-interface "$junos-underlying-interface";
-                        server;
-                    }
-                    family inet {
-                        unnumbered-address lo0.0;
-                    }
-                    family inet6 {
-                        address $junos-ipv6-address;
-                    }
-                }
-            }
-        }
-        protocols {
-            router-advertisement {
-                interface "$junos-interface-name" {
-                    other-stateful-configuration;
-                    prefix $junos-ipv6-ndra-prefix;
-                }
-            }
-        }
-    }
-    dualstack-single-vlan {
-        interfaces {
-            "$junos-interface-ifd-name" {
-                unit "$junos-interface-unit" {
-                    no-traps;
-                    vlan-id "$junos-vlan-id";
-                    family pppoe {
-                        dynamic-profile dualstack-PPPoE-Profile;
-                    }
-                }
-            }
-        }
-    }
+
+dualstack-PPPoE-Profile {
+
+interfaces {
+
+pp0 {
+
+unit "$junos-interface-unit" {
+
+no-traps;
+
+ppp-options {
+
+chap;
+
+pap;
+
 }
-```
+
+pppoe-options {
+
+underlying-interface "$junos-underlying-interface";
+
+server;
+
+family inet {
+
+unnumbered-address lo0.0;
+
+family inet6 {
+
+address $junos-ipv6-address;
+
+protocols {
+
+router-advertisement {
+
+interface "$junos-interface-name" {
+
+other-stateful-configuration;
+
+prefix $junos-ipv6-ndra-prefix;
+
+dualstack-single-vlan {
+
+"$junos-interface-ifd-name" {
+
+vlan-id "$junos-vlan-id";
+
+family pppoe {
+
+dynamic-profile dualstack-PPPoE-Profile;
