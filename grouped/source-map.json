@@ -37,7 +37,6 @@
     "output": "concepts/subscriber-management/bras-overview.md",
     "sources": [
       "formatted/TS_notes/BRAS.md",
-      "formatted/classification/Concepts_Theory/Address-Assignment_Pools_for_Subscriber_Management.md",
       "formatted/classification/Concepts_Theory/Giới_hạn_số_lượng_phiên_của_một_khách_hàng_trên_BRAS_Juniper_(session-limit-per-username).md"
     ],
     "type": "consolidate"
