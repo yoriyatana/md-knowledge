@@ -1,6 +1,6 @@
 {
   "routing-ospf-concepts": {
-    "output": "routing/ospf/concepts.md",
+    "output": "mixed/concepts/routing/ospf.md",
     "sources": [
       "formatted/Learning_Notes/OSPF SUMMARY.md",
       "formatted/Learning_Notes/ospf as routing protocol for CE-PE.md",
@@ -10,24 +10,26 @@
       "formatted/Learning_Notes/OSPF Back Door Links_ A Case Study.md"
     ],
     "type": "consolidate",
+    "vendor": "Mixed",
     "domain": "routing",
     "feature": "ospf",
     "doctype": "concepts"
   },
   "routing-bfd-concepts": {
-    "output": "routing/bfd/concepts.md",
+    "output": "mixed/concepts/routing/bfd.md",
     "sources": [
       "formatted/Learning_Notes/Bidirectional Forwarding Detection (BFD).md",
       "formatted/Recommends/BFD scales.md",
       "formatted/Case_notes/pr1523537 nay chu yeu giai thich ve behaviour cua bfd session id.md"
     ],
     "type": "consolidate",
+    "vendor": "Mixed",
     "domain": "routing",
     "feature": "bfd",
     "doctype": "concepts"
   },
   "routing-bfd-troubleshooting": {
-    "output": "routing/bfd/troubleshooting-guide.md",
+    "output": "mixed/troubleshooting-guide/routing/bfd.md",
     "sources": [
       "formatted/TS_notes/BFD anchorship PFE.md",
       "formatted/TS_notes/command list to collect the bfd data from the respective fpc.md",
@@ -38,34 +40,37 @@
       "formatted/TS_notes/_M_MX_T_ Troubleshooting Checklist - BFD.md"
     ],
     "type": "consolidate",
+    "vendor": "Mixed",
     "domain": "routing",
     "feature": "bfd",
     "doctype": "troubleshooting-guide"
   },
   "routing-bgp-case-study-rr": {
-    "output": "routing/bgp/case-study.md",
+    "output": "mixed/case-study/routing/bgp.md",
     "sources": [
       "formatted/TS_notes/Tối ưu BRAS RR Juniper Viettel.md"
     ],
     "type": "consolidate",
+    "vendor": "Mixed",
     "domain": "routing",
     "feature": "bgp",
     "doctype": "case-study"
   },
   "bras-subscriber-concepts": {
-    "output": "bras/subscriber-management/concepts.md",
+    "output": "mixed/concepts/bras/subscriber-management.md",
     "sources": [
       "formatted/TS_notes/BRAS.md",
       "formatted/Recommends/Giới hạn số lượng phiên của một khách hàng trên BRAS Juniper (session-limit-per-username).md",
       "formatted/PR/pppoe client bras bng option.md"
     ],
     "type": "consolidate",
+    "vendor": "Mixed",
     "domain": "bras",
     "feature": "subscriber-management",
     "doctype": "concepts"
   },
   "bras-subscriber-troubleshooting": {
-    "output": "bras/subscriber-management/troubleshooting-guide.md",
+    "output": "mixed/troubleshooting-guide/bras/subscriber-management.md",
     "sources": [
       "formatted/TS_notes/BRAS - TROUBLESHOOTING PPPoE in TOMCAT.md",
       "formatted/TS_notes/BRAS - command ouputs.md",
@@ -75,47 +80,51 @@
       "formatted/TS_notes/The subscribers cannot online on AE interface.md"
     ],
     "type": "consolidate",
+    "vendor": "Mixed",
     "domain": "bras",
     "feature": "subscriber-management",
     "doctype": "troubleshooting-guide"
   },
   "bras-ip-assignment-concepts": {
-    "output": "bras/ip-address-assignment/concepts.md",
+    "output": "mixed/concepts/bras/ip-address-assignment.md",
     "sources": [
       "formatted/Case_notes/Các thuật ngữ sau được sử dụng để giải thích cách cấp phát địa chỉ IP (address-assignment).md",
       "formatted/TS_notes/BRAS check address-assignment.md"
     ],
     "type": "consolidate",
+    "vendor": "Mixed",
     "domain": "bras",
     "feature": "ip-address-assignment",
     "doctype": "concepts"
   },
   "bras-ipv6-concepts": {
-    "output": "bras/ipv6-dual-stack/concepts.md",
+    "output": "mixed/concepts/bras/ipv6-dual-stack.md",
     "sources": [
       "formatted/TS_notes/Attribute DNS IPv6 từ Radius cho Bras Juniper.md",
       "formatted/TS_notes/Example - Understanding Dual-Stack PPPoE Subscriber.md",
       "formatted/TS_notes/SR-2021-1215-1608 - Hỗ trợ thử nghiệm IPv6 tĩnh cho KH CĐBR.md"
     ],
     "type": "consolidate",
+    "vendor": "Mixed",
     "domain": "bras",
     "feature": "ipv6-dual-stack",
     "doctype": "concepts"
   },
   "switching-lacp-troubleshooting": {
-    "output": "switching/lacp/troubleshooting-guide.md",
+    "output": "mixed/troubleshooting-guide/switching/lacp.md",
     "sources": [
       "formatted/TS_notes/LACP check-list commands.md",
       "formatted/TS_notes/MPC11E - LACP không up_join.md",
       "formatted/TS_notes/lacp flap khi dung VC mix-mode.md"
     ],
     "type": "consolidate",
+    "vendor": "Mixed",
     "domain": "switching",
     "feature": "lacp",
     "doctype": "troubleshooting-guide"
   },
   "switching-optics-troubleshooting": {
-    "output": "hardware-maintenance/optics-physical/troubleshooting-guide.md",
+    "output": "mixed/troubleshooting-guide/hardware-maintenance/optics-physical.md",
     "sources": [
       "formatted/TS_notes/interfaces diagnostics optics.md",
       "formatted/TS_notes/10GbE LAN-PHY_40GbE_100GbE LFS (Link fault signalling).md",
@@ -126,12 +135,13 @@
       "formatted/TS_notes/BUG Hold-time down không hoạt động được nếu cấu hình nhỏ hơn 1s trên interface chạy WANPHY.md"
     ],
     "type": "consolidate",
+    "vendor": "Mixed",
     "domain": "hardware-maintenance",
     "feature": "optics-physical",
     "doctype": "troubleshooting-guide"
   },
   "mpls-ldp-concepts": {
-    "output": "mpls-vpn/ldp/concepts.md",
+    "output": "mixed/concepts/mpls-vpn/ldp.md",
     "sources": [
       "formatted/TS_notes/LDP.md",
       "formatted/TS_notes/Label usage.md",
@@ -140,12 +150,13 @@
       "formatted/TS_notes/ldp-tunneling or BGP-LU (swap label 0 behavior change from 19.x.md"
     ],
     "type": "consolidate",
+    "vendor": "Mixed",
     "domain": "mpls-vpn",
     "feature": "ldp",
     "doctype": "concepts"
   },
   "mpls-l2vpn-concepts": {
-    "output": "mpls-vpn/l2vpn-vpls/concepts.md",
+    "output": "mixed/concepts/mpls-vpn/l2vpn-vpls.md",
     "sources": [
       "formatted/TS_notes/L2circuit.md",
       "formatted/TS_notes/Configure connection CCC example.md",
@@ -153,12 +164,13 @@
       "formatted/TS_notes/Qui tắc về forwarding traffic với VPLS mesh-group.md"
     ],
     "type": "consolidate",
+    "vendor": "Mixed",
     "domain": "mpls-vpn",
     "feature": "l2vpn-vpls",
     "doctype": "concepts"
   },
   "mpls-l3vpn-concepts": {
-    "output": "mpls-vpn/l3vpn/concepts.md",
+    "output": "mixed/concepts/mpls-vpn/l3vpn.md",
     "sources": [
       "formatted/Learning_Notes/Untitled Note_4.md",
       "formatted/Learning_Notes/Interprovider Layer 3 VPN option C.md",
@@ -168,107 +180,117 @@
       "formatted/Learning_Notes/Untitled Note_3.md"
     ],
     "type": "consolidate",
+    "vendor": "Mixed",
     "domain": "mpls-vpn",
     "feature": "l3vpn",
     "doctype": "concepts"
   },
   "mpls-evpn-concepts": {
-    "output": "mpls-vpn/evpn-vxlan/concepts.md",
+    "output": "mixed/concepts/mpls-vpn/evpn-vxlan.md",
     "sources": [
       "formatted/TS_notes/eVPN.md",
       "formatted/TS_notes/evpn command check.md",
       "formatted/TS_notes/commands need to collect to check EVPN-VXLAN (From This Week_ Data Center Deployment with EVPN_VXLAN).md"
     ],
     "type": "consolidate",
+    "vendor": "Mixed",
     "domain": "mpls-vpn",
     "feature": "evpn-vxlan",
     "doctype": "concepts"
   },
   "hardware-mpc-maintenance": {
-    "output": "hardware-maintenance/mpc-linecard/install-maintenance-guide.md",
+    "output": "mixed/install-maintenance-guide/hardware-maintenance/mpc-linecard.md",
     "sources": [
       "formatted/Best_Practise/MX2008.md"
     ],
     "type": "consolidate",
+    "vendor": "Mixed",
     "domain": "hardware-maintenance",
     "feature": "mpc-linecard",
     "doctype": "install-maintenance-guide"
   },
   "hardware-re-scbe-maintenance": {
-    "output": "hardware-maintenance/re-scbe/install-maintenance-guide.md",
+    "output": "mixed/install-maintenance-guide/hardware-maintenance/re-scbe.md",
     "sources": [
       "formatted/Best_Practise/Tháo_cắm NG-RE vào SCBE2_E3.md",
       "formatted/Procedures/Thực hiện thay thế (replacing) RE - phương án không có thiết bị lab.md"
     ],
     "type": "consolidate",
+    "vendor": "Mixed",
     "domain": "hardware-maintenance",
     "feature": "re-scbe",
     "doctype": "install-maintenance-guide"
   },
   "hardware-chassis-maintenance": {
-    "output": "hardware-maintenance/chassis-power/install-maintenance-guide.md",
+    "output": "mixed/install-maintenance-guide/hardware-maintenance/chassis-power.md",
     "sources": [
       "formatted/TS_notes/support RE and Chassis power-cycle.md",
       "formatted/TS_notes/Restart SFB 4 MX2K.md"
     ],
     "type": "consolidate",
+    "vendor": "Mixed",
     "domain": "hardware-maintenance",
     "feature": "chassis-power",
     "doctype": "install-maintenance-guide"
   },
   "bras-configuration-guide": {
-    "output": "bras/configuration-guide.md",
+    "output": "mixed/configuration-guide/bras/subscriber-management.md",
     "sources": [
       "formatted/PR/Cisco template pppoe DHCPv6 NA (PPPoE IPv6).md"
     ],
     "type": "consolidate",
+    "vendor": "Mixed",
     "domain": "bras",
     "feature": "subscriber-management",
     "doctype": "configuration-guide"
   },
   "switching-configuration-guide": {
-    "output": "switching/configuration-guide.md",
+    "output": "mixed/configuration-guide/switching/configuration.md",
     "sources": [
       "formatted/PR/MAC move.md"
     ],
     "type": "consolidate",
+    "vendor": "Mixed",
     "domain": "switching",
     "feature": "configuration",
     "doctype": "configuration-guide"
   },
   "switching-mirror-traffic-guide": {
-    "output": "switching/mirror-traffic/configuration-guide.md",
+    "output": "mixed/configuration-guide/switching/mirror-traffic.md",
     "sources": [
       "formatted/PR/TRIO Card_ packet capture with pfe commands.md"
     ],
     "type": "consolidate",
+    "vendor": "Mixed",
     "domain": "switching",
     "feature": "mirror-traffic",
     "doctype": "configuration-guide"
   },
   "hardware-linecard-troubleshooting": {
-    "output": "hardware-maintenance/linecard/troubleshooting-guide.md",
+    "output": "mixed/troubleshooting-guide/hardware-maintenance/linecard.md",
     "sources": [
       "formatted/PR/show port mapping pfe.md"
     ],
     "type": "consolidate",
+    "vendor": "Mixed",
     "domain": "hardware-maintenance",
     "feature": "linecard",
     "doctype": "troubleshooting-guide"
   },
   "cgnat-configuration-guide": {
-    "output": "cgnat/configuration-guide.md",
+    "output": "mixed/configuration-guide/cgnat/ae-spc3.md",
     "sources": [
       "formatted/PR/using AE interfaces with SPC3.md",
       "formatted/TS_notes/high NPU CPU in CGNAT.md"
     ],
     "type": "consolidate",
+    "vendor": "Mixed",
     "domain": "cgnat",
     "feature": "ae-spc3",
     "doctype": "configuration-guide"
   },
   "case-notes-index": {
-    "output": "case-notes/index.md",
+    "output": "mixed/index/case-notes/notes.md",
     "sources": [
       "formatted/Case_notes/Trả lời về việc khuyến nghị version.md",
       "formatted/Case_notes/lỗi không ping được mpls ldp.md",
@@ -278,12 +300,13 @@
       "formatted/Case_notes/MPC10E-MPC11E PR overview.md"
     ],
     "type": "index-only",
+    "vendor": "Mixed",
     "domain": "case-notes",
-    "feature": null,
-    "doctype": null
+    "feature": "notes",
+    "doctype": "index"
   },
   "vendor-kb-index": {
-    "output": "vendor-kb/index.md",
+    "output": "mixed/index/vendor-kb/kb.md",
     "sources": [
       "formatted/PR/KB25839 - _Junos_ An improper egress-policy to LDP makes the _inet.3_ table become empty.md",
       "formatted/PR/KB27189 - _MX_ Optimizing heap utilization when applying a firewall filter on an interface using input and input-list keywords.md",
@@ -301,12 +324,13 @@
       "formatted/PR/PR1715264 - MPC11E system firmware state.md"
     ],
     "type": "index-only",
+    "vendor": "Mixed",
     "domain": "vendor-kb",
-    "feature": null,
-    "doctype": null
+    "feature": "kb",
+    "doctype": "index"
   },
   "lab-notes-index": {
-    "output": "lab-notes/index.md",
+    "output": "mixed/index/lab-notes/notes.md",
     "sources": [
       "formatted/LAB_SVT_GROUP/LAB BRAS_service_lab_01.md",
       "formatted/LAB_SVT_GROUP/LAB advanced_l3vpn_lab_01.md",
@@ -314,12 +338,13 @@
       "formatted/LAB_SVT_GROUP/Lab advanced_igp_lab_01.md"
     ],
     "type": "index-only",
+    "vendor": "Mixed",
     "domain": "lab-notes",
-    "feature": null,
-    "doctype": null
+    "feature": "notes",
+    "doctype": "index"
   },
   "source-inventory-2022-ftel-ps": {
-    "output": "source-inventory/2022-ftel-ps.md",
+    "output": "mixed/index/source-inventory/2022-ftel-ps.md",
     "sources": [
       "formatted/2022_FTEL-PS/HCM-MP-Backup VPLS up chậm, dial rate thấp.md",
       "formatted/2022_FTEL-PS/Meeting FTEL 20230622.md",
@@ -328,35 +353,38 @@
       "formatted/2022_FTEL-PS/Untitled Note_2.md"
     ],
     "type": "index-only",
+    "vendor": "Mixed",
     "domain": "source-inventory",
     "feature": "2022-ftel-ps",
     "doctype": "index"
   },
   "source-inventory-best-practise": {
-    "output": "source-inventory/best-practise.md",
+    "output": "mixed/index/source-inventory/best-practise.md",
     "sources": [
       "formatted/Best_Practise/compare giữa 2 lần commit.md",
       "formatted/Best_Practise/nâng cấp NG-RE từ Junos 17.X-18.X lên 19.3R1 or Later.md"
     ],
     "type": "index-only",
+    "vendor": "Mixed",
     "domain": "source-inventory",
     "feature": "best-practise",
     "doctype": "index"
   },
   "source-inventory-jtac-descriptions": {
-    "output": "source-inventory/jtac-descriptions.md",
+    "output": "mixed/index/source-inventory/jtac-descriptions.md",
     "sources": [
       "formatted/JTAC_Descriptions/2016-1226-0071 FTEL-MX960-LUCHIP lmem data error on MPC.md",
       "formatted/JTAC_Descriptions/DMEM (Data Memory).md",
       "formatted/JTAC_Descriptions/LMEM.md"
     ],
     "type": "index-only",
+    "vendor": "Mixed",
     "domain": "source-inventory",
     "feature": "jtac-descriptions",
     "doctype": "index"
   },
   "source-inventory-learning-notes": {
-    "output": "source-inventory/learning-notes.md",
+    "output": "mixed/index/source-inventory/learning-notes.md",
     "sources": [
       "formatted/Learning_Notes/Adaptive SPF Timers in JUNOS.md",
       "formatted/Learning_Notes/BGP AS 4-bytes.md",
@@ -406,12 +434,13 @@
       "formatted/Learning_Notes/vpn-apply-export and advertise-from-main-vpn-tables.md"
     ],
     "type": "index-only",
+    "vendor": "Mixed",
     "domain": "source-inventory",
     "feature": "learning-notes",
     "doctype": "index"
   },
   "source-inventory-mx-series-architecture": {
-    "output": "source-inventory/mx-series-architecture.md",
+    "output": "mixed/index/source-inventory/mx-series-architecture.md",
     "sources": [
       "formatted/MX_series_Architecture/1 số thông tin requirements để cắm đc card MPC7E_ MPC7E-MRATE trên  MX240_480_960.md",
       "formatted/MX_series_Architecture/ASIC Architecture in Line cards.md",
@@ -420,12 +449,13 @@
       "formatted/MX_series_Architecture/MPC10E-10C-MRATE.md"
     ],
     "type": "index-only",
+    "vendor": "Mixed",
     "domain": "source-inventory",
     "feature": "mx-series-architecture",
     "doctype": "index"
   },
   "source-inventory-outlook": {
-    "output": "source-inventory/outlook.md",
+    "output": "mixed/index/source-inventory/outlook.md",
     "sources": [
       "formatted/Outlook/Bash command cli on MacOS.md",
       "formatted/Outlook/Filter Mail.md",
@@ -435,23 +465,25 @@
       "formatted/Outlook/Limit 20000 search result vs code.md"
     ],
     "type": "index-only",
+    "vendor": "Mixed",
     "domain": "source-inventory",
     "feature": "outlook",
     "doctype": "index"
   },
   "source-inventory-procedures": {
-    "output": "source-inventory/procedures.md",
+    "output": "mixed/index/source-inventory/procedures.md",
     "sources": [
       "formatted/Procedures/Untitled Note.md",
       "formatted/Procedures/config template Cisco PPPoE IPv4 and PPPoE IPv6 client.md"
     ],
     "type": "index-only",
+    "vendor": "Mixed",
     "domain": "source-inventory",
     "feature": "procedures",
     "doctype": "index"
   },
   "source-inventory-recommends": {
-    "output": "source-inventory/recommends.md",
+    "output": "mixed/index/source-inventory/recommends.md",
     "sources": [
       "formatted/Recommends/Cấu hình Secure CRT session logs.md",
       "formatted/Recommends/Hỗ trợ giám sát bw cho term fb trên BRAS.md",
@@ -470,46 +502,50 @@
       "formatted/Recommends/tính năng link-degrade để detect BER trên thiết bị Juniper.md"
     ],
     "type": "index-only",
+    "vendor": "Mixed",
     "domain": "source-inventory",
     "feature": "recommends",
     "doctype": "index"
   },
   "source-inventory-sla": {
-    "output": "source-inventory/sla.md",
+    "output": "mixed/index/source-inventory/sla.md",
     "sources": [
       "formatted/SLA/VIETTEL.md",
       "formatted/SLA/VNPT-NET _ INOC3.md"
     ],
     "type": "index-only",
+    "vendor": "Mixed",
     "domain": "source-inventory",
     "feature": "sla",
     "doctype": "index"
   },
   "source-inventory-svt-lab": {
-    "output": "source-inventory/svt-lab.md",
+    "output": "mixed/index/source-inventory/svt-lab.md",
     "sources": [
       "formatted/SVT-LAB/EVE - 192.168.3.10.md",
       "formatted/SVT-LAB/Hướng dẫn login vào sử dụng lab EVE-NG.md",
       "formatted/SVT-LAB/ms-mpc on eve-ng.md"
     ],
     "type": "index-only",
+    "vendor": "Mixed",
     "domain": "source-inventory",
     "feature": "svt-lab",
     "doctype": "index"
   },
   "source-inventory-ts-notes": {
-    "output": "source-inventory/ts-notes.md",
+    "output": "mixed/index/source-inventory/ts-notes.md",
     "sources": [
       "formatted/TS_notes/archival.md",
       "formatted/TS_notes/yum groupinstall _Development Tools_.md"
     ],
     "type": "index-only",
+    "vendor": "Mixed",
     "domain": "source-inventory",
     "feature": "ts-notes",
     "doctype": "index"
   },
   "source-inventory-classification": {
-    "output": "source-inventory/classification.md",
+    "output": "mixed/index/source-inventory/classification.md",
     "sources": [
       "formatted/classification/Concepts_Theory/AJSPR-v19A/Chapter 10_ BGP.md",
       "formatted/classification/Concepts_Theory/AJSPR-v19A/Chapter 11_ BGP Attributes and Policy - Part1.md",
@@ -528,22 +564,24 @@
       "formatted/classification/Concepts_Theory/AJSPR-v19A/Chapter 9_ Troubleshooting IS-IS.md"
     ],
     "type": "index-only",
+    "vendor": "Mixed",
     "domain": "source-inventory",
     "feature": "classification",
     "doctype": "index"
   },
   "classified-bras": {
-    "output": "bras/index.md",
+    "output": "mixed/index/bras/general.md",
     "sources": [
       "formatted/TS_notes/OID BRAS relative.md"
     ],
     "type": "index-only",
+    "vendor": "Mixed",
     "domain": "bras",
     "feature": "general",
     "doctype": "index"
   },
   "classified-case-notes": {
-    "output": "case-notes/index.md",
+    "output": "mixed/index/case-notes/general.md",
     "sources": [
       "formatted/TS_notes/2021-1228-388762, _Mobifone-IPBB_Behaviour Route-target Family eBGP Session.md",
       "formatted/TS_notes/JTASK_SCHED_SLIP khi bật lấy gcore (coredump process).md",
@@ -555,12 +593,13 @@
       "formatted/TS_notes/xư lý cảnh báo RPD_MPLS_INTF_MAX_LABELS_ERROR HPG8001PRT02.md"
     ],
     "type": "index-only",
+    "vendor": "Mixed",
     "domain": "case-notes",
     "feature": "general",
     "doctype": "index"
   },
   "classified-cgnat": {
-    "output": "cgnat/index.md",
+    "output": "mixed/index/cgnat/general.md",
     "sources": [
       "formatted/TS_notes/MS-MPC throughput.md",
       "formatted/TS_notes/MS-SPC3.md",
@@ -568,53 +607,58 @@
       "formatted/TS_notes/Some AMS and MS-MPC notes.md"
     ],
     "type": "index-only",
+    "vendor": "Mixed",
     "domain": "cgnat",
     "feature": "general",
     "doctype": "index"
   },
   "classified-cgnat-case-study": {
-    "output": "cgnat/case-study/index.md",
+    "output": "mixed/index/cgnat/case-study.md",
     "sources": [
       "formatted/TS_notes/triển khai apply term Block_CTH_POLYCOM vào filter block-frag-in của Inside CGNAT.md"
     ],
     "type": "index-only",
+    "vendor": "Mixed",
     "domain": "cgnat",
     "feature": "case-study",
     "doctype": "index"
   },
   "classified-cgnat-configuration-guide": {
-    "output": "cgnat/configuration-guide/index.md",
+    "output": "mixed/index/cgnat/configuration-guide.md",
     "sources": [
       "formatted/TS_notes/CGNAT  thêm range mới vào trong Pool đã khai báo.md"
     ],
     "type": "index-only",
+    "vendor": "Mixed",
     "domain": "cgnat",
     "feature": "configuration-guide",
     "doctype": "index"
   },
   "classified-cgnat-troubleshooting-guide": {
-    "output": "cgnat/troubleshooting-guide/index.md",
+    "output": "mixed/index/cgnat/troubleshooting-guide.md",
     "sources": [
       "formatted/TS_notes/CGNAT troubleshoot commands.md",
       "formatted/TS_notes/Command check liên quan đến CGNAT services.md"
     ],
     "type": "index-only",
+    "vendor": "Mixed",
     "domain": "cgnat",
     "feature": "troubleshooting-guide",
     "doctype": "index"
   },
   "classified-hardware-maintenance": {
-    "output": "hardware-maintenance/index.md",
+    "output": "mixed/index/hardware-maintenance/general.md",
     "sources": [
       "formatted/TS_notes/1 số notes các ý cần khảo sát về nhà trạm đặt thiết bị.md"
     ],
     "type": "index-only",
+    "vendor": "Mixed",
     "domain": "hardware-maintenance",
     "feature": "general",
     "doctype": "index"
   },
   "classified-hardware-maintenance-chassis-power": {
-    "output": "hardware-maintenance/chassis-power/index.md",
+    "output": "mixed/index/hardware-maintenance/chassis-power.md",
     "sources": [
       "formatted/TS_notes/Untitled Note.md",
       "formatted/TS_notes/Cơ chế điều chỉnh tốc độ quạt MX.md",
@@ -622,12 +666,13 @@
       "formatted/TS_notes/Temperature - fan speed.md"
     ],
     "type": "index-only",
+    "vendor": "Mixed",
     "domain": "hardware-maintenance",
     "feature": "chassis-power",
     "doctype": "index"
   },
   "classified-hardware-maintenance-linecard": {
-    "output": "hardware-maintenance/linecard/index.md",
+    "output": "mixed/index/hardware-maintenance/linecard.md",
     "sources": [
       "formatted/TS_notes/Alarm on FPC.md",
       "formatted/TS_notes/Disable log to tty pfe.md",
@@ -643,34 +688,37 @@
       "formatted/TS_notes/capture the ttrace output.md"
     ],
     "type": "index-only",
+    "vendor": "Mixed",
     "domain": "hardware-maintenance",
     "feature": "linecard",
     "doctype": "index"
   },
   "classified-hardware-maintenance-linecard-ts-guide": {
-    "output": "hardware-maintenance/linecard/ts-guide/index.md",
+    "output": "mixed/index/hardware-maintenance/linecard-ts-guide.md",
     "sources": [
       "formatted/TS_notes/2021-0628-0028_ heap memory increase.md"
     ],
     "type": "index-only",
+    "vendor": "Mixed",
     "domain": "hardware-maintenance",
     "feature": "linecard/ts-guide",
     "doctype": "index"
   },
   "classified-hardware-maintenance-mpc-linecard": {
-    "output": "hardware-maintenance/mpc-linecard/index.md",
+    "output": "mixed/index/hardware-maintenance/mpc-linecard.md",
     "sources": [
       "formatted/TS_notes/Collect log on MPC10E_MPC11E.md",
       "formatted/TS_notes/MPC3E Hard errors.md",
       "formatted/TS_notes/_MX_ How to identify the link that may be causing interrupt throttling on an MPC.md"
     ],
     "type": "index-only",
+    "vendor": "Mixed",
     "domain": "hardware-maintenance",
     "feature": "mpc-linecard",
     "doctype": "index"
   },
   "classified-hardware-maintenance-optics-physical": {
-    "output": "hardware-maintenance/optics-physical/index.md",
+    "output": "mixed/index/hardware-maintenance/optics-physical.md",
     "sources": [
       "formatted/TS_notes/ACX2100 _ cách cấu hình event-option để active script thu thập thông tin thu phát của port quang.md",
       "formatted/TS_notes/Delay thời gian up time của CE interfaces.md",
@@ -679,12 +727,13 @@
       "formatted/TS_notes/auto-negotiation on ACX.md"
     ],
     "type": "index-only",
+    "vendor": "Mixed",
     "domain": "hardware-maintenance",
     "feature": "optics-physical",
     "doctype": "index"
   },
   "classified-hardware-maintenance-re-scbe": {
-    "output": "hardware-maintenance/re-scbe/index.md",
+    "output": "mixed/index/hardware-maintenance/re-scbe.md",
     "sources": [
       "formatted/TS_notes/DDOS pfe-RE TCP connections.md",
       "formatted/TS_notes/High CPU due to show route.md",
@@ -698,42 +747,46 @@
       "formatted/TS_notes/commands need to collect to check high CPU.md"
     ],
     "type": "index-only",
+    "vendor": "Mixed",
     "domain": "hardware-maintenance",
     "feature": "re-scbe",
     "doctype": "index"
   },
   "classified-hardware-maintenance-ts-guide": {
-    "output": "hardware-maintenance/ts-guide/index.md",
+    "output": "mixed/index/hardware-maintenance/ts-guide.md",
     "sources": [
       "formatted/TS_notes/Kiểm tra tác động nào liên quan đến software_hardware_config.md"
     ],
     "type": "index-only",
+    "vendor": "Mixed",
     "domain": "hardware-maintenance",
     "feature": "ts-guide",
     "doctype": "index"
   },
   "classified-jtac-rma": {
-    "output": "jtac/rma/index.md",
+    "output": "mixed/index/jtac/rma.md",
     "sources": [
       "formatted/TS_notes/Juniper RA vs FA.md"
     ],
     "type": "index-only",
+    "vendor": "Mixed",
     "domain": "jtac",
     "feature": "rma",
     "doctype": "index"
   },
   "classified-jtnoc": {
-    "output": "jtnoc/index.md",
+    "output": "mixed/index/jtnoc/general.md",
     "sources": [
       "formatted/TS_notes/Call JTAC.md"
     ],
     "type": "index-only",
+    "vendor": "Mixed",
     "domain": "jtnoc",
     "feature": "general",
     "doctype": "index"
   },
   "classified-junos-general": {
-    "output": "junos-general/index.md",
+    "output": "mixed/index/junos-general/general.md",
     "sources": [
       "formatted/TS_notes/ICMP ping đấu nối nhảy time.md",
       "formatted/TS_notes/JunOS-EVO evo-pfemand.md",
@@ -741,12 +794,13 @@
       "formatted/TS_notes/Restart the SNMP process.md"
     ],
     "type": "index-only",
+    "vendor": "Mixed",
     "domain": "junos-general",
     "feature": "general",
     "doctype": "index"
   },
   "classified-junos-general-cli-cheatsheet": {
-    "output": "junos-general/cli-cheatsheet/index.md",
+    "output": "mixed/index/junos-general/cli-cheatsheet.md",
     "sources": [
       "formatted/TS_notes/Manual way to trigger the CB 0 19.44 alarm.md",
       "formatted/TS_notes/commands to trigger alarm on MX.md",
@@ -754,139 +808,152 @@
       "formatted/TS_notes/set system debugger-on-panic  and set system debugger-on-break.md"
     ],
     "type": "index-only",
+    "vendor": "Mixed",
     "domain": "junos-general",
     "feature": "cli-cheatsheet",
     "doctype": "index"
   },
   "classified-junos-general-oam": {
-    "output": "junos-general/oam/index.md",
+    "output": "mixed/index/junos-general/oam.md",
     "sources": [
       "formatted/TS_notes/Config CFM action down ifl.md"
     ],
     "type": "index-only",
+    "vendor": "Mixed",
     "domain": "junos-general",
     "feature": "oam",
     "doctype": "index"
   },
   "classified-junos-general-ppmd": {
-    "output": "junos-general/ppmd/index.md",
+    "output": "mixed/index/junos-general/ppmd.md",
     "sources": [
       "formatted/TS_notes/_M_MX_ How to check PPMD mode and troubleshooting tips.md"
     ],
     "type": "index-only",
+    "vendor": "Mixed",
     "domain": "junos-general",
     "feature": "ppmd",
     "doctype": "index"
   },
   "classified-junos-general-rpm": {
-    "output": "junos-general/rpm/index.md",
+    "output": "mixed/index/junos-general/rpm.md",
     "sources": [
       "formatted/TS_notes/SR-2023-0301-1744 - Viettel- SLA- Check nguyên nhân không activate routing-instances mặc dù track không down rpm probe.md"
     ],
     "type": "index-only",
+    "vendor": "Mixed",
     "domain": "junos-general",
     "feature": "rpm",
     "doctype": "index"
   },
   "classified-junos-general-syslog": {
-    "output": "junos-general/syslog/index.md",
+    "output": "mixed/index/junos-general/syslog.md",
     "sources": [
       "formatted/TS_notes/Juniper syslog facility và Severity.md",
       "formatted/TS_notes/Thu thập log PFE on RE.md"
     ],
     "type": "index-only",
+    "vendor": "Mixed",
     "domain": "junos-general",
     "feature": "syslog",
     "doctype": "index"
   },
   "classified-lab-notes": {
-    "output": "lab-notes/index.md",
+    "output": "mixed/index/lab-notes/general.md",
     "sources": [
       "formatted/TS_notes/các physical hw có trên jlab.md",
       "formatted/TS_notes/cách upgrade_downgrade JunOS cho physical device on Jlab_vlab.md"
     ],
     "type": "index-only",
+    "vendor": "Mixed",
     "domain": "lab-notes",
     "feature": "general",
     "doctype": "index"
   },
   "classified-maintenance-junos-upgrade": {
-    "output": "maintenance/junos-upgrade/index.md",
+    "output": "mixed/index/maintenance/junos-upgrade.md",
     "sources": [
       "formatted/TS_notes/Nâng cấp NG-RE từ Junos 17.X-18.X lên 19.3R1 or Later.md",
       "formatted/TS_notes/upgrade OS.md"
     ],
     "type": "index-only",
+    "vendor": "Mixed",
     "domain": "maintenance",
     "feature": "junos-upgrade",
     "doctype": "index"
   },
   "classified-mpls-vpn-l3vpn": {
-    "output": "mpls-vpn/l3vpn/index.md",
+    "output": "mixed/index/mpls-vpn/l3vpn.md",
     "sources": [
       "formatted/TS_notes/OID lấy VRF name.md"
     ],
     "type": "index-only",
+    "vendor": "Mixed",
     "domain": "mpls-vpn",
     "feature": "l3vpn",
     "doctype": "index"
   },
   "classified-mpls-vpn-rsvp": {
-    "output": "mpls-vpn/rsvp/index.md",
+    "output": "mixed/index/mpls-vpn/rsvp.md",
     "sources": [
       "formatted/TS_notes/SNMP LSP InOutOctet MIB OID copy.md",
       "formatted/TS_notes/_MX_PTX_ How to determine which LSP is forwarding traffic on bypass LSP.md",
       "formatted/TS_notes/auto-bandwidth notes.md"
     ],
     "type": "index-only",
+    "vendor": "Mixed",
     "domain": "mpls-vpn",
     "feature": "rsvp",
     "doctype": "index"
   },
   "classified-mpls-vpn-rsvp-ts-guide": {
-    "output": "mpls-vpn/rsvp/ts-guide/index.md",
+    "output": "mixed/index/mpls-vpn/rsvp-ts-guide.md",
     "sources": [
       "formatted/TS_notes/traceoptions for specific RSVP.md"
     ],
     "type": "index-only",
+    "vendor": "Mixed",
     "domain": "mpls-vpn",
     "feature": "rsvp/ts-guide",
     "doctype": "index"
   },
   "classified-other-tools-user-guide": {
-    "output": "other-tools/user-guide/index.md",
+    "output": "mixed/index/other-tools/user-guide.md",
     "sources": [
       "formatted/TS_notes/Test Juniper telemetry with jtimon (OpenConfig).md"
     ],
     "type": "index-only",
+    "vendor": "Mixed",
     "domain": "other-tools",
     "feature": "user-guide",
     "doctype": "index"
   },
   "classified-other-tools-vnpt-atp": {
-    "output": "other-tools/vnpt-atp/index.md",
+    "output": "mixed/index/other-tools/vnpt-atp.md",
     "sources": [
       "formatted/TS_notes/Cách fill file atp VNPT.md"
     ],
     "type": "index-only",
+    "vendor": "Mixed",
     "domain": "other-tools",
     "feature": "vnpt-atp",
     "doctype": "index"
   },
   "classified-routing": {
-    "output": "routing/index.md",
+    "output": "mixed/index/routing/general.md",
     "sources": [
       "formatted/TS_notes/Memory RPD.md",
       "formatted/TS_notes/RPD 64-bit_32-bit mode.md",
       "formatted/TS_notes/RPD mode 64-bit.md"
     ],
     "type": "index-only",
+    "vendor": "Mixed",
     "domain": "routing",
     "feature": "general",
     "doctype": "index"
   },
   "classified-routing-bgp": {
-    "output": "routing/bgp/index.md",
+    "output": "mixed/index/routing/bgp.md",
     "sources": [
       "formatted/TS_notes/BGP errror messages.md",
       "formatted/TS_notes/BGP flap.md",
@@ -896,33 +963,36 @@
       "formatted/TS_notes/Source-base RTBH notes.md"
     ],
     "type": "index-only",
+    "vendor": "Mixed",
     "domain": "routing",
     "feature": "bgp",
     "doctype": "index"
   },
   "classified-routing-convergence": {
-    "output": "routing/convergence/index.md",
+    "output": "mixed/index/routing/convergence.md",
     "sources": [
       "formatted/TS_notes/Local convergence breakdown.md"
     ],
     "type": "index-only",
+    "vendor": "Mixed",
     "domain": "routing",
     "feature": "convergence",
     "doctype": "index"
   },
   "classified-routing-firewall-ts-guide": {
-    "output": "routing/firewall/ts-guide/index.md",
+    "output": "mixed/index/routing/firewall-ts-guide.md",
     "sources": [
       "formatted/TS_notes/Firewall term scale.md",
       "formatted/TS_notes/show firewall in PFE.md"
     ],
     "type": "index-only",
+    "vendor": "Mixed",
     "domain": "routing",
     "feature": "firewall/ts-guide",
     "doctype": "index"
   },
   "classified-routing-loadbalance": {
-    "output": "routing/loadbalance/index.md",
+    "output": "mixed/index/routing/loadbalance.md",
     "sources": [
       "formatted/TS_notes/Entropy label capable.md",
       "formatted/TS_notes/Load-balance test.md",
@@ -931,34 +1001,37 @@
       "formatted/TS_notes/pfe local-bias.md"
     ],
     "type": "index-only",
+    "vendor": "Mixed",
     "domain": "routing",
     "feature": "loadbalance",
     "doctype": "index"
   },
   "classified-routing-multicast": {
-    "output": "routing/multicast/index.md",
+    "output": "mixed/index/routing/multicast.md",
     "sources": [
       "formatted/TS_notes/Kênh IPTV đứng hình khi xem.md",
       "formatted/TS_notes/PIM instances.md"
     ],
     "type": "index-only",
+    "vendor": "Mixed",
     "domain": "routing",
     "feature": "multicast",
     "doctype": "index"
   },
   "classified-routing-scu-dcu": {
-    "output": "routing/scu-dcu/index.md",
+    "output": "mixed/index/routing/scu-dcu.md",
     "sources": [
       "formatted/TS_notes/Untitled Note_2.md",
       "formatted/TS_notes/SCU-DCU on QFX10002 không hỗ trợ.md"
     ],
     "type": "index-only",
+    "vendor": "Mixed",
     "domain": "routing",
     "feature": "scu-dcu",
     "doctype": "index"
   },
   "classified-scaling-limitations": {
-    "output": "scaling-limitations/index.md",
+    "output": "mixed/index/scaling-limitations/general.md",
     "sources": [
       "formatted/TS_notes/ACX710 Known Limitations.md",
       "formatted/TS_notes/ACX7100.md",
@@ -966,43 +1039,47 @@
       "formatted/TS_notes/scale MPC4E.md"
     ],
     "type": "index-only",
+    "vendor": "Mixed",
     "domain": "scaling-limitations",
     "feature": "general",
     "doctype": "index"
   },
   "classified-subscriber-management": {
-    "output": "subscriber-management/index.md",
+    "output": "mixed/index/subscriber-management/general.md",
     "sources": [
       "formatted/TS_notes/enhanced subscriber management daemon runs in 64-bit_32-bit.md"
     ],
     "type": "index-only",
+    "vendor": "Mixed",
     "domain": "subscriber-management",
     "feature": "general",
     "doctype": "index"
   },
   "classified-switching": {
-    "output": "switching/index.md",
+    "output": "mixed/index/switching/general.md",
     "sources": [
       "formatted/TS_notes/TCAM ACX show.md",
       "formatted/TS_notes/Track specific packet sizes or specific MAC.md"
     ],
     "type": "index-only",
+    "vendor": "Mixed",
     "domain": "switching",
     "feature": "general",
     "doctype": "index"
   },
   "classified-switching-cisco": {
-    "output": "switching/cisco/index.md",
+    "output": "mixed/index/switching/cisco.md",
     "sources": [
       "formatted/TS_notes/IOS-XR Bridge Domains _ MAC Addresses.md"
     ],
     "type": "index-only",
+    "vendor": "Mixed",
     "domain": "switching",
     "feature": "cisco",
     "doctype": "index"
   },
   "classified-cos": {
-    "output": "cos/index.md",
+    "output": "mixed/index/cos/general.md",
     "sources": [
       "formatted/TS_notes/ACX2100_ACX2200 classsifier traffic mpls theo exp.md",
       "formatted/TS_notes/Class of Services - CoS for ACX.md",
@@ -1012,22 +1089,24 @@
       "formatted/TS_notes/CoS class-of-service shell commands.md"
     ],
     "type": "index-only",
+    "vendor": "Mixed",
     "domain": "cos",
     "feature": "general",
     "doctype": "index"
   },
   "classified-switching-huawei": {
-    "output": "switching/huawei/index.md",
+    "output": "mixed/index/switching/huawei.md",
     "sources": [
       "formatted/TS_notes/Huawei vlan manipulation.md"
     ],
     "type": "index-only",
+    "vendor": "Mixed",
     "domain": "switching",
     "feature": "huawei",
     "doctype": "index"
   },
   "classified-switching-mirror-traffic": {
-    "output": "switching/mirror-traffic/index.md",
+    "output": "mixed/index/switching/mirror-traffic.md",
     "sources": [
       "formatted/TS_notes/PFE packet capture on MX104.md",
       "formatted/TS_notes/PFE packet capture.md",
@@ -1035,26 +1114,29 @@
       "formatted/TS_notes/Tcpdump packet on RE MX.md"
     ],
     "type": "index-only",
+    "vendor": "Mixed",
     "domain": "switching",
     "feature": "mirror-traffic",
     "doctype": "index"
   },
   "classified-switching-ts-notes": {
-    "output": "switching/ts-notes/index.md",
+    "output": "mixed/index/switching/ts-notes.md",
     "sources": [
       "formatted/TS_notes/kiểm tra default mac-limit learning trên interaces_instance.md"
     ],
     "type": "index-only",
+    "vendor": "Mixed",
     "domain": "switching",
     "feature": "ts-notes",
     "doctype": "index"
   },
   "classified-vendor-kb-cisco-troubleshooting": {
-    "output": "vendor-kb/cisco-troubleshooting/index.md",
+    "output": "mixed/index/vendor-kb/cisco-troubleshooting.md",
     "sources": [
       "formatted/TS_notes/Cisco command health check.md"
     ],
     "type": "index-only",
+    "vendor": "Mixed",
     "domain": "vendor-kb",
     "feature": "cisco-troubleshooting",
     "doctype": "index"

@@ -37,7 +37,21 @@ def group_type(group: dict[str, Any]) -> str:
     return group.get("type", group.get("action", ""))
 
 
+def path_part(value: str) -> str:
+    value = re.sub(r"[^A-Za-z0-9]+", "-", value).strip("-").lower()
+    return value or "general"
+
+
 def group_path(group: dict[str, Any]) -> str:
+    if all(group.get(field) for field in ("vendor", "level2_doctype", "level1_domain", "level3_feature")):
+        return "/".join(
+            [
+                path_part(group["vendor"]),
+                path_part(group["level2_doctype"]),
+                path_part(group["level1_domain"]),
+                f"{path_part(group['level3_feature'])}.md",
+            ]
+        )
     return group.get("path", group.get("destination", ""))
 
 
@@ -48,6 +62,10 @@ def validate(manifest: dict[str, Any], root: Path) -> list[str]:
         if group["id"] in seen:
             errors.append(f"duplicate group id: {group['id']}")
         seen.add(group["id"])
+        if manifest.get("version") == 3:
+            for field in ("vendor", "level2_doctype", "level1_domain", "level3_feature"):
+                if not group.get(field):
+                    errors.append(f"missing v3 field {field}: {group['id']}")
         for source in source_files(root, group):
             if not source.is_file():
                 errors.append(f"missing source: {source}")
@@ -193,6 +211,7 @@ def main() -> int:
             "output": group_path(group),
             "sources": sources,
             "type": group_type(group),
+            "vendor": group.get("vendor"),
             "domain": group.get("level1_domain"),
             "feature": group.get("level3_feature"),
             "doctype": group.get("level2_doctype"),

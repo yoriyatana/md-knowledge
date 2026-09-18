@@ -114,10 +114,12 @@ công nội dung/OCR trước rồi bỏ `grouped/` khỏi `.gitignore`.
 
 ## Xây dựng kho kiến thức grouped theo manifest
 
-Manifest deterministic chính thức nằm tại `reports/grouping-manifest.json`. Nó là
-nguồn cấu hình duy nhất cho các nhóm theo domain, feature và loại tài liệu, thứ tự
-nguồn và các index. Manifest dùng `destination`/`action`; các source là đường dẫn
-tương đối bên trong `formatted/`. Nhóm index dùng `source_directories`.
+Manifest deterministic chính thức nằm tại `reports/grouping-manifest.json`. Đây là
+manifest version 3, với cấu trúc `Vendor -> Level 2 DocType -> Level 1 Domain ->
+Level 3 Feature`. Mỗi group khai báo `vendor`, `level2_doctype`, `level1_domain`,
+`level3_feature`; builder sinh `destination` theo mẫu
+`vendor/doctype/domain/feature.md`. Các source là đường dẫn tương đối bên trong
+`formatted/`; nhóm index có thể dùng `source_directories`.
 
 ```bash
 .venv/bin/python tools/build_grouped_knowledge.py plan
