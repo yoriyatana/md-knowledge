@@ -1,0 +1,11 @@
+{
+  "name": "md-knowledge",
+  "private": true,
+  "scripts": {
+    "format": "python3 tools/reformat_markdown.py",
+    "lint": "markdownlint-cli2 \"formatted/**/*.md\" \"raw/**/*.md\""
+  },
+  "devDependencies": {
+    "markdownlint-cli2": "^0.18.1"
+  }
+}
