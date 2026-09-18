@@ -70,22 +70,24 @@ MarkItDown được pin ở bản `0.1.7`. Không dùng extra `all` trong môi t
 3.14 trên macOS vì extra này kéo theo một số dependency tùy chọn chưa có wheel
 tương thích.
 
-## Gom nhóm theo chủ đề bằng Gemini
+## Gom nhóm theo chủ đề bằng local embeddings và Gemini
 
-Đây là quy trình hai bước. Gemini API key chỉ đặt trong biến môi trường, không
-commit vào Git. Tạo key tại <https://aistudio.google.com/app/apikey>:
+Đây là quy trình hai bước. Bước phân nhóm chạy local, miễn phí và không cần API
+key. Model `all-MiniLM-L6-v2` được tải về máy và cache bởi
+`sentence-transformers`:
 
 ```bash
-export GEMINI_API_KEY="..."
 .venv/bin/python -m pip install -r requirements.txt
 .venv/bin/python tools/group_markdown.py propose --input formatted
 ```
 
 Lệnh trên tạo `reports/group-proposals.json` và cache embeddings trong `.cache/`.
+Hai file này là dữ liệu local/review nên không được commit lên GitHub.
 Mở JSON, kiểm tra từng nhóm rồi đổi `approved` thành `true` cho nhóm muốn gom.
-Sau đó chạy:
+Chỉ bước viết lại/OCR dưới đây mới cần Gemini API key:
 
 ```bash
+export GEMINI_API_KEY="..."
 .venv/bin/python tools/group_markdown.py build
 ```
 

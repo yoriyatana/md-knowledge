@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Propose semantic Markdown groups and build reviewed topic documents with Gemini."""
+"""Propose local semantic Markdown groups and build reviewed topic documents with Gemini."""
 
 from __future__ import annotations
 
@@ -15,10 +15,11 @@ from typing import Any
 
 from google import genai
 from google.genai import types
+from sentence_transformers import SentenceTransformer
 
 
 IMAGE_EXTENSIONS = {".png", ".jpg", ".jpeg", ".gif", ".webp"}
-DEFAULT_EMBEDDING_MODEL = "gemini-embedding-001"
+DEFAULT_EMBEDDING_MODEL = "all-MiniLM-L6-v2"
 DEFAULT_WRITING_MODEL = "gemini-2.5-flash"
 
 
@@ -53,7 +54,7 @@ def load_cache(path: Path) -> dict[str, list[float]]:
 
 
 def propose(args: argparse.Namespace) -> None:
-    client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
+    model = SentenceTransformer(args.embedding_model)
     files = markdown_files(args.input, set(args.exclude_dir))
     cache = load_cache(args.cache)
     texts: list[str] = []
@@ -67,13 +68,13 @@ def propose(args: argparse.Namespace) -> None:
 
     for start in range(0, len(pending), args.batch_size):
         batch = pending[start : start + args.batch_size]
-        response = client.models.embed_content(
-            model=args.embedding_model,
-            contents=[embedding_text(path) for path, _ in batch],
-            config=types.EmbedContentConfig(task_type="SEMANTIC_SIMILARITY"),
+        vectors = model.encode(
+            [embedding_text(path) for path, _ in batch],
+            normalize_embeddings=True,
+            show_progress_bar=False,
         )
-        for item, (_, key) in zip(response.embeddings or [], batch):
-            cache[key] = list(item.values or [])
+        for vector, (_, key) in zip(vectors, batch):
+            cache[key] = vector.tolist()
     args.cache.parent.mkdir(parents=True, exist_ok=True)
     args.cache.write_text(json.dumps(cache), encoding="utf-8")
 
@@ -125,6 +126,8 @@ def image_inputs(source: Path) -> list[types.Part]:
 
 
 def build(args: argparse.Namespace) -> None:
+    if not os.environ.get("GEMINI_API_KEY"):
+        raise SystemExit("GEMINI_API_KEY is required for build; do not store it in the repository.")
     client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
     proposals = json.loads(args.proposals.read_text(encoding="utf-8"))
     approved = [group for group in proposals["groups"] if group.get("approved") is True]
@@ -198,8 +201,6 @@ def main() -> int:
     build_parser.set_defaults(function=build)
 
     args = parser.parse_args()
-    if not os.environ.get("GEMINI_API_KEY"):
-        parser.error("GEMINI_API_KEY is required; do not store it in the repository.")
     args.function(args)
     return 0
 
