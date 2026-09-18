@@ -1,4 +1,4 @@
-# BRAS PPPoE and DHCPv6 Configuration Guide
+# Cisco PPPoE Dual-Stack DHCPv6-NA Server and Client
 
 > Generated deterministically from the approved grouping manifest.
 

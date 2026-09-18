@@ -3,12 +3,12 @@
   "description": "Grouping manifest organized by Vendor -> Level 2 DocType -> Level 1 Domain -> Level 3 Feature.",
   "groups": [
     {
-      "id": "v3-cisco-configuration-guide-bras-subscriber-management",
-      "destination": "cisco/configuration-guide/bras/subscriber-management.md",
-      "level1_domain": "bras",
-      "level3_feature": "subscriber-management",
+      "id": "v3-cisco-configuration-guide-pppoe-dual-stacked-dhcpv6-na-server-and-client",
+      "destination": "cisco/configuration-guide/pppoe/dual-stacked-dhcpv6-na-server-and-client.md",
+      "level1_domain": "pppoe",
+      "level3_feature": "dual-stacked-dhcpv6-na-server-and-client",
       "level2_doctype": "configuration-guide",
-      "topic": "BRAS PPPoE and DHCPv6 Configuration Guide",
+      "topic": "Cisco PPPoE Dual-Stack DHCPv6-NA Server and Client",
       "sources": [
         "PR/Cisco template pppoe DHCPv6 NA (PPPoE IPv6).md"
       ],
@@ -31,31 +31,31 @@
       "vendor": "Cisco"
     },
     {
-      "id": "v3-cisco-index-switching-cisco",
-      "destination": "cisco/index/switching/cisco.md",
-      "level1_domain": "switching",
-      "level3_feature": "cisco",
-      "level2_doctype": "index",
-      "topic": "switching/cisco Classified Notes",
+      "id": "v3-cisco-troubleshooting-guide-bridge-domain-ios-xr-bridge-domains-mac-addresses",
+      "destination": "cisco/troubleshooting-guide/bridge-domain/ios-xr-bridge-domains-mac-addresses.md",
+      "level1_domain": "bridge-domain",
+      "level3_feature": "ios-xr-bridge-domains-mac-addresses",
+      "level2_doctype": "troubleshooting-guide",
+      "topic": "Cisco IOS-XR Bridge Domains and MAC Addresses",
       "sources": [
         "TS_notes/IOS-XR Bridge Domains _ MAC Addresses.md"
       ],
       "approved": true,
-      "action": "index-only",
+      "action": "consolidate",
       "vendor": "Cisco"
     },
     {
-      "id": "v3-cisco-index-vendor-kb-cisco-troubleshooting",
-      "destination": "cisco/index/vendor-kb/cisco-troubleshooting.md",
-      "level1_domain": "vendor-kb",
-      "level3_feature": "cisco-troubleshooting",
-      "level2_doctype": "index",
-      "topic": "vendor-kb/cisco-troubleshooting Classified Notes",
+      "id": "v3-cisco-troubleshooting-guide-general-cisco-command-health-check",
+      "destination": "cisco/troubleshooting-guide/general/cisco-command-health-check.md",
+      "level1_domain": "general",
+      "level3_feature": "cisco-command-health-check",
+      "level2_doctype": "troubleshooting-guide",
+      "topic": "Cisco Command Health Check",
       "sources": [
         "TS_notes/Cisco command health check.md"
       ],
       "approved": true,
-      "action": "index-only",
+      "action": "consolidate",
       "vendor": "Cisco"
     },
     {
@@ -476,7 +476,7 @@
       "id": "v3-juniper-index-hardware-maintenance-linecard-ts-guide",
       "destination": "juniper/index/hardware-maintenance/linecard-ts-guide.md",
       "level1_domain": "hardware-maintenance",
-      "level3_feature": "linecard/ts-guide",
+      "level3_feature": "linecard-ts-guide",
       "level2_doctype": "index",
       "topic": "hardware-maintenance/linecard/ts-guide Classified Notes",
       "sources": [
@@ -766,7 +766,7 @@
       "id": "v3-juniper-index-mpls-vpn-rsvp-ts-guide",
       "destination": "juniper/index/mpls-vpn/rsvp-ts-guide.md",
       "level1_domain": "mpls-vpn",
-      "level3_feature": "rsvp/ts-guide",
+      "level3_feature": "rsvp-ts-guide",
       "level2_doctype": "index",
       "topic": "mpls-vpn/rsvp/ts-guide Classified Notes",
       "sources": [
@@ -857,7 +857,7 @@
       "id": "v3-juniper-index-routing-firewall-ts-guide",
       "destination": "juniper/index/routing/firewall-ts-guide.md",
       "level1_domain": "routing",
-      "level3_feature": "firewall/ts-guide",
+      "level3_feature": "firewall-ts-guide",
       "level2_doctype": "index",
       "topic": "routing/firewall/ts-guide Classified Notes",
       "sources": [

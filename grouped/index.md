@@ -4,15 +4,16 @@ Deterministic output generated from `reports/grouping-manifest.json`.
 
 - **cisco/**
   - **configuration-guide/**
-    - **bras/**
-      - [BRAS PPPoE and DHCPv6 Configuration Guide](cisco/configuration-guide/bras/subscriber-management.md) — configuration-guide — Mixed
+    - **pppoe/**
+      - [Cisco PPPoE Dual-Stack DHCPv6-NA Server and Client](cisco/configuration-guide/pppoe/dual-stacked-dhcpv6-na-server-and-client.md) — configuration-guide — Mixed
   - **index/**
     - **source-inventory/**
       - [Procedures Source Inventory (Cisco)](cisco/index/source-inventory/procedures.md) — index — Mixed
-    - **switching/**
-      - [switching/cisco Classified Notes](cisco/index/switching/cisco.md) — index — Mixed
-    - **vendor-kb/**
-      - [vendor-kb/cisco-troubleshooting Classified Notes](cisco/index/vendor-kb/cisco-troubleshooting.md) — index — Mixed
+  - **troubleshooting-guide/**
+    - **bridge-domain/**
+      - [Cisco IOS-XR Bridge Domains and MAC Addresses](cisco/troubleshooting-guide/bridge-domain/ios-xr-bridge-domains-mac-addresses.md) — troubleshooting-guide — Mixed
+    - **general/**
+      - [Cisco Command Health Check](cisco/troubleshooting-guide/general/cisco-command-health-check.md) — troubleshooting-guide — Mixed
 - **huawei/**
   - **index/**
     - **switching/**

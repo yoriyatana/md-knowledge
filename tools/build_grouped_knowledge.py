@@ -14,6 +14,14 @@ from typing import Any
 
 
 IMAGE_LINK = re.compile(r"(!\[[^\]]*\])\(([^)]+)\)")
+FIXED_DOCTYPES = {
+    "index",
+    "concepts",
+    "configuration-guide",
+    "troubleshooting-guide",
+    "install-maintenance-guide",
+    "case-study",
+}
 
 
 def load_manifest(path: Path) -> dict[str, Any]:
@@ -66,6 +74,16 @@ def validate(manifest: dict[str, Any], root: Path) -> list[str]:
             for field in ("vendor", "level2_doctype", "level1_domain", "level3_feature"):
                 if not group.get(field):
                     errors.append(f"missing v3 field {field}: {group['id']}")
+            doctype = group.get("level2_doctype", "")
+            if doctype not in FIXED_DOCTYPES:
+                errors.append(f"unsupported v3 DocType {doctype}: {group['id']}")
+            destination = group_path(group)
+            if destination != destination.lower():
+                errors.append(f"destination is not lowercase: {destination}")
+            destination_parts = list(Path(destination).parts[:-1])
+            destination_parts.append(Path(destination).stem)
+            if any(part != path_part(part) for part in destination_parts):
+                errors.append(f"destination is not kebab-case: {destination}")
         for source in source_files(root, group):
             if not source.is_file():
                 errors.append(f"missing source: {source}")

@@ -116,9 +116,20 @@ công nội dung/OCR trước rồi bỏ `grouped/` khỏi `.gitignore`.
 
 Manifest deterministic chính thức nằm tại `reports/grouping-manifest.json`. Đây là
 manifest version 3, với cấu trúc `Vendor -> Level 2 DocType -> Level 1 Domain ->
-Level 3 Feature`. Mỗi group khai báo `vendor`, `level2_doctype`, `level1_domain`,
+Level 3 Feature`. Tên thư mục và file generated luôn là lowercase kebab-case.
+Các DocType cấp 2 cố định là:
+
+- `index` — chỉ mục/source inventory được sinh tự động
+- `concepts` — tài liệu khái niệm
+- `configuration-guide` — tài liệu cấu hình
+- `troubleshooting-guide` — tài liệu xử lý sự cố
+- `install-maintenance-guide` — cài đặt/bảo trì
+- `case-study` — case study
+
+Mỗi group khai báo `vendor`, `level2_doctype`, `level1_domain`,
 `level3_feature`; builder sinh `destination` theo mẫu
-`vendor/doctype/domain/feature.md`. Các source là đường dẫn tương đối bên trong
+`vendor/doctype/domain/feature.md`. Dùng `configuration-guide` thống nhất,
+không dùng `configuration-template`. Các source là đường dẫn tương đối bên trong
 `formatted/`; nhóm index có thể dùng `source_directories`.
 
 ```bash

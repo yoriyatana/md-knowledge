@@ -1,13 +1,13 @@
 {
-  "v3-cisco-configuration-guide-bras-subscriber-management": {
-    "output": "cisco/configuration-guide/bras/subscriber-management.md",
+  "v3-cisco-configuration-guide-pppoe-dual-stacked-dhcpv6-na-server-and-client": {
+    "output": "cisco/configuration-guide/pppoe/dual-stacked-dhcpv6-na-server-and-client.md",
     "sources": [
       "formatted/PR/Cisco template pppoe DHCPv6 NA (PPPoE IPv6).md"
     ],
     "type": "consolidate",
     "vendor": "Cisco",
-    "domain": "bras",
-    "feature": "subscriber-management",
+    "domain": "pppoe",
+    "feature": "dual-stacked-dhcpv6-na-server-and-client",
     "doctype": "configuration-guide"
   },
   "v3-cisco-index-source-inventory-procedures": {
@@ -21,27 +21,27 @@
     "feature": "procedures",
     "doctype": "index"
   },
-  "v3-cisco-index-switching-cisco": {
-    "output": "cisco/index/switching/cisco.md",
+  "v3-cisco-troubleshooting-guide-bridge-domain-ios-xr-bridge-domains-mac-addresses": {
+    "output": "cisco/troubleshooting-guide/bridge-domain/ios-xr-bridge-domains-mac-addresses.md",
     "sources": [
       "formatted/TS_notes/IOS-XR Bridge Domains _ MAC Addresses.md"
     ],
-    "type": "index-only",
+    "type": "consolidate",
     "vendor": "Cisco",
-    "domain": "switching",
-    "feature": "cisco",
-    "doctype": "index"
+    "domain": "bridge-domain",
+    "feature": "ios-xr-bridge-domains-mac-addresses",
+    "doctype": "troubleshooting-guide"
   },
-  "v3-cisco-index-vendor-kb-cisco-troubleshooting": {
-    "output": "cisco/index/vendor-kb/cisco-troubleshooting.md",
+  "v3-cisco-troubleshooting-guide-general-cisco-command-health-check": {
+    "output": "cisco/troubleshooting-guide/general/cisco-command-health-check.md",
     "sources": [
       "formatted/TS_notes/Cisco command health check.md"
     ],
-    "type": "index-only",
+    "type": "consolidate",
     "vendor": "Cisco",
-    "domain": "vendor-kb",
-    "feature": "cisco-troubleshooting",
-    "doctype": "index"
+    "domain": "general",
+    "feature": "cisco-command-health-check",
+    "doctype": "troubleshooting-guide"
   },
   "v3-huawei-index-switching-huawei": {
     "output": "huawei/index/switching/huawei.md",
@@ -392,7 +392,7 @@
     "type": "index-only",
     "vendor": "Juniper",
     "domain": "hardware-maintenance",
-    "feature": "linecard/ts-guide",
+    "feature": "linecard-ts-guide",
     "doctype": "index"
   },
   "v3-juniper-index-hardware-maintenance-linecard": {
@@ -628,7 +628,7 @@
     "type": "index-only",
     "vendor": "Juniper",
     "domain": "mpls-vpn",
-    "feature": "rsvp/ts-guide",
+    "feature": "rsvp-ts-guide",
     "doctype": "index"
   },
   "v3-juniper-index-mpls-vpn-rsvp": {
@@ -702,7 +702,7 @@
     "type": "index-only",
     "vendor": "Juniper",
     "domain": "routing",
-    "feature": "firewall/ts-guide",
+    "feature": "firewall-ts-guide",
     "doctype": "index"
   },
   "v3-juniper-index-routing-general": {
