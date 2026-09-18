@@ -11,6 +11,10 @@ Deterministic output generated from `reports/grouping-manifest.json`.
       - [Cisco IOS-XR Bridge Domains and MAC Addresses](cisco/troubleshooting-guide/bridge-domain/ios-xr-bridge-domains-mac-addresses.md) — troubleshooting-guide — Mixed
     - **general/**
       - [Cisco Command Health Check](cisco/troubleshooting-guide/general/cisco-command-health-check.md) — troubleshooting-guide — Mixed
+- **huawei/**
+  - **troubleshooting-guide/**
+    - **switching/**
+      - [Huawei VLAN Manipulation](huawei/troubleshooting-guide/switching/huawei-vlan-manipulation.md) — troubleshooting-guide — Mixed
 - **juniper/**
   - **case-study/**
     - **routing/**
@@ -49,6 +53,10 @@ Deterministic output generated from `reports/grouping-manifest.json`.
       - [BFD Troubleshooting, Anchorship, and PFE Commands](juniper/troubleshooting-guide/routing/bfd.md) — troubleshooting-guide — Mixed
     - **switching/**
       - [LACP Troubleshooting and Diagnostics (Juniper)](juniper/troubleshooting-guide/switching/lacp.md) — troubleshooting-guide — Mixed
+- **linux/**
+  - **concepts/**
+    - **linux/**
+      - [Linux yum groupinstall Development Tools](linux/concepts/linux/yum-groupinstall-development-tools.md) — concepts — Mixed
 
 ## Source Index
 
@@ -227,7 +235,6 @@ Deterministic output generated from `reports/grouping-manifest.json`.
 | `TS_notes/High CPU due to show route.md` |
 | `TS_notes/How to collect _var_log files from Next Generation Routing Engine (NG-RE).md` |
 | `TS_notes/How to collect vmhost coredumps from Next Generation Routing Engine (NG-RE).md` |
-| `TS_notes/Huawei vlan manipulation.md` |
 | `TS_notes/ICMP ping đấu nối nhảy time.md` |
 | `TS_notes/JTASK_SCHED_SLIP khi bật lấy gcore (coredump process).md` |
 | `TS_notes/JunOS-EVO evo-pfemand.md` |
@@ -314,7 +321,6 @@ Deterministic output generated from `reports/grouping-manifest.json`.
 | `TS_notes/triển khai apply term Block_CTH_POLYCOM vào filter block-frag-in của Inside CGNAT.md` |
 | `TS_notes/upgrade OS.md` |
 | `TS_notes/xư lý cảnh báo RPD_MPLS_INTF_MAX_LABELS_ERROR HPG8001PRT02.md` |
-| `TS_notes/yum groupinstall _Development Tools_.md` |
 | `classification/Concepts_Theory/AJSPR-v19A/Chapter 10_ BGP.md` |
 | `classification/Concepts_Theory/AJSPR-v19A/Chapter 11_ BGP Attributes and Policy - Part1.md` |
 | `classification/Concepts_Theory/AJSPR-v19A/Chapter 12_BGP Attributes and Policy - Part 2.md` |

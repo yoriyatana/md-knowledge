@@ -386,6 +386,34 @@
       "approved": true,
       "action": "consolidate",
       "vendor": "Juniper"
+    },
+    {
+      "id": "v3-huawei-troubleshooting-guide-switching-huawei-vlan-manipulation",
+      "destination": "huawei/troubleshooting-guide/switching/huawei-vlan-manipulation.md",
+      "level1_domain": "switching",
+      "level3_feature": "huawei-vlan-manipulation",
+      "level2_doctype": "troubleshooting-guide",
+      "topic": "Huawei VLAN Manipulation",
+      "action": "consolidate",
+      "approved": true,
+      "vendor": "Huawei",
+      "sources": [
+        "TS_notes/Huawei vlan manipulation.md"
+      ]
+    },
+    {
+      "id": "v3-linux-concepts-linux-yum-groupinstall-development-tools",
+      "destination": "linux/concepts/linux/yum-groupinstall-development-tools.md",
+      "level1_domain": "linux",
+      "level3_feature": "yum-groupinstall-development-tools",
+      "level2_doctype": "concepts",
+      "topic": "Linux yum groupinstall Development Tools",
+      "action": "consolidate",
+      "approved": true,
+      "vendor": "Linux",
+      "sources": [
+        "TS_notes/yum groupinstall _Development Tools_.md"
+      ]
     }
   ],
   "source_root": "formatted",
@@ -564,7 +592,6 @@
     "TS_notes/High CPU due to show route.md",
     "TS_notes/How to collect _var_log files from Next Generation Routing Engine (NG-RE).md",
     "TS_notes/How to collect vmhost coredumps from Next Generation Routing Engine (NG-RE).md",
-    "TS_notes/Huawei vlan manipulation.md",
     "TS_notes/ICMP ping đấu nối nhảy time.md",
     "TS_notes/JTASK_SCHED_SLIP khi bật lấy gcore (coredump process).md",
     "TS_notes/JunOS-EVO evo-pfemand.md",
@@ -651,7 +678,6 @@
     "TS_notes/triển khai apply term Block_CTH_POLYCOM vào filter block-frag-in của Inside CGNAT.md",
     "TS_notes/upgrade OS.md",
     "TS_notes/xư lý cảnh báo RPD_MPLS_INTF_MAX_LABELS_ERROR HPG8001PRT02.md",
-    "TS_notes/yum groupinstall _Development Tools_.md",
     "classification/Concepts_Theory/AJSPR-v19A/Chapter 10_ BGP.md",
     "classification/Concepts_Theory/AJSPR-v19A/Chapter 11_ BGP Attributes and Policy - Part1.md",
     "classification/Concepts_Theory/AJSPR-v19A/Chapter 12_BGP Attributes and Policy - Part 2.md",

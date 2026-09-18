@@ -310,5 +310,27 @@
     "domain": "switching",
     "feature": "lacp",
     "doctype": "troubleshooting-guide"
+  },
+  "v3-huawei-troubleshooting-guide-switching-huawei-vlan-manipulation": {
+    "output": "huawei/troubleshooting-guide/switching/huawei-vlan-manipulation.md",
+    "sources": [
+      "formatted/TS_notes/Huawei vlan manipulation.md"
+    ],
+    "type": "consolidate",
+    "vendor": "Huawei",
+    "domain": "switching",
+    "feature": "huawei-vlan-manipulation",
+    "doctype": "troubleshooting-guide"
+  },
+  "v3-linux-concepts-linux-yum-groupinstall-development-tools": {
+    "output": "linux/concepts/linux/yum-groupinstall-development-tools.md",
+    "sources": [
+      "formatted/TS_notes/yum groupinstall _Development Tools_.md"
+    ],
+    "type": "consolidate",
+    "vendor": "Linux",
+    "domain": "linux",
+    "feature": "yum-groupinstall-development-tools",
+    "doctype": "concepts"
   }
 }
