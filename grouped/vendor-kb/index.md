@@ -9,6 +9,10 @@
 | KB34539_ | Index | Mixed | `PR/KB34539_.md` |  |
 | KB37106__Subscriber Management_ Understanding the _Standby is not synced_ error after a backup RE replacement | Index | Mixed | `PR/KB37106__Subscriber Management_ Understanding the _Standby is not synced_ error after a backup RE replacement.md` |  |
 | KB37435__Junos_ Default CoS behavior for schedulers with different scheduler priorities | Index | Mixed | `PR/KB37435__Junos_ Default CoS behavior for schedulers with different scheduler priorities.md` |  |
-| PR check | Index | Mixed | `PR/PR check.md` |  |
 | PR1082932 - Data Error in shared LMEM of LU_XL chip causing a MQ_XM chip wedge | Index | Mixed | `PR/PR1082932 - Data Error in shared LMEM of LU_XL chip causing a MQ_XM chip wedge.md` |  |
 | PR1561855 - Continuous bbe-smgd cores are generated after restarting the smgd | Index | Mixed | `PR/PR1561855 - Continuous bbe-smgd cores are generated after restarting the smgd.md` |  |
+| PR1718595 - BRAS AE disable-pfe | Index | Mixed | `PR/PR1718595 - BRAS AE disable-pfe.md` |  |
+| PR1688972 - PFE wedge fast link flaps | Index | Mixed | `PR/PR1688972 - PFE wedge fast link flaps.md` |  |
+| PR1648059 - Mixed AFT and non-AFT AE traffic | Index | Mixed | `PR/PR1648059 - Mixed AFT and non-AFT AE traffic.md` |  |
+| PR1639518 - Mixed AFT and non-AFT AE traffic behavior | Index | Mixed | `PR/PR1639518 - Mixed AFT and non-AFT AE traffic behavior.md` |  |
+| PR1715264 - MPC11E system firmware state | Index | Mixed | `PR/PR1715264 - MPC11E system firmware state.md` |  |

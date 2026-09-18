@@ -270,7 +270,11 @@
     "output": "case-notes/index.md",
     "sources": [
       "formatted/Mail_template/Trả lời về việc khuyến nghị version.md",
-      "formatted/Mail_template/lỗi không ping được mpls ldp.md"
+      "formatted/Mail_template/lỗi không ping được mpls ldp.md",
+      "formatted/Case_notes/SR-2023-0425-1650 - MPC11E link recovery behavior.md",
+      "formatted/Case_notes/MPC11E HW limit - link recovery and hold-time.md",
+      "formatted/Case_notes/SR-2022-0311-1648 - PR1638410 and PR1642584.md",
+      "formatted/Case_notes/MPC10E-MPC11E PR overview.md"
     ],
     "type": "index-only",
     "domain": "case-notes",
@@ -287,9 +291,13 @@
       "formatted/PR/KB34539_.md",
       "formatted/PR/KB37106__Subscriber Management_ Understanding the _Standby is not synced_ error after a backup RE replacement.md",
       "formatted/PR/KB37435__Junos_ Default CoS behavior for schedulers with different scheduler priorities.md",
-      "formatted/PR/PR check.md",
       "formatted/PR/PR1082932 - Data Error in shared LMEM of LU_XL chip causing a MQ_XM chip wedge.md",
-      "formatted/PR/PR1561855 - Continuous bbe-smgd cores are generated after restarting the smgd.md"
+      "formatted/PR/PR1561855 - Continuous bbe-smgd cores are generated after restarting the smgd.md",
+      "formatted/PR/PR1718595 - BRAS AE disable-pfe.md",
+      "formatted/PR/PR1688972 - PFE wedge fast link flaps.md",
+      "formatted/PR/PR1648059 - Mixed AFT and non-AFT AE traffic.md",
+      "formatted/PR/PR1639518 - Mixed AFT and non-AFT AE traffic behavior.md",
+      "formatted/PR/PR1715264 - MPC11E system firmware state.md"
     ],
     "type": "index-only",
     "domain": "vendor-kb",
