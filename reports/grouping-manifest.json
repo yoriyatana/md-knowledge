@@ -3,10 +3,10 @@
   "description": "Grouping manifest organized by Vendor -> Level 2 DocType -> Level 1 Domain -> Level 3 Feature, with a single root index.",
   "groups": [
     {
-      "id": "v3-cisco-configuration-guide-pppoe-dual-stacked-dhcpv6-na-server-and-client",
-      "destination": "cisco/configuration-guide/pppoe/dual-stacked-dhcpv6-na-server-and-client.md",
+      "id": "v3-cisco-configuration-guide-pppoe-pppoe-dual-stacked-client",
+      "destination": "cisco/configuration-guide/pppoe/pppoe-dual-stacked-client.md",
       "level1_domain": "pppoe",
-      "level3_feature": "dual-stacked-dhcpv6-na-server-and-client",
+      "level3_feature": "pppoe-dual-stacked-client",
       "level2_doctype": "configuration-guide",
       "topic": "Cisco PPPoE Dual-Stack DHCPv6-NA Server and Client",
       "sources": [

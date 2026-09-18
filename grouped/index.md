@@ -5,7 +5,7 @@ Deterministic output generated from `reports/grouping-manifest.json`.
 - **cisco/**
   - **configuration-guide/**
     - **pppoe/**
-      - [Cisco PPPoE Dual-Stack DHCPv6-NA Server and Client](cisco/configuration-guide/pppoe/dual-stacked-dhcpv6-na-server-and-client.md) — configuration-guide — Mixed
+      - [Cisco PPPoE Dual-Stack DHCPv6-NA Server and Client](cisco/configuration-guide/pppoe/pppoe-dual-stacked-client.md) — configuration-guide — Mixed
   - **troubleshooting-guide/**
     - **bridge-domain/**
       - [Cisco IOS-XR Bridge Domains and MAC Addresses](cisco/troubleshooting-guide/bridge-domain/ios-xr-bridge-domains-mac-addresses.md) — troubleshooting-guide — Mixed

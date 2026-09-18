@@ -1,13 +1,13 @@
 {
-  "v3-cisco-configuration-guide-pppoe-dual-stacked-dhcpv6-na-server-and-client": {
-    "output": "cisco/configuration-guide/pppoe/dual-stacked-dhcpv6-na-server-and-client.md",
+  "v3-cisco-configuration-guide-pppoe-pppoe-dual-stacked-client": {
+    "output": "cisco/configuration-guide/pppoe/pppoe-dual-stacked-client.md",
     "sources": [
       "formatted/PR/Cisco template pppoe DHCPv6 NA (PPPoE IPv6).md"
     ],
     "type": "consolidate",
     "vendor": "Cisco",
     "domain": "pppoe",
-    "feature": "dual-stacked-dhcpv6-na-server-and-client",
+    "feature": "pppoe-dual-stacked-client",
     "doctype": "configuration-guide"
   },
   "v3-cisco-troubleshooting-guide-bridge-domain-ios-xr-bridge-domains-mac-addresses": {
