@@ -1,4 +1,4 @@
-# switching/cos Classified Notes
+# cos Classified Notes
 
 | Topic | Type | Platform/Vendor | Source | Related document |
 |---|---|---|---|---|

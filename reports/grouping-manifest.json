@@ -1231,12 +1231,12 @@
       "action": "index-only"
     },
     {
-      "id": "classified-switching-cos",
-      "destination": "switching/cos/index.md",
-      "level1_domain": "switching",
-      "level3_feature": "cos",
+      "id": "classified-cos",
+      "destination": "cos/index.md",
+      "level1_domain": "cos",
+      "level3_feature": "general",
       "level2_doctype": "index",
-      "topic": "switching/cos Classified Notes",
+      "topic": "cos Classified Notes",
       "sources": [
         "TS_notes/ACX2100_ACX2200 classsifier traffic mpls theo exp.md",
         "TS_notes/Class of Services - CoS for ACX.md",

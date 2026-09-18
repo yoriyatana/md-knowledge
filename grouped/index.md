@@ -23,6 +23,8 @@ Deterministic output generated from `reports/grouping-manifest.json`.
   - [cgnat Classified Notes](cgnat/index.md) — index — Mixed
   - **troubleshooting-guide/**
     - [cgnat/troubleshooting-guide Classified Notes](cgnat/troubleshooting-guide/index.md) — index — Mixed
+- **cos/**
+  - [cos Classified Notes](cos/index.md) — index — Mixed
 - **hardware-maintenance/**
   - **chassis-power/**
     - [hardware-maintenance/chassis-power Classified Notes](hardware-maintenance/chassis-power/index.md) — index — Mixed
@@ -127,8 +129,6 @@ Deterministic output generated from `reports/grouping-manifest.json`.
   - **cisco/**
     - [switching/cisco Classified Notes](switching/cisco/index.md) — index — Mixed
   - [Switching Configuration Guide](switching/configuration-guide.md) — configuration-guide — Mixed
-  - **cos/**
-    - [switching/cos Classified Notes](switching/cos/index.md) — index — Mixed
   - **huawei/**
     - [switching/huawei Classified Notes](switching/huawei/index.md) — index — Mixed
   - [switching Classified Notes](switching/index.md) — index — Mixed

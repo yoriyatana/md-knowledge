@@ -1001,8 +1001,8 @@
     "feature": "cisco",
     "doctype": "index"
   },
-  "classified-switching-cos": {
-    "output": "switching/cos/index.md",
+  "classified-cos": {
+    "output": "cos/index.md",
     "sources": [
       "formatted/TS_notes/ACX2100_ACX2200 classsifier traffic mpls theo exp.md",
       "formatted/TS_notes/Class of Services - CoS for ACX.md",
@@ -1012,8 +1012,8 @@
       "formatted/TS_notes/CoS class-of-service shell commands.md"
     ],
     "type": "index-only",
-    "domain": "switching",
-    "feature": "cos",
+    "domain": "cos",
+    "feature": "general",
     "doctype": "index"
   },
   "classified-switching-huawei": {
